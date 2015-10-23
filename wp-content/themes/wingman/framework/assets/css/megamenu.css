@@ -1,0 +1,41 @@
+.container-megamenu{
+    background-color: #fafafa;
+    border: 1px solid #dfdfdf;
+    box-shadow: 0 0 4px #ddd;
+    margin: 10px 10px 10px 0;
+    box-shadow: 0 0 2px #ddd;
+    padding: 10px;
+}
+.menu-item-settings .container-megamenu .description-thin, 
+.menu-item-settings .container-megamenu .description-wide{
+    float: none;
+    margin-right: 0;
+    width: auto;
+}
+ul#menu-to-edit .wrapper-megamenu,
+ul#menu-to-edit .field-enable,
+ul#menu-to-edit .megamenu-layout,
+ul#menu-to-edit .megamenu-layout-depth-1,
+ul#menu-to-edit .menu-item-depth-1 .megamenu-layout .megamenu-layout-depth-0{
+    display: none;
+}
+ul#menu-to-edit .menu-item-depth-0 .field-enable,
+ul#menu-to-edit .menu-item-depth-0 .wrapper-megamenu,
+ul#menu-to-edit .menu-item-depth-0 .wrapper-megamenu .field-enable,
+ul#menu-to-edit .menu-item-depth-1.megamenu .wrapper-megamenu,
+ul#menu-to-edit .menu-item-depth-1.megamenu .megamenu-layout-depth-1{
+    display: block;
+}
+
+
+/*
+ul#menu-to-edit .menu-item-depth-1.megamenu .megamenu-layout,
+ul#menu-to-edit .menu-item-depth-0.megamenu .megamenu-layout,
+ul#menu-to-edit .menu-item-depth-0.megamenu .wrapper-megamenu,
+ul#menu-to-edit .menu-item-depth-1.megamenu .wrapper-megamenu,
+ul#menu-to-edit .menu-item-depth-0.megamenu .field-enable,
+ul#menu-to-edit .menu-item-depth-0.megamenu .megamenu-layout-depth-0,
+ul#menu-to-edit .menu-item-depth-1.megamenu .megamenu-layout-depth-1{
+    display: block;
+}
+*/
