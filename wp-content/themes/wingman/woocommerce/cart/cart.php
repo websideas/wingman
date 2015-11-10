@@ -22,7 +22,7 @@ do_action( 'woocommerce_before_cart' ); ?>
             <thead>
                 <tr>
 
-                    <th class="product-thumbnail">&nbsp;</th>
+                    <th class="product-thumbnail"><?php _e( 'Image', 'woocommerce' ); ?></th>
                     <th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
                     <th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
                     <th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
@@ -117,8 +117,8 @@ do_action( 'woocommerce_before_cart' ); ?>
                 <tr>
                     <td colspan="6" class="actions">
 
-                        <a href="#" class="btn btn-gray-b pull-left"><?php _e( 'Continue shopping', THEME_LANG ); ?></a>
-                        <input type="submit" class="btn btn-dark-b update_cart" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" />
+                        <a href="#" class="alt button pull-left"><?php _e( 'Continue shopping', THEME_LANG ); ?></a>
+                        <input type="submit" class="alt button update_cart" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" />
 
                         <?php do_action( 'woocommerce_cart_actions' ); ?>
 
@@ -137,20 +137,20 @@ do_action( 'woocommerce_before_cart' ); ?>
 
     <div class="col-md-4">
         <div class="cart-collaterals">
-            <?php do_action( 'woocommerce_cart_collaterals' ); ?>
             <?php if ( WC()->cart->coupons_enabled() ) { ?>
                 <form method="post" action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>">
                     <div class="coupon">
-                        <h3><?php _e( 'Coupon', 'woocommerce' ); ?></h3>
-                        <p>
+                        <h3><?php _e( 'DIscount codes', 'woocommerce' ); ?></h3>
+                        <p><?php _e( 'Enter your coupin if you have one',THEME_LANG ); ?></p>
+                        <div class="form-coupon">
                             <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php _e( 'Coupon code', 'woocommerce' ); ?>" />
-                        </p>
-                        <input type="submit" class="btn btn-dark-b btn-block" name="apply_coupon" value="<?php _e( 'Apply Coupon', 'woocommerce' ); ?>" />
+                            <input type="submit" class="alt button btn-block" name="apply_coupon" value="<?php _e( 'Subcribe', 'woocommerce' ); ?>" />
+                        </div>
                         <?php do_action( 'woocommerce_cart_coupon' ); ?>
                     </div>
                 </form>
             <?php } ?>
-
+            <?php do_action( 'woocommerce_cart_collaterals' ); ?>
         </div>
     </div>
 </div>

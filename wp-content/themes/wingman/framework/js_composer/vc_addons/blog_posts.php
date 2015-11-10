@@ -34,16 +34,16 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
             'meta_key' => '',
             'order' => 'DESC',
             'max_items' => 10,
-            "excerpt_length" => 50,
+            "excerpt_length" => 20,
 
 
             "show_meta" => 'true',
-            "show_author" => 'true',
-            "show_category" => 'true',
-            'show_comment' => 'true',
+            "show_author" => 'false',
+            "show_category" => 'false',
+            'show_comment' => 'false',
             "show_date" => 'true',
             "date_format" => 'd F Y',
-            "show_like_post" => 'true',
+            "show_like_post" => 'false',
             'show_view_number' => 'false',
 
             'css' => '',
@@ -114,8 +114,8 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
             global $wp_query;
             
             $page_animation = kt_option( 'page_animation' );
-            $class_animation = ( $page_animation == 1 && $blog_type == 'grid' ) ? 'animation-effect' : '';
-            $data_animation = ( $page_animation == 1 && $blog_type == 'grid' ) ? 'data-animation="fadeInUp"' : '';
+            $class_animation = ( $page_animation == 1 && ( $blog_type == 'grid' || $blog_type == 'list' ) ) ? 'animation-effect' : '';
+            $data_animation = ( $page_animation == 1 && ( $blog_type == 'grid' || $blog_type == 'list' ) ) ? 'data-animation="fadeInUp"' : '';
             
             $animate_classic = ( $page_animation == 1 && ($blog_type == 'classic' || $blog_type == 'zigzag') ) ? 'animation-effect' : ' ';
             $data_animate_classic = ( $page_animation == 1 && ($blog_type == 'classic' || $blog_type == 'zigzag') ) ? 'data-animation="fadeInUp" data-timeeffect="0"' : ' ';
@@ -139,7 +139,7 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
 
             do_action('before_blog_posts_loop');
 
-            if($blog_type == 'grid' || $blog_type == 'masonry'){
+            if( $blog_type == 'grid' || $blog_type == 'masonry' || $blog_type == 'list' ){
                 echo "<div class='row ".$class_animation."' ".$data_animation." style='text-align: ".$blog_align.";'>";
             }
 
@@ -175,6 +175,8 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
                 $path = 'templates/blog/packery/content';
             }elseif( $blog_type == 'justified' ){
                 $path = 'templates/blog/justified/content';
+            }elseif( $blog_type =='list' ){
+                $path = 'templates/blog/list/content';
             }else{
                 $path = 'templates/blog/layout/content';
             }
@@ -204,7 +206,7 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
                 $i++;
             endwhile;
 
-            if ($blog_type == 'grid' || $blog_type == 'masonry') {
+            if ($blog_type == 'grid' || $blog_type == 'masonry' || $blog_type == 'list' ) {
                 echo "</div><!-- .row -->";
             }
             echo "</div><!-- .blog-posts-content -->";
@@ -255,6 +257,7 @@ vc_map( array(
             'value' => array(
                 __( 'Standand', 'js_composer' ) => 'classic',
                 __( 'Grid', 'js_composer' ) => 'grid',
+                __( 'List', 'js_composer' ) => 'list',
                 __( 'Masonry', 'js_composer' ) => 'masonry',
                 __( 'Zig Zag', 'js_composer' ) => 'zigzag',
                 __( 'Packery', 'js_composer' ) => 'packery',
@@ -448,7 +451,7 @@ vc_map( array(
         array(
             'type' => 'textfield',
             'heading' => __( 'Excerpt length', 'js_composer' ),
-            'value' => 50,
+            'value' => 20,
             'param_name' => 'excerpt_length',
             'dependency' => array(
                 'element' => 'show_excerpt',
@@ -629,7 +632,7 @@ vc_map( array(
             'type' => 'kt_switch',
             'heading' => __( 'Show Author', THEME_LANG ),
             'param_name' => 'show_author',
-            'value' => 'true',
+            'value' => 'false',
             "description" => __("Show or hide the post author.", THEME_LANG),
             'group' => __( 'Meta', 'js_composer' ),
             "dependency" => array("element" => "show_meta","value" => array('true')),
@@ -638,7 +641,7 @@ vc_map( array(
             'type' => 'kt_switch',
             'heading' => __( 'Show Category', THEME_LANG ),
             'param_name' => 'show_category',
-            'value' => 'true',
+            'value' => 'false',
             "description" => __("Show or hide the post category.", THEME_LANG),
             'group' => __( 'Meta', 'js_composer' ),
             "dependency" => array("element" => "show_meta","value" => array('true')),
@@ -647,7 +650,7 @@ vc_map( array(
             'type' => 'kt_switch',
             'heading' => __( 'Show Comment', THEME_LANG ),
             'param_name' => 'show_comment',
-            'value' => 'true',
+            'value' => 'false',
             "description" => __("Show or hide the post comment.", THEME_LANG),
             'group' => __( 'Meta', 'js_composer' ),
             "dependency" => array("element" => "show_meta","value" => array('true')),
@@ -684,7 +687,7 @@ vc_map( array(
             'type' => 'kt_switch',
             'heading' => __( 'Show Like Post', THEME_LANG ),
             'param_name' => 'show_like_post',
-            'value' => 'true',
+            'value' => 'false',
             "description" => __("Show or hide the like post.", THEME_LANG),
             'group' => __( 'Meta', 'js_composer' ),
             "dependency" => array("element" => "show_meta","value" => array('true')),

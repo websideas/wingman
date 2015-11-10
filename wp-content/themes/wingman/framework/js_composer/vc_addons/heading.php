@@ -11,7 +11,7 @@ class WPBakeryShortCode_KT_Heading extends WPBakeryShortCode_VC_Custom_heading {
 
             'text' => __( 'This is custom heading element with Google Fonts', 'js_composer' ),
             'align' => 'center',
-            'layout' => 'between',
+            'layout' => '0',
 
             'font_container' => '',
             'use_theme_fonts' => 'yes',
@@ -79,9 +79,12 @@ class WPBakeryShortCode_KT_Heading extends WPBakeryShortCode_VC_Custom_heading {
             $style = 'style="' . esc_attr( implode( ';', $styles ) ) . '"';
         }
 
-
         $output_title = '<' . $font_container_data['values']['tag'] . ' class="kt-heading-title" ' . $style . ' >'.$text.'</' . $font_container_data['values']['tag'] . '>';
-        $output_divider = do_shortcode('[kt_divider align="'.$align.'" border_style="'.$border_style.'" color_border="'.$color_border.'" type="'.$type.'" icon_fontawesome="'.$icon_fontawesome.'" icon_openiconic="'.$icon_openiconic.'" icon_typicons="'.$icon_typicons.'" icon_entypo="'.$icon_entypo.'" icon_linecons="'.$icon_linecons.'" color="'.$color.'" custom_color="'.$custom_color.'" custom_background_color="'.$custom_background_color.'"  background_style="'.$background_style.'" background_color="'.$background_color.'" width="'.$width.'" height="'.$height.'" margin_top="'.$divider_margin_top.'" margin_bottom="'.$divider_margin_bottom.'"]');
+        if( $layout != '0' ){
+            $output_divider = do_shortcode('[kt_divider align="'.$align.'" border_style="'.$border_style.'" color_border="'.$color_border.'" type="'.$type.'" icon_fontawesome="'.$icon_fontawesome.'" icon_openiconic="'.$icon_openiconic.'" icon_typicons="'.$icon_typicons.'" icon_entypo="'.$icon_entypo.'" icon_linecons="'.$icon_linecons.'" color="'.$color.'" custom_color="'.$custom_color.'" custom_background_color="'.$custom_background_color.'"  background_style="'.$background_style.'" background_color="'.$background_color.'" width="'.$width.'" height="'.$height.'" margin_top="'.$divider_margin_top.'" margin_bottom="'.$divider_margin_bottom.'"]');
+        }else{
+            $output_divider = '';
+        }
         $output_content = ($content) ? '<div class="kt-heading-content">'.$content.'</div>' : '';
 
 
@@ -151,6 +154,7 @@ vc_map( array(
             'heading' => __( 'layout', 'js_composer' ),
             'param_name' => 'layout',
             'value' => array(
+                __( 'Title + Description', 'js_composer' ) => "0",
                 __( 'Title + Divider + Description', 'js_composer' ) => "1",
                 __( 'Divider + Title Divider + Description', 'js_composer' ) => '2',
                 __( 'Title + Description + Divider', 'js_composer' ) => '3',

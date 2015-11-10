@@ -74,14 +74,7 @@
             endif;
 	        ?>
 
-	        <?php if( $is_user_owner ): ?>
-		        <th class="product-remove"></th>
-	        <?php
-	            $column_count ++;
-	        endif;
-	        ?>
-
-            <th class="product-thumbnail"></th>
+            <th class="product-thumbnail">Image</th>
 
             <th class="product-name">
                 <span class="nobr"><?php echo apply_filters( 'yith_wcwl_wishlist_view_name_heading', __( 'Product Name', 'yit' ) ) ?></span>
@@ -91,7 +84,7 @@
 
                 <th class="product-price">
                     <span class="nobr">
-                        <?php echo apply_filters( 'yith_wcwl_wishlist_view_price_heading', __( 'Unit Price', 'yit' ) ) ?>
+                        <?php echo apply_filters( 'yith_wcwl_wishlist_view_price_heading', __( 'Price', 'yit' ) ) ?>
                     </span>
                 </th>
 
@@ -121,6 +114,13 @@
 	            $column_count ++;
             endif;
             ?>
+            
+            <?php if( $is_user_owner ): ?>
+		        <th class="product-remove"></th>
+	        <?php
+	            $column_count ++;
+	        endif;
+	        ?>
         </tr>
         </thead>
 
@@ -146,14 +146,6 @@
 			                    <input type="checkbox" value="<?php echo esc_attr( $item['prod_id'] ) ?>" name="add_to_cart[]" <?php echo ( $product->product_type != 'simple' ) ? 'disabled="disabled"' : '' ?>/>
 		                    </td>
 	                    <?php endif ?>
-
-                        <?php if( $is_user_owner ): ?>
-                        <td class="product-remove">
-                            <div>
-                                <a href="<?php echo esc_url( add_query_arg( 'remove_from_wishlist', $item['prod_id'] ) ) ?>" class="remove remove_from_wishlist" title="<?php _e( 'Remove this product', 'yit' ) ?>"></a>
-                            </div>
-                        </td>
-                        <?php endif; ?>
 
                         <td class="product-thumbnail">
                             <a href="<?php echo esc_url( get_permalink( apply_filters( 'woocommerce_in_cart_product', $item['prod_id'] ) ) ) ?>">
@@ -259,7 +251,14 @@
                                 <a href="<?php echo esc_url( add_query_arg( 'remove_from_wishlist', $item['prod_id'] ) ) ?>" class="remove_from_wishlist button" title="<?php _e( 'Remove this product', 'yit' ) ?>"><?php _e( 'Remove', 'yit' ) ?></a>
                             <?php endif; ?>
                         </td>
-	                <?php endif; ?>
+	                   <?php endif; ?>
+                        <?php if( $is_user_owner ): ?>
+                            <td class="product-remove">
+                                <div>
+                                    <a href="<?php echo esc_url( add_query_arg( 'remove_from_wishlist', $item['prod_id'] ) ) ?>" class="remove remove_from_wishlist" title="<?php _e( 'Remove this product', 'yit' ) ?>"></a>
+                                </div>
+                            </td>
+                        <?php endif; ?>
                     </tr>
                 <?php
                 endif;

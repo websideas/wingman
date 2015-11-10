@@ -61,9 +61,9 @@ if ( post_password_required() ) {
 
     $new_fields = array(
         'author' => '<p class="comment_field-column">' .
-            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"  placeholder="'.__('Name', THEME_LANG).( $req ? $required : '' ).'"' . $aria_req . $html_req . ' /></p>',
+            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"  placeholder="'.__('Name', THEME_LANG).'"' . $aria_req . $html_req . ' /></p>',
         'email'  => '<p class="comment_field-column">' .
-            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="'.__('Email', THEME_LANG).( $req ? $required : '' ).'"' . $aria_req . $html_req . ' /></p>',
+            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="'.__('Email', THEME_LANG).'"' . $aria_req . $html_req . ' /></p>',
         'url'    => '<p class="comment_field-column">' .
             '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="'.__('Website', THEME_LANG).'" /></p>',
     );
@@ -71,11 +71,12 @@ if ( post_password_required() ) {
 
 
     $comments_args = array(
+        'label_submit'      => __( 'send messages' ),
         'fields' => apply_filters( 'comment_form_default_fields', $new_fields ),
         //'comment_form_before_fields' => '<div>',
         //'comment_form_after_fields' => '</div>',
-        'comment_field' => '<p><textarea id="comment" name="comment" placeholder="'.__('Message*', THEME_LANG).'"  aria-required="true" rows="6"></textarea></p>',
-        'class_submit'      => 'btn btn-default',
+        'comment_field' => '<p><textarea id="comment" name="comment" placeholder="'.__('Your Comment', THEME_LANG).'"  aria-required="true" rows="6"></textarea></p>',
+        'class_submit'      => 'button alt',
     );
 
     ?>

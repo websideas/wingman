@@ -27,8 +27,8 @@ get_header(); ?>
                         <?php global $wp_query; ?>
                         <?php
                             $page_animation = kt_option( 'page_animation' );
-                            $animate_classic = ( $page_animation == 1 && $settings['blog_type'] == 'classic' ) ? 'animation-effect' : ' ';
-                            $data_animate_classic = ( $page_animation == 1 && $settings['blog_type'] == 'classic' ) ? 'data-animation="fadeInUp" data-timeeffect="0"' : ' ';
+                            $animate_classic = ( $page_animation == 1 && ($settings['blog_type'] == 'classic' || $settings['blog_type'] == 'list') ) ? 'animation-effect' : ' ';
+                            $data_animate_classic = ( $page_animation == 1 && ($settings['blog_type'] == 'classic' || $settings['blog_type'] == 'list') ) ? 'data-animation="fadeInUp" data-timeeffect="0"' : ' ';
                         ?>
                         <div class='blog-posts blog-posts-<?php echo esc_attr($settings['blog_type']); ?> <?php echo $animate_classic; ?>' data-settings="<?php echo esc_attr( json_encode( $settings ) ); ?>" data-type='<?php echo esc_attr($settings['blog_type']) ?>' data-total='<?php echo esc_attr($wp_query->max_num_pages); ?>' data-current='1' <?php echo $data_animate_classic; ?>>
 
@@ -63,6 +63,8 @@ get_header(); ?>
                                 $path = 'templates/blog/classic/content';
                             }elseif( $settings['blog_type'] == 'zigzag' ){
                                 $path = 'templates/blog/zigzag/content';
+                            }elseif( $settings['blog_type'] == 'list' ){
+                                $path = 'templates/blog/list/content';
                             }else{
                                 $path = 'templates/blog/layout/content';
                             }
@@ -71,7 +73,7 @@ get_header(); ?>
                             $data_animation = ( $page_animation == 1 && $settings['blog_type'] == 'grid' ) ? 'data-animation="fadeInUp"' : '';
                             
                             echo "<div class='blog-posts-content clearfix' style='text-align: ".$settings['align']."'>";
-                            if($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry'){
+                            if($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry' || $settings['blog_type'] == 'list'){
                                 echo "<div class='row ".$class_animation."' ".$data_animation.">";
                             }
 
@@ -104,7 +106,7 @@ get_header(); ?>
                                 // End the loop.
                             endwhile;
 
-                            if ($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry') {
+                            if ($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry' || $settings['blog_type'] == 'list') {
                                 echo "</div><!-- .row -->";
                             }
                             echo "</div><!-- .blog-posts-content -->";

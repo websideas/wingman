@@ -12,7 +12,6 @@
         }
     ?>
     <header class="entry-header<?php if( $title_meta_center == 1 ){ echo ' text-center'; } ?>">
-        <h2 class="entry-title"><?php the_title(); ?></h2>
         <?php if(kt_post_option(null, '_kt_meta_info', 'blog_meta', 1)){ ?>
             <div class="entry-meta-data">
                 <?php
@@ -37,6 +36,7 @@
                 ?>
             </div>
         <?php } ?>
+        <h2 class="entry-title"><?php the_title(); ?></h2>
     </header><!-- .entry-header -->
     <div class="entry-content-outer">
         <?php

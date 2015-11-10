@@ -67,7 +67,9 @@
         kt_likepost();
         kt_blog_packery();
         kt_blog_justified();
-
+        
+        kt_widget_categories();
+        
         if($('#wpadminbar').length){
             $('body').addClass('admin-bar');
         }
@@ -314,7 +316,7 @@
      VC Coming Soon
      --------------------------------------------- */
     function init_VCComingSoon() {
-        var coming_html = '<div class="wrap"><div class="value-time">%D</div><div class="title">' + ajax_frontend.days + '</div></div> <div class="wrap wrap-divider"><div class="value-time">:</div><div class="title">&nbsp;</div></div> <div class="wrap"><div class="value-time">%H</div><div class="title">' + ajax_frontend.hours + '</div></div> <div class="wrap wrap-divider"><div class="value-time">:</div><div class="title">&nbsp;</div></div> <div class="wrap"><div class="value-time">%M</div><div class="title">' + ajax_frontend.minutes + '</div></div> <div class="wrap wrap-divider"><div class="value-time">:</div><div class="title">&nbsp;</div></div> <div class="wrap"><div class="value-time">%S</div><div class="title">' + ajax_frontend.seconds + '</div><div class="clearfix"></div></div>';
+        var coming_html = '<div class="wrap"><div class="value-time">%D</div><div class="title">' + ajax_frontend.days + '</div></div> <div class="wrap"><div class="value-time">%H</div><div class="title">' + ajax_frontend.hours + '</div></div><div class="wrap"><div class="value-time">%M</div><div class="title">' + ajax_frontend.minutes + '</div></div> <div class="wrap"><div class="value-time">%S</div><div class="title">' + ajax_frontend.seconds + '</div><div class="clearfix"></div></div>';
         $('.coming-soon').each(function () {
             var date = $(this).data('date');
             $(this).countdown(date, function (event) {
@@ -886,6 +888,17 @@
                 captions: false,
                 lastRow: 'justify'
             });
+        });
+    }
+    
+    /**==============================
+    *** Widget Categories Icon Toggle
+    ===============================**/
+    function kt_widget_categories(){
+        $('.widget-container ul.children').closest('li').append('<span class="icon-toggle"></span>');
+        $('.widget-container ul.children').hide();
+        $('body').on('click','.widget-container .icon-toggle',function(){
+            $(this).closest('li').find('.children').slideToggle();
         });
     }
 

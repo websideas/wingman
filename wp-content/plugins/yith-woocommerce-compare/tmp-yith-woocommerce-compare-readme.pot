@@ -1,0 +1,351 @@
+msgid ""
+msgstr "MIME-Version: 1.0\n"
+
+#. Name.
+msgid "YITH WooCommerce Compare"
+msgstr ""
+
+#. Short description.
+msgid ""
+"YITH WooCommerce Compare allows you to compare more products of your shop in one complete table.\n"
+"WooCommerce Compatible up to 2.4.x"
+msgstr ""
+
+#. Screenshot description.
+msgid "The popup with compare table."
+msgstr ""
+
+#. Screenshot description.
+msgid "The button compare."
+msgstr ""
+
+#. Screenshot description.
+msgid "The settings of plugin"
+msgstr ""
+
+#. Found in description header.
+msgid "Installation"
+msgstr ""
+
+#. Found in description header.
+msgid "Configuration"
+msgstr ""
+
+#. Found in description list item.
+msgid "Unzip the downloaded zip file."
+msgstr ""
+
+#. Found in description list item.
+msgid "Upload the plugin folder into the <code>wp-content/plugins/</code> directory of your WordPress site."
+msgstr ""
+
+#. Found in description list item.
+msgid "Activate <code>YITH WooCommerce Compare</code> from Plugins page"
+msgstr ""
+
+#. Found in description list item.
+msgid "Add the features in each product by setting the attributes in prouct configuration;"
+msgstr ""
+
+#. Found in description list item.
+msgid "Configure the options in YIT Plugin -&gt; Compare;"
+msgstr ""
+
+#. Found in description list item.
+msgid "The user of your shop will click in the \"Compare\" button located in the single product page;"
+msgstr ""
+
+#. Found in description list item.
+msgid "Will be open a popup with the compare table inside."
+msgstr ""
+
+#. Found in description paragraph.
+msgid ""
+"YITH WooCommerce Compare plugin is an extension of WooCommerce plugin that allow your users to compare some products of your shop.\n"
+"All products are saved in one complete table where the user can see the difference between the products. Each product features can be\n"
+"set with the woocommerce attributes in the product configuration.\n"
+"You can also add a simple widget with the list of products the users have added, where you can manage them.\n"
+"Also you can simply customize the compare table with your style, by editing the specific template."
+msgstr ""
+
+#. Found in description paragraph.
+msgid ""
+"Working demos are available here:\n"
+"<strong><a href=\"http://preview.yithemes.com/room09/shop/\">LIVE DEMO 1</a></strong> - <strong><a href=\"http://preview.yithemes.com/bazar/shop/\">LIVE DEMO 2</a></strong>"
+msgstr ""
+
+#. Found in description paragraph, remaining content paragraph.
+msgid "Full documentation is available <a href=\"http://yithemes.com/docs-plugins/yith-woocommerce-compare\">here</a>."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "This plugin is 100% compatible with <a href=\"http://wpml.org/?aid=24889&amp;affiliate_key=Qn1wDeBNTcZV\">WPML</a>"
+msgstr ""
+
+#. Found in description paragraph.
+msgid "You can also add the widget with the product list of compare table, in Appearance -&gt; Widgets and adding the widget \"YITH WooCommerce Compare Widget\"."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: After you remove product from compare, you can re-add it without reload page"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated: Plugin Core"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: JS error when loading compare window"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated: Changed Text Domain from 'yith-wcmp' to 'yith-woocommerce-compare'"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated: Plugin Core Framework"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: Compatibility with WooPress 4.3"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: Compatibility with WooCommerce 2.4"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated: Core plugin"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: Compare table layout"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: undefined function unblock() in main js"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: Added new plugin core"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: Error in class yith-woocompare-fontend"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: Lightbox doesn't close after click view cart"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: minor bug fix"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated: Language files"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Removed: old default.po catalog language file"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: Bulgarian Translation by Joanna Mikova"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: Spanish Translation by Rodoslav Angelov and Mariano Rivas"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: Shortcode compare"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: Support to WC 2.2.3"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: Support to WC 2.2.2"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update: Compare Template"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweek: WPML Support improved"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: Fields orders"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated: Colorbox Library Version 1.5.10"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: Horizontal scroll bar issue: show at the end of iframe"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: RTL Support"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: WPML Support on Compare Widget"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: Add to cart Button on Compare page"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: Support to WooCommerce 2.1.X"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: French translation by Paumo"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: Persian translation by Khalil Delavaran"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: Compare table title option"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: Compatibility with WPML plugin"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: Brazilian Portuguese translation by hotelwww"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated: Dutch translation by Frans Pronk"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: Responsive features"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: Dequeued wrong JS scripts"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: complete Dutch translation. Thanks to Frans Pronk"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: Sortable scripts included only in the plugin admin page"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: products list in popup don't update after have added a product"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Minor bugs fixes"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tweak: trigger in javascript file for add to compare event"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: Link/Button text option in plugin options"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added: ability to add a link in the menu top open the popup"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: bug with attributes added after installation"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fixed: bug with plugin activated but not working for multisites"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Initial release"
+msgstr ""
+
+#. Found in faq header.
+msgid "Can I customize the compare table?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Can I select what fields show inside the compare table?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Can I order the fields in the compare table?"
+msgstr ""
+
+#. Found in faq header.
+msgid "What are the main changes in plugin translation?"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Yes, you can copy the template from the plugin folder and paste it inside the folder \"woocommerce\" of your theme folder."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Yes, you can choose what fields to show in the compare table. You can do it in YIT Plugins -&gt; Compare."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Yes, you can sort the fields in the compare table. You can do it in YIT Plugins -&gt; Compare."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid ""
+"Recently YITH WooCommerce Compare has been selected to be included in the \"translate.wordpress.org\" translate programme.\n"
+"In order to import correctly the plugin strings in the new system, we had to change the text domain form 'yit' to 'yith-woocommerce-compare'.\n"
+"Once the plugin will be imported in the translate.wordpress.org system, the translations of other languages will be downloaded directly from WordPress, without using any .po and .mo files. Moreover, users will be able to participate in a more direct way to plugin translations, suggesting texts in their languages in the dedicated tab on translate.wordpress.org.\n"
+"During this transition step, .po and .mo files will be used as always, but in order to be recognized by WordPress, they will need to have a new nomenclature, renaming them in:\n"
+"yith-woocommerce-compare-.po\n"
+"yith-woocommerce-compare-.mo"
+msgstr ""
+
+#. Found in remaining content header.
+msgid "Suggestions"
+msgstr ""
+
+#. Found in remaining content header.
+msgid "Translators"
+msgstr ""
+
+#. Found in remaining content header.
+msgid "Available Languages"
+msgstr ""
+
+#. Found in remaining content header.
+msgid "Documentation"
+msgstr ""
+
+#. Found in remaining content list item.
+msgid "English (Default)"
+msgstr ""
+
+#. Found in remaining content list item.
+msgid "Italiano"
+msgstr ""
+
+#. Found in remaining content paragraph.
+msgid "If you have suggestions about how to improve YITH WooCommerce Compare, you can <a href=\"mailto:plugins@yithemes.com\" title=\"Your Inspiration Themes\">write us</a> so we can bundle them into YITH WooCommerce Compare."
+msgstr ""
+
+#. Found in remaining content paragraph.
+msgid ""
+"If you have created your own language pack, or have an update for an existing one, you can send <a href=\"http://codex.wordpress.org/Translating_WordPress\" title=\"Translating WordPress\">gettext PO and MO file</a>\n"
+"<a href=\"http://yithemes.com/contact/\" title=\"Your Inspiration Themes\">use</a> so we can bundle it into YITH WooCommerce Compare Languages."
+msgstr ""

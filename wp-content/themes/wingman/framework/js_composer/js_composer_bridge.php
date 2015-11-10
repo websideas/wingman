@@ -209,6 +209,10 @@ $composer_addons = array(
     'coming_soon.php',
     'googlemap.php',
     'instagram_carousel.php',
+    
+    'category_products_tab.php',
+    'products_carousel.php',
+    'sales_countdown.php',
 );
 
 foreach ( $composer_addons as $addon ) {

@@ -37,8 +37,8 @@ function kt_woocommerce_image_dimensions() {
 		return;
 	}
 
-  	$catalog = array('width' => '500','height' => '600', 'crop' => 1 );
-    $thumbnail = array('width' => '200', 'height' => '240', 'crop' => 1 );
+  	$catalog = array('width' => '500','height' => '555', 'crop' => 1 );
+    $thumbnail = array('width' => '200', 'height' => '250', 'crop' => 1 );
 	$single = array( 'width' => '1000','height' => '1200', 'crop' => 1);
 
 	// Image sizes
@@ -92,6 +92,9 @@ function kt_wp_enqueue_scripts(){
     wp_enqueue_script( 'easyzoom', THEME_JS . 'easyzoom.js', array( 'jquery' ), null, true );
     wp_enqueue_script( 'variations-plugin-script', THEME_JS . 'woo-variations-plugin.js', array( 'jquery' ), null, true );
     wp_enqueue_script( 'mCustomScrollbar-script', THEME_JS . 'jquery.mCustomScrollbar.min.js', array( 'jquery' ), null, true );
+    
+    wp_enqueue_script( 'jquery-ui-accordion' );
+    wp_enqueue_script( 'jquery-ui-tabs' );
     wp_enqueue_script( 'kt-woocommerce', THEME_JS . 'woocommerce.js', array( 'jquery' ), null, true );
 
 }
@@ -133,8 +136,7 @@ function kt_woocommerce_get_cart( $wrapper = true ){
 
                         $output .= WC()->cart->get_item_data( $cart_item );
 
-        					$output .= '<div class="bag-product-price">'.wc_price($bag_product->get_price()).'</div>';
-                            $output .= '<div class="bag-product-qty">'.__('Qty: ', THEME_LANG).$cart_item['quantity'].'</div>';
+        					$output .= '<div class="bag-product-price">'.$cart_item['quantity'].'x'.wc_price($bag_product->get_price()).'</div>';
 
     					$output .= '</div>';
     					$output .= apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="#" data-itemkey="'.$cart_item_key.'" data-id="'.$cart_item['product_id'].'" class="remove" title="%s"></a>', __('Remove this item', 'woocommerce') ), $cart_item_key );
@@ -152,8 +154,8 @@ function kt_woocommerce_get_cart( $wrapper = true ){
                 $output .= '<div class="bag-total"><strong>'.__('Subtotal: ', THEME_LANG).'</strong>'.$cart_total.'</div><!-- .bag-total -->';
                 $output .= '<div class="bag-buttons">';
                 $output .= '<div class="bag-buttons-content clearfix">';
-                    $output .= '<span><a href="'.esc_url( WC()->cart->get_cart_url() ).'" class="btn btn-viewcart">'.__('View cart', THEME_LANG).'</a></span>';
-                    $output .= '<span><a href="'.esc_url( WC()->cart->get_checkout_url() ).'" class="btn btn-default">'.__('Checkout', THEME_LANG).'</a></span>';
+                    $output .= '<span><a href="'.esc_url( WC()->cart->get_cart_url() ).'" class="alt button">'.__('View cart', THEME_LANG).'</a></span>';
+                    $output .= '<span><a href="'.esc_url( WC()->cart->get_checkout_url() ).'" class="alt button">'.__('Checkout', THEME_LANG).'</a></span>';
                 $output .= '</div><!-- .bag-buttons -->';
                 $output .= '</div><!-- .bag-buttons -->';
             }
@@ -330,16 +332,18 @@ add_action( 'woocommerce_shop_loop_item_before_image', 'woocommerce_show_product
 add_action( 'woocommerce_shop_loop_item_before_image', 'woocommerce_template_loop_add_to_cart', 10);
 
 
+add_action( 'woocommerce_shop_tool_list_before', 'woocommerce_template_loop_add_to_cart', 5);
+add_action( 'woocommerce_shop_tool_list', 'kt_woocommerce_add_archive_tool', 10);
 add_action( 'woocommerce_shop_loop_item_after_image', 'kt_woocommerce_add_archive_tool', 10);
 function kt_woocommerce_add_archive_tool(){
+    if(class_exists('YITH_WCWL_UI')){
+        echo do_shortcode('<div class="tool-inner">[yith_wcwl_add_to_wishlist]</div>');
+    }
     printf(
         '<div class="tool-inner"><a href="#" class="product-quick-view" data-id="%s">%s</a></div>',
         get_the_ID(),
         __('Quick view', THEME_LANG)
     );
-    if(class_exists('YITH_WCWL_UI')){
-        echo do_shortcode('<div class="tool-inner">[yith_wcwl_add_to_wishlist]</div>');
-    }
     if(defined( 'YITH_WOOCOMPARE' )){
         echo do_shortcode('<div class="tool-inner">[yith_compare_button]</div>');
     }
@@ -389,12 +393,12 @@ function woocommerce_shop_loop_item_action_action_product(){
  * Add count products before cart
  *
  */
-
+/*
 add_action('woocommerce_before_cart_table', 'kt_woocommerce_before_cart_table', 20);
 function kt_woocommerce_before_cart_table( $args ){
     $html = '<h2 class="shopping-cart-title">'. sprintf( __( 'Your shopping cart: <span>(%d items)</span>', THEME_LANG ), WC()->cart->cart_contents_count ) . '</h2>';
 	echo $html;
-}
+}*/
 
 
 
@@ -493,4 +497,127 @@ function woo_product_pagination(){ ?>
     </div>
     <?php
 }
-add_action( 'woocommerce_single_product_summary', 'woo_product_pagination', 1 );
+//add_action( 'woocommerce_single_product_summary', 'woo_product_pagination', 1 );
+
+add_action( 'woocommerce_single_product_summary', 'kt_share_box_woo', 35 );
+if( ! function_exists( 'kt_share_box_woo' ) ){
+    function kt_share_box_woo($post_id = null, $style = "", $class = ''){
+        global $post;
+        if(!$post_id) $post_id = $post->ID;
+
+        $link = urlencode(get_permalink($post_id));
+        $title = urlencode(addslashes(get_the_title($post_id)));
+        $excerpt = urlencode(get_the_excerpt());
+        $image = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'full');
+
+        $html = '';
+
+        $social_share = kt_option('social_share');
+
+        foreach($social_share as $key => $val){
+            if($val){
+                if($key == 'facebook'){
+                    // Facebook
+                    $html .= '<a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.facebook.com/sharer.php?s=100&amp;p[title]=' . $title . '&amp;p[url]=' . $link.'\', \'sharer\', \'toolbar=0,status=0,width=620,height=280\');popUp.focus();return false;">';
+                    $html .= '<i class="fa fa-facebook"></i>';
+                    $html .= '</a>';
+                }elseif($key == 'twitter'){
+                    // Twitter
+                    $html .= '<a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://twitter.com/home?status=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false;">';
+                    $html .= '<i class="fa fa-twitter"></i>';
+                    $html .= '</a>';
+                }elseif($key == 'google_plus'){
+                    // Google plus
+                    $html .= '<a class="'.$style.'" href="#" onclick="popUp=window.open(\'https://plus.google.com/share?url=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                    $html .= '<i class="fa fa-google-plus"></i>';
+                    $html .= "</a>";
+                }elseif($key == 'pinterest'){
+                    // Pinterest
+                    $html .= '<a class="share_link" href="#" onclick="popUp=window.open(\'http://pinterest.com/pin/create/button/?url=' . $link . '&amp;description=' . $title . '&amp;media=' . urlencode($image[0]) . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                    $html .= '<i class="fa fa-pinterest"></i>';
+                    $html .= "</a>";
+                }elseif($key == 'linkedin'){
+                    // linkedin
+                    $html .= '<a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://linkedin.com/shareArticle?mini=true&amp;url=' . $link . '&amp;title=' . $title. '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                    $html .= '<i class="fa fa-linkedin"></i>';
+                    $html .= "</a>";
+                }elseif($key == 'tumblr'){
+                    // Tumblr
+                    $html .= '<a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.tumblr.com/share/link?url=' . $link . '&amp;name=' . $title . '&amp;description=' . $excerpt . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                    $html .= '<i class="fa fa-tumblr"></i>';
+                    $html .= "</a>";
+                }elseif($key == 'email'){
+                    // Email
+                    $html .= '<a class="'.$style.'" href="mailto:?subject='.$title.'&amp;body='.$link.'">';
+                    $html .= '<i class="fa fa-envelope-o"></i>';
+                    $html .= "</a>";
+                }
+            }
+        }
+
+        if($html){
+            printf(
+                '<div class="entry-share-box %s">'.__( 'Share Link: ',THEME_LANG ).'%s</div>',
+                $class,
+                $html
+            );
+        }
+    }
+}
+
+
+add_action( 'woocommerce_before_shop_loop', 'woocommerce_gridlist_toggle', 40);
+function woocommerce_gridlist_toggle(){ ?>
+    <?php $gridlist = apply_filters('woocommerce_gridlist_toggle', 'grid') ?>
+    <ul class="gridlist-toggle hidden-xs">
+        <li><span><?php _e('View as:', THEME_LANG) ?></span></li>
+		<li>
+			<a <?php if($gridlist == 'lists'){ ?>class="active"<?php } ?> href="#" title="<?php _e('List view', THEME_LANG) ?>" data-layout="lists" data-remove="grid"><i class="fa fa-th-list"></i></a>
+		</li>
+		<li>
+			<a <?php if($gridlist == 'grid'){ ?>class="active"<?php } ?> href="#" title="<?php _e('Grid view', THEME_LANG) ?>" data-layout="grid" data-remove="lists"><i class="fa fa-th-large"></i></a>
+		</li>
+	</ul>
+<?php }
+
+add_filter( 'woocommerce_gridlist_toggle', 'woocommerce_gridlist_toggle_callback' );
+function woocommerce_gridlist_toggle_callback(){
+    return kt_option('shop_products_layout', 'grid');
+}
+
+add_filter( 'woocommerce_product_loop_start', 'woocommerce_product_loop_start_callback' );
+function woocommerce_product_loop_start_callback($classes){
+    if(is_product_category() || is_shop() || is_product_tag()){
+        $products_layout = kt_option('shop_products_layout', 'grid');
+        $classes .= ' '.$products_layout;
+    }
+    
+    $effect = kt_option('shop_products_effect', 'center');
+    $classes .= ' effect-'.$effect;
+    
+    return $classes;
+}
+
+add_action( 'woocommerce_after_shop_loop_item_title', 'kt_template_single_excerpt', 15 );
+function kt_template_single_excerpt(){
+    global $post;
+
+    if ( ! $post->post_excerpt ) {
+    	return;
+    }
+    
+    ?>
+    <div class="product-short-description">
+    	<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
+    </div>
+    <?php
+}
+
+add_action( 'woocommerce_sale_sountdown_item', 'kt_template_single_excerpt', 10 );
+add_action( 'woocommerce_sale_sountdown_item', 'woocommerce_after_shop_loop_item_sale_sale_price', 15, 2 );
+function woocommerce_after_shop_loop_item_sale_sale_price($product, $post){
+    $sale_price_dates_to = ( $date = get_post_meta( $product->id, '_sale_price_dates_to', true ) ) ? date_i18n( 'Y-m-d', $date ) : '';
+    if($sale_price_dates_to){
+        echo '<div class="woocommerce-countdown clearfix" data-time="'.$sale_price_dates_to.'"></div>';
+    }
+}

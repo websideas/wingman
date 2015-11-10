@@ -11,7 +11,6 @@
         kt_post_thumbnail($blog_atts['image_size'], 'img-responsive', true, false);
     }
     ?>
-    <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     <?php
     if($blog_atts['sharebox']){
         kt_share_box(get_the_ID());
@@ -42,6 +41,8 @@
         </div>
     <?php } ?>
     <div class="clearfix"></div>
+    <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    
     <div class="entry-main-content">
         <div class="post-info">
             <div class="entry-ci">

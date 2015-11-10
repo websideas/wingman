@@ -137,14 +137,14 @@ if(is_admin()){
 
                 .highlight,
 
-                .woocommerce .product .yith-wcwl-add-to-wishlist .ajax-loading,
-                .woocommerce ul.shop-products .added_to_cart,
-                .woocommerce ul.shop-products .button,
-                .woocommerce ul.shop-products .product-quick-view,
-                .woocommerce.compare-button,
-                .woocommerce .product .yith-wcwl-add-button,
-                .woocommerce .product .yith-wcwl-wishlistaddedbrowse,
-                .woocommerce .product .yith-wcwl-wishlistexistsbrowse,
+                .woocommerce .product .yith-wcwl-add-to-wishlist .ajax-loading:hover,
+                .woocommerce ul.shop-products .added_to_cart:hover,
+                .woocommerce ul.shop-products .button:hover,
+                .woocommerce ul.shop-products .product-quick-view:hover,
+                .woocommerce.compare-button:hover,
+                .woocommerce .product .yith-wcwl-add-button:hover,
+                .woocommerce .product .yith-wcwl-wishlistaddedbrowse:hover,
+                .woocommerce .product .yith-wcwl-wishlistexistsbrowse:hover,
 
                 body .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
                 body .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
@@ -190,7 +190,7 @@ if(is_admin()){
                 {
                     background-color: <?php echo $accent; ?>;
                 }
-
+                .woocommerce .single-product-main-thumbnails .owl-item.synced a,
                 blockquote,
                 .blockquote-reverse,
                 blockquote.pull-right,
@@ -210,8 +210,6 @@ if(is_admin()){
                 }
 
                 .kt-aboutwidget-socials a:hover,
-                .entry-meta-data,
-                .entry-meta-data a,
                 .search-heading .search-keyword,
                 .search-content-error .search-keyword,
                 blockquote.classic footer,
@@ -246,7 +244,14 @@ if(is_admin()){
                 .vc_tta-color-accent.vc_tta-style-outline .vc_tta-panel.vc_active .vc_tta-panel-heading:hover,
                 .vc_tta-color-accent.vc_tta-style-outline .vc_tta-panel.vc_active .vc_tta-panel-heading:focus,
                 .vc_tta-color-accent.vc_tta-style-outline .vc_tta-panel .vc_tta-panel-heading,
-
+                
+                .woocommerce nav.woocommerce-pagination ul li a:focus,
+                .woocommerce nav.woocommerce-pagination ul li a:hover,
+                .woocommerce nav.woocommerce-pagination ul li span.current,
+                .pagination a.page-numbers:hover,
+                .pagination .page-numbers.current,
+                .entry-share-box a:hover,
+                
                 .vc_tta-color-accent.vc_tta-style-outline .vc_tta-tab.vc_active > a:hover,
                 .vc_tta-color-accent.vc_tta-style-outline .vc_tta-tab.vc_active > a:focus,
                 .vc_tta-color-accent.vc_tta-style-outline .vc_tta-tab.vc_active > a
@@ -255,7 +260,7 @@ if(is_admin()){
                     color: <?php echo $accent; ?>;
                 }
 
-                .button.alt,
+                .button.alt:hover,.button.alt:focus,
                 .btn.alt,
                 .button:hover,
                 .button:focus,
@@ -278,11 +283,6 @@ if(is_admin()){
                 .kt_image_banner:hover .btn-light,
                 .kt_image_banner:hover .btn-dark,
 
-
-                .woocommerce #respond input#submit.alt,
-                .woocommerce a.button.alt,
-                .woocommerce button.button.alt,
-                .woocommerce input.button.alt,
                 .woocommerce #respond input#submit:hover,
                 .woocommerce a.button:hover,
                 .woocommerce button.button:hover,
@@ -295,17 +295,16 @@ if(is_admin()){
                 .vc_btn3.vc_btn3-color-accent.vc_btn3-style-outline:hover,
                 .vc_btn3.vc_btn3-color-accent.vc_btn3-style-outline:focus,
 
-
+                .woocommerce div.product .cart .single_add_to_cart_button:hover,
                 #main-content-sideshow .carousel-navigation-center .owl-kttheme .owl-buttons > div i,
-                .woocommerce nav.woocommerce-pagination ul li a:focus,
-                .woocommerce nav.woocommerce-pagination ul li a:hover,
-                .woocommerce nav.woocommerce-pagination ul li span.current,
-                .pagination a.page-numbers:hover,
-                .pagination .page-numbers.current,
                 .widget_product_tag_cloud a:hover,
                 .widget_tag_cloud a:hover,
-                .entry-share-box a:hover,
-
+                
+                .wc-single-product .functional-buttons-product .woocommerce.compare-button a:hover:before,
+                .woocommerce .wc-single-product .functional-buttons-product .yith-wcwl-add-button a.add_to_wishlist:hover:before,
+                .woocommerce .wc-single-product .functional-buttons-product .yith-wcwl-wishlistaddedbrowse a:hover:before,
+                .woocommerce .wc-single-product .functional-buttons-product .yith-wcwl-wishlistexistsbrowse a:hover:before,
+                
                 .wc-single-product .functional-buttons-product .woocommerce.compare-button a:hover:before,
                 .woocommerce .wc-single-product .functional-buttons-product .yith-wcwl-add-button a.add_to_wishlist:hover:before,
                 .woocommerce .wc-single-product .functional-buttons-product .yith-wcwl-wishlistaddedbrowse a:hover:before,
@@ -331,14 +330,6 @@ if(is_admin()){
                 .button,
                 .wpcf7-submit,
                 .btn-default,
-                .woocommerce #respond input#submit,
-                .woocommerce a.button,
-                .woocommerce button.button,
-                .woocommerce input.button,
-                .woocommerce #respond input#submit.alt,
-                .woocommerce a.button.alt,
-                .woocommerce button.button.alt,
-                .woocommerce input.button.alt,
                 .woocommerce .single-product-main-images.owl-theme .owl-controls .owl-buttons div:hover,
 
                 .vc_btn3.vc_btn3-color-accent.vc_btn3-style-outline,
@@ -355,12 +346,6 @@ if(is_admin()){
                 .button.btn-dark-b:focus,
                 .btn.btn-dark-b:hover,
                 .btn.btn-dark-b:focus,
-
-                .woocommerce div.product .cart .single_add_to_cart_button:hover,
-                .wc-single-product .functional-buttons-product .woocommerce.compare-button a:hover:before,
-                .woocommerce .wc-single-product .functional-buttons-product .yith-wcwl-add-button a.add_to_wishlist:hover:before,
-                .woocommerce .wc-single-product .functional-buttons-product .yith-wcwl-wishlistaddedbrowse a:hover:before,
-                .woocommerce .wc-single-product .functional-buttons-product .yith-wcwl-wishlistexistsbrowse a:hover:before,
                 .vc_tta-color-accent.vc_tta-style-outline .vc_tta-tab > a
                 {
                     border-color: <?php echo $accent; ?>;
@@ -429,7 +414,6 @@ if(is_admin()){
 
             <?php } ?>
             <?php
-
 
 
                 $header_opacity = kt_option('header_opacity', 1);

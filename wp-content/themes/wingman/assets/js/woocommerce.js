@@ -23,7 +23,14 @@
         init_kt_remove_cart();
         init_carouselwoo();
         init_woo_quantily();
-
+        init_gridlistToggle();
+        
+        $('.woocommerce-accordions').accordion({ 
+            'heightStyle': 'content',
+            'header': '.accordions-title' 
+        });
+        
+        $('.woocommerce-category-products-tab').tabs();
     });
 
     /* ---------------------------------------------
@@ -110,7 +117,7 @@
                 wooSlideSpeed = '200';
             }
             if(typeof wooPagination === "undefined"){
-                wooPagination = true;
+                wooPagination = false;
             }
             if(typeof wooNavigation === "undefined"){
                 wooNavigation = true;
@@ -122,8 +129,8 @@
                     autoPlay: wooAutoPlay,
                     itemsCustom: wooitemsCustom,
                     autoHeight: false,
-                    navigation: true,
-                    navigationText: false,
+                    navigation: wooNavigation,
+                    navigationText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
                     slideSpeed: wooSlideSpeed,
                     pagination: wooPagination,
                     afterInit: function (elem) {
@@ -214,8 +221,8 @@
 
         sync2.owlCarousel({
             theme : 'woocommerce-thumbnails',
-            items : 4,
-            itemsCustom : [[991,4], [768, 4], [480, 4]],
+            items : 3,
+            itemsCustom : [[991,3], [768, 3], [480, 3]],
             navigation: true,
             navigationText: false,
             pagination:false,
@@ -270,6 +277,24 @@
             sync2.trigger("owl.goTo", num-1)
         }
     }
-
+    
+    /* ---------------------------------------------
+     Grid list Toggle
+     --------------------------------------------- */
+    function init_gridlistToggle(){
+        $('ul.gridlist-toggle a').on('click', function(e){
+            e.preventDefault();
+            var $this = $(this),
+                $gridlist = $this.closest('.gridlist-toggle'),
+                $products = $this.closest('#main').find('ul.shop-products');
+                
+            $gridlist.find('a').removeClass('active');
+            $this.addClass('active');
+            $products
+                .removeClass($this.data('remove'))
+                .addClass($this.data('layout'));
+                
+        });
+    }
 
 })(jQuery); // End of use strict

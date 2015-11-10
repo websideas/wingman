@@ -156,7 +156,7 @@ function get_page_header( ){
 
 
         if($breadcrumb == '' || $page_header_layout == 'centered'){
-            $layout = '%1$s%2$s%3$s';
+            $layout = '%3$s%1$s%2$s';
         }else{
             if($breadcrumb != ''){
                 if($page_header_align == 'right'){

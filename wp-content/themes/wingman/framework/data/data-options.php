@@ -693,7 +693,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'styling_accent',
                         'type'     => 'color',
                         'title'    => __( 'Main Color', THEME_LANG ),
-                        'default'  => '#d0a852',
+                        'default'  => '#82c14f',
                         'transparent' => false,
                     ),
                     /*
@@ -708,7 +708,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => __( 'Links Color', THEME_LANG ),
                         'output'   => array( 'a' ),
                         'default'  => array(
-                            'regular' => '#d0a852',
+                            'regular' => '#82c14f',
                             'hover' => '#b28c45',
                             'active' => '#b28c45'
                         )
@@ -1200,7 +1200,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'navigation_bordertop',
                         'type'     => 'color',
                         'title'    => __( 'Dropdown & Mega border top color', THEME_LANG ),
-                        'default'  => '#d0a852',
+                        'default'  => '#82c14f',
                         'transparent' => false
                     ),
                     array(
@@ -1429,7 +1429,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'color',
                         'output'   => array( ),
                         'title'    => __( 'Cart divders color', THEME_LANG ),
-                        'default'  => '#E3E3E3',
+                        'default'  => '#e5e5e5',
                         'transparent' => false
                     ),
                 )
@@ -1637,10 +1637,10 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'letter-spacing'  => true,
                         'output'      => array( 'body' ),
                         'default'  => array(
-                            'font-family'     => 'Raleway',
-                            'font-size'       => '13px',
-                            'line-height'     => '28px',
-                            'color'           => '#555555',
+                            'font-family'     => 'Poppins',
+                            'font-size'       => '14px',
+                            'line-height'     => '24px',
+                            'color'           => '#707070',
                         )
                     ),
                     array(
@@ -1688,8 +1688,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '.readmore-link-white'
                         ),
                         'default'  => array(
-                            'font-family'     => 'Montserrat',
-                            'font-size'       => '13px',
+                            'font-family'     => 'Poppins',
+                            'font-size'       => '14px',
                             'text-transform'  => 'uppercase',
                         ),
                         'color'    => false,
@@ -1697,6 +1697,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'font-size'    => false,
                         'text-transform' => true,
                         'letter-spacing'  => true,
+                        'font-weight' => false
                     ),
                     array(
                         'id'       => 'typography_heading',
@@ -1714,8 +1715,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'text-align' => false,
                         'output'      => array( 'h1', '.h1' ),
                         'default'  => array(
-                            'font-family'     => 'Montserrat',
+                            'font-family'     => 'Josefin Slab',
                             'text-transform'  => 'uppercase',
+                            'font-weight'     => '700'
                         ),
                     ),
                     array(
@@ -1728,7 +1730,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'text-transform' => true,
                         'text-align' => false,
                         'default'  => array(
-                            'font-family'     => 'Montserrat',
+                            'font-family'     => 'Josefin Slab',
+                            'font-weight'     => '700'
                         ),
                     ),
                     array(
@@ -1741,7 +1744,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'text-transform' => true,
                         'text-align' => false,
                         'default'  => array(
-                            'font-family'     => 'Montserrat',
+                            'font-family'     => 'Josefin Slab',
+                            'font-weight'     => '700'
                         ),
                     ),
                     array(
@@ -1754,7 +1758,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'text-transform' => true,
                         'text-align' => false,
                         'default'  => array(
-                            'font-family'     => 'Montserrat',
+                            'font-family'     => 'Josefin Slab',
+                            'font-weight'     => '700'
                         ),
                     ),
                     array(
@@ -1767,7 +1772,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'text-transform' => true,
                         'text-align' => false,
                         'default'  => array(
-                            'font-family'     => 'Montserrat',
+                            'font-family'     => 'Josefin Slab',
+                            'font-weight'     => '700'
                         ),
                     ),
                     array(
@@ -1780,7 +1786,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'text-transform' => true,
                         'text-align' => false,
                         'default'  => array(
-                            'font-family'     => 'Montserrat',
+                            'font-family'     => 'Josefin Slab',
+                            'font-weight'     => '700'
                         ),
                     ),
                 )
@@ -1851,7 +1858,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'text-align'      => false,
                         'output'      => array( '#footer-area' ),
                         'default'  => array(
-                            'color'       => '#979797',
+                            'color'       => '#707070',
                             'font-size'   => '',
                             'font-weight' => '',
                             'line-height' => ''
@@ -1874,9 +1881,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => __( 'Footer widgets Links Color', THEME_LANG ),
                         'output'      => array( '#footer-area a' ),
                         'default'  => array(
-                            'regular' => '#ffffff',
-                            'hover'   => '#d0a852',
-                            'active'  => '#d0a852'
+                            'regular' => '#707070',
+                            'hover'   => '#ffffff',
+                            'active'  => '#ffffff'
                         )
                     ),
 
@@ -1892,9 +1899,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => __( 'Footer Copyright Links Color', THEME_LANG ),
                         'output'      => array( '#footer-copyright a' ),
                         'default'  => array(
-                            'regular' => '#ffffff',
-                            'hover'   => '#d0a852',
-                            'active'  => '#d0a852'
+                            'regular' => '#707070',
+                            'hover'   => '#ffffff',
+                            'active'  => '#ffffff'
                         )
                     ),
                     array(
@@ -1972,8 +1979,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'text-transform' => true,
                         'output'      => array( '#nav > ul > li > a' ),
                         'default'  => array(
-                            'font-family'     => 'Montserrat',
+                            'font-family'     => 'Poppins',
                             'text-transform' => 'uppercase',
+                            'font-weight'    => '600'
                         ),
                     ),
                     array(
@@ -2000,7 +2008,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li ul.sub-menu-dropdown > li > a'
                         ),
                         'default'  => array(
-                            'font-family'     => 'Montserrat',
+                            'font-family'     => 'Poppins',
                             'text-transform' => 'uppercase',
                         ),
                     ),
@@ -2025,8 +2033,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li .widget-title'
                         ),
                         'default'  => array(
-                            'font-family'     => 'Montserrat',
+                            'font-family'     => 'Josefin Slab',
                             'text-transform' => 'uppercase',
+                            'font-weight'  => '700'
                         ),
                     ),
                     array(
@@ -2067,7 +2076,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'text-transform' => true,
                         'output'      => array( 'ul.navigation-mobile > li > a' ),
                         'default'  => array(
-                            'font-family'     => 'Montserrat',
+                            'font-family'     => 'Poppins',
                             'text-transform' => 'uppercase',
                         ),
                     ),
@@ -2104,8 +2113,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li .widget-title'
                         ),
                         'default'  => array(
-                            'font-family'     => 'Montserrat',
+                            'font-family'     => 'Josefin Slab',
                             'text-transform' => 'uppercase',
+                            'font-weight'  => '700'
                         ),
                     ),
                 )
@@ -2195,7 +2205,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'sides' => __('Sides', THEME_LANG),
                             'centered' => __('Centered', THEME_LANG ),
                         ),
-                        'default'  => 'sides',
+                        'default'  => 'centered',
                         'clear' => false
                     ),
 
@@ -2209,7 +2219,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'center' => __('Center', THEME_LANG),
                             'right' => __('Right', THEME_LANG)
                         ),
-                        'default'  => 'left',
+                        'default'  => 'center',
                         'clear' => false,
                         'desc' => __('Align don\'t support for layout Sides', THEME_LANG)
                     ),
@@ -2289,8 +2299,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'text-transform' => true,
                         'output'      => array( '.page-header h1.page-header-title' ),
                         'default'  => array(
-                            'font-family'     => 'Montserrat',
+                            'font-family'     => 'Josefin Slab',
                             'text-transform' => 'uppercase',
+                            'font-weight' => '700'
                         ),
                     ),
                     array(
@@ -2345,7 +2356,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'left' => __('Left Sidebar', THEME_LANG),
                             'right' => __('Right Layout', THEME_LANG)
                         ),
-                        'default'  => 'right',
+                        'default'  => 'full',
                         'clear' => false,
                     ),
                     array(
@@ -2468,6 +2479,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'options' => array(
                             'classic' => __( 'Standand', 'js_composer' ),
                             'grid' => __( 'Grid', 'js_composer' ),
+                            'list' => __( 'List', 'js_composer' ),
                             'masonry' => __( 'Masonry', 'js_composer' ),
                             'zigzag' => __( 'Zig Zag', 'js_composer' ),
                         ),
@@ -2614,7 +2626,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Post Meta Author', THEME_LANG),
                         'desc' => __('Show meta author in blog posts.', THEME_LANG),
-                        "default" => 1,
+                        "default" => 0,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG),
                         'required' => array('archive_meta','equals', array( 1 ) ),
@@ -2624,7 +2636,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Post Meta Comments', THEME_LANG),
                         'desc' => __('Show post meta comments in blog posts.', THEME_LANG),
-                        "default" => 1,
+                        "default" => 0,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG),
                         'required' => array('archive_meta','equals', array( 1 ) ),
@@ -2634,7 +2646,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Post Meta Categories', THEME_LANG),
                         'desc' => __('Show post meta categories in blog posts.', THEME_LANG),
-                        "default" => 1,
+                        "default" => 0,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG),
                         'required' => array('archive_meta','equals', array( 1 ) ),
@@ -2760,6 +2772,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'options' => array(
                             'classic' => __( 'Standand', 'js_composer' ),
                             'grid' => __( 'Grid', 'js_composer' ),
+                            'list' => __( 'List', 'js_composer' ),
                             'masonry' => __( 'Masonry', 'js_composer' ),
                             'zigzag' => __( 'Zig Zag', 'js_composer' ),
                         ),
@@ -2906,7 +2919,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Post Meta Author', THEME_LANG),
                         'desc' => __('Show meta author in blog posts.', THEME_LANG),
-                        "default" => 1,
+                        "default" => 0,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG),
                         'required' => array('author_meta','equals', array( 1 ) ),
@@ -2916,7 +2929,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Post Meta Comments', THEME_LANG),
                         'desc' => __('Show post meta comments in blog posts.', THEME_LANG),
-                        "default" => 1,
+                        "default" => 0,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG),
                         'required' => array('author_meta','equals', array( 1 ) ),
@@ -2926,7 +2939,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Post Meta Categories', THEME_LANG),
                         'desc' => __('Show post meta categories in blog posts.', THEME_LANG),
-                        "default" => 1,
+                        "default" => 0,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG),
                         'required' => array('author_meta','equals', array( 1 ) ),
@@ -3060,7 +3073,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Title and meta center ', THEME_LANG),
                         'desc' => __('', THEME_LANG),
-                        "default" => 0,
+                        "default" => 1,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG)
                     ),
@@ -3321,6 +3334,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'options' => array(
                             'classic' => __( 'Standand', 'js_composer' ),
                             'grid' => __( 'Grid', 'js_composer' ),
+                            'list' => __( 'List', 'js_composer' ),
                             'masonry' => __( 'Masonry', 'js_composer' ),
                             'zigzag' => __( 'Zig Zag', 'js_composer' ),
                         ),
@@ -3456,7 +3470,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Post Meta Author', THEME_LANG),
                         'desc' => __('Show meta author in blog posts.', THEME_LANG),
-                        "default" => 1,
+                        "default" => 0,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG),
                         'required' => array('search_meta','equals', array( 1 ) ),
@@ -3466,7 +3480,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Post Meta Comments', THEME_LANG),
                         'desc' => __('Show post meta comments in blog posts.', THEME_LANG),
-                        "default" => 1,
+                        "default" => 0,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG),
                         'required' => array('search_meta','equals', array( 1 ) ),
@@ -3476,7 +3490,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Post Meta Categories', THEME_LANG),
                         'desc' => __('Show post meta categories in blog posts.', THEME_LANG),
-                        "default" => 1,
+                        "default" => 0,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG),
                         'required' => array('search_meta','equals', array( 1 ) ),
@@ -3552,7 +3566,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Show Page header', THEME_LANG),
                         'desc' => __('Show page header or?.', THEME_LANG),
-                        "default" => 1,
+                        "default" => 0,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG)
                     ),

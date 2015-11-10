@@ -66,15 +66,17 @@ get_header(); ?>
                             $path = 'templates/blog/classic/content';
                         }elseif( $settings['blog_type'] == 'zigzag' ){
                             $path = 'templates/blog/zigzag/content';
+                        }elseif( $settings['blog_type'] == 'list' ){
+                            $path =  'templates/blog/list/content';
                         }else{
                             $path = 'templates/blog/layout/content';
                         }
                         
-                        $class_animation = ( $page_animation == 1 && $settings['blog_type'] == 'grid' ) ? 'animation-effect' : '';
-                        $data_animation = ( $page_animation == 1 && $settings['blog_type'] == 'grid' ) ? 'data-animation="fadeInUp"' : '';
+                        $class_animation = ( $page_animation == 1 && ( $settings['blog_type'] == 'grid' || $settings['blog_type'] == 'list' ) ) ? 'animation-effect' : '';
+                        $data_animation = ( $page_animation == 1 && ( $settings['blog_type'] == 'grid' || $settings['blog_type'] == 'list' ) ) ? 'data-animation="fadeInUp"' : '';
                         
                         echo "<div class='blog-posts-content clearfix' style='text-align: ".esc_attr($settings['align'])."'>";
-                        if($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry'){
+                        if($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry' || $settings['blog_type'] == 'list'){
                             echo "<div class='row ".$class_animation."' ".$data_animation.">";
                         }
 
@@ -105,7 +107,7 @@ get_header(); ?>
                             // End the loop.
                         endwhile;
 
-                        if ($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry') {
+                        if ($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry' || $settings['blog_type'] == 'list') {
                             echo "</div><!-- .row -->";
                         }
                         echo "</div><!-- .blog-posts-content -->";

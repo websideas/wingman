@@ -56,9 +56,9 @@ function theme_setup() {
     
     
     if (function_exists( 'add_image_size' ) ) {
-        add_image_size( 'recent_posts', 570, 380, true);
+        add_image_size( 'recent_posts', 570, 355, true);
         add_image_size( 'small', 170, 170, true );
-        add_image_size( 'blog_post', 1140, 450, true );
+        add_image_size( 'blog_post', 1140, 610, true );
         add_image_size( 'blog_post_sidebar', 1140 );
         
         add_image_size( 'portfolio_default', 960, 600, true );
@@ -497,13 +497,13 @@ function kt_comments($comment, $args, $depth) {
         </div>
         <div class="comment-content">
             <div class="comment-meta">
+                <span class="comment-date"><?php printf( '%1$s' , get_comment_date( 'M d, Y ')); ?></span>
                 <h5 class="author_name">
                     <?php comment_author_link(); ?>
                     <?php if($is_author_comment){ ?>
                         <span class="icon-user"></span>
                     <?php } ?>
                 </h5>
-                <span class="comment-date"><?php printf( '%1$s' , get_comment_date( 'F j, Y \a\t g:i a' )); ?></span>
             </div>
             <div class="comment-entry entry-content">
                 <?php comment_text() ?>
@@ -512,7 +512,7 @@ function kt_comments($comment, $args, $depth) {
                 <?php endif; ?>
             </div>
             <div class="comment-actions clear">
-                <?php edit_comment_link( '<span class="icon-pencil"></span> '.__('Edit', THEME_LANG),'  ',' |') ?>
+                <?php edit_comment_link( '<span class="icon-pencil"></span> '.__('Edit', THEME_LANG),'  ',' ') ?>
                 <?php comment_reply_link( array_merge( $args,
                     array('depth' => $depth,
                         'max_depth' => $args['max_depth'],

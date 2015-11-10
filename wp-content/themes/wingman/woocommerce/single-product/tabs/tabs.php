@@ -21,21 +21,17 @@ $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 
 if ( ! empty( $tabs ) ) : ?>
 
-	<div class="woocommerce-tabs wc-tabs-wrapper">
-		<ul class="tabs wc-tabs">
-			<?php foreach ( $tabs as $key => $tab ) : ?>
-				<li class="<?php echo esc_attr( $key ); ?>_tab">
-					<a href="#tab-<?php echo esc_attr( $key ); ?>"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
-				</li>
-			<?php endforeach; ?>
-		</ul>
-		<div class="woocommerce-tabs-content">
-			<?php foreach ( $tabs as $key => $tab ) : ?>
-				<div class="entry-content wc-tab" id="tab-<?php echo esc_attr( $key ); ?>">
-					<?php call_user_func( $tab['callback'], $key, $tab ); ?>
-				</div>
-			<?php endforeach; ?>
-		</div>
+	<div class="woocommerce-accordions wc-accordions-wrapper">
+		<?php foreach ( $tabs as $key => $tab ) : ?>
+            <div class="woocommerce-accordions-item">
+    			<h3 class="<?php echo esc_attr( $key ); ?>_tab accordions-title">
+    				<a href="#tab-<?php echo esc_attr( $key ); ?>"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
+    			</h3>
+                <div class="entry-content wc-tab" id="tab-<?php echo esc_attr( $key ); ?>">
+    				<?php call_user_func( $tab['callback'], $key, $tab ); ?>
+    			</div>
+            </div>
+		<?php endforeach; ?>
 	</div>
 
 <?php endif; ?>
