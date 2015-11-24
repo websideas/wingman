@@ -76,28 +76,6 @@ p {
   }
 }
 
-.breadcrumb{
-  margin: 0 0 35px;
-  padding: 0;
-  background: none;
-  @include border-radius(0);
-  a{
-    color: $gray-text;
-  }
-}
-
-.page-header{
-  border: none;
-  margin: 0;
-  padding: 0;
-  h1{
-    margin: 0;
-    font-size: 18px;
-  }
-  .breadcrumb{
-    margin: 0;
-  }
-}
 
 /*
  * 1.2. Helper CSS
@@ -135,10 +113,7 @@ p {
 
 .white{ color: #fff !important; }
 .black{ color: #111 !important; }
-.gray{ color: $gray-text!important; }
-
-.bg-gray{  background: $gray-bg; }
-
+.gray{ color: $gray!important; }
 
 
 /* ==============================
@@ -152,7 +127,7 @@ body {
   font-family: $font-stack;
   font-size: 16px;
   line-height: 30px;
-  color: $gray-darker;
+  color: $main-text;
   min-width: 320px;
 }
 
@@ -198,7 +173,7 @@ input[type=tel],
 input[type=text],
 textarea {
   border: 2px solid $border-color;
-  color: $gray-text;
+  color: $gray;
   padding: 6px 12px;
   height: 40px;
   background: none;
@@ -209,9 +184,9 @@ textarea {
   width: 100%;
   &:focus {
     @include css3-prefix('box-shadow', 'none');
-    border-color: $gray-text;
+    border-color: $gray;
     outline: 0;
-    color: $gray-text;
+    color: $gray;
   }
 }
 
@@ -238,15 +213,14 @@ select {
   line-height: 1.42857;
   padding: 6px 12px;
   border: 1px solid #f0f0f0;
-  background: $gray-bg;
   cursor: pointer;
-  color: $gray-text;
+  color: $gray;
 }
 
 select:not([multiple]) {
   @include css3-prefix('box-shadow', 'none');
   @include css3-prefix('appearance', 'none');
-  background:$gray-bg url(../images/selectbox-arrow.png) no-repeat right center;
+  background: url(../images/selectbox-arrow.png) no-repeat right center;
 }
 
 .form-control {
@@ -346,95 +320,6 @@ select:not([multiple]) {
           @include opacity(1);
         }
       }
-    }
-  }
-  &.btn-gray {
-    background: $gray-bg;
-    color: $gray-darker;
-    border-color:$gray-bg;
-    &:hover{
-      background: #000000;
-      color: #FFFFFF;
-      border-color: #000000;
-    }
-  }
-  &.btn-light{
-    border-color: #FFFFFF;
-    background: #FFFFFF;
-    color: #000000;
-    &:hover{
-      background: #000000;
-      color: #FFFFFF;
-      border-color: #000000;
-    }
-  }
-
-  &.btn-dark-b {
-    background: none;
-    color: #000000;
-    border-color: #000000;
-  }
-  &.btn-light-b{
-    border: 2px solid #FFFFFF;
-    background: none;
-    font-family: $font-stack;
-    font-weight: normal;
-    color: #FFFFFF;
-    &:hover{
-      background: #FFFFFF;
-      color: #000000;
-    }
-  }
-
-  &.btn-medium{
-    background: $gray-bg;
-    border: 1px solid #f0f0f0;
-    color: #000;
-    font-weight: bold;
-    letter-spacing: 0.2em;
-    &:hover{
-      background: #000000;
-      border-color: #000000;
-      color: #fff;
-    }
-  }
-
-  &.btn-addtocart{
-    background: #ffffff;
-    color: #000000;
-    width: 100%;
-    height: 48px;
-    font-size: 14px;
-    border-color: #ffffff;
-    padding: 0 45px;
-    line-height: 44px;
-    &:hover{
-      background: #000000;
-      color: #FFFFFF;
-      border-color: #000000;
-    }
-  }
-  &.btn-addtocart-b{
-    background: none;
-    color: #000000;
-    height: 48px;
-    font-size: 14px;
-    border-color: #000000;
-    padding: 0 45px;
-    line-height: 44px;
-    &:hover{
-      background: #000000;
-      color: #FFFFFF;
-      border-color: #000000;
-    }
-  }
-
-  &.btn-default,
-  &.btn-dark-b{
-    &:hover{
-      background: $primary-color;
-      color: #FFFFFF;
-      border-color: $primary-color;
     }
   }
 }

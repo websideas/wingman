@@ -27,11 +27,11 @@
  */
 ::-moz-selection {
   color: #fff;
-  background: #000000; }
+  background: #82c14f; }
 
 ::selection {
   color: #fff;
-  background: #000000; }
+  background: #82c14f; }
 
 html, body {
   -webkit-font-smoothing: antialiased;
@@ -71,29 +71,6 @@ p {
   .row.no-gutters > [class^="col-"], .row.no-gutters > [class*=" col-"] {
     padding-right: 0;
     padding-left: 0; }
-
-.breadcrumb {
-  margin: 0 0 35px;
-  padding: 0;
-  background: none;
-  -webkit-border-radius: 0;
-  -khtml-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0; }
-  .breadcrumb a {
-    color: #999999; }
-
-.page-header {
-  border: none;
-  margin: 0;
-  padding: 0; }
-  .page-header h1 {
-    margin: 0;
-    font-size: 18px; }
-  .page-header .breadcrumb {
-    margin: 0; }
 
 /*
  * 1.2. Helper CSS
@@ -160,10 +137,7 @@ p {
   color: #111 !important; }
 
 .gray {
-  color: #999999 !important; }
-
-.bg-gray {
-  background: #f6f6f6; }
+  color: #c5c5c5 !important; }
 
 /* ==============================
    3. Typography
@@ -172,16 +146,16 @@ p {
  * 3.1 Typography common styles
  */
 body {
-  font-family: "Karla", arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 30px;
-  color: #666666;
+  color: #707070;
   min-width: 320px; }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
   margin: 0 0 20px;
-  font-family: "Roboto Slab", serif;
+  font-family: "Josefin Slab", serif;
   text-transform: uppercase;
   font-weight: bold;
   color: #000000; }
@@ -190,9 +164,9 @@ h1, h2, h3 {
   letter-spacing: 0.2em; }
 
 a {
-  color: #000000; }
+  color: #82c14f; }
   a:hover, a:focus {
-    color: #333333;
+    color: #b8dc9a;
     text-decoration: none; }
 
 .font-light {
@@ -210,8 +184,8 @@ input[type=phone],
 input[type=tel],
 input[type=text],
 textarea {
-  border: 2px solid #ebebeb;
-  color: #999999;
+  border: 2px solid #e5e5e5;
+  color: #c5c5c5;
   padding: 6px 12px;
   height: 40px;
   background: none;
@@ -252,9 +226,9 @@ textarea {
     -ms-box-shadow: none;
     -o-box-shadow: none;
     box-shadow: none;
-    border-color: #999999;
+    border-color: #c5c5c5;
     outline: 0;
-    color: #999999; }
+    color: #c5c5c5; }
 
 textarea {
   height: auto; }
@@ -282,9 +256,8 @@ select {
   line-height: 1.42857;
   padding: 6px 12px;
   border: 1px solid #f0f0f0;
-  background: #f6f6f6;
   cursor: pointer;
-  color: #999999; }
+  color: #c5c5c5; }
 
 select:not([multiple]) {
   -webkit-box-shadow: none;
@@ -299,7 +272,7 @@ select:not([multiple]) {
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
-  background: #f6f6f6 url(../images/selectbox-arrow.png) no-repeat right center; }
+  background: url(../images/selectbox-arrow.png) no-repeat right center; }
 
 .form-control {
   -webkit-border-radius: 0;
@@ -340,7 +313,7 @@ select:not([multiple]) {
   font-size: 14px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  font-family: "Karla", sans-serif;
+  font-family: "Poppins", sans-serif;
   /* Button size */
   /* Button shapes */
   /* Button icon */
@@ -433,73 +406,5 @@ select:not([multiple]) {
       -ms-opacity: 1;
       -o-opacity: 1;
       opacity: 1; }
-  .btn.btn-gray {
-    background: #f6f6f6;
-    color: #666666;
-    border-color: #f6f6f6; }
-    .btn.btn-gray:hover {
-      background: #000000;
-      color: #FFFFFF;
-      border-color: #000000; }
-  .btn.btn-light {
-    border-color: #FFFFFF;
-    background: #FFFFFF;
-    color: #000000; }
-    .btn.btn-light:hover {
-      background: #000000;
-      color: #FFFFFF;
-      border-color: #000000; }
-  .btn.btn-dark-b {
-    background: none;
-    color: #000000;
-    border-color: #000000; }
-  .btn.btn-light-b {
-    border: 2px solid #FFFFFF;
-    background: none;
-    font-family: "Karla", arial, sans-serif;
-    font-weight: normal;
-    color: #FFFFFF; }
-    .btn.btn-light-b:hover {
-      background: #FFFFFF;
-      color: #000000; }
-  .btn.btn-medium {
-    background: #f6f6f6;
-    border: 1px solid #f0f0f0;
-    color: #000;
-    font-weight: bold;
-    letter-spacing: 0.2em; }
-    .btn.btn-medium:hover {
-      background: #000000;
-      border-color: #000000;
-      color: #fff; }
-  .btn.btn-addtocart {
-    background: #ffffff;
-    color: #000000;
-    width: 100%;
-    height: 48px;
-    font-size: 14px;
-    border-color: #ffffff;
-    padding: 0 45px;
-    line-height: 44px; }
-    .btn.btn-addtocart:hover {
-      background: #000000;
-      color: #FFFFFF;
-      border-color: #000000; }
-  .btn.btn-addtocart-b {
-    background: none;
-    color: #000000;
-    height: 48px;
-    font-size: 14px;
-    border-color: #000000;
-    padding: 0 45px;
-    line-height: 44px; }
-    .btn.btn-addtocart-b:hover {
-      background: #000000;
-      color: #FFFFFF;
-      border-color: #000000; }
-  .btn.btn-default:hover, .btn.btn-dark-b:hover {
-    background: #000000;
-    color: #FFFFFF;
-    border-color: #000000; }
 
 /*# sourceMappingURL=style.css.map */
