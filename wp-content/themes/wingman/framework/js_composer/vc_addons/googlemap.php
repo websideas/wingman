@@ -12,7 +12,8 @@ class WPBakeryShortCode_Googlemap extends WPBakeryShortCode {
             'type' => 'roadmap',
             'stype' => '',
             'scrollwheel' => '',
-            'el_class' => ''
+            'el_class' => '',
+            'css' => '',
         ), $atts ) );
 
         if(!$location){return false;}
@@ -30,11 +31,19 @@ class WPBakeryShortCode_Googlemap extends WPBakeryShortCode {
 
         $elementClass = array(
             'extra' => $this->getExtraClass( $el_class ),
-            'size' => 'googlemap',
+            'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' ),
+            'size' => 'wrapper-googlemap',
         );
         $elementClass = preg_replace( array( '/\s+/', '/^\s|\s$/' ), array( ' ', '' ), implode( ' ', $elementClass ) );
-
-        return '<div class=" '.$elementClass.'" data-style="'.esc_attr($stype).'" data-iconmap="'.esc_attr($img_thumb).'" data-type="'.esc_attr($type).'" data-scrollwheel="'.esc_attr($scrollwheel).'" data-location="'.esc_attr($location).'" data-zoom="'.esc_attr($zoom).'" style="height:'.$height.'px"></div>';
+        $output = '';
+        $output .= '<div class=" '.$elementClass.'">';
+            $output .= '<div class="googlemap" data-style="'.esc_attr($stype).'" data-iconmap="'.esc_attr($img_thumb).'" data-type="'.esc_attr($type).'" data-scrollwheel="'.esc_attr($scrollwheel).'" data-location="'.esc_attr($location).'" data-zoom="'.esc_attr($zoom).'" style="height:'.$height.'px"></div>';
+            if( $content ){
+                $output .= '<div class="content-map">'.do_shortcode($content).'</div>';
+            }
+        $output .= '</div>';
+        
+        return $output;
     }    
 }
 
@@ -87,6 +96,7 @@ vc_map( array(
                 __('Elevation', THEME_LANG) => '5',
                 __('Mostly Grayscale', THEME_LANG) => '6',
                 __('Red Hat Antwerp', THEME_LANG) => '7',
+                __('Shades of Grey', THEME_LANG) => '8',
             ),
             "admin_label" => true,
             "description" => __('',THEME_LANG),
@@ -135,10 +145,24 @@ vc_map( array(
             "description" => __( "Select image show", "js_composer" ),
         ),
         array(
+            "type" => "textarea_html",
+            "heading" => __("Content", THEME_LANG),
+            "param_name" => "content",
+            "description" => __("", THEME_LANG),
+        ),
+        array(
             "type" => "textfield",
             "heading" => __( "Extra class", "js_composer" ),
             "param_name" => "el_class",
             "description" => __( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
         ),
+        
+        array(
+			'type' => 'css_editor',
+			'heading' => __( 'Css', 'js_composer' ),
+			'param_name' => 'css',
+			// 'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
+			'group' => __( 'Design options', 'js_composer' )
+		),
     ),
 ));

@@ -304,7 +304,7 @@ textarea {
     -o-border-radius: 0;
     box-shadow: none;
     transition: none;
-    border: 1px solid #e3e3e3;
+    border: 1px solid #e5e5e5;
     color: #666;
     padding: 6px 12px;
     height: 40px;
@@ -2121,43 +2121,62 @@ h2.widgettitle a.rsswidget:first-child,
    9. Search Fullwidth
    ============================== */
 
-.mfp-close {
-    font-family: "Times New Roman", Helvetica, Arial, sans-serif;
-}
-
 #search-fullwidth {
-    color: #fff;
+    color: #b7b7b7;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1140px;
     text-align: center;
+    position: relative;
+    background: #fff;
+    padding: 75px 15px;
 }
 
 #search-fullwidth button.mfp-close,
 #search-fullwidth button.mfp-arrow {
-    color: #fff;
-    font-size: 35px;
+    color: #636363;
     position: fixed;
-    right: 20px;
-    top: 20px;
+    right: 0;
+    top: 0;
     opacity: 1;
+    font-size: 0;
+}
+#search-fullwidth button.mfp-close:after{
+    content: "\f00d";
+    font-family: FontAwesome;
+    font-size:18px;
 }
 
 #search-fullwidth .searchform {
     display: block;
-    font-size: 18px;
     text-align: center;
-    max-width: none;
-    margin-bottom: 20px;
+    max-width: 770px;
+    margin: 0 auto;
+}
+
+.searchform .postform{
+    background: #82c14f url(../images/arrow-form-cat.png) no-repeat right center;   
+    color: #fff; 
+    border: none;
+    display: none;
+}
+#search-fullwidth .searchform .postform{
+    display: block;
+    height:50px;
+    width: 35%;
+    float: left;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
 }
 
 #search-fullwidth .searchform input[type="text"] {
     background-color: #fff;
-    border: 0 none;
     border-radius: 0;
-    font-size: 26px;
+    font-size: 14px;
     font-weight: normal;
     height: auto;
-    padding: 13px 90px 13px 26px;
+    padding: 12px 50px 12px 26px;
     line-height: normal;
     -webkit-transition: all .3s ease-out;
     -moz-transition: all .3s ease-out;
@@ -2165,19 +2184,14 @@ h2.widgettitle a.rsswidget:first-child,
     -o-transition: all .3s ease-out;
     transition: all .3s ease-out;
     -webkit-appearance: none;
+    width: 65%;
+    float: left;
 }
 
 #search-fullwidth .searchform button.submit {
-    color: #b8b8b8;
-    font-size: 23px;
-    right: 15px;
-}
-
-#search-fullwidth p {
-    font-size: 14px;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
-    text-transform: uppercase;
+    color: #636363;
+    font-size: 18px;
+    right: 10px;
 }
 
 /* ==============================
@@ -5701,6 +5715,43 @@ ul.kt-list-fancy > li > .vc_icon_element-icon {
  */
 .fotorama__thumb-border {
     border-color: #d0a852;
+}
+
+
+/*
+ * Google Map
+ */
+ 
+.wrapper-googlemap{
+    position: relative;
+}
+.wrapper-googlemap .content-map{
+    position: absolute;
+    top:50%;
+    left:50%;
+    padding: 45px 45px 25px;
+    background: #fff;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+/*
+ * Contact Form
+ */
+
+form.wpcf7-form .wpcf7-textarea,
+form.wpcf7-form .wpcf7-text{
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    height: auto;
+    color:#707070;
+}
+form.wpcf7-form .wpcf7-textarea{
+    width: 100%!important;
+    height: 80px;
 }
 /* ==============================
    14. Main content

@@ -64,7 +64,7 @@ $classes[] = 'col-xs-'.$bootstrapTabletColumn.' col-sm-'. $bootstrapTabletColumn
             <div class="sale-countdown-content">
                 <h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 
-                <?php do_action( 'woocommerce_sale_sountdown_item' ); ?>
+                <?php do_action( 'woocommerce_sale_sountdown_item', $product, $post ); ?>
                 <?php
                     if($blog_atts['link']){
                         $a_href = $blog_atts['link']['url'];
