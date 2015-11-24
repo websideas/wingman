@@ -4217,7 +4217,7 @@ if ( ! class_exists( 'KT_config' ) ) {
     }
     
     global $reduxConfig;
-    $reduxConfig = new KT_config();
+    //$reduxConfig = new KT_config();
     
 } else {
     echo "The class named Redux_Framework_sample_config has already been called. <strong>Developers, you need to prefix this class with your company name or you'll run into problems!</strong>";
