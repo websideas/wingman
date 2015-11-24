@@ -43,6 +43,8 @@
         $header_positon = 'normal';
     }
 
+    $header_layout = 'layout2';
+
     ?>
 
     <div id="page_outter">

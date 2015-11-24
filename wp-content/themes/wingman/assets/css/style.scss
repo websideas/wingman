@@ -365,7 +365,7 @@ select:not([multiple]) {
   list-style: none;
   li{
     float: right;
-    margin-left: 25px;
+    margin-left: 15px;
     &:last-child{
       margin-left: 0;
     }
@@ -374,6 +374,7 @@ select:not([multiple]) {
       font-size: 14px;
       display: inline-block;
       position: relative;
+      padding: 0 0 0 10px;
       &:hover{
         color: $primary-color;
       }
@@ -408,6 +409,10 @@ select:not([multiple]) {
     display: block;
     line-height: 1;
     padding: 4px 10px 4px 0;
+    color: $tool-font;
+    &:hover{
+      color: $primary-color;
+    }
   }
   &:hover{
     .menu-bars-items{
@@ -427,7 +432,7 @@ select:not([multiple]) {
     text-align: left;
     visibility: hidden;
     @include opacity(0);
-    @include transform(translate(0px, 40px));
+    @include transform(translate(0, 40px));
     @include transition();
 
 
@@ -529,6 +534,7 @@ select:not([multiple]) {
   padding: 0;
   list-style: none;
   text-align: center;
+
   >li{
     position: relative;
     display: inline-block;
@@ -565,6 +571,7 @@ select:not([multiple]) {
     }
 
     &.current-menu-item > a,
+    &.hovered > a,
     >a:hover,
     >a:focus {
 
@@ -580,12 +587,194 @@ select:not([multiple]) {
       }
     }
 
-    ul{
-      display: none;
+    ul.sub-menu-dropdown,
+    > .kt-megamenu-wrapper{
+      background: #FFFFFF;
       position: absolute;
       top: 100%;
       left: 0;
+      text-align: left;
+      @include opacity(0);
+      @include transform(translate(0px, 40px));
+      @include transition('transform 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s');
+      line-height: normal;
+      visibility: hidden;
     }
+
+    ul.sub-menu-dropdown{
+      width: 300px;
+      list-style: none;
+      margin: 0;
+      padding: 15px 0;
+
+      li{
+        position: relative;
+        > a{
+          color: $main-text;
+          display: block;
+          font-size: 14px;
+          padding: 10px 25px;
+          &:hover{
+            color: $primary-color;
+          }
+        }
+        ul.sub-menu-dropdown{
+          left: 100%;
+          top: 0;
+          &.right-overflow{
+            right: 100%;
+            left: auto;
+          }
+        }
+        &:hover{
+          > ul{
+            @include opacity(1);
+            @include transform(translate(0, 0));
+            visibility: visible;
+          }
+        }
+      }
+      &.right-overflow{
+        right :0;
+        left: auto;
+      }
+
+    }
+
+
+    > .kt-megamenu-wrapper{
+      width: 100%;
+      padding: 50px 60px;
+      > .kt-megamenu-ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        > li{
+          float: left;
+          width: 25%;
+          > a,
+          > span{
+            font-size: 18px;
+            font-family: $heading-font;
+            color: $title-text;
+            position: relative;
+            display: inline-block;
+            line-height: 1;
+            padding: 0 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.2em;
+            margin: 0 0 20px;
+
+            &:before,
+            &:after{
+              content: '';
+              top: 50%;
+              height: 14px;
+              margin-top: -7px;
+              width: 1px;
+              background: $title-text;
+              display: block;
+              @include transition();
+              position: absolute;
+            }
+            &:before{
+              left: 0;
+            }
+            &:after{
+              right: 0;
+            }
+          }
+
+          > a{
+            &:hover{
+              color: $primary-color;
+              &:before,
+              &:after{
+                background: $primary-color;
+              }
+            }
+          }
+
+          .kt-megamenu-widget{
+            .widget-container:last-child{
+              margin-bottom: 0;
+            }
+          }
+
+          ul.sub-menu-megamenu{
+            margin: 0;
+            padding: 0 0 0 10px;
+            list-style: none;
+            a{
+              color: $main-text;
+              display: block;
+              font-size: 14px;
+              padding: 10px 0;
+              &:hover{
+                color: $primary-color;
+              }
+            }
+
+            &.right-overflow{
+              right :0;
+              left: auto;
+            }
+
+          }
+
+
+
+        }
+
+        &.megamenu-columns-3{
+          li{
+            width: 33.33%;
+          }
+        }
+        &.megamenu-columns-2{
+          li{
+            width: 50%;
+          }
+        }
+      }
+    }
+
+    &.kt-megamenu-item{
+      position: static;
+    }
+
+    &.kt-megamenu-item-half{
+      > .kt-megamenu-wrapper{
+        width: 50%;
+      }
+    }
+
+    &.kt-megamenu-item-three{
+      > .kt-megamenu-wrapper{
+        width: 75%;
+      }
+    }
+    &.kt-megamenu-item-four{
+      > .kt-megamenu-wrapper{
+        width: 80%;
+      }
+    }
+    &.kt-megamenu-item-five{
+      > .kt-megamenu-wrapper{
+        width: 90%;
+      }
+    }
+
+    &:hover{
+      > ul.sub-menu-dropdown,
+      > .kt-megamenu-wrapper{
+        @include opacity(1);
+        @include transform(translate(0, 0));
+        visibility: visible;
+      }
+    }
+
   }
 }
 
@@ -605,10 +794,14 @@ select:not([multiple]) {
       position: absolute;
       top: 0;
       width: 100%;
-      z-index: 999;
+      z-index: 99;
       border-bottom: 1px solid rgba(#FFFFFF, .1);
     }
 
+  }
+
+  .nav-main{
+    position: relative;
   }
 
 }
@@ -624,6 +817,53 @@ select:not([multiple]) {
 /*
  * 10.3. Header layout version
  */
+.header-layout2 {
+  .site-branding{
+    @include translate(y);
+    left: 80px;
+    padding: 0;
+    z-index: 50;
+  }
+
+  #header-content{
+    position: relative;
+    z-index: 999;
+  }
+  .header-actions{
+    @include translate(y);
+    right: 80px;
+    z-index: 50;
+  }
+  .menu-bars-outer,
+  #main-nav-tool{
+    float: right;
+    position: static;
+    @include  transform(translate(0,0));
+  }
+  .menu-bars-outer{
+    margin-left: 20px;
+    > a{
+      padding-right: 0;
+      padding-left: 10px;
+    }
+    .menu-bars-items{
+      right: 0;
+      left: auto;
+    }
+  }
+  #main-navigation{
+    > li {
+      line-height: 120px;
+      height: 120px;
+      > a{
+        color: $title-text;
+        &:hover{
+
+        }
+      }
+    }
+  }
+}
 
 
 /*

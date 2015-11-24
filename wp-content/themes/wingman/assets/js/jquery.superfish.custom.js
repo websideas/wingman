@@ -101,7 +101,7 @@
                         $marginLeft = parseInt($this.css('marginLeft')),
                         $li_position = $ul.offset().left - $parentOffset.offset().left + $ul_width;
 
-                    
+
                     if($ul.hasClass(o.megaMenuClass) && !$this.hasClass('kt-megamenu-item-full') ){
                         var $leftCSS = 'auto',
                             $rightCSS = 'auto',
@@ -281,7 +281,7 @@
 
 	$.fn.superfish.defaults = {
         //custom
-        parentOffset: '#header-inner',
+        parentOffset: '.nav-main',
         rightClass : 'right-overflow',
         megaMenuClass: 'kt-megamenu-wrapper',
         //end custom

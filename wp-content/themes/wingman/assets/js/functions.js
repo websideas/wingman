@@ -98,9 +98,9 @@
             /**==============================
              ***  Sticky header
              ===============================**/
-            $('.header-container.sticky-header').ktSticky({
+            /*$('.header-container.sticky-header').ktSticky({
                 //contentSticky : '.nav-container'
-            });
+            });*/
         }
 
         if ($.fn.ktFooter) {
