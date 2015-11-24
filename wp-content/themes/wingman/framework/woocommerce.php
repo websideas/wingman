@@ -115,7 +115,7 @@ function kt_woocommerce_get_cart( $wrapper = true ){
             $output .= '<li class="mini-cart">';
         }
         $output .= '<a href="'.WC()->cart->get_cart_url().'">';
-            $output .= '<span class="icon-bag"></span>';
+            $output .= '<i class="fa fa-shopping-cart"></i>';
             $output .= '<span class="mini-cart-total">'.$cart_count.'</span>';
         $output .= '</a>';
         $output .= '<div class="shopping-bag woocommerce">';

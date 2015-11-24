@@ -323,6 +323,211 @@ select:not([multiple]) {
     }
   }
 }
+
+
+
+/* ==============================
+   10. Header
+   ============================== */
+/*
+ * 10.1 Header common styles
+ */
+#site-title,
+#site-description{
+  display: none;
+}
+.header-branding-outer{
+  position: relative;
+  z-index: 200;
+}
+
+
+.site-branding{
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: auto;
+  .site-logo{
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#main-nav-tool{
+  @include translate(y);
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li{
+    float: right;
+    margin-left: 25px;
+    &:last-child{
+      margin-left: 0;
+    }
+    > a{
+      color: $tool-font;
+      font-size: 14px;
+      display: inline-block;
+      position: relative;
+      &:hover{
+        color: $primary-color;
+      }
+    }
+    &.mini-cart{
+      > a{
+        span{
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          background: $primary-color;
+          @include border-radius(50%);
+          top: -10px;
+          right: - 10px;
+          font-size: 10px;
+          text-align: center;
+          line-height: 17px;
+          color: #FFFFFF;
+
+        }
+      }
+    }
+
+  }
+}
+.menu-bars-outer{
+  @include translate(y);
+  left: 0;
+  > a{
+    display: block;
+    line-height: 1;
+    padding: 4px 10px 4px 0;
+  }
+  .menu-bars-items{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #FFFFFF;
+    border-top: 2px solid $primary-color;
+    width: 170px;
+    text-align: left;
+    .menu-bars-item{
+      border-bottom: 1px solid $border-color;
+      padding: 22px 30px;
+      &:last-child{
+        border: none;
+      }
+      &.menu-bars-currency{
+        li{
+          a{
+            padding-left: 30px;
+            position: relative;
+            display: block;
+
+            span{
+              overflow: hidden;
+              background-color: transparent;
+              @include box-shadow(0, 0, 0, #000000, 'inset', 1px);
+              @include transition(background 0.3s ease);
+              @include border-radius(50%);
+              left: 0;
+              position: absolute;
+              top: 4px;
+              width: 14px;
+              display: block;
+              height: 14px;
+              &:after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                height: 0;
+                left: 0;
+                width: 100%;
+                background-color: $primary-color;
+                @include transition(height 0.3s ease);
+              }
+            }
+
+            &:hover,
+            &:focus{
+
+              span{
+                @include box-shadow(0, 0, 0, $primary-color, 'inset', 1px);
+                &:after{
+                  height: 100%;
+                }
+              }
+            }
+
+
+
+          }
+        }
+      }
+    }
+    h4{
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li{
+        padding: 5px 0;
+        a{
+          color: $title-text;
+          &:hover{
+            color: $primary-color;
+          }
+        }
+
+      }
+    }
+
+  }
+
+}
+
+
+#main-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  >li{
+    position: relative;
+    display: inline-block;
+    ul{
+      display: none;
+    }
+  }
+}
+
+
+
+
+
+
+.nav-container{
+  background: #1e1e1e;
+}
+
+/*
+ * 10.2. Header sticky
+ */
+
+
+/*
+ * 10.3. Header layout version
+ */
+
+
+/*
+ * 10.4. Header color version
+ */
+
+
 /* ==============================
    2. Widgets
    ============================== */

@@ -11,11 +11,9 @@ if ( !defined('ABSPATH')) exit;
     <?php } ?>
     <?php if ( kt_option('header_search', 1) ) { ?>
         <li class="mini-search">
-            <a href="#"><span class="icon-magnifier"></span></a>
+            <a href="#"><i class="fa fa-search"></i></a>
         </li>
     <?php } ?>
-    <?php if ( kt_option('header_language', 1) ) { ?>
-        <?php kt_custom_wpml(); ?>
-    <?php } ?>
+    <?php do_action('theme_main_tool'); ?>
 </ul>
 

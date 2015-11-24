@@ -168,12 +168,21 @@
 /// @param {Size} $blur [5px] - Blur
 /// @param {Color} $color [rgba(0,0,0,.4)] - Color
 /// @param {Boolean} $inset - Inset
+/// @param {Size} $spread - Spread
 
-@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "") {
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "", $spread: "") {
   @if ($inset != "") {
-    @include css3-prefix('box-shadow', $inset $x $y $blur $color);
+    @if ($spread != "") {
+      @include css3-prefix('box-shadow', $inset $x $y $blur $spread $color);
+    }@else{
+      @include css3-prefix('box-shadow', $inset $x $y $blur $color);
+    }
   } @else {
-    @include css3-prefix('box-shadow', $x $y $blur $color);
+    @if ($spread != "") {
+      @include css3-prefix('box-shadow', $x $y $blur $spread $color);
+    }@else{
+      @include css3-prefix('box-shadow', $x $y $blur $color);
+    }
   }
 }
 
