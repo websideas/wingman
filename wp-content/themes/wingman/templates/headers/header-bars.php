@@ -18,13 +18,13 @@
         <div class="menu-bars-item menu-bars-currency">
             <h4>Currency</h4>
             <ul>
-                <li><a href="#">USD</a></li>
-                <li><a href="#">EUR</a></li>
-                <li><a href="#">GBP</a></li>
-                <li><a href="#">CNY</a></li>
+                <li class="active"><a href="#"><span></span>USD</a></li>
+                <li><a href="#"><span></span>EUR</a></li>
+                <li><a href="#"><span></span>GBP</a></li>
+                <li><a href="#"><span></span>CNY</a></li>
             </ul>
         </div><!-- .menu-bars-item -->
-
+        <!--
         <div class="menu-bars-item menu-bars-language">
             <h4>Language</h4>
             <ul>
@@ -32,7 +32,7 @@
                 <li><a href="#">Germany</a></li>
                 <li><a href="#">Netherland</a></li>
             </ul>
-        </div><!-- .menu-bars-item -->
+        </div>--><!-- .menu-bars-item -->
 
     </div><!-- .menu-bars-items -->
 
