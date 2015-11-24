@@ -382,7 +382,7 @@ select:not([multiple]) {
           height: 15px;
           background: $primary-color;
           @include border-radius(50%);
-          top: -10px;
+          top: -5px;
           right: - 10px;
           font-size: 10px;
           text-align: center;
@@ -395,6 +395,8 @@ select:not([multiple]) {
 
   }
 }
+
+
 .menu-bars-outer{
   @include translate(y);
   left: 0;
@@ -403,6 +405,14 @@ select:not([multiple]) {
     line-height: 1;
     padding: 4px 10px 4px 0;
   }
+  &:hover{
+    .menu-bars-items{
+      @include opacity(1);
+      visibility: visible;
+      @include transform(translate(0, 0));
+    }
+  }
+
   .menu-bars-items{
     position: absolute;
     top: 100%;
@@ -411,6 +421,12 @@ select:not([multiple]) {
     border-top: 2px solid $primary-color;
     width: 170px;
     text-align: left;
+    visibility: hidden;
+    @include opacity(0);
+    @include transform(translate(0px, 40px));
+    @include transition();
+
+
     .menu-bars-item{
       border-bottom: 1px solid $border-color;
       padding: 22px 30px;
@@ -458,16 +474,30 @@ select:not([multiple]) {
                 }
               }
             }
-
-
-
           }
         }
       }
+
+      &.menu-bars-language{
+        padding-left: 20px;
+        li{
+          display: inline-block;
+          margin: 0 10px 5px 0;
+          padding: 0;
+          img{
+            width: 30px;
+          }
+          span{
+            display: none;
+          }
+        }
+      }
+
     }
     h4{
       font-size: 14px;
       margin-bottom: 10px;
+      letter-spacing: .2em;
     }
     ul{
       margin: 0;
@@ -494,12 +524,63 @@ select:not([multiple]) {
   margin: 0;
   padding: 0;
   list-style: none;
-  text-align: left;
+  text-align: center;
   >li{
     position: relative;
     display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 30px;
+    > a{
+      font-weight: 600;
+      display: block;
+      padding: 0 10px;
+      position: relative;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+
+      &:before,
+      &:after{
+        content: '';
+        position: absolute;
+        height: 10px;
+        width: 1px;
+        background: $primary-color;
+        top: 50%;
+        margin-top: -5px;
+        @include opacity(0);
+        @include transition();
+      }
+      &:before{
+        left: -5px;
+      }
+      &:after{
+        right: -5px;
+      }
+    }
+
+    &.current-menu-item > a,
+    >a:hover,
+    >a:focus {
+
+      &:before,
+      &:after{
+        @include opacity(1);
+      }
+      &:before{
+        left: 0;
+      }
+      &:after{
+        right: 0;
+      }
+    }
+
     ul{
       display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
     }
   }
 }
@@ -511,7 +592,25 @@ select:not([multiple]) {
 
 .nav-container{
   background: #1e1e1e;
+  position: relative;
+
+  .header-transparent &{
+    background: none;
+    .nav-container-inner{
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      border-bottom: 1px solid rgba(#FFFFFF, .1);
+    }
+
+  }
+
 }
+
+
+
 
 /*
  * 10.2. Header sticky
@@ -738,7 +837,8 @@ select:not([multiple]) {
 /**
  * Tag Clound
  **/
-.widget_product_tag_cloud,.widget_tag_cloud{
+.widget_product_tag_cloud,
+.widget_tag_cloud{
   .tagcloud{
     overflow: hidden;
     a{

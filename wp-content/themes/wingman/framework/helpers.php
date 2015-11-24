@@ -343,25 +343,13 @@ if (!function_exists('kt_get_logo')){
         $logo = array('default' => '', 'logo_dark' => '');
 
         $logo_default = kt_option( 'logo' );
-        $logo_dark = kt_option( 'logo_dark' );
 
         if(is_array($logo_default) && $logo_default['url'] != '' ){
             $logo['default'] = $logo_default['url'];
         }
 
-        if(is_array($logo_dark ) && $logo_dark['url'] != '' ){
-            $logo['logo_dark'] = $logo_dark['url'];
-        }
-
-        if($logo['default'] && !$logo['logo_dark']){
-            $logo['logo_dark'] = $logo['default'];
-        }elseif(!$logo['default'] && $logo['logo_dark']){
-            $logo['default'] = $logo['logo_dark'];
-        }
-
         if(!$logo['default'] && !$logo['logo_dark']){
-            $logo['default'] = THEME_IMG.'logo-light.png';
-            $logo['logo_dark'] = THEME_IMG.'logo-dark.png';
+            $logo['default'] = THEME_IMG.'logo-dark.png';
         }
 
         return $logo;
@@ -535,42 +523,45 @@ if (!function_exists('kt_custom_wpml')){
      *
      */
 
-    function kt_custom_wpml(){
-        $output = $active_l = $language_html = '';
+    function kt_custom_wpml($before = '', $after = '', $title = ''){
 
         if(kt_is_wpml()){
-            $languages = apply_filters( 'wpml_active_languages', array('skip_missing' => false) );
-            if(!empty($languages)){
-                foreach($languages as $l){
-                    if( $l['active'] ){
-                        $active_l .= sprintf(
-                            '<a class="current-language" href="%s"><img src="%s" height="12" width="18" alt="%s" /></a>',
-                            'javascript:void(0)',
-                            esc_url($l['country_flag_url']),
-                            esc_attr($l['language_code'])
-                        );
-                    }else{
-                        $language_html .= '<li>';
 
-                        $language_html .= '<a href="'.$l['url'].'">';
-                        if($l['country_flag_url']){
-                            $language_html .= '<img src="'.$l['country_flag_url'].'" height="12" alt="'.$l['language_code'].'" width="18" />';
-                        }
-                        $language_html .= "<span>".$l['native_name']."</span>";
-                        $language_html .= '</a>';
+            $output = $language_html = '';
 
-                        $language_html .= '</li>';
+            if($title){
+                $output .= '<h4>'.$title.'</h4>';
+            }
+
+            $languages = icl_get_languages();
+
+            if(!empty($languages)) {
+                foreach ($languages as $l) {
+                    $active = ($l['active']) ? 'current' : '';
+
+                    $language_html .= '<li class="'.$active.'">';
+                    $language_html .= '<a href="' . $l['url'] . '">';
+                    if ($l['country_flag_url']) {
+                        $language_html .= '<img src="' . $l['country_flag_url'] . '" height="12" alt="' . $l['language_code'] . '" width="18" />';
                     }
-                }
-                if($language_html != ''){
-                    $language_html = '<ul>'.$language_html.'</ul>';
+                    $language_html .= "<span>" . $l['native_name'] . "</span>";
+                    $language_html .= '</a>';
+
+                    $language_html .= '</li>';
                 }
 
-                $output = '<li class="kt-wpml-languages">'.$active_l. $language_html.'</li>';
+                if ($language_html != '') {
+                    $language_html = '<ul>' . $language_html . '</ul>';
+                }
+
+                $output = $language_html;
 
             }
+
+            echo $before.$output.$after;
+
         }
-        echo $output;
+
     }
 }
 if (!function_exists('get_link_image_post')) {

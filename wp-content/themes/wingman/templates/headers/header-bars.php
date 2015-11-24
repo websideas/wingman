@@ -5,34 +5,47 @@
     </a>
 
     <div class="menu-bars-items">
-        <div class="menu-bars-item menu-bars-account">
-        <h4>My Account</h4>
-            <ul>
-                <li><a href="#">My Wishlist</a></li>
-                <li><a href="#">Compare</a></li>
-                <li><a href="#">My Cart</a></li>
-                <li><a href="#">Check out</a></li>
-            </ul>
-        </div><!-- .menu-bars-item -->
 
-        <div class="menu-bars-item menu-bars-currency">
-            <h4>Currency</h4>
-            <ul>
-                <li class="active"><a href="#"><span></span>USD</a></li>
-                <li><a href="#"><span></span>EUR</a></li>
-                <li><a href="#"><span></span>GBP</a></li>
-                <li><a href="#"><span></span>CNY</a></li>
-            </ul>
-        </div><!-- .menu-bars-item -->
-        <!--
-        <div class="menu-bars-item menu-bars-language">
-            <h4>Language</h4>
-            <ul>
-                <li><a href="#">English</a></li>
-                <li><a href="#">Germany</a></li>
-                <li><a href="#">Netherland</a></li>
-            </ul>
-        </div>--><!-- .menu-bars-item -->
+        <?php if ( kt_is_wc()){ ?>
+
+            <div class="menu-bars-item menu-bars-account">
+                <ul>
+                    <?php if(class_exists('YITH_WCWL_UI')){ ?>
+                        <?php
+                        global $yith_wcwl;
+                        $count = YITH_WCWL()->count_products();
+                        ?>
+                        <li><a href="<?php echo esc_url($yith_wcwl->get_wishlist_url('')); ?>"><?php _e('My Wishlist', THEME_LANG) ?></a></li>
+                    <?php } ?>
+                    <?php if(defined( 'YITH_WOOCOMPARE' )){ ?>
+                        <li><a href="#" class="yith-woocompare-open"><?php _e('Compare', THEME_LANG) ?></a></li>
+                    <?php } ?>
+                    <li><a href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>"><?php _e('My Cart', THEME_LANG) ?></a></li>
+                    <li><a href="<?php echo esc_url( WC()->cart->get_checkout_url() ); ?>"><?php _e('Check out', THEME_LANG) ?></a></li>
+                </ul>
+            </div><!-- .menu-bars-item -->
+
+            <div class="menu-bars-item menu-bars-currency">
+                <h4>Currency</h4>
+                <ul>
+                    <li class="active"><a href="#"><span></span>USD</a></li>
+                    <li><a href="#"><span></span>EUR</a></li>
+                    <li><a href="#"><span></span>GBP</a></li>
+                    <li><a href="#"><span></span>CNY</a></li>
+                </ul>
+            </div><!-- .menu-bars-item -->
+
+        <?php } ?>
+
+        <?php
+            kt_custom_wpml('<div class="menu-bars-item menu-bars-language">', '</div>', __('Language', THEME_LANG));
+        ?>
+
+        <?php
+        /**
+         * @hooked
+         */
+        do_action( 'menu_bars_tool' ); ?>
 
     </div><!-- .menu-bars-items -->
 
