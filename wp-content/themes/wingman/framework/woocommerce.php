@@ -615,9 +615,10 @@ function kt_template_single_excerpt(){
 
 add_action( 'woocommerce_sale_sountdown_item', 'kt_template_single_excerpt', 10 );
 add_action( 'woocommerce_sale_sountdown_item', 'woocommerce_after_shop_loop_item_sale_sale_price', 15, 2 );
-function woocommerce_after_shop_loop_item_sale_sale_price($product, $post){
+function woocommerce_after_shop_loop_item_sale_sale_price(){
+    global $product;
     $sale_price_dates_to = ( $date = get_post_meta( $product->id, '_sale_price_dates_to', true ) ) ? date_i18n( 'Y-m-d', $date ) : '';
     if($sale_price_dates_to){
-        echo '<div class="woocommerce-countdown clearfix" data-time="'.$sale_price_dates_to.'"></div>';
+        echo '<div class="woocommerce-countdown coming-soon clearfix" data-date="'.$sale_price_dates_to.'"></div>';
     }
 }

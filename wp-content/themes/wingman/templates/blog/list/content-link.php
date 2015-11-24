@@ -1,4 +1,4 @@
-<?php $classes = array('post-item post-layout-1', $blog_atts['class']);  ?>
+<?php $classes = array('post-item post-layout-1 equal_height', $blog_atts['class']);  ?>
 <?php //print_r($blog_atts); ?>
 <article <?php post_class($classes); ?>>
     <?php
