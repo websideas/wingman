@@ -3868,6 +3868,62 @@ if ( ! class_exists( 'KT_config' ) ) {
 					)
                 )
             );
+            
+            /**
+			 *	Popup
+			 **/
+			$this->sections[] = array(
+				'id'			=> 'popup',
+				'title'			=> __( 'Popup', THEME_LANG ),
+				'desc'			=> '',
+				'icon_class'	=> 'icon_desktop',
+				'fields'		=> array(
+                    array(
+						'id'		=> 'enable_popup',
+						'type'		=> 'switch',
+						'title'		=> __( 'Enable Popup', THEME_LANG ),
+						'subtitle'	=> __( '', THEME_LANG),
+						"default"	=> true,
+						'on'		=> __( 'On', THEME_LANG ),
+						'off'		=> __( 'Off', THEME_LANG ),
+					),
+                    array(
+						'id'		=> 'disable_popup_mobile',
+						'type'		=> 'switch',
+						'title'		=> __( 'Disable Popup on Mobile', THEME_LANG ),
+						'subtitle'	=> __( '', THEME_LANG),
+						"default"	=> false,
+						'on'		=> __( 'On', THEME_LANG ),
+						'off'		=> __( 'Off', THEME_LANG ),
+                        'required' => array('enable_popup','equals', 1)
+					),
+                    array(
+                        'id' => 'time_show',
+                        'type' => 'text',
+                        'title' => __('Time to show', THEME_LANG), 
+                        'desc' => __('Unit: s', THEME_LANG),
+                        'default' => __('0', THEME_LANG),
+                        'required' => array('enable_popup','equals', 1)
+                    ),
+                    array(
+                        'id' => 'time_show_again',
+                        'type' => 'text',
+                        'title' => __('Time to show again', THEME_LANG),
+                        'desc' => __('Unit: minutes', THEME_LANG), 
+                        'default' => __('300', THEME_LANG),
+                        'required' => array('enable_popup','equals', 300)
+                    ),
+                    
+                    array(
+                        'id'       => 'content_popup',
+                        'type'     => 'editor',
+                        'title'    => __( 'Content Popup', THEME_LANG ),
+                        'subtitle' => __( '', THEME_LANG ),
+                        'required' => array('enable_popup','equals', 1),
+                        'default'  => __('<h3 class="title-top">Advanced Popup Module</h3><p><img src="'.THEME_IMG.'popup_image.png" /></p>', THEME_LANG),
+                    ),
+                )
+            );
 
 
 

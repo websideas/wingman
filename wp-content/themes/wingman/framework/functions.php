@@ -844,3 +844,27 @@ if ( ! function_exists( 'search_by_cat' ) ) :
         } 
     }
 endif;
+
+
+/**
+ * Add popup 
+ *
+ * @since 1.0
+ */
+add_action( 'theme_after_footer', 'theme_after_footer_add_popup', 20 );
+function theme_after_footer_add_popup(){
+    $enable_popup = kt_option( 'enable_popup' );
+    $disable_popup_mobile = kt_option( 'disable_popup_mobile' );
+    $content_popup = kt_option( 'content_popup' );
+    $time_show = kt_option( 'time_show', 0 );
+    
+    if( $enable_popup == 1 ){ 
+        if(!isset($_COOKIE['kt_popup'])){ ?>
+            <div id="popup-wrap" class="mfp-hide" data-mobile="<?php echo esc_attr( $disable_popup_mobile ); ?>" data-timeshow="<?php echo esc_attr($time_show); ?>">     
+                <div class="white-popup-block">
+                    <?php echo do_shortcode($content_popup); ?>
+                </div>
+            </div>
+        <?php }
+    }
+}
