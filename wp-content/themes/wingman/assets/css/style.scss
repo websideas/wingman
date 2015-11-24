@@ -138,3 +138,303 @@ p {
 .gray{ color: $gray-text!important; }
 
 .bg-gray{  background: $gray-bg; }
+
+
+
+/* ==============================
+   3. Typography
+   ============================== */
+/*
+ * 3.1 Typography common styles
+ */
+
+body {
+  font-family: $font-stack;
+  font-size: 16px;
+  line-height: 30px;
+  color: $gray-darker;
+  min-width: 320px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4;
+  margin: 0 0 20px;
+  font-family: $heading-font;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000000;
+}
+
+h1, h2, h3{
+  letter-spacing: 0.2em;
+}
+
+a {
+  color: $primary-color;
+  &:hover,
+  &:focus{
+    color: $primary-light-color;
+    text-decoration: none;
+  }
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+
+
+/* ==============================
+   4. Forms fields
+   ============================== */
+input[type=email],
+input[type=password],
+input[type=phone],
+input[type=tel],
+input[type=text],
+textarea {
+  border: 2px solid $border-color;
+  color: $gray-text;
+  padding: 6px 12px;
+  height: 40px;
+  background: none;
+  @include border-radius(0);
+  @include css3-prefix('box-shadow', 'none');
+  @include css3-prefix('appearance', 'none');
+  @include css3-prefix('transition', 'none');
+  width: 100%;
+  &:focus {
+    @include css3-prefix('box-shadow', 'none');
+    border-color: $gray-text;
+    outline: 0;
+    color: $gray-text;
+  }
+}
+
+textarea {
+  height: auto;
+}
+
+input[type=email].input-bg,
+input[type=password].input-bg,
+input[type=phone].input-bg,
+input[type=tel].input-bg,
+input[type=text].input-bg,
+textarea.input-bg{
+  background: #f6f6f6;
+  border: 1px solid #f0f0f0;
+  font-size: 12px;
+  letter-spacing: 0.075em;
+}
+
+select {
+  @include border-radius(0);
+  width: 100%;
+  height: 40px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  border: 1px solid #f0f0f0;
+  background: $gray-bg;
+  cursor: pointer;
+  color: $gray-text;
+}
+
+select:not([multiple]) {
+  @include css3-prefix('box-shadow', 'none');
+  @include css3-prefix('appearance', 'none');
+  background:$gray-bg url(../images/selectbox-arrow.png) no-repeat right center;
+}
+
+.form-control {
+  @include border-radius(0);
+  @include css3-prefix('box-shadow', 'none');
+  :focus {
+    @include css3-prefix('box-shadow', 'none');
+  }
+}
+
+
+
+/* ==============================
+   5. Buttons
+   ============================== */
+
+.btn {
+  @include border-radius(0);
+  border: 2px solid transparent;
+  display: inline-block;
+  line-height: 1.42857;
+  padding: 8px 26px;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: $button-text;
+  &:focus,
+  &:active:focus,
+  &.active:focus {
+    outline: none;
+  }
+  &.active,
+  &:active {
+    @include css3-prefix('box-shadow', 'none');
+  }
+
+  /* Button size */
+  &.btn-xs {
+    padding: 6px 10px;
+    font-size: 8px;
+  }
+  &.btn-sm {
+    padding: 8px 20px;
+    font-size: 10px;
+  }
+  &.btn-lg {
+    padding: 10px 60px;
+    font-size: 18px;
+  }
+  &.btn-xlg {
+    padding: 12px 65px;
+    font-size: 20px;
+  }
+
+  /* Button shapes */
+  &.btn-round {
+    border-radius: 3px;
+  }
+  &.btn-circle {
+    border-radius: 30px;
+  }
+
+  /* Button icon */
+  &.button-icon-left {
+    margin-right: 5px;
+  }
+  &.button-icon-right {
+    margin-left: 5px;
+  }
+
+  /* Button style */
+  &.btn-default {
+    background: #000000;
+    color: #FFFFFF;
+    border-color: #000000;
+  }
+  &.btn-animation{
+    span{
+      @include transform(translateX(0));
+      @include transition("all .3s ease-in-out 0s");
+      display: block;
+      position: relative;
+      i{
+        @include opacity(0);
+        @include transition("all .3s ease-in-out 0s");
+        @include transform(translate(30px, -50%));
+        position: absolute;
+        right: 0;
+        top:50%;
+      }
+    }
+    &:hover{
+      span{
+        @include transform(translateX(-10px));
+        i{
+          @include opacity(1);
+        }
+      }
+    }
+  }
+  &.btn-gray {
+    background: $gray-bg;
+    color: $gray-darker;
+    border-color:$gray-bg;
+    &:hover{
+      background: #000000;
+      color: #FFFFFF;
+      border-color: #000000;
+    }
+  }
+  &.btn-light{
+    border-color: #FFFFFF;
+    background: #FFFFFF;
+    color: #000000;
+    &:hover{
+      background: #000000;
+      color: #FFFFFF;
+      border-color: #000000;
+    }
+  }
+
+  &.btn-dark-b {
+    background: none;
+    color: #000000;
+    border-color: #000000;
+  }
+  &.btn-light-b{
+    border: 2px solid #FFFFFF;
+    background: none;
+    font-family: $font-stack;
+    font-weight: normal;
+    color: #FFFFFF;
+    &:hover{
+      background: #FFFFFF;
+      color: #000000;
+    }
+  }
+
+  &.btn-medium{
+    background: $gray-bg;
+    border: 1px solid #f0f0f0;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    &:hover{
+      background: #000000;
+      border-color: #000000;
+      color: #fff;
+    }
+  }
+
+  &.btn-addtocart{
+    background: #ffffff;
+    color: #000000;
+    width: 100%;
+    height: 48px;
+    font-size: 14px;
+    border-color: #ffffff;
+    padding: 0 45px;
+    line-height: 44px;
+    &:hover{
+      background: #000000;
+      color: #FFFFFF;
+      border-color: #000000;
+    }
+  }
+  &.btn-addtocart-b{
+    background: none;
+    color: #000000;
+    height: 48px;
+    font-size: 14px;
+    border-color: #000000;
+    padding: 0 45px;
+    line-height: 44px;
+    &:hover{
+      background: #000000;
+      color: #FFFFFF;
+      border-color: #000000;
+    }
+  }
+
+  &.btn-default,
+  &.btn-dark-b{
+    &:hover{
+      background: $primary-color;
+      color: #FFFFFF;
+      border-color: $primary-color;
+    }
+  }
+}
