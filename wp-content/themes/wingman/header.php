@@ -45,7 +45,6 @@
 
     <div id="page_outter">
         <div id="page">
-            <?php get_template_part( 'templates/headers/header',  'mobilenav'); ?>
             <div class="animate-content-overlay"></div>
             <div id="wrapper-content">
                 <?php 

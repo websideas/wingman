@@ -752,7 +752,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'title'			=> __( 'Logo', THEME_LANG ),
                 'subsection' => true,
                 'fields'		=> array(
-
+                        /*
                     array(
                         'id'             => 'logo_width',
                         'type'           => 'dimensions',
@@ -763,6 +763,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'default'        => array( 'width'  => 246, 'height' => 100 ),
                         'output'   => array( '.site-branding .site-logo img' ),
                     ),
+
                     array(
                         'id'       => 'logo_margin_spacing',
                         'type'     => 'spacing',
@@ -794,6 +795,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'height'         => false,
                         'default'        => array( 'width'  => 200, 'height' => 100 )
                     ),
+                        */
                     array(
                         'id'       => 'logo_sticky_margin_spacing',
                         'type'     => 'spacing',
@@ -858,38 +860,40 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'on'		=> __( 'Enabled', THEME_LANG ),
                         'off'		=> __( 'Disabled', THEME_LANG ),
                     ),
+                    /*
+                                        array(
+                                            'id'             => 'navigation_height',
+                                            'type'           => 'dimensions',
+                                            'units'          => array('px'),
+                                            'units_extended' => 'true',
+                                            'title'          => __( 'Main Navigation Height', THEME_LANG ),
+                                            'subtitle'          => __( 'Change height of main navigation', THEME_LANG ),
+                                            'width'         => false,
+                                            'default'        => array( 'width'  => 100, 'height' => '100px' ),
+                                            'output'   => array(
+                                                '#nav > ul > li',
+                                                '.header-layout-normal .site-branding'
+                                                //'.site-branding'
+                                            ),
+                                        ),
 
-                    array(
-                        'id'             => 'navigation_height',
-                        'type'           => 'dimensions',
-                        'units'          => array('px'),
-                        'units_extended' => 'true',
-                        'title'          => __( 'Main Navigation Height', THEME_LANG ),
-                        'subtitle'          => __( 'Change height of main navigation', THEME_LANG ),
-                        'width'         => false,
-                        'default'        => array( 'width'  => 100, 'height' => '100px' ),
-                        'output'   => array(
-                            '#nav > ul > li',
-                            '.header-layout-normal .site-branding'
-                            //'.site-branding'
-                        ),
-                    ),
-                    array(
-                        'id'             => 'navigation_height_fixed',
-                        'type'           => 'dimensions',
-                        'units'          => array('px'),
-                        'units_extended' => 'true',
-                        'title'          => __( 'Main Navigation Sticky Height', THEME_LANG ),
-                        'subtitle'          => __( 'Change height of main navigation sticky', THEME_LANG ),
-                        'width'         => false,
-                        'default'        => array( 'width'  => 100, 'height' => '68px' ),
-                        'output'   => array(
-                            '.header-container.is-sticky #nav > ul > li',
-                            '.header-layout3 #header-content-mobile',
-                            '.header-layout-normal .site-branding'
-                            //'#header.is-sticky .site-branding'
-                        ),
-                    ),
+                                        array(
+                                            'id'             => 'navigation_height_fixed',
+                                            'type'           => 'dimensions',
+                                            'units'          => array('px'),
+                                            'units_extended' => 'true',
+                                            'title'          => __( 'Main Navigation Sticky Height', THEME_LANG ),
+                                            'subtitle'          => __( 'Change height of main navigation sticky', THEME_LANG ),
+                                            'width'         => false,
+                                            'default'        => array( 'width'  => 100, 'height' => '68px' ),
+                                            'output'   => array(
+                                                '.header-container.is-sticky #nav > ul > li',
+                                                '.header-layout3 #header-content-mobile',
+                                                '.header-layout-normal .site-branding'
+                                                //'#header.is-sticky .site-branding'
+                                            ),
+                                        ),
+                                        */
 
                     array(
                         'id'   => 'divide_id',
@@ -1185,7 +1189,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'default'        => array( 'width'  => 200, 'height' => 100 ),
                         'output'   => array( '#main-nav-tool .kt-wpml-languages ul', '#main-navigation > li ul.sub-menu-dropdown'),
                     ),
-
+                    /*
                     array(
                         'id'       => 'navigation_background',
                         'type'     => 'background',
@@ -1196,6 +1200,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         ),
                         'output'      => array( '.nav-container'),
                     ),
+                    */
                     array(
                         'id'       => 'navigation_bordertop',
                         'type'     => 'color',
