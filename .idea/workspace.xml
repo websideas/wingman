@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c7cfb02-0be5-4605-a0ec-58a67682dd43" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/_mixin.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/custom.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/ie.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/responsive.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/jquery.eislideshow.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/justifiedGallery.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/login-admin.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/libs/fotorama/fotorama.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/libs/fotorama/fotorama.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/libs/fotorama/fotorama.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/libs/fotorama/fotorama@2x.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style--.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-layout1.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-layout3-.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-layout3.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-layout1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="6c7cfb02-0be5-4605-a0ec-58a67682dd43" name="Default" comment="" />
     <ignored path="wingman.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -440,10 +420,10 @@
         <state vertical-scroll-proportion="0.13405797">
           <caret line="862" column="22" selection-start-line="862" selection-start-column="22" selection-end-line="862" selection-end-column="22" />
           <folding>
-            <marker date="1448346477000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1448346477000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1448346477000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1448346477000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1448346869000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1448346869000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1448346869000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1448346869000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
