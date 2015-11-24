@@ -76,7 +76,7 @@ if ( post_password_required() ) {
         //'comment_form_before_fields' => '<div>',
         //'comment_form_after_fields' => '</div>',
         'comment_field' => '<p><textarea id="comment" name="comment" placeholder="'.__('Your Comment', THEME_LANG).'"  aria-required="true" rows="6"></textarea></p>',
-        'class_submit'      => 'button alt',
+        'class_submit'      => 'btn btn-default',
     );
 
     ?>
