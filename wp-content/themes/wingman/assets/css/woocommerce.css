@@ -584,7 +584,7 @@
 
 .bag-products .bag-product {
     font-weight: normal;
-    margin: 0 20px 15px;
+    margin: 0 0 15px 20px;
     overflow: hidden;
     padding: 0;
     position: relative;
@@ -615,9 +615,14 @@
     right: 0;
     position: absolute;
     top: 15px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #e5e5e5;
+    line-height: 18px;
 }
 .bag-products .bag-product a.remove:after{
     margin: 0;
+    font-size: 12px;
 }
 
 .bag-products .bag-product a.remove:hover {
