@@ -323,3 +323,34 @@ select:not([multiple]) {
     }
   }
 }
+/* ==============================
+   2. Widgets
+   ============================== */
+.widget-container {
+    margin-bottom: 40px;
+}
+.widget-title{
+  color: $title-text;
+  position: relative;
+  font-size: 18px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: inline-block;
+  line-height: normal;
+  margin-bottom: 35px;
+  &:after,&:before{
+    content:"";
+    height:13px;
+    width:2px;
+    background: $title-text;
+    position: absolute;
+    left:0;
+    top:50%;
+    @include transform(translateY(-70%));
+  }
+  &:after{
+    left:auto;
+    right:0;
+  }
+}

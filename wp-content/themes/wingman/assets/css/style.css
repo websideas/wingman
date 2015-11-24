@@ -407,4 +407,38 @@ select:not([multiple]) {
       -o-opacity: 1;
       opacity: 1; }
 
+/* ==============================
+   2. Widgets
+   ============================== */
+.widget-container {
+  margin-bottom: 40px; }
+
+.widget-title {
+  color: #252525;
+  position: relative;
+  font-size: 18px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: inline-block;
+  line-height: normal;
+  margin-bottom: 35px; }
+  .widget-title:after, .widget-title:before {
+    content: "";
+    height: 13px;
+    width: 2px;
+    background: #252525;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-70%);
+    -khtml-transform: translateY(-70%);
+    -moz-transform: translateY(-70%);
+    -ms-transform: translateY(-70%);
+    -o-transform: translateY(-70%);
+    transform: translateY(-70%); }
+  .widget-title:after {
+    left: auto;
+    right: 0; }
+
 /*# sourceMappingURL=style.css.map */
