@@ -612,7 +612,7 @@ if(is_admin()){
         </style>
         <?php
     }
-    add_action('wp_head', 'kt_setting_script');
+    //add_action('wp_head', 'kt_setting_script');
 
 }
 

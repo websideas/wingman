@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
   font-family: "Josefin Slab", serif;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
   color: #000000; }
 
 h1, h2, h3 {
@@ -440,5 +440,299 @@ select:not([multiple]) {
   .widget-title:after {
     left: auto;
     right: 0; }
+
+.widget_rss ul,
+.widget_pages ul,
+.widget_recent_comments ul,
+.widget_recent_entries ul,
+.widget_nav_menu ul,
+.widget_meta ul,
+.widget_archive ul,
+.widget_categories ul,
+.widget_product_categories ul,
+.yith-woocompare-widget ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+  .widget_rss ul li,
+  .widget_pages ul li,
+  .widget_recent_comments ul li,
+  .widget_recent_entries ul li,
+  .widget_nav_menu ul li,
+  .widget_meta ul li,
+  .widget_archive ul li,
+  .widget_categories ul li,
+  .widget_product_categories ul li,
+  .yith-woocompare-widget ul li {
+    position: relative;
+    margin: 0;
+    line-height: normal; }
+
+.widget_nav_menu ul li a,
+.widget_meta ul li a,
+.widget_archive ul li a,
+.widget_categories ul li a,
+.widget_product_categories ul li a {
+  text-transform: uppercase; }
+.widget_nav_menu ul li span,
+.widget_meta ul li span,
+.widget_archive ul li span,
+.widget_categories ul li span,
+.widget_product_categories ul li span {
+  font-size: 11px;
+  margin-left: 5px; }
+
+.widget_categories ul li span.icon-toggle,
+.widget_product_categories ul li span.icon-toggle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin: 0;
+  right: 0;
+  top: 12px;
+  line-height: 20px;
+  text-align: right;
+  cursor: pointer; }
+  .widget_categories ul li span.icon-toggle:after,
+  .widget_product_categories ul li span.icon-toggle:after {
+    content: "\f067";
+    font-family: FontAwesome;
+    font-size: 8px; }
+
+.widget_pages ul li ul.children li ul.children,
+.widget_nav_menu ul li ul.children li ul.children,
+.widget_product_categories ul li ul.children li ul.children,
+.widget_categories ul li ul.children li ul.children {
+  padding-left: 25px; }
+.widget_pages ul li ul.children li a,
+.widget_nav_menu ul li ul.children li a,
+.widget_product_categories ul li ul.children li a,
+.widget_categories ul li ul.children li a {
+  padding-left: 40px; }
+  .widget_pages ul li ul.children li a:after,
+  .widget_nav_menu ul li ul.children li a:after,
+  .widget_product_categories ul li ul.children li a:after,
+  .widget_categories ul li ul.children li a:after {
+    left: 15px; }
+
+.widget_rss ul li:after,
+.widget_recent_comments ul li:after,
+.widget_recent_entries ul li:after {
+  width: 8px;
+  height: 8px;
+  content: "";
+  background: #959595;
+  position: absolute;
+  left: 0;
+  top: 18px;
+  border-radius: 100%;
+  color: #959595;
+  -webkit-transition: all .3s ease 0s;
+  -khtml-transition: all .3s ease 0s;
+  -moz-transition: all .3s ease 0s;
+  -ms-transition: all .3s ease 0s;
+  -o-transition: all .3s ease 0s;
+  transition: all .3s ease 0s; }
+.widget_rss ul li:hover:after,
+.widget_recent_comments ul li:hover:after,
+.widget_recent_entries ul li:hover:after {
+  background: #82c14f;
+  color: #82c14f; }
+
+.widget_nav_menu ul li a,
+.widget_pages ul li a,
+.widget_product_categories ul li a,
+.widget_categories ul li a,
+.widget_archive ul li a,
+.widget_meta ul li a,
+.yith-woocompare-widget ul li a {
+  color: #252525;
+  text-transform: uppercase;
+  line-height: 18px;
+  font-size: 14px; }
+  .widget_nav_menu ul li a:after,
+  .widget_pages ul li a:after,
+  .widget_product_categories ul li a:after,
+  .widget_categories ul li a:after,
+  .widget_archive ul li a:after,
+  .widget_meta ul li a:after,
+  .yith-woocompare-widget ul li a:after {
+    width: 8px;
+    height: 8px;
+    content: "";
+    background: #959595;
+    position: absolute;
+    left: 0;
+    top: 18px;
+    border-radius: 100%;
+    color: #959595;
+    -webkit-transition: all .3s ease 0s;
+    -khtml-transition: all .3s ease 0s;
+    -moz-transition: all .3s ease 0s;
+    -ms-transition: all .3s ease 0s;
+    -o-transition: all .3s ease 0s;
+    transition: all .3s ease 0s; }
+  .widget_nav_menu ul li a:hover:after,
+  .widget_pages ul li a:hover:after,
+  .widget_product_categories ul li a:hover:after,
+  .widget_categories ul li a:hover:after,
+  .widget_archive ul li a:hover:after,
+  .widget_meta ul li a:hover:after,
+  .yith-woocompare-widget ul li a:hover:after {
+    background: #82c14f;
+    color: #82c14f; }
+
+.widget_rss ul li,
+.widget_recent_comments ul li,
+.widget_recent_entries ul li {
+  display: block;
+  padding: 15px 0 15px 30px;
+  border-bottom: 1px solid #e5e5e5; }
+
+.widget_pages ul li a,
+.widget_nav_menu ul li a,
+.widget_meta ul li a,
+.widget_archive ul li a,
+.widget_product_categories ul li a,
+.widget_categories ul li a,
+.yith-woocompare-widget ul li a {
+  display: block;
+  padding: 15px 0 15px 30px;
+  border-bottom: 1px solid #e5e5e5; }
+  .widget_pages ul li a:hover, .widget_pages ul li a:focus,
+  .widget_nav_menu ul li a:hover,
+  .widget_nav_menu ul li a:focus,
+  .widget_meta ul li a:hover,
+  .widget_meta ul li a:focus,
+  .widget_archive ul li a:hover,
+  .widget_archive ul li a:focus,
+  .widget_product_categories ul li a:hover,
+  .widget_product_categories ul li a:focus,
+  .widget_categories ul li a:hover,
+  .widget_categories ul li a:focus,
+  .yith-woocompare-widget ul li a:hover,
+  .yith-woocompare-widget ul li a:focus {
+    color: #82c14f; }
+
+/**
+ * Tag Clound
+ **/
+.widget_product_tag_cloud .tagcloud, .widget_tag_cloud .tagcloud {
+  overflow: hidden; }
+  .widget_product_tag_cloud .tagcloud a, .widget_tag_cloud .tagcloud a {
+    font-size: 13px !important;
+    line-height: normal !important;
+    display: inline-block;
+    float: left;
+    margin: 0 10px 10px 0;
+    -webkit-transition: all 0.3s ease 0s;
+    -khtml-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    padding: 8px 11px;
+    color: #8f8f8f;
+    border: 1px solid #e5e5e5; }
+    .widget_product_tag_cloud .tagcloud a:hover, .widget_product_tag_cloud .tagcloud a:focus, .widget_tag_cloud .tagcloud a:hover, .widget_tag_cloud .tagcloud a:focus {
+      color: #fff;
+      background: #82c14f;
+      border-color: #82c14f; }
+
+/**
+ * Calendar
+ **/
+#calendar_wrap {
+  border: 1px solid #e5e5e5; }
+  #calendar_wrap table {
+    border-collapse: collapse;
+    display: table;
+    position: relative;
+    table-layout: fixed;
+    width: 100%;
+    border: none;
+    text-align: center; }
+    #calendar_wrap table caption {
+      text-align: center; }
+    #calendar_wrap table tfoot {
+      display: block;
+      position: absolute;
+      top: 2px;
+      width: 100%; }
+      #calendar_wrap table tfoot tr {
+        display: block;
+        width: 100%; }
+        #calendar_wrap table tfoot tr > td {
+          border: none;
+          float: left;
+          padding: 8px 0; }
+          #calendar_wrap table tfoot tr > td#prev {
+            padding-left: 10px;
+            text-align: left;
+            width: 75px; }
+          #calendar_wrap table tfoot tr > td#next {
+            float: right;
+            padding-right: 10px;
+            text-align: right;
+            width: 75px; }
+    #calendar_wrap table tbody th, #calendar_wrap table tbody td, #calendar_wrap table thead th, #calendar_wrap table thead td {
+      padding: 10px;
+      border: 1px solid #e5e5e5;
+      line-height: normal; }
+      #calendar_wrap table tbody th:first-child, #calendar_wrap table tbody td:first-child, #calendar_wrap table thead th:first-child, #calendar_wrap table thead td:first-child {
+        border-left: 0; }
+      #calendar_wrap table tbody th:last-child, #calendar_wrap table tbody td:last-child, #calendar_wrap table thead th:last-child, #calendar_wrap table thead td:last-child {
+        border-right: 0; }
+    #calendar_wrap table tbody th, #calendar_wrap table thead th {
+      border-bottom: 0;
+      text-align: center;
+      font-weight: bold; }
+    #calendar_wrap table tbody td#today, #calendar_wrap table thead td#today {
+      color: #fff;
+      background: #82c14f; }
+      #calendar_wrap table tbody td#today a, #calendar_wrap table thead td#today a {
+        color: #fff; }
+
+/* ==============================
+   3. Blog
+   ============================== */
+.blog-posts-image .format-quote .entry-thumb:before,
+.blog-posts-image .format-link .entry-thumb:before,
+.blog-posts-image .format-image .entry-thumb:before,
+.blog-posts-image .format-video .entry-thumb:before,
+.blog-posts-image .format-audio .entry-thumb:before,
+.blog-posts-image .format-gallery .entry-thumb:before {
+  font-family: 'ElegantIcons';
+  font-weight: normal;
+  font-style: normal;
+  background: rgba(255, 255, 255, 0.4);
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 20px;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  content: "\e005";
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -khtml-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -khtml-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -ms-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s; }
 
 /*# sourceMappingURL=style.css.map */

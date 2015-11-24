@@ -64,7 +64,7 @@
 
         kt_gallery();
         kt_popup_gallery();
-        kt_sidebar_sticky();
+        //kt_sidebar_sticky();
         kt_likepost();
         kt_blog_packery();
         kt_blog_justified();
@@ -435,12 +435,7 @@
             }, { offset:'85%' });
         }
 
-        // Counter
-        $('.kt-counter-wrapper').waypoint(function () {
-            jQuery(this).find('.counter').countTo();
-        }, { offset:'85%', triggerOnce:true });
-
-        init_VCPieChart();
+        //init_VCPieChart();
         init_VCComingSoon();
         init_VCGoogleMap();
 
