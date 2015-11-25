@@ -545,6 +545,12 @@
                     var $buttons = elem.find('.owl-buttons');
                     $buttons.prependTo(objCarousel.closest('.owl-carousel-kt'));
                 }
+
+                if(options.pagination && options.navigation){
+                    var that = this;
+                    that.paginationWrapper.appendTo(objCarousel.closest('.owl-carousel-kt'));
+                }
+
             };
 
             objCarousel.waitForImages(function() {

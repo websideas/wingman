@@ -31,6 +31,7 @@ class WPBakeryShortCode_Testimonial_Carousel extends WPBakeryShortCode_VC_Custom
             'order' => 'DESC',
             'max_items' => 10,
 
+            'gutters' => false,
             'autoheight' => true,
             'autoplay' => false,
             'mousedrag' => true,
@@ -40,19 +41,14 @@ class WPBakeryShortCode_Testimonial_Carousel extends WPBakeryShortCode_VC_Custom
             'tablet' => 1,
             'mobile' => 1,
 
-            'navigation' => true,
-            'navigation_always_on' => true,
+            'navigation' => 'true',
+            'navigation_always_on' => 'true',
             'navigation_position' => 'center_outside',
             'navigation_style' => 'circle_border',
-            'navigation_border_width' => '1',
-            'navigation_border_color' => '',
-            'navigation_background' => '',
-            'navigation_color' => '',
+            'carousel_skin' => 'black',
             'navigation_icon' => 'fa fa-angle-left|fa fa-angle-right',
 
-            'pagination' => false,
-            'pagination_color' => '',
-            'pagination_icon' => 'circle-o',
+            'pagination' => 'false',
 
 
             'css_animation' => '',
@@ -61,7 +57,6 @@ class WPBakeryShortCode_Testimonial_Carousel extends WPBakeryShortCode_VC_Custom
         ), $atts);
 
         extract($atts);
-
 
         $args = array(
             'order' => $order,
@@ -461,40 +456,7 @@ vc_map( array(
             'std' => 'circle_border',
             "dependency" => array("element" => "navigation","value" => array('true')),
         ),
-        array(
-            'type' => 'colorpicker',
-            'heading' => __( 'Navigation Background', THEME_LANG ),
-            'param_name' => 'navigation_background',
-            'description' => __( 'Select background for navigation.', THEME_LANG ),
-            'group' => __( 'Carousel', THEME_LANG ),
-            "dependency" => array("element" => "navigation_style","value" => array('circle', 'square', 'round')),
-        ),
-        array(
-            'type' => 'kt_number',
-            'heading' => __( 'Border width', THEME_LANG ),
-            'param_name' => 'navigation_border_width',
-            "value" => "1",
-            "min" => "1",
-            "max" => "10",
-            "suffix" => __("px", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG ),
-            "dependency" => array("element" => "navigation_style","value" => array('circle_border', 'square_border', 'round_border')),
-        ),
-        array(
-            'type' => 'colorpicker',
-            'heading' => __( 'Border color', THEME_LANG ),
-            'param_name' => 'navigation_border_color',
-            'group' => __( 'Carousel', THEME_LANG ),
-            "dependency" => array("element" => "navigation_style","value" => array('circle_border', 'square_border', 'round_border')),
-        ),
-        array(
-            'type' => 'colorpicker',
-            'heading' => __( 'Navigation color', THEME_LANG ),
-            'param_name' => 'navigation_color',
-            'description' => __( 'Select color for navigation.', 'js_composer' ),
-            'group' => __( 'Carousel', THEME_LANG ),
-            "dependency" => array("element" => "navigation","value" => array('true')),
-        ),
+
         array(
             'type' => 'kt_radio',
             'heading' => __( 'Navigation Icon', 'js_composer' ),
@@ -523,34 +485,8 @@ vc_map( array(
             'type' => 'kt_switch',
             'heading' => __( 'Pagination', THEME_LANG ),
             'param_name' => 'pagination',
-            'value' => 'true',
+            'value' => 'false',
             "description" => __("Show pagination in carousel", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG )
-        ),
-        array(
-            'type' => 'colorpicker',
-            'heading' => __( 'Pagination color', 'js_composer' ),
-            'param_name' => 'pagination_color',
-            'description' => __( 'Select color for pagination.', 'js_composer' ),
-            'group' => __( 'Carousel', THEME_LANG ),
-            "dependency" => array("element" => "pagination","value" => array('true')),
-        ),
-        array(
-            'type' => 'kt_radio',
-            'heading' => __( 'Pagination Icon', 'js_composer' ),
-            'param_name' => 'pagination_icon',
-            'class_input' => "radio-wrapper",
-            'value' => array(
-                '<i class="fa fa-circle-o"></i>' => 'circle-o',
-                '<i class="fa fa-circle"></i>' => 'circle',
-                '<i class="fa fa-circle-thin"></i>' => 'circle-thin',
-                '<i class="fa fa-dot-circle-o"></i>' => 'dot-circle-o',
-                '<i class="fa fa-square-o"></i>' => 'square-o',
-                '<i class="fa fa-square"></i>' => 'square',
-                '<i class="fa fa-stop"></i>' => 'stop',
-            ),
-            'description' => __( 'Select your style for pagination.', THEME_LANG ),
-            "dependency" => array("element" => "pagination","value" => array('true')),
             'group' => __( 'Carousel', THEME_LANG )
         ),
 

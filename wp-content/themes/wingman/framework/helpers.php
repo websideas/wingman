@@ -658,16 +658,12 @@ function kt_render_carousel($data, $extra = '', $class = 'owl-carousel kt-owl-ca
         'navigation_always_on' => false,
         'navigation_position' => 'center_outside',
         'navigation_style' => 'circle_border',
-        'navigation_border_width' => '1',
-        'navigation_border_color' => '',
-        'navigation_background' => '',
-        'navigation_color' => '',
         'navigation_icon' => 'fa fa-angle-left|fa fa-angle-right',
 
-        'pagination' => true,
-        'pagination_color' => '',
-        'pagination_icon' => 'circle-o',
+        'pagination' => false,
         'pagination_position' => 'outside',
+
+        'carousel_skin' => 'black',
 
     ), $data );
 
@@ -688,8 +684,7 @@ function kt_render_carousel($data, $extra = '', $class = 'owl-carousel kt-owl-ca
     $owl_carousel_class = array(
         'owl-carousel-kt',
         'carousel-navigation-'.$navigation_position,
-        'carousel-pagination-'.$pagination_icon,
-        'carousel-pagination-'.$pagination_position,
+        'carousel-'.$carousel_skin,
         $extra
     );
 
@@ -703,30 +698,14 @@ function kt_render_carousel($data, $extra = '', $class = 'owl-carousel kt-owl-ca
     if($navigation_style){
         $owl_carousel_class[] = 'carousel-navigation-'.$navigation_style;
         $owl_carousel_class[] = 'carousel-navigation-hasstyle';
+        if(strpos($navigation_style, 'border') !== false){
+            $owl_carousel_class[] = 'carousel-navigation-border';
+        }elseif(strpos($navigation_style, 'background') !== false){
+            $owl_carousel_class[] = 'carousel-navigation-background';
+        }
     }
     if($pagination){
         $owl_carousel_class[] = 'carousel-pagination-dots';
-    }
-
-    if($pagination && $pagination_color){
-        $custom_css .= '#'.$uniqid.' .owl-pagination .owl-page span{color:'.$pagination_color.';}';
-    }
-
-    if($navigation ){
-        if($navigation_color){
-            $custom_css .= '#'.$uniqid.' .owl-buttons div{color:'.$navigation_color.';}';
-            $custom_css .= '#'.$uniqid.' .owl-buttons div:first-child:after{background:'.$navigation_color.';}';
-        }
-
-        if(($navigation_style == 'circle' || $navigation_style == 'square' || $navigation_style == 'round') && $navigation_background){
-            $custom_css .= '#'.$uniqid.' .owl-buttons div{background:'.$navigation_background.';}';
-        }elseif(($navigation_style == 'circle_border' || $navigation_style == 'square_border' || $navigation_style == 'round_border') && $navigation_border_width){
-            $custom_css .= '#'.$uniqid.' .owl-buttons div{border:'.$navigation_border_width.'px solid;}';
-            if($navigation_border_color){
-                $custom_css .= '#'.$uniqid.' .owl-buttons div{border-color:'.$navigation_border_color.';}';
-                $custom_css .= '#'.$uniqid.' .owl-buttons div:first-child:after{background:'.$navigation_border_color.';}';
-            }
-        }
     }
 
 

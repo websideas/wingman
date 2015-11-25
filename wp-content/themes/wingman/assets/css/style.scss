@@ -971,14 +971,27 @@ select:not([multiple]) {
       margin: 0 5px;
       cursor: pointer;
       font-size: 18px;
-      i{
-        @include transition();
-        @include transform(scale(1));
-      }
+      @include transition();
       &:hover{
-        i{
-          @include transform(scale(1.2));
-        }
+        color: $primary-color;
+        border-color: $primary-color;
+      }
+    }
+  }
+
+  .owl-pagination{
+    margin-top: 40px;
+    .owl-page{
+      background: $icon-list;
+      height: 8px;
+      width: 8px;
+      display: inline-block;
+      margin: 0 5px;
+      @include border-radius(50%);
+      cursor: pointer;
+      &.active,
+      &:hover{
+        background: $primary-color;
       }
     }
   }
@@ -991,7 +1004,8 @@ select:not([multiple]) {
       padding-right: 15px;
     }
   }
-  &carousel-navigation-hasstyle{
+
+  &.carousel-navigation-hasstyle{
     .owl-buttons {
       > div{
         width: 30px;
@@ -1003,30 +1017,25 @@ select:not([multiple]) {
         i{
           @include translate();
         }
-        &:hover{
-          border-color: $primary-color!important;
-          color: $primary-color!important;
+
+        &:first-child{
+          &:after{
+            content: '';
+            width: 32px;
+            height: 1px;
+            @include translate(y);
+            left: 100%;
+            display: block;
+          }
         }
       }
     }
   }
 
   &.carousel-navigation-border{
-    &.carousel-navigation-top,
-    &.carousel-navigation-bottom{
-      .owl-buttons {
-        > div{
-            &:first-child{
-              &:after{
-                content: '';
-                width: 32px;
-                height: 1px;
-                @include translate(y);
-                left: 100%;
-                display: block;
-              }
-            }
-        }
+    .owl-buttons {
+      > div{
+        border: 1px solid;
       }
     }
   }
@@ -1061,16 +1070,24 @@ select:not([multiple]) {
     .owl-buttons {
       margin: 0;
       > div{
-        @include translate(y);
-        margin: 0;
+        top: 50%;
+        margin: -15px 0 0 0;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
         &.owl-prev{
           left: 0;
         }
         &.owl-next{
           right: 0;
         }
+        &:first-child{
+          &:after{
+            display: none;
+          }
+        }
       }
-
     }
   }
 
@@ -1100,6 +1117,97 @@ select:not([multiple]) {
     }
   }
 
+  &.carousel-black{
+    .owl-buttons {
+      > div{
+        color: $black;
+        border-color: $black;
+        &:first-child{
+          &:after {
+            background: $black;
+          }
+        }
+        &:hover {
+          color: $primary-color;
+          border-color: $primary-color;
+        }
+      }
+    }
+
+    &.carousel-navigation-background{
+      .owl-buttons {
+        > div{
+          background: $black;
+          color: $white;
+          &:hover{
+              background: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  &.carousel-white{
+    .owl-buttons {
+      > div{
+        color: $white;
+        border-color: $white;
+        &:first-child{
+          &:after {
+            background: $white;
+          }
+        }
+        &:hover {
+          color: $primary-color;
+          border-color: $primary-color;
+        }
+      }
+    }
+
+    &.carousel-navigation-background{
+      .owl-buttons {
+        > div{
+          background: $white;
+          color: $black;
+          &:hover{
+            background: $primary-color;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &.carousel-accent{
+    .owl-buttons {
+      > div{
+        color: $primary-color;
+        border-color: $primary-color;
+        &:first-child{
+          &:after {
+            background: $primary-color;
+          }
+        }
+        &:hover{
+          border-color: $black;
+          color: $black;
+        }
+      }
+    }
+
+    &.carousel-navigation-background{
+      .owl-buttons {
+        > div{
+          background: $primary-color;
+          color: $white;
+          &:hover{
+            background: $black;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
 
 }
 
