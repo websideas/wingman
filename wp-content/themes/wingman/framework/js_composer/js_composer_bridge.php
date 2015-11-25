@@ -5,137 +5,27 @@ if ( !defined('ABSPATH')) exit;
 //  0 - unsorted and appended to bottom Default  
 //  1 - Appended to top)
 
-vc_add_params("vc_row", array(
-    array(
-        'group' => __( 'Extra', 'js_composer' ),
-        'type' => 'colorpicker',
-        'heading' => __( 'Color Overlay', 'js_composer' ),
-        'param_name' => 'color_overlay',
-        'description' => __( 'Select your color overlay for image and video ( rgba ).', THEME_LANG ),
-    ),
-    array(
-        'type' => 'dropdown',
-        'heading' => __( 'Set Columns to Equal Height', THEME_LANG ),
-        'param_name' => 'equal_height',
-        'description' => __( 'Check here if you want column equal height.', THEME_LANG ),
-        'value' => array(
-            __("None", THEME_LANG) => "",
-            __("Column", THEME_LANG) => "column",
-            __("Element", THEME_LANG) => "element",
-        ),
-        'group' => __( 'Extra', 'js_composer' ),
-    ),
-    array(
-        'type' => 'colorpicker',
-        'heading' => __( 'Font Color', THEME_LANG ),
-        'param_name' => 'font_color',
-        'description' => __( 'Select Font Color', THEME_LANG ),
-        'group' => __( 'Extra', 'js_composer' ),
-    ),
-    array(
-        'type' => 'dropdown',
-        'heading' => __( 'Top of the section', 'js_composer' ),
-        'param_name' => 'top_section',
-        'value' => array(
-            __( 'None', 'js_composer' ) => '',
-            __( 'Divider', THEME_LANG ) => 'divider',
-        ),
-        'group' => __( 'Extra', 'js_composer' ),
-        'description' => __( 'Only working with background color and not paralax.', THEME_LANG ),
-    ),
-    array(
-        'type' => 'colorpicker',
-        'heading' => __( 'Divider Color', THEME_LANG ),
-        'param_name' => 'top_divider_color',
-        'description' => __( 'Select divider Color', THEME_LANG ),
-        'group' => __( 'Extra', 'js_composer' ),
-        'dependency' => array(
-            'element' => 'top_section',
-            'value' => array('divider'),
-        ),
-    ),
-    array(
-        'type' => 'dropdown',
-        'heading' => __( 'Bottom of the section', 'js_composer' ),
-        'param_name' => 'bottom_section',
-        'value' => array(
-            __( 'None', 'js_composer' ) => '',
-            __( 'Divider', THEME_LANG ) => 'divider',
-        ),
-        'group' => __( 'Extra', 'js_composer' ),
-        'description' => __( 'Only working with background color and not paralax.', THEME_LANG ),
-    ),
-    array(
-        'type' => 'colorpicker',
-        'heading' => __( 'Divider Color', THEME_LANG ),
-        'param_name' => 'bottom_divider_color',
-        'description' => __( 'Select divider Color', THEME_LANG ),
-        'group' => __( 'Extra', 'js_composer' ),
-        'dependency' => array(
-            'element' => 'bottom_section',
-            'value' => array('divider'),
-        ),
-    ),
 
-
+vc_add_params("vc_icon", array(
+    array('type' => 'hidden',  'param_name' => 'icon_class'),
+    array('type' => 'hidden',  'param_name' => 'color_hover'),
+    array('type' => 'hidden',  'param_name' => 'hover_div'),
+    array('type' => 'hidden',  'param_name' => 'background_color_hover'),
+    array('type' => 'hidden',  'param_name' => 'iconbox_image'),
+    array('type' => 'hidden',  'param_name' => 'icon_type')
 ));
 
-vc_add_params("vc_row_inner", array(
+vc_add_params("vc_custom_heading", array(
     array(
-        'type' => 'dropdown',
-        'heading' => __( 'Set Columns to Equal Height', THEME_LANG ),
-        'param_name' => 'equal_height',
-        'description' => __( 'Check here if you want column equal height.', THEME_LANG ),
-        'value' => array(
-            __("None", THEME_LANG) => "",
-            __("Column", THEME_LANG) => "column",
-            __("Element", THEME_LANG) => "element",
-        ),
-        'group' => __( 'Extra', 'js_composer' ),
-    ),
-    array(
-        'type' => 'colorpicker',
-        'heading' => __( 'Font Color', THEME_LANG ),
-        'param_name' => 'font_color',
-        'description' => __( 'Select Font Color', THEME_LANG ),
-        'group' => __( 'Extra', 'js_composer' ),
-    ),
-));
-
-
-vc_add_params( 'vc_single_image', array(
-    array(
-        'type' => 'dropdown',    
-        'heading' => __("Show Social", THEME_LANG),    
-        'param_name' => 'show_social',
-        'value' => array( 
-            __("None", THEME_LANG) => "",
-            __("Yes", THEME_LANG) => "yes",
-        ),
-        'description' => __( "Image social shar", THEME_LANG),
+        "type" => "kt_number",
+        "heading" => __("Letter spacing", THEME_LANG),
+        "param_name" => "letter_spacing",
+        "min" => 0,
+        "suffix" => "px",
+        'group' => __( 'Extra', 'js_composer' )
     )
 ));
 
-vc_add_params("vc_icon", array(
-    array(
-        'type' => 'colorpicker',
-        'heading' => __( 'Icon color on Hover', 'js_composer' ),
-        'param_name' => 'color_hover',
-        'description' => __( 'Select icon color on hover.', 'js_composer' ),
-        'group' => __( 'Hover', 'js_composer' ),
-    ),
-    array(
-        'type' => 'colorpicker',
-        'heading' => __( 'Background on Hover', 'js_composer' ),
-        'param_name' => 'background_color_hover',
-        'description' => __( 'Select Background icon color on hover.', 'js_composer' ),
-        'group' => __( 'Hover', 'js_composer' ),
-        'dependency' => array(
-            'element' => 'background_style',
-            'not_empty' => true,
-        ),
-    ),
-));
 
 $tabs_arr = array(
     'use_theme_fonts' => array(
@@ -187,9 +77,7 @@ $composer_addons = array(
 
     'blog_posts.php',
     'blog_posts_carousel.php',
-    'gallery-justified.php',
-    'kt_image_gallery.php',
-    'gallery-grid.php',
+
 
     'alert.php',
     'icon_box.php',
@@ -208,7 +96,6 @@ $composer_addons = array(
     'piechart.php',
     'coming_soon.php',
     'googlemap.php',
-    'instagram_carousel.php',
     
     'category_products_tab.php',
     'products_carousel.php',

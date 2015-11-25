@@ -9,29 +9,18 @@ class WPBakeryShortCode_Icon_Box extends WPBakeryShortCode_VC_Custom_heading {
     protected function content($atts, $content = null) {
         $atts = shortcode_atts( array(
             'title' => __( 'Title', 'js_composer' ),
-            'icon_box_layout' => '1',
-            'icon_box_bg' => '#F8F8F8',
-            'link' => '',
             'skin' => '',
-
-            'readmore' => 'false',
-            'readmore_text' => __( 'Learn More', THEME_LANG ),
-            'readmore_color' => '',
-            'readmore_color_hover' => '',
+            'link' => '',
 
             'use_theme_fonts' => 'true',
             'font_container' => '',
             'google_fonts' => '',
             'letter_spacing' => '0',
 
+            'icon_type' => 'icon',
+            'iconbox_icon' => 'fa fa-adjust',
+            'iconbox_image' => '',
 
-            'type' => 'fontawesome',
-            'icon_fontawesome' => '',
-            'icon_openiconic' => '',
-            'icon_typicons' => '',
-            'icon_entypoicons' => '',
-            'icon_linecons' => '',
-            'icon_entypo' => '',
             'color' => '',
             'color_hover' => '',
             'custom_color' => '',
@@ -47,26 +36,26 @@ class WPBakeryShortCode_Icon_Box extends WPBakeryShortCode_VC_Custom_heading {
             'css' => '',
         ), $atts );
         extract($atts);
-        $custom_css = '';
+
+        $custom_css = $output = $style_title = '';
+        $uniqid = 'features-box-'.uniqid();
+        $link_icon = $link;
 
         $elementClass = array(
-            'base' => apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'kt-icon-box-wrapper ', $this->settings['base'], $atts ),
+            'base' => apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'features-box ', $this->settings['base'], $atts ),
             'extra' => $this->getExtraClass( $el_class ),
             'css_animation' => $this->getCSSAnimation( $css_animation ),
-            'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' ),
-            'layout' => 'icon-box-layout-'.$icon_box_layout
+            'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' )
         );
 
         if($skin){
             $elementClass['skin'] = 'icon-box-skin-'.$skin;
         }
 
-        $uniqid = 'kt-icon-box-'.uniqid();
-
-        $style_title = $background_outer = $icon_box_linkmore = $icon_box_link = '';
-
         extract( $this->getAttributes( $atts ) );
         unset($font_container_data['values']['text_align']);
+
+
 
         $styles = array();
         extract( $this->getStyles( $el_class, $css, $google_fonts_data, $font_container_data, $atts ) );
@@ -86,7 +75,6 @@ class WPBakeryShortCode_Icon_Box extends WPBakeryShortCode_VC_Custom_heading {
             $style_title .= 'style="' . esc_attr( implode( ';', $styles ) ) . '"';
         }
 
-        $readmore = apply_filters('sanitize_boolean', $readmore);
 
         $link = ( $link == '||' ) ? '' : $link;
 
@@ -97,20 +85,6 @@ class WPBakeryShortCode_Icon_Box extends WPBakeryShortCode_VC_Custom_heading {
             $a_target = $link['target'];
             $icon_box_link = array('href="'.esc_attr( $a_href ).'"', 'title="'.esc_attr( $a_title ).'"', 'target="'.esc_attr( $a_target ).'"' );
 
-            if($readmore_text && $readmore){
-                $styles_readmore = array();
-                $style_readmore = '';
-                if($readmore_color){
-                    $styles_readmore['color'] = 'color: '.esc_attr($readmore_color);
-                }
-                if ( ! empty( $styles_readmore ) ) {
-                    $style_readmore = 'style="' . esc_attr( implode( ';', $styles_readmore ) ) . '"';
-                }
-                $icon_box_linkmore = '<a '.$style_readmore.' '.implode(' ', $icon_box_link).' class="icon-box-linkmore">'.$readmore_text.'</a>';
-                if($readmore_color_hover){
-                    $custom_css .= '#'.$uniqid.' a.icon-box-linkmore:hover{color: '.esc_attr($readmore_color_hover).'!important}';
-                }
-            }
             if($title){
                 $style_link = '';
                 if(isset($font_container_data['values']['color'])){
@@ -120,69 +94,18 @@ class WPBakeryShortCode_Icon_Box extends WPBakeryShortCode_VC_Custom_heading {
             }
         }
 
-        $icon_box_title = ($title) ? '<' . $font_container_data['values']['tag'] . ' class="icon-box-title" '.$style_title.'>'.$title.'</' . $font_container_data['values']['tag'] . '>' : '';
-        $icon_box_content = '<div class="icon-box-content">'.$content.'</div>';
-        $icon_box_icon= do_shortcode('[vc_icon el_class="icon-box-icon" hover_div="'.$uniqid.'" addon="1" uniqid="'.$uniqid.'" color_hover="'.$color_hover.'" background_color_hover="'.$background_color_hover.'" type="'.$type.'" icon_fontawesome="'.$icon_fontawesome.'" icon_openiconic="'.$icon_openiconic.'" icon_typicons="'.$icon_typicons.'" icon_entypo="'.$icon_entypo.'" icon_linecons="'.$icon_linecons.'" color="'.$color.'" custom_color="'.$custom_color.'" background_style="'.$background_style.'" background_color="'.$background_color.'" custom_background_color="'.$custom_background_color.'" size="'.$size.'" align="center"]');
 
-        $output = '';
-        if($icon_box_layout == 2 || $icon_box_layout == 6){
-            $output .= sprintf(
-                '<div class="icon-box-left clearfix">%s %s</div>%s %s',
-                $icon_box_icon,
-                $icon_box_title,
-                $icon_box_content,
-                $icon_box_linkmore
-            );
-        }elseif($icon_box_layout == 7 || $icon_box_layout == 9){
-            $output .= sprintf(
-                '<div class="icon-box-left clearfix">%s %s</div>%s %s',
-                $icon_box_title,
-                $icon_box_icon,
-                $icon_box_content,
-                $icon_box_linkmore
-            );
-        }elseif($icon_box_layout == 3){
-            $output .= sprintf(
-                '%s<div class="icon-box-right">%s %s %s</div>',
-                $icon_box_icon,
-                $icon_box_title,
-                $icon_box_content,
-                $icon_box_linkmore
-            );
-        }elseif($icon_box_layout == 8){
-            $output .= sprintf(
-                '<div class="icon-box-right">%s %s %s</div>%s',
-                $icon_box_title,
-                $icon_box_content,
-                $icon_box_linkmore,
-                $icon_box_icon
-            );
-        }else{
-            $output .= $icon_box_icon;
-            $output .= $icon_box_title;
-            $output .= $icon_box_content;
-            $output .= $icon_box_linkmore;
-        }
+        $icon_box_title = ($title) ? '<' . $font_container_data['values']['tag'] . ' class="features-box-title" '.$style_title.'>'.$title.'</' . $font_container_data['values']['tag'] . '>' : '';
+        $icon_box_content = '<div class="features-box-content">'.$content.'</div>';
 
-        if($icon_box_layout == '4' || $icon_box_layout == '5' || $icon_box_layout == '6' || $icon_box_layout == '9'){
-            //$output = '<div class="icon-box-inner">'.$output.'</div>';
-            $background_outer = 'style="background:'.$icon_box_bg.';"';
-            $elementClass['inner'] = 'icon-box-outer';
-        }
-        if($custom_css){
-            $custom_css = '<div class="kt_custom_css" data-css="'.esc_attr($custom_css).'"></div>';
-        }
+        $icon_box_icon = do_shortcode('[vc_icon link="'.$link_icon.'" icon_type="'.$icon_type.'" iconbox_image="'.$iconbox_image.'" icon_class="'.$iconbox_icon.'" el_class="features-box-icon" hover_div="'.$uniqid.'" addon="1" uniqid="'.$uniqid.'" color_hover="'.$color_hover.'" background_color_hover="'.$background_color_hover.'" color="'.$color.'" custom_color="'.$custom_color.'" background_style="'.$background_style.'" background_color="'.$background_color.'" custom_background_color="'.$custom_background_color.'" size="'.$size.'" align="center"]');
 
 
+        $output .= $icon_box_icon . $icon_box_title . $icon_box_content;
 
-        if( $icon_box_layout == 2 || $icon_box_layout == 3 || $icon_box_layout == 6 ){
-            $elementClass[] = 'kt-icon-box-table';
-        }elseif( $icon_box_layout == 7 || $icon_box_layout == 8 || $icon_box_layout == 9 ){
-            $elementClass[] = 'kt-icon-box-table-right';
-        }
         $elementClass = preg_replace( array( '/\s+/', '/^\s|\s$/' ), array( ' ', '' ), implode( ' ', $elementClass ) );
 
-        return '<div id="'.$uniqid.'" class="'.esc_attr( $elementClass ).'" '.$background_outer.'>'.$output.$custom_css.'</div>';
+        return '<div id="'.$uniqid.'" class="'.esc_attr( $elementClass ).'">'.$output.$custom_css.'</div>';
 
     }
 }
@@ -308,7 +231,7 @@ vc_map( array(
             "type" => "kt_icons",
             'heading' => __( 'Choose your icon', 'js_composer' ),
             'param_name' => 'iconbox_icon',
-            "value" => '',
+            "value" => 'fa fa-adjust',
             'description' => __( 'Use existing font icon or upload a custom image.', THEME_LANG ),
             'dependency' => array("element" => "icon_type","value" => array('icon')),
             'group' => __( 'Icon', THEME_LANG )
@@ -329,6 +252,7 @@ vc_map( array(
             'heading' => __( 'Custom Icon Color', 'js_composer' ),
             'param_name' => 'custom_color',
             'description' => __( 'Select custom icon color.', 'js_composer' ),
+            'value' => 'fa fa-adjust',
             'dependency' => array(
                 'element' => 'color',
                 'value' => 'custom',
@@ -360,7 +284,10 @@ vc_map( array(
             ),
             'description' => __( 'Select background shape and style for icon.', 'js_composer' ),
             'group' => __( 'Icon', THEME_LANG ),
-            'dependency' => array("element" => "icon_type","value" => array('icon')),
+            'dependency' => array(
+                "element" => "icon_type",
+                "value" => array('icon')
+            ),
         ),
 
         array(
@@ -429,7 +356,7 @@ vc_map( array(
             'value' => '',
             'settings' => array(
                 'fields' => array(
-                    'tag' => 'h2', // default value h2
+                    'tag' => 'h4', // default value h4
                     'font_size',
                     'line_height',
                     'color',
@@ -454,7 +381,7 @@ vc_map( array(
         array(
             'type' => 'google_fonts',
             'param_name' => 'google_fonts',
-            'value' => 'font_family:Montserrat|font_style:400%20regular%3A400%3Anormal',
+            'value' => 'font_family:Quicksand|font_style:400%20regular%3A400%3Anormal',
             'settings' => array(
                 'fields' => array(
                     'font_family_description' => __( 'Select font family.', 'js_composer' ),
@@ -468,42 +395,6 @@ vc_map( array(
             ),
             'description' => __( '', 'js_composer' ),
         ),
-
-        //Read more options
-        array(
-            'type' => 'kt_switch',
-            'heading' => __( 'Show Read more', THEME_LANG ),
-            'param_name' => 'readmore',
-            'value' => 'false',
-            "description" => __("Show or hide read more button.", THEME_LANG),
-            'group' => __( 'Read more', THEME_LANG ),
-        ),
-        array(
-            "type" => "textfield",
-            'heading' => __( 'Read More Text', 'js_composer' ),
-            'param_name' => 'readmore_text',
-            'value' => __( 'Learn More', THEME_LANG ),
-            'desc' => __('Insert the text to display as the link', THEME_LANG),
-            'group' => __( 'Read more', THEME_LANG ),
-            "dependency" => array("element" => "readmore","value" => array('true')),
-        ),
-        array(
-            'type' => 'colorpicker',
-            'heading' => __( 'Read More color', 'js_composer' ),
-            'param_name' => 'readmore_color',
-            'description' => __( 'Select read more color.', 'js_composer' ),
-            'group' => __( 'Read more', THEME_LANG ),
-            "dependency" => array("element" => "readmore","value" => array('true')),
-        ),
-        array(
-            'type' => 'colorpicker',
-            'heading' => __( 'Read More color on Hover', 'js_composer' ),
-            'param_name' => 'readmore_color_hover',
-            'description' => __( 'Select read more color on hover.', 'js_composer' ),
-            "dependency" => array("element" => "readmore","value" => array('true')),
-            'group' => __( 'Read more', THEME_LANG ),
-        ),
-
 
 
         //Design options

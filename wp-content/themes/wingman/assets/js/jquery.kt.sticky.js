@@ -41,13 +41,7 @@
             start = function (_sticky,_placeholder, o) {
 
                 var _body = $('body');
-                /*
-                if(_body.hasClass('tablets') == true && o.tablets == false)
-                    return false;
 
-                if( _window.outerWidth() <= o.widthDisable )
-                    return false;
-                 */
                 o.start.call(this);
                 var $classContainer = $('.'+o.classContainer);
 
@@ -135,16 +129,18 @@
                     }
 
                     if($this.hasClass('sticky-header-down')){
-                        soffset += $this.outerHeight();
+                        soffset += sContent.height();
                     }
 
                     _window.scroll(function () {
-                        
+
                         var $offset = $placeholder.offset(),
                             _scrolltop = _window.scrollTop();
 
 
+
                         var $offset_number = $offset.top + soffset;
+
 
                         if ($offset_number <  _scrolltop && !scrolled) {
                             start( sContent, $placeholder, o );

@@ -1678,7 +1678,7 @@ body .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
 .woocommerce .upsells-products ul.shop-products li.product {
     width: 100% !important;
 }
-
+/*
 .woocommerce-carousel-wrapper .owl-buttons{
     width:88px;
     position: absolute;
@@ -1710,7 +1710,7 @@ body .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
 .woocommerce-carousel-wrapper .owl-buttons > div.owl-next{
     margin: 0;
 }
-
+*/
 /** =========================
     8. Page Cart
 *** =========================*/

@@ -60,14 +60,8 @@
         init_VCLightBox();
         init_mailchimp();
         //init_smooth_scrolling();
-        //init_eislideshow();
 
-        kt_gallery();
-        kt_popup_gallery();
-        //kt_sidebar_sticky();
         kt_likepost();
-        kt_blog_packery();
-        kt_blog_justified();
         
         kt_widget_categories();
         
@@ -98,9 +92,9 @@
             /**==============================
              ***  Sticky header
              ===============================**/
-            /*$('.header-container.sticky-header').ktSticky({
+            $('.header-container.sticky-header').ktSticky({
                 //contentSticky : '.nav-container'
-            });*/
+            });
         }
 
         if ($.fn.ktFooter) {
@@ -300,7 +294,6 @@
                     size: $chart.data('size'),
                     scaleColor: false,
                     onStep: function(from, to, percent) {
-                        console.log(isNaN($chart_label));
                         if(isNaN($chart_label)){
                             $label_value = $chart_label;
                         }else{
@@ -422,9 +415,10 @@
         $('[data-toggle="tooltip"]').tooltip();
 
         // Skill bar
-        if (typeof jQuery.fn.waypoint !== 'undefined') {
-            jQuery('.kt-skill-wrapper').waypoint(function () {
-                jQuery(this).find('.kt-skill-item-wrapper').each(function( i ){
+        if (typeof $.fn.waypoint !== 'undefined') {
+
+            $('.kt-skill-wrapper').waypoint(function () {
+                $(this).find('.kt-skill-item-wrapper').each(function( i ){
                     var $skill_bar = jQuery(this).find('.kt-skill-bar');
                     var time_out = i * 200;
                     setTimeout(function () {
@@ -433,6 +427,15 @@
 
                 });
             }, { offset:'85%' });
+
+
+            $('.creative-left, .creative-right').each(function() {
+                var $this = $(this);
+                $this.waypoint(function () {
+                    $this.addClass('animated');
+                }, {offset: '90%'});
+            });
+
         }
 
         //init_VCPieChart();
@@ -463,28 +466,7 @@
      Mobile Menu
     --------------------------------------------- */
     function init_MobileMenu(){
-        $('ul.navigation-mobile > li > ul.sub-menu-dropdown, ul.navigation-mobile > li > .kt-megamenu-wrapper').each(function(){
-            $(this).parent().children('a').prepend( '<span class="open-submenu"></span>' );
-        });
 
-        $('.open-submenu').on('click', function(e){
-            e.stopPropagation();
-            e.preventDefault();
-            $( this ).closest('li').toggleClass('active-menu-item');
-            $( this ).closest('li').children( '.sub-menu-dropdown, .kt-megamenu-wrapper' ).slideToggle();
-        });
-        
-        $('.mobile-nav-bar').on('click', function(e){
-            e.preventDefault();
-            $( this ).toggleClass('active');
-            $('body').toggleClass('menu-animate');
-        });
-
-        $('.animate-content-overlay').on('click', function(e){
-            e.preventDefault();
-            $('.mobile-nav-bar').toggleClass('active');
-            $('body').toggleClass('menu-animate');
-        });
 
     }
     
@@ -523,93 +505,45 @@
      Owl carousel
      --------------------------------------------- */
     function init_carousel(){
+
         $('.kt-owl-carousel').each(function(){
 
             var objCarousel = $(this),
-                owlItems = objCarousel.data('items'),
-                owlPagination = objCarousel.data('dots'),
-                owlNavigationIcon = objCarousel.data('navigation_icon'),
-                owlAutoheight = objCarousel.data('autoheight'),
-                owlNavigation = objCarousel.data('nav'),
-                owlAutoPlay = objCarousel.data('autoplay'),
-                owlTheme = objCarousel.data('theme'),
-                owlitemsCustom = objCarousel.data('itemscustom'),
-                owlSlideSpeed = objCarousel.data('slidespeed'),
-                owlMousedrag = objCarousel.data('mousedrag'),
-
-                owlDesktop = objCarousel.data('desktop'),
-                owlTablet = objCarousel.data('tablet'),
-                owlMobile = objCarousel.data('mobile'),
-
-                func_cb = objCarousel.data('js-callback'),
-                owlSingleItem = true;
-
-            if(typeof owlDesktop === "undefined"){ owlDesktop = false; }
-            if(typeof owlTablet === "undefined"){ owlTablet = false; }
-            if(typeof owlMobile === "undefined"){ owlMobile = false; }
-
-            if(typeof owlNavigation === "undefined"){ owlNavigation = true; }
-            if(typeof owlAutoheight === "undefined"){ owlAutoheight = true; }
-            if(typeof owlPagination === "undefined"){ owlPagination = true; }
-            if(typeof owlAutoPlay === "undefined"){ owlAutoPlay = false; }
-            if(typeof owlSlideSpeed === "undefined"){ owlSlideSpeed = '200'; }
-            if(typeof owlTheme === "undefined"){ owlTheme = 'style-navigation-center'; }
-            if(typeof owlMousedrag === "undefined"){owlMousedrag = true;}
-            if(typeof owlNavigationIcon === "undefined"){owlNavigationIcon = 'fa fa-angle-left|fa fa-angle-right';}
-            var owlNavigationIconArr = owlNavigationIcon.split('|', 2);
+                options = $(objCarousel).data('options') || {};
+            options.theme = 'owl-kttheme';
 
 
-            if(typeof owlTablet !== "undefined"){
-                owlSingleItem = false;
+            if(typeof options.desktop !== "undefined"){
+                options.itemsDesktop = [1199,options.desktop];
+                options.items = options.desktop;
             }
 
-            if(typeof owlItems === "undefined"){
-                owlItems = owlDesktop;
-            }else{
-                owlItems = parseInt(owlItems, 10);
-                owlSingleItem = false;
+            if(typeof options.desktopsmall !== "undefined"){
+                options.itemsDesktopSmall = [991,options.desktopsmall];
             }
 
+            if(typeof options.tablet !== "undefined"){
+                options.itemsTablet = [768,options.tablet];
+            }
 
-            func_cb =  window[ func_cb ];
+            if(typeof options.navigation_pos === "undefined"){
+                options.navigation_pos = '';
+            }
 
-            var options = {
-                items: owlItems,
-                slideSpeed: owlSlideSpeed,
-                singleItem: owlSingleItem,
-                pagination: owlPagination,
-                autoHeight: owlAutoheight,
-                navigation: owlNavigation,
-                navigationText : ["<i class='"+owlNavigationIconArr[0]+"'></i>", "<i class='"+owlNavigationIconArr[1]+"'></i>"],
-                theme: owlTheme,
-                autoPlay: owlAutoPlay,
-                stopOnHover: true,
-                addClassActive : true,
-                mouseDrag : owlMousedrag,
-                itemsDesktop : [1199,owlDesktop], //5 items between 1000px and 901px
-                itemsDesktopSmall : [991,owlDesktop], // betweem 992px and 769px
-                itemsTablet: [768,owlTablet], //2 items between 768 and 480
-                itemsMobile : [479, owlMobile],
-                
-                afterInit : function(elem){
-                    if(owlPagination && owlNavigation){
-                        var that = this;
-                        that.paginationWrapper.appendTo(objCarousel.closest('.owl-carousel-kt'));
-                    }
+            if(typeof options.navigation_icon === "undefined"){
+                options.navigation_icon = 'fa fa-angle-left|fa fa-angle-right';
+            }
+            var owlNavigationIconArr = options.navigation_icon.split('|', 2);
+            options.navigationText = ["<i class='"+owlNavigationIconArr[0]+"'></i>", "<i class='"+owlNavigationIconArr[1]+"'></i>"];
 
-                    if( typeof func_cb === 'function'){
-                        func_cb( 'afterInit',   elem );
-                    }
-                },
-                afterUpdate: function(elem) {
-                    if( typeof func_cb === 'function'){
-                        func_cb( 'afterUpdate',   elem );
-                    }
-                },
-                afterMove : function ( elem ){
-                    if( typeof func_cb === 'function'){
-                        func_cb( 'afterUpdate',   elem );
-                    }
+            if(typeof options.mobile !== "undefined"){
+                options.itemsMobile = [479,options.mobile];
+            }
+
+            options.afterInit  = function(elem) {
+                if(options.navigation_pos == "top" && options.navigation){
+                    var $buttons = elem.find('.owl-buttons');
+                    $buttons.prependTo(objCarousel.closest('.owl-carousel-kt'));
                 }
             };
 
@@ -618,6 +552,7 @@
             });
 
         });
+
     }
 
     /* ---------------------------------------------
@@ -740,6 +675,8 @@
             }
         });
     }
+
+
     function kt_contentChange(n,field){
         $(field).each(function(){
             var $stt = $(this).find('.kt_client_col').length,
@@ -747,7 +684,7 @@
             
             $(this).find('.kt_client_col').removeClass('lastrow');
             $(this).find('.kt_client_col').removeClass('lastcol'); 
-            
+
             $(this).find('.kt_client_col').each(function( index ) {
                 if((index+1) % n == 0){
                     $(this).addClass('lastcol');
@@ -762,48 +699,7 @@
             $(this).find(".kt_client_col:gt("+$lastrow+")" ).addClass('lastrow');
         });
     }
-    
-    /* ---------------------------------------------
-     Kt Gallery
-     --------------------------------------------- */
-    function kt_gallery(){
-        $('.justified-gallery').each(function(){
-            $(this).justifiedGallery({
-                rowHeight: $(this).data('height'),
-                margins: $(this).data('margin'),
-                captions: true,
-                lastRow: 'justify'
-            });
-        });
-    }
 
-
-    function kt_popup_gallery(){
-        $('.popup-gallery').each(function(){
-            $(this).magnificPopup({
-        		delegate: 'a',
-        		type: 'image',
-        		mainClass: 'mfp-zoom-in',
-                removalDelay: 500,
-        		gallery: {
-        			enabled: true,
-        			navigateByImgClick: true,
-        			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-        		},
-                image: {
-        			titleSrc: function(item) {
-        				return item.el.find('img').attr('alt');
-        			}
-        		},
-                callbacks: {
-                    beforeOpen: function() {
-                        this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-                        this.st.mainClass = 'mfp-zoom-in';
-                    }
-                }
-        	});
-        });
-    }
 
     /* ---------------------------------------------
      Height 100%
@@ -858,35 +754,7 @@
             }, 'json');
         });
     }
-    
-    /**==============================
-    ***  Blog Packery
-    ===============================**/
-    function kt_blog_packery(){
-        var container = document.querySelector('.blog-posts-packery .blog-posts-content');
-        // init
-        $('.blog-posts-packery .blog-posts-content').waitForImages(function() {
-            var pckry = new Packery( container, {
-              // options
-              itemSelector: '.post-item',
-              gutter: 0
-            });
-        });
-    }
-    
-    /**==============================
-    ***  Blog Justified
-    ===============================**/
-    function kt_blog_justified(){
-        $('.blog-posts-justified .blog-posts-content').each(function(){
-            $(this).justifiedGallery({
-                rowHeight: $(this).data('height'),
-                margins: $(this).data('margin'),
-                captions: false,
-                lastRow: 'justify'
-            });
-        });
-    }
+
     
     /**==============================
     *** Widget Categories Icon Toggle

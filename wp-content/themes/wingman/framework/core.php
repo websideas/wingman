@@ -202,11 +202,12 @@ if (is_admin() ) {
 	require_once ( FW_DIR . 'importer.php' );
 
 
-	/**
-	 * Include Instagram Setting.
-	 *
-	 */
-	require_once ( FW_CLASS . 'instagram-settings.php' );
+    /**
+     * Add Admin function
+     *
+     */
+    require_once ( FW_DIR . 'admin.php' );
+
 
 }
   

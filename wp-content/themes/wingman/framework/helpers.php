@@ -642,21 +642,20 @@ if (!function_exists('kt_get_single_file')) {
  * @return void
  */
 
-function kt_render_carousel($data, $class = ''){
+function kt_render_carousel($data, $extra = '', $class = 'owl-carousel kt-owl-carousel'){
     $data = shortcode_atts( array(
-        'margin' => 10,
-        'loop' => 'false',
-        'autoheight' => 'true',
-        'autoplay' => 'false',
-        'mousedrag' => 'true',
+        'gutters' => true,
+        'autoheight' => true,
+        'autoplay' => false,
+        'mousedrag' => true,
         'autoplayspeed' => 5000,
         'slidespeed' => 200,
         'desktop' => 4,
         'tablet' => 2,
         'mobile' => 1,
 
-        'navigation' => 'true',
-        'navigation_always_on' => 'false',
+        'navigation' => true,
+        'navigation_always_on' => false,
         'navigation_position' => 'center_outside',
         'navigation_style' => 'circle_border',
         'navigation_border_width' => '1',
@@ -665,7 +664,7 @@ function kt_render_carousel($data, $class = ''){
         'navigation_color' => '',
         'navigation_icon' => 'fa fa-angle-left|fa fa-angle-right',
 
-        'pagination' => 'true',
+        'pagination' => true,
         'pagination_color' => '',
         'pagination_icon' => 'circle-o',
         'pagination_position' => 'outside',
@@ -675,51 +674,63 @@ function kt_render_carousel($data, $class = ''){
 
     extract( $data );
 
+
+    $autoheight = apply_filters('sanitize_boolean', $autoheight);
+    $autoplay = apply_filters('sanitize_boolean', $autoplay);
+    $mousedrag = apply_filters('sanitize_boolean', $mousedrag);
+    $navigation = apply_filters('sanitize_boolean', $navigation);
+    $navigation_always_on = apply_filters('sanitize_boolean', $navigation_always_on);
+    $pagination = apply_filters('sanitize_boolean', $pagination);
+
     $output = $custom_css = '';
     $uniqid = 'owl-carousel-'.uniqid();
 
     $owl_carousel_class = array(
-        'owl-carousel-wrapper',
+        'owl-carousel-kt',
         'carousel-navigation-'.$navigation_position,
         'carousel-pagination-'.$pagination_icon,
         'carousel-pagination-'.$pagination_position,
-        $class
+        $extra
     );
-    if($navigation_always_on == 'false' && $navigation_position != 'bottom'){
+
+    if($gutters){
+        $owl_carousel_class[] = 'carousel-gutters';
+    }
+
+    if(!$navigation_always_on && $navigation_position != 'bottom'){
         $owl_carousel_class[] = 'visiable-navigation';
     }
     if($navigation_style){
         $owl_carousel_class[] = 'carousel-navigation-'.$navigation_style;
+        $owl_carousel_class[] = 'carousel-navigation-hasstyle';
     }
-    if($pagination == 'true'){
+    if($pagination){
         $owl_carousel_class[] = 'carousel-pagination-dots';
     }
 
-    if($pagination == "true" && $pagination_color){
-        $custom_css .= '#'.$uniqid.'.owl-carousel-kt .owl-pagination .owl-page span{color:'.$pagination_color.';}';
+    if($pagination && $pagination_color){
+        $custom_css .= '#'.$uniqid.' .owl-pagination .owl-page span{color:'.$pagination_color.';}';
     }
 
-    if($navigation == "true"){
+    if($navigation ){
         if($navigation_color){
-            $custom_css .= '#'.$uniqid.' .kt-owl-carousel .owl-buttons div{color:'.$navigation_color.';}';
+            $custom_css .= '#'.$uniqid.' .owl-buttons div{color:'.$navigation_color.';}';
+            $custom_css .= '#'.$uniqid.' .owl-buttons div:first-child:after{background:'.$navigation_color.';}';
         }
 
         if(($navigation_style == 'circle' || $navigation_style == 'square' || $navigation_style == 'round') && $navigation_background){
-            $custom_css .= '#'.$uniqid.' .kt-owl-carousel .owl-buttons div{background:'.$navigation_background.';}';
+            $custom_css .= '#'.$uniqid.' .owl-buttons div{background:'.$navigation_background.';}';
         }elseif(($navigation_style == 'circle_border' || $navigation_style == 'square_border' || $navigation_style == 'round_border') && $navigation_border_width){
-            $custom_css .= '#'.$uniqid.' .kt-owl-carousel .owl-buttons div{border:'.$navigation_border_width.'px solid;}';
+            $custom_css .= '#'.$uniqid.' .owl-buttons div{border:'.$navigation_border_width.'px solid;}';
             if($navigation_border_color){
-                $custom_css .= '#'.$uniqid.' .kt-owl-carousel .owl-buttons div{border-color:'.$navigation_border_color.';}';
+                $custom_css .= '#'.$uniqid.' .owl-buttons div{border-color:'.$navigation_border_color.';}';
+                $custom_css .= '#'.$uniqid.' .owl-buttons div:first-child:after{background:'.$navigation_border_color.';}';
             }
         }
     }
 
-    if(intval($margin)){
-        $custom_css .= '#'.$uniqid.' .kt-owl-carousel .owl-item{padding-left: '.$margin.'px;padding-right: '.$margin.'px;}';
-        $custom_css .= '#'.$uniqid.'{margin-left: -'.$margin.'px;margin-right: -'.$margin.'px;}';
-    }
 
-    $autoplay = ($autoplay == 'true') ? $autoplayspeed : $autoplay;
+    $autoplay = ($autoplay) ? $autoplayspeed : $autoplay;
 
     $data_carousel = array(
         'mousedrag' => $mousedrag,
@@ -727,16 +738,19 @@ function kt_render_carousel($data, $class = ''){
         "autoplay" => $autoplay,
         'navigation_icon' => $navigation_icon,
         "margin" => $margin,
-        "nav" => $navigation,
+        "navigation" => $navigation,
+        'navigation_pos' => $navigation_position,
         "slidespeed" => $slidespeed,
         'desktop' => $desktop,
         'tablet' => $tablet,
         'mobile' => $mobile,
-        "dots" => $pagination,
-        "loop" => $loop,
+        'pagination' => $pagination,
+
     );
-    $output .= '<div class="'.esc_attr(implode(' ', $owl_carousel_class)).'">';
-    $output .= '<div id="'.esc_attr($uniqid).'" class="owl-carousel-kt"><div class="owl-carousel owl-kttheme kt-owl-carousel" '.render_data_carousel($data_carousel).'>%carousel_html%</div></div>';
+
+
+    $output .= '<div id="'.esc_attr($uniqid).'" class="'.esc_attr(implode(' ', $owl_carousel_class)).'">';
+    $output .= '<div class=" '.$class.'" '.render_data_carousel($data_carousel).'>%carousel_html%</div>';
     $output .= '</div>';
 
     if($custom_css){
@@ -757,11 +771,20 @@ if (!function_exists('render_data_carousel')) {
     function render_data_carousel($data)
     {
         $output = "";
+        $array = array();
         foreach ($data as $key => $val) {
-            if ($val != '') {
-                $output .= ' data-' . $key . '="' . esc_attr($val) . '"';
+            if (is_bool($val) === true) {
+                $val = ($val) ? 'true': 'false';
+                $array[$key]= '"'.$key.'": '.$val;
+            }else{
+                $array[$key]= '"'.$key.'": "'.$val.'"';
             }
         }
+
+        if(count($array)){
+            $output = " data-options='{".implode(',', $array)."}'";
+        }
+
         return $output;
     }
 }

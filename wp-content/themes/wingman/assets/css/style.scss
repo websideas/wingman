@@ -115,6 +115,9 @@ p {
 .black{ color: #111 !important; }
 .gray{ color: $gray!important; }
 
+#content {
+  padding: 100px 0;
+}
 
 /* ==============================
    3. Typography
@@ -434,6 +437,7 @@ select:not([multiple]) {
     @include opacity(0);
     @include transform(translate(0, 40px));
     @include transition();
+    @include box-shadow(0, 8px, 10px, rgba(0, 0, 0, 0.1));
 
 
     .menu-bars-item{
@@ -538,9 +542,11 @@ select:not([multiple]) {
   >li{
     position: relative;
     display: inline-block;
-    height: 60px;
-    line-height: 60px;
+    height: $header-height;
+    line-height: $header-height;
     margin: 0 30px;
+    @include transition();
+
     > a{
       font-weight: 600;
       display: block;
@@ -597,6 +603,7 @@ select:not([multiple]) {
       @include opacity(0);
       @include transform(translate(0px, 40px));
       @include transition('transform 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s');
+      @include box-shadow(0, 8px, 15px, rgba(0, 0, 0, 0.1));
       line-height: normal;
       visibility: hidden;
     }
@@ -787,35 +794,45 @@ select:not([multiple]) {
   background: #1e1e1e;
   position: relative;
 
-  .header-transparent &{
-    background: none;
-    .nav-container-inner{
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 99;
-      border-bottom: 1px solid rgba(#FFFFFF, .1);
-    }
-
-  }
-
   .nav-main{
     position: relative;
   }
 
 }
 
+.header-transparent{
+
+  .sticky-placeholder{
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+
+  .nav-container{
+    background: none;
+    .nav-container-inner{
+      position: absolute;
+      top: 0;
+      z-index: 99;
+      border-bottom: 1px solid rgba(#FFFFFF, .1);
+      width: 100%;
+    }
+
+  }
+  &.header-layout2{
+    #header-content{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
 
 
+}
 
 /*
- * 10.2. Header sticky
- */
-
-
-/*
- * 10.3. Header layout version
+ * 10.2. Header layout version
  */
 .header-layout2 {
   .site-branding{
@@ -853,13 +870,8 @@ select:not([multiple]) {
   }
   #main-navigation{
     > li {
-      line-height: 120px;
-      height: 120px;
       > a{
         color: $title-text;
-        &:hover{
-
-        }
       }
     }
   }
@@ -867,8 +879,229 @@ select:not([multiple]) {
 
 
 /*
+ * 10.3. Header sticky
+ */
+
+.header-sticky-background{
+  background: rgba(0,0,0, .8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  @include opacity(0);
+  @include transition();
+}
+
+
+.header-container.is-sticky{
+
+  .nav-container{
+    background: none;
+  }
+  .header-sticky-background{
+    visibility: visible;
+    @include opacity(1);
+  }
+
+  .apply-sticky{
+    position: fixed!important;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+  }
+
+  &.sticky-header-down{
+    .nav-container{
+      .nav-container-inner{
+        top: -60px;
+      }
+    }
+  }
+
+  &.sticky{
+    .apply-sticky{
+      @include transition();
+    }
+    .apply-sticky{
+        top: 0!important;
+    }
+  }
+
+  #main-navigation{
+    > li {
+      height: $header-sticky;
+      line-height: $header-sticky;
+    }
+  }
+
+
+
+}
+
+.admin-bar{
+  .header-container.is-sticky.sticky{
+    .apply-sticky{
+        top: 32px!important;
+    }
+  }
+}
+
+
+
+
+
+/*
  * 10.4. Header color version
  */
+
+
+/* ==============================
+   2. KT Owl Carousel
+   ============================== */
+.owl-carousel-kt{
+  .owl-buttons{
+    text-align: center;
+    margin-top: 40px;
+    line-height: 1;
+
+    > div{
+      display: inline-block;
+      margin: 0 5px;
+      cursor: pointer;
+      font-size: 18px;
+      i{
+        @include transition();
+        @include transform(scale(1));
+      }
+      &:hover{
+        i{
+          @include transform(scale(1.2));
+        }
+      }
+    }
+  }
+
+  &.carousel-gutters{
+    margin-left: -15px;
+    margin-right: -15px;
+    .owl-item{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  &carousel-navigation-hasstyle{
+    .owl-buttons {
+      > div{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin: 0 15px;
+        position: relative;
+        @include transition();
+        i{
+          @include translate();
+        }
+        &:hover{
+          border-color: $primary-color!important;
+          color: $primary-color!important;
+        }
+      }
+    }
+  }
+
+  &.carousel-navigation-border{
+    &.carousel-navigation-top,
+    &.carousel-navigation-bottom{
+      .owl-buttons {
+        > div{
+            &:first-child{
+              &:after{
+                content: '';
+                width: 32px;
+                height: 1px;
+                @include translate(y);
+                left: 100%;
+                display: block;
+              }
+            }
+        }
+      }
+    }
+  }
+
+  &.carousel-navigation-circle_background,
+  &.carousel-navigation-circle_border{
+    .owl-buttons {
+      > div{
+        @include border-radius(50%);
+      }
+    }
+  }
+
+  &.carousel-navigation-round_background,
+  &.carousel-navigation-round_border{
+    .owl-buttons {
+      > div{
+        @include border-radius(3px);
+      }
+    }
+  }
+
+
+  &.carousel-navigation-top{
+    .owl-buttons {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+  }
+  &.carousel-navigation-center_outside,
+  &.carousel-navigation-center{
+    .owl-buttons {
+      margin: 0;
+      > div{
+        @include translate(y);
+        margin: 0;
+        &.owl-prev{
+          left: 0;
+        }
+        &.owl-next{
+          right: 0;
+        }
+      }
+
+    }
+  }
+
+  &.carousel-navigation-center_outside{
+    .owl-buttons {
+      > div{
+        &.owl-prev{
+          left: -30px;
+        }
+        &.owl-next{
+          right: -30px;
+        }
+      }
+    }
+  }
+
+
+  &.visiable-navigation{
+    .owl-buttons {
+      @include opacity(0);
+      @include transition();
+    }
+    &:hover{
+      .owl-buttons {
+        @include opacity(1);
+      }
+    }
+  }
+
+
+}
 
 
 /* ==============================
@@ -1793,4 +2026,135 @@ article.post-item {
       margin-left: auto;
       margin-right: auto;
     }
+}
+/* ==============================
+   5. Shortcodes
+   ============================== */
+
+/**
+* 5.1. Single image
+**/
+
+.wpb_single_image{
+  .creative-left,
+  .creative-right{
+    margin-bottom: 30px;
+    position: relative;
+
+    img{
+      position: relative;
+      z-index: 1;
+    }
+    &.animated{
+      &:before,
+      &:after{
+        height: 100%;
+      }
+      .creative-inner{
+        &:before,
+        &:after{
+          width: 100%;
+        }
+      }
+
+    }
+  }
+
+  .creative-left,
+  .creative-right,
+  .creative-inner{
+    &:before,
+    &:after{
+      content: "";
+      position: absolute;
+      background-color: $black;
+      display: block;
+      @include transition('all 1s ease-in-out');
+    }
+  }
+
+  .creative-left,
+  .creative-right{
+    &:before,
+    &:after{
+      height: 0;
+      width: 3px;
+      bottom: -30px;
+    }
+    .creative-inner{
+      &:before,
+      &:after{
+        width: 0;
+        height: 3px;
+      }
+      &:before{
+        top: 30px;
+      }
+      &:after{
+        bottom: -30px;
+      }
+    }
+  }
+
+  .creative-right{
+    &:before{
+      left: -30px;
+    }
+    &:after{
+      right: 30px;
+    }
+    .creative-inner{
+      &:before,
+      &:after{
+        left: -30px;
+      }
+    }
+    &:after,
+    .creative-inner:before{
+      @include css3-prefix(transition-delay, '1s');
+    }
+
+  }
+
+  .creative-left{
+    &:before{
+      left: 30px;
+    }
+    &:after{
+      right: -30px;
+    }
+    .creative-inner{
+      &:before,
+      &:after{
+        right: -30px;
+      }
+    }
+    &:before,
+    .creative-inner:before{
+      @include css3-prefix(transition-delay, '0.35s');
+    }
+
+  }
+
+}
+
+
+/**
+* 5.1. Single image
+**/
+.clients-carousel-wrapper,
+.testimonial-carousel-wrapper{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/**
+* 5.1. Single image
+**/
+.woocommerce-carousel-wrapper{
+  .owl-kttheme {
+    .product{
+      width: 100%;
+    }
+  }
 }

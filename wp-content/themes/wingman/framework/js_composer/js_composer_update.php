@@ -30,6 +30,15 @@ function kt_add_option_to_vc() {
         vc_update_shortcode_param( $item, $button_colors );
     }
 
+    $image_styles = WPBMap::getParam( 'vc_single_image', 'style' );
+    $image_styles['value'][__( 'Creative Left', THEME_LANG )] = 'creative-left';
+    $image_styles['value'][__( 'Creative Right', THEME_LANG )] = 'creative-right';
+    vc_update_shortcode_param( 'vc_single_image', $image_styles );
+
+
+
+
+
 
 }
 

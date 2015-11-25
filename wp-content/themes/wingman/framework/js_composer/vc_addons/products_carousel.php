@@ -13,14 +13,27 @@ class WPBakeryShortCode_Products_Carousel extends WPBakeryShortCode {
             'meta_key' => '',
             'order' => 'DESC',
             'show' => '',
-            
-            'autoplay' => '', 
-            'navigation' => '',
+
+            'margin' => 10,
+            'autoheight' => true,
+            'autoplay' => false,
+            'mousedrag' => true,
+            'autoplayspeed' => 5000,
             'slidespeed' => 200,
-            'theme' => 'style-navigation-center',
-            'desktop' => 4,
-            'tablet' => 2,
+            'desktop' => 1,
+            'tablet' => 1,
             'mobile' => 1,
+            'gutters' => false,
+
+            'navigation' => true,
+            'navigation_always_on' => true,
+            'navigation_position' => 'top',
+            'navigation_style' => 'square_border',
+            'navigation_border_width' => '1',
+            'navigation_border_color' => '#000000',
+            'navigation_background' => '',
+            'navigation_color' => '#363636',
+            'navigation_icon' => 'fa fa-angle-left|fa fa-angle-right',
             
             'css_animation' => '',
             'el_class' => '',
@@ -28,29 +41,93 @@ class WPBakeryShortCode_Products_Carousel extends WPBakeryShortCode {
         ), $atts );
         extract($atts);
 
-        global $woocommerce_loop;
-        
+
+
         $elementClass = array(
-        	'base' => apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'woocommerce-carousel-wrapper ', $this->settings['base'], $atts ),
-        	'extra' => $this->getExtraClass( $el_class ),
-        	'css_animation' => $this->getCSSAnimation( $css_animation ),
+            'base' => apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'products-carousel ', $this->settings['base'], $atts ),
+            'extra' => $this->getExtraClass( $el_class ),
+            'css_animation' => $this->getCSSAnimation( $css_animation ),
+            'woocommerce' => 'woocommerce',
             'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' )
         );
-        $elementClass = preg_replace( array( '/\s+/', '/^\s|\s$/' ), array( ' ', '' ), implode( ' ', $elementClass ) );
-        
-        $output = '';
-        
-        $uniqeID = uniqid();
+
+
+
+
+
+        $meta_query = WC()->query->get_meta_query();
+
+        if( $show == 'best-sellers' ){
+            $meta_query = 'total_sales';
+            $orderby    = 'meta_value_num';
+        }
+
+        $args = array(
+            'post_type'				=> 'product',
+            'post_status'			=> 'publish',
+            'ignore_sticky_posts'	=> 1,
+            'posts_per_page' 		=> $atts['per_page'],
+            'meta_query' 			=> $meta_query,
+            'order'                 => $order,
+            'orderby'               => $orderby,
+            'meta_key'              => $meta_key
+        );
+        if( $show == 'onsale' ){
+            $product_ids_on_sale = wc_get_product_ids_on_sale();
+            $args['post__in'] = array_merge( array( 0 ), $product_ids_on_sale );
+        }elseif( $show == 'featured' ){
+            $args['meta_query'][] = array(
+                'key'   => '_featured',
+                'value' => 'yes'
+            );
+        }
+
+        $carousel_ouput = kt_render_carousel(apply_filters( 'kt_render_args', $atts), '', 'woocommerce-carousel-wrapper');
+        $output = $carousel_html ='';
+
+        ob_start();
+        global $woocommerce_loop;
+        $products = new WP_Query( apply_filters( 'woocommerce_shortcode_products_query', $args, $atts ) );
+        $woocommerce_loop['columns'] = $desktop;
+        $woocommerce_loop['columns_tablet'] = $tablet;
+        if ( $products->have_posts() ) :
+            woocommerce_product_loop_start();
+            while ( $products->have_posts() ) : $products->the_post();
+                wc_get_template_part( 'content', 'product' );
+            endwhile; // end of the loop.
+            woocommerce_product_loop_end();
+        endif;
+        wp_reset_postdata();
+        $carousel_html .= ob_get_clean();
+        if($carousel_html){
+
+            $elementClass = preg_replace( array( '/\s+/', '/^\s|\s$/' ), array( ' ', '' ), implode( ' ', $elementClass ) );
+            $output = '<div class="'.esc_attr( $elementClass ).'">'.str_replace('%carousel_html%', $carousel_html, $carousel_ouput).'</div>';
+
+        }
+
+        return $output;
+
+        /*
+
+
+
+
         
         $data_carousel = array(
-            "autoheight" => "false",
-            "autoplay" => $autoplay,
-            "navigation" => $navigation,
-            "slidespeed" => $slidespeed,
-            "pagination" => "false",
-            "theme" => $theme,
-            "itemscustom" => '[[992,'.$desktop.'], [768, '.$tablet.'], [480, '.$mobile.']]'
+            'pagination' => false,
+            'desktop' => $desktop,
+            'tablet' => $tablet,
+            'mobile' => $mobile,
+            'autoheight' => true,
+            'autoplay' => apply_filters('sanitize_boolean', $autoplay),
+            'navigation' => apply_filters('sanitize_boolean', $navigation),
+            'navigation_always_on' => true,
+            'slidespeed' => apply_filters('sanitize_boolean', $slidespeed),
+            'navigation_pos' => $navigation_position
         );
+
+
         $output .= '<div class="'.esc_attr( $elementClass ).'" '.render_data_carousel($data_carousel).'>';
             
             $meta_query = WC()->query->get_meta_query();
@@ -79,10 +156,12 @@ class WPBakeryShortCode_Products_Carousel extends WPBakeryShortCode {
 					'value' => 'yes'
 				);
             }
+
+
             ob_start();
             $products = new WP_Query( apply_filters( 'woocommerce_shortcode_products_query', $args, $atts ) );
-            $woocommerce_loop['columns'] = 1;
-            $woocommerce_loop['columns_tablet'] = 1;
+            $woocommerce_loop['columns'] = $desktop;
+            $woocommerce_loop['columns_tablet'] = $tablet;
             if ( $products->have_posts() ) :
                 woocommerce_product_loop_start();
                 while ( $products->have_posts() ) : $products->the_post();
@@ -96,6 +175,8 @@ class WPBakeryShortCode_Products_Carousel extends WPBakeryShortCode {
         $output .= "</div><!-- .woocommerce-carousel-wrapper -->";
 
         return $output;
+
+        */
     }
 }
 
@@ -158,7 +239,6 @@ vc_map( array(
                 'element' => 'orderby',
                 'value' => array( 'meta_value', 'meta_value_num' ),
             ),
-            "dependency" => array( "element" => "show","value" => 'all' ),
             "admin_label" => true,
         ),
         array(
@@ -195,87 +275,162 @@ vc_map( array(
             "param_name" => "el_class",
             "description" => __( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
         ),
+
+
+
         // Carousel
         array(
-			'type' => 'checkbox',
-			'heading' => __( 'AutoPlay', THEME_LANG ),
-			'param_name' => 'autoplay',
-			'value' => array( __( 'Yes, please', 'js_composer' ) => 'true' ),
-            'group' => __( 'Carousel settings', THEME_LANG )
-		),
-        array(
-			'type' => 'checkbox',
-            'heading' => __( 'Navigation', THEME_LANG ),
-			'param_name' => 'navigation',
-			'value' => array( __( "Don't use Navigation", 'js_composer' ) => 'false' ),
-            'description' => __( "Don't display 'next' and 'prev' buttons.", THEME_LANG ),
-            'group' => __( 'Carousel settings', THEME_LANG )
-		),
-        array(
-    		'type' => 'dropdown',
-    		'heading' => __( 'Theme',THEME_LANG ),
-    		'param_name' => 'theme',
-    		'value' => array(
-    			__( 'Navigation Top', THEME_LANG ) => 'style-navigation-top',
-    			__( 'Navigation Center', THEME_LANG ) => 'style-navigation-center',
-                __( 'Navigation Bottom', THEME_LANG ) => 'style-navigation-bottom',
-    		),
-            'std' => 'style-navigation-center',
-            'description' => __( 'Please your theme for carousel', THEME_LANG ),
-            'group' => __( 'Carousel settings', THEME_LANG )
-    	),
-        array(
-			"type" => "kt_number",
-			"heading" => __("Slide Speed", THEME_LANG),
-			"param_name" => "slidespeed",
-			"value" => "200",
-            "suffix" => __("milliseconds", THEME_LANG),
-			"description" => __('Slide speed in milliseconds', THEME_LANG),
-            'group' => __( 'Carousel settings', THEME_LANG )
-	  	),
-        array(
-          "type" => "kt_heading",
-          "heading" => __("Items to Show?", THEME_LANG),
-          "param_name" => "items_show",
-          "value" => "6",
-          'group' => __( 'Carousel settings', THEME_LANG )
+            'type' => 'kt_switch',
+            'heading' => __( 'Auto Height', THEME_LANG ),
+            'param_name' => 'autoheight',
+            'value' => 'true',
+            "edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
+            "description" => __("Enable auto height.", THEME_LANG),
+            'group' => __( 'Carousel', THEME_LANG )
         ),
         array(
-			"type" => "kt_number",
-			"class" => "",
-			"edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
-			"heading" => __("On Desktop", THEME_LANG),
-			"param_name" => "desktop",
-			"value" => "4",
-			"min" => "1",
-			"max" => "25",
-			"step" => "1",
-            'group' => __( 'Carousel settings', THEME_LANG )
-	  	),
-		array(
-			"type" => "kt_number",
-			"class" => "",
-			"edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
-			"heading" => __("On Tablet", THEME_LANG),
-			"param_name" => "tablet",
-			"value" => "2",
-			"min" => "1",
-			"max" => "25",
-			"step" => "1",
-            'group' => __( 'Carousel settings', THEME_LANG )
-	  	),
-		array(
-			"type" => "kt_number",
-			"class" => "",
-			"edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
-			"heading" => __("On Mobile", THEME_LANG),
-			"param_name" => "mobile",
-			"value" => "1",
-			"min" => "1",
-			"max" => "25",
-			"step" => "1",
-            'group' => __( 'Carousel settings', THEME_LANG )
-	  	),
+            'type' => 'kt_switch',
+            'heading' => __( 'Mouse Drag', THEME_LANG ),
+            'param_name' => 'mousedrag',
+            'value' => 'true',
+            "edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
+            "description" => __("Mouse drag enabled.", THEME_LANG),
+            'group' => __( 'Carousel', THEME_LANG )
+        ),
+        array(
+            'type' => 'kt_switch',
+            'heading' => __( 'AutoPlay', THEME_LANG ),
+            'param_name' => 'autoplay',
+            'value' => 'false',
+            "description" => __("Enable auto play.", THEME_LANG),
+            "edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
+            'group' => __( 'Carousel', THEME_LANG )
+        ),
+        array(
+            "type" => "kt_number",
+            "heading" => __("AutoPlay Speed", THEME_LANG),
+            "param_name" => "autoplayspeed",
+            "value" => "5000",
+            "suffix" => __("milliseconds", THEME_LANG),
+            'group' => __( 'Carousel', THEME_LANG ),
+            "dependency" => array("element" => "autoplay","value" => array('true')),
+        ),
+        array(
+            "type" => "kt_number",
+            "heading" => __("Slide Speed", THEME_LANG),
+            "param_name" => "slidespeed",
+            "value" => "200",
+            "suffix" => __("milliseconds", THEME_LANG),
+            'group' => __( 'Carousel', THEME_LANG )
+        ),
+        array(
+            "type" => "kt_heading",
+            "heading" => __("Navigation settings", THEME_LANG),
+            "param_name" => "navigation_settings",
+            'group' => __( 'Carousel', THEME_LANG )
+        ),
+        array(
+            'type' => 'kt_switch',
+            'heading' => __( 'Navigation', THEME_LANG ),
+            'param_name' => 'navigation',
+            'value' => 'true',
+            "description" => __("Show navigation in carousel", THEME_LANG),
+            'group' => __( 'Carousel', THEME_LANG )
+        ),
+        array(
+            'type' => 'dropdown',
+            'heading' => __( 'Navigation position', THEME_LANG ),
+            'param_name' => 'navigation_position',
+            'group' => __( 'Carousel', THEME_LANG ),
+            'value' => array(
+                __( 'Center outside', THEME_LANG) => 'center_outside',
+                __( 'Center inside', THEME_LANG) => 'center',
+                __( 'Top', THEME_LANG) => 'top',
+                __( 'Bottom', THEME_LANG) => 'bottom',
+            ),
+            "dependency" => array("element" => "navigation","value" => array('true')),
+        ),
+        array(
+            'type' => 'kt_switch',
+            'heading' => __( 'Always Show Navigation', THEME_LANG ),
+            'param_name' => 'navigation_always_on',
+            'value' => 'false',
+            "description" => __("Always show the navigation.", THEME_LANG),
+            'group' => __( 'Carousel', THEME_LANG ),
+            "dependency" => array("element" => "navigation_position","value" => array('center', 'center_outside')),
+        ),
+        array(
+            'type' => 'dropdown',
+            'heading' => __( 'Navigation style', 'js_composer' ),
+            'param_name' => 'navigation_style',
+            'group' => __( 'Carousel', THEME_LANG ),
+            'value' => array(
+                __( 'Normal', THEME_LANG ) => '',
+                __( 'Circle Background', THEME_LANG ) => 'circle_background',
+                __( 'Square Background', THEME_LANG ) => 'square_background',
+                __( 'Round Background', THEME_LANG ) => 'round_background',
+                __( 'Circle Border', THEME_LANG ) => 'circle_border',
+                __( 'Square Border', THEME_LANG ) => 'square_border',
+                __( 'Round Border', THEME_LANG ) => 'round_border',
+            ),
+            'std' => 'square_border',
+            "dependency" => array("element" => "navigation","value" => array('true')),
+        ),
+        array(
+            'type' => 'colorpicker',
+            'heading' => __( 'Navigation Background', THEME_LANG ),
+            'param_name' => 'navigation_background',
+            'description' => __( 'Select background for navigation.', THEME_LANG ),
+            'group' => __( 'Carousel', THEME_LANG ),
+            "dependency" => array("element" => "navigation_style","value" => array('circle_background', 'square_background', 'round_background')),
+        ),
+        array(
+            'type' => 'kt_number',
+            'heading' => __( 'Border width', THEME_LANG ),
+            'param_name' => 'navigation_border_width',
+            "value" => "1",
+            "min" => "1",
+            "max" => "10",
+            "suffix" => __("px", THEME_LANG),
+            'group' => __( 'Carousel', THEME_LANG ),
+            "dependency" => array("element" => "navigation_style","value" => array('circle_border', 'square_border', 'round_border')),
+        ),
+        array(
+            'type' => 'colorpicker',
+            'heading' => __( 'Border color', THEME_LANG ),
+            'param_name' => 'navigation_border_color',
+            'group' => __( 'Carousel', THEME_LANG ),
+            "dependency" => array("element" => "navigation_style","value" => array('circle_border', 'square_border', 'round_border')),
+        ),
+        array(
+            'type' => 'colorpicker',
+            'heading' => __( 'Navigation color', THEME_LANG ),
+            'param_name' => 'navigation_color',
+            'description' => __( 'Select color for navigation.', 'js_composer' ),
+            'group' => __( 'Carousel', THEME_LANG ),
+            "dependency" => array("element" => "navigation","value" => array('true')),
+        ),
+        array(
+            'type' => 'kt_radio',
+            'heading' => __( 'Navigation Icon', 'js_composer' ),
+            'param_name' => 'navigation_icon',
+            'class_input' => "radio-wrapper-group",
+            'value' => array(
+                '<span><i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i></span>' => 'fa fa-angle-left|fa fa-angle-right',
+                '<span><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i></span>' => 'fa fa-chevron-left|fa fa-chevron-right',
+                '<span><i class="fa fa-angle-double-left"></i><i class="fa fa-angle-double-right"></i></span>' => 'fa fa-angle-double-left|fa fa-angle-double-right',
+                '<span><i class="fa fa-long-arrow-left"></i><i class="fa fa-long-arrow-right"></i></span>' => 'fa fa-long-arrow-left|fa fa-long-arrow-right',
+                '<span><i class="fa fa-chevron-circle-left"></i><i class="fa fa-chevron-circle-right"></i></span>' =>'fa fa-chevron-circle-left|fa fa-chevron-circle-right',
+                '<span><i class="fa fa-arrow-circle-o-left"></i><i class="fa fa-arrow-circle-o-right"></i></span>' => 'fa fa-arrow-circle-o-left|fa fa-arrow-circle-o-right',
+            ),
+            'description' => __( 'Select your style for navigation.', THEME_LANG ),
+            "dependency" => array("element" => "navigation","value" => array('true')),
+            'group' => __( 'Carousel', THEME_LANG )
+        ),
+
+
+
+
         
         array(
 			'type' => 'css_editor',

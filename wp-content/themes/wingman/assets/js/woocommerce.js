@@ -98,49 +98,58 @@
     function init_carouselwoo(){
 
         $('.woocommerce-carousel-wrapper').each(function(){
-            var carouselWrapper = $(this),
-                wooCarousel = $(this).find('ul.shop-products'),
-                wooCarouselTheme = carouselWrapper.data('theme'),
-                wooAutoPlay = carouselWrapper.data('autoplay'),
-                wooitemsCustom = carouselWrapper.data('itemscustom'),
-                wooSlideSpeed = carouselWrapper.data('slidespeed'),
-                wooNavigation = carouselWrapper.data('navigation'),
-                wooPagination = carouselWrapper.data('pagination');
 
-            if(typeof wooCarouselTheme === "undefined"){
-                wooCarouselTheme = 'style-navigation-center';
+
+
+
+
+            var wooCarousel = $(this),
+                objCarousel = $(this).find('ul.shop-products'),
+                options = wooCarousel.data('options') || {};
+            options.theme = 'owl-kttheme';
+
+
+            if(typeof options.desktop !== "undefined"){
+                options.itemsDesktop = [1199,options.desktop];
+                options.items = options.desktop;
             }
-            if(typeof wooAutoPlay === "undefined"){
-                wooAutoPlay = false;
+
+            if(typeof options.desktopsmall !== "undefined"){
+                options.itemsDesktopSmall = [991,options.desktopsmall];
             }
-            if(typeof wooSlideSpeed === "undefined"){
-                wooSlideSpeed = '200';
+
+            if(typeof options.tablet !== "undefined"){
+                options.itemsTablet = [768,options.tablet];
             }
-            if(typeof wooPagination === "undefined"){
-                wooPagination = false;
+
+            if(typeof options.navigation_pos === "undefined"){
+                options.navigation_pos = '';
             }
-            if(typeof wooNavigation === "undefined"){
-                wooNavigation = true;
+
+            if(typeof options.navigation_icon === "undefined"){
+                options.navigation_icon = 'fa fa-angle-left|fa fa-angle-right';
             }
-            wooCarousel.waitForImages(function() {
-                wooCarousel.owlCarousel({
-                    theme: wooCarouselTheme,
-                    items: 1,
-                    autoPlay: wooAutoPlay,
-                    itemsCustom: wooitemsCustom,
-                    autoHeight: false,
-                    navigation: wooNavigation,
-                    navigationText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-                    slideSpeed: wooSlideSpeed,
-                    pagination: wooPagination,
-                    afterInit: function (elem) {
-                        if (wooCarouselTheme == 'style-navigation-top') {
-                            var that = this;
-                            that.owlControls.addClass('carousel-heading-top').prependTo(elem.closest('.carousel-wrapper-top'))
-                        }
-                    }
-                });
+            var owlNavigationIconArr = options.navigation_icon.split('|', 2);
+            options.navigationText = ["<i class='"+owlNavigationIconArr[0]+"'></i>", "<i class='"+owlNavigationIconArr[1]+"'></i>"];
+
+            if(typeof options.mobile !== "undefined"){
+                options.itemsMobile = [479,options.mobile];
+            }
+
+            options.afterInit  = function(elem) {
+                if(options.navigation_pos == "top" && options.navigation){
+                    var $buttons = elem.find('.owl-buttons');
+                    console.log($buttons);
+                    $buttons.prependTo(wooCarousel);
+                }
+            };
+
+            objCarousel.waitForImages(function() {
+                console.log(options);
+                objCarousel.owlCarousel(options);
             });
+
+
         });
     }
 

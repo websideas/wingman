@@ -31,18 +31,17 @@ class WPBakeryShortCode_Testimonial_Carousel extends WPBakeryShortCode_VC_Custom
             'order' => 'DESC',
             'max_items' => 10,
 
-            'margin' => 0,
-            'autoheight' => 'true',
-            'autoplay' => 'false',
-            'mousedrag' => 'true',
+            'autoheight' => true,
+            'autoplay' => false,
+            'mousedrag' => true,
             'autoplayspeed' => 5000,
             'slidespeed' => 200,
             'desktop' => 1,
             'tablet' => 1,
             'mobile' => 1,
 
-            'navigation' => 'true',
-            'navigation_always_on' => 'false',
+            'navigation' => true,
+            'navigation_always_on' => true,
             'navigation_position' => 'center_outside',
             'navigation_style' => 'circle_border',
             'navigation_border_width' => '1',
@@ -51,7 +50,7 @@ class WPBakeryShortCode_Testimonial_Carousel extends WPBakeryShortCode_VC_Custom
             'navigation_color' => '',
             'navigation_icon' => 'fa fa-angle-left|fa fa-angle-right',
 
-            'pagination' => 'true',
+            'pagination' => false,
             'pagination_color' => '',
             'pagination_icon' => 'circle-o',
 
@@ -62,6 +61,7 @@ class WPBakeryShortCode_Testimonial_Carousel extends WPBakeryShortCode_VC_Custom
         ), $atts);
 
         extract($atts);
+
 
         $args = array(
             'order' => $order,
@@ -174,10 +174,10 @@ class WPBakeryShortCode_Testimonial_Carousel extends WPBakeryShortCode_VC_Custom
 
             $carousel_ouput = kt_render_carousel(apply_filters( 'kt_render_args', $atts), 'testimonial-layout-'.esc_attr($layout));
 
-            $testimonial_html = '';
+            $carousel_html = '';
 
             while ( $query->have_posts() ) : $query->the_post();
-                $testimonial_html .= '<div class="testimonial-item testimonial-layout-'.esc_attr($layout).'">';
+                $carousel_html .= '<div class="testimonial-item testimonial-layout-'.esc_attr($layout).'">';
                 $testimonial_content = '<div class="testimonial-content">'.do_shortcode(get_the_content()).'</div>';
                 $link = rwmb_meta('_kt_testimonial_link');
                 if( $link ){
@@ -189,17 +189,17 @@ class WPBakeryShortCode_Testimonial_Carousel extends WPBakeryShortCode_VC_Custom
                 $testimonial_img = (has_post_thumbnail()) ? '<div class="testimonial-img">'.get_the_post_thumbnail( get_the_ID(), 'small', array('class'=>"img-responsive")).'</div>' : '';
 
                 if($layout == '2'){
-                    $testimonial_html .= sprintf('<div class="testimonial-author-infos">%s %s</div>%s', $testimonial_img, $testimonial_author, $testimonial_content);
+                    $carousel_html .= sprintf('<div class="testimonial-author-infos">%s %s</div>%s', $testimonial_img, $testimonial_author, $testimonial_content);
                 }elseif($layout == '3'){
-                    $testimonial_html .= sprintf('<div class="testimonial-left display-cell">%s</div><div class="testimonial-right display-td"><div class="testimonial-author-infos">%s</div>%s</div>',$testimonial_img , $testimonial_author, $testimonial_content);
+                    $carousel_html .= sprintf('<div class="testimonial-left display-cell">%s</div><div class="testimonial-right display-td"><div class="testimonial-author-infos">%s</div>%s</div>',$testimonial_img , $testimonial_author, $testimonial_content);
                 }else{
-                    $testimonial_html .= sprintf('%s <div class="testimonial-author-infos">%s %s</div>', $testimonial_content, $testimonial_img, $testimonial_author );
+                    $carousel_html .= sprintf('%s <div class="testimonial-author-infos">%s %s</div>', $testimonial_content, $testimonial_img, $testimonial_author );
                 }
 
-                $testimonial_html .= '</div><!-- .testimonial-posts-item -->';
+                $carousel_html .= '</div><!-- .testimonial-posts-item -->';
             endwhile; wp_reset_postdata();
 
-            $output .= str_replace('%carousel_html%', $testimonial_html, $carousel_ouput);
+            $output .= str_replace('%carousel_html%', $carousel_html, $carousel_ouput);
 
         endif;
 
@@ -430,7 +430,7 @@ vc_map( array(
             'value' => array(
                 __( 'Center outside', THEME_LANG) => 'center_outside',
                 __( 'Center inside', THEME_LANG) => 'center',
-                __( 'Top Right', THEME_LANG) => 'top_right',
+                __( 'Top', THEME_LANG) => 'top',
                 __( 'Bottom', THEME_LANG) => 'bottom',
             ),
             "dependency" => array("element" => "navigation","value" => array('true')),
@@ -442,7 +442,7 @@ vc_map( array(
             'value' => 'false',
             "description" => __("Always show the navigation.", THEME_LANG),
             'group' => __( 'Carousel', THEME_LANG ),
-            "dependency" => array("element" => "navigation_position","value" => array('center', 'center_outside', 'top_right')),
+            "dependency" => array("element" => "navigation_position","value" => array('center', 'center_outside')),
         ),
         array(
             'type' => 'dropdown',
@@ -504,7 +504,7 @@ vc_map( array(
                 '<span><i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i></span>' => 'fa fa-angle-left|fa fa-angle-right',
                 '<span><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i></span>' => 'fa fa-chevron-left|fa fa-chevron-right',
                 '<span><i class="fa fa-angle-double-left"></i><i class="fa fa-angle-double-right"></i></span>' => 'fa fa-angle-double-left|fa fa-angle-double-right',
-                '<span><i class="fa fa-arrow-left"></i><i class="fa fa-arrow-right"></i></span>' => 'fa fa-arrow-left|fa fa-arrow-right',
+                '<span><i class="fa fa-long-arrow-left"></i><i class="fa fa-long-arrow-right"></i></span>' => 'fa fa-long-arrow-left|fa fa-long-arrow-right',
                 '<span><i class="fa fa-chevron-circle-left"></i><i class="fa fa-chevron-circle-right"></i></span>' =>'fa fa-chevron-circle-left|fa fa-chevron-circle-right',
                 '<span><i class="fa fa-arrow-circle-o-left"></i><i class="fa fa-arrow-circle-o-right"></i></span>' => 'fa fa-arrow-circle-o-left|fa fa-arrow-circle-o-right',
             ),

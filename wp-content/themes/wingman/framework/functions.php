@@ -620,9 +620,6 @@ function theme_header_content_class_callback( $classes, $layout ){
         $classes .= ' header-fullwidth';
     }
 
-    if($layout == 'layout1' || $layout == 'layout2'){
-        $classes .= ' apply-sticky';
-    }
 
     return $classes;
 }

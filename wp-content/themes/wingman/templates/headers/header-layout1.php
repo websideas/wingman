@@ -27,8 +27,9 @@ $position = kt_get_header();
         do_action( 'kt_slideshows_position' );
     }
     ?>
-        <div class="nav-container apply-sticky">
-            <div class="nav-container-inner">
+        <div class="nav-container ">
+            <div class="nav-container-inner apply-sticky">
+                <div class="header-sticky-background"></div>
                 <div class="container">
                     <nav id="nav" class="nav-main">
                         <?php get_template_part( 'templates/headers/header',  'menu'); ?>

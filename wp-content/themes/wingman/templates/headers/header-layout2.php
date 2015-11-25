@@ -17,7 +17,8 @@ $position = kt_get_header();
     }
     ?>
 
-    <div id="header-content" class="clearfix">
+    <div id="header-content" class="clearfix apply-sticky">
+        <div class="header-sticky-background"></div>
         <div class="site-branding">
             <?php get_template_part( 'templates/headers/header',  'branding'); ?>
         </div><!-- .site-branding -->
@@ -27,7 +28,7 @@ $position = kt_get_header();
             <?php get_template_part( 'templates/headers/header',  'tool'); ?>
         </div>
 
-        <div class="nav-container apply-sticky">
+        <div class="nav-container">
 
                 <div class="container">
                     <nav id="nav" class="nav-main">
