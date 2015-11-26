@@ -31,14 +31,13 @@ function kt_add_option_to_vc() {
     }
 
     $image_styles = WPBMap::getParam( 'vc_single_image', 'style' );
+    $image_styles['value'][__( 'Border box', THEME_LANG )] = 'border-box';
+    $image_styles['value'][__( 'Border box Left', THEME_LANG )] = 'border-left';
+    $image_styles['value'][__( 'Border box Right', THEME_LANG )] = 'border-right';
     $image_styles['value'][__( 'Creative Left', THEME_LANG )] = 'creative-left';
     $image_styles['value'][__( 'Creative Right', THEME_LANG )] = 'creative-right';
+
     vc_update_shortcode_param( 'vc_single_image', $image_styles );
-
-
-
-
-
 
 }
 

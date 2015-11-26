@@ -30,6 +30,7 @@ class WPBakeryShortCode_Icon_Box extends WPBakeryShortCode_VC_Custom_heading {
             'background_color_hover' => '',
             'size' => 'md',
             'align' => 'center',
+            'icon_box_layout' => '1',
 
             'el_class' => '',
             'css_animation' => '',
@@ -148,24 +149,9 @@ vc_map( array(
             'value' => array(
                 __( 'Icon on Top of Title', THEME_LANG ) => '1',
                 __( 'Icon beside Title', THEME_LANG ) => '2',
-                __( 'Icon beside Title - Icon Right', THEME_LANG ) => '7',
-                __( 'Icon beside Title and Content aligned with Title', THEME_LANG ) => '3',
-                __( 'Icon beside Title and Content aligned with Title - Icon Right', THEME_LANG ) => '8',
-                __( 'Icon Boxed - Icon on Top of Boxed', THEME_LANG ) => '4',
-                __( 'Icon Boxed - Icon on Top of Title', THEME_LANG ) => '5',
-                __( 'Icon Boxed - Icon beside Title and Content aligned with Title', THEME_LANG ) => '6',
-                __( 'Icon Boxed - Icon beside Title and Content aligned with Title - Icon Right', THEME_LANG ) => '9'
             ),
             'description' => __( 'Select your layout.', THEME_LANG ),
             "admin_label" => true,
-        ),
-        array(
-            'type' => 'colorpicker',
-            'heading' => __( 'Background', THEME_LANG ),
-            'param_name' => 'icon_box_bg',
-            'description' => __( 'Select background for icon box.', THEME_LANG ),
-            'dependency' => array("element" => "icon_box_layout","value" => array('4', '5', '6')),
-            'value' => '#F8F8F8',
         ),
 
         array(

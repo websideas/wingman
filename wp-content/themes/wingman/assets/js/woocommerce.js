@@ -139,13 +139,11 @@
             options.afterInit  = function(elem) {
                 if(options.navigation_pos == "top" && options.navigation){
                     var $buttons = elem.find('.owl-buttons');
-                    console.log($buttons);
                     $buttons.prependTo(wooCarousel);
                 }
             };
 
             objCarousel.waitForImages(function() {
-                console.log(options);
                 objCarousel.owlCarousel(options);
             });
 

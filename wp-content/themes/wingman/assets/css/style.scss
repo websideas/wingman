@@ -1223,6 +1223,56 @@ select:not([multiple]) {
 
 }
 
+/* ==============================
+   2. Rev slider custom
+   ============================== */
+.uranus.tparrows{
+  width: 40px;
+  height: 140px;
+
+  &:hover{
+    &:before,
+    &:after{
+      color: $primary-color;
+      @include opacity(1);
+    }
+  }
+
+  &:before{
+    display: block;
+    font-family: $heading-font;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
+    margin: 8px auto;
+    width: 18px;
+    word-wrap: break-word;
+    color: $white;
+  }
+
+  &.tp-leftarrow{
+    &:before{
+      content: 'PREV';
+    }
+  }
+  &.tp-rightarrow{
+    &:before{
+      content: 'NEXT';
+    }
+  }
+}
+
+.ares .tp-bullet{
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  @include transition();
+  &.selected{
+    background: #ffffff;
+    @include transform(scale(1.4));
+  }
+}
+
 
 /* ==============================
    2. Widgets
@@ -2307,8 +2357,10 @@ article.post-item.post-layout-classic {
 **/
 
 .wpb_single_image{
-  .creative-left,
-  .creative-right{
+
+
+  .border-left,
+  .border-right{
     margin-bottom: 30px;
     position: relative;
 
@@ -2331,8 +2383,8 @@ article.post-item.post-layout-classic {
     }
   }
 
-  .creative-left,
-  .creative-right,
+  .border-left,
+  .border-right,
   .creative-inner{
     &:before,
     &:after{
@@ -2344,8 +2396,9 @@ article.post-item.post-layout-classic {
     }
   }
 
-  .creative-left,
-  .creative-right{
+
+  .border-left,
+  .border-right{
     &:before,
     &:after{
       height: 0;
@@ -2367,7 +2420,27 @@ article.post-item.post-layout-classic {
     }
   }
 
-  .creative-right{
+  .border-left{
+    &:before{
+      left: 30px;
+    }
+    &:after{
+      right: -30px;
+    }
+    .creative-inner{
+      &:before,
+      &:after{
+        right: -30px;
+      }
+    }
+    &:before,
+    .creative-inner:before{
+      @include css3-prefix(transition-delay, '1s');
+    }
+
+  }
+
+  .border-right{
     &:before{
       left: -30px;
     }
@@ -2387,22 +2460,89 @@ article.post-item.post-layout-classic {
 
   }
 
-  .creative-left{
-    &:before{
-      left: 30px;
-    }
-    &:after{
-      right: -30px;
-    }
+  .border-box{
+    padding: 30px;
+    display: inline-block;
     .creative-inner{
+      position: relative;
+      display: inline-block;
+    }
+    .creative-inner-content{
       &:before,
       &:after{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: '';
+        display: block;
+        border: 3px solid $black;
+      }
+      &:before{
+        top: -30px;
+        left: -30px;
+      }
+      &:after{
+        bottom: -30px;
         right: -30px;
       }
     }
+    img{
+      position: relative;
+      z-index: 1;
+    }
+
+  }
+
+  &.creative-content{
+    padding: 80px;
+  }
+
+  .creative-left,
+  .creative-right{
+
+    margin: 0;
+
+    .creative-inner-content{
+      &:before{
+        background: $black;
+        content: "";
+        display: block;
+        height: 115px;
+        position: absolute;
+        width: 3px;
+      }
+    }
+  }
+
+  .creative-left{
+    .creative-inner-content{
+      &:before{
+        left: -39px;
+        top: -95px;
+        @include transform(rotate(315deg));
+      }
+    }
+  }
+
+  .creative-right{
+    .creative-inner-content{
+      &:before{
+        right: -39px;
+        bottom: -95px;
+        @include transform(rotate(315deg));
+      }
+    }
     &:before,
-    .creative-inner:before{
-      @include css3-prefix(transition-delay, '0.35s');
+    &:after{
+      top: -30px;
+    }
+    .creative-inner{
+      &:before{
+        top: -30px;
+      }
+      &:after{
+        bottom: 30px;
+      }
     }
 
   }

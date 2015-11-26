@@ -520,18 +520,15 @@ function kt_register_meta_boxes( $meta_boxes )
         'context' => 'normal',
         'priority' => 'high',
         'tabs'      => array(
-            'sliders'  => array(
-                'label' => __( 'Sliders', THEME_LANG ),
-                'icon'  => 'fa fa-picture-o',
+            'header'  => array(
+                'label' => __( 'Header', THEME_LANG ),
+                'icon'  => 'fa fa-desktop',
             ),
             'page_header' => array(
                 'label' => __( 'Page Header', THEME_LANG ),
                 'icon'  => 'fa fa-bars',
             ),
-            'header'  => array(
-                'label' => __( 'Header', THEME_LANG ),
-                'icon'  => 'fa fa-desktop',
-            ),
+
             'page_layout' => array(
                 'label' => __( 'Page layout', THEME_LANG ),
                 'icon'  => 'fa fa-columns',
@@ -711,6 +708,37 @@ function kt_register_meta_boxes( $meta_boxes )
                 'required' => array($prefix . 'header_position','=', 'transparent' ),
             ),
 
+            array(
+                'name' => __('Select Your Slideshow Type', THEME_LANG),
+                'id' => $prefix . 'slideshow_source',
+                'desc' => __("You can select the slideshow type using this option.", THEME_LANG),
+                'type' => 'select',
+                'options' => array(
+                    '' => __('Select Option', THEME_LANG),
+                    'revslider' => __('Revolution Slider', THEME_LANG),
+                    'layerslider' => __('Layer Slider', THEME_LANG),
+                ),
+                'tab'  => 'header',
+            ),
+            array(
+                'name' => __('Select Revolution Slider', THEME_LANG),
+                'id' => $prefix . 'rev_slider',
+                'default' => true,
+                'type' => 'revSlider',
+                'tab'  => 'header',
+                'desc' => __('Select the Revolution Slider.', THEME_LANG),
+                'required' => array($prefix . 'slideshow_source','=', 'revslider' ),
+            ),
+            array(
+                'name' => __('Select Layer Slider', THEME_LANG),
+                'id' => $prefix . 'layerslider',
+                'default' => true,
+                'type' => 'layerslider',
+                'tab'  => 'header',
+                'desc' => __('Select the Layer Slider.', THEME_LANG),
+                'required' => array($prefix . 'slideshow_source','=', 'layerslider' ),
+            ),
+
             /*
             array(
                 'name' => __('Main Navigation Menu', THEME_LANG),
@@ -721,42 +749,6 @@ function kt_register_meta_boxes( $meta_boxes )
                 'tab'  => 'header',
             ),
             */
-
-            //sliders
-            array(
-                'name' => __('Select Your Slideshow Type', THEME_LANG),
-                'id' => $prefix . 'slideshow_source',
-                'desc' => __("You can select the slideshow type using this option.", THEME_LANG),
-                'type' => 'select',
-                'options' => array(
-                    '' => __('Select Option', THEME_LANG),
-                    'revslider' => __('Revolution Slider', THEME_LANG),
-                    'layerslider' => __('Layer Slider', THEME_LANG),
-                    //'vertical' => __('Vertical Posts', THEME_LANG),
-                    //'carousel' => __('Carousel Posts', THEME_LANG),
-                    //'slider' => __('Slider Posts', THEME_LANG),
-                    //'gird' => __('Gird Posts', THEME_LANG),
-                ),
-                'tab'  => 'sliders',
-            ),
-            array(
-                'name' => __('Select Revolution Slider', THEME_LANG),
-                'id' => $prefix . 'rev_slider',
-                'default' => true,
-                'type' => 'revSlider',
-                'tab'  => 'sliders',
-                'desc' => __('Select the Revolution Slider.', THEME_LANG),
-                'required' => array($prefix . 'slideshow_source','=', 'revslider' ),
-            ),
-            array(
-                'name' => __('Select Layer Slider', THEME_LANG),
-                'id' => $prefix . 'layerslider',
-                'default' => true,
-                'type' => 'layerslider',
-                'tab'  => 'sliders',
-                'desc' => __('Select the Layer Slider.', THEME_LANG),
-                'required' => array($prefix . 'slideshow_source','=', 'layerslider' ),
-            ),
 
             //Page layout
             array(
@@ -770,18 +762,6 @@ function kt_register_meta_boxes( $meta_boxes )
                     'boxed' => __('Boxed Layout', THEME_LANG),
                 ),
                 'std' => 'default',
-                'tab'  => 'page_layout',
-            ),
-            array(
-                'name' => __('Overlap Main content', THEME_LANG),
-                'id' => $prefix . 'overlap_content',
-                'desc' => __("Overlap main content to slideshow or page header.", THEME_LANG),
-                'type' => 'select',
-                'options' => array(
-                    '' => __('Select Option', THEME_LANG),
-                    'yes' => __('Yes', THEME_LANG),
-                    'no' => __('No', THEME_LANG),
-                ),
                 'tab'  => 'page_layout',
             ),
             array(
@@ -843,11 +823,6 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type'  => 'background',
                 'tab'  => 'page_background',
                 'desc' => '&nbsp;',
-            ),
-            array(
-                'id' => 'fakeid_divider',
-                'type'  => 'divider',
-                'tab'  => 'page_background',
             ),
             array(
                 'name' => __('Background Options for Boxed mod', THEME_LANG),

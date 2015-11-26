@@ -188,8 +188,21 @@ if ( vc_has_class( 'prettyphoto', $el_class ) ) {
     $el_class = vc_remove_class( 'prettyphoto', $el_class );
 }
 
-if($style == 'creative-right' || $style == 'creative-left'){
-    $img['thumbnail'] = '<span class="creative-inner">'.$img['thumbnail'].'</span>';
+if($style == 'border-left' || $style == 'border-right' || $style == 'border-box' || $style == 'creative-left' || $style =='creative-right'){
+    $img['thumbnail'] = '<span class="creative-inner"><span class="creative-inner-content">'.$img['thumbnail'].'</span></span>';
+}
+
+
+$class_to_filter = '';
+
+if($style == 'creative-left' || $style =='creative-right'){
+    $class_to_filter .= 'creative-content ';
+}
+
+if($style =='creative-left'){
+    $style .= ' border-left';
+}elseif($style =='creative-right'){
+    $style .= ' border-right';
 }
 
 
@@ -207,8 +220,15 @@ if ( $link ) {
     $html = '<div class="' . $wrapperClass . '">' . $img['thumbnail'] . '</div>';
 }
 
-$class_to_filter = 'wpb_single_image wpb_content_element vc_align_' . $alignment . ' ' . $this->getCSSAnimation( $css_animation );
+
+
+
+
+$class_to_filter .= 'wpb_single_image wpb_content_element vc_align_' . $alignment . ' ' . $this->getCSSAnimation( $css_animation );
 $class_to_filter .= vc_shortcode_custom_css_class( $css, ' ' ) . $this->getExtraClass( $el_class );
+
+
+
 $css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, $class_to_filter, $this->settings['base'], $atts );
 
 if ( in_array( $source, array( 'media_library', 'featured_image' ) ) && 'yes' === $add_caption ) {

@@ -56,9 +56,7 @@
             	 */
             	do_action( 'theme_before_header' ); ?>
                 <div class="<?php echo esc_attr(apply_filters('theme_header_class', 'header-container header-'.$header_layout.' header-'.$header_scheme.' header-'.$header_positon.' header-'.$position, $header_layout)); ?>" data-scheme="<?php echo esc_attr($header_scheme) ?>" data-position="<?php echo esc_attr($header_positon) ?>">
-                    <div class="header-background"></div>
                     <header id="header" class="<?php echo apply_filters('theme_header_content_class', 'header-content', $header_layout) ?>">
-
                         <?php get_template_part( 'templates/headers/header',  $header_layout); ?>
                     </header><!-- #header -->
                 </div><!-- .header-container -->
