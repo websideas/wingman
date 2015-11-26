@@ -198,7 +198,8 @@ add_action( 'wp_ajax_nopriv_fronted_popup', 'wp_ajax_fronted_popup_callback' );
 function wp_ajax_fronted_popup_callback() {
     check_ajax_referer( 'ajax_frontend', 'security' );
     $output = array();
-    setcookie('kt_popup', 1, time() + ( 1*60), '/');
+    setcookie('kt_popup', 1, time() + ( 1000*60), '/');
+
     echo json_encode($output);
     
     die();

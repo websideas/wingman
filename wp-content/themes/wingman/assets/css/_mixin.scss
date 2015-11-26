@@ -24,6 +24,15 @@
   #{$property}: #{$value};
 }
 
+@mixin css3-prefix-value($property, $value) {
+  #{$property}: -webkit-#{$value};
+  #{$property}: -khtml-#{$value};
+  #{$property}: -moz-#{$value};
+  #{$property}: -ms-#{$value};
+  #{$property}: -o-#{$value};
+  #{$property}: #{$value};
+}
+
 
 /// Background Gradient
 /// @param {Color} $startColor [#3C3C3C] - Start Color
