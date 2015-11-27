@@ -305,6 +305,11 @@ select:not([multiple]) {
       border-color: $primary-color;
     }
   }
+  &.btn-accent{
+    background: $primary-color;
+    border-color: $primary-color;
+    color: $white;
+  }
   &.btn-animation{
     span{
       @include transform(translateX(0));

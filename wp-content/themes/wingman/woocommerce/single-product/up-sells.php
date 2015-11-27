@@ -43,7 +43,7 @@ if ( $products->have_posts() ) : ?>
 
 	<div class="upsells-products clearfix">
         <h3><?php _e( 'You may also like&hellip;', 'woocommerce' ) ?></h3>
-        <div class="woocommerce-carousel-wrapper" data-theme="style-navigation-top" data-itemscustom="<?php echo apply_filters( 'woocommerce_single_product_carousel', '[[992,4], [768, 3], [480, 1]]'); ?>">
+        <div class="woocommerce-carousel-wrapper" data-options='<?php echo apply_filters( 'woocommerce_single_product_carousel', '{"pagination": false, "navigation": true, "desktop": 4, "desktopsmall" : 3, "tablet" : 2, "mobile" : 1}'); ?>'>
     		<?php woocommerce_product_loop_start(); ?>
     			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
     				<?php wc_get_template_part( 'content', 'product' ); ?>

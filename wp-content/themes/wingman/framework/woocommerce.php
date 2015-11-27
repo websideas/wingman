@@ -274,9 +274,9 @@ function woocommerce_single_product_carousel_callback( $columns ) {
     $sidebar = kt_get_woo_sidebar();
 
     if($sidebar['sidebar'] == 'left' || $sidebar['sidebar'] == 'right'){
-        return '[[992,3], [768, 2], [480, 2]]';
+        return '{"pagination": false, "navigation": true, "desktop": 3, "desktopsmall" : 2, "tablet" : 2, "mobile" : 1}';
     }else{
-        return '[[992,4], [768, 3], [480, 2]]';
+        return '{"pagination": false, "navigation": true, "desktop": 3, "desktopsmall" : 2, "tablet" : 2, "mobile" : 1}';
     }
 }
 
@@ -683,3 +683,4 @@ function woocommerce_after_shop_loop_item_sale_sale_price($product = false, $pos
         wp_cache_delete( $cache_key );
     }
 }
+

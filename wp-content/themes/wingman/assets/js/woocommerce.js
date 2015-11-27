@@ -122,7 +122,7 @@
                 options.itemsTablet = [768,options.tablet];
             }
 
-            if(typeof options.navigation_pos === "undefined"){
+            if(typeof options.navigation_pos !== "undefined"){
                 options.navigation_pos = '';
             }
 
@@ -135,13 +135,13 @@
             if(typeof options.mobile !== "undefined"){
                 options.itemsMobile = [479,options.mobile];
             }
-
             options.afterInit  = function(elem) {
                 if(options.navigation_pos == "top" && options.navigation){
                     var $buttons = elem.find('.owl-buttons');
                     $buttons.prependTo(wooCarousel);
                 }
-            };
+            };console.log(options);
+
 
             objCarousel.waitForImages(function() {
                 objCarousel.owlCarousel(options);

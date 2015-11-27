@@ -357,6 +357,10 @@ select:not([multiple]) {
     .btn.btn-default:hover {
       background: #82c14f;
       border-color: #82c14f; }
+  .btn.btn-accent {
+    background: #82c14f;
+    border-color: #82c14f;
+    color: #FFFFFF; }
   .btn.btn-animation span {
     -webkit-transform: translateX(0);
     -khtml-transform: translateX(0);
