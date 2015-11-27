@@ -563,7 +563,7 @@
       width: 20px;
       height: 20px;
       border: 1px solid #e5e5e5;
-      line-height: 18px; }
+      line-height: 17px; }
       .bag-products .bag-product a.remove:after {
         margin: 0;
         font-size: 12px; }
@@ -1080,8 +1080,13 @@ body .mCSB_scrollTools {
   position: absolute;
   bottom: 0;
   left: -1px; }
+.woocommerce .tool-3 .tool-inner {
+  width: 33.33%; }
+.woocommerce .tool-2 .tool-inner {
+  width: 50%; }
+.woocommerce .tool-1 .tool-inner {
+  width: 100%; }
 .woocommerce .tool-inner {
-  width: 33.33%;
   height: 40px;
   padding: 0 0 0 1px;
   -webkit-transition: all 0.2s ease-in-out 0s;
@@ -1476,7 +1481,9 @@ body .mCSB_scrollTools {
   float: none; }
   .woocommerce-page .cart-collaterals .cart_totals table,
   .woocommerce .cart-collaterals .cart_totals table {
-    width: 100%; }
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 15px; }
 
 .woocommerce-cart .wc-proceed-to-checkout {
   padding: 0;
@@ -1489,6 +1496,8 @@ body .mCSB_scrollTools {
   line-height: 21px; }
 .woocommerce-cart .cart-collaterals .cart_totals tr td {
   letter-spacing: 0.2em; }
+  .woocommerce-cart .cart-collaterals .cart_totals tr td strong {
+    font-weight: 300; }
 .woocommerce-cart .cart-collaterals .cart_totals tr th {
   padding: 12px 30px; }
 
@@ -1627,7 +1636,15 @@ body .mCSB_scrollTools {
         font-weight: normal; }
 
 .select2-container .select2-choice {
-  border-color: #e5e5e5; }
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  line-height: 38px;
+  -webkit-border-radius: 0;
+  -khtml-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0; }
 
 .select2-drop-active {
   border-color: #e5e5e5; }
@@ -1665,7 +1682,7 @@ body .mCSB_scrollTools {
           border-radius: 100%;
           position: absolute;
           left: -32px;
-          top: 3px;
+          top: 0;
           background: #FFFFFF;
           outline: none; }
       .woocommerce-checkout #payment ul.payment_methods li input {

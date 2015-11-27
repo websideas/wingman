@@ -314,7 +314,7 @@ select:not([multiple]) {
     span{
       @include transform(translateX(0));
       @include transition("all .3s ease-in-out 0s");
-      display: block;
+      display: inline-block;
       position: relative;
       i{
         @include opacity(0);
@@ -343,6 +343,18 @@ select:not([multiple]) {
     padding: 0;
     text-transform: uppercase;
     letter-spacing: 0.2em;
+    &:after{
+      font-family: FontAwesome;
+      content: "\f178";
+      @include transition();
+      @include transform(translateX(10px));
+      @include opacity(0);
+      display: inline-block;
+    }
+    &:hover:after{
+      @include transform(translatex(0));
+      @include opacity(1);
+    }
 }
 
 .readmore-link-white{
@@ -973,6 +985,115 @@ select:not([multiple]) {
  * 10.4. Header color version
  */
 
+
+/* ==============================
+   10. Footer
+   ============================== */
+#footer{
+  background: $nav-bg;
+  color: $main-text;
+}
+#footer-top {
+    padding: 0 0 30px;
+}
+#footer-area {
+    padding: 75px 0 55px 0;
+    background: $nav-bg;
+    .footer-area-one{
+      text-align: center;
+    }
+    h3.widget-title{
+      color: $white;
+      margin: 0 0 30px;
+      padding: 0 20px;
+      font-size:14px;
+      &:after,&:before{
+        background: $primary-color;
+        height:10px;
+      }
+    }
+    .widget-container{
+      margin-bottom: 25px;
+    }
+}
+#footer-copyright {
+    background: $nav-bg;
+    padding: 25px 0;
+    color: $main-text;
+    a{
+      color: $white;
+    }
+    .socials-icon-wrapper{
+      margin: 0;
+    }
+}
+#bottom-nav{
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    > li{
+      display: inline-block;
+      padding: 0 12px;
+    }
+  }
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+.footer-left,
+.footer-right{
+  #bottom-nav{
+    ul{
+      > li:last-child{
+        padding-right: 0;
+      }
+      > li:first-child{
+        padding-left: 0;
+      }
+    }
+  }
+}
+.footer-centered {
+    text-align: center;
+    #bottom-nav,
+    .footer-copyright{
+      margin-bottom: 5px;
+    }
+    > *:last-child{
+      margin: 0;
+    }
+}
+body.layout-boxed{
+  #footer{
+    max-width: 1200px;
+  }
+}
+.footer_fixed{
+  #footer{
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 0;
+  }
+  .static-footer{
+    padding: 0 !important;
+    #footer{
+      position: static;
+    }
+  }
+}
+#footer-bottom {
+    padding: 40px 0;
+}
 
 /* ==============================
    2. KT Owl Carousel
@@ -1647,6 +1768,9 @@ select:not([multiple]) {
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.2em;
+      option{
+        padding: 5px 0;
+      }
     }
     input[type="text"]{
       background-color: $white;
@@ -2216,6 +2340,7 @@ article.post-item {
   }
 }
 /* Blog List */
+.blog-posts-zigzag,
 .blog-posts-list {
   .list-media-wrapper{
     position: relative;
@@ -2230,8 +2355,12 @@ article.post-item {
       @include transform-origin(left top 0);
       @include transform(rotate(90deg));
     }
+    .entry-thumb{
+      margin: 0;
+    }
   }
 }
+.blog-posts.blog-posts-zigzag,
 .blog-posts.blog-posts-list{
   .entry-title{
     margin: 0 0 20px;
@@ -2244,6 +2373,9 @@ article.post-item {
         @include css3-prefix-value('display', 'flex');
       }
     }
+  }
+  .entry-more{
+    margin: 0;
   }
 }
 /* Blog Classic */
@@ -2471,6 +2603,7 @@ article.post-item.post-layout-classic {
     .creative-inner{
       position: relative;
       display: inline-block;
+      max-width: 100%;
     }
     .creative-inner-content{
       &:before,
@@ -2629,18 +2762,37 @@ article.post-item.post-layout-classic {
 .wrapper-comingsoon {
   margin-bottom: 20px;
   text-align: center;
-  .coming-soon{
-    text-align: center;
-    border:3px solid $black;
-    padding:35px 0;
-    display: inline-block;
-    .wrap{
+  &.style1{
+    .coming-soon{
+      text-align: center;
+      border:3px solid $black;
+      padding:35px 0;
       display: inline-block;
-      padding: 10px;
-      min-width: 185px;
-      border-right:1px solid $border-third-color;
-      &:last-child{
-        border: none;
+      .wrap{
+        display: inline-block;
+        padding: 10px;
+        min-width: 185px;
+        border-right:1px solid $border-third-color;
+        &:last-child{
+          border: none;
+        }
+        .value-time{
+          font-size: 48px;
+          line-height: 48px;
+          letter-spacing: 0.1em;
+          margin-bottom: 10px;
+          font-family:$heading-font;
+          font-weight: 700;
+          color:$title-text;
+        }
+        .title{
+          font-size: 14px;
+          margin: 0;
+          padding: 0;
+          font-weight: 600;
+          color:$main-text;
+          text-transform: uppercase;
+        }
       }
       .value-time{
         font-size: 48px;
@@ -2651,13 +2803,95 @@ article.post-item.post-layout-classic {
         font-weight: 700;
         color:$title-text;
       }
-      .title{
+      .title {
         font-size: 14px;
         margin: 0;
+      }
+    }
+  }
+  &.style2{
+    .coming-soon{
+      border-top:1px solid $border-second-color;
+      border-bottom:1px solid $border-second-color;
+      border-left: none;
+      border-right: none;
+      padding:25px 0;
+      display: block;
+      margin-bottom: 50px;
+      width:100%;
+      overflow: hidden;
+      .wrap{
+        float:left;
+        display: block;
         padding: 0;
-        font-weight: 600;
-        color:$main-text;
-        text-transform: uppercase;
+        width: 25%;
+        text-align: left;
+        border:none;
+        min-width: 0;
+        .value-time{
+          font-size: 36px;
+          line-height: 36px;
+          letter-spacing: 0.2em;
+          margin: 0;
+          font-family:$heading-font;
+          font-weight: 700;
+          color:$border-header-tabs;
+          display: inline-block;
+          &:after{
+            content:"/";
+            color:#e1e1e1;
+            font-size:16px;
+          }
+        }
+        .title{
+          font-size: 14px;
+          margin: 0;
+          padding: 0;
+          font-weight: 400;
+          color:$main-text;
+          text-transform: uppercase;
+          display: inline-block;
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+  &.style3{
+    .coming-soon{
+      text-align: center;
+      display: inline-block;
+      .wrap{
+        width: 150px;
+        padding: 0 10px;
+        display: inline-block;
+        position: relative;
+        &:after{
+          width: 20px;
+          height: 20px;
+          content: "";
+          background: url(../images/icon-coming3.png) no-repeat center center;
+          display: block;
+          position: absolute;
+          right: -10px;
+          top:50%;
+          @include transform(translatey(-50%));
+        }
+        &:last-child:after{
+          display: none;
+        }
+        .title{
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+        .value-time{
+          font-size: 36px;
+          line-height: 36px;
+          color: #ec6aec;
+          letter-spacing: 0.2em;
+          font-family: $heading-font;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
       }
     }
   }

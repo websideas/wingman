@@ -99,8 +99,11 @@ $composer_addons = array(
     
     'category_products_tab.php',
     'products_carousel.php',
+<<<<<<< HEAD
     'products_carousel_tab.php',
     'sales_countdown.php',
+=======
+>>>>>>> origin/master
 );
 
 foreach ( $composer_addons as $addon ) {

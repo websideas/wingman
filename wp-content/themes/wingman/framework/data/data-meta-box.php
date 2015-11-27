@@ -232,6 +232,20 @@ function kt_register_meta_boxes( $meta_boxes )
                 'desc' => __( "Please type the text for link here.", THEME_LANG ),
                 'type'  => 'text',
             ),
+            array(
+                'name' => __('Rate', THEME_LANG),
+                'id'   => "{$prefix}rate",
+                'type' => 'select',
+                'options' => array(
+                    ''    => __('Choose star', THEME_LANG),
+                    '1'   => __('1', THEME_LANG),
+                    '2'   => __('2', THEME_LANG),
+                    '3'   => __('3', THEME_LANG),
+                    '4'   => __('4', THEME_LANG),
+                    '5'   => __('5', THEME_LANG),
+                ),
+                'std'  => ''
+            ),
         ),
     );
 

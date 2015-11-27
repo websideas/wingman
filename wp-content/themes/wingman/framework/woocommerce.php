@@ -336,17 +336,30 @@ add_action( 'woocommerce_shop_tool_list_before', 'woocommerce_template_loop_add_
 add_action( 'woocommerce_shop_tool_list', 'kt_woocommerce_add_archive_tool', 10);
 add_action( 'woocommerce_shop_loop_item_after_image', 'kt_woocommerce_add_archive_tool', 10);
 function kt_woocommerce_add_archive_tool(){
+    $count = 1;
     if(class_exists('YITH_WCWL_UI')){
-        echo do_shortcode('<div class="tool-inner">[yith_wcwl_add_to_wishlist]</div>');
+        $count++;
     }
-    printf(
-        '<div class="tool-inner"><a href="#" class="product-quick-view" data-id="%s">%s</a></div>',
-        get_the_ID(),
-        __('Quick view', THEME_LANG)
-    );
     if(defined( 'YITH_WOOCOMPARE' )){
-        echo do_shortcode('<div class="tool-inner">[yith_compare_button]</div>');
+        $count++;
     }
+    ?>
+    <div class="product-image-tool tool-<?php echo $count; ?>">
+        <?php
+            if(class_exists('YITH_WCWL_UI')){
+                echo do_shortcode('<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('wishlist',THEME_LANG).'">[yith_wcwl_add_to_wishlist]</div>');
+            }
+            printf(
+                '<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('Quick View',THEME_LANG).'"><a href="#" class="product-quick-view" data-id="%s">%s</a></div>',
+                get_the_ID(),
+                __('Quick view', THEME_LANG)
+            );
+            if(defined( 'YITH_WOOCOMPARE' )){
+                echo do_shortcode('<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('Compare',THEME_LANG).'">[yith_compare_button]</div>');
+            } 
+        ?>
+    </div>
+    <?php
 }
 
 
@@ -614,73 +627,3 @@ function kt_template_single_excerpt(){
 }
 
 add_action( 'woocommerce_sale_sountdown_item', 'kt_template_single_excerpt', 10 );
-add_action( 'woocommerce_sale_sountdown_item', 'woocommerce_after_shop_loop_item_sale_sale_price', 15, 2 );
-function woocommerce_after_shop_loop_item_sale_sale_price($product = false, $post = false){
-
-    $product_id = 0;
-    if( is_object( $product ) ){
-        $product_id = $product->id;
-    }elseif( is_object( $post) ){
-        $product_id = $post->ID;
-    }else{
-        global $post;
-        $product_id =  $post->ID;
-    }
-
-    if( ! $product_id  ){
-        return;
-    }
-
-    $cache_key = 'time_sale_price_'.$product_id;
-    $cache = wp_cache_get($cache_key);
-    if( $cache ){
-        echo $cache;
-        return;
-    }
-    // Get variations
-    $args = array(
-        'post_type'     => 'product_variation',
-        'post_status'   => array( 'private', 'publish' ),
-        'numberposts'   => -1,
-        'orderby'       => 'menu_order',
-        'order'         => 'asc',
-        'post_parent'   => $product_id
-    );
-    $variations = get_posts( $args );
-    $variation_ids = array();
-    if( $variations ){
-        foreach ( $variations as $variation ) {
-            $variation_ids[]  = $variation->ID;
-        }
-    }
-    $sale_price_dates_to = false;
-
-    if( !empty(  $variation_ids )   ){
-        global $wpdb;
-        $sale_price_dates_to = $wpdb->get_var( "
-            SELECT
-            meta_value
-            FROM $wpdb->postmeta
-            WHERE meta_key = '_sale_price_dates_to' and post_id IN(".join(',',$variation_ids).")
-            ORDER BY meta_value DESC
-            LIMIT 1
-        " );
-
-        if( $sale_price_dates_to !='' ){
-            $sale_price_dates_to = date('Y-m-d', $sale_price_dates_to);
-        }
-    }
-
-    if( !$sale_price_dates_to ){
-        $sale_price_dates_to 	= ( $date = get_post_meta( $product_id, '_sale_price_dates_to', true ) ) ? date_i18n( 'Y-m-d', $date ) : '';
-    }
-
-    if($sale_price_dates_to){
-        $cache = '<div class="woocommerce-countdown coming-soon clearfix" data-date="'.$sale_price_dates_to.'"></div>';
-        wp_cache_add( $cache_key, $cache );
-        echo $cache;
-    }else{
-        wp_cache_delete( $cache_key );
-    }
-}
-

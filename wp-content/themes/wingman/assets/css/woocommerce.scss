@@ -531,7 +531,7 @@
 		    width: 20px;
 		    height: 20px;
 		    border: 1px solid $border-color;
-		    line-height: 18px;
+		    line-height: 17px;
 		    &:after{
 		    	margin: 0;
     			font-size: 12px;
@@ -1127,8 +1127,22 @@ body{
 	    bottom:0;
 	    left: -1px;
 	}
+	.tool-3{
+		.tool-inner{
+			width: 33.33%;
+		}
+	}
+	.tool-2{
+		.tool-inner{
+			width: 50%;
+		}
+	}
+	.tool-1{
+		.tool-inner{
+			width: 100%;
+		}
+	}
 	.tool-inner{
-		width: 33.33%;
 	    height: 40px;
 	    padding: 0 0 0 1px;
 	    @include transition();
@@ -1546,6 +1560,8 @@ body{
     		float: none;
     		table{
     			width: 100%;
+    			border-bottom: 1px solid $border-color;
+    			margin-bottom: 15px;
     		}
 		}
 	}
@@ -1567,6 +1583,9 @@ body{
 				}
 				td{
 					letter-spacing: 0.2em;
+					strong{
+						font-weight: 300;
+					}
 				}
 				th{
 					padding: 12px 30px;
@@ -1761,7 +1780,10 @@ body{
 }
 .select2-container{
 	.select2-choice{
-		border-color: $border-color;
+		border: none;
+		border-bottom:1px solid $border-color;
+		line-height: 38px;
+		@include border-radius(0);
 	}
 }
 .select2-drop-active{
@@ -1804,7 +1826,7 @@ body{
 					    border-radius:100%;
 					    position: absolute;
 					    left:-32px;
-					    top:3px;
+					    top:0;
 					    background: $white;
 					    outline: none;
 				    }
