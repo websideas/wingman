@@ -716,7 +716,6 @@ function kt_render_carousel($data, $extra = '', $class = 'owl-carousel kt-owl-ca
         "autoheight" => $autoheight,
         "autoplay" => $autoplay,
         'navigation_icon' => $navigation_icon,
-        "margin" => $margin,
         "navigation" => $navigation,
         'navigation_pos' => $navigation_position,
         "slidespeed" => $slidespeed,
