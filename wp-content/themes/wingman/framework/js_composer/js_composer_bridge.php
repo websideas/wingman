@@ -99,7 +99,6 @@ $composer_addons = array(
     
     'category_products_tab.php',
     'products_carousel.php',
-    'sales_countdown.php',
 );
 
 foreach ( $composer_addons as $addon ) {

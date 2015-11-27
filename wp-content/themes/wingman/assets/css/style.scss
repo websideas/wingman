@@ -975,6 +975,115 @@ select:not([multiple]) {
 
 
 /* ==============================
+   10. Footer
+   ============================== */
+#footer{
+  background: $nav-bg;
+  color: $main-text;
+}
+#footer-top {
+    padding: 0 0 30px;
+}
+#footer-area {
+    padding: 75px 0 55px 0;
+    background: $nav-bg;
+    .footer-area-one{
+      text-align: center;
+    }
+    h3.widget-title{
+      color: $white;
+      margin: 0 0 30px;
+      padding: 0 20px;
+      font-size:14px;
+      &:after,&:before{
+        background: $primary-color;
+        height:10px;
+      }
+    }
+    .widget-container{
+      margin-bottom: 25px;
+    }
+}
+#footer-copyright {
+    background: $nav-bg;
+    padding: 25px 0;
+    color: $main-text;
+    a{
+      color: $white;
+    }
+    .socials-icon-wrapper{
+      margin: 0;
+    }
+}
+#bottom-nav{
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    > li{
+      display: inline-block;
+      padding: 0 12px;
+    }
+  }
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+.footer-left,
+.footer-right{
+  #bottom-nav{
+    ul{
+      > li:last-child{
+        padding-right: 0;
+      }
+      > li:first-child{
+        padding-left: 0;
+      }
+    }
+  }
+}
+.footer-centered {
+    text-align: center;
+    #bottom-nav,
+    .footer-copyright{
+      margin-bottom: 5px;
+    }
+    > *:last-child{
+      margin: 0;
+    }
+}
+body.layout-boxed{
+  #footer{
+    max-width: 1200px;
+  }
+}
+.footer_fixed{
+  #footer{
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 0;
+  }
+  .static-footer{
+    padding: 0 !important;
+    #footer{
+      position: static;
+    }
+  }
+}
+#footer-bottom {
+    padding: 40px 0;
+}
+
+/* ==============================
    2. KT Owl Carousel
    ============================== */
 .owl-carousel-kt{
@@ -1647,6 +1756,9 @@ select:not([multiple]) {
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.2em;
+      option{
+        padding: 5px 0;
+      }
     }
     input[type="text"]{
       background-color: $white;

@@ -1031,6 +1031,89 @@ select:not([multiple]) {
  * 10.4. Header color version
  */
 /* ==============================
+   10. Footer
+   ============================== */
+#footer {
+  background: #1e1e1e;
+  color: #707070; }
+
+#footer-top {
+  padding: 0 0 30px; }
+
+#footer-area {
+  padding: 75px 0 55px 0;
+  background: #1e1e1e; }
+  #footer-area .footer-area-one {
+    text-align: center; }
+  #footer-area h3.widget-title {
+    color: #FFFFFF;
+    margin: 0 0 30px;
+    padding: 0 20px;
+    font-size: 14px; }
+    #footer-area h3.widget-title:after, #footer-area h3.widget-title:before {
+      background: #82c14f;
+      height: 10px; }
+  #footer-area .widget-container {
+    margin-bottom: 25px; }
+
+#footer-copyright {
+  background: #1e1e1e;
+  padding: 25px 0;
+  color: #707070; }
+  #footer-copyright a {
+    color: #FFFFFF; }
+  #footer-copyright .socials-icon-wrapper {
+    margin: 0; }
+
+#bottom-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  #bottom-nav ul > li {
+    display: inline-block;
+    padding: 0 12px; }
+
+.footer-left {
+  text-align: left; }
+
+.footer-right {
+  text-align: right; }
+
+.footer-left #bottom-nav ul > li:last-child,
+.footer-right #bottom-nav ul > li:last-child {
+  padding-right: 0; }
+.footer-left #bottom-nav ul > li:first-child,
+.footer-right #bottom-nav ul > li:first-child {
+  padding-left: 0; }
+
+.footer-centered {
+  text-align: center; }
+  .footer-centered #bottom-nav,
+  .footer-centered .footer-copyright {
+    margin-bottom: 5px; }
+  .footer-centered > *:last-child {
+    margin: 0; }
+
+body.layout-boxed #footer {
+  max-width: 1200px; }
+
+.footer_fixed #footer {
+  position: fixed;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 0; }
+.footer_fixed .static-footer {
+  padding: 0 !important; }
+  .footer_fixed .static-footer #footer {
+    position: static; }
+
+#footer-bottom {
+  padding: 40px 0; }
+
+/* ==============================
    2. KT Owl Carousel
    ============================== */
 .owl-carousel-kt .owl-buttons {
@@ -1625,6 +1708,8 @@ select:not([multiple]) {
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.2em; }
+      #search-fullwidth .searchform .postform option {
+        padding: 5px 0; }
     #search-fullwidth .searchform input[type="text"] {
       background-color: #FFFFFF;
       border-radius: 0;
