@@ -1255,7 +1255,8 @@ body .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
     -ms-transform: translatey(-40px);
 }
 
-.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering{
+.woocommerce .woocommerce-ordering, 
+.woocommerce-page .woocommerce-ordering{
     float:left;
     margin-bottom: 30px;
 }
