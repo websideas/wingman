@@ -1,6 +1,6 @@
 /********************************************
  * REVOLUTION 5.0 EXTENSION - PARALLAX
- * @version: 1.0.5 (20.10.2015)
+ * @version: 1.1.0 (10.11.2015)
  * @requires jquery.themepunch.revolution.js
  * @author ThemePunch
 *********************************************/
@@ -278,7 +278,10 @@ jQuery.extend(true,_R, {
 			_v = opt.viewPort,
 			_ = opt.parallax;
 
-		if (opt.lastscrolltop==st) return false;
+		if (opt.lastscrolltop==st && !opt.duringslidechange) return false;
+		//if (opt.lastscrolltop==st) return false;
+
+		
 		opt.lastscrolltop = st;
 
 		b.top = (t-st);		

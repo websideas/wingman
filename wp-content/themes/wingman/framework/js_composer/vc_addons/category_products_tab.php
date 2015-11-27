@@ -203,7 +203,6 @@ vc_map( array(
                 'element' => 'orderby',
                 'value' => array( 'meta_value', 'meta_value_num' ),
             ),
-            "dependency" => array( "element" => "show","value" => 'all' ),
             "admin_label" => true,
         ),
         array(

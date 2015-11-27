@@ -675,7 +675,7 @@ li.selected .rs-icon-edit-basic,li:hover .rs-icon-edit-basic { 	background-image
 
 
 .quick-layers-list												{ 	margin:0px 0px 0px; padding:0px 30px;max-height:175px; overflow: hidden; position: relative;}
-.quick-layers-list li 											{	margin-bottom:5px; padding-left:0px; border-bottom:1px solid #2e2e2e;}
+.quick-layers-list li 											{	margin-bottom:5px; padding-left:0px; border:none; border-bottom:1px solid #2e2e2e; background-color:inherit; background-image:none;}
 .quick-edit-toolbar-in-list 									 {	visibility:hidden; float:left;display:block;}
 .quicksortlayer.selected .quick-edit-toolbar-in-list,
 .quick-layers-list li:hover .quick-edit-toolbar-in-list 		{	visibility: visible}

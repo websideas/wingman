@@ -813,8 +813,6 @@ var UniteLayersRev = new function(){
 
 		
 		function edit_content_current_layer(){
-			
-			
 
 			var layer = t.getCurrentLayer();
 			if(layer !== null){
@@ -876,6 +874,7 @@ var UniteLayersRev = new function(){
 		
 		// EDIT LAYER CONTENT FROM QUICK LIST		
 		jQuery('body').on('click','.button_change_image_source, .button_edit_layer, .button_change_video_settings, .button_reset_size, .button_edit_shape',function() {
+			jQuery(':focus').blur(); // Blur Focused Elements first
 			var b = jQuery(this),
 				serial = b.closest('.layer-toolbar-li').data('serial');
 			t.setLayerSelected(serial);		
@@ -886,6 +885,7 @@ var UniteLayersRev = new function(){
 		});
 
 		jQuery('body').on('click','.layer-title-with-icon',function() {
+			jQuery(':focus').blur(); // Blur Focused Elements first
 			var b = jQuery(this),
 				serial = b.closest('.layer-toolbar-li').data('serial');
 			t.setLayerSelected(serial);		
@@ -897,6 +897,7 @@ var UniteLayersRev = new function(){
 
 		//delete layer actions:
 		jQuery('body').on('click',".button_delete_layer, #button_delete_layer", function(){
+			jQuery(':focus').blur(); // Blur Focused Elements first
 			var b = jQuery(this);
 
 			if(b.hasClass("button-now-disabled")) return(false);
@@ -910,11 +911,15 @@ var UniteLayersRev = new function(){
 				
 				//delete selected layer
 				deleteCurrentLayer();
+				unselectLayers();
+			
+
 			}
 		});
 
 		//delete layer actions:
 		jQuery('body').on('click',".button_duplicate_layer, #button_duplicate_layer",function(){
+			jQuery(':focus').blur(); // Blur Focused Elements first
 			var b = jQuery(this);
 
 			if(b.hasClass("button-now-disabled")) return(false);
@@ -3660,7 +3665,7 @@ var UniteLayersRev = new function(){
 			type = objLayer.type;
 
 
-		var zIndex = Number(objLayer.order)+1;
+		var zIndex = Number(objLayer.order)+100;
 
 		var style = "z-index:"+zIndex+";position:absolute;";
 		var stylerot ="";
@@ -4352,7 +4357,7 @@ var UniteLayersRev = new function(){
 		
 		objLayer.style = jQuery.trim(objLayer.style);
 		if(isInit == false && objLayer.type == "text" && (!objLayer.style || objLayer.style == "")){
-			objLayer.style = getFirstStyle();
+			//objLayer.style = getFirstStyle();
 			do_style_reset = true;
 		}
 
@@ -4879,20 +4884,23 @@ var UniteLayersRev = new function(){
 	}
 
 
+	
 	/**
-	 * duplicate layer, set it a little aside of the layer position
+	 * call "duplicateLayer" function with selected serial
 	 */
-	var duplicateLayer = function(serial){
-		
-		var obj = arrLayers[serial];
+	var duplicateCurrentLayer = function(){		
+		if(selectedLayerSerial == -1)
+			return(false);
+
+		var obj = arrLayers[selectedLayerSerial];
 		var obj2 = jQuery.extend(true, {}, obj);	//duplicate object
+		
 		t.getVal(objLayer, 'top');
 
 		obj2 = t.setVal(obj2, 'left', t.getVal(obj2, 'left')+5);
 		obj2 = t.setVal(obj2, 'top', t.getVal(obj2, 'top')+5);
 		obj2.order = undefined;
-		obj2.time = undefined;
-
+		obj2.time = undefined;		
 		addLayer(obj2);		
 		initDisallowCaptionsOnClick();
 		var key;
@@ -4900,18 +4908,7 @@ var UniteLayersRev = new function(){
 			key = k;
 		});
 		
-		t.setLayerSelected(key);
-		
-	}
-
-
-	/**
-	 * call "duplicateLayer" function with selected serial
-	 */
-	var duplicateCurrentLayer = function(){		
-		if(selectedLayerSerial == -1)
-			return(false);
-		duplicateLayer(selectedLayerSerial);		
+		t.setLayerSelected(key);		
 	}
 
 	
@@ -5511,6 +5508,7 @@ var UniteLayersRev = new function(){
 		
 		//deformation hover part start
 		if(objUpdate['deformation-hover'] == undefined || jQuery.isEmptyObject(objUpdate['deformation-hover'])) objUpdate['deformation-hover'] = {};		
+		objUpdate['deformation-hover']['color'] = jQuery('#hover_layer_color_s').val();
 		objUpdate['deformation-hover']['color-transparency'] = jQuery('#hover_css_font-transparency').val();
 		objUpdate['deformation-hover']['text-decoration'] = jQuery('#hover_css_text-decoration option:selected').val();
 		objUpdate['deformation-hover']['background-color'] = jQuery('#hover_css_background-color').val();
@@ -6362,6 +6360,7 @@ var UniteLayersRev = new function(){
 	 */
 	var unselectLayers = function(){
 		
+
 		unselectHtmlLayers();
 		jQuery('.quicksortlayer.selected').removeClass("selected");
 		u.unselectSortboxItems();
@@ -6714,9 +6713,11 @@ var UniteLayersRev = new function(){
 	/**
 	 * set layer selected representation
 	 */
-	t.setLayerSelected = function(serial){
+	t.setLayerSelected = function(serial,videoRefresh){
 		
-		if(selectedLayerSerial == serial)
+		
+		
+		if(selectedLayerSerial == serial && !videoRefresh)
 			return(false);
 							
 		u.resetIdleSelector();
@@ -6841,6 +6842,7 @@ var UniteLayersRev = new function(){
 			break;
 		}
 		
+
 		//do specific operations depends on type
 		switch(objLayer.type){
 			case "video":	//show edit video button
@@ -6852,7 +6854,7 @@ var UniteLayersRev = new function(){
 				jQuery("#layer_2d_title_row").hide();
 				
 				t.showHideContentEditor(false);
-				
+								
 				layer.resizable({
 					aspectRatio:aspectratio,
 					handles:"all",

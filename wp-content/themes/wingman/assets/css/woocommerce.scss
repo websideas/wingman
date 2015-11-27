@@ -1958,42 +1958,62 @@ body{
  * category-products-tab
  */
 .woocommerce-category-products-tab{
-	ul.block-heading-tabs{
-		padding: 0;
-	    margin: 0 0 55px;
-	    list-style: none;
-	    text-align: center;
-	    li{
-	    	display: inline-block;
-		    padding: 0 10px;
-		    margin: 0 20px;
-		    position: relative;
-		    a{
-		    	font-weight:600;
-			    text-transform: uppercase;
-			    color:$main-text;
-			    letter-spacing: 0.2em;
-		    }
-		    &.ui-tabs-active{
-		    	a{
-		    		color: $border-dark-color;
-		    	}
-		    	&:before,&:after{
-		    		position: absolute;
-				    content:"";
-				    width:1px;
-				    height:10px;
-				    background: $border-header-tabs;
-				    right:0;
-				    top:50%;
-				    @include transform(translatey(-65%));
-		    	}
-		    	&:before{
-		    		left:0;
-		    	}
-		    }
-	    }
-	}
+  ul.block-heading-tabs{
+    padding: 0;
+    margin: 0 0 55px;
+    list-style: none;
+    text-align: center;
+    li{
+      display: inline-block;
+      padding: 0 10px;
+      margin: 0 20px;
+      position: relative;
+
+      &:before,
+      &:after{
+        position: absolute;
+        content:"";
+        width:1px;
+        height:10px;
+        background: $border-header-tabs;
+        top:50%;
+        @include transform(translatey(-65%));
+        @include transition();
+        @include opacity(0);
+      }
+      &:before{
+        left: -10px;
+      }
+      &:after{
+        right:-10px;
+      }
+      a{
+        font-weight:600;
+        text-transform: uppercase;
+        color:$main-text;
+        letter-spacing: 0.2em;
+      }
+
+      a:hover,
+      &.ui-tabs-active a{
+        color: $border-dark-color;
+      }
+
+      &.ui-tabs-active{
+
+        &:before,
+        &:after{
+          @include opacity(1);
+        }
+        &:before{
+          left: 0;
+        }
+        &:after{
+          right: 0;
+        }
+      }
+    }
+  }
 }
 /**
  * Sale Couwndown

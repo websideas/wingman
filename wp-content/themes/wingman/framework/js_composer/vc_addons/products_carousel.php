@@ -14,13 +14,12 @@ class WPBakeryShortCode_Products_Carousel extends WPBakeryShortCode {
             'order' => 'DESC',
             'show' => '',
 
-            'margin' => 10,
             'autoheight' => true,
             'autoplay' => false,
             'mousedrag' => true,
             'autoplayspeed' => 5000,
             'slidespeed' => 200,
-            'desktop' => 1,
+            'desktop' => 4,
             'tablet' => 1,
             'mobile' => 1,
             'gutters' => false,
@@ -38,24 +37,18 @@ class WPBakeryShortCode_Products_Carousel extends WPBakeryShortCode {
         ), $atts );
         extract($atts);
 
-
-
         $elementClass = array(
             'base' => apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'products-carousel ', $this->settings['base'], $atts ),
             'extra' => $this->getExtraClass( $el_class ),
             'css_animation' => $this->getCSSAnimation( $css_animation ),
-            'woocommerce' => 'woocommerce',
+            'woocommerce' => 'woocommerce columns-' . $desktop ,
             'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' )
         );
-
-
-
-
 
         $meta_query = WC()->query->get_meta_query();
 
         if( $show == 'best-sellers' ){
-            $meta_query = 'total_sales';
+            $meta_key = 'total_sales';
             $orderby    = 'meta_value_num';
         }
 
@@ -69,6 +62,8 @@ class WPBakeryShortCode_Products_Carousel extends WPBakeryShortCode {
             'orderby'               => $orderby,
             'meta_key'              => $meta_key
         );
+
+
         if( $show == 'onsale' ){
             $product_ids_on_sale = wc_get_product_ids_on_sale();
             $args['post__in'] = array_merge( array( 0 ), $product_ids_on_sale );
@@ -105,75 +100,6 @@ class WPBakeryShortCode_Products_Carousel extends WPBakeryShortCode {
 
         return $output;
 
-        /*
-
-
-
-
-        
-        $data_carousel = array(
-            'pagination' => false,
-            'desktop' => $desktop,
-            'tablet' => $tablet,
-            'mobile' => $mobile,
-            'autoheight' => true,
-            'autoplay' => apply_filters('sanitize_boolean', $autoplay),
-            'navigation' => apply_filters('sanitize_boolean', $navigation),
-            'navigation_always_on' => true,
-            'slidespeed' => apply_filters('sanitize_boolean', $slidespeed),
-            'navigation_pos' => $navigation_position
-        );
-
-
-        $output .= '<div class="'.esc_attr( $elementClass ).'" '.render_data_carousel($data_carousel).'>';
-            
-            $meta_query = WC()->query->get_meta_query();
-            
-            if( $show == 'best-sellers' ){ 
-                $meta_query = 'total_sales';
-                $orderby    = 'meta_value_num';
-            }
-            
-            $args = array(
-    			'post_type'				=> 'product',
-    			'post_status'			=> 'publish',
-    			'ignore_sticky_posts'	=> 1,
-    			'posts_per_page' 		=> $atts['per_page'],
-    			'meta_query' 			=> $meta_query,
-                'order'                 => $order,
-                'orderby'               => $orderby,
-                'meta_key'              => $meta_key
-    		);
-            if( $show == 'onsale' ){
-                $product_ids_on_sale = wc_get_product_ids_on_sale();
-                $args['post__in'] = array_merge( array( 0 ), $product_ids_on_sale );
-            }elseif( $show == 'featured' ){
-                $args['meta_query'][] = array(
-					'key'   => '_featured',
-					'value' => 'yes'
-				);
-            }
-
-
-            ob_start();
-            $products = new WP_Query( apply_filters( 'woocommerce_shortcode_products_query', $args, $atts ) );
-            $woocommerce_loop['columns'] = $desktop;
-            $woocommerce_loop['columns_tablet'] = $tablet;
-            if ( $products->have_posts() ) :
-                woocommerce_product_loop_start();
-                while ( $products->have_posts() ) : $products->the_post();
-                    wc_get_template_part( 'content', 'product' );
-                endwhile; // end of the loop.
-                woocommerce_product_loop_end();
-            endif;
-            wp_reset_postdata();
-            $output .= '<div class="woocommerce columns-1">' . ob_get_clean() . '</div>';
-            
-        $output .= "</div><!-- .woocommerce-carousel-wrapper -->";
-
-        return $output;
-
-        */
     }
 }
 
