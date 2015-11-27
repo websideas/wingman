@@ -1,6 +1,6 @@
 /**************************************************************************
  * jquery.themepunch.revolution.js - jQuery Plugin for Revolution Slider
- * @version: 5.1 (20.10.2015)
+ * @version: 5.1.2 (13.11.2015)
  * @requires jQuery v1.7 or later (tested on 1.9)
  * @author ThemePunch
 **************************************************************************/
@@ -282,7 +282,7 @@
 					return this.each(function() {
 						var container=jQuery(this);
 						if (container!=undefined && container.length>0 && jQuery('body').find('#'+container.attr('id')).length>0)
-							jQuery('body,html').animate({scrollTop:(container.offset().top+(opt.li[0].height())-oy)+"px"},{duration:400});
+							jQuery('body,html').animate({scrollTop:(container.offset().top+(container.height())-oy)+"px"},{duration:400});
 					})
 				},
 
@@ -1351,6 +1351,7 @@ var initSlider = function (container,opt) {
 		if (container.find('.tp-bannertimer').length===0) container.append('<div class="tp-bannertimer" style="visibility:hidden"></div>');
 		container.find('.tp-bannertimer').css({'width':'0%'});
 		container.find('.tp-bannertimer').data('opt',opt);
+
 		
 		// PREPARE THE SLIDES
 		opt.ul.css({'display':'block'});
@@ -2009,7 +2010,12 @@ var swapSlide = function(container,opt) {
 	opt.tonpause = true;
 	container.trigger('stoptimer');
 	opt.cd=0;
-	container.find('.tp-loader').css({display:"block"});
+	if (opt.spinner==="off")
+		container.find('.tp-loader').css({display:"none"});
+	else
+		container.find('.tp-loader').css({display:"block"});
+
+	
 	loadImages(nextli,opt,1);
 
 
@@ -2288,6 +2294,8 @@ var letItFree = function(container,opt,nextsh,actsh,nextli,actli,mtl) {
 	data.prevslide = actli;
 	container.trigger('revolution.slide.onchange',data);
 	container.trigger('revolution.slide.onafterswap',data);	
+
+	opt.duringslidechange = false;
 	//if (_R.callStaticDDDParallax) _R.callStaticDDDParallax(container,opt,nextli);		
 	
 }

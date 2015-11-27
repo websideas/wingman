@@ -98,18 +98,16 @@ $classes[] = 'col-xs-'.$bootstrapTabletColumn.' col-sm-'. $bootstrapTabletColumn
                     <?php echo $image_thumb; ?>
                     <?php echo $attachment; ?>
                 </a>
-                <div class="product-image-tool">
-                    <?php
-                    /**
-                     * woocommerce_shop_loop_item_after_image hook
-                     *
-                     * @hooked woocommerce_template_loop_add_to_cart - 5
-                     * @hooked woocommerce_show_product_loop_sale_flash - 10
-                     * @hooked woocommerce_shop_loop_item_action_action_add - 15
-                     */
-                    do_action( 'woocommerce_shop_loop_item_after_image' );
-                    ?>
-                </div>
+                <?php
+                /**
+                 * woocommerce_shop_loop_item_after_image hook
+                 *
+                 * @hooked woocommerce_template_loop_add_to_cart - 5
+                 * @hooked woocommerce_show_product_loop_sale_flash - 10
+                 * @hooked woocommerce_shop_loop_item_action_action_add - 15
+                 */
+                do_action( 'woocommerce_shop_loop_item_after_image' );
+                ?>
 
 
             </div>
@@ -141,8 +139,7 @@ $classes[] = 'col-xs-'.$bootstrapTabletColumn.' col-sm-'. $bootstrapTabletColumn
             
             <div class="kt-woocommerce-tool-lists">
                 <?php do_action( 'woocommerce_shop_tool_list_before' ); ?>
-                <div class="product-image-tool">
-                    <?php
+                <?php
                     /**
                      * woocommerce_shop_loop_item_after_image hook
                      *
@@ -151,8 +148,7 @@ $classes[] = 'col-xs-'.$bootstrapTabletColumn.' col-sm-'. $bootstrapTabletColumn
                      * @hooked woocommerce_shop_loop_item_action_action_add - 15
                      */
                     do_action( 'woocommerce_shop_tool_list' );
-                    ?>
-                </div>
+                ?>
             </div>
             
             <?php

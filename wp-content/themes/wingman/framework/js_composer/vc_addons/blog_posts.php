@@ -114,14 +114,11 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
             global $wp_query;
             
             $page_animation = kt_option( 'page_animation' );
-            $class_animation = ( $page_animation == 1 && ( $blog_type == 'grid' || $blog_type == 'list' ) ) ? 'animation-effect' : '';
-            $data_animation = ( $page_animation == 1 && ( $blog_type == 'grid' || $blog_type == 'list' ) ) ? 'data-animation="fadeInUp"' : '';
-            
-            $animate_classic = ( $page_animation == 1 && ($blog_type == 'classic' || $blog_type == 'zigzag') ) ? 'animation-effect' : ' ';
-            $data_animate_classic = ( $page_animation == 1 && ($blog_type == 'classic' || $blog_type == 'zigzag') ) ? 'data-animation="fadeInUp" data-timeeffect="0"' : ' ';
+            $class_animation = ( $page_animation == 1 && ( $blog_type == 'grid' || $blog_type == 'list' || $blog_type == 'zigzag' ) ) ? 'animation-effect' : '';
+            $data_animation = ( $page_animation == 1 && ( $blog_type == 'grid' || $blog_type == 'list' || $blog_type == 'zigzag' ) ) ? 'data-animation="fadeInUp"' : '';
             
             $align = '';
-            if( $blog_type == 'zigzag' || $blog_type == 'packery' || $blog_type == 'justified' ){
+            if( $blog_type == 'packery' || $blog_type == 'justified' ){
                 $align = 'style="text-align:'.$blog_align.'"';
             }
             $class_packery = '';
@@ -139,7 +136,7 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
 
             do_action('before_blog_posts_loop');
 
-            if( $blog_type == 'grid' || $blog_type == 'masonry' || $blog_type == 'list' ){
+            if( $blog_type == 'grid' || $blog_type == 'masonry' || $blog_type == 'list' ||  $blog_type == 'zigzag' ){
                 echo "<div class='row ".$class_animation."' ".$data_animation." style='text-align: ".$blog_align.";'>";
             }
 
@@ -183,7 +180,7 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
 
             while ( have_posts() ) : the_post();
                 $blog_atts = $blog_atts_posts;
-                
+                $blog_atts['blog_number'] = $i;
                 if($blog_type == 'grid' || $blog_type == 'masonry'){
                     $classes_extra = '';
                     if($blog_type == 'grid'){
@@ -194,19 +191,17 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
                             $classes_extra .= ' col-clearfix-sm';
                     }
                     echo "<div class='article-post-item ".$classes." ".$classes_extra."'>";
-                }elseif( $blog_type == 'zigzag' && $i%2 == 0 ){
-                    echo "<div class='article-post-item box-even'>";
                 }
 
                 kt_get_template_part( $path, get_post_format(), $blog_atts);
 
-                if($blog_type == 'grid' || $blog_type == 'masonry' || ( $blog_type == 'zigzag' && $i%2 == 0 )){
+                if($blog_type == 'grid' || $blog_type == 'masonry'){
                     echo "</div><!-- .article-post-item -->";
                 }
                 $i++;
             endwhile;
 
-            if ($blog_type == 'grid' || $blog_type == 'masonry' || $blog_type == 'list' ) {
+            if ($blog_type == 'grid' || $blog_type == 'masonry' || $blog_type == 'list' || $blog_type == 'zigzag' ) {
                 echo "</div><!-- .row -->";
             }
             echo "</div><!-- .blog-posts-content -->";

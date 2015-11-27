@@ -30,22 +30,16 @@ class RevSliderTemplate {
 		
 		$uid = esc_attr($uid);
 		
-		$api_key = get_option('revslider-api-key', '');
-		$username = get_option('revslider-username', '');
 		$code = get_option('revslider-code', '');
 		$shop_version = self::SHOP_VERSION;
 		
 		$validated = get_option('revslider-valid', 'false');
 		if($validated == 'false'){
-			$api_key = '';
-			$username = '';
 			$code = '';
 		}
 
 		
 		$rattr = array(
-			'api' => urlencode($api_key),
-			'username' => urlencode($username),
 			'code' => urlencode($code),
 			'shop_version' => urlencode($shop_version),
 			'version' => urlencode(RevSliderGlobals::SLIDER_REVISION),
@@ -72,13 +66,13 @@ class RevSliderTemplate {
 							//return $file so it can be processed. We have now downloaded it into a zip file
 							return $file;
 						}else{//else, print that file could not be written
-							return array('error' => __('Can\'t write the file into the uploads folder of WordPress, please change permissions and try again!', REVSLIDER_TEXTDOMAIN));
+							return array('error' => __('Can\'t write the file into the uploads folder of WordPress, please change permissions and try again!', 'revslider'));
 						}
 					}
 				}
 			}//else, check for error and print it to customer
 		}else{
-			return array('error' => __('Can\'t write into the uploads folder of WordPress, please change permissions and try again!', REVSLIDER_TEXTDOMAIN));
+			return array('error' => __('Can\'t write into the uploads folder of WordPress, please change permissions and try again!', 'revslider'));
 		}
 		
 		return false;
@@ -129,21 +123,15 @@ class RevSliderTemplate {
 			
 			$validated = get_option('revslider-valid', 'false');
 			
-			$api_key = get_option('revslider-api-key', '');
-			$username = get_option('revslider-username', '');
 			$code = get_option('revslider-code', '');
 			$shop_version = self::SHOP_VERSION;
 			
 			if($validated == 'false'){
-				$api_key = '';
-				$username = '';
 				$code = '';
 			}
 			
 			
 			$rattr = array(
-				'api' => urlencode($api_key),
-				'username' => urlencode($username),
 				'code' => urlencode($code),
 				'shop_version' => urlencode($shop_version),
 				'version' => urlencode(RevSliderGlobals::SLIDER_REVISION)

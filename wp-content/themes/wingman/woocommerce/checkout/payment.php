@@ -46,7 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
-		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="btn btn-accent button-icon-right_animate" name="woocommerce_checkout_place_order" id="place_order" data-value="' . esc_attr( $order_button_text ) . '" ><span>' . esc_attr( $order_button_text ) . ' <i class="button-icon arrow_right"></i></span></button>' ); ?>
+		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="btn btn-accent btn-animation" name="woocommerce_checkout_place_order" id="place_order" data-value="' . esc_attr( $order_button_text ) . '" ><span>' . esc_attr( $order_button_text ) . ' <i class="fa fa-long-arrow-right"></i></span></button>' ); ?>
 
 		<?php if ( wc_get_page_id( 'terms' ) > 0 && apply_filters( 'woocommerce_checkout_show_terms', true ) ) : ?>
 			<p class="form-row terms">

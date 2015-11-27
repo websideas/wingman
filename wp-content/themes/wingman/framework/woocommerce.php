@@ -336,17 +336,30 @@ add_action( 'woocommerce_shop_tool_list_before', 'woocommerce_template_loop_add_
 add_action( 'woocommerce_shop_tool_list', 'kt_woocommerce_add_archive_tool', 10);
 add_action( 'woocommerce_shop_loop_item_after_image', 'kt_woocommerce_add_archive_tool', 10);
 function kt_woocommerce_add_archive_tool(){
+    $count = 1;
     if(class_exists('YITH_WCWL_UI')){
-        echo do_shortcode('<div class="tool-inner">[yith_wcwl_add_to_wishlist]</div>');
+        $count++;
     }
-    printf(
-        '<div class="tool-inner"><a href="#" class="product-quick-view" data-id="%s">%s</a></div>',
-        get_the_ID(),
-        __('Quick view', THEME_LANG)
-    );
     if(defined( 'YITH_WOOCOMPARE' )){
-        echo do_shortcode('<div class="tool-inner">[yith_compare_button]</div>');
+        $count++;
     }
+    ?>
+    <div class="product-image-tool tool-<?php echo $count; ?>">
+        <?php
+            if(class_exists('YITH_WCWL_UI')){
+                echo do_shortcode('<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('wishlist',THEME_LANG).'">[yith_wcwl_add_to_wishlist]</div>');
+            }
+            printf(
+                '<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('Quick View',THEME_LANG).'"><a href="#" class="product-quick-view" data-id="%s">%s</a></div>',
+                get_the_ID(),
+                __('Quick view', THEME_LANG)
+            );
+            if(defined( 'YITH_WOOCOMPARE' )){
+                echo do_shortcode('<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('Compare',THEME_LANG).'">[yith_compare_button]</div>');
+            } 
+        ?>
+    </div>
+    <?php
 }
 
 

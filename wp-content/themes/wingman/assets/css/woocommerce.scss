@@ -1127,8 +1127,22 @@ body{
 	    bottom:0;
 	    left: -1px;
 	}
+	.tool-3{
+		.tool-inner{
+			width: 33.33%;
+		}
+	}
+	.tool-2{
+		.tool-inner{
+			width: 50%;
+		}
+	}
+	.tool-1{
+		.tool-inner{
+			width: 100%;
+		}
+	}
 	.tool-inner{
-		width: 33.33%;
 	    height: 40px;
 	    padding: 0 0 0 1px;
 	    @include transition();
@@ -2001,103 +2015,5 @@ body{
 		    	}
 		    }
 	    }
-	}
-}
-/**
- * Sale Couwndown
- */
-.sales-countdown-wrapper{
-	.sale-countdown-content{
-		h3.title{
-			font-size:36px;
-		    font-family:$heading-font;
-		    letter-spacing: 0.2em;
-		    font-weight: 700;
-		    line-height: 36px;
-		    text-transform: uppercase;
-		    margin-bottom: 10px;
-		    text-align: left;
-		}
-		.product-short-description{
-			display: block!important;
-    		margin-bottom: 40px;
-		}
-	}
-	.coming-soon{
-		border-top:1px solid $border-second-color;
-	    border-bottom:1px solid $border-second-color;
-	    padding:25px 0;
-	    display: block;
-	    margin-bottom: 50px;
-	    width:100%;
-	    overflow: hidden;
-	    .wrap{
-	    	float:left;
-		    display: block;
-		    padding: 0;
-		    width: 25%;
-		    .value-time{
-		    	font-size: 36px;
-			    line-height: 36px;
-			    letter-spacing: 0.2em;
-			    margin: 0;
-			    font-family:$heading-font;
-			    font-weight: 700;
-			    color:$border-header-tabs;
-			    display: inline-block;
-			    &:after{
-			    	content:"/";
-				    color:#e1e1e1;
-				    font-size:16px;
-			    }
-		    }
-		    .title{
-		    	font-size: 14px;
-			    margin: 0;
-			    padding: 0;
-			    font-weight: 400;
-			    color:$main-text;
-			    text-transform: uppercase;
-			    display: inline-block;
-		    }
-	    }
-	}
-	ul.shop-products{
-		li{
-			.equal_height{
-				> div{
-					@include css3-prefix('justify-content','center');
-					@include css3-prefix('flex-direction','column');
-					@include css3-prefix-value('display','flex');
-				}
-			}
-		}
-	}
-	.image-sale-countdown{
-		padding:30px;
-    	position: relative;
-    	.product-image-content{
-    		position: relative;
-    		a{
-    			display: block;
-			    position: relative;
-			    z-index: 2;
-    		}
-    		&:after,&:before{
-    			position: absolute;
-			    content:"";
-			    width:100%;
-			    height:100%;
-			    border:3px solid $nav-bg; 
-    		}
-    		&:after{
-				left:-30px;
-    			top:-30px;
-    		}
-    		&:before{
-    			right:-30px;
-    			bottom:-30px;
-    		}
-    	}
 	}
 }

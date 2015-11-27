@@ -1,6 +1,6 @@
 /********************************************
  * REVOLUTION 5.0 EXTENSION - ACTIONS
- * @version: 1.0.4 (29.09.2015)
+ * @version: 1.0.5 (13.11.2015)
  * @requires jquery.themepunch.revolution.js
  * @author ThemePunch
 *********************************************/
@@ -25,7 +25,19 @@ var checkActions_intern = function(_nc,opt,as) {
 if (as)				
 	jQuery.each(as,function(i,a) {		
 		a.delay = parseInt(a.delay,0)/1000;
-		_nc.addClass("noSwipe")
+		_nc.addClass("noSwipe");
+
+		// LISTEN TO ESC TO EXIT FROM FULLSCREEN
+		if (!opt.fullscreen_esclistener) {
+			if (a.action=="exitfullscreen" || a.action=="togglefullscreen") {				
+				jQuery(document).keyup(function(e) {
+				     if (e.keyCode == 27 && jQuery('#rs-go-fullscreen').length>0)  
+				     	_nc.trigger(a.event);				   
+				});
+				opt.fullscreen_esclistener = true;
+			}
+		}
+
 		_nc.on(a.event,function() {			
 			var tnc = jQuery("#"+a.layer);
 			if (a.action=="stoplayer" || a.action=="togglelayer" || a.action=="startlayer") {
@@ -163,8 +175,9 @@ if (as)
 								jQuery.each(opt.playingvideos,function(i,_nc) {									
 									_R.playVideo(_nc,opt);
 								});
-							}
-						}						
+							}							
+						}	
+						
 					break;
 				}
 			},[tnc,opt,a,_nc]);

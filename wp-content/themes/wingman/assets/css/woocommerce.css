@@ -1080,8 +1080,13 @@ body .mCSB_scrollTools {
   position: absolute;
   bottom: 0;
   left: -1px; }
+.woocommerce .tool-3 .tool-inner {
+  width: 33.33%; }
+.woocommerce .tool-2 .tool-inner {
+  width: 50%; }
+.woocommerce .tool-1 .tool-inner {
+  width: 100%; }
 .woocommerce .tool-inner {
-  width: 33.33%;
   height: 40px;
   padding: 0 0 0 1px;
   -webkit-transition: all 0.2s ease-in-out 0s;
@@ -1814,95 +1819,5 @@ body .mCSB_scrollTools {
       transform: translatey(-65%); }
     .woocommerce-category-products-tab ul.block-heading-tabs li.ui-tabs-active:before {
       left: 0; }
-
-/**
- * Sale Couwndown
- */
-.sales-countdown-wrapper .sale-countdown-content h3.title {
-  font-size: 36px;
-  font-family: "Josefin Slab", serif;
-  letter-spacing: 0.2em;
-  font-weight: 700;
-  line-height: 36px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  text-align: left; }
-.sales-countdown-wrapper .sale-countdown-content .product-short-description {
-  display: block !important;
-  margin-bottom: 40px; }
-.sales-countdown-wrapper .coming-soon {
-  border-top: 1px solid #e9e9e9;
-  border-bottom: 1px solid #e9e9e9;
-  padding: 25px 0;
-  display: block;
-  margin-bottom: 50px;
-  width: 100%;
-  overflow: hidden; }
-  .sales-countdown-wrapper .coming-soon .wrap {
-    float: left;
-    display: block;
-    padding: 0;
-    width: 25%; }
-    .sales-countdown-wrapper .coming-soon .wrap .value-time {
-      font-size: 36px;
-      line-height: 36px;
-      letter-spacing: 0.2em;
-      margin: 0;
-      font-family: "Josefin Slab", serif;
-      font-weight: 700;
-      color: #ed727c;
-      display: inline-block; }
-      .sales-countdown-wrapper .coming-soon .wrap .value-time:after {
-        content: "/";
-        color: #e1e1e1;
-        font-size: 16px; }
-    .sales-countdown-wrapper .coming-soon .wrap .title {
-      font-size: 14px;
-      margin: 0;
-      padding: 0;
-      font-weight: 400;
-      color: #707070;
-      text-transform: uppercase;
-      display: inline-block; }
-.sales-countdown-wrapper ul.shop-products li .equal_height > div {
-  -webkit-justify-content: center;
-  -khtml-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -khtml-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  -o-flex-direction: column;
-  flex-direction: column;
-  display: -webkit-flex;
-  display: -khtml-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex; }
-.sales-countdown-wrapper .image-sale-countdown {
-  padding: 30px;
-  position: relative; }
-  .sales-countdown-wrapper .image-sale-countdown .product-image-content {
-    position: relative; }
-    .sales-countdown-wrapper .image-sale-countdown .product-image-content a {
-      display: block;
-      position: relative;
-      z-index: 2; }
-    .sales-countdown-wrapper .image-sale-countdown .product-image-content:after, .sales-countdown-wrapper .image-sale-countdown .product-image-content:before {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 100%;
-      border: 3px solid #1e1e1e; }
-    .sales-countdown-wrapper .image-sale-countdown .product-image-content:after {
-      left: -30px;
-      top: -30px; }
-    .sales-countdown-wrapper .image-sale-countdown .product-image-content:before {
-      right: -30px;
-      bottom: -30px; }
 
 /*# sourceMappingURL=woocommerce.css.map */

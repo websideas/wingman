@@ -72,12 +72,12 @@ class RevSliderOutput {
 
 
 	/**
-	 *
 	 * put the rev slider slider on the html page.
 	 * @param $data - mixed, can be ID ot Alias.
 	 */
-	public static function putSlider($sliderID,$putIn="",$gal_ids = array()){
-
+	public static function putSlider($sliderID,$putIn="", $gal_ids = array(), $settings = array(), $order = array()){
+		$settings = apply_filters('revslider_modify_slider_settings', $settings, $sliderID);
+		
 		$isPutIn = self::isPutIn($putIn);
 		if($isPutIn == false)
 			return(false);
@@ -86,7 +86,7 @@ class RevSliderOutput {
 
 		$output = new RevSliderOutput();
 
-		$output->putSliderBase($sliderID, $gal_ids);
+		$output->putSliderBase($sliderID, $gal_ids, false, $settings, $order);
 
 		$slider = $output->getSlider();
 		return($slider);
@@ -94,7 +94,6 @@ class RevSliderOutput {
 
 
 	/**
-	 *
 	 * set language
 	 */
 	public function setLang($lang){
@@ -243,14 +242,14 @@ class RevSliderOutput {
 	 *
 	 * put the slider slides
 	 */
-	private function putSlides($gal_ids = array()){
+	private function putSlides($gal_ids = array(), $order = array()){
 		//go to template slider if post template
 		$sliderType = $this->slider->getParam('slider_type');
 		$slider_type = $this->slider->getParam('slider-type'); //standard, carousel or hero
 		$source_type = $this->slider->getParam('source_type'); //vimeo, post ect.
 		
 		$publishedOnly = true;
-		if($slider_type == 'hero'){
+		if($slider_type == 'hero' || !empty($order)){
 			$publishedOnly = false; //take all, even unpublished ones
 		}
 		
@@ -293,12 +292,32 @@ class RevSliderOutput {
 					
 					$gi++;
 				}
+			}elseif(!empty($order)){
+				$tempSlides = $slides;
+				$slides = array();
+				
+				foreach($order as $order_slideid){
+					foreach($tempSlides as $tempSlide){
+						if($tempSlide->getID() == $order_slideid){
+							$tempSlide->setParam('state', 'published'); //set to published
+							$slides[] = $tempSlide;
+							break;
+						}
+					}
+				}
+				
+				if(count($slides) == 1){ //remove navigation
+					$this->slider->setParam('enable_arrows', 'off');
+					$this->slider->setParam('enable_bullets', 'off');
+					$this->slider->setParam('enable_tabs', 'off');
+					$this->slider->setParam('enable_thumbnails', 'off');
+				}
 			}
 		}
 		
 		$this->slidesNumIndex = $this->slider->getSlidesNumbersByIDs(true);
 		
-		if($slider_type == 'hero'){ //we are a hero Slider, show only one Slide!
+		if($slider_type == 'hero' && empty($order) && empty($gal_ids)){ //we are a hero Slider, show only one Slide!
 			$hero = $this->getHeroSlide($slides);
 			$slides = (!empty($hero)) ? array($hero) : array();
 		}
@@ -308,9 +327,9 @@ class RevSliderOutput {
 			<div class="no-slides-text">
 				<?php
 				if($this->slider->isSlidesFromPosts()){
-					_e('No slides found, please add at least one Slide Template to the choosen language.', REVSLIDER_TEXTDOMAIN);
+					_e('No slides found, please add at least one Slide Template to the choosen language.', 'revslider');
 				}else{
-					_e('No slides found, please add some slides', REVSLIDER_TEXTDOMAIN);
+					_e('No slides found, please add some slides', 'revslider');
 				}
 				?>
 			</div>
@@ -1150,10 +1169,12 @@ class RevSliderOutput {
 				
 			$add_data .=  '			data-forceCover="1"'." \n";
 				
-			if(!empty($ratio))
-				$add_data .= '			data-aspectratio="'.$ratio.'"'." \n";
+			
 		}
 		
+		if(!empty($ratio))
+			$add_data .= '			data-aspectratio="'.$ratio.'"'." \n";
+			
 		$add_data .= '			data-autoplay="true"'." \n";
 		$add_data .= '			data-autoplayonlyfirsttime="false"'." \n";
 		if($nextslide == true)
@@ -1252,6 +1273,7 @@ class RevSliderOutput {
 			$dbs = 'none';
 			$dbw = '0px';
 			$dbr = '0px 0px 0px 0px';
+			$dc = 'auto';
 			
 			$dfos = false;
 			$dlh = false;
@@ -1294,6 +1316,7 @@ class RevSliderOutput {
 					$dbw = (isset($in_class_usage[trim($class)]['params']->{'border-width'})) ? $in_class_usage[trim($class)]['params']->{'border-width'} : $dbw;
 					$dbr = (isset($in_class_usage[trim($class)]['params']->{'border-radius'})) ? $in_class_usage[trim($class)]['params']->{'border-radius'} : $dbr;
 					if(is_array($dbr)) $dbr = implode(' ', $dbr);
+					$dc = (isset($in_class_usage[trim($class)]['params']->{'css_cursor'})) ? $in_class_usage[trim($class)]['params']->{'css_cursor'} : $dc;
 					
 				}
 			}
@@ -1504,7 +1527,7 @@ class RevSliderOutput {
 					
 					$urlImage = RevSliderFunctions::getVal($layer, 'image_url');
 					
-					$do_image_change = RevSliderFunctions::getVal($layer, 'layer-image-size', 'auto');
+					$do_image_change = RevSliderFunctions::getVal($layer, 'image-size', 'auto');
 					
 					$img_size = 'full';
 					switch($do_image_change){
@@ -1521,6 +1544,7 @@ class RevSliderOutput {
 					if($img_size !== 'full'){
 						if($cur_img_id !== false){
 							$urlImage = wp_get_attachment_image_src($cur_img_id, $img_size);
+							$urlImage = $urlImage[0];
 						}
 					}
 					
@@ -2503,7 +2527,6 @@ class RevSliderOutput {
 			$def['tP'] = array(RevSliderFunctions::getVal($def_val, 'pers', '600'), '600');
 			$def['z'] = array(RevSliderFunctions::getVal($def_val, 'z', '0'), '0');
 			
-			
 			$st_idle['font-family'] = array(str_replace('"', "'", RevSliderFunctions::getVal($def_val, 'font-family', '')), str_replace('"', "'", $dff));
 			$st_idle['text-align'] = array(RevSliderFunctions::getVal($def_val, 'text-align', 'left'), $dta);
 			
@@ -2578,6 +2601,18 @@ class RevSliderOutput {
 				}
 			}
 			
+			//get hover stuff, because of css_cursor
+			$def_val = (array) RevSliderFunctions::getVal($layer, 'deformation-hover', array());
+			
+			//add the css_cursor to the idle styles
+			$css_cursor = RevSliderFunctions::getVal($def_val, 'css_cursor', 'auto');
+			
+			if(trim($css_cursor) !== '' && $css_cursor !== 'auto'){
+				if($css_cursor == 'zoom-in') $css_cursor = '-webkit-zoom-in; cursor: -moz-zoom-in';
+				if($css_cursor == 'zoom-out') $css_cursor = '-webkit-zoom-out; cursor: -moz-zoom-out';
+				$st_idle['cursor']  =  array($css_cursor, 'auto');
+			}
+			
 			$def_string = '';
 			foreach($def as $key => $value){
 				if(trim($value[0]) == '' || $value[0] == $value[1]) continue;
@@ -2599,10 +2634,8 @@ class RevSliderOutput {
 			
 			$deform_hover = '';
 			$style_hover = '';
-			
-			$def_val = (array) RevSliderFunctions::getVal($layer, 'deformation-hover', array());
 			$def = array();
-			$css_cursor = RevSliderFunctions::getVal($def_val, 'css_cursor', 'auto');
+			
 			$st_h_string = '';
 			
 			if($is_hover_active){
@@ -2722,9 +2755,6 @@ class RevSliderOutput {
 				
 				$deform_hover = '				data-transform_hover="'.$def_string.'"'."\n";
 			}
-			
-			if(trim($css_cursor) !== '' && $css_cursor !== 'auto')
-				$st_h_string .= 'cursor:'.$css_cursor.';';
 			
 			
 			if($st_h_string !== ''){
@@ -3453,8 +3483,8 @@ class RevSliderOutput {
 			
 			echo '						sliderType:"'. esc_attr($slider_type) .'",'."\n";
 			
-			$stripped_http = explode(':', RS_PLUGIN_URL);
-			echo 'jsFileLocation:"'. esc_attr( $stripped_http[1] .'public/assets/js/' ) .'",'."\n";
+			$stripped_http = explode('://', RS_PLUGIN_URL);
+			echo 'jsFileLocation:"//'. esc_attr( $stripped_http[1] .'public/assets/js/' ) .'",'."\n";
 
 			if($optFullScreen == 'on'){
 				$sl_layout = 'fullscreen';
@@ -4082,13 +4112,12 @@ class RevSliderOutput {
 			echo addslashes($styles).'";
 				if(htmlDiv) {
 					htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-				}
-				else{
+				}else{
 					var htmlDiv = document.createElement("div");
 					htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
 					document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
 				}
-			</script>'."\n";				
+			</script>'."\n";
 		} 
 		else echo $styles.'</style>';
 
@@ -4102,7 +4131,7 @@ class RevSliderOutput {
 		?>
 		<div style="width:800px;height:300px;margin-bottom:10px;margin:0px auto;">
 			<div style="margin: auto; line-height: 40px; font-size: 14px; color: #FFF; padding: 15px; background: #E74C3C; margin: 20px 0px;">
-				<?php _e("Revolution Slider Error",REVSLIDER_TEXTDOMAIN)?>: <?php echo $message; ?>
+				<?php _e("Revolution Slider Error",'revslider'); ?>: <?php echo $message; ?>
 			</div>
 		</div>
 		<script type="text/javascript">
@@ -4124,6 +4153,20 @@ class RevSliderOutput {
 
 		$this->slider->setParams($params);
 	}
+	
+	
+	/**
+	 * modify slider settings through the shortcode directly
+	 */
+	private function modify_settings($settings){
+		$params = $this->slider->getParams();
+		
+		foreach($settings as $name => $setting){
+			$params[$name] = $setting;
+		}
+		
+		$this->slider->setParams($params);
+	}
 
 
 	/**
@@ -4131,7 +4174,7 @@ class RevSliderOutput {
 	 * put html slider on the html page.
 	 * @param $data - mixed, can be ID ot Alias.
 	 */
-	public function putSliderBase($sliderID, $gal_ids = array(), $markup_export = false){
+	public function putSliderBase($sliderID, $gal_ids = array(), $markup_export = false, $settings = array(), $order = array()){
 		
 		try{
 			$slver = apply_filters('revslider_remove_version', RevSliderGlobals::SLIDER_REVISION);
@@ -4144,6 +4187,10 @@ class RevSliderOutput {
 			}else{ //do default
 				$this->slider->initByMixed($sliderID);
 			}
+			
+			//modify settings if there are any special settings given through the shortcode
+			if(!empty($settings))
+				$this->modify_settings($settings);
 			
 			//modify settings for admin preview mode
 			if($this->previewMode == true)
@@ -4425,7 +4472,7 @@ class RevSliderOutput {
 			echo ' style="'. $bannerStyle .'"';
 			echo ' data-version="'.$revSliderVersion.'">'."\n";
 
-			echo $this->putSlides($gal_ids);
+			echo $this->putSlides($gal_ids, $order);
 			echo $htmlTimerBar;
 			echo '	</div>'."\n";
 			

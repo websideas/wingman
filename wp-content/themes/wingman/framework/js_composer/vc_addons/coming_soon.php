@@ -9,6 +9,7 @@ class WPBakeryShortCode_Comingsoon extends WPBakeryShortCode_VC_Custom_heading {
     protected function content($atts, $content = null) {
         $atts = shortcode_atts( array(
             'date_coming' => '2016/5/19',
+            'style_coming' => 'style1',
             
             'use_theme_fonts' => '',
             'font_container' => '',
@@ -87,6 +88,7 @@ class WPBakeryShortCode_Comingsoon extends WPBakeryShortCode_VC_Custom_heading {
             'extra' => $this->getExtraClass( $el_class ),
             'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' ),
             'animate' => $cl_animate,
+            'style' => $style_coming
         );
         $elementClass = preg_replace( array( '/\s+/', '/^\s|\s$/' ), array( ' ', '' ), implode( ' ', $elementClass ) );
 
@@ -125,6 +127,18 @@ vc_map( array(
             'type' => 'hidden',
             'heading' => __( 'URL (Link)', 'js_composer' ),
             'param_name' => 'link',
+        ),
+
+        array(
+            'type' => 'dropdown',
+            'heading' => __( 'Style', THEME_LANG ),
+            'param_name' => 'style_coming',
+            'value' => array(
+                __( 'Style 1', 'js_composer' ) => 'style1',
+                __( 'Style 2', 'js_composer' ) => 'style2',
+                __( 'Style 3', 'js_composer' ) => 'style3',
+            ),
+            'std' => 'style1',
         ),
         //Typography settings
         array(

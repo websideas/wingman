@@ -230,7 +230,7 @@ var UniteAdminRev = new function(){
 	 * show error message or call once custom handler function
 	 */
 	t.showErrorMessage = function(htmlError){
-		t.showInfo({content:htmlError, type:"warning", showdelay:0, hidedelay:5, hideon:"click", event:"" });
+		t.showInfo({content:htmlError, type:"warning", showdelay:0, hidedelay:3, hideon:"", event:"" });
 		
 		showAjaxButton();
 	}
@@ -269,7 +269,7 @@ var UniteAdminRev = new function(){
 	 */
 	var showSuccessMessage = function(htmlSuccess){
 		
-		t.showInfo({content:htmlSuccess, type:"success", showdelay:0, hidedelay:5, hideon:"", event:"" });
+		t.showInfo({content:htmlSuccess, type:"success", showdelay:0, hidedelay:1, hideon:"", event:"" });
 		
 		showAjaxButton();
 	}
@@ -384,7 +384,7 @@ var UniteAdminRev = new function(){
 			dataType: 'json',
 			data:objData,
 			success:function(response){
-				if(hideOverlay===undefined)
+				if(hideOverlay===undefined && !response.is_redirect)
 					showWaitAMinute({fadeOut:300});
 				
 				hideAjaxLoader();
@@ -1332,9 +1332,6 @@ var UniteAdminRev = new function(){
 		//add the selected video to the callback function
 		jQuery("#button-video-add").click(function(){
 
-			jQuery('#layer-short-toolbar').appendTo(jQuery('#layer-settings-toolbar-bottom'));
-			jQuery('#layer_text_wrapper').appendTo(jQuery('#layer_text_holder'));
-			
 			var html5Checked = jQuery("#video_radio_html5").prop("checked");
 			var ytstreamChecked = jQuery("#video_radio_streamyoutube").prop("checked");
 			var vmstreamChecked = jQuery("#video_radio_streamvimeo").prop("checked");
@@ -1410,6 +1407,12 @@ var UniteAdminRev = new function(){
 				
 				jQuery("#dialog_video").dialog("close");
 			}
+			try {
+				UniteLayersRev.setLayerSelected(selectedLayerSerial,true);
+			} catch(e) {
+				
+			}
+			
 			
 		});
 		
@@ -1486,9 +1489,7 @@ var UniteAdminRev = new function(){
 			UniteAdminRev.setAjaxHideButtonID("rs-validation-activate");
 			
 			var data = {
-				code: jQuery('input[name="rs-validation-token"]').val(),
-				username: jQuery('input[name="rs-validation-username"]').val(),
-				api_key: jQuery('input[name="rs-validation-api-key"]').val()
+				code: jQuery('input[name="rs-validation-token"]').val()
 			}
 			
 			UniteAdminRev.ajaxRequest("activate_purchase_code",data);

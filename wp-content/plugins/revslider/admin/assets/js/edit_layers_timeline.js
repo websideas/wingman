@@ -243,7 +243,20 @@ var tpLayerTimelinesRev = new function(){
 			
 
 		// END OF MAIN TRANSITION SELECTOR 
-		
+		jQuery(document).on('keydown', function(event) {
+			 if (event.ctrlKey || event.metaKey) {
+		        switch (String.fromCharCode(event.which).toLowerCase()) {
+		        	case 's':
+		           		event.preventDefault();
+		            	jQuery('#button_save_slide-tb').click();
+		            break;		        
+		    	}
+		    }
+		    switch (event) {
+				
+			}
+		});
+
 		jQuery("body").on("keydown keyup",function(e) {
 			
 			
@@ -279,9 +292,22 @@ var tpLayerTimelinesRev = new function(){
 					return true;
 				break;
 				default:
-					if (keyboardallowed && !jQuery('#layer_left').hasClass('setting-disabled')) 	
-						
+					
 					switch(code) {
+						case 8:
+						case 46:
+							e.preventDefault();
+							if (e.type=="keydown") {								
+								jQuery('#button_delete_layer').click();
+								window.deletecalled = true;
+							}
+						break;
+					}
+
+					if (keyboardallowed && !jQuery('#layer_left').hasClass('setting-disabled')) 	
+
+					switch(code) {						
+						
 					    case 40: 
 							if (e.type=="keyup") {
 								if (jQuery('#align_bottom').hasClass("selected"))
@@ -2433,12 +2459,14 @@ var tpLayerTimelinesRev = new function(){
 	/**
 	 * update timeline of current layer
 	 */
-	t.updateCurrentLayerTimeline = function(){			
+	t.updateCurrentLayerTimeline = function(){				
 		var timer = jQuery('#layers-right').find('.ui-state-hover .timeline .tl-fullanim');
-		setTimeout(function() {					
-				setCurTimer(timer);					
-				t.updateCurTimer("",timer);
-			},20);
+		console.log(timer.closest('li').attr('id'));
+		setTimeout(function() {		
+			console.log(timer.closest('li').attr('id'));			
+			setCurTimer(timer);					
+			t.updateCurTimer("",timer);
+		},20);
 	}
 
 	/**
@@ -2557,6 +2585,7 @@ var tpLayerTimelinesRev = new function(){
 		Update the Current Timelines
 	*/
 	t.updateCurTimer = function(event,timer) {
+		
 		var li = timer.closest("li"),
 			sortLayerID = li.attr("id"),
 			serial = u.getSerialFromSortID(sortLayerID),
@@ -2588,9 +2617,11 @@ var tpLayerTimelinesRev = new function(){
 		jQuery('#layer_sort_time_'+serial).find('.sortbox_timeend').html(msToSec(endtime));
 		jQuery('#layer_sort_time_'+serial).find('.sortbox_speedin').html(msToSec(startspeed));
 		jQuery('#layer_sort_time_'+serial).find('.sortbox_speedout').html(msToSec(endspeed));
-
-		jQuery('#layer_speed').val(startspeed);
-		jQuery('#layer_endspeed').val(endspeed);
+				
+		if (selectedLayerSerial == serial) {
+			jQuery('#layer_speed').val(startspeed);
+			jQuery('#layer_endspeed').val(endspeed);
+		}
 
 		dragstart.css({ left:"0px" });
 		dragend.css({ left:"auto", right:"0px" });
@@ -2697,7 +2728,7 @@ var tpLayerTimelinesRev = new function(){
 		for(var key in u.getLayers()){
 			var layer = l[key];			
 			if(layer.order !== undefined){
-				var zindex = layer.order+100;
+				var zindex = Number(layer.order)+100;
 				jQuery("#slide_layer_"+key).css("z-index",zindex);
 			}
 		};

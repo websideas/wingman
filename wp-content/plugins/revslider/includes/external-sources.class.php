@@ -81,23 +81,29 @@ class RevSliderFacebook {
 	/**
 	 * Get Photoset Photos
 	 *
-	 * @since    1.0.0
+	 * @since    5.1.1 
 	 * @param    string    $photo_set_id 	Photoset ID
 	 * @param    int       $item_count 	number of photos to pull
 	 */
 	public function get_photo_set_photos($photo_set_id,$item_count=10,$app_id,$app_secret){
-		$oauth = wp_remote_fopen("https://graph.facebook.com/oauth/access_token?type=client_cred&client_id=".$app_id."&client_secret=".$app_secret);
-		$url = "https://graph.facebook.com/$photo_set_id?fields=photos&".$oauth;
-		
+    $oauth = wp_remote_fopen("https://graph.facebook.com/oauth/access_token?type=client_cred&client_id=".$app_id."&client_secret=".$app_secret);
+    $url = "https://graph.facebook.com/$photo_set_id/photos?fields=photos&".$oauth."&fields=id,from,message,picture,link,name,icon,privacy,type,status_type,object_id,application,created_time,updated_time,is_hidden,is_expired,comments.limit(1).summary(true),likes.limit(1).summary(true)";
+
 		$transient_name = 'revslider_' . md5($url);
 
 		if ($this->transient_sec > 0 && false !== ($data = get_transient( $transient_name)))
 			return ($data);
 
 		$photo_set_photos = json_decode(wp_remote_fopen($url));
-		if(isset($photo_set_photos->photos->data)){
-			set_transient( $transient_name, $photo_set_photos->photos->data, $this->transient_sec );
-			return $photo_set_photos->photos->data;
+
+    /* 
+    echo '<pre>';
+    print_r($photo_set_photos);
+    echo '</pre>';
+    */
+		if(isset($photo_set_photos->data)){
+			set_transient( $transient_name, $photo_set_photos->data, $this->transient_sec );
+			return $photo_set_photos->data;
 		}
 		else return '';
 	}

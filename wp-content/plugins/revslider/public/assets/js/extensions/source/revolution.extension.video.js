@@ -1,6 +1,6 @@
 /********************************************
- * REVOLUTION 5.0 EXTENSION - VIDEO FUNCTIONS
- * @version: 1.1.0 (01.10.2015)
+ * REVOLUTION 5.1 EXTENSION - VIDEO FUNCTIONS
+ * @version: 1.1.3 (13.11.2015)
  * @requires jquery.themepunch.revolution.js
  * @author ThemePunch
 *********************************************/
@@ -149,6 +149,8 @@ jQuery.extend(true,_R, {
 			break;
 			case "html5":
 				if (_ISM && _nc.data('disablevideoonmobile')==1) return false;			
+
+
 				var jvideo = _nc.find('video'),
 					video = jvideo[0],
 					html5vid = jvideo.parent();
@@ -188,7 +190,8 @@ jQuery.extend(true,_R, {
 			od = li.width()/li.height(),
 			vd = wa/ha,
 			nvh = (od/vd)*100,
-			nvw = (vd/od)*100;			
+			nvw = (vd/od)*100;	
+		
 		if (od>vd) 																
 			punchgs.TweenLite.to(ifr,0.001,{height:nvh+"%", width:"100%", top:-(nvh-100)/2+"%",left:"0px",position:"absolute"});
 		else 
@@ -339,8 +342,8 @@ jQuery.extend(true,_R, {
 
 			case "vimeo":
 				if (location.protocol === 'https:')
-					httpprefix = "https";				
-				_nc.data('videomarkup','<iframe style="visible:hidden" src="'+httpprefix+'://player.vimeo.com/video/'+vimeoid+'?'+vida+'" width="100%" height="100%" style="100%;height:100%"></iframe>');
+					httpprefix = "https";												
+				_nc.data('videomarkup','<iframe style="visible:hidden" src="'+httpprefix+'://player.vimeo.com/video/'+vimeoid+'?'+vida+'" webkitallowfullscreen mozallowfullscreen allowfullscreen width="100%" height="100%" style="100%;height:100%"></iframe>');
 			break;
 		}
 		
@@ -424,13 +427,21 @@ var addVideoListener = function(_nc,opt,startnow) {
 	loop = loop =="loop" ||  loop =="loopandnoslidestop";
 
 	// CARE ABOUT ASPECT RATIO
+
 	if (_nc.data('forcecover')==1) {
 		_nc.removeClass("fullscreenvideo").addClass("coverscreenvideo");			
 		var asprat = _nc.data('aspectratio');														
 		if (asprat!=undefined && asprat.split(":").length>1) 			
 			_R.prepareCoveredVideo(asprat,opt,_nc);
-
 	}
+	
+	if (_nc.data('bgvideo')==1) {
+		var asprat = _nc.data('aspectratio');														
+		if (asprat!=undefined && asprat.split(":").length>1) 			
+			_R.prepareCoveredVideo(asprat,opt,_nc);
+	}
+
+
 
 	// IF LISTENER DOES NOT EXIST YET			
 	ifr.attr('id',frameID);		
@@ -655,6 +666,8 @@ var addVideoListener = function(_nc,opt,startnow) {
 
 var htmlvideoevents = function(_nc,opt,startnow) {
 
+
+
 	if (_ISM && _nc.data('disablevideoonmobile')==1) return false;			
 	var jvideo = _nc.find('video'),
 		video = jvideo[0],
@@ -683,16 +696,16 @@ var htmlvideoevents = function(_nc,opt,startnow) {
 	}
 
 	// PRESET FULLCOVER VIDEOS ON DEMAND
-	if (_nc.data('forcecover')==1 || _nc.hasClass('fullscreenvideo'))  {
-		if (_nc.data('forcecover')==1) {
+	if (_nc.data('forcecover')==1 || _nc.hasClass('fullscreenvideo') || _nc.data('bgvideo')==1)  {
+		if (_nc.data('forcecover')==1 || _nc.data('bgvideo')==1) {
 			html5vid.addClass("fullcoveredvideo");	
-			var asprat = _nc.data('aspectratio');				
+			var asprat = _nc.data('aspectratio') || "4:3";				
 			_R.prepareCoveredVideo(asprat,opt,_nc);
 		}
 		else
 			html5vid.addClass("fullscreenvideo");				
 	}
-
+	
 
 	// FIND CONTROL BUTTONS IN VIDEO, AND ADD EVENT LISTENERS ON THEM
 	var playButton = _nc.find('.tp-vid-play-pause')[0],
@@ -709,6 +722,9 @@ var htmlvideoevents = function(_nc,opt,startnow) {
 			else
 				video.pause();
 		});
+	}
+
+	if (muteButton!=undefined) {
 
 		// Event listener for the mute button
 		addEvent(muteButton,"click", function() {
@@ -720,6 +736,9 @@ var htmlvideoevents = function(_nc,opt,startnow) {
 				muteButton.innerHTML = "Mute";
 			}
 		});
+	}
+
+	if (fullScreenButton!=undefined) {
 
 		// Event listener for the full-screen button
 		if (fullScreenButton)
@@ -733,33 +752,15 @@ var htmlvideoevents = function(_nc,opt,startnow) {
 				}
 			});
 
+	}
+
+	if (seekBar !=undefined) {
 
 		// Event listener for the seek bar
 		addEvent(seekBar,"change", function() {							
 			var time = video.duration * (seekBar.value / 100);							
 			video.currentTime = time;											
 
-		});
-
-		// Update the seek bar as the video plays
-		addEvent(video,"timeupdate", function() {						
-			var value = (100 / video.duration) * video.currentTime,
-				et = getStartSec(_nc.data('videoendat')),
-				cs  =video.currentTime;	
-			seekBar.value = value;						
-			if (et!=0 && (Math.abs(et-cs) <=0.3 && et>cs) && _nc.data('nextslidecalled') != 1) {
-				if (loop) {
-					video.play();
-					var s = getStartSec(_nc.data('videostartat'));
-					if (s!=-1) video.currentTime = s;				
-				} else {
-					if (_nc.data('nextslideatend')==true) {				
-						_nc.data('nextslidecalled',1);			
-						opt.c.revnext();							
-					}
-					video.pause();
-				}
-			}
 		});
 
 		// Pause the video when the seek handle is being dragged
@@ -775,6 +776,39 @@ var htmlvideoevents = function(_nc,opt,startnow) {
 			video.play();
 
 		});
+	}
+
+	
+	// Update the seek bar as the video plays
+	addEvent(video,"timeupdate", function() {						
+	
+		var value = (100 / video.duration) * video.currentTime,
+			et = getStartSec(_nc.data('videoendat')),
+			cs  =video.currentTime;	
+		if (seekBar != undefined)	
+			seekBar.value = value;	
+		
+		if (et!=0 && et!=-1 && (Math.abs(et-cs) <=0.3 && et>cs) && _nc.data('nextslidecalled') != 1) {
+			if (loop) {
+				video.play();
+				var s = getStartSec(_nc.data('videostartat'));
+				if (s!=-1) video.currentTime = s;				
+			} else {
+				if (_nc.data('nextslideatend')==true) {				
+					_nc.data('nextslidecalled',1);						
+					opt.just_called_nextslide_at_htmltimer = true; 
+					opt.c.revnext();						
+					setTimeout(function() {
+						opt.just_called_nextslide_at_htmltimer = false;
+					},1000);
+				}
+				video.pause();
+			}
+		}
+	});
+
+	
+	if (volumeBar != undefined) {		
 
 		// Event listener for the volume bar
 		addEvent(volumeBar,"change", function() {
@@ -837,14 +871,22 @@ var htmlvideoevents = function(_nc,opt,startnow) {
 	});
 
 	// VIDEO EVENT LISTENER FOR "END"
+	
 	addEvent(video,"ended",function() {		
 		remVidfromList(_nc,opt);
 		opt.videoplaying=false;
 		remVidfromList(_nc,opt);
 		opt.c.trigger('starttimer');
 		opt.c.trigger('revolution.slide.onvideostop',getVideoDatas(video,"html5",_nc.data()));
-		if (_nc.data('nextslideatend')==true)
-			opt.c.revnext();
+		if (_nc.data('nextslideatend')==true) {	
+			if (!opt.just_called_nextslide_at_htmltimer==true) {
+				opt.c.revnext();
+				opt.just_called_nextslide_at_htmltimer = true;
+			}			
+			setTimeout(function() {				
+				opt.just_called_nextslide_at_htmltimer = false;
+			},1500)
+		}
 		_nc.removeClass("videoisplaying");
 		
 		

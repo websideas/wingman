@@ -119,16 +119,12 @@ class RevSliderUpdate {
 		$data = new stdClass;
 
 		// Build request
-		$api_key = get_option('revslider-api-key', '');
-		$username = get_option('revslider-username', '');
 		$code = get_option('revslider-code', '');
 		
 		$validated = get_option('revslider-valid', 'false');
 		$stable_version = get_option('revslider-stable-version', '4.2');
 		
 		$rattr = array(
-			'api' => urlencode($api_key),
-			'username' => urlencode($username),
 			'code' => urlencode($code),
 			'version' => urlencode(RevSliderGlobals::SLIDER_REVISION)
 		);
