@@ -29,9 +29,15 @@
             'heightStyle': 'content',
             'header': '.accordions-title' 
         });
-        
-        $('.woocommerce-category-products-tab').tabs();
 
+        $('.woocommerce-products-carousel-tab').each(function(){
+            var $this = $(this),
+                $heading = $this.find('.block-heading-tabs'),
+                $count = parseInt($heading.data('count'), 10);
+            $this.tabs({
+                active: Math.ceil($count/2) - 1
+            });
+        });
 
 
     });

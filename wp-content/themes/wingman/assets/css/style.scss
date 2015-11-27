@@ -1289,10 +1289,10 @@ body.layout-boxed{
     .owl-buttons {
       > div{
         color: $white;
-        border-color: $white;
+        border-color: rgba($white, .3);
         &:first-child{
           &:after {
-            background: $white;
+            background: rgba($white, .3);
           }
         }
         &:hover {

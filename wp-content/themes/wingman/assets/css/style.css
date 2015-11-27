@@ -1311,9 +1311,9 @@ body.layout-boxed #footer {
     background: #82c14f; }
 .owl-carousel-kt.carousel-white .owl-buttons > div {
   color: #FFFFFF;
-  border-color: #FFFFFF; }
+  border-color: rgba(255, 255, 255, 0.3); }
   .owl-carousel-kt.carousel-white .owl-buttons > div:first-child:after {
-    background: #FFFFFF; }
+    background: rgba(255, 255, 255, 0.3); }
   .owl-carousel-kt.carousel-white .owl-buttons > div:hover {
     color: #82c14f;
     border-color: #82c14f; }

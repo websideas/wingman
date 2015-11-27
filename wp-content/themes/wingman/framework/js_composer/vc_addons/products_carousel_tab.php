@@ -17,6 +17,8 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
             'orderby' => 'date',
             'order' => 'DESC',
             'show' => '',
+            'skin' => 'dark',
+
             'css_animation' => '',
             'el_class' => '',
             'css' => '',
@@ -26,16 +28,15 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
         global $woocommerce_loop;
 
         $elementClass = array(
-            'base' => apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'woocommerce-category-products-tab ', $this->settings['base'], $atts ),
+            'base' => apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'woocommerce-products-carousel-tab', $this->settings['base'], $atts ),
             'extra' => $this->getExtraClass( $el_class ),
             'css_animation' => $this->getCSSAnimation( $css_animation ),
-            'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' )
+            'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' ),
+            'skin' => 'skin-'.$skin
         );
-
 
         $output = '';
         $uniqeID = uniqid();
-
 
         $meta_query = WC()->query->get_meta_query();
         $args = array(
@@ -57,7 +58,7 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
         }
 
 
-        $output .= "<ul class='block-heading-tabs'>";
+        $output .= "<ul class='block-heading-tabs' data-count='".count($tabs)."'>";
 
         foreach($tabs as $tab){
             if($source == 'categories'){
@@ -93,7 +94,7 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
             'navigation_always_on' => true,
             'navigation_position' => 'top',
             'navigation_style' => 'square_border',
-            'carousel_skin' => 'black',
+            'carousel_skin' => 'white',
             'navigation_icon' => 'fa fa-angle-left|fa fa-angle-right',
         ));
 
@@ -145,79 +146,6 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
             $output .= "</div><!-- .category-products-tab -->";
         }
         $output .= "</div><!-- .category-products-tabs -->";
-
-        /*
-
-
-
-
-
-        if( count($categories) > 0 ){
-
-            $output .= '<div class="'.esc_attr( $elementClass ).'">';
-            $output .= "<ul class='block-heading-tabs'>";
-            foreach( $categories as $id ){
-                $term = get_term( $id, 'product_cat' );
-                $output .= "<li><a href='#tab-".$id.'-'.$uniqeID."'>".$term->name."</a></li>";
-            }
-            $output .= "</ul>";
-
-            $meta_query = WC()->query->get_meta_query();
-            $args = array(
-                'post_type'				=> 'product',
-                'post_status'			=> 'publish',
-                'ignore_sticky_posts'	=> 1,
-                'posts_per_page' 		=> $atts['per_page'],
-                'meta_query' 			=> $meta_query,
-                'order'                 => $order,
-                'orderby'               => $orderby,
-                'meta_key'              => $meta_key
-            );
-
-
-            if( $show == 'onsale' ){
-                $product_ids_on_sale = wc_get_product_ids_on_sale();
-                $args['post__in'] = array_merge( array( 0 ), $product_ids_on_sale );
-            }elseif( $show == 'featured' ){
-                $args['meta_query'][] = array(
-                    'key'   => '_featured',
-                    'value' => 'yes'
-                );
-            }
-
-            $output .= "<div class='category-products-tabs'>";
-            foreach($categories as $value){
-
-                $args['tax_query'] = array(
-                    array(
-                        'taxonomy' => 'product_cat',
-                        'field'    => 'id',
-                        'terms'    => $value,
-                    ),
-                );
-
-                $output .= "<div id='tab-".$value.'-'.$uniqeID."' class='category-products-tab'>";
-                ob_start();
-                $products = new WP_Query( apply_filters( 'woocommerce_shortcode_products_query', $args, $atts ) );
-                $woocommerce_loop['columns'] = $atts['product_columns'];
-                $woocommerce_loop['columns_tablet'] = $atts['product_columns_tablet'];
-                if ( $products->have_posts() ) :
-                    woocommerce_product_loop_start();
-                    while ( $products->have_posts() ) : $products->the_post();
-                        wc_get_template_part( 'content', 'product' );
-                    endwhile; // end of the loop.
-                    woocommerce_product_loop_end();
-                endif;
-                wp_reset_postdata();
-                $output .= '<div class="woocommerce  columns-' . $atts['product_columns'] . '">' . ob_get_clean() . '</div>';
-                $output .= "</div><!-- .category-products-tab -->";
-            }
-            $output .= "</div><!-- .category-products-tabs -->";
-            $output .= "</div><!-- .category-products-tab-wrapper -->";
-
-        }
-        */
-
 
         $elementClass = preg_replace( array( '/\s+/', '/^\s|\s$/' ), array( ' ', '' ), implode( ' ', $elementClass ) );
         $output = '<div class="'.esc_attr( $elementClass ).'"><div class="woocommerce  columns-' . $atts['product_columns'] . '">'.$output.'</div></div>';
@@ -329,6 +257,18 @@ vc_map( array(
             ),
             'std' => '2',
             "edit_field_class" => "vc_col-sm-6 vc_column",
+        ),
+
+        array(
+            'type' => 'dropdown',
+            'heading' => __( 'Skin', THEME_LANG ),
+            'param_name' => 'skin',
+            'value' => array(
+                __( 'Dark', 'js_composer' ) => 'dark',
+                __( 'Light', 'js_composer' ) => 'light',
+            ),
+            'std' => 'dark',
+            'description' => __( 'Select your skin.', THEME_LANG )
         ),
 
         array(
