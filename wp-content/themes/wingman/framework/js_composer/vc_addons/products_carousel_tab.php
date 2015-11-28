@@ -264,7 +264,7 @@ vc_map( array(
             'heading' => __( 'Skin', THEME_LANG ),
             'param_name' => 'skin',
             'value' => array(
-                __( 'Dark', 'js_composer' ) => 'dark',
+                __( 'Default', 'js_composer' ) => 'dark',
                 __( 'Light', 'js_composer' ) => 'light',
             ),
             'std' => 'dark',

@@ -2494,8 +2494,6 @@ article.post-item.post-layout-classic {
 **/
 
 .wpb_single_image{
-
-
   .border-left,
   .border-right{
     margin-bottom: 30px;
@@ -2686,7 +2684,97 @@ article.post-item.post-layout-classic {
   }
 
 }
+/* Custom VC Icon */
 
+/*
+ *  11.4 Custom VC icon
+ */
+
+.vc_icon_element{
+
+  .vc_icon_element-color-accent{
+    color: $primary-color;
+  }
+
+  .vc_icon_element-inner,
+  .vc_icon_element-icon,
+  .vc_icon_element-image{
+    @include transition( all 0.3s );
+  }
+
+
+  &.vc_icon_element-outer{
+
+    &.vc_icon_image{
+      .vc_icon_element-inner{
+        width: auto!important;
+        height: auto!important;
+        line-height: 1 !important;
+        border: none;
+        display: block;
+      }
+      .vc_icon_element-icon{
+        @include transform('translate(0, 0)');
+        position: static;
+      }
+    }
+
+    .vc_icon_element-image{
+      @include translate();
+    }
+
+  }
+
+}
+
+
+/**
+* 5.1. Features box
+**/
+.features-box{
+  margin-bottom: 30px;
+  text-align: center;
+  .vc_icon_element{
+    margin-bottom: 20px;
+  }
+  .features-box-title{
+    margin-bottom: 12px;
+  }
+  .features-box-content{
+    color: #959595;
+    font-size: 12px;
+  }
+
+  &.layout-2{
+    text-align: left;
+    .features-box-left,
+    .features-box-right{
+      display: table-cell;
+      float: none;
+      margin: 0;
+      vertical-align: top;
+    }
+    .features-box-title{
+      margin-bottom: 5px;
+    }
+    .vc_icon_element{
+      margin: 0 20px 0 0;
+    }
+    .features-box-right{
+      padding-top: 5px;
+    }
+
+  }
+
+  .vc_icon_element-background-color-accent{
+    background: $primary-color;
+
+  }
+  .vc_icon_element-color-accen{
+    color: $primary-color;
+  }
+
+}
 
 /**
 * 5.1. Single image
@@ -2715,44 +2803,115 @@ article.post-item.post-layout-classic {
 * 5.1. KT Heading
 **/
 .kt-heading-wrapper {
-    margin-bottom: 20px;
-    text-align: left;
-    .kt-heading-title,.kt-heading-content{
-      margin: 10px 0;
-    }
-    .kt-heading-title:after,.kt-heading-title:before{
-      position: absolute;
-      content:"";
-      width:2px;
-      height:26px;
-      background: $title-text;
-      right:0;
-      top:50%;
-      @include transform(translateY(-65%));
-    }
-    .kt-heading-title:before{
-      left:0;
-    }
-    .kt-heading-title:first-child{
-      margin-top: 0;
-    }
-}
+  margin-bottom: 30px;
+  text-align: left;
 
-.kt-heading-wrapper.kt-heading-align-center {
-    text-align: center;
+  .kt-heading-title{
+    margin: 0;
+  }
+  .kt-heading-content{
+    letter-spacing: 0.2em;
+  }
+
+  &.kt-heading-light{
+    .kt-heading-title{
+      color: $white;
+      &:before,
+      &:after{
+        background: $white;
+      }
+    }
+
+    &.layout-1{
+      .kt-heading-title{
+        &:before,
+        &:after{
+          background: $white;
+        }
+      }
+    }
+  }
+
+  &.layout-1{
+
     .kt-heading-title{
       padding:0 50px;
       display: inline-block;
       position: relative;
+
+      &:before,
+      &:after{
+        position: absolute;
+        content:"";
+        width:2px;
+        height:26px;
+        background: $title-text;
+        top:50%;
+        @include transform(translateY(-65%));
+        @include transition("all .5s ease-in-out 0s");
+        @include opacity(0);
+      }
+      &:before{
+        left: -20px;
+      }
+      &:after{
+        right: -20px;
+      }
     }
-}
 
-.kt-heading-wrapper.kt-heading-align-right {
+    &.animated{
+      .kt-heading-title{
+        &:before,
+        &:after{
+          @include opacity(1);
+        }
+        &:before{
+          left:0;
+        }
+        &:after{
+          right:0;
+        }
+      }
+    }
+
+
+    .kt-heading-content{
+      text-transform: uppercase;
+    }
+  }
+
+
+
+  &.kt-heading-align-center {
+    text-align: center;
+  }
+
+  &.kt-heading-align-right {
     text-align: right;
-}
+    &.layout-1{
+      .kt-heading-title{
+        padding-right: 0;
+        &:after{
+          display: none;
+        }
+      }
+    }
+  }
 
-.kt-heading-wrapper.kt-heading-align-left {
+  &.kt-heading-align-left {
     text-align: left;
+    &.layout-1{
+      .kt-heading-title{
+        padding-left: 0;
+        &:before{
+          display: none;
+        }
+      }
+    }
+  }
+
+
+
 }
 
 
