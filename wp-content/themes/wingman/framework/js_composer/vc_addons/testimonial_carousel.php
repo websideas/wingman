@@ -172,6 +172,7 @@ class WPBakeryShortCode_Testimonial_Carousel extends WPBakeryShortCode_VC_Custom
             $carousel_html = '';
 
             while ( $query->have_posts() ) : $query->the_post();
+            
                 $thumbnail = get_thumbnail_attachment(get_post_thumbnail_id(get_the_ID()), 'small');
                 $carousel_html .= '<div class="testimonial-item testimonial-layout-'.esc_attr($layout).'" data-thumbnail="'.$thumbnail['url'].'">';
                 $testimonial_content = '<div class="testimonial-content">'.do_shortcode(get_the_content()).'</div>';

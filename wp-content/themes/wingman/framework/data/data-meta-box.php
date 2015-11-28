@@ -237,14 +237,14 @@ function kt_register_meta_boxes( $meta_boxes )
                 'id'   => "{$prefix}rate",
                 'type' => 'select',
                 'options' => array(
-                    ''    => __('Choose star', THEME_LANG),
+                    '0'    => __('Choose star', THEME_LANG),
                     '1'   => __('1', THEME_LANG),
                     '2'   => __('2', THEME_LANG),
                     '3'   => __('3', THEME_LANG),
                     '4'   => __('4', THEME_LANG),
                     '5'   => __('5', THEME_LANG),
                 ),
-                'std'  => ''
+                'std'  => '0'
             ),
         ),
     );
