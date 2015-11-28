@@ -2689,12 +2689,133 @@ article.post-item.post-layout-classic {
 
 
 /**
-* 5.1. Single image
+* 5.1. Testimonials
 **/
 .clients-carousel-wrapper,
 .testimonial-carousel-wrapper{
   text-align: center;
   margin-bottom: 30px;
+}
+
+.testimonial-rate{
+  width: 58px;
+  text-align: left;
+  height: 16px;
+  line-height: 16px;
+  margin: 0 auto;
+  position: relative;
+  &:after{
+    font-family: FontAwesome;
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-size: 12px;
+    color: $gray;
+    letter-spacing: 0.1em;
+  }
+  span{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 16px;
+    &:after{
+      font-family: FontAwesome;
+      font-size: 12px;
+      color: $primary-color;
+      letter-spacing: 0.1em;
+    }
+  }
+  &.rate-1{
+    span:after{
+      content: "\f005";
+    }
+  }
+  &.rate-2{
+    span:after{
+      content: "\f005 \f005";
+    }
+  }
+  &.rate-3{
+    span:after{
+      content: "\f005 \f005 \f005";
+    }
+  }
+  &.rate-4{
+    span:after{
+      content: "\f005 \f005 \f005 \f005";
+    }
+  }
+  &.rate-5{
+    span:after{
+      content: "\f005 \f005 \f005 \f005 \f005";
+    }
+  }
+}
+.testimonial-item{
+  .testimonial-content{
+    font-size: 24px;
+    font-family: $heading-font;
+    font-weight: 700;
+    line-height: 36px;
+    position: relative;
+    max-width: 830px;
+    margin: 0 auto;
+    &:after{
+      font-family: FontAwesome;
+      content: '\f10d';
+      font-size: 60px;
+      line-height: 60px;
+      position: absolute;
+      left: 50%;
+      @include transform(translatex(-50%));
+      color: $border-color;
+    }
+  }
+  .testimonial-author{
+    text-transform: none;
+    font-size: 30px;
+    letter-spacing: 0;
+    margin-bottom: 5px;
+  }
+  .testimonial-info{
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    margin-bottom: 10px;
+  }
+  &.testimonial-layout-1{
+    .testimonial-content{
+      margin-bottom: 25px;
+      padding-bottom: 70px;
+      &:after{
+        bottom: 0;
+      }
+    }
+  }
+  &.testimonial-layout-2{
+    .testimonial-content{
+      margin-bottom: 35px;
+      padding-top: 70px;
+      &:after{
+        top: 0;
+      }
+    }
+  }
+}
+.testimonial-carousel-skin-light{
+  .testimonial-item{
+    .testimonial-author{
+      a{
+        color: $white; 
+      }
+    }
+    .testimonial-rate{
+      span{
+        &:after{
+          color: #ec6aec;
+        }
+      }
+    }
+  }
 }
 
 /**

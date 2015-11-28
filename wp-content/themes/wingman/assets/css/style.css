@@ -2506,12 +2506,95 @@ article.post-item.post-layout-classic {
   bottom: 30px; }
 
 /**
-* 5.1. Single image
+* 5.1. Testimonials
 **/
 .clients-carousel-wrapper,
 .testimonial-carousel-wrapper {
   text-align: center;
   margin-bottom: 30px; }
+
+.testimonial-rate {
+  width: 58px;
+  text-align: left;
+  height: 16px;
+  line-height: 16px;
+  margin: 0 auto;
+  position: relative; }
+  .testimonial-rate:after {
+    font-family: FontAwesome;
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-size: 12px;
+    color: #c5c5c5;
+    letter-spacing: 0.1em; }
+  .testimonial-rate span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 16px; }
+    .testimonial-rate span:after {
+      font-family: FontAwesome;
+      font-size: 12px;
+      color: #82c14f;
+      letter-spacing: 0.1em; }
+  .testimonial-rate.rate-1 span:after {
+    content: "\f005"; }
+  .testimonial-rate.rate-2 span:after {
+    content: "\f005 \f005"; }
+  .testimonial-rate.rate-3 span:after {
+    content: "\f005 \f005 \f005"; }
+  .testimonial-rate.rate-4 span:after {
+    content: "\f005 \f005 \f005 \f005"; }
+  .testimonial-rate.rate-5 span:after {
+    content: "\f005 \f005 \f005 \f005 \f005"; }
+
+.testimonial-item .testimonial-content {
+  font-size: 24px;
+  font-family: "Josefin Slab", serif;
+  font-weight: 700;
+  line-height: 36px;
+  position: relative;
+  max-width: 830px;
+  margin: 0 auto; }
+  .testimonial-item .testimonial-content:after {
+    font-family: FontAwesome;
+    content: '\f10d';
+    font-size: 60px;
+    line-height: 60px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translatex(-50%);
+    -khtml-transform: translatex(-50%);
+    -moz-transform: translatex(-50%);
+    -ms-transform: translatex(-50%);
+    -o-transform: translatex(-50%);
+    transform: translatex(-50%);
+    color: #e5e5e5; }
+.testimonial-item .testimonial-author {
+  text-transform: none;
+  font-size: 30px;
+  letter-spacing: 0;
+  margin-bottom: 5px; }
+.testimonial-item .testimonial-info {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  margin-bottom: 10px; }
+.testimonial-item.testimonial-layout-1 .testimonial-content {
+  margin-bottom: 25px;
+  padding-bottom: 70px; }
+  .testimonial-item.testimonial-layout-1 .testimonial-content:after {
+    bottom: 0; }
+.testimonial-item.testimonial-layout-2 .testimonial-content {
+  margin-bottom: 35px;
+  padding-top: 70px; }
+  .testimonial-item.testimonial-layout-2 .testimonial-content:after {
+    top: 0; }
+
+.testimonial-carousel-skin-light .testimonial-item .testimonial-author a {
+  color: #FFFFFF; }
+.testimonial-carousel-skin-light .testimonial-item .testimonial-rate span:after {
+  color: #ec6aec; }
 
 /**
 * 5.1. Single image

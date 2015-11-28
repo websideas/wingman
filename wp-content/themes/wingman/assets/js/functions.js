@@ -550,6 +550,7 @@
                     var that = this;
                     that.paginationWrapper.appendTo(objCarousel.closest('.owl-carousel-kt'));
                 }
+                kt_testimonial_thumbnail(elem);
 
             };
 
@@ -559,6 +560,14 @@
 
         });
 
+    }
+
+    function kt_testimonial_thumbnail( elem ){
+        console.log(elem);
+        var thumbnail_url;
+        elem.find('.owl-item').each(function(){
+            thumbnail_url[] = $(this).find('');
+        });
     }
 
     /* ---------------------------------------------
