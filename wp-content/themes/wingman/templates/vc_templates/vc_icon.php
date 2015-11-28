@@ -38,13 +38,16 @@ $css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, $class_to_filter
 $url = vc_build_link( $link );
 $uniqid = 'vc_icon_element_'.uniqid();
 $custom_css = '';
-$style = '';
+$layoutclass = $style = '';
 $has_style = false;
+
 
 if($icon_type == 'image'){
     $has_style = true;
     $img_lightbox_id = preg_replace( '/[^\d]/', '', $iconbox_image );
     $img_lightbox = wp_get_attachment_image_src( $img_lightbox_id, 'full' );
+
+    $layoutclass = 'vc_icon_image';
 
     if(array($img_lightbox)){
         $icon_class = $img_lightbox['0'];
@@ -112,7 +115,7 @@ if($icon_type == 'image'){
 
 ?>
 <div
-    class="vc_icon_element vc_icon_element-outer<?php echo strlen( $css_class ) > 0 ? ' ' . trim( esc_attr( $css_class ) ) : ''; ?> vc_icon_element-align-<?php echo esc_attr( $align ); ?><?php if ( $has_style ): echo ' vc_icon_element-have-style'; else: echo ' vc_icon_element-no-style'; endif; ?>">
+    class="vc_icon_element vc_icon_element-outer<?php echo strlen( $css_class ) > 0 ? ' ' . trim( esc_attr( $css_class ) ) : ''; ?> <?php echo $layoutclass; ?> vc_icon_element-align-<?php echo esc_attr( $align ); ?><?php if ( $has_style ): echo ' vc_icon_element-have-style'; else: echo ' vc_icon_element-no-style'; endif; ?>">
     <div
         class="vc_icon_element-inner vc_icon_element-color-<?php echo esc_attr( $color ); ?>
 

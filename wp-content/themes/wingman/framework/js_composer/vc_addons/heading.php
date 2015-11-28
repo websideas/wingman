@@ -11,36 +11,13 @@ class WPBakeryShortCode_KT_Heading extends WPBakeryShortCode_VC_Custom_heading {
 
             'text' => __( 'This is custom heading element with Google Fonts', 'js_composer' ),
             'align' => 'center',
-            'layout' => '0',
+            'layout' => '1',
+            'skin' => 'dark',
 
             'font_container' => '',
             'use_theme_fonts' => 'yes',
             'google_fonts' => '',
             'letter_spacing' => '0',
-
-
-            'width' => '38px',
-            'height' => 2,
-            'border_style' => 'solid',
-            'color_border' => '#7e7e7e',
-
-            'type' => 'fontawesome',
-            'icon_fontawesome' => '',
-            'icon_openiconic' => '',
-            'icon_typicons' => '',
-            'icon_entypoicons' => '',
-            'icon_linecons' => '',
-            'icon_entypo' => '',
-            'color' => '',
-            'custom_color' => '',
-            'background_style' => '',
-            'background_color' => 'grey',
-            'custom_background_color' => '',
-            'size' => 'xs',
-
-            'divider_margin_top' => 10,
-            'divider_margin_bottom' => 30,
-
 
 
             'css_animation' => '',
@@ -54,7 +31,9 @@ class WPBakeryShortCode_KT_Heading extends WPBakeryShortCode_VC_Custom_heading {
             'extra' => $this->getExtraClass( $el_class ),
             'css_animation' => $this->getCSSAnimation( $css_animation ),
             'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' ),
-            'align' => 'kt-heading-align-'.$align
+            'align' => 'kt-heading-align-'.$align,
+            'layout' => 'layout-'.$layout,
+            'skin' => 'kt-heading-'.$skin,
         );
 
         $output = $text = $google_fonts = $font_container = $el_class = $css = $google_fonts_data = $font_container_data = $style = '';
@@ -80,22 +59,9 @@ class WPBakeryShortCode_KT_Heading extends WPBakeryShortCode_VC_Custom_heading {
         }
 
         $output_title = '<' . $font_container_data['values']['tag'] . ' class="kt-heading-title" ' . $style . ' >'.$text.'</' . $font_container_data['values']['tag'] . '>';
-        if( $layout != '0' ){
-            $output_divider = do_shortcode('[kt_divider align="'.$align.'" border_style="'.$border_style.'" color_border="'.$color_border.'" type="'.$type.'" icon_fontawesome="'.$icon_fontawesome.'" icon_openiconic="'.$icon_openiconic.'" icon_typicons="'.$icon_typicons.'" icon_entypo="'.$icon_entypo.'" icon_linecons="'.$icon_linecons.'" color="'.$color.'" custom_color="'.$custom_color.'" custom_background_color="'.$custom_background_color.'"  background_style="'.$background_style.'" background_color="'.$background_color.'" width="'.$width.'" height="'.$height.'" margin_top="'.$divider_margin_top.'" margin_bottom="'.$divider_margin_bottom.'"]');
-        }else{
-            $output_divider = '';
-        }
-        $output_content = ($content) ? '<div class="kt-heading-content">'.$content.'</div>' : '';
+        $output_content = ($content) ? '<div class="kt-heading-content">'.do_shortcode($content).'</div>' : '';
 
-
-        if($layout == '2'){
-            $output .= $output_divider.$output_title.$output_content;
-        }elseif($layout == '3'){
-            $output .= $output_title.$output_content.$output_divider;
-        }else{
-            $output .= $output_title.$output_divider.$output_content;
-        }
-
+        $output .= $output_title.$output_content;
 
         $elementClass = preg_replace( array( '/\s+/', '/^\s|\s$/' ), array( ' ', '' ), implode( ' ', $elementClass ) );
         return '<div class="'.esc_attr( $elementClass ).'">'.$output.'</div>';
@@ -154,14 +120,22 @@ vc_map( array(
             'heading' => __( 'layout', 'js_composer' ),
             'param_name' => 'layout',
             'value' => array(
-                __( 'Title + Description', 'js_composer' ) => "0",
-                __( 'Title + Divider + Description', 'js_composer' ) => "1",
-                __( 'Divider + Title Divider + Description', 'js_composer' ) => '2',
-                __( 'Title + Description + Divider', 'js_composer' ) => '3',
+                __( 'Layout 1', 'js_composer' ) => "1",
+                __( 'Layout 2', 'js_composer' ) => "2",
             ),
-            'description' => __( 'Select separator alignment.', 'js_composer' )
+            'description' => __( 'Select your layout.', THEME_LANG )
         ),
-
+        array(
+            'type' => 'dropdown',
+            'heading' => __( 'Skin', THEME_LANG ),
+            'param_name' => 'skin',
+            'value' => array(
+                __( 'Default', 'js_composer' ) => 'dark',
+                __( 'Light', 'js_composer' ) => 'light',
+            ),
+            'std' => 'dark',
+            'description' => __( 'Select your skin.', THEME_LANG )
+        ),
 
         array(
             'type' => 'dropdown',
@@ -201,7 +175,7 @@ vc_map( array(
             'value' => '',
             'settings' => array(
                 'fields' => array(
-                    'tag' => 'h4',
+                    'tag' => 'h2',
                     'font_size',
                     'line_height',
                     'color',
@@ -239,251 +213,6 @@ vc_map( array(
                 'value_not_equal_to' => 'yes',
             ),
         ),
-
-        array(
-            "type" => "dropdown",
-            "heading" => __("Style", THEME_LANG),
-            "param_name" => "border_style",
-            "value" => array(
-                __("Solid", THEME_LANG)=> "solid",
-                __("Solid Two line", THEME_LANG)=> "solid_two",
-                __("Dashed", THEME_LANG) => "dashed",
-                __("Dashed Two line", THEME_LANG) => "dashed_two"
-            ),
-            "description" => "",
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-        array(
-            "type" => "colorpicker",
-            "heading" => __("Border Color", THEME_LANG),
-            "param_name" => "color_border",
-            "value" => "#7e7e7e",
-            "description" => "",
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-
-
-
-        array(
-            "type" => "kt_heading",
-            "heading" => __("Design settings", THEME_LANG),
-            "param_name" => "divider_design",
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-
-
-        array(
-            "type" => "textfield",
-            "heading" => __("Divider width", THEME_LANG),
-            "param_name" => "width",
-            "value" => "38px",
-            "description" => __("Please enter width of divider", THEME_LANG),
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-        array(
-            'type' => 'dropdown',
-            'heading' => __( 'Divider height', 'js_composer' ),
-            'param_name' => 'height',
-            'value' => getVcShared( 'separator border widths' ),
-            'description' => __( 'Select height width (pixels).', 'js_composer' ),
-            'group' => __( 'Divider', THEME_LANG ),
-            'std' => 2
-        ),
-        array(
-            "type" => "kt_number",
-            "heading" => __("Margin top", THEME_LANG),
-            "param_name" => "divider_margin_top",
-            "value" => "10",
-            "suffix" => __("px", THEME_LANG),
-            "description" => '',
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-        array(
-            "type" => "kt_number",
-            "heading" => __("Margin bottom", THEME_LANG),
-            "param_name" => "divider_margin_bottom",
-            "value" => "30",
-            "suffix" => __("px", THEME_LANG),
-            "description" => '',
-            'group' => __( 'Divider', 'js_composer' )
-        ),
-
-
-        array(
-            "type" => "kt_heading",
-            "heading" => __("Icon settings", THEME_LANG),
-            "param_name" => "divider_icon",
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-
-        array(
-            'type' => 'dropdown',
-            'heading' => __( 'Icon library', 'js_composer' ),
-            'value' => array(
-                __( 'Font Awesome', 'js_composer' ) => 'fontawesome',
-                __( 'Open Iconic', 'js_composer' ) => 'openiconic',
-                __( 'Typicons', 'js_composer' ) => 'typicons',
-                __( 'Entypo', 'js_composer' ) => 'entypo',
-                __( 'Linecons', 'js_composer' ) => 'linecons',
-            ),
-            //'admin_label' => true,
-            'param_name' => 'type',
-            'description' => __( 'Select icon library.', 'js_composer' ),
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-        array(
-            'type' => 'iconpicker',
-            'heading' => __( 'Icon', 'js_composer' ),
-            'param_name' => 'icon_fontawesome',
-            'value' => '',
-            'settings' => array(
-                'emptyIcon' => true,
-                'iconsPerPage' => 4000,
-            ),
-            'dependency' => array(
-                'element' => 'type',
-                'value' => 'fontawesome',
-            ),
-            'description' => __( 'Select icon from library.', 'js_composer' ),
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-        array(
-            'type' => 'iconpicker',
-            'heading' => __( 'Icon', 'js_composer' ),
-            'param_name' => 'icon_openiconic',
-            'value' => '',
-            'settings' => array(
-                'emptyIcon' => true,
-                'type' => 'openiconic',
-                'iconsPerPage' => 4000,
-            ),
-            'dependency' => array(
-                'element' => 'type',
-                'value' => 'openiconic',
-            ),
-            'description' => __( 'Select icon from library.', 'js_composer' ),
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-        array(
-            'type' => 'iconpicker',
-            'heading' => __( 'Icon', 'js_composer' ),
-            'param_name' => 'icon_typicons',
-            'value' => '', // default value to backend editor admin_label
-            'settings' => array(
-                'emptyIcon' => true, // default true, display an "EMPTY" icon?
-                'type' => 'typicons',
-                'iconsPerPage' => 4000, // default 100, how many icons per/page to display
-            ),
-            'dependency' => array(
-                'element' => 'type',
-                'value' => 'typicons',
-            ),
-            'description' => __( 'Select icon from library.', 'js_composer' ),
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-        array(
-            'type' => 'iconpicker',
-            'heading' => __( 'Icon', 'js_composer' ),
-            'param_name' => 'icon_entypo',
-            'value' => 'entypo-icon entypo-icon-note', // default value to backend editor admin_label
-            'settings' => array(
-                'emptyIcon' => true, // default true, display an "EMPTY" icon?
-                'type' => 'entypo',
-                'iconsPerPage' => 4000, // default 100, how many icons per/page to display
-            ),
-            'dependency' => array(
-                'element' => 'type',
-                'value' => 'entypo',
-            ),
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-        array(
-            'type' => 'iconpicker',
-            'heading' => __( 'Icon', 'js_composer' ),
-            'param_name' => 'icon_linecons',
-            'value' => 'vc_li vc_li-heart', // default value to backend editor admin_label
-            'settings' => array(
-                'emptyIcon' => true, // default true, display an "EMPTY" icon?
-                'type' => 'linecons',
-                'iconsPerPage' => 4000, // default 100, how many icons per/page to display
-            ),
-            'dependency' => array(
-                'element' => 'type',
-                'value' => 'linecons',
-            ),
-            'description' => __( 'Select icon from library.', 'js_composer' ),
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-        array(
-            'type' => 'dropdown',
-            'heading' => __( 'Icon color', 'js_composer' ),
-            'param_name' => 'color',
-            'value' => array_merge( array( __( 'Default', 'js_composer' ) => 'default' ), getVcShared( 'colors' ), array( __( 'Custom color', 'js_composer' ) => 'custom' ) ),
-            'description' => __( 'Select icon color.', 'js_composer' ),
-            'std' => 'blue',
-            'param_holder_class' => 'vc_colored-dropdown',
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-        array(
-            'type' => 'colorpicker',
-            'heading' => __( 'Custom Icon Color', 'js_composer' ),
-            'param_name' => 'custom_color',
-            'description' => __( 'Select custom icon color.', 'js_composer' ),
-            'dependency' => array(
-                'element' => 'color',
-                'value' => 'custom',
-            ),
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-        array(
-            'type' => 'dropdown',
-            'heading' => __( 'Background shape', 'js_composer' ),
-            'param_name' => 'background_style',
-            'value' => array(
-                __( 'None', 'js_composer' ) => '',
-                __( 'Circle', 'js_composer' ) => 'rounded',
-                __( 'Square', 'js_composer' ) => 'boxed',
-                __( 'Rounded', 'js_composer' ) => 'rounded-less',
-                __( 'Outline Circle', 'js_composer' ) => 'rounded-outline',
-                __( 'Outline Square', 'js_composer' ) => 'boxed-outline',
-                __( 'Outline Rounded', 'js_composer' ) => 'rounded-less-outline',
-                __( 'Hexagonal', 'js_composer' ) => 'hexagonal',
-                __( 'Diamond Square', 'js_composer' ) => 'diamond_square',
-
-            ),
-            'description' => __( 'Select background shape and style for icon.', 'js_composer' ),
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-        array(
-            'type' => 'dropdown',
-            'heading' => __( 'Background Color', 'js_composer' ),
-            'param_name' => 'background_color',
-            'value' => array_merge( getVcShared( 'colors' ), array( __( 'Custom color', 'js_composer' ) => 'custom' ) ),
-            'std' => 'grey',
-            'description' => __( 'Background Color.', 'js_composer' ),
-            'param_holder_class' => 'vc_colored-dropdown',
-            'dependency' => array(
-                'element' => 'background_style',
-                'not_empty' => true,
-            ),
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-
-        array(
-            'type' => 'colorpicker',
-            'heading' => __( 'Custom background color', 'js_composer' ),
-            'param_name' => 'custom_background_color',
-            'description' => __( 'Select custom icon background color.', 'js_composer' ),
-            'dependency' => array(
-                'element' => 'background_color',
-                'value' => 'custom',
-            ),
-            'group' => __( 'Divider', THEME_LANG )
-        ),
-
-
-
-
 
 
         array(

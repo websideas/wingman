@@ -429,12 +429,14 @@
             }, { offset:'85%' });
 
 
-            $('.creative-left, .creative-right').each(function() {
+            $('.creative-left, .creative-right, .kt-heading-wrapper').each(function() {
                 var $this = $(this);
                 $this.waypoint(function () {
                     $this.addClass('animated');
                 }, {offset: '90%'});
             });
+
+
 
         }
 

@@ -43,10 +43,11 @@ class WPBakeryShortCode_Icon_Box extends WPBakeryShortCode_VC_Custom_heading {
         $link_icon = $link;
 
         $elementClass = array(
-            'base' => apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'features-box ', $this->settings['base'], $atts ),
+            'base' => apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'features-box', $this->settings['base'], $atts ),
             'extra' => $this->getExtraClass( $el_class ),
             'css_animation' => $this->getCSSAnimation( $css_animation ),
-            'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' )
+            'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' ),
+            'layout' => 'layout-'.$icon_box_layout
         );
 
         if($skin){
@@ -102,7 +103,11 @@ class WPBakeryShortCode_Icon_Box extends WPBakeryShortCode_VC_Custom_heading {
         $icon_box_icon = do_shortcode('[vc_icon link="'.$link_icon.'" icon_type="'.$icon_type.'" iconbox_image="'.$iconbox_image.'" icon_class="'.$iconbox_icon.'" el_class="features-box-icon" hover_div="'.$uniqid.'" addon="1" uniqid="'.$uniqid.'" color_hover="'.$color_hover.'" background_color_hover="'.$background_color_hover.'" color="'.$color.'" custom_color="'.$custom_color.'" background_style="'.$background_style.'" background_color="'.$background_color.'" custom_background_color="'.$custom_background_color.'" size="'.$size.'" align="center"]');
 
 
-        $output .= $icon_box_icon . $icon_box_title . $icon_box_content;
+        if($icon_box_layout == '2'){
+            $output .= sprintf('<div class="features-box-left">%s</div><div class="features-box-right">%s%s</div>', $icon_box_icon, $icon_box_title, $icon_box_content);
+        }else{
+            $output .= $icon_box_icon . $icon_box_title . $icon_box_content;
+        }
 
         $elementClass = preg_replace( array( '/\s+/', '/^\s|\s$/' ), array( ' ', '' ), implode( ' ', $elementClass ) );
 
