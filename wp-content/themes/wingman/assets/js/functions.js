@@ -563,10 +563,14 @@
     }
 
     function kt_testimonial_thumbnail( elem ){
-        console.log(elem);
-        var thumbnail_url;
+        var thumbnail_url = [];
         elem.find('.owl-item').each(function(){
-            thumbnail_url[] = $(this).find('');
+            thumbnail_url.push($(this).find('.testimonial-item').data('thumbnail'));
+        });
+        elem.next('.owl-pagination').find('.owl-page').each(function(index){
+            if( typeof thumbnail_url[index] !== 'undefined' ){
+                $(this).find('span').html('<img src="'+thumbnail_url[index]+'" />');
+            }
         });
     }
 

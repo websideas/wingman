@@ -343,17 +343,29 @@ select:not([multiple]) {
     padding: 0;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    &:after{
-      font-family: FontAwesome;
-      content: "\f178";
+    position: relative;
+    &:after,&:before{
+      content: "";
       @include transition();
-      @include transform(translateX(10px));
       @include opacity(0);
       display: inline-block;
+      right: -10px;
+      width: 1px;
+      height: 10px;
+      background: $primary-color;
+      position: absolute;
+      top: 5px;
+    }
+    &:before{
+      left: -10px;
     }
     &:hover:after{
-      @include transform(translatex(0));
       @include opacity(1);
+      right: -5px;
+    }
+    &:hover:before{
+      @include opacity(1);
+      left: -8px;
     }
 }
 
@@ -2328,7 +2340,7 @@ article.post-item {
 }
 .blog-posts{
   .entry-title{
-    font-size: 24px;
+    font-size: 22px;
     line-height: 36px;
     margin: 0 0 25px;
     a{
@@ -2725,6 +2737,9 @@ article.post-item.post-layout-classic {
       letter-spacing: 0.1em;
     }
   }
+  &.rate-0{
+    display: none;
+  }
   &.rate-1{
     span:after{
       content: "\f005";
@@ -2775,17 +2790,17 @@ article.post-item.post-layout-classic {
     text-transform: none;
     font-size: 30px;
     letter-spacing: 0;
-    margin-bottom: 5px;
+    margin-bottom: 0;
   }
   .testimonial-info{
     font-size: 13px;
     letter-spacing: 0.2em;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
   }
   &.testimonial-layout-1{
     .testimonial-content{
-      margin-bottom: 25px;
-      padding-bottom: 70px;
+      margin-bottom: 22px;
+      padding-bottom: 75px;
       &:after{
         bottom: 0;
       }
@@ -2793,8 +2808,8 @@ article.post-item.post-layout-classic {
   }
   &.testimonial-layout-2{
     .testimonial-content{
-      margin-bottom: 35px;
-      padding-top: 70px;
+      margin-bottom: 40px;
+      padding-top: 86px;
       &:after{
         top: 0;
       }
@@ -2815,6 +2830,28 @@ article.post-item.post-layout-classic {
         }
       }
     }
+  }
+}
+.testimonial-carousel-wrapper{
+  .owl-carousel-kt {
+    .owl-pagination{
+      position: absolute;
+      top:-125px;
+      left: 50%;
+      margin: 0;
+      @include transform(translatex(-50%));
+      .owl-page{
+        width: 70px;
+        height: 70px;
+        margin: 0 30px;
+        @include border-radius(100%);
+        overflow: hidden;
+        @include transition();
+        &.active{
+          @include transform(scale(1.4));
+        }
+      }
+    } 
   }
 }
 
