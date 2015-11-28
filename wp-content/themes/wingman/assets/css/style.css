@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  * Title:   WingMan - E-Commerce and Blog Wordpress Theme
  * Author:  http://themeforest.net/user/Kite-Themes
@@ -1186,7 +1187,8 @@ body.layout-boxed #footer {
       color: #82c14f;
       border-color: #82c14f; }
 .owl-carousel-kt .owl-pagination {
-  margin-top: 40px; }
+  margin-top: 40px;
+  text-align: center; }
   .owl-carousel-kt .owl-pagination .owl-page {
     background: #959595;
     height: 8px;
@@ -2595,10 +2597,10 @@ article.post-item.post-layout-classic {
 /**
 * 5.1. Testimonials
 **/
-.clients-carousel-wrapper,
 .testimonial-carousel-wrapper {
   text-align: center;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  position: relative; }
 
 .testimonial-rate {
   width: 58px;
@@ -2606,13 +2608,14 @@ article.post-item.post-layout-classic {
   height: 16px;
   line-height: 16px;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  letter-spacing: 0.2em;
+  display: none; }
   .testimonial-rate:after {
     font-family: FontAwesome;
     content: "\f005 \f005 \f005 \f005 \f005";
     font-size: 12px;
-    color: #c5c5c5;
-    letter-spacing: 0.1em; }
+    color: #c5c5c5; }
   .testimonial-rate span {
     position: absolute;
     top: 0;
@@ -2623,10 +2626,9 @@ article.post-item.post-layout-classic {
     .testimonial-rate span:after {
       font-family: FontAwesome;
       font-size: 12px;
-      color: #82c14f;
-      letter-spacing: 0.1em; }
-  .testimonial-rate.rate-0 {
-    display: none; }
+      color: #82c14f; }
+  .testimonial-rate.rate-1, .testimonial-rate.rate-2, .testimonial-rate.rate-3, .testimonial-rate.rate-4, .testimonial-rate.rate-5 {
+    display: block; }
   .testimonial-rate.rate-1 span:after {
     content: "\f005"; }
   .testimonial-rate.rate-2 span:after {
@@ -2648,23 +2650,31 @@ article.post-item.post-layout-classic {
   margin: 0 auto; }
   .testimonial-item .testimonial-content:after {
     font-family: FontAwesome;
-    content: '\f10d';
+    content: "";
+    font-style: normal;
+    font-weight: normal;
     font-size: 60px;
     line-height: 60px;
     position: absolute;
+    -webkit-transform: translateX(-50%);
+    -khtml-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
     left: 50%;
-    -webkit-transform: translatex(-50%);
-    -khtml-transform: translatex(-50%);
-    -moz-transform: translatex(-50%);
-    -ms-transform: translatex(-50%);
-    -o-transform: translatex(-50%);
-    transform: translatex(-50%);
-    color: #e5e5e5; }
+    color: rgba(0, 0, 0, 0.1); }
 .testimonial-item .testimonial-author {
   text-transform: none;
   font-size: 30px;
   letter-spacing: 0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  line-height: 34px;
+  color: #000000; }
+  .testimonial-item .testimonial-author a {
+    color: #000000; }
+    .testimonial-item .testimonial-author a:hover {
+      color: #82c14f; }
 .testimonial-item .testimonial-info {
   font-size: 13px;
   letter-spacing: 0.2em;
@@ -2680,22 +2690,17 @@ article.post-item.post-layout-classic {
   .testimonial-item.testimonial-layout-2 .testimonial-content:after {
     top: 0; }
 
-.testimonial-carousel-skin-light .testimonial-item .testimonial-author a {
+.testimonial-carousel-skin-light .testimonial-item .testimonial-content:after {
+  color: rgba(255, 255, 255, 0.1); }
+.testimonial-carousel-skin-light .testimonial-item .testimonial-author {
   color: #FFFFFF; }
+  .testimonial-carousel-skin-light .testimonial-item .testimonial-author a {
+    color: #FFFFFF; }
 .testimonial-carousel-skin-light .testimonial-item .testimonial-rate span:after {
-  color: #ec6aec; }
+  color: #82c14f; }
 
 .testimonial-carousel-wrapper .owl-carousel-kt .owl-pagination {
-  position: absolute;
-  top: -125px;
-  left: 50%;
-  margin: 0;
-  -webkit-transform: translatex(-50%);
-  -khtml-transform: translatex(-50%);
-  -moz-transform: translatex(-50%);
-  -ms-transform: translatex(-50%);
-  -o-transform: translatex(-50%);
-  transform: translatex(-50%); }
+  margin: 0 0 50px; }
   .testimonial-carousel-wrapper .owl-carousel-kt .owl-pagination .owl-page {
     width: 70px;
     height: 70px;
@@ -2720,6 +2725,22 @@ article.post-item.post-layout-classic {
       -ms-transform: scale(1.4);
       -o-transform: scale(1.4);
       transform: scale(1.4); }
+    .testimonial-carousel-wrapper .owl-carousel-kt .owl-pagination .owl-page img {
+      filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+      /* Firefox 3.5+ */
+      filter: gray;
+      /* IE6-9 */
+      -webkit-filter: grayscale(100%);
+      /* Chrome 19+ & Safari 6+ */
+      -webkit-transition: all 0.2s ease-in-out 0s;
+      -khtml-transition: all 0.2s ease-in-out 0s;
+      -moz-transition: all 0.2s ease-in-out 0s;
+      -ms-transition: all 0.2s ease-in-out 0s;
+      -o-transition: all 0.2s ease-in-out 0s;
+      transition: all 0.2s ease-in-out 0s; }
+    .testimonial-carousel-wrapper .owl-carousel-kt .owl-pagination .owl-page.active img, .testimonial-carousel-wrapper .owl-carousel-kt .owl-pagination .owl-page:hover img {
+      filter: none;
+      -webkit-filter: grayscale(0%); }
 
 /**
 * 5.1. Single image
@@ -2792,8 +2813,6 @@ article.post-item.post-layout-classic {
     left: 0; }
   .kt-heading-wrapper.layout-1.animated .kt-heading-title:after {
     right: 0; }
-  .kt-heading-wrapper.layout-1 .kt-heading-content {
-    text-transform: uppercase; }
   .kt-heading-wrapper.kt-heading-align-center {
     text-align: center; }
   .kt-heading-wrapper.kt-heading-align-right {
@@ -2924,7 +2943,7 @@ article.post-item.post-layout-classic {
       .wrapper-comingsoon.style3 .coming-soon .wrap .value-time {
         font-size: 36px;
         line-height: 36px;
-        color: #ec6aec;
+        color: #82c14f;
         letter-spacing: 0.2em;
         font-family: "Josefin Slab", serif;
         font-weight: 700;

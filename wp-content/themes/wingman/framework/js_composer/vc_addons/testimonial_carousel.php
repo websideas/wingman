@@ -15,7 +15,7 @@ class WPBakeryShortCode_Testimonial_Carousel extends WPBakeryShortCode_VC_Custom
             'use_theme_fonts' => 'yes',
             'google_fonts' => '',
             'letter_spacing' => '0',
-            'skin' => '',
+            'skin' => 'dark',
 
 
             'font_container_company' => '',
@@ -43,18 +43,19 @@ class WPBakeryShortCode_Testimonial_Carousel extends WPBakeryShortCode_VC_Custom
 
             'navigation' => 'true',
             'navigation_always_on' => 'true',
-            'navigation_position' => 'center_outside',
-            'navigation_style' => 'circle_border',
-            'carousel_skin' => 'black',
-            'navigation_icon' => 'fa fa-angle-left|fa fa-angle-right',
+            'navigation_position' => 'center',
+            'navigation_style' => '',
+            'navigation_icon' => 'fa fa-long-arrow-left|fa fa-long-arrow-right',
+            'callback' => 'kt_testimonial_thumbnail',
 
-            'pagination' => 'false',
-
+            'pagination' => 'true',
 
             'css_animation' => '',
             'el_class' => '',
             'css' => '',
         ), $atts);
+
+        $atts['carousel_skin'] = $atts['skin'];
 
         extract($atts);
 
@@ -172,7 +173,7 @@ class WPBakeryShortCode_Testimonial_Carousel extends WPBakeryShortCode_VC_Custom
             $carousel_html = '';
 
             while ( $query->have_posts() ) : $query->the_post();
-            
+
                 $thumbnail = get_thumbnail_attachment(get_post_thumbnail_id(get_the_ID()), 'small');
                 $carousel_html .= '<div class="testimonial-item testimonial-layout-'.esc_attr($layout).'" data-thumbnail="'.$thumbnail['url'].'">';
                 $testimonial_content = '<div class="testimonial-content">'.do_shortcode(get_the_content()).'</div>';
@@ -212,6 +213,7 @@ vc_map( array(
             "heading" => __( "Title", THEME_LANG ),
             "param_name" => "title",
             "admin_label" => true,
+            'description' => '',
         ),
         array(
             'type' => 'hidden',
@@ -424,6 +426,7 @@ vc_map( array(
                 __( 'Top', THEME_LANG) => 'top',
                 __( 'Bottom', THEME_LANG) => 'bottom',
             ),
+            'std' => 'center',
             "dependency" => array("element" => "navigation","value" => array('true')),
         ),
         array(
@@ -449,7 +452,7 @@ vc_map( array(
                 __( 'Square Border', THEME_LANG ) => 'square_border',
                 __( 'Round Border', THEME_LANG ) => 'round_border',
             ),
-            'std' => 'circle_border',
+            'std' => '',
             "dependency" => array("element" => "navigation","value" => array('true')),
         ),
 

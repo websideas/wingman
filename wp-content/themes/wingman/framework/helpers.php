@@ -664,6 +664,7 @@ function kt_render_carousel($data, $extra = '', $class = 'owl-carousel kt-owl-ca
         'pagination_position' => 'outside',
 
         'carousel_skin' => 'dark',
+        'callback' => ''
 
     ), $data );
 
@@ -723,6 +724,7 @@ function kt_render_carousel($data, $extra = '', $class = 'owl-carousel kt-owl-ca
         'tablet' => $tablet,
         'mobile' => $mobile,
         'pagination' => $pagination,
+        'callback' => $callback
 
     );
 

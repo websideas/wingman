@@ -11,7 +11,7 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
             'source' => 'widgets',
 
             'categories' => '',
-            'per_page' => 4,
+            'per_page' => 8,
             'product_columns' => 4,
             'product_columns_tablet' => 2,
             'orderby' => 'date',
@@ -85,8 +85,8 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
             'mousedrag' => true,
             'autoplayspeed' => 5000,
             'slidespeed' => 200,
-            'desktop' => 4,
-            'tablet' => 1,
+            'desktop' => $product_columns,
+            'tablet' => $product_columns_tablet,
             'mobile' => 1,
             'gutters' => false,
 
@@ -187,7 +187,7 @@ vc_map( array(
         array(
             'type' => 'textfield',
             'heading' => __( 'Per page', 'js_composer' ),
-            'value' => 4,
+            'value' => 8,
             'param_name' => 'per_page',
             'description' => __( 'The "per_page" shortcode determines how many products to show on the page', 'js_composer' ),
         ),

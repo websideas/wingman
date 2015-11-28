@@ -486,23 +486,6 @@
     	});
     }
 
-
-    /* ---------------------------------------------
-     Eislideshow
-     --------------------------------------------- */
-    /*
-    function init_eislideshow(){
-        $('.kt-eislideshow').each(function(){
-            var objEis = $(this),
-                eisAuto = objEis.data('auto');
-            if(typeof eisAuto === "undefined"){ eisAuto = false; }
-            objEis.eislideshow({
-                autoplay : eisAuto
-            });
-        });
-    }
-    */
-
     /* ---------------------------------------------
      Owl carousel
      --------------------------------------------- */
@@ -511,7 +494,8 @@
         $('.kt-owl-carousel').each(function(){
 
             var objCarousel = $(this),
-                options = $(objCarousel).data('options') || {};
+                options = $(objCarousel).data('options') || {},
+                func_cb;
             options.theme = 'owl-kttheme';
 
 
@@ -542,6 +526,8 @@
                 options.itemsMobile = [479,options.mobile];
             }
 
+            func_cb =  window[options.callback];
+
             options.afterInit  = function(elem) {
                 if(options.navigation_pos == "top" && options.navigation){
                     var $buttons = elem.find('.owl-buttons');
@@ -552,7 +538,10 @@
                     var that = this;
                     that.paginationWrapper.appendTo(objCarousel.closest('.owl-carousel-kt'));
                 }
-                kt_testimonial_thumbnail(elem);
+
+                if( typeof func_cb === 'function'){
+                    func_cb( 'afterInit',   elem );
+                }
 
             };
 
@@ -564,17 +553,8 @@
 
     }
 
-    function kt_testimonial_thumbnail( elem ){
-        var thumbnail_url = [];
-        elem.find('.owl-item').each(function(){
-            thumbnail_url.push($(this).find('.testimonial-item').data('thumbnail'));
-        });
-        elem.next('.owl-pagination').find('.owl-page').each(function(index){
-            if( typeof thumbnail_url[index] !== 'undefined' ){
-                $(this).find('span').html('<img src="'+thumbnail_url[index]+'" />');
-            }
-        });
-    }
+
+
 
     /* ---------------------------------------------
      Mailchimp
@@ -818,3 +798,28 @@
 
 })(jQuery); // End of use strict
 
+
+
+/* ---------------------------------------------
+ Testimonial callback
+ --------------------------------------------- */
+
+function kt_testimonial_thumbnail( _type, elem ){
+    "use strict"; // Start of use strict
+
+    if( _type === 'afterInit' ) {
+        var thumbnail_url = [];
+        elem.find('.owl-item').each(function () {
+            thumbnail_url.push(jQuery(this).find('.testimonial-item').data('thumbnail'));
+        });
+
+        var $pagination = elem.next('.owl-pagination');
+        $pagination.prependTo(elem.closest('.owl-carousel-kt'));
+
+        $pagination.find('.owl-page').each(function (index) {
+            if (thumbnail_url[index] != '') {
+                jQuery(this).find('span').html('<img src="' + thumbnail_url[index] + '" />');
+            }
+        });
+    }
+}
