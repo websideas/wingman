@@ -1901,11 +1901,11 @@ body .mCSB_scrollTools {
         -ms-transform: scale(1.5);
         -o-transform: scale(1.5);
         transform: scale(1.5); }
-  .woocommerce-products-carousel-tab .woocommerce ul.shop-products li.product {
+  .woocommerce-products-carousel-tab.carousel-light .woocommerce ul.shop-products li.product {
     padding-bottom: 0; }
-  .woocommerce-products-carousel-tab .woocommerce ul.shop-products h3 a {
+  .woocommerce-products-carousel-tab.carousel-light .woocommerce ul.shop-products h3 a {
     color: #FFFFFF; }
-    .woocommerce-products-carousel-tab .woocommerce ul.shop-products h3 a:hover {
+    .woocommerce-products-carousel-tab.carousel-light .woocommerce ul.shop-products h3 a:hover {
       color: #82c14f; }
   .woocommerce-products-carousel-tab.skin-light ul.block-heading-tabs li a:hover, .woocommerce-products-carousel-tab.skin-light ul.block-heading-tabs li.ui-tabs-active a {
     color: #FFFFFF; }

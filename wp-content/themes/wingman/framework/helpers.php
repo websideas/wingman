@@ -663,7 +663,7 @@ function kt_render_carousel($data, $extra = '', $class = 'owl-carousel kt-owl-ca
         'pagination' => false,
         'pagination_position' => 'outside',
 
-        'carousel_skin' => 'black',
+        'carousel_skin' => 'dark',
 
     ), $data );
 

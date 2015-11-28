@@ -94,7 +94,7 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
             'navigation_always_on' => true,
             'navigation_position' => 'top',
             'navigation_style' => 'square_border',
-            'carousel_skin' => 'white',
+            'carousel_skin' => $skin,
             'navigation_icon' => 'fa fa-angle-left|fa fa-angle-right',
         ));
 
@@ -209,6 +209,7 @@ vc_map( array(
                 __( 'Menu order', 'js_composer' ) => 'menu_order',
             ),
             'save_always' => true,
+            "dependency" => array( "element" => "source","value" => 'categories' ),
             'description' => sprintf( __( 'Select how to sort retrieved products. More at %s.', 'js_composer' ), '<a href="http://codex.wordpress.org/Class_Reference/WP_Query#Order_.26_Orderby_Parameters" target="_blank">WordPress codex page</a>' ),
         ),
         array(
@@ -221,6 +222,7 @@ vc_map( array(
                 __( 'Ascending', 'js_composer' ) => 'ASC',
             ),
             'save_always' => true,
+            "dependency" => array( "element" => "source","value" => 'categories' ),
             'description' => sprintf( __( 'Designates the ascending or descending order. More at %s.', 'js_composer' ), '<a href="http://codex.wordpress.org/Class_Reference/WP_Query#Order_.26_Orderby_Parameters" target="_blank">WordPress codex page</a>' ),
         ),
 

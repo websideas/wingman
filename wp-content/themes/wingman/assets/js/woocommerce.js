@@ -30,6 +30,10 @@
             'header': '.accordions-title' 
         });
 
+
+        $('.woocommerce-category-products-tab').tabs();
+
+
         $('.woocommerce-products-carousel-tab').each(function(){
             var $this = $(this),
                 $heading = $this.find('.block-heading-tabs'),
@@ -107,9 +111,6 @@
     function init_carouselwoo(){
 
         $('.woocommerce-carousel-wrapper').each(function(){
-
-
-
 
 
             var wooCarousel = $(this),

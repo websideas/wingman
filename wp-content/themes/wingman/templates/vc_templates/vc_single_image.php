@@ -197,6 +197,7 @@ $class_to_filter = '';
 
 if($style == 'creative-left' || $style =='creative-right'){
     $class_to_filter .= 'creative-content ';
+    $class_to_filter .= 'creative-content-'.$style.' ';
 }
 
 if($style =='creative-left'){

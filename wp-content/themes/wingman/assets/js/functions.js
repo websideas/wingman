@@ -568,7 +568,7 @@
         console.log(elem);
         var thumbnail_url;
         elem.find('.owl-item').each(function(){
-            thumbnail_url[] = $(this).find('');
+            thumbnail_url = $(this).find('');
         });
     }
 
