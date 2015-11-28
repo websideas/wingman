@@ -117,6 +117,9 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
             $class_animation = ( $page_animation == 1 && ( $blog_type == 'grid' || $blog_type == 'list' || $blog_type == 'zigzag' ) ) ? 'animation-effect' : '';
             $data_animation = ( $page_animation == 1 && ( $blog_type == 'grid' || $blog_type == 'list' || $blog_type == 'zigzag' ) ) ? 'data-animation="fadeInUp"' : '';
             
+            $animate_classic = ( $page_animation == 1 && ($blog_type == 'classic' || $blog_type == 'zigzag') ) ? 'animation-effect' : ' ';
+            $data_animate_classic = ( $page_animation == 1 && ($blog_type == 'classic' || $blog_type == 'zigzag') ) ? 'data-animation="fadeInUp" data-timeeffect="0"' : ' ';
+
             $align = '';
             if( $blog_type == 'packery' || $blog_type == 'justified' ){
                 $align = 'style="text-align:'.$blog_align.'"';

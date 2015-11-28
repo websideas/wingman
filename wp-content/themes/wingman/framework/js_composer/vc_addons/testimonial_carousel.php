@@ -164,15 +164,16 @@ class WPBakeryShortCode_Testimonial_Carousel extends WPBakeryShortCode_VC_Custom
 
 
         $query = new WP_Query( $args );
-        if ( $query->have_posts() ) :
 
+        if ( $query->have_posts() ) :
 
             $carousel_ouput = kt_render_carousel(apply_filters( 'kt_render_args', $atts), 'testimonial-layout-'.esc_attr($layout));
 
             $carousel_html = '';
 
             while ( $query->have_posts() ) : $query->the_post();
-                $carousel_html .= '<div class="testimonial-item testimonial-layout-'.esc_attr($layout).'">';
+                $thumbnail = get_thumbnail_attachment(get_post_thumbnail_id(get_the_ID()), 'small');
+                $carousel_html .= '<div class="testimonial-item testimonial-layout-'.esc_attr($layout).'" data-thumbnail="'.$thumbnail['url'].'">';
                 $testimonial_content = '<div class="testimonial-content">'.do_shortcode(get_the_content()).'</div>';
                 $link = rwmb_meta('_kt_testimonial_link');
                 if( $link ){
@@ -181,17 +182,12 @@ class WPBakeryShortCode_Testimonial_Carousel extends WPBakeryShortCode_VC_Custom
                     $testimonial_author = '<h4 class="testimonial-author" '.$style_title.'>'.get_the_title().'</h4>';
                 }
                 $testimonial_author .= '<div class="testimonial-info" '.$style_company.'>'.rwmb_meta('_kt_testimonial_company').'</div>';
-                $testimonial_img = (has_post_thumbnail()) ? '<div class="testimonial-img">'.get_the_post_thumbnail( get_the_ID(), 'small', array('class'=>"img-responsive")).'</div>' : '';
+                $testimonial_rate = '<div class="testimonial-rate rate-'.rwmb_meta('_kt_rate').'"><span class="star-active"></span></div>';
 
-                if($layout == '2'){
-                    $carousel_html .= sprintf('<div class="testimonial-author-infos">%s %s</div>%s', $testimonial_img, $testimonial_author, $testimonial_content);
-                }elseif($layout == '3'){
-                    $carousel_html .= sprintf('<div class="testimonial-left display-cell">%s</div><div class="testimonial-right display-td"><div class="testimonial-author-infos">%s</div>%s</div>',$testimonial_img , $testimonial_author, $testimonial_content);
-                }else{
-                    $carousel_html .= sprintf('%s <div class="testimonial-author-infos">%s %s</div>', $testimonial_content, $testimonial_img, $testimonial_author );
-                }
+                $carousel_html .= sprintf('%s <div class="testimonial-author-infos"> %s %s</div>', $testimonial_content, $testimonial_author, $testimonial_rate );
 
                 $carousel_html .= '</div><!-- .testimonial-posts-item -->';
+
             endwhile; wp_reset_postdata();
 
             $output .= str_replace('%carousel_html%', $carousel_html, $carousel_ouput);
@@ -226,9 +222,8 @@ vc_map( array(
             'heading' => __( 'Layout', THEME_LANG ),
             'param_name' => 'layout',
             'value' => array(
-                __( 'Content + Avatar + Title aligned center', THEME_LANG ) => '1',
-                __( 'Avatar + Title + Content aligned center', THEME_LANG ) => '2',
-                __( 'Avatar beside Title and Content aligned with Title', THEME_LANG ) => '3',
+                __( 'Layout 1', THEME_LANG ) => '1',
+                __( 'Layout 2', THEME_LANG ) => '2',
             ),
             'description' => __( 'Select your layout.', THEME_LANG ),
             "admin_label" => true,
