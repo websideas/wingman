@@ -1337,7 +1337,6 @@ body{
 			}
 			.functional-buttons-product{
 				float: left;
-    			width:82px;
 			}
 			.compare-button,
 			.yith-wcwl-add-to-wishlist{
@@ -1357,20 +1356,65 @@ body{
 			}
 		}
 		form.cart{
+      .variation_form_section,
 			.variations{
-				margin-bottom: 30px;
+				  margin-bottom: 30px;
+          padding-bottom: 20px;
 			    width: 100%;
 			    border-bottom:1px solid $border-second-color;
+          .variations-table,
 			    td.variations-label{
-					padding: 5px 12px 15px 0;
+					   padding: 5px 12px 15px 0;
     				vertical-align: top;
     				label{
     					font-weight: normal;
 					    margin: 0;
 					    padding: 0;
 					    color:$title-text;
+              min-width: 100px;
+              display: inline-block;
     				}
+            .swatch-wrapper{
+              margin: 5px;
+              @include border-radius(100%);
+              background: $qty_bg;
+              text-align: center;
+              padding: 0;
+              .swatch-anchor{
+                @include border-radius(100%);
+                padding: 0;
+              } 
+              img{
+                vertical-align: -moz-middle-with-baseline;
+                width: auto;
+              }
+            }
+            .attribute_pa_size_picker{
+              .swatch-wrapper{
+                border: none;
+                &:hover,&.selected{
+                  background: $primary-color;
+                }
+              }
+            }
+            .attribute_pa_color_picker{
+              .swatch-wrapper{
+                border: 1px solid transparent;
+                .swatch-anchor{
+                  width: 15px!important;
+                  height: 15px!important;
+                }
+                &:hover,&.selected{
+                  background: $primary-color;
+                }
+              }
+            }
 				}
+        .variations-table{
+          td{
+            padding: 5px 0;
+          }
+        }
 				td.variations-value{
 					border: medium none;
 				    padding: 5px 0 15px;
@@ -1432,12 +1476,16 @@ body{
 		}
 		.cart{
 			.single_add_to_cart_button{
-				margin-right: 1px;
-			    float: left;
-			    height: 40px;
-			    border: 2px solid $title-text;
-			    background: $title-text;
-			    color: $white;
+          letter-spacing: 0;
+          &.button{
+            margin-right: 1px;
+            float: left;
+            height: 40px;
+            border: 2px solid $title-text;
+            background: $title-text;
+            color: $white;
+            text-transform: uppercase;
+          }
 			    &:hover{
 			    	color: $white;
 				    border-color: $primary-color;
