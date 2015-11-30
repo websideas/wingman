@@ -231,7 +231,6 @@
         background: $primary-color;
       }
       &:before{
-        content: "";
         font-size: 14px;
         @include FontAwesome('\f08a');
         height: 100%;
@@ -249,8 +248,10 @@
   }
   .yith-wcwl-wishlistaddedbrowse,
   .yith-wcwl-wishlistexistsbrowse{
-    &:before{
-      content: '\f004';
+    a{
+      &:before{
+        content: '\f004';
+      }
     }
   }
 
@@ -272,13 +273,13 @@
   .button.loading{
     @include opacity(1);
   }
-
+ 
   .product-quick-view.loading:before,
   .button.loading:before{
-    font-family: "Simple-Line-Icons";
-    content: "\e098";
+    @include FontAwesome('\f110');
     @include animation(spin 2s linear infinite);
     @include opacity(0.5);
+    font-size: 20px;
   }
 
   .button.addtocart_button.loading:before{
@@ -304,15 +305,14 @@
       margin: 0 !important;
       position: absolute;
       top: 0;
-      width: 40px !important;
+      width: 100% !important;
       font-size: 20px;
       font-variant: normal;
       font-weight: normal;
       text-indent: 0;
       background: $primary-color;
-      span{
+      i{
         @include opacity(0.5);
-        @include animation(spin 2s linear infinite);
         display: block;
         line-height: 40px;
       }
@@ -344,8 +344,8 @@
 	    &:before{
 	    	background: none !important;
 		    color: $white;
-		    content: "\e098";
-		    font-family: "Simple-Line-Icons";
+		    @include FontAwesome('\f110');
+        @include animation(spin 2s linear infinite);
 		    font-size: 20px;
 		    height: 100%;
 		    left: 0;
@@ -441,6 +441,11 @@
       display: none;
     }
   }
+}
+
+.form-wppp-select.products-per-page{
+  float: left!important;
+  margin: 0 28px 0 0!important;
 }
 
 /** ================================================
@@ -966,11 +971,11 @@ body{
     			margin-bottom: 25px;
 			    position: relative;
 			    overflow: hidden;
-			    border:1px solid #ebebeb;
 			    a.product-thumbnail{
 			    	display: block;
 				    overflow: hidden;
 				    position: relative;
+            border:1px solid $border-image;
 			    }
 			    .product-thumbnail-effect{
 			    	img.second-img{
@@ -1003,7 +1008,7 @@ body{
     		}
     		&:hover{
     			.addtocart_button,
-    			.tool-inner{
+    			.product-image-tool{
     				@include transform(translatey(0));
     			}
     			.added_to_cart{
@@ -1070,12 +1075,12 @@ body{
     			}
 			}
 			.kt-woocommerce-tool-lists{
-				width:265px;
+				width:266px;
 			    position: relative;
 			    height:40px;
 			    margin-top: 60px;
 			    display: block;
-				.tool-inner,
+				.product-image-tool,
 				.added_to_cart,
 				.addtocart_button{
 					@include transform(translateY(0));
@@ -1131,13 +1136,18 @@ body{
 	}
 	.product-image-tool{
 		width:50%;
-	    position: absolute;
-	    bottom:0;
-	    left: -1px;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    @include transform(translatey(40px));
+    @include transition();
+    .tooltip{
+      white-space: nowrap;
+    }
 	}
 	.tool-3{
 		.tool-inner{
-			width: 33.33%;
+			width: 33.3333%;
 		}
 	}
 	.tool-2{
@@ -1152,20 +1162,10 @@ body{
 	}
 	.tool-inner{
 	    height: 40px;
-	    padding: 0 0 0 1px;
-	    @include transition();
+	    padding: 0;
 	    z-index: 1;
 	    float: left;
-	    @include transform(translatey(40px));
-	    &:nth-of-type(1){
-			@include css3-prefix('transition-delay', '.1s');
-	    }
-	    &:nth-of-type(2){
-			@include css3-prefix('transition-delay', '.2s');
-	    }
-	    &:nth-of-type(3){
-			@include css3-prefix('transition-delay', '.3s');
-	    }
+      padding-right: 1px;
 	    > div, > a{
 	    	width: 100%!important;
 	    	margin: 0!important;
@@ -1185,7 +1185,6 @@ body{
 	    font-weight:600;
 	    @include transform(translatey(40px));
 	    @include transition();
-	    @include css3-prefix('transition-delay', '.4s');
 	    text-transform: uppercase;
 	    text-align: center;
 	    letter-spacing: 0;

@@ -830,18 +830,39 @@ remove_filter ('the_content', 'fbcommentbox', 100);
 /**
  * Add Category by Search form 
  **/
-add_action('pre_get_posts', 'search_by_cat'); 
-if ( ! function_exists( 'search_by_cat' ) ) :
-    function search_by_cat() {     
-        global $wp_query;     
-        if (is_search()) {         
-            $cat = intval($_GET['cat']);         
-            $cat = ($cat > 0) ? $cat : '';         
-            $wp_query->query_vars['cat'] = $cat;     
-        } 
-    }
-endif;
+function advanced_search_query($query) {
 
+    if($query->is_search()) {
+        // category terms search.
+        if (isset($_GET['product_cat']) && !empty($_GET['product_cat'])) {
+            $query->set('tax_query', array(array(
+                'taxonomy' => 'product_cat',
+                'field' => 'slug',
+                'terms' => array($_GET['product_cat']))
+            ));
+        }
+        return $query;
+    }
+}
+add_action('pre_get_posts', 'advanced_search_query', 1000);
+
+/**
+ * Add Category by Search form Product
+ **/
+function kt_get_categories_product(){
+    global $post;
+    $categories = get_terms( 'product_cat' );
+
+    
+    if( count($categories) > 0 ){
+        echo '<select id="product_cat" class="postform" name="product_cat">';
+            echo '<option value="-1">'.__('All Categories', THEME_LANG).'</option>';
+            foreach ($categories as $key => $value) {
+                echo '<option value="'.$value->slug.'">'.$value->name.'</option>';
+            }
+        echo '</select>';
+    }
+}
 
 /**
  * Add popup 

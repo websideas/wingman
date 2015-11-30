@@ -23,5 +23,14 @@
  * Title:   SCSS VARIABLES
  * Author:  http://themeforest.net/user/Kite-Themes
 ------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .main-class.col-md-12 .entry-header,
+  .main-class.col-md-12 .entry-content-outer,
+  .main-class.col-md-12 nav.post-navigation,
+  .main-class.col-md-12 .author-info,
+  .main-class.col-md-12 #related-article,
+  .main-class.col-md-12 #comments {
+    margin-left: 0;
+    margin-right: 0; } }
 
 /*# sourceMappingURL=responsive.css.map */

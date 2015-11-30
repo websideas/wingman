@@ -387,7 +387,10 @@
      Loadmore append
      --------------------------------------------- */
     function loadmore_append(){
-        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="tooltip"]').tooltip({
+            container:"body",
+            delay: { "show": 100, "hide": 100 }
+        });
         $('.loadmore-item .wp-audio-shortcode, .loadmore-item .wp-video-shortcode').mediaelementplayer( );
         init_carousel();
     }
@@ -412,7 +415,10 @@
         "use strict";
         
         // Tooltips (bootstrap plugin activated)
-        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="tooltip"]').tooltip({
+            container:"body",
+            delay: { "show": 100, "hide": 100 }
+        });
 
         // Skill bar
         if (typeof $.fn.waypoint !== 'undefined') {

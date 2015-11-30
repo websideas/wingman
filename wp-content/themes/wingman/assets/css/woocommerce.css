@@ -222,7 +222,6 @@
   .woocommerce .yith-wcwl-wishlistaddedbrowse a.add_to_wishlist:before,
   .woocommerce .yith-wcwl-wishlistexistsbrowse a:before,
   .woocommerce .yith-wcwl-wishlistexistsbrowse a.add_to_wishlist:before {
-    content: "";
     font-size: 14px;
     font-family: FontAwesome;
     content: "";
@@ -238,8 +237,8 @@
     color: #FFFFFF;
     width: 100%;
     text-align: center; }
-.woocommerce .yith-wcwl-wishlistaddedbrowse:before,
-.woocommerce .yith-wcwl-wishlistexistsbrowse:before {
+.woocommerce .yith-wcwl-wishlistaddedbrowse a:before,
+.woocommerce .yith-wcwl-wishlistexistsbrowse a:before {
   content: '\f004'; }
 .woocommerce .product-quick-view:before {
   font-family: FontAwesome;
@@ -268,8 +267,10 @@
   opacity: 1; }
 .woocommerce .product-quick-view.loading:before,
 .woocommerce .button.loading:before {
-  font-family: "Simple-Line-Icons";
-  content: "\e098";
+  font-family: FontAwesome;
+  content: "";
+  font-style: normal;
+  font-weight: normal;
   -webkit-animation: spin 2s linear infinite;
   -khtml-animation: spin 2s linear infinite;
   -moz-animation: spin 2s linear infinite;
@@ -283,7 +284,8 @@
   -moz-opacity: 0.5;
   -ms-opacity: 0.5;
   -o-opacity: 0.5;
-  opacity: 0.5; }
+  opacity: 0.5;
+  font-size: 20px; }
 .woocommerce .button.addtocart_button.loading:before {
   display: none; }
 .woocommerce input#submit.loading:after,
@@ -303,13 +305,13 @@
   margin: 0 !important;
   position: absolute;
   top: 0;
-  width: 40px !important;
+  width: 100% !important;
   font-size: 20px;
   font-variant: normal;
   font-weight: normal;
   text-indent: 0;
   background: #82c14f; }
-  .woocommerce .yith-wcwl-add-to-wishlist .ajax-loading span {
+  .woocommerce .yith-wcwl-add-to-wishlist .ajax-loading i {
     filter: alpha(opacity=50);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     -webkit-opacity: 0.5;
@@ -318,12 +320,6 @@
     -ms-opacity: 0.5;
     -o-opacity: 0.5;
     opacity: 0.5;
-    -webkit-animation: spin 2s linear infinite;
-    -khtml-animation: spin 2s linear infinite;
-    -moz-animation: spin 2s linear infinite;
-    -ms-animation: spin 2s linear infinite;
-    -o-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
     display: block;
     line-height: 40px; }
 
@@ -344,8 +340,16 @@
   .woocommerce.compare-button .blockUI.blockOverlay:before {
     background: none !important;
     color: #FFFFFF;
-    content: "\e098";
-    font-family: "Simple-Line-Icons";
+    font-family: FontAwesome;
+    content: "";
+    font-style: normal;
+    font-weight: normal;
+    -webkit-animation: spin 2s linear infinite;
+    -khtml-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    -ms-animation: spin 2s linear infinite;
+    -o-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
     font-size: 20px;
     height: 100%;
     left: 0;
@@ -448,6 +452,10 @@
   .woocommerce-page .woocommerce-info :before,
   .woocommerce-page .woocommerce-message :before {
     display: none; }
+
+.form-wppp-select.products-per-page {
+  float: left !important;
+  margin: 0 28px 0 0 !important; }
 
 /** ================================================
     2. Woocommerce shopping cart
@@ -911,12 +919,12 @@ body .mCSB_scrollTools {
     .woocommerce ul.shop-products li.product .product-image-container {
       margin-bottom: 25px;
       position: relative;
-      overflow: hidden;
-      border: 1px solid #ebebeb; }
+      overflow: hidden; }
       .woocommerce ul.shop-products li.product .product-image-container a.product-thumbnail {
         display: block;
         overflow: hidden;
-        position: relative; }
+        position: relative;
+        border: 1px solid #ebebeb; }
       .woocommerce ul.shop-products li.product .product-image-container .product-thumbnail-effect img.second-img {
         left: 0;
         filter: alpha(opacity=0);
@@ -958,7 +966,7 @@ body .mCSB_scrollTools {
       -o-opacity: 1;
       opacity: 1; }
     .woocommerce ul.shop-products li.product:hover .addtocart_button,
-    .woocommerce ul.shop-products li.product:hover .tool-inner {
+    .woocommerce ul.shop-products li.product:hover .product-image-tool {
       -webkit-transform: translatey(0);
       -khtml-transform: translatey(0);
       -moz-transform: translatey(0);
@@ -1017,12 +1025,12 @@ body .mCSB_scrollTools {
       float: right;
       width: 50%; }
   .woocommerce ul.shop-products.lists .kt-woocommerce-tool-lists {
-    width: 265px;
+    width: 266px;
     position: relative;
     height: 40px;
     margin-top: 60px;
     display: block; }
-    .woocommerce ul.shop-products.lists .kt-woocommerce-tool-lists .tool-inner,
+    .woocommerce ul.shop-products.lists .kt-woocommerce-tool-lists .product-image-tool,
     .woocommerce ul.shop-products.lists .kt-woocommerce-tool-lists .added_to_cart,
     .woocommerce ul.shop-products.lists .kt-woocommerce-tool-lists .addtocart_button {
       -webkit-transform: translateY(0);
@@ -1092,51 +1100,33 @@ body .mCSB_scrollTools {
   width: 50%;
   position: absolute;
   bottom: 0;
-  left: -1px; }
+  left: 0;
+  -webkit-transform: translatey(40px);
+  -khtml-transform: translatey(40px);
+  -moz-transform: translatey(40px);
+  -ms-transform: translatey(40px);
+  -o-transform: translatey(40px);
+  transform: translatey(40px);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -khtml-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -ms-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s; }
+  .woocommerce .product-image-tool .tooltip {
+    white-space: nowrap; }
 .woocommerce .tool-3 .tool-inner {
-  width: 33.33%; }
+  width: 33.3333%; }
 .woocommerce .tool-2 .tool-inner {
   width: 50%; }
 .woocommerce .tool-1 .tool-inner {
   width: 100%; }
 .woocommerce .tool-inner {
   height: 40px;
-  padding: 0 0 0 1px;
-  -webkit-transition: all 0.2s ease-in-out 0s;
-  -khtml-transition: all 0.2s ease-in-out 0s;
-  -moz-transition: all 0.2s ease-in-out 0s;
-  -ms-transition: all 0.2s ease-in-out 0s;
-  -o-transition: all 0.2s ease-in-out 0s;
-  transition: all 0.2s ease-in-out 0s;
+  padding: 0;
   z-index: 1;
   float: left;
-  -webkit-transform: translatey(40px);
-  -khtml-transform: translatey(40px);
-  -moz-transform: translatey(40px);
-  -ms-transform: translatey(40px);
-  -o-transform: translatey(40px);
-  transform: translatey(40px); }
-  .woocommerce .tool-inner:nth-of-type(1) {
-    -webkit-transition-delay: .1s;
-    -khtml-transition-delay: .1s;
-    -moz-transition-delay: .1s;
-    -ms-transition-delay: .1s;
-    -o-transition-delay: .1s;
-    transition-delay: .1s; }
-  .woocommerce .tool-inner:nth-of-type(2) {
-    -webkit-transition-delay: .2s;
-    -khtml-transition-delay: .2s;
-    -moz-transition-delay: .2s;
-    -ms-transition-delay: .2s;
-    -o-transition-delay: .2s;
-    transition-delay: .2s; }
-  .woocommerce .tool-inner:nth-of-type(3) {
-    -webkit-transition-delay: .3s;
-    -khtml-transition-delay: .3s;
-    -moz-transition-delay: .3s;
-    -ms-transition-delay: .3s;
-    -o-transition-delay: .3s;
-    transition-delay: .3s; }
+  padding-right: 1px; }
   .woocommerce .tool-inner > div, .woocommerce .tool-inner > a {
     width: 100% !important;
     margin: 0 !important; }
@@ -1164,12 +1154,6 @@ body .mCSB_scrollTools {
   -ms-transition: all 0.2s ease-in-out 0s;
   -o-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
-  -webkit-transition-delay: .4s;
-  -khtml-transition-delay: .4s;
-  -moz-transition-delay: .4s;
-  -ms-transition-delay: .4s;
-  -o-transition-delay: .4s;
-  transition-delay: .4s;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0;

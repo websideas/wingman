@@ -21,3 +21,16 @@
 @import 'variables';
 
 
+@media (max-width: 767px) {
+	.main-class.col-md-12{
+	  .entry-header,
+	  .entry-content-outer,
+	  nav.post-navigation,
+	  .author-info,
+	  #related-article,
+	  #comments{
+	    margin-left:0;
+	    margin-right:0;
+	  }
+	}
+}
