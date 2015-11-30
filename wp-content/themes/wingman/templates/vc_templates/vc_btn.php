@@ -91,6 +91,7 @@ if ( 'true' === $add_icon ) {
 		$icon_class = 'fa fa-adjust';
 	}
 
+
     $icon_class = $button_icon;
 
 	if ( $icon_wrapper ) {
@@ -152,6 +153,10 @@ if ( 'custom' === $style ) {
 	}
 } else {
 	$button_classes[] = 'vc_btn3-color-' . $color;
+}
+
+if($letter_spacing){
+    $styles[] = 'letter-spacing: '.$letter_spacing.'px;';
 }
 
 if ( $styles ) {
