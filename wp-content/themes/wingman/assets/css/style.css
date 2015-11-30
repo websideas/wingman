@@ -3400,6 +3400,85 @@ form.wpcf7-form p {
 .widget_kt_contactinfo .contact-info-wrapper {
   margin-bottom: 0; }
 
+/**
+* 11.3. Skill
+**/
+.kt-skill-wrapper {
+  margin-bottom: 30px; }
+  .kt-skill-wrapper .kt-skill-item-wrapper {
+    margin-bottom: 30px; }
+    .kt-skill-wrapper .kt-skill-item-wrapper:last-child {
+      margin-bottom: 0; }
+    .kt-skill-wrapper .kt-skill-item-wrapper .kt-skill-content,
+    .kt-skill-wrapper .kt-skill-item-wrapper .kt-skill-bg {
+      position: relative; }
+    .kt-skill-wrapper .kt-skill-item-wrapper .kt-skill-bg {
+      background: #ebebeb; }
+    .kt-skill-wrapper .kt-skill-item-wrapper .kt-skill-bar {
+      width: 0;
+      -webkit-transition: width 1s linear;
+      -khtml-transition: width 1s linear;
+      -moz-transition: width 1s linear;
+      -ms-transition: width 1s linear;
+      -o-transition: width 1s linear;
+      transition: width 1s linear;
+      overflow: hidden;
+      position: relative; }
+    .kt-skill-wrapper .kt-skill-item-wrapper .kt-skill-bg-accent .kt-skill-bar {
+      background: #82c14f; }
+
+.kt-style-inner .kt-skill-bar {
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%; }
+
+.kt-skill-bar span {
+  padding: 0;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+.kt-skill-bar.striped span {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -khtml-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  -webkit-background-size: 40px;
+  -khtml-background-size: 40px;
+  -moz-background-size: 40px;
+  -ms-background-size: 40px;
+  -o-background-size: 40px;
+  background-size: 40px; }
+
+.kt-skill-text {
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #252525;
+  letter-spacing: 0.2em; }
+
+.kt-style-before .kt-skill-text {
+  margin: 0 0 18px;
+  padding: 0; }
+  .kt-style-before .kt-skill-text span {
+    float: right; }
+
+.kt-style-after .kt-skill-text {
+  margin-top: 10px; }
+  .kt-style-after .kt-skill-text span {
+    float: right; }
+
+.kt-style-inner .kt-skill-text {
+  padding: 0 5px;
+  margin: 0; }
+
 /* ==============================
    11. Page Content
    ============================== */
