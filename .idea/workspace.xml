@@ -2,22 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c7cfb02-0be5-4605-a0ec-58a67682dd43" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/clients_carousel.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/clients_carousel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/js/functions.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/js/functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/icon_box.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/icon_box.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_bridge.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_bridge.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_update.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/products_carousel_tab.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/products_carousel_tab.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/images/colorpicker/blank.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/images/colorpicker/colorpicker_background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/images/colorpicker/colorpicker_hex.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/images/colorpicker/colorpicker_hsb_b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/images/colorpicker/colorpicker_hsb_h.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/images/colorpicker/colorpicker_hsb_s.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/images/colorpicker/colorpicker_indic.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/images/colorpicker/colorpicker_overlay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/images/colorpicker/colorpicker_rgb_b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/images/colorpicker/colorpicker_rgb_g.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/images/colorpicker/colorpicker_rgb_r.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/images/colorpicker/colorpicker_select.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/images/colorpicker/colorpicker_submit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/l.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/product-data-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/images/colorpicker/select.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/xl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/xxl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/changelog.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/woo-includes/class-wc-dependencies.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/classes/class-wc-ex-product-data-tab.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/classes/class-wc-swatch-picker.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/classes/class-wc-swatch-product-term.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/classes/class-wc-swatch-term.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-compatibility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-product-attribute-images.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/classes/class-wc-swatches-product-data-tab.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/css/colorpicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/js/colorpicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/readme.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/js/swatches-and-photos-admin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/js/swatches-and-photos-admin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/css/swatches-and-photos-twenty-twelve.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/css/swatches-and-photos.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/js/swatches-and-photos.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/assets/js/swatches-and-photos.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/templates/single-product/variable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/woo-includes/woo-functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/woocommerce-swatches-template-functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/woocommerce-swatches.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-variation-swatches-and-photos/wpml-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/single-product/add-to-cart/external.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/single-product/add-to-cart/external.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/single-product/add-to-cart/grouped.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/single-product/add-to-cart/grouped.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/single-product/add-to-cart/simple.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/single-product/add-to-cart/simple.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css.map" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/testimonial_carousel.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/testimonial_carousel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_btn.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_btn.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_single_image.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_single_image.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.css.map" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.scss" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wingman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,80 +70,7 @@
     <favorites_list name="wingman" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="woocommerce.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.7058824">
-              <caret line="1973" column="33" selection-start-line="1973" selection-start-column="33" selection-end-line="1973" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="js_composer_update.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_update.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.625">
-              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="js_composer_parrams.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_parrams.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.208333">
-              <caret line="119" column="40" selection-start-line="119" selection-start-column="40" selection-end-line="119" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shortcode-vc-btn.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/config/shortcode-vc-btn.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.75">
-              <caret line="240" column="8" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="41" />
-              <folding>
-                <marker date="1448371205000" expanded="true" signature="7607:7632" placeholder="Select icon ..library...." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vc_icon.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_icon.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-75.0">
-              <caret line="124" column="39" selection-start-line="124" selection-start-column="39" selection-end-line="124" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="js_composer_bridge.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_bridge.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.375">
-              <caret line="71" column="36" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vc_btn.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_btn.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64912283">
-              <caret line="105" column="5" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -152,7 +111,6 @@
         <option value="$PROJECT_DIR$/wp-config.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/scripts.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_icon.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/heading.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/js/woocommerce.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/helpers.php" />
         <option value="&lt;2c89c9bd-0ab6-4323-a130-eed885493f6f&gt;/kitethemes.com/valorous/main/wp-content/themes/valorous/assets/js/functions.js" />
@@ -161,13 +119,14 @@
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/clients_carousel.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/js/functions.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_single_image.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/icon_box.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_update.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/js_composer/config/map.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_bridge.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/heading.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_btn.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_bridge.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.scss" />
       </list>
     </option>
   </component>
@@ -444,7 +403,45 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wingman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wingman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wingman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wingman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -463,92 +460,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js_composer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js_composer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="include" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js_composer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="include" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js_composer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -623,7 +534,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1002" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -631,7 +542,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16979167" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18541667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18541667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23263507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -663,76 +574,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/include/templates/shortcodes/vc_single_image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.875">
-          <caret line="35" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.350877">
-          <caret line="647" column="54" selection-start-line="647" selection-start-column="54" selection-end-line="647" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-icons.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75">
-          <caret line="529" column="42" selection-start-line="529" selection-start-column="42" selection-end-line="529" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/frontend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.833334">
-          <caret line="98" column="85" selection-start-line="98" selection-start-column="85" selection-end-line="98" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.125">
-          <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/core.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3508772">
-          <caret line="166" column="0" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39532164">
-          <caret line="938" column="22" selection-start-line="938" selection-start-column="22" selection-end-line="938" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1961" column="0" selection-start-line="1961" selection-start-column="0" selection-end-line="1961" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65023476">
-          <caret line="1699" column="16" selection-start-line="1699" selection-start-column="16" selection-end-line="1699" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/assets/css/framework-core.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="540" column="0" selection-start-line="540" selection-start-column="0" selection-end-line="540" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box-tabs/tabs.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.034129694">
@@ -816,13 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49122807">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/heading.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61403507">
-          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -946,16 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.625">
-          <caret line="2316" column="3" selection-start-line="2316" selection-start-column="3" selection-end-line="2316" selection-end-column="3" />
-          <folding>
-            <element signature="e#52313#52564#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/include/templates/shortcodes/vc_btn.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22807017">
@@ -964,26 +788,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.625">
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/config/shortcode-vc-cta3.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3508772">
           <caret line="252" column="12" selection-start-line="252" selection-start-column="12" selection-end-line="255" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7058824">
-          <caret line="1973" column="33" selection-start-line="1973" selection-start-column="33" selection-end-line="1973" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1018,16 +826,8 @@
         <state vertical-scroll-proportion="0.29710144">
           <caret line="174" column="14" selection-start-line="174" selection-start-column="14" selection-end-line="174" selection-end-column="14" />
           <folding>
-            <marker date="1448857459000" expanded="true" signature="-1:-1" placeholder="Select image..media..." />
+            <marker date="1448864316000" expanded="true" signature="-1:-1" placeholder="Select image..media..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_parrams.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.208333">
-          <caret line="119" column="40" selection-start-line="119" selection-start-column="40" selection-end-line="119" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1039,36 +839,167 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/config/shortcode-vc-btn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.75">
-          <caret line="240" column="8" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="41" />
-          <folding>
-            <marker date="1448371205000" expanded="true" signature="7607:7632" placeholder="Select icon ..library...." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_icon.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-75.0">
+        <state vertical-scroll-proportion="2.1052632">
           <caret line="124" column="39" selection-start-line="124" selection-start-column="39" selection-end-line="124" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_bridge.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/product_category_banner.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.375">
-          <caret line="71" column="36" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8596491">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+          <folding>
+            <marker date="1444012804000" expanded="true" signature="-1:-1" placeholder="Select icon ..library...." />
+            <marker date="1444012804000" expanded="true" signature="-1:-1" placeholder="Select icon ..library...." />
+            <marker date="1444012804000" expanded="true" signature="-1:-1" placeholder="Select icon ..library...." />
+            <marker date="1444012804000" expanded="true" signature="-1:-1" placeholder="Select icon ..library...." />
+            <marker date="1444012804000" expanded="true" signature="-1:-1" placeholder="Select icon ..library...." />
+            <marker date="1444012804000" expanded="true" signature="-1:-1" placeholder="Select icon ..library...." />
+            <marker date="1444012804000" expanded="true" signature="-1:-1" placeholder="Select icon ..library...." />
+            <marker date="1444012804000" expanded="true" signature="-1:-1" placeholder="Select icon ..library...." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/include/classes/shortcodes/vc-custom-heading.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.25">
+          <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="92" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_btn.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64912283">
-          <caret line="105" column="5" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.47368422">
+          <caret line="164" column="0" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/heading.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31578946">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_bridge.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4385965">
+          <caret line="90" column="20" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/config/shortcode-vc-btn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36842105">
+          <caret line="240" column="41" selection-start-line="240" selection-start-column="41" selection-end-line="240" selection-end-column="41" />
+          <folding>
+            <marker date="1448371205000" expanded="true" signature="-1:-1" placeholder="Select icon ..library...." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_parrams.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.7017543">
+          <caret line="119" column="40" selection-start-line="119" selection-start-column="40" selection-end-line="119" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57894737">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/assets/less/lib/front.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/assets/less/js_composer.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.054347824">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/assets/less/lib/css3_animations.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.5289855">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/assets/less/lib/vc_font.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8846154">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/assets/less/lib/frontend_vc_elements.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8846154">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/assets/less/modules/vc_buttons.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41666666">
+          <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/assets/less/shortcodes/vc_button3.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="556" column="2" selection-start-line="556" selection-start-column="2" selection-end-line="557" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47368422">
+          <caret line="2838" column="0" selection-start-line="2838" selection-start-column="0" selection-end-line="2838" selection-end-column="0" />
+          <folding>
+            <element signature="e#54152#54403#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42391303">
+          <caret line="1386" column="18" selection-start-line="1386" selection-start-column="18" selection-end-line="1386" selection-end-column="18" />
           <folding />
         </state>
       </provider>

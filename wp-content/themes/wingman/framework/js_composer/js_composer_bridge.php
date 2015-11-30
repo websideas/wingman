@@ -81,6 +81,19 @@ vc_add_params("vc_btn", array(
         'param_name' => 'el_class',
         'description' => __( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'js_composer' ),
     ),
+
+    array(
+        "type" => "kt_number",
+        "heading" => __("Letter spacing", THEME_LANG),
+        "param_name" => "letter_spacing",
+        "value" => 0,
+        "min" => 0,
+        "max" => 10,
+        "suffix" => "px",
+        "description" => "",
+        'group' => __( 'Typography', THEME_LANG ),
+    ),
+
 ));
 
 

@@ -1376,7 +1376,7 @@ body .mCSB_scrollTools {
   .woocommerce div.product form.cart .variation_form_section td.variations-label,
   .woocommerce div.product form.cart .variations .variations-table,
   .woocommerce div.product form.cart .variations td.variations-label {
-    padding: 5px 12px 15px 0;
+    padding: 12px 12px 15px 0;
     vertical-align: top; }
     .woocommerce-page div.product form.cart .variation_form_section .variations-table label,
     .woocommerce-page div.product form.cart .variation_form_section td.variations-label label,

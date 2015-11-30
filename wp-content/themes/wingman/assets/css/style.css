@@ -2662,7 +2662,21 @@ article.post-item.post-layout-classic {
     -o-opacity: 1;
     opacity: 1; }
 
-/* Custom VC Icon */
+/*
+ *  11.4 Custom vc Btn3
+ */
+.vc_general.vc_btn3 {
+  font-weight: 600;
+  letter-spacing: 0.2em; }
+  .vc_general.vc_btn3.vc_btn3-size-md {
+    padding: 10px 33px; }
+    .vc_general.vc_btn3.vc_btn3-size-md.vc_btn3-style-outline-custom, .vc_general.vc_btn3.vc_btn3-size-md.vc_btn3-style-outline {
+      padding: 10px 33px; }
+    .vc_general.vc_btn3.vc_btn3-size-md.vc_btn3-icon-left:not(.vc_btn3-o-empty) {
+      padding-left: 48px; }
+    .vc_general.vc_btn3.vc_btn3-size-md.vc_btn3-icon-right:not(.vc_btn3-o-empty) {
+      padding-right: 48px; }
+
 /*
  *  11.4 Custom VC icon
  */

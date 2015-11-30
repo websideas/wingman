@@ -1447,15 +1447,15 @@ body{
 			    border-bottom:1px solid $border-second-color;
           .variations-table,
 			    td.variations-label{
-					   padding: 5px 12px 15px 0;
+					padding: 12px 12px 15px 0;
     				vertical-align: top;
     				label{
-    					font-weight: normal;
-					    margin: 0;
-					    padding: 0;
-					    color:$title-text;
-              min-width: 100px;
-              display: inline-block;
+                      font-weight: normal;
+                      margin: 0;
+                      padding: 0;
+                      color:$title-text;
+                      min-width: 100px;
+                      display: inline-block;
     				}
             .swatch-wrapper{
               margin: 5px;

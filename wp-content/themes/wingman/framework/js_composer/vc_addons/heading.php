@@ -200,7 +200,7 @@ vc_map( array(
         array(
             'type' => 'google_fonts',
             'param_name' => 'google_fonts',
-            'value' => 'font_family:Montserrat|font_style:400%20regular%3A400%3Anormal',
+            'value' => 'font_family:Poppins|font_style:400%20regular%3A400%3Anormal',
             'settings' => array(
                 'fields' => array(
                     'font_family_description' => __( 'Select font family.', 'js_composer' ),
