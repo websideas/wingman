@@ -214,10 +214,14 @@ select {
   width: 100%;
   height: 40px;
   line-height: 1.42857;
-  padding: 6px 12px;
+  padding: 6px 25px 6px 12px; 
   border: 1px solid #f0f0f0;
   cursor: pointer;
   color: $gray;
+  option{
+    padding: 5px;
+    line-height: 24px;
+  }
 }
 
 select:not([multiple]) {
@@ -344,6 +348,7 @@ select:not([multiple]) {
     text-transform: uppercase;
     letter-spacing: 0.2em;
     position: relative;
+    display: inline-block;
     &:after,&:before{
       content: "";
       @include transition();
@@ -1027,6 +1032,46 @@ select:not([multiple]) {
     }
     .widget-container{
       margin-bottom: 25px;
+    }
+    .widget_rss,
+    .widget_pages,
+    .widget_nav_menu,
+    .widget_meta,
+    .widget_archive,
+    .widget_categories,
+    .widget_product_categories,
+    .yith-woocompare-widget{
+      ul{
+        padding-left: 20px;
+        li{
+          margin-bottom: 12px;
+          a{
+            padding: 0;
+            text-transform: none;
+            border: none;
+            line-height: 24px;
+            &:after,&:before{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .widget_recent_entries,
+    .widget_recent_comments{
+      ul{
+        padding-left: 20px;
+        li{
+          margin-bottom: 12px;
+          padding: 0;
+          text-transform: none;
+          border: none;
+          line-height: 24px;
+          &:after,&:before{
+            display: none;
+          }
+        }
+      }
     }
 }
 #footer-copyright {
@@ -1770,6 +1815,7 @@ body.layout-boxed{
     text-align: center;
     max-width: 770px;
     margin: 0 auto;
+    overflow: hidden;
     .postform{
       background: #82c14f url(../images/arrow-form-cat.png) no-repeat right center;   
       color: $white; 
@@ -2027,6 +2073,12 @@ article.post-item {
       border-radius:3px;
       margin-right: 10px;
       line-height: 1;
+      letter-spacing: 0.1em;
+      &:hover,&:focus{
+        border-color: $primary-color;
+        outline: none;
+        color: $primary-color;
+      }
     }
   }
   .entry-share-box{
@@ -2196,6 +2248,9 @@ article.post-item {
     color: $title-text;
     a{
       color: $title-text;
+      &:hover,&:focus{
+        color: $primary-color;
+      }
     }
   }
   .comment-date{
@@ -2247,7 +2302,7 @@ article.post-item {
     top:0;
     right:0;
     a{
-      padding:5px 20px 3px;
+      padding:5px 20px;
       line-height: normal;
       border:2px solid $black;
       text-transform: uppercase;
@@ -2256,6 +2311,10 @@ article.post-item {
       color:$title-text;
       letter-spacing: 0.2em;
       display: inline-block;
+      &:hover,&:focus{
+        color: $primary-color;
+        border-color: $primary-color;
+      }
     }
 }
 #cancel-comment-reply-link {
@@ -2333,6 +2392,18 @@ article.post-item {
     a{
       color: $title-text;
     }
+  }
+}
+
+.main-class.col-md-12{
+  .entry-header,
+  .entry-content-outer,
+  nav.post-navigation,
+  .author-info,
+  #related-article,
+  #comments{
+    margin-left:100px;
+    margin-right:100px;
   }
 }
 
@@ -2437,7 +2508,7 @@ article.post-item.post-layout-classic {
     a{
       color: $main-text;
       &:hover{
-        text-decoration: underline;
+        color: $primary-color;
       }
     }
   } 
@@ -3697,3 +3768,104 @@ form.wpcf7-form{
   }
 }
 
+/*
+ * 14.4. Pagination
+ */
+
+.woocommerce-pagination,
+.pagination {
+    display: block;
+    margin: 20px 0 10px;
+    position: relative;
+    text-align: center;
+    padding: 0 35px;
+}
+.woocommerce{
+  nav.woocommerce-pagination{
+    ul.page-numbers{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border: none;
+      li{
+        border: medium none;
+        float: none;
+        a,span{
+          border: none;
+          display: inline-block;
+          line-height: 1;
+          width: auto;
+          padding: 0 10px;
+          font-size: 14px;
+          margin: 0;
+          color: $title-text;
+          position: relative;
+        }
+        span.current,a:hover,a:focus{
+          color: $primary-color;
+          background: none;
+        }
+        span.current{
+          &:before,&:after{
+            content:"";
+            width:1px;
+            height:11px;
+            background: $primary-color;
+            position: absolute;
+            left:0;
+            top:0;
+          }
+          &:before{
+            left:auto;
+            right:0;
+          }
+        }
+        a.next{
+          margin-left: 45px;
+        }
+        a.prev{
+          margin-right: 45px;
+        }
+      }
+    }
+  }
+}
+.pagination{
+  .page-numbers{
+    border: none;
+    display: inline-block;
+    line-height: 1;
+    width: auto;
+    padding: 0 10px;
+    font-size: 14px;
+    margin: 0;
+    color: $title-text;
+    position: relative;
+    &:hover,&:focus,&.current{
+      color: $primary-color;
+      background: none;
+    }
+  }
+}
+/*
+ * 10.8 Tooltip
+ */
+.tooltip{
+  opacity: 1;
+  font-size: 14px;
+  font-family: $font-stack;
+  .tooltip-inner{
+    @include border-radius(0);
+    padding: 10px 15px;
+  }
+
+  &.top {
+    margin-top: -10px;
+    .tooltip-arrow{
+      border-width: 10px 10px 0;
+      bottom: -5px;
+      left: 50%;
+      margin-left: -7px;
+    }
+  }
+}

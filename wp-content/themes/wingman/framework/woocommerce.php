@@ -627,3 +627,10 @@ function kt_template_single_excerpt(){
 }
 
 add_action( 'woocommerce_sale_sountdown_item', 'kt_template_single_excerpt', 10 );
+
+
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+add_filter( 'wppp_ppp_text', 'kt_replace_text_per_page',10, 2 );
+function kt_replace_text_per_page( $text, $value ){
+    return __( '%s item/pages', THEME_LANG );
+}

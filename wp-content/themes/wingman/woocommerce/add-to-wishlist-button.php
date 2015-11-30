@@ -14,4 +14,4 @@ global $product;
     <?php echo $icon ?>
     <?php echo $label ?>
 </a>
-<span class="ajax-loading"><span class="icon-refresh"></span></span>
+<span class="ajax-loading"><i class="fa fa-spinner fa-spin"></i></span>
