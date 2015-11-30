@@ -235,7 +235,7 @@ vc_map( array(
         array(
             'type' => 'dropdown',
             'heading' => __( 'on Desktop', THEME_LANG ),
-            'param_name' => 'product_columns',
+            'param_name' => 'navigation_always_on',
             'value' => array(
                 __( '1 column', 'js_composer' ) => '1',
                 __( '2 columns', 'js_composer' ) => '2',

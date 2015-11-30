@@ -243,7 +243,6 @@ vc_map( array(
             'heading' => __( 'Custom Icon Color', 'js_composer' ),
             'param_name' => 'custom_color',
             'description' => __( 'Select custom icon color.', 'js_composer' ),
-            'value' => 'fa fa-adjust',
             'dependency' => array(
                 'element' => 'color',
                 'value' => 'custom',
@@ -270,8 +269,6 @@ vc_map( array(
                 __( 'Outline Circle', 'js_composer' ) => 'rounded-outline',
                 __( 'Outline Square', 'js_composer' ) => 'boxed-outline',
                 __( 'Outline Rounded', 'js_composer' ) => 'rounded-less-outline',
-                __( 'Diamond Square', 'js_composer' ) => 'diamond_square',
-                __( 'Hexagonal', 'js_composer' ) => 'hexagonal',
             ),
             'description' => __( 'Select background shape and style for icon.', 'js_composer' ),
             'group' => __( 'Icon', THEME_LANG ),

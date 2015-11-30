@@ -7,15 +7,6 @@ if ( !defined('ABSPATH')) exit;
 add_action( 'vc_after_init', 'kt_add_option_to_vc' );
 function kt_add_option_to_vc() {
 
-    // VC_icon: Add hexagonal and Diamond.
-
-    $background_style = WPBMap::getParam( 'vc_icon', 'background_style' );
-    $background_style['value'][__( 'Diamond Square', THEME_LANG )] = 'diamond_square';
-    $background_style['value'][__( 'Hexagonal', THEME_LANG )] = 'hexagonal';
-    vc_update_shortcode_param( 'vc_icon', $background_style );
-
-
-
     $color_arr = array('vc_btn', 'vc_icon', 'vc_tta_accordion', 'vc_tta_tabs', 'vc_tta_tour');
     foreach($color_arr as $item){
         $button_colors = WPBMap::getParam( $item, 'color' );
@@ -36,8 +27,15 @@ function kt_add_option_to_vc() {
     $image_styles['value'][__( 'Border box Right', THEME_LANG )] = 'border-right';
     $image_styles['value'][__( 'Creative Left', THEME_LANG )] = 'creative-left';
     $image_styles['value'][__( 'Creative Right', THEME_LANG )] = 'creative-right';
-
+    $image_styles['value'][__( 'Creative When hover', THEME_LANG )] = 'creative-hover';
     vc_update_shortcode_param( 'vc_single_image', $image_styles );
+
+
+    $icon_btn = array('i_type', 'i_icon_fontawesome', 'i_icon_openiconic', 'i_icon_typicons', 'i_icon_entypo', 'i_icon_linecons', 'i_icon_pixelicons', 'css_animation', 'el_class');
+    foreach($icon_btn as $item){
+        vc_remove_param('vc_btn', $item);
+    }
+
 
 }
 

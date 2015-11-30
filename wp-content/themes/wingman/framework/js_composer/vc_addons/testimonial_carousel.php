@@ -41,14 +41,14 @@ class WPBakeryShortCode_Testimonial_Carousel extends WPBakeryShortCode_VC_Custom
             'tablet' => 1,
             'mobile' => 1,
 
-            'navigation' => 'true',
-            'navigation_always_on' => 'true',
+            'navigation' => true,
+            'navigation_always_on' => true,
             'navigation_position' => 'center',
             'navigation_style' => '',
             'navigation_icon' => 'fa fa-long-arrow-left|fa fa-long-arrow-right',
             'callback' => 'kt_testimonial_thumbnail',
 
-            'pagination' => 'true',
+            'pagination' => true,
 
             'css_animation' => '',
             'el_class' => '',
@@ -56,7 +56,6 @@ class WPBakeryShortCode_Testimonial_Carousel extends WPBakeryShortCode_VC_Custom
         ), $atts);
 
         $atts['carousel_skin'] = $atts['skin'];
-
         extract($atts);
 
         $args = array(
@@ -484,7 +483,7 @@ vc_map( array(
             'type' => 'kt_switch',
             'heading' => __( 'Pagination', THEME_LANG ),
             'param_name' => 'pagination',
-            'value' => 'false',
+            'value' => 'true',
             "description" => __("Show pagination in carousel", THEME_LANG),
             'group' => __( 'Carousel', THEME_LANG )
         ),
