@@ -65,6 +65,25 @@ vc_add_params("vc_tta_tour", $tabs_arr);
 vc_add_params("vc_tta_tabs", $tabs_arr);
 
 
+vc_add_params("vc_btn", array(
+    array(
+        "type" => "kt_icons",
+        'heading' => __( 'Choose your icon', 'js_composer' ),
+        'param_name' => 'button_icon',
+        "value" => '',
+        'description' => __( 'Use existing font icon or upload a custom image.', THEME_LANG ),
+        'dependency' => array( 'element' => 'add_icon',  'not_empty' => true ),
+    ),
+    vc_map_add_css_animation( true ),
+    array(
+        'type' => 'textfield',
+        'heading' => __( 'Extra class name', 'js_composer' ),
+        'param_name' => 'el_class',
+        'description' => __( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'js_composer' ),
+    ),
+));
+
+
 
 
 $composer_addons = array(

@@ -188,7 +188,7 @@ if ( vc_has_class( 'prettyphoto', $el_class ) ) {
     $el_class = vc_remove_class( 'prettyphoto', $el_class );
 }
 
-if($style == 'border-left' || $style == 'border-right' || $style == 'border-box' || $style == 'creative-left' || $style =='creative-right'){
+if($style == 'border-left' || $style == 'border-right' || $style == 'border-box' || $style == 'creative-left' || $style =='creative-right' || $style =='creative-hover'){
     $img['thumbnail'] = '<span class="creative-inner"><span class="creative-inner-content">'.$img['thumbnail'].'</span></span>';
 }
 
@@ -200,7 +200,7 @@ if($style == 'creative-left' || $style =='creative-right'){
     $class_to_filter .= 'creative-content-'.$style.' ';
 }
 
-if($style =='creative-left'){
+if($style == 'creative-left'){
     $style .= ' border-left';
 }elseif($style =='creative-right'){
     $style .= ' border-right';

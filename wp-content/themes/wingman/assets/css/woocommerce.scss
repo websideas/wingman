@@ -1988,6 +1988,7 @@ body{
  * category-products-tab
  */
 .woocommerce-category-products-tab{
+  margin-bottom: 30px;
   ul.block-heading-tabs{
     padding: 0;
     margin: 0 0 55px;
@@ -2086,7 +2087,16 @@ body{
     }
   }
 
-  &.carousel-light{
+  &.skin-light{
+    ul.block-heading-tabs {
+      li{
+        a:hover,
+        &.ui-tabs-active a{
+          color: $white;
+        }
+      }
+    }
+
     .woocommerce{
       ul.shop-products{
         li.product{
@@ -2102,18 +2112,7 @@ body{
         }
       }
     }
-  }
 
-
-  &.skin-light{
-    ul.block-heading-tabs {
-      li{
-        a:hover,
-        &.ui-tabs-active a{
-          color: $white;
-        }
-      }
-    }
   }
 
 }

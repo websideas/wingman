@@ -429,7 +429,7 @@
             }, { offset:'85%' });
 
 
-            $('.creative-left, .creative-right, .kt-heading-wrapper').each(function() {
+            $('.creative-left, .creative-right, .kt-heading-wrapper, .border-left, .border-right').each(function() {
                 var $this = $(this);
                 $this.waypoint(function () {
                     $this.addClass('animated');
