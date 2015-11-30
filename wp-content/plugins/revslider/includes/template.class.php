@@ -43,7 +43,8 @@ class RevSliderTemplate {
 			'code' => urlencode($code),
 			'shop_version' => urlencode($shop_version),
 			'version' => urlencode(RevSliderGlobals::SLIDER_REVISION),
-			'uid' => urlencode($uid)
+			'uid' => urlencode($uid),
+			'product' => urlencode('revslider')
 		);
 		
 		$upload_dir = wp_upload_dir(); // Set upload folder
@@ -134,7 +135,8 @@ class RevSliderTemplate {
 			$rattr = array(
 				'code' => urlencode($code),
 				'shop_version' => urlencode($shop_version),
-				'version' => urlencode(RevSliderGlobals::SLIDER_REVISION)
+				'version' => urlencode(RevSliderGlobals::SLIDER_REVISION),
+				'product' => urlencode('revslider')
 			);
 			
 			$request = wp_remote_post($this->templates_url.$this->templates_list, array(
@@ -626,12 +628,23 @@ class RevSliderTemplate {
 			}
 			?>
 			>
-			<!--div class="template_title"><?php echo (isset($template['title'])) ? $template['title'] : ''; ?></div-->
+			<?php /* <!--div class="template_title"><?php echo (isset($template['title'])) ? $template['title'] : ''; ?></div-->*/ ?>
 			<div class="not-imported-overlay"></div>
-			<div style="position:absolute;top:10px;right:10px;width:35px;text-align:right;z-index:2">				
-				<div class="icon-install_slider"></div>
-			</div>
-			
+			<?php
+			if($deny == ''){
+				?>
+				<div style="position:absolute;top:10px;right:10px;width:35px;text-align:right;z-index:2">
+					<div class="icon-install_slider"></div>
+				</div>
+				<?php
+			}else{
+				?>
+				<div class="rs-required-to-dl">
+					<?php _e('V', 'revslider'); ?> <?php echo $template['required']; ?>+
+				</div>
+				<?php
+			}
+			?>
 		</div>
 		<div style="position:absolute;top:10px;right:50px;width:35px;text-align:right;z-index:2">
 			<?php if(isset($template['preview']) && $template['preview'] !== ''){ ?>
@@ -660,7 +673,6 @@ class RevSliderTemplate {
 				$deny = ' deny_download';
 			}
 		}
-		
 		?>
 		<div class="template_slide_item_import">
 			<div class="template_slide_item_img<?php echo $deny; ?>" 
@@ -680,9 +692,21 @@ class RevSliderTemplate {
 			>
 				<div class="not-imported-overlay"></div>
 			</div>
-			<div style="position:absolute;top:10px;right:10px;width:100%;text-align:right;z-index:2">
-				<div class="icon-install_slider"></div>
-			</div>
+			<?php
+			if($deny == ''){ //add needed version number here
+				?>
+				<div style="position:absolute;top:10px;right:10px;width:100%;text-align:right;z-index:2">
+					<div class="icon-install_slider"></div>
+				</div>
+				<?php
+			}else{
+				?>
+				<div class="rs-required-to-dl" style="bottom: 65px;">
+					<?php _e('V', 'revslider'); ?> <?php echo $template['required']; ?>+
+				</div>
+				<?php
+			}
+			?>
 			<div class="template_title"><?php echo (isset($template['title'])) ? $template['title'] : ''; ?></div>
 		</div>
 

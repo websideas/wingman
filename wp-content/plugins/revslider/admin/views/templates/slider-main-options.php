@@ -203,11 +203,29 @@ if(!isset($linksEditSlides)) $linksEditSlides = '';
 							</p>
 						</div>
 						<div style="width:50%;display:block;float:left;">
-							<span class="rev-new-label"><?php _e('Instagram User ID', 'revslider');?></span>
-							<input type="text" value="<?php echo RevSliderFunctions::getVal($arrFieldsParams, 'instagram-user-id', '');?>" name="instagram-user-id" title="<?php _e('Put in the Instagram User ID', 'revslider');?>">
-							<p>
-								<span class="description"><?php _e('Find the Instagram User ID <a target="_blank" href="http://www.otzberg.net/iguserid/">here</a>', 'revslider');?></span>
-							</p>
+							<span class="rev-new-label"><?php _e('Source', 'revslider');?></span>
+							<select name="instagram-type">
+								<option value="user" title="<?php _e('Display a user\'s public photos', 'revslider');?>" <?php selected(RevSliderFunctions::getVal($arrFieldsParams, 'instagram-type', 'user'), 'user');?>> <?php _e('User Public Photos', 'revslider');?></option>
+								<option value="hash" title="<?php _e('Display photos with one special hashtag', 'revslider');?>"<?php selected(RevSliderFunctions::getVal($arrFieldsParams, 'instagram-type', 'user'), 'hash');?>> <?php _e('Hashtag', 'revslider');?></option>
+								</select>
+							<div id="instagram_user">
+								<p>
+									<span class="rev-new-label"><?php _e('Instagram User ID', 'revslider');?></span>
+									<input type="text" value="<?php echo RevSliderFunctions::getVal($arrFieldsParams, 'instagram-user-id', '');?>" name="instagram-user-id" title="<?php _e('Put in the Instagram User ID', 'revslider');?>">
+								</p>
+								<p>
+									<span class="description"><?php _e('Find the Instagram User ID <a target="_blank" href="http://www.otzberg.net/iguserid/">here</a>', 'revslider');?></span>
+								</p>
+							</div>
+							<div id="instagram_hash">
+								<p>
+									<span class="rev-new-label"><?php _e('Instagram Hashtag', 'revslider');?></span>
+									<input type="text" value="<?php echo RevSliderFunctions::getVal($arrFieldsParams, 'instagram-hash-tag', '');?>" name="instagram-hash-tag" title="<?php _e('Put in one Instagram Hashtag', 'revslider');?>">
+								</p>
+								<p>
+									<span class="description"><?php _e('Finds the latest photos posted with one certain hashtag (#)', 'revslider');?></span>
+								</p>
+							</div>
 						</div>
 					</div>
 
@@ -295,6 +313,7 @@ if(!isset($linksEditSlides)) $linksEditSlides = '';
 									<span class="rev-new-label"><?php _e('App Secret', 'revslider');?></span>
 									<input type="text" value="<?php echo RevSliderFunctions::getVal($arrFieldsParams, 'facebook-app-secret', '')?>" name="facebook-app-secret" class="eg-tooltip-wrap" title="<?php _e('Put in the Facebook App secret', 'revslider');?>">
 								</p>
+								<span class="description"><?php _e('Please <a target="_blank" href="https://developers.facebook.com/docs/apps/register">register</a> your Website app with Facebook to get the values', 'revslider');?></span>
 						</div>
 					</div>
 
@@ -478,9 +497,9 @@ if(!isset($linksEditSlides)) $linksEditSlides = '';
 									}
 								}
 								?>
-								<span class="rev-new-label"></span><a class="button-primary revblue" id="rev-fetch-popular-posts" style="width: 200px;" href="javascript:jQuery('#posts_list').val('<?php echo implode(',', $popular); ?>');void(0);"><i class="eg-icon-plus-circled"></i><?php _e('Add Popular Posts', 'revslider'); ?></a>
+								<span class="rev-new-label"></span><a class="button-primary revblue" id="rev-fetch-popular-posts" style="width: 200px;" href="javascript:jQuery('#posts_list').val(jQuery('#posts_list').val()+'<?php echo implode(',', $popular); ?>');void(0);"><i class="eg-icon-plus-circled" style="margin-right:10px"></i><?php _e('Add Popular Posts', 'revslider'); ?></a>
 								<span class="tp-clearfix"></span>
-								<span class="rev-new-label"></span><a class="button-primary revblue" id="rev-fetch-recent-posts" style="width: 200px;" href="javascript:jQuery('#posts_list').val('<?php echo implode(',', $recent); ?>');void(0);"><i class="eg-icon-plus-circled"></i><?php _e('Add Recent Posts', 'revslider'); ?></a>
+								<span class="rev-new-label"></span><a class="button-primary revblue" id="rev-fetch-recent-posts" style="width: 200px;" href="javascript:jQuery('#posts_list').val(jQuery('#posts_list').val()+'<?php echo implode(',', $recent); ?>');void(0);"><i class="eg-icon-plus-circled" style="margin-right:10px"></i><?php _e('Add Recent Posts', 'revslider'); ?></a>
 							</div>
 							<div class="rs-post-types-wrapper">
 								<?php $fetch_type = RevSliderFunctions::getVal($arrFieldsParams, 'fetch_type', 'cat_tag'); ?>

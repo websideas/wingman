@@ -41,6 +41,7 @@ $arrSlides = $slider->getSlides(false);
 $arrSlidesWPML = $slider->getSlidesWPML(false, $slide);
 
 $arrSliders = $slider->getArrSlidersShort($sliderID);
+$arrSlidersFull = $slider->getArrSlidersShort();
 $selectSliders = RevSliderFunctions::getHTMLSelect($arrSliders,"","id='selectSliders'",true);
 
 //check if slider is template
@@ -408,11 +409,11 @@ Y.prototype.load=function(a){a(this.p)};function Z(a,b){this.d=a;this.f=b}Z.prot
 
 	?>
 	var callAllIdle_LocalTimeOut;
-	function fontLoaderWaitForTextLayers() {		
-		if (jQuery('.slide_layer_type_text').length>0) {			
+	function fontLoaderWaitForTextLayers() {
+		if (jQuery('.slide_layer_type_text').length>0) {
 			tpLayerTimelinesRev.allLayerToIdle({type:"text"});
 			clearTimeout(callAllIdle_LocalTimeOut);
-			callAllIdle_LocalTimeOut = setTimeout(function() {				
+			callAllIdle_LocalTimeOut = setTimeout(function() {
 				tpLayerTimelinesRev.allLayerToIdle({type:"text"});
 			},1250);
 		}
@@ -420,22 +421,26 @@ Y.prototype.load=function(a){a(this.p)};function Z(a,b){this.d=a;this.f=b}Z.prot
 			setTimeout(fontLoaderWaitForTextLayers,250);
 	}
 
-	if (sgfamilies.length)
-		tpWebFont.load({
-			timeout:10000,
-			google:{
-				families:sgfamilies
-			},
-			loading:function() {				
-			},
-			active:function() {						
-				fontLoaderWaitForTextLayers();								
-			},
-			inactive:function() {														
-				fontLoaderWaitForTextLayers();								
-			},
-		});
-   
+	if (sgfamilies.length){
+		for(var key in sgfamilies){
+			var loadnow = [sgfamilies[key]];
+			
+			tpWebFont.load({
+				timeout:10000,
+				google:{
+					families:loadnow
+				},
+				loading:function(e) {
+				},
+				active:function() {
+					fontLoaderWaitForTextLayers();
+				},
+				inactive:function() {
+					fontLoaderWaitForTextLayers();
+				},
+			});
+		}
+	}
 </script>
 <?php
 
@@ -904,7 +909,7 @@ require self::getPathTemplate('template-selector');
 				
 				<?php if(!empty($jsonLayers)){ ?>
 					//set init layers object
-					UniteLayersRev.setInitLayersJson(<?php echo $jsonLayers?>);
+					UniteLayersRev.setInitLayersJson(<?php echo $jsonLayers; ?>);
 				<?php } ?>
 				
 				<?php

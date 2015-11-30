@@ -336,9 +336,8 @@ var RevSliderAdmin = new function(){
 			}else{
 				jQuery('#rs-post-settings-wrapper').hide();
 				jQuery('#rs-'+jQuery(this).val()+'-settings-wrapper').show();
-				if(jQuery(this).val()=="facebook"){
-					jQuery('select[name="facebook-type-source"]').change();
-				}
+				if(jQuery(this).val()=="facebook") jQuery('select[name="facebook-type-source"]').change();
+				if(jQuery(this).val()=="instagram") jQuery('select[name="instagram-type"]').change();
 				if(jQuery("select[name=flickr-type]").val()=='photosets' && jQuery('input[name=source_type]:checked').val()=="flickr") jQuery('input[name=flickr-user-url]').change();
 				if(jQuery('input[name=source_type]:checked').val()=="youtube" && jQuery("select[name='youtube-type-source']").val()=='playlist') jQuery('input[name=youtube-channel-id]').change();
 			}
@@ -614,6 +613,15 @@ var RevSliderAdmin = new function(){
 		});
 		jQuery('select[name=vimeo-type-source]').change();
 
+		/**
+		 * Change Instagram Type
+		 */
+		jQuery('body').on('change','select[name="instagram-type"]',function(){
+		 	var set = jQuery(this).val();
+			jQuery(this).parent().find('div').hide();
+			jQuery("#instagram_"+set).show();
+		 });
+		 if(jQuery('input[name=source_type]:checked').val()=="instagram") jQuery('select[name="instagram-type"]').change();
 
 		/**
 		 * Set bullet type and navigation arrows to none if loop_slide is set to off
@@ -1085,7 +1093,7 @@ var RevSliderAdmin = new function(){
 			}
 		});
 		
-		jQuery("#button_import_template_slider").click(function(){
+		jQuery("#button_import_template_slider, #button_import_template_slider_b").click(function(){
 			jQuery('#template_area').addClass("show");
 			return true;
 		});
@@ -1532,8 +1540,6 @@ var RevSliderAdmin = new function(){
 			var csel = jQuery('.bgsrcchanger:checked').val();
 			
 			if(csel == 'vimeo' || csel == 'html5' || csel == 'youtube'){ //check for cover image, if not set, deny the saving
-			console.log(data.params.image_id);
-			console.log(data.params);
 				if((typeof(data.params.image_id) === 'undefined' || parseInt(data.params.image_id) == 0 || data.params.image_id == '') && ((typeof(data.params.image_url) === 'undefined') || data.params.image_url == '')){
 					alert(rev_lang.cover_image_needs_to_be_set);
 					return false;

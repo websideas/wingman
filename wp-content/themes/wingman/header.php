@@ -20,6 +20,7 @@
       <script src="<?php echo THEME_JS; ?>respond.min.js"></script>
     <![endif]-->
     <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css' />
+
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class( ); ?>>

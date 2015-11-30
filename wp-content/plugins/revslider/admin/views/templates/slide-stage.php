@@ -11,9 +11,9 @@ $startanims = $operations->getArrAnimations();
 			<li id="rs-style-tab-button" data-content="#rs-style-content-wrapper" class="selected"><i style="height:45px" class="rs-mini-layer-icon rs-icon-droplet rs-toolbar-icon"></i>
 				<span class="rs-anim-tab-txt"><?php _e("Style",'revslider'); ?></span>
 				<span id="style-morestyle" class="tipsy_enabled_top" title="<?php _e("Advanced Style on/off",'revslider'); ?>">
-					<i class="rs-icon-morestyles-dark"></i>
-					<i class="rs-icon-morestyles-light"></i>
-				</span>
+					<span class="rs-icon-morestyles-dark"><i class="eg-icon-down-open"></i></span>
+					<span class="rs-icon-morestyles-light"><i class="eg-icon-down-open"></i></span>
+				</span>				
 			</li>
 			<li id="rs-animation-tab-button" data-content="#rs-animation-content-wrapper"><i style="height:45px" class="rs-mini-layer-icon rs-icon-chooser-2 rs-toolbar-icon"></i>
 				<span class="rs-anim-tab-txt"><?php _e("Animation",'revslider'); ?></span>
@@ -39,11 +39,7 @@ $startanims = $operations->getArrAnimations();
 			<?php } ?>
 			<li data-content="#rs-parallax-content-wrapper"><i style="height:45px; font-size:16px;" class="rs-mini-layer-icon eg-icon-picture-1 rs-toolbar-icon"></i><?php _e("Parallax / 3D",'revslider'); ?></li>
 		</ul>
-
 		<div style="clear:both"></div>
-
-
-
 	</div>
 	<div style="clear:both"></div>
 
@@ -263,7 +259,8 @@ $startanims = $operations->getArrAnimations();
 								<li data-content="#style-sub-perspective"><?php _e("Perspective",'revslider'); ?></li>								
 								<li data-content="#style-sub-sharpc"><?php _e("Corners",'revslider'); ?></li>
 								<li data-content="#style-sub-advcss"><?php _e("Advanced CSS",'revslider'); ?></li>		
-								<li data-content="#style-sub-hover"><?php _e("Hover",'revslider'); ?></li>		
+								<li data-content="#style-sub-hover"><?php _e("Hover",'revslider'); ?></li>
+								<li data-content="#style-sub-toggle"><?php _e("Toggle",'revslider'); ?></li>		
 							</ul>
 							<div style="width:100%;height:1px;display:block"></div>
 							<span id="style-sub-font" class="rs-layer-toolbar-box hide_on_shapelayer hide_on_videolayer hide_on_imagelayer" style="display:block">
@@ -478,6 +475,23 @@ $startanims = $operations->getArrAnimations();
 								</select>
 								
 							</span>
+
+							<!-- LAYER TOGGLE SETTINGS -->
+							<span id="style-sub-toggle" class="rs-layer-toolbar-box" style="display:none;border:none;">
+								<!-- Toggle Hover on/off -->
+								<span><?php _e("Layer Toggle Mode",'revslider'); ?></span>
+								<span class="rs-layer-toolbar-space"></span>
+								<input id="toggle_allow" name="toggle_allow" type="checkbox" class="tp-moderncheckbox" />
+								<span class="rs-layer-toolbar-space" style="margin-right: 10px"></span>
+
+								<!-- Toggle ACTIVE Mode -->
+								<span><?php _e("Toggle Active use Hover State",'revslider'); ?></span>
+								<span class="rs-layer-toolbar-space"></span>
+								<input id="toggle_use_hover" name="toggle_allow" type="checkbox" class="tp-moderncheckbox" />
+								<span class="rs-layer-toolbar-space" style="margin-right: 10px"></span>								
+								
+							</span>
+
 							
 
 							<span id="style-sub-perspective" class="rs-layer-toolbar-box" style="display:none;border:none;">
@@ -1591,6 +1605,7 @@ $startanims = $operations->getArrAnimations();
 						<a href="javascript:void(0)" id="button_add_layer_video"  data-isstatic="<?php echo $add_static; ?>" class="add-layer-button" ><i class="rs-icon-layervideo_n"></i><span class="add-layer-txt"><?php _e("Video",'revslider')?></span></a>
 						<a href="javascript:void(0)" id="button_add_layer_button"  data-isstatic="<?php echo $add_static; ?>" class="add-layer-button" ><i class="rs-icon-layerbutton_n"></i><span class="add-layer-txt"><?php _e("Button",'revslider')?></span></a>
 						<a href="javascript:void(0)" id="button_add_layer_shape"  data-isstatic="<?php echo $add_static; ?>" class="add-layer-button" ><i class="rs-icon-layershape_n"></i><span class="add-layer-txt"><?php _e("Shape",'revslider')?></span></a>
+						<a href="javascript:void(0)" id="button_add_layer_import"  data-isstatic="<?php echo $add_static; ?>" class="add-layer-button" ><i class="eg-icon-download"></i><span class="add-layer-txt"><?php _e("Import",'revslider')?></span></a>
 					</div>
 				</div>
 			</div>
@@ -1663,12 +1678,21 @@ $startanims = $operations->getArrAnimations();
 				<form name="form_layers" class="form_layers">
 					<div id="layer_text_holder">
 						<div id="layer_text_wrapper" style="display:none">
-							<div class="layer_text_wrapper_header">					
-								<span style="display:none; font-weight:600;" class="layer-content-title-b"><?php _e("Image Layer Title ",'revslider'); ?><span style="margin-left:5px;font-size:11px; font-style: italic;"><?php _e("(only for internal usage):",'revslider'); ?></span> </span>					
+							<span class="toggle_text_title"><?php _e("Untoggled Content",'revslider')?></span>
+							<div class="layer_text_wrapper_inner">
+								<div class="layer_text_wrapper_header">					
+									<span style="display:none; font-weight:600;" class="layer-content-title-b"><?php _e("Image Layer Title ",'revslider'); ?><span style="margin-left:5px;font-size:11px; font-style: italic;"><?php _e("(only for internal usage):",'revslider'); ?></span> </span>					
+								</div>
+								<textarea id="layer_text" class="area-layer-params" name="layer_text" ></textarea>
 							</div>
-							<textarea id="layer_text" class="area-layer-params" name="layer_text" ></textarea>
+							<span class="toggle_text_title"><?php _e("Toggled Content",'revslider')?></span>
+							<div class="layer_text_wrapper_inner toggled_text_wrapper">
+
+								<textarea id="layer_text_toggle" class="area-layer-params" name="layer_text_toggle" ></textarea>
+							</div>
 						</div>
 					</div>
+					
 				</form>
 				<script>
 					jQuery('#button_show_all_layer i, #button_show_all_layer').click(function() {
@@ -2222,8 +2246,85 @@ $startanims = $operations->getArrAnimations();
 		</div>
 	</div>
 
+	
+	<!-- THE import DIALOG WINDOW -->
+	<div id="dialog_addimport" class="dialog-addimport" title="<?php _e('Import Layer','revslider'); ?>" style="display:none;">
+		<div id="rs-import-layer-selector">
 
+			<select name="rs-import-layer-slider" id="rs-import-layer-slider" class="rs-layer-input-field">
+				<?php
+				if(!empty($arrSlidersFull)){
+					?>
+					<option value="-" selected="selected"><?php _e('-- Select a Slider --', 'revslider'); ?></option>
+					<?php
+					foreach($arrSlidersFull as $ls_id => $ls_title){
+						?>
+						<option value="<?php echo esc_attr($ls_id); ?>"><?php echo esc_attr($ls_title); ?></option>
+						<?php
+					}
+				}else{
+					?>
+					<option value="-" selected="selected"><?php _e('-- No Slider Available --', 'revslider'); ?></option>
+					<?php
+				}
+				?>
+			</select>
+			<select name="rs-import-layer-slide" id="rs-import-layer-slide" class="rs-layer-input-field">
+				<option value="-" selected="selected"><?php _e('-- Select a Slide --', 'revslider'); ?></option>
+				<option value="all" selected="selected"><?php _e('All', 'revslider'); ?></option>
+				
+			</select>
+			<select name="rs-import-layer-type" id="rs-import-layer-type" class="rs-layer-input-field">
+				<option value="-" selected="selected"><?php _e('-- Select a Layer Type --', 'revslider'); ?></option>
+				<option value="all"><?php _e('All', 'revslider'); ?></option>
+				<option value="text"><?php _e('Text', 'revslider'); ?></option>
+				<option value="image"><?php _e('Image', 'revslider'); ?></option>
+				<option value="video"><?php _e('Video', 'revslider'); ?></option>
+				<option value="button"><?php _e('Button', 'revslider'); ?></option>
+				<option value="shape"><?php _e('Shape', 'revslider'); ?></option>
+			</select>
+			
+			<ul id="rs-import-layer-holder">
+				<div class="first-import-notice">
+					<i class="eg-icon-download"></i>
+					<span class="big-blue-block">Select a Slider/Slide/Layer to Import</span>
+				</div>
+			</ul>
+		</div>
+	</div>
+	
+	<script type="text/html" id="tmpl-rs-import-layer-wrap">
+		<li id="to-import-layer-id-{{ data['slide_id'] }}-{{ data['unique_id'] }}" data-id="{{ data['unique_id'] }}" data-actiondep="{{ data['action_layers'] }}" data-sliderid="{{ data['slider_id'] }}" data-slideid="{{ data['slide_id'] }}" class="import-layer-li-class import-action-{{ data['withaction'] }}"><i class="rs-icon-layer{{ data['type'] }}"></i><span class="rs-import-layer-name">{{ data['alias'] }}</span><span class="rs-import-layer-dimension">{{ data['width'] }} x {{ data['height'] }}</span><span class="import-layer-withaction"><?php _e("Action Available","revslider"); ?></span><span class="import-layer-tools"><span class="import-layer-imported"><?php _e("Layer Added to Stage","revslider"); ?></span><span class="import-layer-now"><i class="eg-icon-plus"></i></span></span></li>
+	</script>
 
+	<script tyle="javascript">	
+		jQuery(document).ready(function() {
+			
+			function hoverActionAllChildren(el) {				
+				var	actionarray = el.data('actiondep'),
+					sid = el.data('slideid'),
+					a = actionarray.length>1 ? actionarray.split(",") : new Array();
+
+					if (a.length==0) a.push(actionarray);				
+
+				if (a && a.length>0) {
+					jQuery.each(a,function(i,uid) {
+						jQuery('#to-import-layer-id-'+sid+'-'+uid).addClass("actionhover");
+					});
+				}
+			}
+
+			jQuery('body').on('mouseenter','.import-layer-li-class',function() {
+				hoverActionAllChildren(jQuery(this));
+			});
+
+			jQuery('body').on('mouseleave','.import-layer-li-class',function() {
+					jQuery('.import-layer-li-class.actionhover').removeClass("actionhover");
+			});
+
+			
+		});
+	</script>
 	<!-- THE shape DIALOG WINDOW -->
 	<div id="dialog_addshape" class="dialog-addshape" title="<?php _e("Add Shape Layer",'revslider'); ?>" style="display:none">
 		<div class="addbuton-dialog-inner">
@@ -2381,7 +2482,10 @@ $startanims = $operations->getArrAnimations();
 			<option <# if( data['action'] == 'toggle_layer' ){ #>selected="selected" <# } #>value="toggle_layer"><?php _e('Toggle Layer Animation','revslider'); ?></option>
 			<option <# if( data['action'] == 'start_video' ){ #>selected="selected" <# } #>value="start_video"><?php _e('Start Video','revslider'); ?></option>
 			<option <# if( data['action'] == 'stop_video' ){ #>selected="selected" <# } #>value="stop_video"><?php _e('Stop Video','revslider'); ?></option>
-			<option <# if( data['action'] == 'toggle_video' ){ #>selected="selected" <# } #>value="toggle_video"><?php _e('Toggle Video','revslider'); ?></option>
+			<option <# if( data['action'] == 'toggle_video' ){ #>selected="selected" <# } #>value="toggle_video"><?php _e('Toggle Video','revslider'); ?></option>			
+			<option <# if( data['action'] == 'mute_video' ){ #>selected="selected" <# } #>value="mute_video"><?php _e('Mute Video','revslider'); ?></option>
+			<option <# if( data['action'] == 'unmute_video' ){ #>selected="selected" <# } #>value="unmute_video"><?php _e('Unmute Video','revslider'); ?></option>
+			<option <# if( data['action'] == 'toggle_mute_video' ){ #>selected="selected" <# } #>value="toggle_mute_video"><?php _e('Toggle Mute Video','revslider'); ?></option>			
 			<option <# if( data['action'] == 'simulate_click' ){ #>selected="selected" <# } #>value="simulate_click"><?php _e('Simulate Click','revslider'); ?></option>
 			<option <# if( data['action'] == 'toggle_class' ){ #>selected="selected" <# } #>value="toggle_class"><?php _e('Toggle Layer Class','revslider'); ?></option>
 			<option <# if( data['action'] == 'togglefullscreen' ){ #>selected="selected" <# } #>value="togglefullscreen"><?php _e("Toggle FullScreen",'revslider'); ?></option>
@@ -2409,6 +2513,7 @@ $startanims = $operations->getArrAnimations();
 				<option <# if( data['link_type'] == 'a' ){ #>selected="selected" <# } #>value="a"><?php _e("a Tag Link",'revslider'); ?></option>
 			</select>
 		</span>
+
 
 		<!-- JUMP TO SLIDE -->
 		<span class="action-jump-to-slide" style="display:none;">
@@ -2459,6 +2564,7 @@ $startanims = $operations->getArrAnimations();
 			<span class="rs-layer-toolbar-space" ></span>
 			<input type="text" style="width:100px;" class="<# if(data['edit'] == false){ #>rs_disabled_field <# } #>textbox-caption rs-layer-input-field"  name="<# if(data['edit'] == false){ #>no_<# } #>layer_toggleclass[]" value="{{ data['toggle_class'] }}">
 		</span>
+		
 		
 		<span class="action-triggerstates" style="display: none; white-space:nowrap">
 			<span class="rs-layer-toolbar-space"></span>

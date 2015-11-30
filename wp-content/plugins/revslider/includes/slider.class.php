@@ -2019,7 +2019,22 @@ class RevSliderSlider extends RevSliderElementsBase{
 		$this->validateInited();
 		$gf = array();
 		
+		$sl = new RevSliderSlide();
+		
 		$mslides = $this->getSlides(true);
+		
+		$staticID = $sl->getStaticSlideID($this->getID());
+		if($staticID !== false){
+			$msl = new RevSliderSlide();
+			if(strpos($staticID, 'static_') === false){
+				$staticID = 'static_'.$this->getID();
+			}
+			$msl->initByID($staticID);
+			if($msl->getID() !== ''){
+				$mslides = array_merge($mslides, array($msl));
+			}
+		}
+		
 		if(!empty($mslides)){
 			foreach($mslides as $ms){
 				$mf = $ms->getUsedFonts($full);
@@ -2215,8 +2230,15 @@ class RevSliderSlider extends RevSliderElementsBase{
 			break;
 			case "instagram":
 				$instagram = new RevSliderInstagram($this->getParam('instagram-access-token'),$this->getParam('instagram-transient','1200'));
-				$search_user_id = $this->getParam('instagram-user-id');
-				$arrPosts = $instagram->get_public_photos($search_user_id,$this->getParam('instagram-count'));
+				if($this->getParam('instagram-type','user')!="hash"){
+					$search_user_id = $this->getParam('instagram-user-id');
+					$arrPosts = $instagram->get_public_photos($search_user_id,$this->getParam('instagram-count'));
+				}
+				else{
+					$search_hash_tag = $this->getParam('instagram-hash-tag');
+					$arrPosts = $instagram->get_tag_photos($search_hash_tag,$this->getParam('instagram-count'));
+				}
+				
 				$max_posts = $this->getParam('instagram-count', '33', self::FORCE_NUMERIC);
 				$max_allowed = 33;
 			break;
@@ -2658,7 +2680,8 @@ class RevSliderSlider extends RevSliderElementsBase{
 				$order_fav = true;
 			}
 		}
-		$where = "`type` != 'template'";
+		//$where = "`type` != 'template' ";
+		$where = "`type` != 'template' OR `type` IS NULL";
 		
 		$response = $this->db->fetch(RevSliderGlobals::$table_sliders,$where,$do_order,'',$order_direction);
 		

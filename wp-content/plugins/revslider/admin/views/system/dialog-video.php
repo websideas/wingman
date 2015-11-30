@@ -12,7 +12,7 @@
 					<li data-content="#rs-video-source" id="reset_video_dialog_tab" class="selected"><i style="height:45px" class="rs-mini-layer-icon eg-icon-export rs-toolbar-icon"></i><?php _e('Source', 'revslider'); ?></li>
 					<li data-content="#rs-video-size"><i style="height:45px; font-size:16px" class="rs-mini-layer-icon eg-icon-resize-full-alt rs-toolbar-icon"></i><?php _e('Sizing', 'revslider'); ?></li>
 					<li data-content="#rs-video-settings"><i style="height:45px; font-size:16px" class="rs-mini-layer-icon eg-icon-cog rs-toolbar-icon"></i><?php _e('Settings', 'revslider'); ?></li>
-					<li data-content="#rs-video-thumbnails"><i style="height:45px; font-size:16px" class="rs-mini-layer-icon eg-icon-eye rs-toolbar-icon"></i><?php _e('Visibility', 'revslider'); ?></li>
+					<li data-content="#rs-video-thumbnails"><i style="height:45px; font-size:16px" class="rs-mini-layer-icon eg-icon-eye rs-toolbar-icon"></i><?php _e('Poster/Mobile Visibility', 'revslider'); ?></li>
 					<li data-content="#rs-video-arguments"><i style="height:45px; font-size:16px" class="rs-mini-layer-icon eg-icon-th rs-toolbar-icon"></i><?php _e('Arguments', 'revslider'); ?></li>
 				</ul>
 				<div style="clear:both"></div>
@@ -230,7 +230,7 @@
 
 		<div id="rs-video-thumbnails" style="display:none">
 			<div id="preview-image-video-wrap" class="mb10">
-				<label><?php _e('Preview Image', 'revslider'); ?></label>
+				<label><?php _e('Poster Image', 'revslider'); ?></label>
 				<input type="text" class="checkbox_video_dialog " id="input_video_preview">
 				<input type="button" id="" class="button-image-select-video button-primary revblue" value="<?php _e('Image Library', 'revslider'); ?>">
 				<input type="button" id="" class="button-image-select-video-default button-primary revblue" value="<?php _e('Video Thumbnail', 'revslider'); ?>">
@@ -239,15 +239,24 @@
 			</div>
 
 			<div class="mb10">
-				<label for="input_disable_on_mobile"><?php _e('Disable Mobile:', 'revslider'); ?></label>
+				<label for="input_disable_on_mobile"><?php _e('Disable Video and Show<br>only Poster on Mobile:', 'revslider'); ?></label>
 				<input type="checkbox" class="checkbox_video_dialog tp-moderncheckbox" id="input_disable_on_mobile" >
 			</div>
 
 			<div class="mb10">
-				<label for="input_use_poster_on_mobile"><?php _e('Only Preview on Mobile:', 'revslider'); ?></label>
+				<label for="input_use_poster_on_mobile"><?php _e('No Poster on Mobile:', 'revslider'); ?></label>
 				<input type="checkbox" class="checkbox_video_dialog tp-moderncheckbox" id="input_use_poster_on_mobile" >
 				<div style="width:100%;height:10px"></div>
 			</div>
+			<!--div class="mb10">
+				<select id="select_mobile_setting">
+					<option value=""><?php _e('Show Video and Show Poster', 'revslider'); ?></option>posteronlyonmobile="off" && disablevideoonmobile="off"
+					<option value=""><?php _e('Show Video and Hide Poster', 'revslider'); ?></option>
+					<option value="use_poster_on_mobile"><?php _e('Hide Video and Show Poster', 'revslider'); ?></option>
+					<option value="disable_on_mobile"><?php _e('Hide Video and Hide Poster', 'revslider'); ?></option>
+				</select>
+			</div-->
+			
 		</div>
 
 		<div id="rs-video-arguments" style="display:none">

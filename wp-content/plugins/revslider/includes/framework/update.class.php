@@ -200,6 +200,10 @@ class RevSliderUpdate {
 				update_option('revslider-notices', $version_info->notices);
 			}
 			
+			if(isset($version_info->dashboard)){
+				update_option('revslider-dashboard', $version_info->dashboard);
+			}
+			
 		}
 		
 		if($force_check == true){ //force that the update will be directly searched

@@ -724,6 +724,7 @@ var UniteAdminRev = new function(){
 		data.thumb_small = {url:obj[0].src,width:200,height:150};
 		data.thumb_medium = {url:obj[0].src,width:320,height:240};
 		data.thumb_big = {url:obj[0].src,width:obj[0].width,height:obj[0].height};
+		data.thumb_very_big = {url:obj[0].src.replace('sddefault.jpg', 'maxresdefault.jpg'),width:obj[0].width,height:obj[0].height};
 		
 		data.video_width = obj[0].width;
 		data.video_height = obj[0].height;
@@ -752,14 +753,32 @@ var UniteAdminRev = new function(){
 			
 			switch(lastVideoData.video_type){
 				case 'vimeo':
-					jQuery("#input_video_preview").val(lastVideoData.thumb_large.url);
+					jQuery("#input_video_preview").val(lastVideoData.thumb_medium.url);
 					//update preview image:
-					jQuery("#video-thumbnail-preview").css({backgroundImage:'url('+lastVideoData.thumb_large.url+')'});
+					jQuery("#video-thumbnail-preview").css({backgroundImage:'url('+lastVideoData.thumb_medium.url+')'});
 				break;
 				case 'youtube':
 					jQuery("#input_video_preview").val(lastVideoData.thumb_big.url);
 					//update preview image:
 					jQuery("#video-thumbnail-preview").css({backgroundImage:'url('+lastVideoData.thumb_big.url+')'});
+				break;
+			}
+		});
+		
+		jQuery('.button-image-select-video-max').click(function(){
+			
+			if(typeof(lastVideoData) == 'undefined') return false;
+			
+			switch(lastVideoData.video_type){
+				case 'vimeo':
+					jQuery("#input_video_preview").val(lastVideoData.thumb_large.url);
+					//update preview image:
+					jQuery("#video-thumbnail-preview").css({backgroundImage:'url('+lastVideoData.thumb_large.url+')'});
+				break;
+				case 'youtube':
+					jQuery("#input_video_preview").val(lastVideoData.thumb_very_big.url);
+					//update preview image:
+					jQuery("#video-thumbnail-preview").css({backgroundImage:'url('+lastVideoData.thumb_very_big.url+')'});
 				break;
 			}
 		});
@@ -893,6 +912,7 @@ var UniteAdminRev = new function(){
 		jQuery("#input_video_control").prop("checked","");
 		jQuery("#input_video_mute").prop("checked","");
 		jQuery("#input_disable_on_mobile").prop("checked","");
+		jQuery("#input_video_show_cover_pause").prop("checked","");
 		jQuery("#input_video_cover").prop("checked","");
 		jQuery("#input_video_stopallvideo").prop("checked","");
 		jQuery("#input_video_allowfullscreen").prop("checked","");
@@ -903,6 +923,9 @@ var UniteAdminRev = new function(){
 		jQuery('#input_video_loop option[value="none"]').attr("selected",true);
 		jQuery("#input_video_preview").val("");
 		jQuery("#input_use_poster_on_mobile").prop("checked","");
+		
+		jQuery("#input_video_start_at").val('');
+		jQuery("#input_video_end_at").val('');
 		
 		jQuery("#input_video_volume").val('100');
 		
@@ -918,6 +941,7 @@ var UniteAdminRev = new function(){
 		RevSliderSettings.onoffStatus(jQuery("#input_video_stopallvideo"));
 		RevSliderSettings.onoffStatus(jQuery("#input_video_allowfullscreen"));
 		RevSliderSettings.onoffStatus(jQuery("#input_use_poster_on_mobile"));
+		RevSliderSettings.onoffStatus(jQuery("#input_video_show_cover_pause"));
 		
 		jQuery('#button-video-add').hide();
 		if(!jQuery('#video_dialog_tabs').hasClass('disabled')) jQuery('#video_dialog_tabs').addClass('disabled');
@@ -1320,7 +1344,7 @@ var UniteAdminRev = new function(){
 				var img = jQuery(this);
 				UniteAdminRev.onYoutubeCallback(img);
 			}
-			img.src = "https://img.youtube.com/vi/"+youtubeID+"/sddefault.jpg"
+			img.src = "https://img.youtube.com/vi/"+youtubeID+"/sddefault.jpg";
 			
 			jQuery("#video_content").show();
 			

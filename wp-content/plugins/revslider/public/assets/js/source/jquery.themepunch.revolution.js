@@ -1,6 +1,6 @@
 /**************************************************************************
  * jquery.themepunch.revolution.js - jQuery Plugin for Revolution Slider
- * @version: 5.1.2 (13.11.2015)
+ * @version: 5.1.4 (25.11.2015)
  * @requires jQuery v1.7 or later (tested on 1.9)
  * @author ThemePunch
 **************************************************************************/
@@ -734,6 +734,28 @@ jQuery.extend(true, _R, {
 					if (_R.stopVideo) _R.stopVideo(_nc,opt);
 				});
 		}
+	},
+
+	unToggleState : function(a) {			
+		if (a!=undefined && a.length>0)
+			jQuery.each(a,function(i,layer) {
+				layer.removeClass("rs-toggle-content-active");
+			});		
+	},
+
+	toggleState : function(a) {
+		if (a!=undefined && a.length>0)
+			jQuery.each(a,function(i,layer) {
+				layer.addClass("rs-toggle-content-active");
+			});
+	},
+	lastToggleState : function(a) {
+		var state = 0;
+		if (a!=undefined && a.length>0)
+			jQuery.each(a,function(i,layer) {
+				state = layer.hasClass("rs-toggle-content-active");
+			});
+		return state;
 	}
 
 });
@@ -1204,8 +1226,12 @@ var initSlider = function (container,opt) {
 				an = _nc.data('autoplayonlyfirsttime'),
 				ap = _nc.data('autoplay');
 
+
 			if (_nc.hasClass("tp-static-layer") && _R.handleStaticLayers)
 				_R.handleStaticLayers(_nc,opt);
+
+			var pom = _nc.data('noposteronmobile') || _nc.data('noPosterOnMobile') ||  _nc.data('posteronmobile') || _nc.data('posterOnMobile') || _nc.data('posterOnMObile');
+			_nc.data('noposteronmobile',pom);
 
 			// FIX VISIBLE IFRAME BUG IN SAFARI
 			var iff = 0;
@@ -2030,7 +2056,8 @@ var swapSlide = function(container,opt) {
 				_nc.data('bgvideo',1);
 				_R.manageVideoLayer(_nc,opt);
 			}
-			_nc.append('<div class="rs-fullvideo-cover"></div>')
+			if (_nc.find('.rs-fullvideo-cover').length==0)
+				_nc.append('<div class="rs-fullvideo-cover"></div>')
 		});
 		swapSlideProgress(opt,defimg,container)
 	});			
@@ -2340,12 +2367,12 @@ var countDown = function(container,opt) {
 	var bt=container.find('.tp-bannertimer');
 
 	// LISTENERS  //container.trigger('stoptimer');
-	container.on('stoptimer',function() {
-		
+	container.on('stoptimer',function() {		
 		var bt = jQuery(this).find('.tp-bannertimer');
 		bt.data('tween').pause();
 		if (opt.disableProgressBar=="on") bt.css({visibility:"hidden"});
 		opt.sliderstatus = "paused";
+		_R.unToggleState(opt.slidertoggledby);
 	});
 
 
@@ -2358,6 +2385,7 @@ var countDown = function(container,opt) {
 			}
 
 			if (opt.disableProgressBar=="on") bt.css({visibility:"hidden"});
+			_R.toggleState(opt.slidertoggledby);
 	});
 
 
@@ -2372,6 +2400,7 @@ var countDown = function(container,opt) {
 			opt.sliderstatus = "playing";
 		}
 		if (opt.disableProgressBar=="on") bt.css({visibility:"hidden"});
+		_R.toggleState(opt.slidertoggledby);
 	});
 
 	container.on('nulltimer',function() {

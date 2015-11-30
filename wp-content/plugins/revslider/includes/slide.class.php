@@ -1691,6 +1691,13 @@ class RevSliderSlide extends RevSliderElementsBase{
 	}
 	
 	/**
+	 * set slide ID
+	 */
+	public function setID($id){
+		$this->id = $id;
+	}
+	
+	/**
 	 * get slide title
 	 */
 	public function getTitle(){

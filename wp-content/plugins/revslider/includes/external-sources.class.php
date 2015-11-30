@@ -524,7 +524,7 @@ class RevSliderInstagram {
 	}
 
 	/**
-	 * Get Instagram Pictures
+	 * Get Instagram Pictures Public by User
 	 *
 	 * @since    1.0.0
 	 * @param    string    $user_id 	Instagram User id (not name)
@@ -533,6 +533,28 @@ class RevSliderInstagram {
 		//call the API and decode the response
 		$url = "https://api.instagram.com/v1/users/".$search_user_id."/media/recent?count=".$count."&access_token=".$this->api_key."&client_id=".$search_user_id;
 		
+		$transient_name = 'revslider_' . md5($url);
+		if ($this->transient_sec > 0 && false !== ($data = get_transient( $transient_name)))
+			return ($data);
+
+		$rsp = json_decode(wp_remote_fopen($url));
+		if(isset($rsp->data)){
+			set_transient( $transient_name, $rsp->data, $this->transient_sec );
+			return $rsp->data;
+		}
+		else return '';
+	}
+
+	/**
+	 * Get Instagram Pictures Public by Tag
+	 *
+	 * @since    1.0.0
+	 * @param    string    $user_id 	Instagram User id (not name)
+	 */
+	public function get_tag_photos($search_tag,$count){
+		//call the API and decode the response
+		$url = "https://api.instagram.com/v1/tags/".$search_tag."/media/recent?count=".$count."&access_token=".$this->api_key;
+
 		$transient_name = 'revslider_' . md5($url);
 		if ($this->transient_sec > 0 && false !== ($data = get_transient( $transient_name)))
 			return ($data);

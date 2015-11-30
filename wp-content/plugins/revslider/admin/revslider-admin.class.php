@@ -296,8 +296,11 @@ class RevSliderAdmin extends RevSliderBaseAdmin{
 			'start_layer_out' => __('Start Layer "out" animation', 'revslider'),
 			'start_video' => __('Start Video', 'revslider'),
 			'stop_video' => __('Stop Video', 'revslider'),
+			'mute_video' => __('Mute Video', 'revslider'),
+			'unmute_video' => __('Unmute Video', 'revslider'),
 			'toggle_layer_anim' => __('Toggle Layer Animation', 'revslider'),
 			'toggle_video' => __('Toggle Video', 'revslider'),
+			'toggle_mute_video' => __('Toggle Mute Video', 'revslider'),
 			'last_slide' => __('Last Slide', 'revslider'),
 			'simulate_click' => __('Simulate Click', 'revslider'),
 			'togglefullscreen' => __('Toggle FullScreen', 'revslider'),
@@ -324,7 +327,12 @@ class RevSliderAdmin extends RevSliderBaseAdmin{
 			'please_add_at_least_one_layer' => __('Please add at least one Layer.', 'revslider'),
 			'choose_image' => __('Choose Image', 'revslider'),
 			'shortcode_parsing_successfull' => __('Shortcode parsing successfull. Items can be found in step 3', 'revslider'),
-			'shortcode_could_not_be_correctly_parsed' => __('Shortcode could not be parsed.', 'revslider')
+			'shortcode_could_not_be_correctly_parsed' => __('Shortcode could not be parsed.', 'revslider'),
+			'background_video' => __('Background Video', 'revslider'),
+			'active_video' => __('Video in Active Slide', 'revslider'),
+			'empty_data_retrieved_for_slider' => __('Data could not be fetched for selected Slider', 'revslider'),
+			'import_selected_layer' => __('Import Selected Layer?', 'revslider'),
+			'import_all_layer_from_actions' => __('Layer Imported! The Layer has actions which include other Layers. Import all connected layers?', 'revslider')
 		);
 
 		return $lang;
@@ -1181,6 +1189,40 @@ class RevSliderAdmin extends RevSliderBaseAdmin{
 						$operations->previewOutputMarkup($sliderID);
 					else
 						$operations->previewOutput($sliderID);
+				break;
+				case "get_import_slides_data":
+					$slides = array();
+					if(!is_array($data)){
+						$slider->initByID(intval($data));
+						
+						$full_slides = $slider->getSlides(); //static slide is missing
+						
+						if(!empty($full_slides)){
+							foreach($full_slides as $slide_id => $mslide){
+								$slides[$slide_id]['layers'] = $mslide->getLayers();
+								$slides[$slide_id]['params'] = $mslide->getParams();
+							}
+						}
+						
+						$staticID = $slide->getStaticSlideID($slider->getID());
+						if($staticID !== false){
+							$msl = new RevSliderSlide();
+							if(strpos($staticID, 'static_') === false){
+								$staticID = 'static_'.$slider->getID();
+							}
+							$msl->initByID($staticID);
+							if($msl->getID() !== ''){
+								$slides[$msl->getID()]['layers'] = $msl->getLayers();
+								$slides[$msl->getID()]['params'] = $msl->getParams();
+								$slides[$msl->getID()]['params']['title'] = __('Static Slide', 'revslider');
+							}
+						}
+					}
+					if(!empty($slides)){
+						self::ajaxResponseData(array('slides' => $slides));
+					}else{
+						self::ajaxResponseData('');
+					}
 				break;
 				case "toggle_slide_state":
 					$currentState = $slide->toggleSlideStatFromData($data);

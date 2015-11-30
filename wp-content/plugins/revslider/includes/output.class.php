@@ -389,8 +389,13 @@ class RevSliderOutput {
 		
 		if(($oneSlideLoop == 'loop' || $oneSlideLoop == 'on') && $slider_type !== 'hero'){
 			if(count($slides) == 1 && $this->oneSlideMode == false){
-				$new_slide = reset($slides);
+				$new_slide = clone(reset($slides));
 				$new_slide->ignore_alt = true;
+				$new_slide->setID($new_slide->getID().'-1');
+				//echo '<pre>';
+				//echo $new_slide->getID();
+				//echo '</pre>';
+				
 				$slides[] = $new_slide;
 				$this->hasOnlyOneSlide = true;
 			}
@@ -845,12 +850,12 @@ class RevSliderOutput {
 				
 				//add meta functionality here
 				
-				$pa_limit = $slide->getParam('params_'.$mi.'_chars',10,RevSlider::FORCE_NUMERIC);
 				if($pa !== ''){
+					$pa_limit = $slide->getParam('params_'.$mi.'_chars',10,RevSlider::FORCE_NUMERIC);
 					$pa = strip_tags($pa);
 					$pa = mb_substr($pa, 0, $pa_limit, 'utf-8');
-					$add_params .= ' data-param'.$mi.'="'.stripslashes(esc_attr($pa)).'"';
 				}
+				$add_params .= ' data-param'.$mi.'="'.stripslashes(esc_attr($pa)).'"';
 			}
 			
 			$use_parallax = $this->slider->getParam("use_parallax", $this->slider->getParam('use_parallax', 'off'));
@@ -1384,6 +1389,15 @@ class RevSliderOutput {
 			}elseif(function_exists('qtranxf_useCurrentLanguageIfNotFoundUseDefaultLanguage')){ //use qTranslate X
 				$text = qtranxf_useCurrentLanguageIfNotFoundUseDefaultLanguage($text);
 			}
+
+			$text_toggle = RevSliderFunctions::getVal($layer, 'texttoggle');
+			if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')){ //use qTranslate
+				$text_toggle = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($text_toggle);
+			}elseif(function_exists('ppqtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')){ //use qTranslate plus
+				$text_toggle = ppqtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($text_toggle);
+			}elseif(function_exists('qtranxf_useCurrentLanguageIfNotFoundUseDefaultLanguage')){ //use qTranslate X
+				$text_toggle = qtranxf_useCurrentLanguageIfNotFoundUseDefaultLanguage($text_toggle);
+			}
 			
 			$htmlVideoAutoplay = '';
 			$htmlVideoAutoplayOnlyFirstTime = '';
@@ -1417,9 +1431,11 @@ class RevSliderOutput {
 			$add_data = '';
 			$videoType = '';
 			$cover = false;
+			$toggle_allow = RevSliderFunctions::getVal($layer, 'toggle',false);
 			
 			//set html:
 			$html = '';
+			$html_toggle='';
 			switch($type){
 				case 'shape':
 				break;
@@ -1433,6 +1449,8 @@ class RevSliderOutput {
 				case 'button':
 					$html = $text;
 					$html = do_shortcode(stripslashes($html));
+					$html_toggle = $text_toggle;
+					$html_toggle = do_shortcode(stripslashes($html_toggle));
 					
 					global $fa_icon_var, $pe_7s_var;
 					foreach($icon_sets as $is){
@@ -1915,9 +1933,11 @@ class RevSliderOutput {
 							
 							if(!empty($urlPoster)){
 								if($only_poster_on_mobile === true){
-									$add_data .= ' data-posterOnMObile="on"';
+									//$add_data .= ' data-posterOnMobile="on"';
+									$add_data .= ' data-noposteronmobile="on"';
 								}else{
-									$add_data .= ' data-posterOnMObile="off"';
+									//$add_data .= ' data-posterOnMobile="off"';
+									$add_data .= ' data-noposteronmobile="off"';
 								}
 							}
 
@@ -1986,9 +2006,11 @@ class RevSliderOutput {
 					if(trim($videoThumbnail) !== '') $htmlVideoThumbnail = '			data-videoposter="'.$videoThumbnail.'"'." \n";
 					if(!empty($videoThumbnail)){
 						if($only_poster_on_mobile === true){
-							$htmlVideoThumbnail .= '			data-posterOnMObile="on"'." \n";
+							//$htmlVideoThumbnail .= '			data-posterOnMobile="on"'." \n";
+							$htmlVideoThumbnail .= '			data-noposteronmobile="on"'." \n";
 						}else{
-							$htmlVideoThumbnail .= '			data-posterOnMObile="off"'." \n";
+							//$htmlVideoThumbnail .= '			data-posterOnMobile="off"'." \n";
+							$htmlVideoThumbnail .= '			data-noposteronmobile="off"'." \n";
 						}
 					}
 					
@@ -2863,10 +2885,16 @@ class RevSliderOutput {
 						case 'toggle_video':
 						case 'simulate_click':
 						case 'toggle_class':
+						case 'toggle_mute_video':
+						case 'mute_video':
+						case 'unmute_video':
 							//get the ID of the layer with the unique_id that is $a_target[$num]
 							$layer_attrID = $slide->getLayerID_by_unique_id($a_target[$num]);
-							if(trim($layer_attrID) == '')
+							if($a_target[$num] == 'backgroundvideo' || $a_target[$num] == 'firstvideo'){
+								$layer_attrID = $a_target[$num];
+							}elseif(trim($layer_attrID) == ''){
 								$layer_attrID = 'slide-'.preg_replace("/[^\w]+/", "", $slideID).'-layer-'.$a_target[$num];
+							}
 						break;
 					}
 					
@@ -3074,6 +3102,28 @@ class RevSliderOutput {
 								'delay' => $a_action_delay[$num]
 							);
 						break;
+						case 'mute_video':
+							$a_tooltip_event[$num] = (isset($a_tooltip_event[$num])) ? $a_tooltip_event[$num] : '';
+							$a_action_delay[$num] = (isset($a_action_delay[$num])) ? $a_action_delay[$num] : '';
+							
+							$a_events[] = array(
+								'event' => $a_tooltip_event[$num],
+								'action' => 'mutevideo',
+								'layer' => $layer_attrID,
+								'delay' => $a_action_delay[$num]
+							);
+						break;
+						case 'unmute_video':
+							$a_tooltip_event[$num] = (isset($a_tooltip_event[$num])) ? $a_tooltip_event[$num] : '';
+							$a_action_delay[$num] = (isset($a_action_delay[$num])) ? $a_action_delay[$num] : '';
+							
+							$a_events[] = array(
+								'event' => $a_tooltip_event[$num],
+								'action' => 'unmutevideo',
+								'layer' => $layer_attrID,
+								'delay' => $a_action_delay[$num]
+							);
+						break;
 						case 'toggle_video':
 							$a_tooltip_event[$num] = (isset($a_tooltip_event[$num])) ? $a_tooltip_event[$num] : '';
 							$a_action_delay[$num] = (isset($a_action_delay[$num])) ? $a_action_delay[$num] : '';
@@ -3081,6 +3131,17 @@ class RevSliderOutput {
 							$a_events[] = array(
 								'event' => $a_tooltip_event[$num],
 								'action' => 'togglevideo',
+								'layer' => $layer_attrID,
+								'delay' => $a_action_delay[$num]
+							);
+						break;
+						case 'toggle_mute_video':
+							$a_tooltip_event[$num] = (isset($a_tooltip_event[$num])) ? $a_tooltip_event[$num] : '';
+							$a_action_delay[$num] = (isset($a_action_delay[$num])) ? $a_action_delay[$num] : '';
+							
+							$a_events[] = array(
+								'event' => $a_tooltip_event[$num],
+								'action' => 'toggle_mute_video',
 								'layer' => $layer_attrID,
 								'delay' => $a_action_delay[$num]
 							);
@@ -3248,7 +3309,14 @@ class RevSliderOutput {
 				echo "\n".'				<div class="rs-looped '.trim($loop_class).'" '.$loop_data.'>';
 			}
 			
+			if ($toggle_allow!=false) {
+				echo '<div class="rs-untoggled-content">';
+			}
 			echo stripslashes($html)." \n";
+			if ($toggle_allow!=false) {
+				echo '</div>';
+				echo '<div class="rs-toggled-content">'.stripslashes($html_toggle).'</div>';
+			}
 			if($htmlCorners != ""){
 				echo $htmlCorners." \n";
 			}

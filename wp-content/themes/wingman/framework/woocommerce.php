@@ -12,7 +12,7 @@ function kt_loop_shop_per_page( $number ){
     }
     return $num;
 }
-add_filter('loop_shop_per_page', 'kt_loop_shop_per_page' );
+add_filter('loop_shop_per_page', 'kt_loop_shop_per_page', 999 );
 
 
 
@@ -333,8 +333,14 @@ add_action( 'woocommerce_shop_loop_item_before_image', 'woocommerce_template_loo
 
 
 add_action( 'woocommerce_shop_tool_list_before', 'woocommerce_template_loop_add_to_cart', 5);
-add_action( 'woocommerce_shop_tool_list', 'kt_woocommerce_add_archive_tool', 10);
-add_action( 'woocommerce_shop_loop_item_after_image', 'kt_woocommerce_add_archive_tool', 10);
+
+function kt_woocommerce_sale_flash($text, $post, $product){
+    $text = '<span class="onsale">' . __( 'Sale', THEME_LANG ) . '</span>';
+    return $text;
+}
+add_filter('woocommerce_sale_flash', 'kt_woocommerce_sale_flash', 20, 3);
+
+
 function kt_woocommerce_add_archive_tool(){
     $count = 1;
     if(class_exists('YITH_WCWL_UI')){
@@ -362,12 +368,74 @@ function kt_woocommerce_add_archive_tool(){
     <?php
 }
 
+add_action( 'woocommerce_shop_tool_list', 'kt_woocommerce_add_archive_tool', 10);
+add_action( 'woocommerce_shop_loop_item_after_image', 'kt_woocommerce_add_archive_tool', 10);
+
+
+
+add_filter( 'wppp_ppp_text', 'kt_replace_text_per_page',10, 2 );
+function kt_replace_text_per_page( $text, $value ){
+    return __( '%s item/pages', THEME_LANG );
+}
+
+function kt_products_per_page_default( $products_per_page ){
+    if(!$products_per_page){
+        $per_page =  kt_option('loop_shop_per_page');
+        $cols =  kt_option('shop_gird_cols');
+        $products_per_page = sprintf('%s %s %s -1', $per_page, $per_page + $cols*2,$per_page + $cols*3);
+    }
+    return $products_per_page;
+}
+add_filter( 'wppp_products_per_page', 'kt_products_per_page_default' );
+
+
+if($wppp = $GLOBALS['wppp']){
+    if(!is_admin()){
+        remove_filter('woocommerce_after_shop_loop', array( $wppp->front_end, 'products_per_page_dropdown' ), 25);
+    }
+}
+
+
+add_action( 'woocommerce_before_shop_loop', 'woocommerce_gridlist_toggle', 40);
+function woocommerce_gridlist_toggle(){ ?>
+    <?php $gridlist = apply_filters('woocommerce_gridlist_toggle', 'grid') ?>
+    <ul class="gridlist-toggle hidden-xs">
+        <li><span><?php _e('View as:', THEME_LANG) ?></span></li>
+        <li>
+            <a <?php if($gridlist == 'lists'){ ?>class="active"<?php } ?> href="#" title="<?php _e('List view', THEME_LANG) ?>" data-layout="lists" data-remove="grid"><i class="fa fa-th-list"></i></a>
+        </li>
+        <li>
+            <a <?php if($gridlist == 'grid'){ ?>class="active"<?php } ?> href="#" title="<?php _e('Grid view', THEME_LANG) ?>" data-layout="grid" data-remove="lists"><i class="fa fa-th-large"></i></a>
+        </li>
+    </ul>
+<?php }
+
+add_filter( 'woocommerce_gridlist_toggle', 'woocommerce_gridlist_toggle_callback' );
+function woocommerce_gridlist_toggle_callback(){
+    return kt_option('shop_products_layout', 'grid');
+}
+
+add_filter( 'woocommerce_product_loop_start', 'woocommerce_product_loop_start_callback' );
+function woocommerce_product_loop_start_callback($classes){
+    if(is_product_category() || is_shop() || is_product_tag()){
+        $products_layout = kt_option('shop_products_layout', 'grid');
+        $classes .= ' '.$products_layout;
+    }
+
+    $effect = kt_option('shop_products_effect', 'center');
+    $classes .= ' effect-'.$effect;
+
+    return $classes;
+}
+
 
 
 /**
  * Change hook of single-product.php
  *
  */
+
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 
 
 // Remove compare product
@@ -398,6 +466,8 @@ function woocommerce_shop_loop_item_action_action_product(){
         echo "</div>";
     }
 }
+
+
 
 
 
@@ -485,7 +555,7 @@ function woocommerce_show_product_loop_new_flash(){
 	$post_date = strtotime( $post->post_date );
 	$num_day = (int)(($now - $post_date)/(3600*24));
 	if( $num_day < $time_new ){
-		echo "<span class='kt_new'>".__( 'New!',THEME_LANG )."</span>";
+		echo "<span class='kt_new'>".__( 'New',THEME_LANG )."</span>";
 	}
 }
 add_action( 'woocommerce_shop_loop_item_before_image', 'woocommerce_show_product_loop_new_flash', 5 );
@@ -579,37 +649,6 @@ if( ! function_exists( 'kt_share_box_woo' ) ){
 }
 
 
-add_action( 'woocommerce_before_shop_loop', 'woocommerce_gridlist_toggle', 40);
-function woocommerce_gridlist_toggle(){ ?>
-    <?php $gridlist = apply_filters('woocommerce_gridlist_toggle', 'grid') ?>
-    <ul class="gridlist-toggle hidden-xs">
-        <li><span><?php _e('View as:', THEME_LANG) ?></span></li>
-		<li>
-			<a <?php if($gridlist == 'lists'){ ?>class="active"<?php } ?> href="#" title="<?php _e('List view', THEME_LANG) ?>" data-layout="lists" data-remove="grid"><i class="fa fa-th-list"></i></a>
-		</li>
-		<li>
-			<a <?php if($gridlist == 'grid'){ ?>class="active"<?php } ?> href="#" title="<?php _e('Grid view', THEME_LANG) ?>" data-layout="grid" data-remove="lists"><i class="fa fa-th-large"></i></a>
-		</li>
-	</ul>
-<?php }
-
-add_filter( 'woocommerce_gridlist_toggle', 'woocommerce_gridlist_toggle_callback' );
-function woocommerce_gridlist_toggle_callback(){
-    return kt_option('shop_products_layout', 'grid');
-}
-
-add_filter( 'woocommerce_product_loop_start', 'woocommerce_product_loop_start_callback' );
-function woocommerce_product_loop_start_callback($classes){
-    if(is_product_category() || is_shop() || is_product_tag()){
-        $products_layout = kt_option('shop_products_layout', 'grid');
-        $classes .= ' '.$products_layout;
-    }
-    
-    $effect = kt_option('shop_products_effect', 'center');
-    $classes .= ' effect-'.$effect;
-    
-    return $classes;
-}
 
 add_action( 'woocommerce_after_shop_loop_item_title', 'kt_template_single_excerpt', 15 );
 function kt_template_single_excerpt(){
@@ -629,8 +668,4 @@ function kt_template_single_excerpt(){
 add_action( 'woocommerce_sale_sountdown_item', 'kt_template_single_excerpt', 10 );
 
 
-remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
-add_filter( 'wppp_ppp_text', 'kt_replace_text_per_page',10, 2 );
-function kt_replace_text_per_page( $text, $value ){
-    return __( '%s item/pages', THEME_LANG );
-}
+

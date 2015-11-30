@@ -261,6 +261,7 @@ var tpLayerTimelinesRev = new function(){
 			
 			
 			if (jQuery('#layer_text').is(":focus")) return true;
+			if (jQuery('#layer_text_toggle').is(":focus")) return true;
 			
 			var code = (e.keyCode ? e.keyCode : e.which),
 			dist = jQuery(document.activeElement).data('steps')!=undefined ? parseFloat(jQuery(document.activeElement).data('steps')):1,
@@ -268,7 +269,9 @@ var tpLayerTimelinesRev = new function(){
 			y = Number(parseInt(jQuery('#layer_top').val(),0));
 			
 			if (e.shiftKey) dist = dist*10; 
-			switch (jQuery(document.activeElement).get(0).tagName) {
+
+			
+			switch (jQuery(document.activeElement).get(0).tagName.toLowerCase()) {
 				case "INPUT":
 				case "input":				
 					var cv = parseFloat(jQuery(document.activeElement).val());
@@ -288,7 +291,7 @@ var tpLayerTimelinesRev = new function(){
 							}
 					}							
 				break;
-				case "textarea":
+				case "textarea":				
 					return true;
 				break;
 				default:
@@ -502,11 +505,17 @@ var tpLayerTimelinesRev = new function(){
 								jQuery("#dialog_insert_icon").dialog("close");
 								setExampleButtons();
 							} else {
-								jQuery('#layer_text').val(jQuery('#layer_text').val()+jQuery(this).html()).blur().focus();	
+								if (jQuery('.lasteditedlayertext').length>0)
+									jQuery('.lasteditedlayertext').val(jQuery('.lasteditedlayertext').val()+jQuery(this).html()).blur().focus();	
+								else
+									jQuery('#layer_text').val(jQuery('#layer_text').val()+jQuery(this).html()).blur().focus();										
 								jQuery("#dialog_insert_icon").dialog("close");
 							}																												
 						} else {
-							jQuery('#layer_text').val(jQuery('#layer_text').val()+jQuery(this).html()).blur().focus();
+							if (jQuery('.lasteditedlayertext').length>0)
+								jQuery('.lasteditedlayertext').val(jQuery('.lasteditedlayertext').val()+jQuery(this).html()).blur().focus();
+							else
+								jQuery('.layer_text').val(jQuery('#layer_text').val()+jQuery(this).html()).blur().focus();
 							jQuery("#dialog_insert_icon").dialog("close");
 						}
 						
@@ -999,9 +1008,11 @@ var tpLayerTimelinesRev = new function(){
 				mheight = u.getVal(params,"scaleY"); 
 			break;
 			case 'video':
-				mwidth = u.getVal(params,"video_width");
-				mheight = u.getVal(params,"video_height"); 				
+				mwidth = params.video_data.cover===true || params.video_data.fullwidth===true ? "100%" : u.getVal(params,"video_width");
+				mheight = params.video_data.cover===true || params.video_data.fullwidth===true ? "100%" :  u.getVal(params,"video_height"); 				
 				caption.find('.slide_layer_video').css({width:parseInt(mwidth,0)+"px",height:parseInt(mheight,0)+"px"});
+				
+				
 			break;			
 		}
 		
@@ -1084,6 +1095,12 @@ var tpLayerTimelinesRev = new function(){
 				punchgs.TweenLite.set(inlayer,{width:mwidth,height:mheight})						
 			}		
 		}
+
+		if (params.type==="video") {			
+				punchgs.TweenLite.set(inlayer.find('.slide_layer_video'),{width:mwidth,height:mheight})
+				punchgs.TweenLite.set(inlayer,{width:mwidth,height:mheight})									
+		}
+
 		if (params.inline !=undefined && params.inline.idle!=undefined)					
 			jQuery.each(params.inline.idle, function(key,value) {
 
@@ -2461,9 +2478,8 @@ var tpLayerTimelinesRev = new function(){
 	 */
 	t.updateCurrentLayerTimeline = function(){				
 		var timer = jQuery('#layers-right').find('.ui-state-hover .timeline .tl-fullanim');
-		console.log(timer.closest('li').attr('id'));
-		setTimeout(function() {		
-			console.log(timer.closest('li').attr('id'));			
+		
+		setTimeout(function() {					
 			setCurTimer(timer);					
 			t.updateCurTimer("",timer);
 		},20);

@@ -3706,11 +3706,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'loop_shop_per_page',
                         'type'     => 'text',
                         'title'    => __( 'Number of products displayed per page', THEME_LANG ),
-                        'default'  => '18'
+                        'default'  => '12'
                     ),
-
-
-
 
                     // For Single Products
                     array(
