@@ -274,9 +274,9 @@ function woocommerce_single_product_carousel_callback( $columns ) {
     $sidebar = kt_get_woo_sidebar();
 
     if($sidebar['sidebar'] == 'left' || $sidebar['sidebar'] == 'right'){
-        return '{"pagination": false, "navigation": true, "desktop": 3, "desktopsmall" : 2, "tablet" : 2, "mobile" : 1}';
+        return '{"pagination": false, "navigation": true, "desktop": 3, "desktopsmall" : 2, "tablet" : 2, "mobile" : 1, "navigation_pos": "top"}';
     }else{
-        return '{"pagination": false, "navigation": true, "desktop": 3, "desktopsmall" : 2, "tablet" : 2, "mobile" : 1}';
+        return '{"pagination": false, "navigation": true, "desktop": 3, "desktopsmall" : 2, "tablet" : 2, "mobile" : 1, "navigation_pos": "top"}';
     }
 }
 
@@ -582,13 +582,26 @@ if( ! function_exists( 'kt_share_box_woo' ) ){
 add_action( 'woocommerce_before_shop_loop', 'woocommerce_gridlist_toggle', 40);
 function woocommerce_gridlist_toggle(){ ?>
     <?php $gridlist = apply_filters('woocommerce_gridlist_toggle', 'grid') ?>
-    <ul class="gridlist-toggle hidden-xs">
-        <li><span><?php _e('View as:', THEME_LANG) ?></span></li>
+    <ul class="gridlist-toggle hidden-xs clearfix">
 		<li>
-			<a <?php if($gridlist == 'lists'){ ?>class="active"<?php } ?> href="#" title="<?php _e('List view', THEME_LANG) ?>" data-layout="lists" data-remove="grid"><i class="fa fa-th-list"></i></a>
+			<a class="list<?php if($gridlist == 'lists'){ ?> active<?php } ?>" href="#" title="<?php _e('List view', THEME_LANG) ?>" data-layout="lists" data-remove="grid">
+                <span class="style-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
 		</li>
-		<li>
-			<a <?php if($gridlist == 'grid'){ ?>class="active"<?php } ?> href="#" title="<?php _e('Grid view', THEME_LANG) ?>" data-layout="grid" data-remove="lists"><i class="fa fa-th-large"></i></a>
+		<li>  
+			<a class="grid<?php if($gridlist == 'grid'){ ?> active<?php } ?>" href="#" title="<?php _e('Grid view', THEME_LANG) ?>" data-layout="grid" data-remove="lists">
+                <span class="style-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
 		</li>
 	</ul>
 <?php }
@@ -628,9 +641,23 @@ function kt_template_single_excerpt(){
 
 add_action( 'woocommerce_sale_sountdown_item', 'kt_template_single_excerpt', 10 );
 
-
+// Replace Text for plugin woocommerce product per page
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 add_filter( 'wppp_ppp_text', 'kt_replace_text_per_page',10, 2 );
 function kt_replace_text_per_page( $text, $value ){
     return __( '%s item/pages', THEME_LANG );
+}
+
+// Category thumbnail
+add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 2 );
+function woocommerce_category_image() {
+    if ( is_product_category() ){
+        global $wp_query;
+        $cat = $wp_query->get_queried_object();
+        $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+        $image = wp_get_attachment_url( $thumbnail_id );
+        if ( $image ) {
+            echo '<div class="category-thumb"><img class="img-responsive" src="' . $image . '" alt="" /></div>';
+        }
+    }
 }

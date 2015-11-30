@@ -423,16 +423,19 @@
         // Skill bar
         if (typeof $.fn.waypoint !== 'undefined') {
 
-            $('.kt-skill-wrapper').waypoint(function () {
-                $(this).find('.kt-skill-item-wrapper').each(function( i ){
-                    var $skill_bar = jQuery(this).find('.kt-skill-bar');
-                    var time_out = i * 200;
-                    setTimeout(function () {
-                        $skill_bar.css({"width": $skill_bar.data('percent') + '%'});
-                    }, time_out);
+            $('.kt-skill-wrapper').each(function(){
+                var obj = $(this);
+                $(this).waypoint(function () {
+                    obj.find('.kt-skill-item-wrapper').each(function( i ){
+                        var $skill_bar = $(this).find('.kt-skill-bar');
+                        var time_out = i * 200;
+                        setTimeout(function () {
+                            $skill_bar.css({"width": $skill_bar.data('percent') + '%'});
+                        }, time_out);
 
-                });
-            }, { offset:'85%' });
+                    });
+                }, { offset:'85%' });
+            });
 
 
             $('.creative-left, .creative-right, .kt-heading-wrapper, .border-left, .border-right').each(function() {

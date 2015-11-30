@@ -455,7 +455,32 @@
 
 .form-wppp-select.products-per-page {
   float: left !important;
-  margin: 0 28px 0 0 !important; }
+  margin: 0 30px 0 0 !important; }
+
+.woocommerce-before-shop select:not([multiple]) {
+  min-width: 262px;
+  background: none; }
+.woocommerce-before-shop form.products-per-page,
+.woocommerce-before-shop form.woocommerce-ordering {
+  position: relative; }
+  .woocommerce-before-shop form.products-per-page:after,
+  .woocommerce-before-shop form.woocommerce-ordering:after {
+    content: "\f107";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translatey(-50%);
+    -khtml-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
+    transform: translatey(-50%);
+    right: 12px;
+    font-size: 14px;
+    color: #82c14f; }
+
+.category-thumb {
+  margin-bottom: 30px; }
 
 /** ================================================
     2. Woocommerce shopping cart
@@ -724,27 +749,84 @@ body .mCSB_scrollTools {
 *** ================================================*/
 .woocommerce .gridlist-toggle {
   float: right;
-  margin: 5px 0 30px; }
+  margin: 0 0 30px; }
   .woocommerce .gridlist-toggle li {
     list-style: none;
     display: inline-block;
-    margin-right: 1px; }
-    .woocommerce .gridlist-toggle li span {
-      margin-right: 5px; }
+    margin-left: 10px;
+    float: left; }
     .woocommerce .gridlist-toggle li a {
-      width: 30px;
-      height: 30px;
+      width: 40px;
+      height: 40px;
       border: 1px solid #e5e5e5;
       display: block;
       text-align: center;
       line-height: 30px;
-      color: #e5e5e5; }
+      color: #e5e5e5;
+      position: relative; }
       .woocommerce .gridlist-toggle li a:hover, .woocommerce .gridlist-toggle li a.active {
         background: #82c14f;
         border-color: #82c14f;
         color: #FFFFFF; }
-      .woocommerce .gridlist-toggle li a i {
-        line-height: 30px; }
+      .woocommerce .gridlist-toggle li a.list span.style-toggle {
+        display: inline-block;
+        width: 20px;
+        height: 21px;
+        position: absolute;
+        position: absolute;
+        -webkit-transform: translate(-50%, -50%);
+        -khtml-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%; }
+        .woocommerce .gridlist-toggle li a.list span.style-toggle span {
+          margin-left: 4px;
+          width: 16px;
+          height: 3px;
+          background: #e5e5e5;
+          display: block;
+          margin-bottom: 3px;
+          position: relative; }
+          .woocommerce .gridlist-toggle li a.list span.style-toggle span:last-child {
+            margin-bottom: 0; }
+          .woocommerce .gridlist-toggle li a.list span.style-toggle span:before {
+            width: 3px;
+            height: 3px;
+            background: #e5e5e5;
+            position: absolute;
+            left: -4px;
+            top: 0;
+            content: ""; }
+      .woocommerce .gridlist-toggle li a.list:hover span.style-toggle span, .woocommerce .gridlist-toggle li a.list:focus span.style-toggle span, .woocommerce .gridlist-toggle li a.list.active span.style-toggle span {
+        background: #FFFFFF; }
+        .woocommerce .gridlist-toggle li a.list:hover span.style-toggle span:before, .woocommerce .gridlist-toggle li a.list:focus span.style-toggle span:before, .woocommerce .gridlist-toggle li a.list.active span.style-toggle span:before {
+          background: #FFFFFF; }
+      .woocommerce .gridlist-toggle li a.grid span.style-toggle {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        position: absolute;
+        -webkit-transform: translate(-50%, -50%);
+        -khtml-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%; }
+        .woocommerce .gridlist-toggle li a.grid span.style-toggle span {
+          width: 7px;
+          height: 7px;
+          border: 2px solid #e5e5e5;
+          display: block;
+          float: left;
+          margin: 1px; }
+      .woocommerce .gridlist-toggle li a.grid:hover span.style-toggle span, .woocommerce .gridlist-toggle li a.grid:focus span.style-toggle span, .woocommerce .gridlist-toggle li a.grid.active span.style-toggle span {
+        border: 2px solid #FFFFFF; }
 
 .woocommerce .woocommerce-ordering,
 .woocommerce-page .woocommerce-ordering {
@@ -1479,12 +1561,12 @@ body .mCSB_scrollTools {
   float: left; }
 .woocommerce-page div.product .cart .single_add_to_cart_button,
 .woocommerce div.product .cart .single_add_to_cart_button {
-  letter-spacing: 0; }
+  letter-spacing: 0;
+  height: 40px; }
   .woocommerce-page div.product .cart .single_add_to_cart_button.button,
   .woocommerce div.product .cart .single_add_to_cart_button.button {
     margin-right: 1px;
     float: left;
-    height: 40px;
     border: 2px solid #252525;
     background: #252525;
     color: #FFFFFF;
@@ -1533,7 +1615,7 @@ body .mCSB_scrollTools {
   .woocommerce .related-products > h3,
   .woocommerce .cross-sells > h3 {
     font-size: 36px;
-    margin: 0 0 100px;
+    margin: 0 0 40px;
     padding: 0 45px;
     text-transform: uppercase;
     display: inline-block;

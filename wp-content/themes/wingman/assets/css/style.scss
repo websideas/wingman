@@ -3714,6 +3714,94 @@ form.wpcf7-form{
     margin-bottom: 0;
   }
 }
+/**
+* 11.3. Skill
+**/
+.kt-skill-wrapper {
+    margin-bottom: 30px;
+    .kt-skill-item-wrapper {
+      margin-bottom: 30px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      .kt-skill-content,
+      .kt-skill-bg {
+          position: relative;
+      }
+      .kt-skill-bg{
+        background: $border-image;
+      }
+      .kt-skill-bar{
+        width: 0;
+        @include transition('width 1s linear');
+        overflow: hidden;
+        position: relative;
+      }
+      .kt-skill-bg-accent{
+        .kt-skill-bar{
+          background: $primary-color;
+        }
+      }
+    }
+}
+.kt-style-inner{
+  .kt-skill-bar{
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
+}
+.kt-skill-bar{
+  span{
+    padding: 0;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &.striped{
+    span{
+      @include css3-prefix-value('background-image','linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent)');
+      @include background-size('40px','40px');
+    }
+  }
+}
+.kt-skill-text {
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $title-text;
+    letter-spacing: 0.2em;
+}
+.kt-style-before {
+  .kt-skill-text{
+    margin: 0 0 18px;
+    padding: 0;
+    span{
+      float: right;
+    }
+  }
+}
+.kt-style-after{
+  .kt-skill-text{
+    margin-top: 10px;
+    span{
+      float: right;
+    }
+  }
+}
+.kt-style-inner{
+  .kt-skill-text{
+    padding: 0 5px;
+    margin: 0;
+  }
+}
+
 
 /* ==============================
    11. Page Content

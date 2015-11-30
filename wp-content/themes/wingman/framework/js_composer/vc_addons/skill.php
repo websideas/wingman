@@ -10,7 +10,7 @@ class WPBakeryShortCode_Skill extends WPBakeryShortCodesContainer {
 
             'style' => 'before',
             'options' => '',
-            'height' => 6,
+            'height' => 3,
             'boxbgcolor' => '#e3e3e3',
 
             'padding_box' => '',
@@ -327,7 +327,7 @@ vc_map( array(
             "class" => "",
             "heading" => __("Bar Height", 'js_composer'),
             "param_name" => "height",
-            "value" => 6,
+            "value" => 3,
             "suffix" => "px",
         ),
         array(
