@@ -1068,23 +1068,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'subsection' => true,
                 'fields'		=> array(
 
-                    /*
-                    array(
-                        'id'       => 'header_scheme_fixed',
-                        'type'     => 'select',
-                        'title'    => __( 'Header Hover Style', THEME_LANG ),
-                        'subtitle'     => __( 'Please select your header color scheme fixed here.', THEME_LANG ),
-                        'options'  => array(
-                            '1' => __('Style 1', THEME_LANG),
-                            '2' => __('Style 2', THEME_LANG ),
-                            '3' => __('Style 3', THEME_LANG ),
-                            '4' => __('Style 4', THEME_LANG ),
-                        ),
-                        'default'  => '1',
-                        'clear' => false,
-                    ),
-                    */
-
                     array(
                         'id'       => 'styling_navigation_general',
                         'type'     => 'raw',
