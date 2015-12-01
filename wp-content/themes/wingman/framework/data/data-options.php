@@ -1101,6 +1101,19 @@ if ( ! class_exists( 'KT_config' ) ) {
                         ),
                         'output'      => array( '.nav-container'),
                     ),
+
+                    array(
+                        'id'       => 'navigation_border',
+                        'type'     => 'border',
+                        'title'    => __( 'Main Navigation Border', THEME_LANG ),
+                        'output'   => array( '.nav-container' ),
+                        'all'      => false,
+                        'left'     => false,
+                        'right'    => false,
+                        'default'  => array( )
+                    ),
+
+
                     array(
                         'id'       => 'navigation_box_background',
                         'type'     => 'background',
@@ -1151,6 +1164,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li > a:hover',
                             '#main-navigation > li > a:focus',
                             '#main-navigation > li.current-menu-item > a',
+                            '#main-navigation > li.current-menu-parent > a',
                             '#main-navigation > li.hovered > a',
                         ),
                         'title'    => __( 'Top Level hover Color', THEME_LANG ),
@@ -1181,10 +1195,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'background',
                         'title'    => __( 'Dropdown Background Color', THEME_LANG ),
                         'default'  => array(
-                            'background-color'      => '#FFFFFF',
+                            'background-color'      => '',
                         ),
                         'output'   => array(
-                            '#main-nav-tool .kt-wpml-languages ul li > a',
                             '#main-navigation > li ul.sub-menu-dropdown > li > a'
                         ),
                         'background-repeat'     => false,
@@ -1201,13 +1214,12 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'background',
                         'title'    => __( 'Dropdown Background Hover Color', THEME_LANG ),
                         'default'  => array(
-                            'background-color'      => '#EAEAEA',
+                            'background-color'      => '',
                         ),
                         'output'   => array(
                             '#main-navigation > li ul.sub-menu-dropdown > li.current-menu-item > a',
                             '#main-navigation > li ul.sub-menu-dropdown > li.current-menu-parent > a',
-                            '#main-nav-tool .kt-wpml-languages ul li > a:hover',
-                            '#main-navigation > li ul.sub-menu-dropdown > li:hover > a',
+                            '#main-navigation > li ul.sub-menu-dropdown > li.hovered > a',
                             '#main-navigation > li ul.sub-menu-dropdown > li > a:hover',
                         ),
                         'background-repeat'     => false,
@@ -1226,7 +1238,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li ul.sub-menu-dropdown > li > a',
                         ),
                         'title'    => __( 'Dropdown Text Color', THEME_LANG ),
-                        'default'  => '#282828',
+                        'default'  => '#707070',
                         'transparent' => false
                     ),
 
@@ -1241,7 +1253,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li ul.sub-menu-dropdown > li > a:hover',
                         ),
                         'title'    => __( 'Dropdown Text Hover Color', THEME_LANG ),
-                        'default'  => '#282828',
+                        'default'  => '#82c14f',
                         'transparent' => false
                     ),
 
@@ -1271,19 +1283,17 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a:hover',
                         ),
                         'title'    => __( 'MegaMenu Title Hover Color', THEME_LANG ),
-                        'default'  => '#d0a852',
+                        'default'  => '#82c14f',
                         'transparent' => false
                     ),
                     array(
                         'id'       => 'mega_color',
                         'type'     => 'color',
                         'output'   => array(
-                            '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > .sub-menu-megamenu > li > a',
-                            '.mini-cart .shopping-bag',
-                            '.bag-product .bag-product-title a',
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu a'
                         ),
                         'title'    => __( 'MegaMenu Text color', THEME_LANG ),
-                        'default'  => '#282828',
+                        'default'  => '#707070',
                         'transparent' => false
                     ),
 
@@ -1291,12 +1301,11 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'mega_color_hover',
                         'type'     => 'color',
                         'output'   => array(
-                            '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > .sub-menu-megamenu > li.current-menu-item > a',
-                            '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > .sub-menu-megamenu > li > a:hover',
-                            '.bag-product .bag-product-title a:hover',
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu  > li.current-menu-item a:hover',
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu a:hover',
                         ),
                         'title'    => __( 'MegaMenu Text Hover color', THEME_LANG ),
-                        'default'  => '#d0a852',
+                        'default'  => '#82c14f',
                         'transparent' => false
                     ),
                 )

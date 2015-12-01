@@ -25,6 +25,10 @@ if ( empty( $woocommerce_loop['columns'] ) ) {
 	$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 4 );
 }
 
+// Store column count for displaying the grid
+if ( empty( $woocommerce_loop['columns_tablet'] ) )
+    $woocommerce_loop['columns_tablet'] = apply_filters( 'loop_shop_columns_tablet', 2 );
+
 // Increase loop count
 $woocommerce_loop['loop'] ++;
 
