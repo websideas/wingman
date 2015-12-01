@@ -325,6 +325,8 @@
     select:not([multiple]){
       min-width: 262px;
       background: none;
+      color: #707070;
+      border-color: #e5e5e5;
     }
 
     &:after{
@@ -357,26 +359,26 @@
 
 .woocommerce.compare-button{
 	a:before{
-		content: "\f0ec";
+      content: "\f0ec";
 	}
 	.blockUI.blockOverlay{
 		background: $primary-color !important;
 	    opacity: 1 !important;
 	    cursor: pointer !important;
 	    &:before{
-	    	background: none !important;
-		    color: $white;
-		    @include FontAwesome('\f110');
-        @include animation(spin 2s linear infinite);
-		    font-size: 20px;
-		    height: 100%;
-		    left: 0;
-		    line-height: 40px;
-		    margin: 0 !important;
-		    opacity: 0.6;
-		    text-indent: 0;
-		    top: 0;
-		    width: 100% !important;
+          background: none !important;
+          color: $white;
+          @include FontAwesome('\f110');
+          @include animation(spin 2s linear infinite);
+          font-size: 20px;
+          height: 100%;
+          left: 0;
+          line-height: 40px;
+          margin: 0 !important;
+          opacity: 0.6;
+          text-indent: 0;
+          top: 0;
+          width: 100% !important;
 	    }
 	}
 }
@@ -555,6 +557,8 @@
     }
   }
 }
+
+
 .cart_block_no_products {
   margin: 0;
   padding: 20px 20px;
@@ -1153,24 +1157,24 @@ body{
     		}
 	    }
 	    h3{
-	    	font-size: 14px;
-		    font-weight: normal;
-		    letter-spacing: 0.2em;
-		    font-family:Poppins;
-		    text-align: center;
-		    margin: 0 0 8px;
-		    text-transform: none;
-		    padding: 0;
-        mark{
-          background: none;
+          font-size: 14px;
+          font-weight: normal;
+          letter-spacing: 0.2em;
+          font-family:Poppins;
+          text-align: center;
+          margin: 0 0 8px;
+          text-transform: none;
           padding: 0;
-        }
-		    a{
-		    	color: $title-text;
-		    	&:hover{
-		    		color: $primary-color;
-		    	}
-		    }
+          mark{
+            background: none;
+            padding: 0;
+          }
+          a{
+            color: $title-text;
+            &:hover{
+                color: $primary-color;
+            }
+          }
 	    }
 	    .star-rating{
 	    	display: block;
@@ -1275,14 +1279,17 @@ body{
 	}
 	.product-image-tool{
 		width:50%;
-    position: absolute;
-    bottom:0;
-    left: 0;
-    @include transform(translatey(40px));
-    @include transition();
-    .tooltip{
-      white-space: nowrap;
-    }
+        position: absolute;
+        bottom:0;
+        left: 0;
+        @include transform(translatey(40px));
+        @include transition();
+
+
+
+        .tooltip{
+          white-space: nowrap;
+        }
 	}
 	.tool-3{
 		.tool-inner{
@@ -1647,28 +1654,6 @@ div.swatch-wrapper{
   }
 }
 
-/*
-.attribute_pa_size_picker{
-  .swatch-wrapper{
-    border: none;
-    &:hover,&.selected{
-      background: $primary-color;
-    }
-  }
-}
-.attribute_pa_color_picker{
-  .swatch-wrapper{
-    border: 1px solid transparent;
-    .swatch-anchor{
-      width: 15px!important;
-      height: 15px!important;
-    }
-    &:hover,&.selected{
-      background: $primary-color;
-    }
-  }
-}
-*/
 
 
 .woocommerce-accordions{
@@ -1717,40 +1702,41 @@ div.swatch-wrapper{
     7. Upsells, Related, Cross-sells
 *** =========================*/
 .woocommerce{
-	.upsells-products,
-	.related-products,
-	.cross-sells {
-	    margin-bottom: 20px;
-	    text-align: center;
-	    > h3{
-	    	font-size: 36px;
-		    margin: 0 0 40px;
-		    padding: 0 45px;
-		    text-transform: uppercase;
-		    display: inline-block;
-		    color:$title-text;
-		    letter-spacing: 0.2em;
-		    position: relative;
-		    &:after,&:before{
-		    	content:"";
-			    width:2px;
-			    height: 26px;
-			    background: $title-text;
-			    position: absolute;
-			    right:0;
-			    top:50%;
-			    @include transform(translatey(-65%));
-		    }
-		    &:before{
-		    	left:0;
-		    }
-	    }
-	    ul.shop-products{
-	    	li.product{
-	    		width: 100% !important;
-	    	}
-	    }
-	}
+  .upsells-products,
+  .related-products,
+  .cross-sells {
+    margin-bottom: 20px;
+    text-align: center;
+    > h3{
+        font-size: 36px;
+        margin: 0 0 40px;
+        padding: 0 45px;
+        text-transform: uppercase;
+        display: inline-block;
+        color:$title-text;
+        letter-spacing: 0.2em;
+        position: relative;
+        &:after,
+        &:before{
+            content:"";
+            width:2px;
+            height: 26px;
+            background: $title-text;
+            position: absolute;
+            right:0;
+            top:50%;
+            @include transform(translatey(-65%));
+        }
+        &:before{
+            left:0;
+        }
+    }
+    ul.shop-products{
+        li.product{
+            width: 100% !important;
+        }
+    }
+  }
 }
 /** =========================
     8. Page Cart
@@ -1766,6 +1752,8 @@ div.swatch-wrapper{
     	margin-bottom: 50px;
     }
 }
+
+
 .woocommerce-page,
 .woocommerce{
 	.cart-collaterals{

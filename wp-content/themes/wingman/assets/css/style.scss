@@ -3996,7 +3996,7 @@ form.wpcf7-form{
           width: auto;
           padding: 0 10px;
           font-size: 14px;
-          margin: 0;
+          margin: 0 5px;
           color: $title-text;
           position: relative;
         }
@@ -4032,6 +4032,8 @@ form.wpcf7-form{
     }
   }
 }
+
+
 .pagination{
   .page-numbers{
     border: none;
@@ -4040,7 +4042,7 @@ form.wpcf7-form{
     width: auto;
     padding: 0 10px;
     font-size: 14px;
-    margin: 0;
+    margin: 0 5px;
     color: $title-text;
     position: relative;
     &:hover,

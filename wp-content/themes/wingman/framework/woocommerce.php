@@ -808,3 +808,11 @@ function wc_category_description( $category ) {
         echo $subtit;
     }
 }
+
+function kt_woocommerce_pagination_args($args){
+    $args['next_text'] = '<i class="fa fa-long-arrow-right"></i>';
+    $args['prev_text'] = '<i class="fa fa-long-arrow-left"></i>';
+
+    return $args;
+}
+add_filter('woocommerce_pagination_args', 'kt_woocommerce_pagination_args');
