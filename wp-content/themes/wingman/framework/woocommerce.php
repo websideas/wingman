@@ -788,3 +788,23 @@ function kt_template_single_excerpt(){
 }
 
 add_action( 'woocommerce_sale_sountdown_item', 'kt_template_single_excerpt', 10 );
+
+function kt_thumbnail_page_shop(){
+    
+    if( is_shop() ){
+        $thumbnail = get_thumbnail_attachment( get_post_thumbnail_id( woocommerce_get_page_id('shop') ), 'full');
+        if( $thumbnail ){
+            echo '<div class="shop-thumb"><img class="img-responsive" src="'.$thumbnail['url'].'" alt="'.$thumbnail['alt'].'" /></div>';
+        }
+    }
+}
+add_action( 'woocommerce_archive_description', 'kt_thumbnail_page_shop', 10 );
+
+
+add_action( 'woocommerce_after_subcategory', 'wc_category_description', 10, 1 );
+function wc_category_description( $category ) {
+    if ( is_product_category() ) {
+        $subtit = '<div class="description product-short-description">'.$category->description.'</div>';
+        echo $subtit;
+    }
+}

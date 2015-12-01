@@ -484,7 +484,7 @@
   .woocommerce-page .woocommerce-message :before {
     display: none; }
 
-.category-thumb {
+.shop-thumb {
   margin-bottom: 30px; }
 
 /** ================================================
@@ -1072,6 +1072,9 @@ body .mCSB_scrollTools {
     margin: 0 0 8px;
     text-transform: none;
     padding: 0; }
+    .woocommerce ul.shop-products h3 mark {
+      background: none;
+      padding: 0; }
     .woocommerce ul.shop-products h3 a {
       color: #252525; }
       .woocommerce ul.shop-products h3 a:hover {

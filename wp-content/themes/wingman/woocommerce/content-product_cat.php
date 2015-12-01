@@ -77,22 +77,24 @@ $classes[] = 'col-xs-'.$bootstrapTabletColumn.' col-sm-'. $bootstrapTabletColumn
 		?>
 
 	</div>
-	<h3>
-		<a href="<?php echo get_term_link( $category->slug, 'product_cat' ); ?>">
-			<?php
-				echo $category->name;
+	<div class="product-attr-container">
+		<h3>
+			<a href="<?php echo get_term_link( $category->slug, 'product_cat' ); ?>">
+				<?php
+					echo $category->name;
 
-				if ( $category->count > 0 )
-					echo apply_filters( 'woocommerce_subcategory_count_html', ' <mark class="count">(' . $category->count . ')</mark>', $category );
-			?>
-			<?php
-				/**
-				 * woocommerce_after_subcategory_title hook
-				 */
-				do_action( 'woocommerce_after_subcategory_title', $category );
-			?>
-		</a>
-	</h3>
+					if ( $category->count > 0 )
+						echo apply_filters( 'woocommerce_subcategory_count_html', ' <mark class="count">(' . $category->count . ')</mark>', $category );
+				?>
+				<?php
+					/**
+					 * woocommerce_after_subcategory_title hook
+					 */
+					do_action( 'woocommerce_after_subcategory_title', $category );
+				?>
+			</a>
+		</h3>
 
-	<?php do_action( 'woocommerce_after_subcategory', $category ); ?>
+		<?php do_action( 'woocommerce_after_subcategory', $category ); ?>
+	</div>
 </li>

@@ -57,13 +57,10 @@ function theme_setup() {
     
     if (function_exists( 'add_image_size' ) ) {
         add_image_size( 'recent_posts', 570, 355, true);
+        add_image_size( 'recent_posts_list', 570, 410, true);
         add_image_size( 'small', 170, 170, true );
         add_image_size( 'blog_post', 1140, 610, true );
         add_image_size( 'blog_post_sidebar', 1140 );
-        
-        add_image_size( 'portfolio_default', 960, 600, true );
-        add_image_size( 'portfolio_wide', 960, 300, true );
-        add_image_size( 'portfolio_long', 480, 600, true );
     }
     
     load_theme_textdomain( THEME_LANG, THEME_DIR . '/languages' );
