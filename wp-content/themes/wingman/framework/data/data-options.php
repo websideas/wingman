@@ -1084,39 +1084,48 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'clear' => false,
                     ),
                     */
-                    array(
-                        'id'             => 'navigation_dropdown',
-                        'type'           => 'dimensions',
-                        'units'          => array('px'),
-                        'units_extended' => 'true',
-                        'title'          => __( 'Dropdown width', THEME_LANG ),
-                        'subtitle'          => __( 'Change width of Dropdown', THEME_LANG ),
-                        'height'         => false,
-                        'default'        => array( 'width'  => 300, 'height' => 100 ),
-                        'output'   => array( '#main-navigation > li ul.sub-menu-dropdown'),
-                    ),
 
+                    array(
+                        'id'       => 'styling_navigation_general',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'General', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
                     array(
                         'id'       => 'navigation_background',
                         'type'     => 'background',
                         'title'    => __( 'Background', THEME_LANG ),
                         'subtitle' => __( 'Main Navigation with image, color, etc.', THEME_LANG ),
                         'default'   => array(
-                            'background-color'      => '#FFFFFF',
+                            'background-color'      => '#1e1e1e',
                         ),
                         'output'      => array( '.nav-container'),
                     ),
-
                     array(
-                        'type' => 'divide',
-                        'id' => 'divide_fake',
+                        'id'       => 'navigation_box_background',
+                        'type'     => 'background',
+                        'title'    => __( 'MegaMenu & Dropdown Box background', THEME_LANG ),
+                        'default'   => array(
+                            'background-color'      => '#FFFFFF',
+                        ),
+                        'output'      => array(
+                            '#main-navigation > li ul.sub-menu-dropdown',
+                            '#main-navigation > li > .kt-megamenu-wrapper'
+                        ),
+                        'transparent'           => false,
+                    ),
+                    array(
+                        'id'       => 'styling_navigation_general',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Top Level', THEME_LANG ).'</div>',
+                        'full_width' => true
                     ),
 
                     array(
                         'id'            => 'navigation_space',
                         'type'          => 'slider',
                         'title'         => __( 'Top Level space', THEME_LANG ),
-                        'default'       => 20,
+                        'default'       => 30,
                         'min'           => 0,
                         'step'          => 1,
                         'max'           => 50,
@@ -1129,51 +1138,43 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'navigation_color',
                         'type'     => 'color',
                         'output'   => array(
-                            '.header-light #nav > ul > li > a',
-                            '.header-light #header-content-mobile a'
+                            '#main-navigation > li > a'
                         ),
-                        'title'    => __( 'Light - Top Level Color', THEME_LANG ),
-                        'default'  => '#282828',
+                        'title'    => __( 'Top Level Color', THEME_LANG ),
+                        'default'  => '#FFFFFF',
                         'transparent' => false
                     ),
                     array(
                         'id'       => 'navigation_color_hover',
                         'type'     => 'color',
                         'output'   => array(
-                            '.header-light #nav > ul > li > a:hover',
-                            '.header-light #nav > ul > li > a:focus',
-                            '.header-light #nav > ul > li.current-menu-item > a',
-                            '.header-light #nav > ul > li.current-menu-parent > a',
-                            '.header-light #header-content-mobile a:hover'
+                            '#main-navigation > li > a:hover',
+                            '#main-navigation > li > a:focus',
+                            '#main-navigation > li.current-menu-item > a',
+                            '#main-navigation > li.hovered > a',
                         ),
                         'title'    => __( 'Top Level hover Color', THEME_LANG ),
-                        'default'  => '#d0a852',
+                        'default'  => '#82c14f',
                         'transparent' => false
                     ),
 
-                    array(
-                        'type' => 'divide',
-                        'id' => 'divide_fake',
-                    ),
 
                     array(
-                        'id'       => 'navigation_box_background',
-                        'type'     => 'background',
-                        'title'    => __( 'MegaMenu & Dropdown Box background', THEME_LANG ),
-                        'default'   => array(
-                            'background-color'      => '#FFFFFF',
-                        ),
-                        'output'      => array(
-                            '#main-navigation > li .kt-megamenu-wrapper',
-                            '.shopping-bag-wrapper',
-                            '#main-nav-tool .kt-wpml-languages ul',
-                            '#main-navigation > li ul.sub-menu-dropdown'
-                        ),
-                        'transparent'           => false,
+                        'id'       => 'styling_navigation_dropdown',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Drop down', THEME_LANG ).'</div>',
+                        'full_width' => true
                     ),
                     array(
-                        'type' => 'divide',
-                        'id' => 'divide_fake',
+                        'id'             => 'navigation_dropdown',
+                        'type'           => 'dimensions',
+                        'units'          => array('px'),
+                        'units_extended' => 'true',
+                        'title'          => __( 'Dropdown width', THEME_LANG ),
+                        'subtitle'          => __( 'Change width of Dropdown', THEME_LANG ),
+                        'height'         => false,
+                        'default'        => array( 'width'  => 300, 'height' => 100 ),
+                        'output'   => array( '#main-navigation > li ul.sub-menu-dropdown'),
                     ),
                     array(
                         'id'       => 'dropdown_background',
@@ -1245,27 +1246,22 @@ if ( ! class_exists( 'KT_config' ) ) {
                     ),
 
                     array(
-                        'type' => 'divide',
-                        'id' => 'divide_fake',
+                        'id'       => 'styling_navigation_mega',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Mega', THEME_LANG ).'</div>',
+                        'full_width' => true
                     ),
 
-                    array(
-                        'id'       => 'mega_vertical',
-                        'type'     => 'color',
-                        'title'    => __( 'MegaMenu Border Vertical Divders', THEME_LANG ),
-                        'default'  => '#282828',
-                        'transparent' => false
-                    ),
                     array(
                         'id'       => 'mega_title_color',
                         'type'     => 'color',
                         'output'   => array(
-                            '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a',
-                            '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > span.megamenu-title',
-                            '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li .widget-title',
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a',
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span',
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li .widget-title',
                         ),
                         'title'    => __( 'MegaMenu Title color', THEME_LANG ),
-                        'default'  => '#282828',
+                        'default'  => '#252525',
                         'transparent' => false
                     ),
                     array(
@@ -1301,18 +1297,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         ),
                         'title'    => __( 'MegaMenu Text Hover color', THEME_LANG ),
                         'default'  => '#d0a852',
-                        'transparent' => false
-                    ),
-                    array(
-                        'type' => 'divide',
-                        'id' => 'divide_fake',
-                    ),
-                    array(
-                        'id'       => 'cart_divders',
-                        'type'     => 'color',
-                        'output'   => array( ),
-                        'title'    => __( 'Cart divders color', THEME_LANG ),
-                        'default'  => '#e5e5e5',
                         'transparent' => false
                     ),
                 )
@@ -1357,9 +1341,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'color',
                         'output'   => array(
                             'ul.navigation-mobile > li:hover > a',
-                            'ul.navigation-mobile > li > a:hover',
-                            //'ul.navigation-mobile > li.current-menu-item > a',
-                            //'ul.navigation-mobile > li.active-menu-item > a',
+                            'ul.navigation-mobile > li > a:hover'
                         ),
                         'title'    => __( 'Top Level hover Color', THEME_LANG ),
                         'default'  => '#282828',
