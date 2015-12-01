@@ -304,7 +304,15 @@
             var $this = $(this),
                 $gridlist = $this.closest('.gridlist-toggle'),
                 $products = $this.closest('#main').find('ul.shop-products');
-                
+
+            var data = {
+                action: 'frontend_update_posts_layout',
+                security : ajax_frontend.security,
+                layout: $this.data('layout')
+            };
+
+            $.post(ajax_frontend.ajaxurl, data, function(response) { });
+
             $gridlist.find('a').removeClass('active');
             $this.addClass('active');
             $products

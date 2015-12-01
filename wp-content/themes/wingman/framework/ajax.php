@@ -93,6 +93,9 @@ function wp_ajax_fronted_loadmore_archive_callback(){
 
 }
 
+
+
+
 add_action( 'wp_ajax_fronted_loadmore_archive', 'wp_ajax_fronted_loadmore_archive_callback' );
 add_action( 'wp_ajax_nopriv_fronted_loadmore_archive', 'wp_ajax_fronted_loadmore_archive_callback' );
 
@@ -204,3 +207,6 @@ function wp_ajax_fronted_popup_callback() {
     
     die();
 }
+
+
+

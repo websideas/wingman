@@ -4,6 +4,66 @@
 if ( !defined('ABSPATH')) exit;
 
 /**
+ * Enable support for woocommerce after setip theme
+ *
+ */
+add_action( 'after_setup_theme', 'woocommerce_theme_setup' );
+if ( ! function_exists( 'woocommerce_theme_setup' ) ):
+    function woocommerce_theme_setup() {
+        /**
+         * Enable support for woocommerce
+         */
+        add_theme_support( 'woocommerce' );
+    }
+endif;
+
+/**
+ * Add custom style to woocommerce
+ *
+ */
+
+function kt_wp_enqueue_scripts(){
+    wp_enqueue_style( 'kt-woocommerce', THEME_CSS . 'woocommerce.css' );
+    wp_enqueue_style( 'easyzoom', THEME_CSS . 'easyzoom.css', array());
+
+    wp_enqueue_script( 'easyzoom', THEME_JS . 'easyzoom.js', array( 'jquery' ), null, true );
+    wp_enqueue_script( 'variations-plugin-script', THEME_JS . 'woo-variations-plugin.js', array( 'jquery' ), null, true );
+    wp_enqueue_script( 'mCustomScrollbar-script', THEME_JS . 'jquery.mCustomScrollbar.min.js', array( 'jquery' ), null, true );
+
+    wp_enqueue_script( 'jquery-ui-accordion' );
+    wp_enqueue_script( 'jquery-ui-tabs' );
+    wp_enqueue_script( 'kt-woocommerce', THEME_JS . 'woocommerce.js', array( 'jquery' ), null, true );
+
+}
+add_action( 'wp_enqueue_scripts', 'kt_wp_enqueue_scripts' );
+
+
+/**
+ * Define image sizes
+ *
+ *
+ */
+function kt_woocommerce_image_dimensions() {
+    global $pagenow;
+
+    if ( ! isset( $_GET['activated'] ) || $pagenow != 'themes.php' ) {
+        return;
+    }
+
+    $catalog = array('width' => '500','height' => '555', 'crop' => 1 );
+    $thumbnail = array('width' => '200', 'height' => '250', 'crop' => 1 );
+    $single = array( 'width' => '1000','height' => '1200', 'crop' => 1);
+
+    // Image sizes
+    update_option( 'shop_catalog_image_size', $catalog ); 		// Product category thumbs
+    update_option( 'shop_single_image_size', $single ); 		// Single product image
+    update_option( 'shop_thumbnail_image_size', $thumbnail ); 	// Image gallery thumbs
+}
+add_action( 'after_switch_theme', 'kt_woocommerce_image_dimensions', 1 );
+
+
+
+/**
  *
  * Set the number of products per page when the customer
  * changes the amount in the drop down.
@@ -120,6 +180,76 @@ function products_per_page_dropdown() {
 }
 add_action( 'woocommerce_before_shop_loop', 'products_per_page_dropdown', 25 );
 
+
+
+/**
+ * Display Gird List toogle
+ *
+ *
+ */
+
+function woocommerce_gridlist_toggle(){ ?>
+    <?php $gridlist = apply_filters('woocommerce_gridlist_toggle', kt_get_gridlist_toggle()) ?>
+    <ul class="gridlist-toggle hidden-xs clearfix">
+        <li>
+            <a class="list<?php if($gridlist == 'lists'){ ?> active<?php } ?>" data-placement="top" data-toggle="tooltip" href="#" title="<?php _e('List view', THEME_LANG) ?>" data-layout="lists" data-remove="grid">
+                <span class="style-toggle"><span></span><span></span><span></span><span></span></span>
+            </a>
+        </li>
+        <li>
+            <a class="grid<?php if($gridlist == 'grid'){ ?> active<?php } ?>" data-placement="top" data-toggle="tooltip" href="#" title="<?php _e('Grid view', THEME_LANG) ?>" data-layout="grid" data-remove="lists">
+                <span class="style-toggle"><span></span><span></span><span></span><span></span></span>
+            </a>
+        </li>
+    </ul>
+<?php }
+add_action( 'woocommerce_before_shop_loop', 'woocommerce_gridlist_toggle', 40);
+
+
+/**
+ *
+ * Ajax Update posts layout
+ *
+ *
+ */
+function kt_frontend_update_posts_layout(){
+    WC()->session->set( 'products_layout', $_REQUEST['layout']);
+}
+
+add_action( 'wp_ajax_frontend_update_posts_layout', 'kt_frontend_update_posts_layout' );
+add_action( 'wp_ajax_nopriv_frontend_update_posts_layout', 'kt_frontend_update_posts_layout' );
+
+/**
+ * Get Grid or List layout.
+ *
+ * Return the layout of products
+ *
+ * @return string layout of products.
+ *
+ *
+ */
+function kt_get_gridlist_toggle( $layout = 'grid' ){
+
+    if ( WC()->session->__isset( 'products_layout' ) ) :
+        return WC()->session->__get( 'products_layout' );
+    else :
+        return kt_option('shop_products_layout', $layout);
+    endif;
+
+}
+
+
+add_filter( 'woocommerce_product_loop_start', 'woocommerce_product_loop_start_callback' );
+function woocommerce_product_loop_start_callback($classes){
+    if(is_product_category() || is_shop() || is_product_tag()){
+        $products_layout = kt_get_gridlist_toggle();
+        $classes .= ' '.$products_layout;
+    }
+    return $classes;
+}
+
+
+
 /**
  * Sale price Percentage
  */
@@ -130,27 +260,6 @@ function kt_woocommerce_sale_price_html( $price, $product ) {
     return $price . sprintf( __('<span class="price-save"> %s</span>', THEME_LANG ), $percentage . '%' );
 }
 */
-
-/**
- * Define image sizes
- */
-function kt_woocommerce_image_dimensions() {
-	global $pagenow;
-
-	if ( ! isset( $_GET['activated'] ) || $pagenow != 'themes.php' ) {
-		return;
-	}
-
-  	$catalog = array('width' => '500','height' => '555', 'crop' => 1 );
-    $thumbnail = array('width' => '200', 'height' => '250', 'crop' => 1 );
-	$single = array( 'width' => '1000','height' => '1200', 'crop' => 1);
-
-	// Image sizes
-	update_option( 'shop_catalog_image_size', $catalog ); 		// Product category thumbs
-	update_option( 'shop_single_image_size', $single ); 		// Single product image
-	update_option( 'shop_thumbnail_image_size', $thumbnail ); 	// Image gallery thumbs
-}
-add_action( 'after_switch_theme', 'kt_woocommerce_image_dimensions', 1 );
 
 
 /**
@@ -165,44 +274,11 @@ function kt_woocommerce_placeholder_img_src( $src ) {
 
 
 /**
- * Enable support for woocommerce after setip theme
- *
- */
-add_action( 'after_setup_theme', 'woocommerce_theme_setup' );
-if ( ! function_exists( 'woocommerce_theme_setup' ) ):
-    function woocommerce_theme_setup() {
-        /**
-    	 * Enable support for woocommerce
-    	 */
-        add_theme_support( 'woocommerce' );
-    }
-endif;
-
-/**
  * remove WC breadcrumb
  *
  */
 remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20 );
 
-/**
- * Add custom style to woocommerce
- *
- */
-
-function kt_wp_enqueue_scripts(){
-    wp_enqueue_style( 'kt-woocommerce', THEME_CSS . 'woocommerce.css' );
-    wp_enqueue_style( 'easyzoom', THEME_CSS . 'easyzoom.css', array());
-
-    wp_enqueue_script( 'easyzoom', THEME_JS . 'easyzoom.js', array( 'jquery' ), null, true );
-    wp_enqueue_script( 'variations-plugin-script', THEME_JS . 'woo-variations-plugin.js', array( 'jquery' ), null, true );
-    wp_enqueue_script( 'mCustomScrollbar-script', THEME_JS . 'jquery.mCustomScrollbar.min.js', array( 'jquery' ), null, true );
-    
-    wp_enqueue_script( 'jquery-ui-accordion' );
-    wp_enqueue_script( 'jquery-ui-tabs' );
-    wp_enqueue_script( 'kt-woocommerce', THEME_JS . 'woocommerce.js', array( 'jquery' ), null, true );
-
-}
-add_action( 'wp_enqueue_scripts', 'kt_wp_enqueue_scripts' );
 
 
 /**
@@ -475,43 +551,6 @@ function kt_woocommerce_add_archive_tool(){
 add_action( 'woocommerce_shop_tool_list', 'kt_woocommerce_add_archive_tool', 10);
 add_action( 'woocommerce_shop_loop_item_after_image', 'kt_woocommerce_add_archive_tool', 10);
 
-
-
-
-add_action( 'woocommerce_before_shop_loop', 'woocommerce_gridlist_toggle', 40);
-function woocommerce_gridlist_toggle(){ ?>
-    <?php $gridlist = apply_filters('woocommerce_gridlist_toggle', 'grid') ?>
-    <ul class="gridlist-toggle hidden-xs clearfix">
-        <li>
-            <a class="list<?php if($gridlist == 'lists'){ ?> active<?php } ?>" data-placement="top" data-toggle="tooltip" href="#" title="<?php _e('List view', THEME_LANG) ?>" data-layout="lists" data-remove="grid">
-                <span class="style-toggle"><span></span><span></span><span></span><span></span></span>
-            </a>
-        </li>
-        <li>
-            <a class="grid<?php if($gridlist == 'grid'){ ?> active<?php } ?>" data-placement="top" data-toggle="tooltip" href="#" title="<?php _e('Grid view', THEME_LANG) ?>" data-layout="grid" data-remove="lists">
-                <span class="style-toggle"><span></span><span></span><span></span><span></span></span>
-            </a>
-        </li>
-    </ul>
-<?php }
-
-add_filter( 'woocommerce_gridlist_toggle', 'woocommerce_gridlist_toggle_callback' );
-function woocommerce_gridlist_toggle_callback(){
-    return kt_option('shop_products_layout', 'grid');
-}
-
-add_filter( 'woocommerce_product_loop_start', 'woocommerce_product_loop_start_callback' );
-function woocommerce_product_loop_start_callback($classes){
-    if(is_product_category() || is_shop() || is_product_tag()){
-        $products_layout = kt_option('shop_products_layout', 'grid');
-        $classes .= ' '.$products_layout;
-    }
-
-    $effect = kt_option('shop_products_effect', 'center');
-    $classes .= ' effect-'.$effect;
-
-    return $classes;
-}
 
 
 /**

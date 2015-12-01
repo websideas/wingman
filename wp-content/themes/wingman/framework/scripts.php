@@ -77,7 +77,16 @@ function kt_setting_script() {
                 if($pageh_spacing != ''){
                     echo '#content{padding-bottom:'.$pageh_spacing.';}';
                 }
+            }
 
+            if($navigation_space = kt_option('navigation_space', 30)){
+                echo '#main-navigation > li{margin-left: '.$navigation_space.'px;}#main-navigation > li:first-child {margin-left: 0;}#main-navigation > li:last-child {margin-right: 0;}';
+            }
+            if($navigation_color_hover = kt_option('navigation_color_hover')){
+                echo '#main-navigation > li > a:before, #main-navigation > li > a:after{background: '.$navigation_color_hover.';}';
+            }
+            if($mega_title_color = kt_option('mega_title_color')){
+                echo '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a:before, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a:after, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span:before, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span:after, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > .widget-title:before, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > .widget-title:after{background-color: '.$mega_title_color.';}';
             }
 
         ?>
