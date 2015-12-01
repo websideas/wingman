@@ -332,7 +332,9 @@
   .woocommerce .woocommerce-per-page select:not([multiple]),
   .woocommerce .woocommerce-ordering select:not([multiple]) {
     min-width: 262px;
-    background: none; }
+    background: none;
+    color: #707070;
+    border-color: #e5e5e5; }
   .woocommerce .woocommerce-per-page:after,
   .woocommerce .woocommerce-ordering:after {
     font-family: FontAwesome;
@@ -1571,28 +1573,6 @@ div.swatch-wrapper {
       -o-border-radius: 100%;
       border-radius: 100%; }
 
-/*
-.attribute_pa_size_picker{
-  .swatch-wrapper{
-    border: none;
-    &:hover,&.selected{
-      background: $primary-color;
-    }
-  }
-}
-.attribute_pa_color_picker{
-  .swatch-wrapper{
-    border: 1px solid transparent;
-    .swatch-anchor{
-      width: 15px!important;
-      height: 15px!important;
-    }
-    &:hover,&.selected{
-      background: $primary-color;
-    }
-  }
-}
-*/
 .woocommerce-accordions {
   padding-bottom: 40px;
   margin-bottom: 60px;

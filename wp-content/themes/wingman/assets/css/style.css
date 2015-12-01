@@ -1460,7 +1460,7 @@ body.layout-boxed #footer {
    2. Widgets
    ============================== */
 .widget-container {
-  margin-bottom: 40px; }
+  margin-bottom: 55px; }
 
 .widget-title {
   color: #252525;
@@ -3549,7 +3549,7 @@ form.wpcf7-form p {
       width: auto;
       padding: 0 10px;
       font-size: 14px;
-      margin: 0;
+      margin: 0 5px;
       color: #252525;
       position: relative; }
     .woocommerce nav.woocommerce-pagination ul.page-numbers li span.current, .woocommerce nav.woocommerce-pagination ul.page-numbers li a:hover, .woocommerce nav.woocommerce-pagination ul.page-numbers li a:focus {
@@ -3579,7 +3579,7 @@ form.wpcf7-form p {
   width: auto;
   padding: 0 10px;
   font-size: 14px;
-  margin: 0;
+  margin: 0 5px;
   color: #252525;
   position: relative; }
   .pagination .page-numbers:hover, .pagination .page-numbers:focus, .pagination .page-numbers.current {
