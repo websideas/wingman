@@ -1461,109 +1461,6 @@ body .mCSB_scrollTools {
       color: #252525;
       min-width: 100px;
       display: inline-block; }
-    .woocommerce-page div.product form.cart .variation_form_section .variations-table .swatch-wrapper,
-    .woocommerce-page div.product form.cart .variation_form_section td.variations-label .swatch-wrapper,
-    .woocommerce-page div.product form.cart .variations .variations-table .swatch-wrapper,
-    .woocommerce-page div.product form.cart .variations td.variations-label .swatch-wrapper,
-    .woocommerce div.product form.cart .variation_form_section .variations-table .swatch-wrapper,
-    .woocommerce div.product form.cart .variation_form_section td.variations-label .swatch-wrapper,
-    .woocommerce div.product form.cart .variations .variations-table .swatch-wrapper,
-    .woocommerce div.product form.cart .variations td.variations-label .swatch-wrapper {
-      margin: 5px;
-      -webkit-border-radius: 100%;
-      -khtml-border-radius: 100%;
-      -moz-border-radius: 100%;
-      -ms-border-radius: 100%;
-      -o-border-radius: 100%;
-      border-radius: 100%;
-      background: #f4f6f9;
-      text-align: center;
-      padding: 0; }
-      .woocommerce-page div.product form.cart .variation_form_section .variations-table .swatch-wrapper .swatch-anchor,
-      .woocommerce-page div.product form.cart .variation_form_section td.variations-label .swatch-wrapper .swatch-anchor,
-      .woocommerce-page div.product form.cart .variations .variations-table .swatch-wrapper .swatch-anchor,
-      .woocommerce-page div.product form.cart .variations td.variations-label .swatch-wrapper .swatch-anchor,
-      .woocommerce div.product form.cart .variation_form_section .variations-table .swatch-wrapper .swatch-anchor,
-      .woocommerce div.product form.cart .variation_form_section td.variations-label .swatch-wrapper .swatch-anchor,
-      .woocommerce div.product form.cart .variations .variations-table .swatch-wrapper .swatch-anchor,
-      .woocommerce div.product form.cart .variations td.variations-label .swatch-wrapper .swatch-anchor {
-        -webkit-border-radius: 100%;
-        -khtml-border-radius: 100%;
-        -moz-border-radius: 100%;
-        -ms-border-radius: 100%;
-        -o-border-radius: 100%;
-        border-radius: 100%;
-        padding: 0; }
-      .woocommerce-page div.product form.cart .variation_form_section .variations-table .swatch-wrapper img,
-      .woocommerce-page div.product form.cart .variation_form_section td.variations-label .swatch-wrapper img,
-      .woocommerce-page div.product form.cart .variations .variations-table .swatch-wrapper img,
-      .woocommerce-page div.product form.cart .variations td.variations-label .swatch-wrapper img,
-      .woocommerce div.product form.cart .variation_form_section .variations-table .swatch-wrapper img,
-      .woocommerce div.product form.cart .variation_form_section td.variations-label .swatch-wrapper img,
-      .woocommerce div.product form.cart .variations .variations-table .swatch-wrapper img,
-      .woocommerce div.product form.cart .variations td.variations-label .swatch-wrapper img {
-        vertical-align: -moz-middle-with-baseline;
-        width: auto; }
-    .woocommerce-page div.product form.cart .variation_form_section .variations-table .attribute_pa_size_picker .swatch-wrapper,
-    .woocommerce-page div.product form.cart .variation_form_section td.variations-label .attribute_pa_size_picker .swatch-wrapper,
-    .woocommerce-page div.product form.cart .variations .variations-table .attribute_pa_size_picker .swatch-wrapper,
-    .woocommerce-page div.product form.cart .variations td.variations-label .attribute_pa_size_picker .swatch-wrapper,
-    .woocommerce div.product form.cart .variation_form_section .variations-table .attribute_pa_size_picker .swatch-wrapper,
-    .woocommerce div.product form.cart .variation_form_section td.variations-label .attribute_pa_size_picker .swatch-wrapper,
-    .woocommerce div.product form.cart .variations .variations-table .attribute_pa_size_picker .swatch-wrapper,
-    .woocommerce div.product form.cart .variations td.variations-label .attribute_pa_size_picker .swatch-wrapper {
-      border: none; }
-      .woocommerce-page div.product form.cart .variation_form_section .variations-table .attribute_pa_size_picker .swatch-wrapper:hover, .woocommerce-page div.product form.cart .variation_form_section .variations-table .attribute_pa_size_picker .swatch-wrapper.selected,
-      .woocommerce-page div.product form.cart .variation_form_section td.variations-label .attribute_pa_size_picker .swatch-wrapper:hover,
-      .woocommerce-page div.product form.cart .variation_form_section td.variations-label .attribute_pa_size_picker .swatch-wrapper.selected,
-      .woocommerce-page div.product form.cart .variations .variations-table .attribute_pa_size_picker .swatch-wrapper:hover,
-      .woocommerce-page div.product form.cart .variations .variations-table .attribute_pa_size_picker .swatch-wrapper.selected,
-      .woocommerce-page div.product form.cart .variations td.variations-label .attribute_pa_size_picker .swatch-wrapper:hover,
-      .woocommerce-page div.product form.cart .variations td.variations-label .attribute_pa_size_picker .swatch-wrapper.selected,
-      .woocommerce div.product form.cart .variation_form_section .variations-table .attribute_pa_size_picker .swatch-wrapper:hover,
-      .woocommerce div.product form.cart .variation_form_section .variations-table .attribute_pa_size_picker .swatch-wrapper.selected,
-      .woocommerce div.product form.cart .variation_form_section td.variations-label .attribute_pa_size_picker .swatch-wrapper:hover,
-      .woocommerce div.product form.cart .variation_form_section td.variations-label .attribute_pa_size_picker .swatch-wrapper.selected,
-      .woocommerce div.product form.cart .variations .variations-table .attribute_pa_size_picker .swatch-wrapper:hover,
-      .woocommerce div.product form.cart .variations .variations-table .attribute_pa_size_picker .swatch-wrapper.selected,
-      .woocommerce div.product form.cart .variations td.variations-label .attribute_pa_size_picker .swatch-wrapper:hover,
-      .woocommerce div.product form.cart .variations td.variations-label .attribute_pa_size_picker .swatch-wrapper.selected {
-        background: #82c14f; }
-    .woocommerce-page div.product form.cart .variation_form_section .variations-table .attribute_pa_color_picker .swatch-wrapper,
-    .woocommerce-page div.product form.cart .variation_form_section td.variations-label .attribute_pa_color_picker .swatch-wrapper,
-    .woocommerce-page div.product form.cart .variations .variations-table .attribute_pa_color_picker .swatch-wrapper,
-    .woocommerce-page div.product form.cart .variations td.variations-label .attribute_pa_color_picker .swatch-wrapper,
-    .woocommerce div.product form.cart .variation_form_section .variations-table .attribute_pa_color_picker .swatch-wrapper,
-    .woocommerce div.product form.cart .variation_form_section td.variations-label .attribute_pa_color_picker .swatch-wrapper,
-    .woocommerce div.product form.cart .variations .variations-table .attribute_pa_color_picker .swatch-wrapper,
-    .woocommerce div.product form.cart .variations td.variations-label .attribute_pa_color_picker .swatch-wrapper {
-      border: 1px solid transparent; }
-      .woocommerce-page div.product form.cart .variation_form_section .variations-table .attribute_pa_color_picker .swatch-wrapper .swatch-anchor,
-      .woocommerce-page div.product form.cart .variation_form_section td.variations-label .attribute_pa_color_picker .swatch-wrapper .swatch-anchor,
-      .woocommerce-page div.product form.cart .variations .variations-table .attribute_pa_color_picker .swatch-wrapper .swatch-anchor,
-      .woocommerce-page div.product form.cart .variations td.variations-label .attribute_pa_color_picker .swatch-wrapper .swatch-anchor,
-      .woocommerce div.product form.cart .variation_form_section .variations-table .attribute_pa_color_picker .swatch-wrapper .swatch-anchor,
-      .woocommerce div.product form.cart .variation_form_section td.variations-label .attribute_pa_color_picker .swatch-wrapper .swatch-anchor,
-      .woocommerce div.product form.cart .variations .variations-table .attribute_pa_color_picker .swatch-wrapper .swatch-anchor,
-      .woocommerce div.product form.cart .variations td.variations-label .attribute_pa_color_picker .swatch-wrapper .swatch-anchor {
-        width: 15px !important;
-        height: 15px !important; }
-      .woocommerce-page div.product form.cart .variation_form_section .variations-table .attribute_pa_color_picker .swatch-wrapper:hover, .woocommerce-page div.product form.cart .variation_form_section .variations-table .attribute_pa_color_picker .swatch-wrapper.selected,
-      .woocommerce-page div.product form.cart .variation_form_section td.variations-label .attribute_pa_color_picker .swatch-wrapper:hover,
-      .woocommerce-page div.product form.cart .variation_form_section td.variations-label .attribute_pa_color_picker .swatch-wrapper.selected,
-      .woocommerce-page div.product form.cart .variations .variations-table .attribute_pa_color_picker .swatch-wrapper:hover,
-      .woocommerce-page div.product form.cart .variations .variations-table .attribute_pa_color_picker .swatch-wrapper.selected,
-      .woocommerce-page div.product form.cart .variations td.variations-label .attribute_pa_color_picker .swatch-wrapper:hover,
-      .woocommerce-page div.product form.cart .variations td.variations-label .attribute_pa_color_picker .swatch-wrapper.selected,
-      .woocommerce div.product form.cart .variation_form_section .variations-table .attribute_pa_color_picker .swatch-wrapper:hover,
-      .woocommerce div.product form.cart .variation_form_section .variations-table .attribute_pa_color_picker .swatch-wrapper.selected,
-      .woocommerce div.product form.cart .variation_form_section td.variations-label .attribute_pa_color_picker .swatch-wrapper:hover,
-      .woocommerce div.product form.cart .variation_form_section td.variations-label .attribute_pa_color_picker .swatch-wrapper.selected,
-      .woocommerce div.product form.cart .variations .variations-table .attribute_pa_color_picker .swatch-wrapper:hover,
-      .woocommerce div.product form.cart .variations .variations-table .attribute_pa_color_picker .swatch-wrapper.selected,
-      .woocommerce div.product form.cart .variations td.variations-label .attribute_pa_color_picker .swatch-wrapper:hover,
-      .woocommerce div.product form.cart .variations td.variations-label .attribute_pa_color_picker .swatch-wrapper.selected {
-        background: #82c14f; }
   .woocommerce-page div.product form.cart .variation_form_section .variations-table td,
   .woocommerce-page div.product form.cart .variations .variations-table td,
   .woocommerce div.product form.cart .variation_form_section .variations-table td,
@@ -1646,6 +1543,53 @@ body .mCSB_scrollTools {
     border-color: #82c14f;
     background: #82c14f; }
 
+div.swatch-wrapper {
+  margin: 5px;
+  background: #f4f6f9;
+  text-align: center; }
+  div.swatch-wrapper.selected, div.swatch-wrapper:hover {
+    border: 1px solid #82c14f;
+    padding: 2px; }
+  .attribute_pa_color_picker div.swatch-wrapper {
+    padding: 1px;
+    -webkit-border-radius: 100%;
+    -khtml-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%; }
+    .attribute_pa_color_picker div.swatch-wrapper .swatch-anchor {
+      width: 14px !important;
+      height: 15px !important;
+      -webkit-border-radius: 100%;
+      -khtml-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -ms-border-radius: 100%;
+      -o-border-radius: 100%;
+      border-radius: 100%; }
+
+/*
+.attribute_pa_size_picker{
+  .swatch-wrapper{
+    border: none;
+    &:hover,&.selected{
+      background: $primary-color;
+    }
+  }
+}
+.attribute_pa_color_picker{
+  .swatch-wrapper{
+    border: 1px solid transparent;
+    .swatch-anchor{
+      width: 15px!important;
+      height: 15px!important;
+    }
+    &:hover,&.selected{
+      background: $primary-color;
+    }
+  }
+}
+*/
 .woocommerce-accordions {
   padding-bottom: 40px;
   margin-bottom: 60px;
