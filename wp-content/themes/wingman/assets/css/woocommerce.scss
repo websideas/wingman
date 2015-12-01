@@ -189,6 +189,8 @@
       width: 50%;
     }
   }
+
+
   &.compare-button,
   .yith-wcwl-add-button,
   .yith-wcwl-wishlistaddedbrowse,
@@ -310,6 +312,31 @@
         line-height: 40px;
       }
     }
+  }
+
+  .woocommerce-per-page,
+  .woocommerce-ordering{
+    float: left;
+    margin-bottom: 30px;
+    position: relative;
+
+    select:not([multiple]){
+      min-width: 262px;
+      background: none;
+    }
+
+    &:after{
+      @include FontAwesome('\f107');
+      @include translate(y);
+      pointer-events: none;
+      right: 12px;
+      font-size: 14px;
+      color: $primary-color;
+    }
+  }
+
+  .woocommerce-per-page{
+    margin-right: 30px;
   }
 
 }
@@ -436,28 +463,6 @@
   }
 }
 
-.form-wppp-select.products-per-page{
-  float: left!important;
-  margin: 0 30px 0 0!important;
-}
-.woocommerce-before-shop{
-  select:not([multiple]){
-    min-width: 262px;
-    background: none;
-  }
-  form.products-per-page,
-  form.woocommerce-ordering{
-    position: relative;
-    &:after{
-      @include FontAwesome('\f107');
-      @include translate(y);
-      pointer-events: none;
-      right: 12px;
-      font-size: 14px;
-      color: $primary-color;
-    }
-  }
-}
 .category-thumb{
   margin-bottom: 30px;
 }
@@ -677,14 +682,15 @@
 	    }
     }
 }
+
+
 body{
 	.mCSB_inside,.mCustomScrollBox{
 		> .mCSB_container {
 		    margin-right: 15px!important;
 		}
 	}
-}  
-body{
+
 	.mCSB_scrollTools {
 	    width: 10px;
 	    background: $border-color;
@@ -715,6 +721,7 @@ body{
   .gridlist-toggle{
     float: right;
     margin: 0 0 30px;
+    padding: 0;
     li{
       list-style: none;
       display: inline-block;
@@ -764,7 +771,9 @@ body{
               }
             }
           }
-          &:hover,&:focus,&.active{
+          &:hover,
+          &:focus,
+          &.active{
             span.style-toggle{
               span{
                 background: $white;
@@ -774,8 +783,10 @@ body{
               }
             }
           }
+
         }
         &.grid{
+
           span.style-toggle{
             display: inline-block;
             width: 18px;
@@ -791,7 +802,10 @@ body{
               margin: 1px;
             }
           }
-          &:hover,&:focus,&.active{
+
+          &:hover,
+          &:focus,
+          &.active{
             span.style-toggle{
               span{
                 border: 2px solid $white;
@@ -803,13 +817,7 @@ body{
     }
   }
 }
-.woocommerce , 
-.woocommerce-page {
-	.woocommerce-ordering{
-		float: left;
-		margin-bottom: 30px;
-	}	
-}
+
 /** ================================================
     3. Woocommerce product quickview
 *** ================================================*/

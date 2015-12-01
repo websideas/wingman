@@ -3,18 +3,122 @@
 // Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
 
+/**
+ *
+ * Set the number of products per page when the customer
+ * changes the amount in the drop down.
+ *
+ */
 
-function kt_loop_shop_per_page( $number ){
-    $num = kt_option('loop_shop_per_page');
-    $num =  intval( $num );
-    if( $num <=0 ){
-        $num = $number;
-    }
-    return $num;
+function kt_products_per_page_action() {
+    if ( isset( $_REQUEST['per_page'] ) ) :
+        WC()->session->set( 'products_per_page', intval( $_REQUEST['per_page'] ) );
+    endif;
+}
+add_action( 'init', 'kt_products_per_page_action');
+
+/**
+ * Per page hook.
+ *
+ * Return the number of products per page to the hook
+ *
+ * @return int Products per page.
+ *
+ *
+ */
+function kt_loop_shop_per_page( $number = 12 ){
+
+    if ( isset( $_REQUEST['per_page'] ) ) :
+        return intval( $_REQUEST['per_page'] );
+    elseif ( WC()->session->__isset( 'products_per_page' ) ) :
+        return intval( WC()->session->__get( 'products_per_page' ) );
+    else :
+        $num = intval( kt_option('loop_shop_per_page', 12) );
+        if( $num <=0 ){
+            $num = $number;
+        }
+        return $num;
+    endif;
+
 }
 add_filter('loop_shop_per_page', 'kt_loop_shop_per_page', 999 );
 
 
+/**
+ * Posts per page.
+ *
+ * Set the number of posts per page on a hard way, build in fix for many themes who override the offical loop_shop_per_page filter.
+ *
+ *
+ * @param	object 	$q		Existing query object.
+ * @param	object	$class	Class object.
+ * @return 	object 			Modified query object.
+ */
+function kt_woocommerce_product_query( $q, $class ) {
+
+    if ( function_exists( 'woocommerce_products_will_display' ) && woocommerce_products_will_display() && $q->is_main_query() ) :
+        $q->set( 'posts_per_page', kt_loop_shop_per_page(12) );
+    endif;
+
+}
+add_action( 'woocommerce_product_query', 'kt_woocommerce_product_query', 50, 2 );
+
+
+
+
+/**
+ * Display drop down.
+ *
+ * Display the drop down front end to the user to choose
+ * the number of products per page.
+ *
+ */
+function products_per_page_dropdown() {
+
+    $per_page =  kt_option('loop_shop_per_page');
+    $cols =  kt_option('shop_gird_cols');
+    $products_per_page = sprintf('%s %s %s -1', $per_page, $per_page + $cols*2,$per_page + $cols*3);
+
+    // Set the products per page options (e.g. 4, 8, 12)
+    $products_per_page_options = explode( ' ', apply_filters( 'kt_products_per_page', $products_per_page ) );
+
+    // Only show on product categories
+    if ( ! woocommerce_products_will_display() ) :
+        return;
+    endif;
+
+    $current_per_page = kt_loop_shop_per_page();
+    do_action( 'woo_before_products_per_page_form' );
+
+    ?><form method="GET" class="woocommerce-per-page">
+        <select name="per_page" onchange="this.form.submit()">
+            <?php foreach( $products_per_page_options as $key => $value ) : ?>
+                <option value="<?php echo esc_attr( $value ); ?>" <?php selected( $value, $current_per_page); ?>><?php
+            $text = apply_filters( 'woo_products_per_page_text', __( '%s item/pages', THEME_LANG ), $value );
+            esc_html( printf( $text, $value == -1 ? __( 'All', THEME_LANG ) : $value ) ); // Set to 'All' when value is -1
+            ?></option>
+            <?php endforeach; ?>
+        </select>
+    <?php
+
+    // Keep query string vars intact
+    foreach ( $_GET as $key => $val ) :
+        if ( 'per_page' === $key || 'submit' === $key ) :
+            continue;
+        endif;
+        if ( is_array( $val ) ) :
+            foreach( $val as $inner_val ) :
+                ?><input type="hidden" name="<?php echo esc_attr( $key ); ?>[]" value="<?php echo esc_attr( $inner_val ); ?>" /><?php
+            endforeach;
+        else :
+            ?><input type="hidden" name="<?php echo esc_attr( $key ); ?>" value="<?php echo esc_attr( $val ); ?>" /><?php
+        endif;
+    endforeach;
+    do_action( 'woo_after_products_per_page' );
+    ?></form><?php
+    do_action( 'woo_after_products_per_page_form' );
+}
+add_action( 'woocommerce_before_shop_loop', 'products_per_page_dropdown', 25 );
 
 /**
  * Sale price Percentage
@@ -373,27 +477,6 @@ add_action( 'woocommerce_shop_loop_item_after_image', 'kt_woocommerce_add_archiv
 
 
 
-add_filter( 'wppp_ppp_text', 'kt_replace_text_per_page',10, 2 );
-function kt_replace_text_per_page( $text, $value ){
-    return __( '%s item/pages', THEME_LANG );
-}
-
-function kt_products_per_page_default( $products_per_page ){
-    if(!$products_per_page){
-        $per_page =  kt_option('loop_shop_per_page');
-        $cols =  kt_option('shop_gird_cols');
-        $products_per_page = sprintf('%s %s %s -1', $per_page, $per_page + $cols*2,$per_page + $cols*3);
-    }
-    return $products_per_page;
-}
-add_filter( 'wppp_products_per_page', 'kt_products_per_page_default' );
-
-
-if($wppp = $GLOBALS['wppp']){
-    if(!is_admin()){
-        remove_filter('woocommerce_after_shop_loop', array( $wppp->front_end, 'products_per_page_dropdown' ), 25);
-    }
-}
 
 add_action( 'woocommerce_before_shop_loop', 'woocommerce_gridlist_toggle', 40);
 function woocommerce_gridlist_toggle(){ ?>
