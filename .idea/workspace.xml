@@ -22,16 +22,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="frontend.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="frontend.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/frontend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8596491">
+            <state vertical-scroll-proportion="-30.625">
               <caret line="77" column="7" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
               <folding>
                 <marker date="1448875670000" expanded="true" signature="21738:22006" placeholder="..." />
                 <marker date="1448875670000" expanded="true" signature="21763:22000" placeholder="..." />
                 <marker date="1448875670000" expanded="true" signature="21769:21996" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="woocommerce.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/woocommerce.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.57894737">
+              <caret line="771" column="1" selection-start-line="771" selection-start-column="1" selection-end-line="771" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -682,20 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/woocommerce.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.882353">
-          <caret line="246" column="5" selection-start-line="246" selection-start-column="5" selection-end-line="246" selection-end-column="5" />
-          <folding>
-            <marker date="1448940810000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1448940810000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1448940810000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1448940810000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1448940810000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/js/woocommerce.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16382253">
@@ -817,13 +813,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/frontend.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8596491">
+        <state vertical-scroll-proportion="-30.625">
           <caret line="77" column="7" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
           <folding>
             <marker date="1448875670000" expanded="true" signature="21738:22006" placeholder="..." />
             <marker date="1448875670000" expanded="true" signature="21763:22000" placeholder="..." />
             <marker date="1448875670000" expanded="true" signature="21769:21996" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/woocommerce.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57894737">
+          <caret line="771" column="1" selection-start-line="771" selection-start-column="1" selection-end-line="771" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
