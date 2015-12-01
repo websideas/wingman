@@ -302,6 +302,9 @@ select:not([multiple]) {
     background: $primary-color;
     border-color: $primary-color;
     color: $white;
+    &:hover,&:focus,&:active{
+      color: $white;
+    }
   }
   &-animation{
     span{
@@ -3712,6 +3715,81 @@ form.wpcf7-form{
       background: #fff;
       @include translate;
     }
+}
+
+/*
+ * Team
+ */
+
+.team{
+  position: relative;
+  &:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    @include transition();
+    @include background-opacity(#000000,0.6);
+    @include opacity(0);
+  }
+  .team-attr{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    padding: 30px;
+    @include opacity(0);
+    @include transition();
+    h4.name{
+      padding-bottom: 6px;
+      margin-bottom: 17px;
+      position: relative;
+      font-size: 22px;
+      color: $white;
+      letter-spacing: 0.2em;
+      text-transform: none;
+      &:before{
+        content: "";
+        width: 39px;
+        height: 2px;
+        background: $white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    .agency{
+      font-size: 12px;
+      color: $primary-color;
+      margin-bottom: 18px;
+    }
+    ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li{
+        float: left;
+        margin-right: 35px;
+        a{
+          color: $white;
+          font-size: 18px;
+          &:hover,
+          &:focus{
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+  &:hover{
+    &:before,
+    .team-attr{
+      @include opacity(1);
+    }
+  }
 }
 
 /**

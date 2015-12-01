@@ -144,7 +144,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                         <p><?php _e( 'Enter your coupin if you have one',THEME_LANG ); ?></p>
                         <div class="form-coupon">
                             <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php _e( 'Coupon code', 'woocommerce' ); ?>" />
-                            <input type="submit" class="btn btn-default btn-block" name="apply_coupon" value="<?php _e( 'Subcribe', 'woocommerce' ); ?>" />
+                            <input type="submit" class="btn btn-default btn-block" name="apply_coupon" value="<?php _e( 'Apply', 'woocommerce' ); ?>" />
                         </div>
                         <?php do_action( 'woocommerce_cart_coupon' ); ?>
                     </div>

@@ -458,11 +458,42 @@
   .woocommerce-error,
   .woocommerce-info,
   .woocommerce-message{
-    border: 2px solid !important;
+    border: 2px solid $border-color!important;
     padding: 17px 25px !important;
     color: $title-text;
-    :before{
+    &:before{
       display: none;
+    }
+  }
+  .woocommerce-error{
+    background: #fff0ed;
+    border-color: #ea4f21;
+    color: $primary-color;
+  }
+  .woocommerce-info,
+  .woocommerce-message{
+    background: $qty_bg;
+    border-color: $border-color !important;
+  }
+  .woocommerce-message{
+    .button.wc-forward{
+      background: none;
+      color: #515151;
+      float: right;
+      line-height: normal;
+      margin: 5px 0 0;
+      padding: 0;
+      border: none;
+      &:after{
+        content: '\f0da';
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        margin-left: 5px;
+      }
+      &:hover{
+        color: $primary-color;
+      }
     }
   }
 }
@@ -480,7 +511,6 @@
     top: 100%;
     right: 0;
     z-index: 1002;
-    color: $white;
     line-height: normal;
     width: 260px;
     text-align: left;
@@ -598,7 +628,7 @@
           margin-bottom: 3px;
           dt{
               display: inline-block;
-              font-weight: 700;
+              font-weight: 400;
               margin: 0 4px 0 0;
           }
           dd{
@@ -1218,7 +1248,7 @@ body{
 		    margin: 15px 0 0;
 		    font-weight: 700;
 		    del{
-		    	font-size: 13px;
+          font-size: 80%;
 			    text-decoration: line-through;
 			    color: $main-text;
 		    }
@@ -1471,8 +1501,8 @@ body{
 			}
 			.product-short-description{
 				margin-bottom: 25px;
-			    border-bottom:1px solid $border-second-color;
-			    padding:0 0 20px;
+		    border-bottom:1px solid $border-second-color;
+		    padding:0 0 20px;
 			}
 			.functional-buttons-product{
 				float: left;
@@ -1905,17 +1935,24 @@ div.swatch-wrapper{
 			}
 			th,td{
 				border-top: 1px solid $border-color;
-			    padding-bottom: 15px;
-			    padding-top: 15px;
-			    color:$main-text;
+		    padding-bottom: 15px;
+		    padding-top: 15px;
+		    color:$main-text;
 			}
 		}
 		th.product-total,
 		td{
 			vertical-align: top;
-		    text-align: right;
-		    padding-left: 0;
-		    padding-right: 0;
+	    text-align: right;
+	    padding-left: 0;
+	    padding-right: 0;
+      .variation{
+        margin-top: 10px;
+        dt,dd{
+          margin: 0;
+          font-weight: normal;
+        }
+      }
 		}
 		th,td{
 			&:first-child{
@@ -2013,6 +2050,7 @@ div.swatch-wrapper{
 				    font-weight: normal;
 				    position: relative;
 				    outline: none;
+            cursor: pointer;
 				    &:before{
 				    	content: "";
 					    width:13px;
@@ -2076,6 +2114,44 @@ div.swatch-wrapper{
 		padding: 0;
 	}
 }
+.woocommerce{
+  table.order_details{
+    tfoot{
+      tr{
+        th,
+        td{
+          &:last-child{
+            white-space: nowrap;
+            text-align: right;
+            font-weight: 400;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+    tbody{
+      td{
+        padding-left: 0;
+        padding-right: 0;
+        &:last-child{
+          text-align: right;
+        }
+      }
+    }
+    thead{
+      th:last-child{
+        text-align: right;
+      }
+    }
+  }
+}
+.woocommerce-order-received{
+  h2{
+    font-size: 24px;
+  }
+}
+
+
 /** =========================
     10. Page Wist list
 *** =========================*/
@@ -2126,28 +2202,41 @@ div.swatch-wrapper{
 		tbody{
 			td{
 				border-bottom: 1px solid $border-color;
-			    border-top:none;
-			    text-align: center;
-			    font-size:18px;
-			    font-family:$heading-font;
-			    color:$border-dark-color;
-			    letter-spacing: 0.2em;
-			    font-weight: 700;
-			    &.actions{
-			    	border:none;
-    				padding:50px 0;
-			    }
+		    border-top:none;
+		    text-align: center;
+		    font-size:18px;
+		    font-family:$heading-font;
+		    color:$border-dark-color;
+		    letter-spacing: 0.2em;
+		    font-weight: 700;
+		    &.actions{
+		    	border:none;
+  				padding:50px 0;
+		    }
+        .variation{
+          margin-top: 10px;
+          dt,
+          dd{
+            margin: 0;   
+            font-size: 16px;         
+          }
+        }
 			}
 			td.product-thumbnail{
 				padding-left: 0;
 			}
 			td.product-name{
+        text-align: left;
 				a{
 					font-size:18px;
-				    color:$title-text;
-				    font-family:$font-stack;
-				    letter-spacing: 0;
-				    font-weight: 400;
+			    color:$title-text;
+			    font-family:$font-stack;
+			    letter-spacing: 0;
+			    font-weight: 400;
+          &:hover,
+          &:focus{
+            color: $primary-color;
+          }
 				}
 			}
 		} 

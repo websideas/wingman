@@ -461,7 +461,7 @@ function woocommerce_single_product_carousel_callback( $columns ) {
     if($sidebar['sidebar'] == 'left' || $sidebar['sidebar'] == 'right'){
         return '{"pagination": false, "navigation": true, "desktop": 3, "desktopsmall" : 2, "tablet" : 2, "mobile" : 1, "navigation_pos": "top"}';
     }else{
-        return '{"pagination": false, "navigation": true, "desktop": 3, "desktopsmall" : 2, "tablet" : 2, "mobile" : 1, "navigation_pos": "top"}';
+        return '{"pagination": false, "navigation": true, "desktop": 4, "desktopsmall" : 3, "tablet" : 2, "mobile" : 1, "navigation_pos": "top"}';
     }
 }
 
