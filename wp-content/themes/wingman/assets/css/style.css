@@ -305,7 +305,7 @@ select:not([multiple]) {
   display: inline-block;
   line-height: 1.42857;
   padding: 8px 26px;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -347,7 +347,7 @@ select:not([multiple]) {
     background: #252525;
     color: #FFFFFF;
     border-color: #252525; }
-    .btn-default:hover {
+    .btn-default:hover, .btn-default:focus, .btn-default:active {
       background: #82c14f;
       border-color: #82c14f;
       color: #FFFFFF; }

@@ -57,8 +57,8 @@ $is_author_comment  = $product->post->post_author == $comment->user_id;
 
 					?>
 					<span class="comment-date">
-					<time itemprop="datePublished" datetime="<?php echo get_comment_date( 'c' ); ?>"><?php echo get_comment_date( wc_date_format() ); ?></time>
-						</span>
+						<time itemprop="datePublished" datetime="<?php echo get_comment_date( 'c' ); ?>"><?php echo get_comment_date( wc_date_format() ); ?></time>
+					</span>
 				</div>
 
 			<?php endif; ?>

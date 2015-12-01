@@ -87,10 +87,10 @@
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-  background: none;
+  background: #252525;
   border: 2px solid #252525;
   border-radius: 0;
-  color: #252525;
+  color: #FFFFFF;
   font-size: 13px;
   line-height: 1.42857;
   padding: 8px 25px;
@@ -107,7 +107,8 @@
   .woocommerce button.button.alt:hover,
   .woocommerce input.button.alt:hover {
     background: #82c14f;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    border-color: #82c14f; }
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
@@ -1241,13 +1242,15 @@ body .mCSB_scrollTools {
   letter-spacing: 0;
   border: none;
   padding: 0; }
-  .woocommerce .added_to_cart.loading,
-  .woocommerce .addtocart_button.loading {
+  .woocommerce .added_to_cart.loading, .woocommerce .added_to_cart.added,
+  .woocommerce .addtocart_button.loading,
+  .woocommerce .addtocart_button.added {
     text-indent: -999px;
     overflow: hidden;
     font-size: 0; }
-    .woocommerce .added_to_cart.loading:after,
-    .woocommerce .addtocart_button.loading:after {
+    .woocommerce .added_to_cart.loading:after, .woocommerce .added_to_cart.added:after,
+    .woocommerce .addtocart_button.loading:after,
+    .woocommerce .addtocart_button.added:after {
       font-family: FontAwesome;
       content: "";
       font-style: normal;
@@ -1267,15 +1270,30 @@ body .mCSB_scrollTools {
       -o-opacity: 0.5;
       opacity: 0.5;
       position: absolute;
-      -webkit-transform: translate(-50%, -50%);
-      -khtml-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      top: 50%;
+      top: 0;
       left: 50%;
+      margin-left: -8px;
       font-size: 20px; }
+  .woocommerce .added_to_cart.added:after,
+  .woocommerce .addtocart_button.added:after {
+    font-family: FontAwesome;
+    content: "";
+    font-style: normal;
+    font-weight: normal;
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-opacity: 1;
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
+    opacity: 1;
+    -webkit-animation: none;
+    -khtml-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    -o-animation: none;
+    animation: none; }
 
 /** =========================
     6. Product Detail
@@ -1652,7 +1670,8 @@ body .mCSB_scrollTools {
     margin-top: 10px;
     padding-top: 15px; }
     .woocommerce-accordions .entry-content #reviews h3.comments-title {
-      margin-bottom: 20px; }
+      margin-bottom: 30px;
+      font-size: 18px; }
     .woocommerce-accordions .entry-content #reviews p {
       margin-bottom: 15px; }
     .woocommerce-accordions .entry-content .comment-list > li > .comment-item {

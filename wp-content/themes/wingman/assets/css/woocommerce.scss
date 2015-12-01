@@ -100,10 +100,10 @@
   a.button.alt,
   button.button.alt,
   input.button.alt {
-    background: none;
+    background: $title-text;
     border: 2px solid $title-text;
     border-radius: 0;
-    color: $title-text;
+    color: $white;
     font-size: 13px;
     line-height: 1.42857;
     padding: 8px 25px;
@@ -114,6 +114,7 @@
     &:hover{
       background: $primary-color;
       color: $white;
+      border-color: $primary-color;
     }
   }
   #respond input#submit.alt,
@@ -1274,7 +1275,7 @@ body{
 	    letter-spacing: 0;
 	    border: none;
 	    padding: 0;
-      &.loading{
+      &.loading,&.added{
         text-indent: -999px;
         overflow: hidden;
         font-size: 0;
@@ -1282,8 +1283,18 @@ body{
           @include FontAwesome('\f110');
           @include animation(spin 2s linear infinite);
           @include opacity(0.5);
-          @include translate();
+          position: absolute;
+          top:0;
+          left:50%;
+          margin-left: -8px;
           font-size: 20px;
+        }
+      }
+      &.added{
+        &:after{
+          @include FontAwesome('\f00c');
+          @include opacity(1);
+          @include animation('none');
         }
       }
 	}
@@ -1624,7 +1635,8 @@ body{
     padding-top: 15px;
     #reviews{
       h3.comments-title{
-          margin-bottom: 20px;
+          margin-bottom: 30px;
+          font-size: 18px;
       }
       p{
         margin-bottom: 15px;

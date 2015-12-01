@@ -125,6 +125,7 @@ $composer_addons = array(
     'skill.php',
     'socials.php',
     //'timeline.php',
+    'team.php',
     'piechart.php',
     'coming_soon.php',
     'googlemap.php',

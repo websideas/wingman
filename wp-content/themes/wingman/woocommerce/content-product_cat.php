@@ -30,7 +30,7 @@ $woocommerce_loop['loop'] ++;
 
 
 // Extra post classes
-$classes = array( );
+$classes = array( 'clearfix' );
 if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 == $woocommerce_loop['columns'] ) {
 	$classes[] = 'first col-clearfix-lg col-clearfix-md';
 }
@@ -38,14 +38,24 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	$classes[] = 'last';
 }
 
-if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns_tablet'] || 1 == $woocommerce_loop['columns_tablet'] )
-	$classes[] = 'first-tablet col-clearfix-sm col-clearfix-xs';
-if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns_tablet'] )
-	$classes[] = 'last-tablet';
+if( isset($woocommerce_loop['columns_tablet']) ){
+	if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns_tablet'] || 1 == $woocommerce_loop['columns_tablet'] ){
+		$classes[] = 'first-tablet col-clearfix-sm col-clearfix-xs';
+	}
+}
+if( isset($woocommerce_loop['columns_tablet']) ){
+	if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns_tablet'] ){
+		$classes[] = 'last-tablet';
+	}
+}
 
 // Bootstrap Column
 $bootstrapColumn = round( 12 / $woocommerce_loop['columns'] );
-$bootstrapTabletColumn = round( 12 / $woocommerce_loop['columns_tablet'] );
+if( isset($woocommerce_loop['columns_tablet']) ){
+	$bootstrapTabletColumn = round( 12 / $woocommerce_loop['columns_tablet'] );
+}else{
+	$bootstrapTabletColumn = '12';
+}
 $classes[] = 'col-xs-'.$bootstrapTabletColumn.' col-sm-'. $bootstrapTabletColumn .' col-md-' . $bootstrapColumn;
 
 
