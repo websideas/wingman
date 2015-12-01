@@ -60,7 +60,7 @@ if (!class_exists('WC_EX_Product_Data_Tab_Swatches')) {
 				echo '#woocommerce-product-data ul.product_data_tabs li.' . $this->tab_class . ' a:before { content:""; }';
 
 				echo '#' . $this->tab_id . ' { padding:10px; }';
-				echo '#swatches {width:99% !important;};';
+				//echo '#swatches {width:99% !important;};';
 				echo '</style>';
 			}
 		}

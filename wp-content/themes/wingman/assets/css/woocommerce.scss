@@ -1474,52 +1474,18 @@ body{
 			    width: 100%;
 			    border-bottom:1px solid $border-second-color;
                 .variations-table,
-			      td.variations-label{
-					padding: 12px 12px 15px 0;
-    				vertical-align: top;
-    				label{
-                      font-weight: normal;
-                      margin: 0;
-                      padding: 0;
-                      color:$title-text;
-                      min-width: 100px;
-                      display: inline-block;
-    				}
-                  .swatch-wrapper{
-                    margin: 5px;
-                    @include border-radius(100%);
-                    background: $qty_bg;
-                    text-align: center;
+                td.variations-label{
+                  padding: 12px 12px 15px 0;
+                  vertical-align: top;
+                  label{
+                    font-weight: normal;
+                    margin: 0;
                     padding: 0;
-                    .swatch-anchor{
-                      @include border-radius(100%);
-                      padding: 0;
-                    }
-                    img{
-                      vertical-align: -moz-middle-with-baseline;
-                      width: auto;
-                    }
+                    color:$title-text;
+                    min-width: 100px;
+                    display: inline-block;
                   }
-                  .attribute_pa_size_picker{
-                    .swatch-wrapper{
-                      border: none;
-                      &:hover,&.selected{
-                        background: $primary-color;
-                      }
-                    }
-                  }
-                  .attribute_pa_color_picker{
-                    .swatch-wrapper{
-                      border: 1px solid transparent;
-                      .swatch-anchor{
-                        width: 15px!important;
-                        height: 15px!important;
-                      }
-                      &:hover,&.selected{
-                        background: $primary-color;
-                      }
-                    }
-                  }
+
 				}
                 .variations-table{
                   td{
@@ -1587,25 +1553,71 @@ body{
 		}
 		.cart{
 			.single_add_to_cart_button{
-          letter-spacing: 0;
-          height: 40px;
-          &.button{
-            margin-right: 1px;
-            float: left;
-            border: 2px solid $title-text;
-            background: $title-text;
-            color: $white;
-            text-transform: uppercase;
-          }
-			    &:hover{
-			    	color: $white;
-				    border-color: $primary-color;
-				    background: $primary-color;
-			    }
+              letter-spacing: 0;
+              height: 40px;
+              &.button{
+                margin-right: 1px;
+                float: left;
+                border: 2px solid $title-text;
+                background: $title-text;
+                color: $white;
+                text-transform: uppercase;
+              }
+              &:hover{
+                  color: $white;
+                  border-color: $primary-color;
+                  background: $primary-color;
+              }
 			}
 		}
 	}
 }
+
+
+div.swatch-wrapper{
+  margin: 5px;
+  background: $qty_bg;
+  text-align: center;
+
+  &.selected,
+  &:hover{
+    border: 1px solid $primary-color;
+    padding: 2px;
+  }
+
+  .attribute_pa_color_picker &{
+    padding: 1px;
+    @include border-radius(100%);
+    .swatch-anchor{
+      width: 14px!important;
+      height: 14px!important;
+      @include border-radius(100%);
+    }
+  }
+}
+
+/*
+.attribute_pa_size_picker{
+  .swatch-wrapper{
+    border: none;
+    &:hover,&.selected{
+      background: $primary-color;
+    }
+  }
+}
+.attribute_pa_color_picker{
+  .swatch-wrapper{
+    border: 1px solid transparent;
+    .swatch-anchor{
+      width: 15px!important;
+      height: 15px!important;
+    }
+    &:hover,&.selected{
+      background: $primary-color;
+    }
+  }
+}
+*/
 
 
 .woocommerce-accordions{
