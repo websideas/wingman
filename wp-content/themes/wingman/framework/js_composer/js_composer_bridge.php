@@ -120,20 +120,27 @@ $composer_addons = array(
     'client_gird.php',
     'testimonial_carousel.php',
     'image_banner.php',
-    'product_category_banner.php',
+
     //'button.php',
     'skill.php',
     'socials.php',
-    //'timeline.php',
     'team.php',
     'piechart.php',
     'coming_soon.php',
     'googlemap.php',
-    
-    'category_products_tab.php',
-    'products_carousel.php',
-    'products_carousel_tab.php',
+
 );
+
+if(kt_is_wc()){
+    $wc_addons = array(
+        'product_category_banner.php',
+        'category_products_tab.php',
+        'products_carousel.php',
+        'products_carousel_tab.php',
+    );
+
+    $composer_addons = array_merge($composer_addons, $wc_addons);
+}
 
 foreach ( $composer_addons as $addon ) {
 	require_once( FW_DIR . 'js_composer/vc_addons/' . $addon );

@@ -402,8 +402,6 @@ select:not([multiple]) {
 
 .site-branding{
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
   height: auto;
   .site-logo{
     margin: 0;
@@ -844,13 +842,13 @@ select:not([multiple]) {
 
 
 .nav-container{
-  background: #1e1e1e;
   position: relative;
-
   .nav-main{
     position: relative;
   }
-
+  &.header-layout1{
+    background: #1e1e1e;
+  }
 }
 
 .header-transparent{
@@ -881,6 +879,14 @@ select:not([multiple]) {
     }
   }
 
+  .admin-bar &{
+    top: 32px;
+    &.header-layout2{
+      #header-content{
+        top: 32px;
+      }
+    }
+  }
 
 }
 
@@ -891,7 +897,6 @@ select:not([multiple]) {
   .site-branding{
     @include translate(y);
     left: 80px;
-    padding: 0;
     z-index: 50;
   }
 
@@ -943,7 +948,6 @@ select:not([multiple]) {
   left: 0;
   top: 0;
   visibility: hidden;
-  @include opacity(0);
   @include transition();
 }
 
@@ -955,7 +959,6 @@ select:not([multiple]) {
   }
   .header-sticky-background{
     visibility: visible;
-    @include opacity(1);
   }
 
   .apply-sticky{
@@ -976,6 +979,7 @@ select:not([multiple]) {
   &.sticky{
     .apply-sticky{
       @include transition();
+      border-color: transparent;
     }
     .apply-sticky{
         top: 0!important;
@@ -1517,7 +1521,6 @@ body.layout-boxed{
     li{
       position: relative;
       margin: 0;
-      line-height: normal;
     }
   }
 }
@@ -1648,7 +1651,7 @@ body.layout-boxed{
   ul{
     li{
       display: block;
-      padding: 15px 0 15px 30px;
+      padding: 10px 0 10px 30px;
       border-bottom:1px solid $border-color;
     }
   }
@@ -2056,7 +2059,7 @@ article.post-item {
       letter-spacing: 0.2em;
     }
   }
-  > .entry-content-outer{
+  .entry-content-outer{
     border-bottom: 1px solid $border-second-color;
     padding-bottom: 20px;
     margin-bottom: 60px;
@@ -2064,6 +2067,7 @@ article.post-item {
       margin-bottom: 20px;
     }
   }
+
   .tags-links{
     font-size: 0;
     span{
@@ -2090,6 +2094,7 @@ article.post-item {
       }
     }
   }
+
   .entry-share-box{
     line-height: 30px;
   }
@@ -2408,12 +2413,8 @@ article.post-item {
 }
 
 .main-class.col-md-12{
-  .entry-header,
-  .entry-content-outer,
-  nav.post-navigation,
-  .author-info,
-  #related-article,
-  #comments{
+  .post-single-addons,
+  .post-single-inner{
     margin-left:100px;
     margin-right:100px;
   }

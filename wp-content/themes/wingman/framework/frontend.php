@@ -933,17 +933,9 @@ if ( ! function_exists( 'kt_related_article' ) ) :
         global $post;
         if(!$post_id) $post_id = $post->ID;
 
-
-        $sidebar = kt_get_single_sidebar($post_id);
-        if($sidebar['sidebar'] == 'full'){
-            $blog_columns = 4;
-            $blog_columns_tablet = 2;
-            $posts_per_page = kt_option('blog_related_full', 4);
-        }else{
-            $blog_columns = 3;
-            $blog_columns_tablet = 2;
-            $posts_per_page = kt_option('blog_related_sidebar', 3);
-        }
+        $blog_columns = 3;
+        $blog_columns_tablet = 2;
+        $posts_per_page = kt_option('blog_related_sidebar', 3);
 
         $args = array(
             'posts_per_page' => $posts_per_page,

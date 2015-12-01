@@ -757,6 +757,28 @@ if ( ! function_exists( 'kt_page_loader' ) ) :
 endif;
 
 
+
+function add_search_full(){
+    if(kt_option('header_search', 1)){
+
+        if(kt_is_wc()){
+            $search = get_product_search_form(false);
+        }else{
+            $search = get_search_form(false);
+        }
+
+        printf(
+            '<div id="%1$s" class="%2$s">%3$s</div>',
+            'search-fullwidth',
+            'mfp-hide mfp-with-anim',
+            $search
+        );
+    }
+}
+add_action('theme_body_top', 'add_search_full');
+
+
+
 if ( ! function_exists( 'kt_login_body_class' ) ) :
     /**
      * Add class regsiter to body

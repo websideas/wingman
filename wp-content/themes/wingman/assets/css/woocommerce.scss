@@ -880,121 +880,118 @@ body{
     4. woocommerce widgets
 *** ================================================*/
 .woocommerce{
-	ul.product_list_widget{
-		margin: 0;
+  ul.product_list_widget{
+    margin: 0;
     padding: 0;
     list-style: none;
     li{
-    	padding: 0 0 20px;
-  		position: relative;
-  		&:last-child{
-  			padding-bottom: 0;
-  		}
-  		img{
-  			float: left;
-		    width: 65px;
-		    margin: 0 15px 5px 0;
-		    height: auto;
-		    border:1px solid $border-color;
-  		}
-  		a{
-  			color: $title-text;
-		    display: block;
-		    font-size: 14px;
-		    font-weight: normal;
-		    margin-bottom: 6px;
-		    padding-right: 15px;
-		    &:hover{
-		    	color: $primary-color;
-		    }
-  		}
-  		span.amount{
-  			font-size:18px;
-		    color:$main-text;
-		    font-family:$heading-font;
-		    letter-spacing: 0.2em;
-		    font-weight: 700;
-  		}
+        padding: 0 0 20px;
+        position: relative;
+        &:last-child{
+            padding-bottom: 0;
+        }
+        img{
+            float: left;
+            width: 65px;
+            margin: 0 15px 5px 0;
+            height: auto;
+            border:1px solid $border-color;
+        }
+        a{
+            color: $title-text;
+            display: block;
+            font-size: 14px;
+            font-weight: normal;
+            margin-bottom: 6px;
+            padding-right: 15px;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+        span.amount{
+            font-size:18px;
+            color:$main-text;
+            font-family:$heading-font;
+            letter-spacing: 0.2em;
+            font-weight: 700;
+        }
     }
     .star-rating{
-    	float: none;
-  		margin: 0 0 10px;
-  		height: 18px;
+        float: none;
+        margin: 0 0 10px;
+        height: 18px;
     }
-	}
-}
-.woocommerce{
-	ul.cart_list,
-	ul.product_list_widget{
-		li{
-			dl{
-				&:before,
-				&:after{
-					display: none;
-				}
-			}
-		}
-	}
-}
-.woocommerce{
-	ul.product_list_widget{
-		li{
-			dl.variation{
-				border: medium none;
-    			padding: 0;
-    			dd,dt{
-    				clear: none;
-				    display: inline-block;
-				    float: none;
-				    margin-bottom: 0;
-    			}
-			}
-		}
-	}
-	.widget_shopping_cart,
-	&.widget_shopping_cart{
-		.cart_list{
-			li{
-				padding: 0 0 20px;
-				a.remove{
-					left: auto;
-				    margin: 0;
-				    right: 0;
-				    top: 0;
-				    width: auto;
-				    padding: 0;
-				}
-			}
-		}
-		.total{
-			padding-top: 10px;
-		    border-top: 1px solid $border-color;
-		    margin-top: 20px;
-		    .amount{
-		    	float: right;
-		    }
-		}
-		.buttons{
-			margin: 0 -4px;
-			> span{
-				display: block;
-			    float: left;
-			    padding: 0 4px;
-			    width: 50%;
-			}
-		}
-		.btn{
-			padding-left: 0;
-		    padding-right: 0;
-		    text-align: center;
-		    width: 100%;
-		    &.btn-dark-b:hover{
-				background: $title-text;
-			    border-color: $title-text;
-			    color: $white;
-		    }
-		}
-	}
+  }
+
+  ul.cart_list,
+  ul.product_list_widget{
+      li{
+          dl{
+              &:before,
+              &:after{
+                  display: none;
+              }
+          }
+      }
+  }
+
+  ul.product_list_widget{
+      li{
+          dl.variation{
+              border: medium none;
+              padding: 0;
+              dd,dt{
+                  clear: none;
+                  display: inline-block;
+                  float: none;
+                  margin-bottom: 0;
+              }
+          }
+      }
+  }
+  .widget_shopping_cart{
+      .cart_list{
+          li{
+              padding: 0 0 20px;
+              a.remove{
+                  left: auto;
+                  margin: 0;
+                  right: 0;
+                  top: 0;
+                  width: auto;
+                  padding: 0;
+              }
+          }
+      }
+      .total{
+          padding-top: 10px;
+          border-top: 1px solid $border-color;
+          margin-top: 20px;
+          .amount{
+              float: right;
+          }
+      }
+      .buttons{
+          margin: 0 -4px;
+          > span{
+              display: block;
+              float: left;
+              padding: 0 4px;
+              width: 50%;
+          }
+      }
+      .btn{
+          padding-left: 0;
+          padding-right: 0;
+          text-align: center;
+          width: 100%;
+          &.btn-dark-b:hover{
+              background: $title-text;
+              border-color: $title-text;
+              color: $white;
+          }
+      }
+  }
 	.widget_price_filter{
 		.price_slider_wrapper{
 			.ui-widget-content{
@@ -1081,6 +1078,9 @@ body{
       a{
         color: $title-text;
         text-transform: uppercase;
+        &:hover{
+          color: $primary-color;
+        }
       }
       span.count{
         float: right;

@@ -365,6 +365,13 @@ div#post-body .rwmb-text{
 }
 
 /*==================================
+* Custom redux
+===================================*/
+.redux-container-image_select ul.redux-image-select li,
+.redux-container-image_select ul.redux-image-select li label{
+    max-width: 100%;
+}
+/*==================================
 * Disable post-preview for some post type
 ===================================*/
 .post-type-designer #post-preview{

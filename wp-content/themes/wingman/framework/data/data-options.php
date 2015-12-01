@@ -179,19 +179,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'subsection' => true,
                 'fields' => array(
                     array(
-                        'id'       => 'layout',
-                        'type'     => 'select',
-                        'title'    => __( 'Site boxed mod(?)', THEME_LANG ),
-                        'subtitle'     => __( "Please choose page layout", THEME_LANG ),
-                        'options'  => array(
-                            'full' => __('Full width Layout', THEME_LANG),
-                            'boxed' => __('Boxed Layout', THEME_LANG),
-                        ),
-                        'default'  => 'full',
-                        'clear' => false
-                    ),
-
-                    array(
                         'id'       => 'archive_placeholder',
                         'type'     => 'media',
                         'url'      => true,
@@ -229,26 +216,12 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'full_width' => true
                     ),
                     array(
-                        'id'       => 'logo_dark',
-                        'type'     => 'media',
-                        'url'      => true,
-                        'compiler' => true,
-                        'title'    => __( 'Logo Dark (Main)', THEME_LANG ),
-                    ),
-                    array(
                         'id'       => 'logo',
                         'type'     => 'media',
                         'url'      => true,
                         'compiler' => true,
                         'title'    => __( 'Logo', THEME_LANG ),
-                    ),
-                    array(
-                        'id'       => 'logo_footer',
-                        'type'     => 'media',
-                        'url'      => true,
-                        'compiler' => true,
-                        'title'    => __( 'Logo Footer', THEME_LANG ),
-                    ),
+                    )
                 )
             );
             
@@ -276,23 +249,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'default'  => 'layout1'
                     ),
 
-                    array(
-                        'id'   => 'divide_id',
-                        'type' => 'divide'
-                    ),
 
-                    array(
-                        'id'       => 'fixed_header',
-                        'type'     => 'button_set',
-                        'title'    => __( 'Sticky header', THEME_LANG ),
-                        'options'  => array(
-                            '1' => __('Disabled', THEME_LANG),
-                            '2' => __('Fixed Sticky', THEME_LANG),
-                            '3' => __('Slide Down', THEME_LANG),
-                        ),
-                        'default'  => '3',
-                        'desc' => __('Choose your sticky effect.', THEME_LANG)
-                    ),
 
                     array(
                         'id'   => 'divide_id',
@@ -637,10 +594,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'default'  => '#82c14f',
                         'transparent' => false,
                     ),
-                    /*
-                     * Main Color - Pick the main (accent) color for your site
-                     * Secondary Color - Pick the secondary color for your site (pagination numbers, most commented widget numbers, etc.)
-                     */
 
                     array(
                         'id'       => 'styling_link',
@@ -666,7 +619,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'title'			=> __( 'Logo', THEME_LANG ),
                 'subsection' => true,
                 'fields'		=> array(
-                        /*
+
                     array(
                         'id'             => 'logo_width',
                         'type'           => 'dimensions',
@@ -674,7 +627,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'units_extended' => 'true',
                         'title'          => __( 'Logo width', THEME_LANG ),
                         'height'         => false,
-                        'default'        => array( 'width'  => 246, 'height' => 100 ),
+                        'default'        => array( 'width'  => 215, 'height' => 35 ),
                         'output'   => array( '.site-branding .site-logo img' ),
                     ),
 
@@ -682,49 +635,18 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'logo_margin_spacing',
                         'type'     => 'spacing',
                         'mode'     => 'margin',
-                        'output'   => array( '.site-branding .site-logo img' ),
+                        'output'   => array( '.site-branding' ),
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
                         'title'    => __( 'Logo margin spacing Option', THEME_LANG ),
                         'default'  => array(
-                            'margin-top'    => '27px',
-                            'margin-right'  => '0px',
-                            'margin-bottom' => '30px',
-                            'margin-left'   => '0px'
+                            'margin-top'    => '40px',
+                            'margin-right'  => '0',
+                            'margin-bottom' => '40px',
+                            'margin-left'   => '0'
                         )
                     ),
 
-                    array(
-                        'id'   => 'divide_id',
-                        'type' => 'divide'
-                    ),
-
-                    array(
-                        'id'             => 'logo_sticky_width',
-                        'type'           => 'dimensions',
-                        'output'   => array( '.header-layout-normal.is-sticky .site-branding .site-logo img'),
-                        'units'          => array( 'px'),
-                        'units_extended' => 'true',
-                        'title'          => __( 'Logo sticky width', THEME_LANG ),
-                        'height'         => false,
-                        'default'        => array( 'width'  => 200, 'height' => 100 )
-                    ),
-
-                    array(
-                        'id'       => 'logo_sticky_margin_spacing',
-                        'type'     => 'spacing',
-                        'mode'     => 'margin',
-                        'units'          => array( 'px' ),
-                        'units_extended' => 'true',
-                        'title'    => __( 'Logo sticky margin spacing Option', THEME_LANG ),
-                        'default'  => array(
-                            'margin-top'    => '15px',
-                            'margin-right'  => '0px',
-                            'margin-bottom' => '15px',
-                            'margin-left'   => '0px'
-                        ),
-                        'output'   => array( '.header-layout-normal.is-sticky .site-branding .site-logo img'),
-                    ),
                     array(
                         'id'   => 'divide_id',
                         'type' => 'divide'
@@ -752,7 +674,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'margin-left'   => '0px'
                         )
                     ),
-                        */
 
                 )
             );
@@ -765,22 +686,88 @@ if ( ! class_exists( 'KT_config' ) ) {
 				'title'			=> __( 'Header', THEME_LANG ),
 				'subsection' => true,
                 'fields'		=> array(
+
+
+
                     /*
 
-                    array(
-                        'id'             => 'navigation_height',
-                        'type'           => 'dimensions',
-                        'units'          => array('px'),
-                        'units_extended' => 'true',
-                        'title'          => __( 'Main Navigation Height', THEME_LANG ),
-                        'subtitle'          => __( 'Change height of main navigation', THEME_LANG ),
-                        'width'         => false,
-                        'default'        => array( 'width'  => 100, 'height' => '100px' ),
-                        'output'   => array(
-                            '#nav > ul > li',
-                            '.header-layout-normal .site-branding'
-                            //'.site-branding'
+
+
+                        array(
+                            'id'   => 'divide_id',
+                            'type' => 'divide'
                         ),
+
+                        array(
+                            'id'       => 'header_background',
+                            'type'     => 'background',
+                            'title'    => __( 'Header background', THEME_LANG ),
+                            'subtitle' => __( 'Header with image, color, etc.', THEME_LANG ),
+                            'default'   => '',
+                            'output'      => array( '.header-background' ),
+                        ),
+                        array(
+                            'id'            => 'header_opacity',
+                            'type'          => 'slider',
+                            'title'         => __( 'Background opacity', THEME_LANG ),
+                            'default'       => 1,
+                            'min'           => 0,
+                            'step'          => .1,
+                            'max'           => 1,
+                            'resolution'    => 0.1,
+                            'display_value' => 'text'
+                        ),
+                    */
+                )
+            );
+            /**
+             *	Styling Footer
+             **/
+            $this->sections[] = array(
+                'id'			=> 'styling_sticky',
+                'title'			=> __( 'Sticky', THEME_LANG ),
+                'subsection' => true,
+                'fields'		=> array(
+
+                    array(
+                        'id'       => 'fixed_header',
+                        'type'     => 'button_set',
+                        'title'    => __( 'Sticky header', THEME_LANG ),
+                        'options'  => array(
+                            '1' => __('Disabled', THEME_LANG),
+                            '2' => __('Fixed Sticky', THEME_LANG),
+                            '3' => __('Slide Down', THEME_LANG),
+                        ),
+                        'default'  => '3',
+                        'desc' => __('Choose your sticky effect.', THEME_LANG)
+                    ),
+                    array(
+                        'id'             => 'logo_sticky_width',
+                        'type'           => 'dimensions',
+                        'units'          => array( 'px'),
+                        'title'          => __( 'Logo width', THEME_LANG ),
+                        'height'         => false,
+                        'default'        => array(
+                            'width'  => '100',
+                            'units'  => 'px'
+                        ),
+                        'output'   => array( '.header-container.is-sticky .site-branding .site-logo img' ),
+                    ),
+
+                    array(
+                        'id'       => 'logo_sticky_margin_spacing',
+                        'type'     => 'spacing',
+                        'mode'     => 'margin',
+                        'units'          => array( 'px' ),
+                        'units_extended' => 'true',
+                        'title'    => __( 'Logo sticky margin spacing Option', THEME_LANG ),
+                        'default'  => array(
+                            'margin-top'    => '0',
+                            'margin-right'  => '0',
+                            'margin-bottom' => '0',
+                            'margin-left'   => '0'
+                        ),
+                        'output'   => array( '.header-container.is-sticky .site-branding'),
                     ),
 
                     array(
@@ -791,55 +778,29 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'          => __( 'Main Navigation Sticky Height', THEME_LANG ),
                         'subtitle'          => __( 'Change height of main navigation sticky', THEME_LANG ),
                         'width'         => false,
-                        'default'        => array( 'width'  => 100, 'height' => '68px' ),
+                        'default'        => array( 'width'  => 40, 'height' => 60 ),
                         'output'   => array(
-                            '.header-container.is-sticky #nav > ul > li',
-                            '.header-layout3 #header-content-mobile',
-                            '.header-layout-normal .site-branding'
-                            //'#header.is-sticky .site-branding'
+                            '.header-container.is-sticky #main-navigation > li',
+                            '.header-container.header-layout1.is-sticky .nav-container-inner'
                         ),
-                    ),
-
-
-                    array(
-                        'id'   => 'divide_id',
-                        'type' => 'divide'
-                    ),
-
-                    array(
-                        'id'       => 'header_background',
-                        'type'     => 'background',
-                        'title'    => __( 'Header background', THEME_LANG ),
-                        'subtitle' => __( 'Header with image, color, etc.', THEME_LANG ),
-                        'default'   => '',
-                        'output'      => array( '.header-background' ),
-                    ),
-                    array(
-                        'id'            => 'header_opacity',
-                        'type'          => 'slider',
-                        'title'         => __( 'Background opacity', THEME_LANG ),
-                        'default'       => 1,
-                        'min'           => 0,
-                        'step'          => .1,
-                        'max'           => 1,
-                        'resolution'    => 0.1,
-                        'display_value' => 'text'
-                    ),
-                    array(
-                        'id'   => 'divide_id',
-                        'type' => 'divide'
                     ),
                     array(
                         'id'       => 'header_sticky_background',
                         'type'     => 'background',
                         'title'    => __( 'Header sticky background', THEME_LANG ),
                         'subtitle' => __( 'Header sticky with image, color, etc.', THEME_LANG ),
+                        'background-repeat'     => false,
+                        'background-attachment' => false,
+                        'background-position'   => false,
+                        'background-image'      => false,
+                        'background-size'       => false,
+                        'preview'               => false,
+                        'transparent'           => false,
                         'default'   => array(
                             'background-color'      => '#FFFFFF',
                         ),
-                        'output'      => array( '.header-container.is-sticky .header-sticky-background' ),
+                        'output'      => array( '.header-sticky-background' ),
                     ),
-
 
                     array(
                         'id'            => 'header_sticky_opacity',
@@ -852,10 +813,10 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'resolution'    => 0.1,
                         'display_value' => 'text'
                     ),
-*/
-                    //Sticky Header Background Opacity
+
                 )
             );
+
 
             /**
              *	Styling Footer
@@ -1067,7 +1028,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
-
                     array(
                         'id'       => 'styling_navigation_general',
                         'type'     => 'raw',
@@ -1075,16 +1035,19 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'full_width' => true
                     ),
                     array(
-                        'id'       => 'navigation_background',
-                        'type'     => 'background',
-                        'title'    => __( 'Background', THEME_LANG ),
-                        'subtitle' => __( 'Main Navigation with image, color, etc.', THEME_LANG ),
-                        'default'   => array(
-                            'background-color'      => '#1e1e1e',
+                        'id'             => 'navigation_height',
+                        'type'           => 'dimensions',
+                        'units'          => array('px'),
+                        'units_extended' => 'true',
+                        'title'          => __( 'Main Navigation Height', THEME_LANG ),
+                        'subtitle'          => __( 'Change height of main navigation', THEME_LANG ),
+                        'width'         => false,
+                        'default'        => array( 'width'  => 100, 'height' => 100 ),
+                        'output'   => array(
+                            '#main-navigation > li',
+                            '.header-layout1 .nav-container-inner'
                         ),
-                        'output'      => array( '.nav-container'),
                     ),
-
                     array(
                         'id'       => 'navigation_border',
                         'type'     => 'border',
@@ -1096,6 +1059,31 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'default'  => array( )
                     ),
 
+                    array(
+                        'id'       => 'navigation_background',
+                        'type'     => 'background',
+                        'title'    => __( 'Background', THEME_LANG ),
+                        'subtitle' => __( 'Main Navigation with image, color, etc.', THEME_LANG ),
+                        'default'   => array(
+                            'background-color'      => '#1e1e1e',
+                        ),
+                        'output'      => array( '.header-layout1 .nav-container'),
+                    ),
+                    array(
+                        'id'       => 'navigation_box_border',
+                        'type'     => 'border',
+                        'title'    => __( 'MegaMenu & Dropdown Box Border', THEME_LANG ),
+                        'output'   => array(
+                            '#main-navigation > li ul.sub-menu-dropdown',
+                            '#main-navigation > li > .kt-megamenu-wrapper'
+                        ),
+                        'all'      => false,
+                        'left'     => false,
+                        'right'    => false,
+                        'default'  => array(
+                            'border-color' => '#82c14f'
+                        )
+                    ),
 
                     array(
                         'id'       => 'navigation_box_background',

@@ -919,12 +919,10 @@ body .mCSB_scrollTools {
     float: none;
     margin: 0 0 10px;
     height: 18px; }
-
 .woocommerce ul.cart_list li dl:before, .woocommerce ul.cart_list li dl:after,
 .woocommerce ul.product_list_widget li dl:before,
 .woocommerce ul.product_list_widget li dl:after {
   display: none; }
-
 .woocommerce ul.product_list_widget li dl.variation {
   border: medium none;
   padding: 0; }
@@ -933,34 +931,34 @@ body .mCSB_scrollTools {
     display: inline-block;
     float: none;
     margin-bottom: 0; }
-.woocommerce .widget_shopping_cart .cart_list li, .woocommerce.widget_shopping_cart .cart_list li {
+.woocommerce .widget_shopping_cart .cart_list li {
   padding: 0 0 20px; }
-  .woocommerce .widget_shopping_cart .cart_list li a.remove, .woocommerce.widget_shopping_cart .cart_list li a.remove {
+  .woocommerce .widget_shopping_cart .cart_list li a.remove {
     left: auto;
     margin: 0;
     right: 0;
     top: 0;
     width: auto;
     padding: 0; }
-.woocommerce .widget_shopping_cart .total, .woocommerce.widget_shopping_cart .total {
+.woocommerce .widget_shopping_cart .total {
   padding-top: 10px;
   border-top: 1px solid #e5e5e5;
   margin-top: 20px; }
-  .woocommerce .widget_shopping_cart .total .amount, .woocommerce.widget_shopping_cart .total .amount {
+  .woocommerce .widget_shopping_cart .total .amount {
     float: right; }
-.woocommerce .widget_shopping_cart .buttons, .woocommerce.widget_shopping_cart .buttons {
+.woocommerce .widget_shopping_cart .buttons {
   margin: 0 -4px; }
-  .woocommerce .widget_shopping_cart .buttons > span, .woocommerce.widget_shopping_cart .buttons > span {
+  .woocommerce .widget_shopping_cart .buttons > span {
     display: block;
     float: left;
     padding: 0 4px;
     width: 50%; }
-.woocommerce .widget_shopping_cart .btn, .woocommerce.widget_shopping_cart .btn {
+.woocommerce .widget_shopping_cart .btn {
   padding-left: 0;
   padding-right: 0;
   text-align: center;
   width: 100%; }
-  .woocommerce .widget_shopping_cart .btn.btn-dark-b:hover, .woocommerce.widget_shopping_cart .btn.btn-dark-b:hover {
+  .woocommerce .widget_shopping_cart .btn.btn-dark-b:hover {
     background: #252525;
     border-color: #252525;
     color: #FFFFFF; }
@@ -1024,6 +1022,8 @@ body .mCSB_scrollTools {
   .widget_layered_nav ul li a {
     color: #252525;
     text-transform: uppercase; }
+    .widget_layered_nav ul li a:hover {
+      color: #82c14f; }
   .widget_layered_nav ul li span.count {
     float: right;
     color: #252525; }

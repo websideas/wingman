@@ -31,8 +31,6 @@
      */
     do_action( 'theme_body_top' );
 
-    get_template_part( 'searchform',  'full');
-
     $position = kt_get_header();
     $header_layout = kt_get_header_layout();
 

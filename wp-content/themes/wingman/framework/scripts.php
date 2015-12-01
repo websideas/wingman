@@ -92,6 +92,23 @@ function kt_setting_script() {
                 echo '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a:hover:before, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a:hover:after{background-color: '.$mega_title_color_hover.';}';
             }
 
+            $navigation_height = kt_option('navigation_height');
+            if(!$navigation_height['height'] || $navigation_height['height'] == 'px'){
+                $navigation_height['height'] = '100px';
+            }
+            echo '#main-navigation > li{line-height: '.$navigation_height['height'].'}';
+
+            $header_sticky_opacity = kt_option('header_sticky_opacity', 0.8);
+            echo '.header-sticky-background{opacity:'.$header_sticky_opacity.';}';
+
+
+            $navigation_height_fixed = kt_option('navigation_height_fixed');
+
+
+            if(!$navigation_height_fixed['height'] || $navigation_height_fixed['height'] == 'px'){
+                $navigation_height_fixed['height'] = 60;
+            }
+            echo '.header-container.is-sticky #main-navigation > li{line-height: '.intval($navigation_height_fixed['height']).'px;}';
 
         ?>
 
