@@ -2237,6 +2237,15 @@ body{
       }
     }
   }
+  .woocommerce {
+    ul.shop-products {
+      &.owl-carousel {
+        li.product {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
 
   &.skin-light{
     ul.block-heading-tabs {
@@ -2250,14 +2259,20 @@ body{
 
     .woocommerce{
       ul.shop-products{
-        li.product{
-          padding-bottom: 0;
-        }
-        h3{
-          a{
-            color: $white;
-            &:hover{
-              color: $primary-color;
+        &.owl-carousel{
+          li.product{
+            .product-image-container{
+              a.product-thumbnail{
+                border: none;
+              }
+            }
+          }
+          h3{
+            a{
+              color: $white;
+              &:hover{
+                color: $primary-color;
+              }
             }
           }
         }

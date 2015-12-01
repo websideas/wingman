@@ -271,8 +271,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'subtitle' => __( 'Please choose header layout', THEME_LANG ),
                         'options'  => array(
                             'layout1' => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'header/header-v1.png' ),
-                            'layout2' => array( 'alt' => __( 'Layout 2', THEME_LANG ), 'img' => FW_IMG . 'header/header-v2.png' ),
-                            'layout3' => array( 'alt' => __( 'Layout 3', THEME_LANG ), 'img' => FW_IMG . 'header/header-v3.png' ),
+                            'layout2' => array( 'alt' => __( 'Layout 2', THEME_LANG ), 'img' => FW_IMG . 'header/header-v2.png' )
                         ),
                         'default'  => 'layout1'
                     ),
@@ -296,38 +295,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                     ),
 
                     array(
-                        'id' => 'header_full',
-                        'type' => 'switch',
-                        'title' => __('Full Width Header', THEME_LANG),
-                        'desc' => __('Do you want the header to span the full width of the page?', THEME_LANG),
-                        "default" => 0,
-                        'on'		=> __( 'Enabled', THEME_LANG ),
-                        'off'		=> __( 'Disabled', THEME_LANG ),
-                    ),
-                    array(
                         'id'   => 'divide_id',
                         'type' => 'divide'
                     ),
-                    /*
-                    array(
-                        'id'       => 'header_contact_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Header contact settings', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id' => 'header_phone',
-                        'type' => 'text',
-                        'title' => __('Phone Number For Contact Info', THEME_LANG), 
-                        'default' => __('Call Us: 00-123-456-789', THEME_LANG)
-                    ),
-                    array(
-                        'id' => 'header_email',
-                        'type' => 'text',
-                        'title' => __('Email Address For Contact Info', THEME_LANG), 
-                        'default' => __('demo@domain.com', THEME_LANG)
-                    ),
-                    */
                     array(
                         'id' => 'header_search',
                         'type' => 'switch',
@@ -338,27 +308,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'off'		=> __( 'Disabled', THEME_LANG ),
                     ),
 
-                    // Search: Disable, Header Toolbar, Fullscreen Search
-                    //Header Search Post Type - All - Product
-
-                    array(
-                        'id' => 'header_cart',
-                        'type' => 'switch',
-                        'title' => __('Cart icon', THEME_LANG),
-                        'desc' => __('Enable the cart Icon in the header (Only work if you install WooCommerce).', THEME_LANG),
-                        "default" => 1,
-                        'on'		=> __( 'Enabled', THEME_LANG ),
-                        'off'		=> __( 'Disabled', THEME_LANG ),
-                    ),
-                    array(
-                        'id' => 'header_language',
-                        'type' => 'switch',
-                        'title' => __('Language switcher', THEME_LANG),
-                        'desc' => __('Enable the language switcher in the header (Only work if you install WPML).', THEME_LANG),
-                        "default" => 1,
-                        'on'		=> __( 'Enabled', THEME_LANG ),
-                        'off'		=> __( 'Disabled', THEME_LANG ),
-                    ),
                 )
             );
 
@@ -394,14 +343,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'switch',
                         'title'    => __( 'Footer enable', THEME_LANG ),
                         'default'  => true,
-                        'on'		=> __( 'Enabled', THEME_LANG ),
-                        'off'		=> __( 'Disabled', THEME_LANG ),
-                    ),
-                    array(
-                        'id'       => 'footer_fixed',
-                        'type'     => 'switch',
-                        'title'    => __( 'Footer Fixed', THEME_LANG ),
-                        'default'  => false,
                         'on'		=> __( 'Enabled', THEME_LANG ),
                         'off'		=> __( 'Disabled', THEME_LANG ),
                     ),
@@ -588,7 +529,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'footer_copyright_text',
                         'type'     => 'editor',
                         'title'    => __( 'Footer Copyright Text', THEME_LANG ),
-                        'default'  => 'Copyright &copy; 2015 - <a href="#">Valorous</a> - All Right Reserver.'
+                        'default'  => 'Copyright &copy; 2015 - <a href="#">Wingman</a> - All Right Reserver.'
                     ),
                     
                 )
@@ -689,7 +630,6 @@ if ( ! class_exists( 'KT_config' ) ) {
 				'title'			=> __( 'General', THEME_LANG ),
 				'subsection' => true,
                 'fields'		=> array(
-                    /*
                     array(
                         'id'       => 'styling_accent',
                         'type'     => 'color',
@@ -697,13 +637,11 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'default'  => '#82c14f',
                         'transparent' => false,
                     ),
-                    */
                     /*
                      * Main Color - Pick the main (accent) color for your site
                      * Secondary Color - Pick the secondary color for your site (pagination numbers, most commented widget numbers, etc.)
                      */
 
-                    /*
                     array(
                         'id'       => 'styling_link',
                         'type'     => 'link_color',
@@ -714,39 +652,11 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'hover' => '#b28c45',
                             'active' => '#b28c45'
                         )
-                    ),*/
-                    )
-                );
-
-
-                /**
-                 *	Styling Background
-                 **/
-            $this->sections[] = array(
-				'id'			=> 'styling-background',
-				'title'			=> __( 'Background', THEME_LANG ),
-				'subsection' => true,
-                'fields'		=> array(
-                    /*
-                    array(
-                        'id'       => 'styling_body_background',
-                        'type'     => 'background',
-                        'output'   => array( 'body.layout-full', 'body.layout-boxed #page' ),
-                        'title'    => __( 'Background Options for Boxed & Wide Mode', THEME_LANG ),
-                        'subtitle' => __( 'Body background with image, color, etc.', THEME_LANG ),
-                        'default'   => '#FFFFFF'
                     ),
-                    array(
-                        'id'       => 'styling_boxed_background',
-                        'type'     => 'background',
-                        'output'   => array( 'body.layout-boxed' ),
-                        'title'    => __( 'Background Options for Boxed mod', THEME_LANG ),
-                        'subtitle' => __( 'Body background with image, color, etc.', THEME_LANG ),
-                        'default'   => '#'
-                    ),
-                    */
                 )
             );
+
+
 
             /**
              *	Styling Logo
@@ -856,48 +766,39 @@ if ( ! class_exists( 'KT_config' ) ) {
 				'subsection' => true,
                 'fields'		=> array(
                     /*
-                                        array(
-                                            'id'       => 'header_shadow',
-                                            'type'     => 'switch',
-                                            'title'    => __( 'Show shadow', THEME_LANG ),
-                                            'subtitle' => __( 'Show header shadow', THEME_LANG ),
-                                            'default'  => true,
-                                            'on'		=> __( 'Enabled', THEME_LANG ),
-                                            'off'		=> __( 'Disabled', THEME_LANG ),
-                                        ),
 
-                                                            array(
-                                                                'id'             => 'navigation_height',
-                                                                'type'           => 'dimensions',
-                                                                'units'          => array('px'),
-                                                                'units_extended' => 'true',
-                                                                'title'          => __( 'Main Navigation Height', THEME_LANG ),
-                                                                'subtitle'          => __( 'Change height of main navigation', THEME_LANG ),
-                                                                'width'         => false,
-                                                                'default'        => array( 'width'  => 100, 'height' => '100px' ),
-                                                                'output'   => array(
-                                                                    '#nav > ul > li',
-                                                                    '.header-layout-normal .site-branding'
-                                                                    //'.site-branding'
-                                                                ),
-                                                            ),
+                    array(
+                        'id'             => 'navigation_height',
+                        'type'           => 'dimensions',
+                        'units'          => array('px'),
+                        'units_extended' => 'true',
+                        'title'          => __( 'Main Navigation Height', THEME_LANG ),
+                        'subtitle'          => __( 'Change height of main navigation', THEME_LANG ),
+                        'width'         => false,
+                        'default'        => array( 'width'  => 100, 'height' => '100px' ),
+                        'output'   => array(
+                            '#nav > ul > li',
+                            '.header-layout-normal .site-branding'
+                            //'.site-branding'
+                        ),
+                    ),
 
-                                                            array(
-                                                                'id'             => 'navigation_height_fixed',
-                                                                'type'           => 'dimensions',
-                                                                'units'          => array('px'),
-                                                                'units_extended' => 'true',
-                                                                'title'          => __( 'Main Navigation Sticky Height', THEME_LANG ),
-                                                                'subtitle'          => __( 'Change height of main navigation sticky', THEME_LANG ),
-                                                                'width'         => false,
-                                                                'default'        => array( 'width'  => 100, 'height' => '68px' ),
-                                                                'output'   => array(
-                                                                    '.header-container.is-sticky #nav > ul > li',
-                                                                    '.header-layout3 #header-content-mobile',
-                                                                    '.header-layout-normal .site-branding'
-                                                                    //'#header.is-sticky .site-branding'
-                                                                ),
-                                                            ),
+                    array(
+                        'id'             => 'navigation_height_fixed',
+                        'type'           => 'dimensions',
+                        'units'          => array('px'),
+                        'units_extended' => 'true',
+                        'title'          => __( 'Main Navigation Sticky Height', THEME_LANG ),
+                        'subtitle'          => __( 'Change height of main navigation sticky', THEME_LANG ),
+                        'width'         => false,
+                        'default'        => array( 'width'  => 100, 'height' => '68px' ),
+                        'output'   => array(
+                            '.header-container.is-sticky #nav > ul > li',
+                            '.header-layout3 #header-content-mobile',
+                            '.header-layout-normal .site-branding'
+                            //'#header.is-sticky .site-branding'
+                        ),
+                    ),
 
 
                     array(
@@ -1182,7 +1083,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'default'  => '1',
                         'clear' => false,
                     ),
-
+                    */
                     array(
                         'id'             => 'navigation_dropdown',
                         'type'           => 'dimensions',
@@ -1191,8 +1092,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'          => __( 'Dropdown width', THEME_LANG ),
                         'subtitle'          => __( 'Change width of Dropdown', THEME_LANG ),
                         'height'         => false,
-                        'default'        => array( 'width'  => 200, 'height' => 100 ),
-                        'output'   => array( '#main-nav-tool .kt-wpml-languages ul', '#main-navigation > li ul.sub-menu-dropdown'),
+                        'default'        => array( 'width'  => 300, 'height' => 100 ),
+                        'output'   => array( '#main-navigation > li ul.sub-menu-dropdown'),
                     ),
 
                     array(
@@ -1206,13 +1107,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'      => array( '.nav-container'),
                     ),
 
-                    array(
-                        'id'       => 'navigation_bordertop',
-                        'type'     => 'color',
-                        'title'    => __( 'Dropdown & Mega border top color', THEME_LANG ),
-                        'default'  => '#82c14f',
-                        'transparent' => false
-                    ),
                     array(
                         'type' => 'divide',
                         'id' => 'divide_fake',
@@ -1232,7 +1126,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     ),
 
                     array(
-                        'id'       => 'navigation_light_color',
+                        'id'       => 'navigation_color',
                         'type'     => 'color',
                         'output'   => array(
                             '.header-light #nav > ul > li > a',
@@ -1243,7 +1137,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'transparent' => false
                     ),
                     array(
-                        'id'       => 'navigation_light_color_hover',
+                        'id'       => 'navigation_color_hover',
                         'type'     => 'color',
                         'output'   => array(
                             '.header-light #nav > ul > li > a:hover',
@@ -1252,32 +1146,11 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '.header-light #nav > ul > li.current-menu-parent > a',
                             '.header-light #header-content-mobile a:hover'
                         ),
-                        'title'    => __( 'Light - Top Level hover Color', THEME_LANG ),
+                        'title'    => __( 'Top Level hover Color', THEME_LANG ),
                         'default'  => '#d0a852',
                         'transparent' => false
                     ),
 
-                    array(
-                        'id'       => 'navigation_dark_color',
-                        'type'     => 'color',
-                        'output'   => array( '.header-dark #nav > ul > li > a' ),
-                        'title'    => __( 'Dark - Top Level Color', THEME_LANG ),
-                        'default'  => '#FFFFFF',
-                        'transparent' => false
-                    ),
-                    array(
-                        'id'       => 'navigation_dark_color_hover',
-                        'type'     => 'color',
-                        'output'   => array(
-                            '.header-dark #nav > ul > li > a:hover',
-                            '.header-dark #nav > ul > li > a:focus',
-                            '.header-dark #nav > ul > li.current-menu-item > a',
-                            '.header-dark #nav > ul > li.current-menu-parent > a'
-                        ),
-                        'title'    => __( 'Dark - Top Level hover Color', THEME_LANG ),
-                        'default'  => '#d0a852',
-                        'transparent' => false
-                    ),
                     array(
                         'type' => 'divide',
                         'id' => 'divide_fake',
@@ -1442,7 +1315,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'default'  => '#e5e5e5',
                         'transparent' => false
                     ),
-                    */
                 )
             );
 
