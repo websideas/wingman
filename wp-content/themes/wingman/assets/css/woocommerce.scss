@@ -180,6 +180,7 @@
       margin: 0;
       display: block;
       text-indent: -9999px !important;
+      @include opacity(1);
       &:hover{
         background: $primary-color;
       }
@@ -270,13 +271,13 @@
   .button.loading{
     @include opacity(1);
   }
- 
+  
   .product-quick-view.loading:before,
   .button.loading:before{
     @include FontAwesome('\f110');
     @include animation(spin 2s linear infinite);
-    @include opacity(0.5);
     font-size: 20px;
+    @include opacity(1);
   }
 
   .button.addtocart_button.loading:before{
@@ -309,7 +310,6 @@
       text-indent: 0;
       background: $primary-color;
       i{
-        @include opacity(0.5);
         display: block;
         line-height: 40px;
       }
@@ -852,45 +852,45 @@ body{
 .woocommerce{
 	ul.product_list_widget{
 		margin: 0;
-	    padding: 0;
-	    list-style: none;
-	    li{
-	    	padding: 0 0 20px;
-    		position: relative;
-    		&:last-child{
-    			padding-bottom: 0;
-    		}
-    		img{
-    			float: left;
-			    width: 65px;
-			    margin: 0 15px 5px 0;
-			    height: auto;
-			    border:1px solid $border-color;
-    		}
-    		a{
-    			color: $title-text;
-			    display: block;
-			    font-size: 14px;
-			    font-weight: normal;
-			    margin-bottom: 6px;
-			    padding-right: 15px;
-			    &:hover{
-			    	color: $primary-color;
-			    }
-    		}
-    		span.amount{
-    			font-size:18px;
-			    color:$main-text;
-			    font-family:$heading-font;
-			    letter-spacing: 0.2em;
-			    font-weight: 700;
-    		}
-	    }
-	    .star-rating{
-	    	float: none;
-    		margin: 0 0 10px;
-    		height: 18px;
-	    }
+    padding: 0;
+    list-style: none;
+    li{
+    	padding: 0 0 20px;
+  		position: relative;
+  		&:last-child{
+  			padding-bottom: 0;
+  		}
+  		img{
+  			float: left;
+		    width: 65px;
+		    margin: 0 15px 5px 0;
+		    height: auto;
+		    border:1px solid $border-color;
+  		}
+  		a{
+  			color: $title-text;
+		    display: block;
+		    font-size: 14px;
+		    font-weight: normal;
+		    margin-bottom: 6px;
+		    padding-right: 15px;
+		    &:hover{
+		    	color: $primary-color;
+		    }
+  		}
+  		span.amount{
+  			font-size:18px;
+		    color:$main-text;
+		    font-family:$heading-font;
+		    letter-spacing: 0.2em;
+		    font-weight: 700;
+  		}
+    }
+    .star-rating{
+    	float: none;
+  		margin: 0 0 10px;
+  		height: 18px;
+    }
 	}
 }
 .woocommerce{
@@ -993,18 +993,23 @@ body{
 		}
 		.price_slider_amount{
 			text-align: left;
-		    font-size: 14px;
-		    color:$border-dark-color;
-		    text-transform: uppercase;
-		    .price_label{
-		    	span{
-		    		color: $primary-color;
-		    	}
-		    }
-		    .button{
-		    	float: right;
-		    	color: $title-text;
-		    }
+	    font-size: 14px;
+	    color:$border-dark-color;
+	    text-transform: uppercase;
+	    .price_label{
+	    	span{
+	    		color: $primary-color;
+	    	}
+	    }
+	    .button{
+	    	float: right;
+	    	color: $title-text;
+        background: none;
+        text-transform: uppercase;
+        &:hover,&:focus{
+          color: $primary-color;
+        }
+	    }
 		}
 	}
 }
@@ -1037,6 +1042,22 @@ body{
 	.price_label {
 	    line-height: 42px;
 	}
+}
+
+.widget_layered_nav{
+  ul{
+    li{
+      margin-bottom: 30px;
+      a{
+        color: $title-text;
+        text-transform: uppercase;
+      }
+      span.count{
+        float: right;
+        color: $title-text;
+      }
+    }
+  }
 }
 /** ================================================
     5. Woocommerce shop products
@@ -1292,7 +1313,6 @@ body{
         &:after{
           @include FontAwesome('\f110');
           @include animation(spin 2s linear infinite);
-          @include opacity(0.5);
           position: absolute;
           top:0;
           left:50%;
@@ -1305,6 +1325,7 @@ body{
           @include FontAwesome('\f00c');
           @include opacity(1);
           @include animation('none');
+          font-size: 16px;
         }
       }
 	}
