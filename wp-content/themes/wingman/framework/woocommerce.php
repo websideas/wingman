@@ -792,9 +792,9 @@ add_action( 'woocommerce_sale_sountdown_item', 'kt_template_single_excerpt', 10 
 function kt_thumbnail_page_shop(){
     
     if( is_shop() ){
-        $thumbnail = get_thumbnail_attachment( get_post_thumbnail_id( woocommerce_get_page_id('shop') ), 'full');
-        if( $thumbnail ){
-            echo '<div class="shop-thumb"><img class="img-responsive" src="'.$thumbnail['url'].'" alt="'.$thumbnail['alt'].'" /></div>';
+        $banner = kt_option( 'shop_content_banner' );
+        if( $banner ){
+            echo '<div class="shop-thumb">'.do_shortcode($banner).'</div>';
         }
     }
 }

@@ -3474,6 +3474,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'content'  => '<div class="section-heading">'.__( 'Shop Products settings', THEME_LANG ).'</div>',
                         'full_width' => true
                     ),
+
+                    array(
+                        'id'       => 'shop_content_banner',
+                        'type'     => 'editor',
+                        'title'    => __( 'Shop banner', THEME_LANG ),
+                        'default'  => ''
+                    ),
+
                     array(
                         'id' => 'shop_page_header',
                         'type' => 'switch',

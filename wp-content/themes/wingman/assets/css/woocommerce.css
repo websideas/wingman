@@ -163,7 +163,15 @@
   padding: 0;
   margin: 0;
   display: block;
-  text-indent: -9999px !important; }
+  text-indent: -9999px !important;
+  filter: alpha(opacity=100);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -webkit-opacity: 1;
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  -ms-opacity: 1;
+  -o-opacity: 1;
+  opacity: 1; }
   .woocommerce ul.shop-products .added_to_cart:hover,
   .woocommerce ul.shop-products .button:hover,
   .woocommerce ul.shop-products .product-quick-view:hover {
@@ -279,15 +287,15 @@
   -ms-animation: spin 2s linear infinite;
   -o-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
-  filter: alpha(opacity=50);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  -webkit-opacity: 0.5;
-  -khtml-opacity: 0.5;
-  -moz-opacity: 0.5;
-  -ms-opacity: 0.5;
-  -o-opacity: 0.5;
-  opacity: 0.5;
-  font-size: 20px; }
+  font-size: 20px;
+  filter: alpha(opacity=100);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -webkit-opacity: 1;
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  -ms-opacity: 1;
+  -o-opacity: 1;
+  opacity: 1; }
 .woocommerce .button.addtocart_button.loading:before {
   display: none; }
 .woocommerce input#submit.loading:after,
@@ -314,14 +322,6 @@
   text-indent: 0;
   background: #82c14f; }
   .woocommerce .yith-wcwl-add-to-wishlist .ajax-loading i {
-    filter: alpha(opacity=50);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    -webkit-opacity: 0.5;
-    -khtml-opacity: 0.5;
-    -moz-opacity: 0.5;
-    -ms-opacity: 0.5;
-    -o-opacity: 0.5;
-    opacity: 0.5;
     display: block;
     line-height: 40px; }
 .woocommerce .woocommerce-per-page,
@@ -960,7 +960,11 @@ body .mCSB_scrollTools {
     color: #82c14f; }
   .woocommerce .widget_price_filter .price_slider_amount .button {
     float: right;
-    color: #252525; }
+    color: #252525;
+    background: none;
+    text-transform: uppercase; }
+    .woocommerce .widget_price_filter .price_slider_amount .button:hover, .woocommerce .widget_price_filter .price_slider_amount .button:focus {
+      color: #82c14f; }
 
 .yith-woocompare-widget .clear-all {
   display: inline-block;
@@ -983,6 +987,15 @@ body .mCSB_scrollTools {
 
 .price_slider_amount .price_label {
   line-height: 42px; }
+
+.widget_layered_nav ul li {
+  margin-bottom: 30px; }
+  .widget_layered_nav ul li a {
+    color: #252525;
+    text-transform: uppercase; }
+  .widget_layered_nav ul li span.count {
+    float: right;
+    color: #252525; }
 
 /** ================================================
     5. Woocommerce shop products
@@ -1264,14 +1277,6 @@ body .mCSB_scrollTools {
       -ms-animation: spin 2s linear infinite;
       -o-animation: spin 2s linear infinite;
       animation: spin 2s linear infinite;
-      filter: alpha(opacity=50);
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-      -webkit-opacity: 0.5;
-      -khtml-opacity: 0.5;
-      -moz-opacity: 0.5;
-      -ms-opacity: 0.5;
-      -o-opacity: 0.5;
-      opacity: 0.5;
       position: absolute;
       top: 0;
       left: 50%;
@@ -1296,7 +1301,8 @@ body .mCSB_scrollTools {
     -moz-animation: none;
     -ms-animation: none;
     -o-animation: none;
-    animation: none; }
+    animation: none;
+    font-size: 16px; }
 
 /** =========================
     6. Product Detail
