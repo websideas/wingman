@@ -295,6 +295,7 @@ select:not([multiple]) {
     &:hover{
       background: $primary-color;
       border-color: $primary-color;
+      color: $white;
     }
   }
   &-accent{
