@@ -24,6 +24,7 @@
         init_carouselwoo();
         init_woo_quantily();
         init_gridlistToggle();
+        init_currency();
         
         $('.woocommerce-accordions').accordion({ 
             'heightStyle': 'content',
@@ -321,5 +322,19 @@
                 
         });
     }
+
+    function init_currency(){
+        if(typeof woocs_drop_down_view !== "undefined") {
+            if(woocs_drop_down_view == 'no'){
+                $('.menu-bars-currency a').on('click', function(e){
+                    e.preventDefault();
+                    woocs_redirect($(this).data('currency'));
+                });
+
+            }
+
+        }
+    }
+
 
 })(jQuery); // End of use strict

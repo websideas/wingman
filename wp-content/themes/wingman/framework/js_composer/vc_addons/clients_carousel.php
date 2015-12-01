@@ -27,7 +27,7 @@ class WPBakeryShortCode_Clients_Carousel extends WPBakeryShortCode {
             'mobile' => 1,
 
             'navigation' => true,
-            'navigation_always_on' => true,
+            'navigation_always_on' => false,
             'navigation_position' => 'center',
             'navigation_style' => '',
             'navigation_icon' => 'fa fa-angle-left|fa fa-angle-right',

@@ -524,19 +524,20 @@ select:not([multiple]) {
                 @include transition(height 0.3s ease);
               }
             }
+          }
+        }
 
-            &:hover,
-            &:focus{
-
-              span{
-                @include box-shadow(0, 0, 0, $primary-color, 'inset', 1px);
-                &:after{
-                  height: 100%;
-                }
-              }
+        li.active,
+        li a:hover,
+        li a:focus{
+          span{
+            @include box-shadow(0, 0, 0, $primary-color, 'inset', 1px);
+            &:after{
+              height: 100%;
             }
           }
         }
+
       }
 
       &.menu-bars-language{
@@ -1465,6 +1466,7 @@ body.layout-boxed{
 /* ==============================
    2. Widgets
    ============================== */
+.widget,
 .widget-container {
     margin-bottom: 55px;
 }

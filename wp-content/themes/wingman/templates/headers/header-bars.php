@@ -25,15 +25,27 @@
                 </ul>
             </div><!-- .menu-bars-item -->
 
-            <div class="menu-bars-item menu-bars-currency">
-                <h4>Currency</h4>
-                <ul>
-                    <li class="active"><a href="#"><span></span>USD</a></li>
-                    <li><a href="#"><span></span>EUR</a></li>
-                    <li><a href="#"><span></span>GBP</a></li>
-                    <li><a href="#"><span></span>CNY</a></li>
-                </ul>
-            </div><!-- .menu-bars-item -->
+            <?php if(class_exists('WOOCS')){ ?>
+                <div class="menu-bars-item menu-bars-currency">
+                    <h4>Currency</h4>
+                    <?php
+                    global $WOOCS;
+                    $currencies=$WOOCS->get_currencies();
+                    echo '<ul>';
+                    foreach($currencies as $key => $currency){
+                        $selected = ($WOOCS->current_currency == $key) ? 'active' : '';
+                        printf(
+                            '<li class="%s"><a href="#" data-currency="%s" title="%s"><span></span>%s</a>',
+                            $selected,
+                            $currency['name'],
+                            $currency['description'],
+                            $currency['name']
+                        );
+                    }
+                    echo '</ul>';
+                    ?>
+                </div><!-- .menu-bars-item -->
+            <?php } ?>
 
         <?php } ?>
 

@@ -661,15 +661,19 @@ select:not([multiple]) {
             -ms-transition: height 0.3s ease;
             -o-transition: height 0.3s ease;
             transition: height 0.3s ease; }
-        .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:hover span, .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:focus span {
-          -webkit-box-shadow: inset 0 0 0 1px #82c14f;
-          -khtml-box-shadow: inset 0 0 0 1px #82c14f;
-          -moz-box-shadow: inset 0 0 0 1px #82c14f;
-          -ms-box-shadow: inset 0 0 0 1px #82c14f;
-          -o-box-shadow: inset 0 0 0 1px #82c14f;
-          box-shadow: inset 0 0 0 1px #82c14f; }
-          .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:hover span:after, .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:focus span:after {
-            height: 100%; }
+      .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li.active span,
+      .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:hover span,
+      .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:focus span {
+        -webkit-box-shadow: inset 0 0 0 1px #82c14f;
+        -khtml-box-shadow: inset 0 0 0 1px #82c14f;
+        -moz-box-shadow: inset 0 0 0 1px #82c14f;
+        -ms-box-shadow: inset 0 0 0 1px #82c14f;
+        -o-box-shadow: inset 0 0 0 1px #82c14f;
+        box-shadow: inset 0 0 0 1px #82c14f; }
+        .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li.active span:after,
+        .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:hover span:after,
+        .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:focus span:after {
+          height: 100%; }
       .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-language {
         padding-left: 20px; }
         .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-language li {
@@ -1459,6 +1463,7 @@ body.layout-boxed #footer {
 /* ==============================
    2. Widgets
    ============================== */
+.widget,
 .widget-container {
   margin-bottom: 55px; }
 

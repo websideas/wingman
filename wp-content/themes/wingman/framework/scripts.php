@@ -97,11 +97,12 @@ function kt_setting_script() {
 
         /*
         @media (max-width: 991px) {
-            <?php $logo_width = kt_option('logo_mobile_width'); ?>
+            <?php /*$logo_width = kt_option('logo_mobile_width'); ?>
             .site-branding .site-logo img{
                 width: <?php echo $logo_width['width'] ?>!important;
             }
             <?php
+
             $logo_mobile_margin_spacing = kt_option('logo_mobile_margin_spacing', '');
             $style_logo_mobile = '';
             if($margin_top = $logo_mobile_margin_spacing['margin-top']){
@@ -119,6 +120,7 @@ function kt_setting_script() {
             if($style_logo_mobile){
                 echo '.site-branding .site-logo img{'.$style_logo_mobile.'}';
             }
+            */
             ?>
         }
         */
