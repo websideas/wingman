@@ -170,7 +170,8 @@
 .woocommerce ul.shop-products .added_to_cart {
   text-indent: 0 !important;
   position: absolute;
-  width: 50%; }
+  width: 50%;
+  display: none !important; }
 .woocommerce.compare-button,
 .woocommerce .yith-wcwl-add-button,
 .woocommerce .yith-wcwl-wishlistaddedbrowse,
@@ -689,21 +690,22 @@
   padding: 0 20px 20px; }
   .bag-buttons .bag-buttons-content {
     margin: 0; }
-  .bag-buttons span {
-    display: block;
-    width: 100%;
-    margin: 0 0 10px; }
-    .bag-buttons span:last-child {
-      margin: 0; }
-    .bag-buttons span a {
+    .bag-buttons .bag-buttons-content > span {
       display: block;
-      width: 100%; }
-    .bag-buttons span .btn {
-      padding-left: 0;
-      padding-right: 0;
-      display: block; }
-      .bag-buttons span .btn.btn-viewcart {
-        border-width: 2px; }
+      width: 100%;
+      margin: 0 0 10px; }
+      .bag-buttons .bag-buttons-content > span:last-child {
+        margin: 0; }
+      .bag-buttons .bag-buttons-content > span a {
+        display: block;
+        width: 100%; }
+      .bag-buttons .bag-buttons-content > span .btn {
+        padding-left: 0;
+        padding-right: 0;
+        display: block;
+        font-weight: 600; }
+        .bag-buttons .bag-buttons-content > span .btn.btn-viewcart {
+          border-width: 2px; }
 
 body .mCSB_inside > .mCSB_container, body .mCustomScrollBox > .mCSB_container {
   margin-right: 15px !important; }
@@ -1239,6 +1241,41 @@ body .mCSB_scrollTools {
   letter-spacing: 0;
   border: none;
   padding: 0; }
+  .woocommerce .added_to_cart.loading,
+  .woocommerce .addtocart_button.loading {
+    text-indent: -999px;
+    overflow: hidden;
+    font-size: 0; }
+    .woocommerce .added_to_cart.loading:after,
+    .woocommerce .addtocart_button.loading:after {
+      font-family: FontAwesome;
+      content: "";
+      font-style: normal;
+      font-weight: normal;
+      -webkit-animation: spin 2s linear infinite;
+      -khtml-animation: spin 2s linear infinite;
+      -moz-animation: spin 2s linear infinite;
+      -ms-animation: spin 2s linear infinite;
+      -o-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+      filter: alpha(opacity=50);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+      -webkit-opacity: 0.5;
+      -khtml-opacity: 0.5;
+      -moz-opacity: 0.5;
+      -ms-opacity: 0.5;
+      -o-opacity: 0.5;
+      opacity: 0.5;
+      position: absolute;
+      -webkit-transform: translate(-50%, -50%);
+      -khtml-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      font-size: 20px; }
 
 /** =========================
     6. Product Detail
