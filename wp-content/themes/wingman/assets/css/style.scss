@@ -944,6 +944,7 @@ select:not([multiple]) {
 
   .nav-container{
     background: none;
+    border: none;
   }
 
   .header-sticky-background{
@@ -3949,70 +3950,14 @@ form.wpcf7-form{
  * 14.4. Pagination
  */
 
-.woocommerce-pagination,
+.woocommerce .woocommerce-pagination,
 .pagination {
-    display: block;
-    margin: 20px 0 10px;
-    position: relative;
-    text-align: center;
-    padding: 0 35px;
-}
-.woocommerce{
-  nav.woocommerce-pagination{
-    ul.page-numbers{
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      border: none;
-      li{
-        border: medium none;
-        float: none;
-        a,span{
-          border: none;
-          display: inline-block;
-          line-height: 1;
-          width: auto;
-          padding: 0 10px;
-          font-size: 14px;
-          margin: 0 5px;
-          color: $title-text;
-          position: relative;
-        }
-        span.current,a:hover,a:focus{
-          color: $primary-color;
-          background: none;
-        }
-        span.current{
-          &:before,
-          &:after{
-            content:"";
-            width:1px;
-            height:12px;
-            background: $primary-color;
-            position: absolute;
-            top: 50%;
-            margin-top: -6px;
-          }
-          &:before{
-            left: 0;
-          }
-          &:after{
-            right:0;
-          }
-        }
-        a.next{
-          margin-left: 45px;
-        }
-        a.prev{
-          margin-right: 45px;
-        }
-      }
-    }
-  }
-}
+  display: block;
+  margin: 20px 0 10px;
+  position: relative;
+  text-align: center;
+  padding: 0;
 
-
-.pagination{
   .page-numbers{
     border: none;
     display: inline-block;
@@ -4029,8 +3974,53 @@ form.wpcf7-form{
       color: $primary-color;
       background: none;
     }
+
+    &.current{
+      &:before,
+      &:after{
+        content:"";
+        width:1px;
+        height:12px;
+        background: $primary-color;
+        position: absolute;
+        top: 50%;
+        margin-top: -6px;
+      }
+      &:before{
+        left: 0;
+      }
+      &:after{
+        right:0;
+      }
+    }
+
+    &.next{
+      margin-left: 45px;
+      margin-right: 0;
+    }
+    &.prev{
+      margin-right: 45px;
+      margin-left: 0;
+    }
+
   }
 }
+
+.woocommerce{
+  nav.woocommerce-pagination{
+    ul.page-numbers{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border: none;
+      li{
+        border: medium none;
+        float: none;
+      }
+    }
+  }
+}
+
 /*
  * 10.8 Tooltip
  */

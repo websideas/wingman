@@ -592,11 +592,11 @@ if ( ! function_exists( 'kt_paging_nav' ) ) :
                 <div class="nav-links">
 
                     <?php if ( get_next_posts_link() ) : ?>
-                        <div class="nav-previous"><?php next_posts_link( '<i class="fa fa-angle-double-left"></i> '.__( 'Older posts', THEME_LANG ) ); ?></div>
+                        <div class="nav-previous"><?php next_posts_link( '<i class="fa fa-long-arrow-left"></i> '.__( 'Older posts', THEME_LANG ) ); ?></div>
                     <?php endif; ?>
 
                     <?php if ( get_previous_posts_link() ) : ?>
-                        <div class="nav-next"><?php previous_posts_link( __( 'Newer posts', THEME_LANG ).' <i class="fa fa-angle-double-right"></i>' ); ?></div>
+                        <div class="nav-next"><?php previous_posts_link( __( 'Newer posts', THEME_LANG ).' <i class="fa fa-long-arrow-right"></i>' ); ?></div>
                     <?php endif; ?>
 
                 </div><!-- .nav-links -->
@@ -604,8 +604,8 @@ if ( ! function_exists( 'kt_paging_nav' ) ) :
 
         <?php }else{
             the_posts_pagination(array(
-                'prev_text' => sprintf('<span class="screen-reader-text">%s</span>%s', __('Previous', THEME_LANG), '<i class="fa fa-angle-left"></i>'),
-                'next_text' => sprintf('<span class="screen-reader-text">%s</span>%s', __('Next', THEME_LANG), '<i class="fa fa-angle-right"></i>'),
+                'prev_text' => sprintf('<span class="screen-reader-text">%s</span>%s', __('Previous', THEME_LANG), '<i class="fa fa-long-arrow-left"></i>'),
+                'next_text' => sprintf('<span class="screen-reader-text">%s</span>%s', __('Next', THEME_LANG), '<i class="fa fa-long-arrow-right"></i>'),
                 'before_page_number' => '',
             ));
         }
