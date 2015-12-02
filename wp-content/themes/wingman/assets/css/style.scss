@@ -3615,16 +3615,25 @@ article.post-item.post-layout-classic {
         padding: 0 10px;
         display: inline-block;
         position: relative;
+
+        &:before,
         &:after{
-          width: 20px;
-          height: 20px;
+          width: 1px;
+          height: 28px;
           content: "";
-          background: url(../images/icon-coming3.png) no-repeat center center;
+          background: rgba($black, .1);
+          
+        }
+
+        &:before{
+
+        }
+
+        &:after{
+
           display: block;
           position: absolute;
-          right: -10px;
           top:50%;
-          @include transform(translatey(-50%));
         }
         &:last-child:after{
           display: none;
