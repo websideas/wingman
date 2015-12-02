@@ -2463,15 +2463,6 @@ article.post-item {
   .entry-title{
     margin: 0 0 20px;
   }
-  .blog-posts-content{
-    .equal_height{
-      > div{
-        @include css3-prefix('justify-content', 'center');
-        @include css3-prefix('flex-direction', 'column');
-        @include css3-prefix-value('display', 'flex');
-      }
-    }
-  }
   .entry-more{
     margin: 0;
   }
