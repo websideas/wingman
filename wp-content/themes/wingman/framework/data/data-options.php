@@ -221,7 +221,15 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'url'      => true,
                         'compiler' => true,
                         'title'    => __( 'Logo', THEME_LANG ),
-                    )
+                    ),
+                    array(
+                        'id'       => 'logo_retina',
+                        'type'     => 'media',
+                        'url'      => true,
+                        'compiler' => true,
+                        'title'    => __( 'Logo (Retina Version @2x)', THEME_LANG ),
+                        'desc'     => __('Select an image file for the retina version of the logo. It should be exactly 2x the size of main logo.', THEME_LANG)
+                    ),
                 )
             );
             
@@ -627,7 +635,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'units_extended' => 'true',
                         'title'          => __( 'Logo width', THEME_LANG ),
                         'height'         => false,
-                        'default'        => array( 'width'  => 215, 'height' => 35 ),
+                        'default'        => array( 'width'  => 215, 'unit'   => 'px' ),
                         'output'   => array( '.site-branding .site-logo img' ),
                     ),
 
@@ -658,7 +666,11 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'units_extended' => 'true',
                         'title'          => __( 'Logo mobile width', THEME_LANG ),
                         'height'         => false,
-                        'default'        => array( 'width'  => 190, 'height' => 100 ),
+                        'default'        => array(
+                            'width'  => 190,
+                            'unit'   => 'px'
+                        ),
+                        'output'   => array( '#header-content-mobile .site-branding .site-logo img' ),
                     ),
                     array(
                         'id'       => 'logo_mobile_margin_spacing',
@@ -672,7 +684,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'margin-right'  => '0px',
                             'margin-bottom' => '17px',
                             'margin-left'   => '0px'
-                        )
+                        ),
+                        'output'   => array( '#header-content-mobile .site-branding' ),
                     ),
 
                 )
@@ -2207,19 +2220,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                     ),
 
                     array(
-                        'id'       => 'sidebar',
-                        'type'     => 'select',
-                        'title'    => __( 'Sidebar configuration', THEME_LANG ),
-                        'subtitle'     => __( "Please choose page layout", THEME_LANG ),
-                        'options'  => array(
-                            'full' => __('No sidebars', THEME_LANG),
-                            'left' => __('Left Sidebar', THEME_LANG),
-                            'right' => __('Right Layout', THEME_LANG)
-                        ),
-                        'default'  => 'full',
-                        'clear' => false,
-                    ),
-                    array(
                         'id'       => 'sidebar_left',
                         'type' => 'select',
                         'title'    => __( 'Sidebar left area', THEME_LANG ),
@@ -2229,6 +2229,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'required' => array('sidebar','equals','left')
                         //'clear' => false
                     ),
+
                     array(
                         'id'       => 'sidebar_right',
                         'type'     => 'select',
@@ -2239,8 +2240,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'required' => array('sidebar','equals','right')
                         //'clear' => false
                     ),
-
-
 
                     array(
                         'id' => 'show_page_comment',

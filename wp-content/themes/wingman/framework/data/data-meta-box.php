@@ -542,21 +542,10 @@ function kt_register_meta_boxes( $meta_boxes )
                 'label' => __( 'Page Header', THEME_LANG ),
                 'icon'  => 'fa fa-bars',
             ),
-
             'page_layout' => array(
                 'label' => __( 'Page layout', THEME_LANG ),
                 'icon'  => 'fa fa-columns',
-            ),
-            'page_background' => array(
-                'label' => __( 'Background', THEME_LANG ),
-                'icon'  => 'fa fa-picture-o',
-            ),
-            /*
-            'extra' => array(
-                'label' => __( 'Extra', THEME_LANG ),
-                'icon'  => 'fa fa-asterisk',
-            ),
-            */
+            )
         ),
         'fields' => array(
             // Page Header
@@ -766,19 +755,6 @@ function kt_register_meta_boxes( $meta_boxes )
 
             //Page layout
             array(
-                'name' => __('Page layout', THEME_LANG),
-                'id' => $prefix . 'layout',
-                'desc' => __("Please choose this page's layout.", THEME_LANG),
-                'type' => 'select',
-                'options' => array(
-                    'default' => __('Default', THEME_LANG),
-                    'full' => __('Full width Layout', THEME_LANG),
-                    'boxed' => __('Boxed Layout', THEME_LANG),
-                ),
-                'std' => 'default',
-                'tab'  => 'page_layout',
-            ),
-            array(
                 'name' => __('Sidebar configuration', THEME_LANG),
                 'id' => $prefix . 'sidebar',
                 'desc' => __("Choose the sidebar configuration for the detail page.<br/><b>Note: Cart and checkout, My account page always use no sidebars.</b>", THEME_LANG),
@@ -831,20 +807,6 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type'  => 'text',
                 'tab'  => 'page_layout',
             ),
-            array(
-                'name' => __('Background Options for Boxed & Wide Mode', THEME_LANG),
-                'id' => $prefix.'body_background',
-                'type'  => 'background',
-                'tab'  => 'page_background',
-                'desc' => '&nbsp;',
-            ),
-            array(
-                'name' => __('Background Options for Boxed mod', THEME_LANG),
-                'id' => $prefix.'boxed_background',
-                'type'  => 'background',
-                'tab'  => 'page_background',
-                'desc' => __('', THEME_LANG ),
-            )
 
         )
     );

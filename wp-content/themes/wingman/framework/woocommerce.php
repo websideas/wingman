@@ -59,9 +59,6 @@ function kt_woocommerce_image_dimensions() {
     update_option( 'shop_single_image_size', $single ); 		// Single product image
     update_option( 'shop_thumbnail_image_size', $thumbnail ); 	// Image gallery thumbs
 
-    update_option( 'woocs_drop_down_view', 'no' );
-    update_option( 'woocs_show_flags', '0' );
-
 
 }
 add_action( 'after_switch_theme', 'kt_woocommerce_image_dimensions', 1 );
@@ -368,7 +365,7 @@ function kt_woocommerce_get_cart_mobile( $wrapper = true ){
         if( $wrapper == true ){
             $output .= '<a href="'.WC()->cart->get_cart_url().'" class="mobile-cart">';
         }
-        $output .= '<span class="icon-bag"></span>';
+        $output .= '<i class="fa fa-shopping-cart"></i>';
         $output .= '<span class="mobile-cart-total">'.$cart_count.'</span>';
 
         if( $wrapper == true ){

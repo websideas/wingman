@@ -50,8 +50,18 @@ $icon-list: #959595;
 $social-color: #b2b2b2;
 $second-color: #898989;
 
-//// 2. Header height ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+//// 3. Header height ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 $header-height: 60px;
 $header-sticky: 60px;
+
+//// 4. Hamburger ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$hamburger-heighticon: 12px;
+$hamburger-widthline: 20px;
+$hamburger-heightline: 2px;
+
+$hamburger-transition-time: 0.4s;
+$hamburger-rotation: 45deg;
+$hamburger-translateY: ($hamburger-heighticon / 2);
+$hamburger-translateX: 0;

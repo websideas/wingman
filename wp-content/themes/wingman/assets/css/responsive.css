@@ -23,6 +23,13 @@
  * Title:   SCSS VARIABLES
  * Author:  http://themeforest.net/user/Kite-Themes
 ------------------------------------------------------------- */
+/* 1. Retina logo */
+@media only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .site-branding .site-logo.retina-logo-wrapper .retina-logo {
+    display: block; }
+
+  .site-branding .site-logo.retina-logo-wrapper .default-logo {
+    display: none; } }
 @media (max-width: 767px) {
   .main-class.col-md-12 .entry-header,
   .main-class.col-md-12 .entry-content-outer,

@@ -332,6 +332,8 @@ if (!function_exists('kt_option')){
         }
     }
 }
+
+
 if (!function_exists('kt_get_logo')){
     /**
      * Get logo of current page
@@ -340,44 +342,28 @@ if (!function_exists('kt_get_logo')){
      *
      */
     function kt_get_logo(){
-        $logo = array('default' => '', 'logo_dark' => '');
-
+        $logo = array('default' => '', 'retina' => '');
         $logo_default = kt_option( 'logo' );
+        $logo_retina = kt_option( 'logo_retina' );
+
 
         if(is_array($logo_default) && $logo_default['url'] != '' ){
             $logo['default'] = $logo_default['url'];
         }
 
-        if(!$logo['default'] && !$logo['logo_dark']){
-            $logo['default'] = THEME_IMG.'logo-dark.png';
+        if(is_array($logo_retina ) && $logo_retina['url'] != '' ){
+            $logo['retina'] = $logo_retina['url'];
+        }
+
+        if(!$logo['default']){
+            $logo['default'] = THEME_IMG.'logo.png';
+            $logo['retina'] = THEME_IMG.'logo-2x.png';
         }
 
         return $logo;
     }
 }
-if (!function_exists('kt_get_header_scheme')) {
-    /**
-     * Get header scheme
-     *
-     * @param number $post_id Optional. ID of article or page.
-     * @return string
-     *
-     */
-    function kt_get_header_scheme($scheme = 'light')
-    {
-        if (is_page() || is_singular()) {
-            $scheme = rwmb_meta('_kt_header_scheme');
-        }elseif(is_archive()){
-            if(kt_is_wc()){
-                if(is_shop()){
-                    $page_id = get_option( 'woocommerce_shop_page_id' );
-                    $scheme = rwmb_meta('_kt_header_scheme', array(), $page_id);
-                }
-            }
-        }
-        return $scheme;
-    }
-}
+
 if (!function_exists('kt_getlayout')) {
     /**
      * Get Layout of post
@@ -980,9 +966,9 @@ if(!function_exists('video_vimeo')) {
      * @param $video_id
      * @return string
      */
-    function video_vimeo($video_id)
+    function video_vimeo($video_id, $args = 'title=0&amp;byline=0&amp;portrait=0?wmode=transparent')
     {
-        return '<iframe src="http://player.vimeo.com/video/' . $video_id . '?title=0&amp;byline=0&amp;portrait=0?wmode=transparent"></iframe>';
+        return '<iframe src="http://player.vimeo.com/video/' . $video_id . '?'.$args.'"></iframe>';
     }
 }
 

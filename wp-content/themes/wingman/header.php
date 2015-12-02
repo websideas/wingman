@@ -38,14 +38,19 @@
 
     <div id="page_outter">
         <div id="page">
-            <div class="animate-content-overlay"></div>
             <div id="wrapper-content">
-
                 <?php
             	/**
             	 * @hooked 
             	 */
             	do_action( 'theme_before_header' ); ?>
+
+                <div class="container">
+                    <?php get_template_part( 'templates/headers/header',  'mobile'); ?>
+                </div>
+
+                <?php get_template_part( 'templates/headers/header',  'mobilenav'); ?>
+
                 <div class="<?php echo esc_attr(apply_filters('theme_header_class', 'header-container header-'.$header_layout.' header-'.$position, $header_layout)); ?>">
                     <header id="header" class="<?php echo apply_filters('theme_header_content_class', 'header-content', $header_layout) ?>">
                         <?php get_template_part( 'templates/headers/header',  $header_layout); ?>

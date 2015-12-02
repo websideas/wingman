@@ -38,21 +38,9 @@ only screen and (min-resolution: 144dpi) {
 }
 /* 4. Styles for devices(<=1199px) */
 @media (max-width: 1199px) {
-    .layout-full .header-layout1 #header.header-fullwidth,
-    .layout-full .header-layout2 #header.header-fullwidth,
-    .layout-full .header-layout3 #header.header-fullwidth .nav-container{
-        padding: 0 15px;
+    #header-content{
+        display: none;
     }
-
-    .container {
-        width: auto;
-    }
-
-    .overlap-maincontent{
-        padding: 0;
-        margin: 0;
-    }
-
 }
 
 /* 5. Styles for devices(>=992px) */
@@ -63,7 +51,6 @@ only screen and (min-resolution: 144dpi) {
 }
 /* 6. Styles for devices(<=991px ) */
 @media (max-width: 991px) {
-
 
     #mobile-nav-holder{
         display: block;
