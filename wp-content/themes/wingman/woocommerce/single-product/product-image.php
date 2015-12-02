@@ -15,7 +15,7 @@ global $post, $woocommerce, $product;
 
 ?>
 <div class="images">
-    <div class="single-product-main-images owl-carousel" id="sync1">
+    <div class="single-product-main-images" id="sync1">
         <?php
         if ( has_post_thumbnail() ) {
 

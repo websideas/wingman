@@ -100,6 +100,8 @@ function kt_add_scripts() {
     wp_enqueue_style( 'magnific-effect', THEME_CSS . 'magnific-effect.css', array());
     wp_enqueue_style( 'owl-carousel', THEME_LIBS . 'owl-carousel/owl.carousel.css', array());
     wp_enqueue_style( 'owl-theme', THEME_LIBS . 'owl-carousel/owl.theme.css', array());
+    wp_enqueue_style( 'slick', THEME_LIBS . 'slick/slick.css', array());
+    wp_enqueue_style( 'slick-theme', THEME_LIBS . 'slick/slick-theme.css', array());
 
 	// Load our main stylesheet.
     wp_enqueue_style( 'kitetheme-main', THEME_CSS . 'style.css', array( 'mediaelement-style' ) );
@@ -123,6 +125,7 @@ function kt_add_scripts() {
 
 
     wp_enqueue_script( 'owl-carousel', THEME_LIBS . 'owl-carousel/owl.carousel.js', array( 'jquery' ), null, true );
+    wp_enqueue_script( 'slick', THEME_LIBS . 'slick/slick.min.js', array( 'jquery' ), null, true );
     wp_enqueue_script( 'superfish-script', THEME_JS . 'jquery.superfish.custom.js', array( 'jquery', 'hoverIntent' ), null, true );
     wp_enqueue_script( 'magnific-popup-script', THEME_JS . 'jquery.magnific-popup.min.js', array( 'jquery' ), null, true );
     wp_enqueue_script( 'matchHeightscript', THEME_JS . 'jquery.matchHeight-min.js', array( 'jquery' ), null, true );
