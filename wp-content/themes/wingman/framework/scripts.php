@@ -94,9 +94,10 @@ function kt_setting_script() {
 
             $navigation_height = kt_option('navigation_height');
             if(!$navigation_height['height'] || $navigation_height['height'] == 'px'){
-                $navigation_height['height'] = '100px';
+                $navigation_height['height'] = 100;
             }
-            echo '#main-navigation > li{line-height: '.$navigation_height['height'].'}';
+            echo '#main-navigation > li{line-height: '.intval($navigation_height['height']).'px;}';
+            echo '.header-container.is-sticky.sticky-header-down .nav-container .nav-container-inner,.header-container.header-layout2.is-sticky.sticky-header-down #header-content{top: -'.intval($navigation_height['height']).'px;}';
 
             $header_sticky_opacity = kt_option('header_sticky_opacity', 0.8);
             echo '.header-sticky-background{opacity:'.$header_sticky_opacity.';}';
@@ -109,6 +110,8 @@ function kt_setting_script() {
                 $navigation_height_fixed['height'] = 60;
             }
             echo '.header-container.is-sticky #main-navigation > li{line-height: '.intval($navigation_height_fixed['height']).'px;}';
+
+
 
         ?>
 

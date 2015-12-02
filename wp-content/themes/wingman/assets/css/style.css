@@ -498,6 +498,13 @@ select:not([multiple]) {
   .site-branding .site-logo {
     margin: 0;
     padding: 0; }
+    .site-branding .site-logo img {
+      -webkit-transition: all 0.2s ease-in-out 0s;
+      -khtml-transition: all 0.2s ease-in-out 0s;
+      -moz-transition: all 0.2s ease-in-out 0s;
+      -ms-transition: all 0.2s ease-in-out 0s;
+      -o-transition: all 0.2s ease-in-out 0s;
+      transition: all 0.2s ease-in-out 0s; }
 
 #main-nav-tool {
   position: absolute;
@@ -956,7 +963,8 @@ select:not([multiple]) {
   width: 100%;
   top: 0; }
 .header-transparent .nav-container {
-  background: none; }
+  background: none;
+  border-bottom-color: rgba(255, 255, 255, 0.1); }
   .header-transparent .nav-container .nav-container-inner {
     position: absolute;
     top: 0;
@@ -1019,38 +1027,24 @@ select:not([multiple]) {
   .header-layout2 .menu-bars-outer .menu-bars-items {
     right: 0;
     left: auto; }
-.header-layout2 #main-navigation > li > a {
-  color: #252525; }
 
 /*
  * 10.3. Header sticky
  */
-.header-sticky-background {
-  background: rgba(0, 0, 0, 0.8);
+.header-container.is-sticky .nav-container {
+  background: none; }
+.header-container.is-sticky .header-sticky-background {
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
-  visibility: hidden;
-  -webkit-transition: all 0.2s ease-in-out 0s;
-  -khtml-transition: all 0.2s ease-in-out 0s;
-  -moz-transition: all 0.2s ease-in-out 0s;
-  -ms-transition: all 0.2s ease-in-out 0s;
-  -o-transition: all 0.2s ease-in-out 0s;
-  transition: all 0.2s ease-in-out 0s; }
-
-.header-container.is-sticky .nav-container {
-  background: none; }
-.header-container.is-sticky .header-sticky-background {
   visibility: visible; }
 .header-container.is-sticky .apply-sticky {
   position: fixed !important;
   width: 100%;
   top: 0;
   z-index: 9999; }
-.header-container.is-sticky.sticky-header-down .nav-container .nav-container-inner {
-  top: -60px; }
 .header-container.is-sticky.sticky .apply-sticky {
   -webkit-transition: all 0.2s ease-in-out 0s;
   -khtml-transition: all 0.2s ease-in-out 0s;

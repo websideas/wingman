@@ -406,6 +406,9 @@ select:not([multiple]) {
   .site-logo{
     margin: 0;
     padding: 0;
+    img{
+      @include transition();
+    }
   }
 }
 
@@ -861,7 +864,9 @@ select:not([multiple]) {
 
   .nav-container{
     background: none;
+    border-bottom-color: rgba(#FFFFFF, 0.1);
     .nav-container-inner{
+      
       position: absolute;
       top: 0;
       z-index: 99;
@@ -926,13 +931,6 @@ select:not([multiple]) {
       left: auto;
     }
   }
-  #main-navigation{
-    > li {
-      > a{
-        color: $title-text;
-      }
-    }
-  }
 }
 
 
@@ -940,16 +938,6 @@ select:not([multiple]) {
  * 10.3. Header sticky
  */
 
-.header-sticky-background{
-  background: rgba(0,0,0, .8);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  visibility: hidden;
-  @include transition();
-}
 
 
 .header-container.is-sticky{
@@ -957,7 +945,13 @@ select:not([multiple]) {
   .nav-container{
     background: none;
   }
+
   .header-sticky-background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
     visibility: visible;
   }
 
@@ -966,14 +960,6 @@ select:not([multiple]) {
     width: 100%;
     top: 0;
     z-index: 9999;
-  }
-
-  &.sticky-header-down{
-    .nav-container{
-      .nav-container-inner{
-        top: -60px;
-      }
-    }
   }
 
   &.sticky{
@@ -992,8 +978,6 @@ select:not([multiple]) {
       line-height: $header-sticky;
     }
   }
-
-
 
 }
 

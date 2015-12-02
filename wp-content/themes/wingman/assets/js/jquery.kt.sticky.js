@@ -50,14 +50,12 @@
 
                 $classContainer
                     .addClass(o.className)
-                    .removeClass( 'header-light header-dark header-absolute header-normal' )
                     .addClass( 'header-light' );
 
                 setTimeout(function(){
                     $classContainer
                         .addClass(o.classSticky)
-                }, 300);
-
+                }, 500);
                 var $offset = _placeholder.offset();
 
                 scrolled = true;
@@ -66,11 +64,6 @@
                 _placeholder.css({'height':'0px'});
 
                 var $classContainer = $('.'+o.classContainer);
-
-                $classContainer
-                    .removeClass('header-light header-dark header-absolute header-normal')
-                    .addClass('header-' + $classContainer.data('scheme'))
-                    .addClass('header-' + $classContainer.data('position'));
 
                 $classContainer
                     .removeClass(o.className)

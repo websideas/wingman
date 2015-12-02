@@ -751,7 +751,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'width'  => '100',
                             'units'  => 'px'
                         ),
-                        'output'   => array( '.header-container.is-sticky .site-branding .site-logo img' ),
+                        'output'   => array( '.header-layout2.header-container.is-sticky .site-branding .site-logo img' ),
                     ),
 
                     array(
@@ -767,7 +767,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'margin-bottom' => '0',
                             'margin-left'   => '0'
                         ),
-                        'output'   => array( '.header-container.is-sticky .site-branding'),
+                        'output'   => array( '.header-layout2.header-container.is-sticky .site-branding'),
                     ),
 
                     array(
@@ -778,10 +778,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'          => __( 'Main Navigation Sticky Height', THEME_LANG ),
                         'subtitle'          => __( 'Change height of main navigation sticky', THEME_LANG ),
                         'width'         => false,
-                        'default'        => array( 'width'  => 40, 'height' => 60 ),
+                        'default'        => array(
+                            'height'  => '60',
+                            'units'  => 'px'
+                        ),
+
                         'output'   => array(
                             '.header-container.is-sticky #main-navigation > li',
-                            '.header-container.header-layout1.is-sticky .nav-container-inner'
+                            '.header-container.header-layout1.is-sticky .nav-container-inner',
                         ),
                     ),
                     array(
@@ -1042,7 +1046,10 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'          => __( 'Main Navigation Height', THEME_LANG ),
                         'subtitle'          => __( 'Change height of main navigation', THEME_LANG ),
                         'width'         => false,
-                        'default'        => array( 'width'  => 100, 'height' => 100 ),
+                        'default'        => array(
+                            'height'  => '100',
+                            'units'  => 'px'
+                        ),
                         'output'   => array(
                             '#main-navigation > li',
                             '.header-layout1 .nav-container-inner'
@@ -1056,7 +1063,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'all'      => false,
                         'left'     => false,
                         'right'    => false,
-                        'default'  => array( )
+                        'default'  => array(
+                            'border-color' => '#e5e5e5'
+                        )
                     ),
 
                     array(
