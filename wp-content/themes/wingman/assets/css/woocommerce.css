@@ -1456,11 +1456,14 @@ body .mCSB_scrollTools {
 .woocommerce-page div.product.wc-single-product .functional-buttons-product,
 .woocommerce div.product.wc-single-product .functional-buttons-product {
   float: left; }
+  .woocommerce-page div.product.wc-single-product .functional-buttons-product .functional-buttons > div,
+  .woocommerce div.product.wc-single-product .functional-buttons-product .functional-buttons > div {
+    float: left;
+    width: 41px; }
 .woocommerce-page div.product.wc-single-product .compare-button,
 .woocommerce-page div.product.wc-single-product .yith-wcwl-add-to-wishlist,
 .woocommerce div.product.wc-single-product .compare-button,
 .woocommerce div.product.wc-single-product .yith-wcwl-add-to-wishlist {
-  float: left;
   margin: 0 1px 0 0;
   width: 40px; }
 .woocommerce-page div.product.wc-single-product .compare-button a,
@@ -2012,7 +2015,31 @@ div.swatch-wrapper {
     transform: translate(0);
     width: auto;
     line-height: 24px;
-    display: inline-block !important; }
+    display: inline-block !important;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0; }
+    .woocommerce table.wishlist_table tbody td.product-add-to-cart a.loading {
+      filter: alpha(opacity=100);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      -webkit-opacity: 1;
+      -khtml-opacity: 1;
+      -moz-opacity: 1;
+      -ms-opacity: 1;
+      -o-opacity: 1;
+      opacity: 1; }
+      .woocommerce table.wishlist_table tbody td.product-add-to-cart a.loading:after {
+        display: none; }
+      .woocommerce table.wishlist_table tbody td.product-add-to-cart a.loading:before {
+        display: block; }
+    .woocommerce table.wishlist_table tbody td.product-add-to-cart a.added {
+      font-size: 0; }
+      .woocommerce table.wishlist_table tbody td.product-add-to-cart a.added:after {
+        margin-left: -8px;
+        font-family: FontAwesome;
+        content: "";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px; }
   .woocommerce table.wishlist_table th.product-stock-stauts {
     min-width: 20%; }
 .woocommerce th.product-name {

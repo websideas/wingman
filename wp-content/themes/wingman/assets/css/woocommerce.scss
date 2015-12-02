@@ -1506,12 +1506,17 @@ body{
 			}
 			.functional-buttons-product{
 				float: left;
+        .functional-buttons{
+          > div{
+            float: left;
+            width: 41px;
+          }
+        }
 			}
 			.compare-button,
 			.yith-wcwl-add-to-wishlist{
-				float: left;
 			    margin: 0 1px 0 0;
-			    width:40px;
+          width: 40px;
 			}
 			.compare-button{
 				a{
@@ -2183,6 +2188,25 @@ div.swatch-wrapper{
 					width: auto;
 					line-height: 24px;
 					display: inline-block!important;
+          font-family: $font-stack;
+          letter-spacing: 0;
+          &.loading{
+            @include opacity(1);
+            &:after{
+              display: none;
+            }
+            &:before{
+              display: block;
+            }
+          }
+          &.added{
+            font-size: 0;
+            &:after{
+              margin-left: -8px;
+              @include FontAwesome('\f00c');
+              font-size: 16px;
+            }
+          }
 				}
 			}
 		}

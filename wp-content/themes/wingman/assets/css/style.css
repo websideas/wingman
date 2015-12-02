@@ -2315,26 +2315,6 @@ article.post-item {
 .blog-posts.blog-posts-zigzag .entry-title,
 .blog-posts.blog-posts-list .entry-title {
   margin: 0 0 20px; }
-.blog-posts.blog-posts-zigzag .blog-posts-content .equal_height > div,
-.blog-posts.blog-posts-list .blog-posts-content .equal_height > div {
-  -webkit-justify-content: center;
-  -khtml-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -khtml-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  -o-flex-direction: column;
-  flex-direction: column;
-  display: -webkit-flex;
-  display: -khtml-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex; }
 .blog-posts.blog-posts-zigzag .entry-more,
 .blog-posts.blog-posts-list .entry-more {
   margin: 0; }

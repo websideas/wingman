@@ -585,10 +585,10 @@ function woocommerce_shop_loop_item_action_action_product(){
         echo "<div class='functional-buttons-product clearfix'>";
         echo "<div class='functional-buttons'>";
         if(class_exists('YITH_WCWL_UI')){
-            echo do_shortcode('[yith_wcwl_add_to_wishlist]');
+            echo '<div data-placement="top" data-toggle="tooltip" data-original-title="wishlist">'.do_shortcode('[yith_wcwl_add_to_wishlist]').'</div>';
         }
         if(defined( 'YITH_WOOCOMPARE' )){
-            echo do_shortcode('[yith_compare_button]');
+            echo '<div data-placement="top" data-toggle="tooltip" data-original-title="Compare">'.do_shortcode('[yith_compare_button]').'</div>';
         }
         echo "</div>";
         echo "</div>";

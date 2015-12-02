@@ -1,4 +1,4 @@
-<?php $classes = array('post-item post-layout-zigzag clearfix equal_height row', $blog_atts['class']);  ?>
+<?php $classes = array('post-item post-layout-zigzag row', $blog_atts['class']);  ?>
 
 <?php
     if( $blog_atts['blog_number'] %3 == 2 ){
