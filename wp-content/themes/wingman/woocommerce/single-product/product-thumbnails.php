@@ -66,7 +66,8 @@ $attachment_count   = count( $attachment_ids );
                 ) );
 
                 // Display other items
-                echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<a href="%s" itemprop="image" class="woocommerce-attachment-image" title="%s">%s</a>', $image_link, $image_title, $image ), $post->ID );
+                //echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<a href="%s" itemprop="image" class="woocommerce-attachment-image" title="%s">%s</a>', $image_link, $image_title, $image ), $post->ID );
+                echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '%s', $image ), $post->ID );
             }
 
         endif;

@@ -20,6 +20,7 @@
 
         init_ProductQuickView();
         //init_productcarouselwoo();
+        init_productslickwoo();
         init_kt_remove_cart();
         init_carouselwoo();
         init_woo_quantily();
@@ -42,37 +43,6 @@
             $this.tabs({
                 active: Math.ceil($count/2) - 1
             });
-        });
-
-        $('.single-product-main-images').slick();
-        $('.single-product-main-thumbnails').slick({
-            slidesToShow: 4,
-            vertical: true,
-            responsive: [
-                {
-                  breakpoint: 1024,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                  }
-                },
-                {
-                  breakpoint: 600,
-                  settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                  }
-                },
-                {
-                  breakpoint: 480,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                  }
-                }
-            ]
         });
 
     });
@@ -324,6 +294,44 @@
         } else if(num === sync2visible[0]){
             sync2.trigger("owl.goTo", num-1)
         }
+    }
+
+
+    function init_productslickwoo(){
+        $('.single-product-main-images').slick({
+            asNavFor: '.single-product-main-thumbnails',
+            infinite: false,
+        });
+        $('.single-product-main-thumbnails').slick({
+            slidesToShow: 4,
+            vertical: true,
+            asNavFor: '.single-product-main-images',
+            infinite: false,
+            focusOnSelect: true,
+            responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                  }
+                },
+                {
+                  breakpoint: 801,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+            ]
+        });
     }
     
     /* ---------------------------------------------
