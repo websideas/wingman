@@ -305,6 +305,7 @@
         $('.single-product-main-thumbnails').slick({
             slidesToShow: 4,
             vertical: true,
+            verticalSwiping: true,
             asNavFor: '.single-product-main-images',
             infinite: false,
             focusOnSelect: true,

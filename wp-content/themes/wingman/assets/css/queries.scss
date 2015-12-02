@@ -61,3 +61,42 @@ only screen and (min-resolution: 144dpi) {
 	  }
 	}
 }
+
+@media (max-width: 600px) {
+	.woocommerce{
+		ul.shop-products{
+			&.lists{
+				li.product{
+					.product-image-container,
+					.product-attr-container{
+						width: 100%;
+						margin: 0 0 30px;
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+	.woocommerce{
+	  .upsells-products,
+	  .related-products,
+	  .cross-sells {
+	    > h3{
+	        font-size: 30px;
+	    }
+	  }
+	}
+}
+@media (max-width: 480px) {
+	.comment-content{
+		padding: 0;
+		border: none;
+		> .star-rating{
+			float: none;
+			margin-bottom: 10px;
+		}
+	}
+	.comment-meta{
+		padding: 0;
+	}
+}
