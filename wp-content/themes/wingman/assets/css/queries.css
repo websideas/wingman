@@ -80,6 +80,10 @@
       margin-bottom: 10px; }
 
   .comment-meta {
-    padding: 0; } }
+    padding: 0; }
+
+  .woocommerce-before-shop form.woocommerce-ordering, .woocommerce-before-shop form.woocommerce-per-page {
+    width: 100%;
+    margin: 0 0 30px; } }
 
 /*# sourceMappingURL=queries.css.map */

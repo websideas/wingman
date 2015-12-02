@@ -118,4 +118,13 @@ only screen and (min-resolution: 144dpi) {
 	.comment-meta{
 		padding: 0;
 	}
+	.woocommerce-before-shop{
+		form{
+			&.woocommerce-ordering,
+			&.woocommerce-per-page{
+				width: 100%;
+				margin: 0 0 30px;
+			}
+		}
+	}
 }
