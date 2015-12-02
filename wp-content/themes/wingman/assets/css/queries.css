@@ -1,366 +1,53 @@
+/*
+ * Title:   Responsive Style File
+ * Author:  http://themeforest.net/user/Kite-Themes
+ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [Table of contents]
 
-1. Retina logo
-2. Add clearfix in the grid system
-3. Styles for devices(>=1200px)
-4. Styles for devices(>=992px and <=1199px)
-5. Styles for devices(<=1199px)
-6. Styles for devices(<=991px )
-7. Styles for devices(>=768px and <= 991px)
-8. Styles for devices(<=782px )
-9. 9. Styles for devices(<=768px )
-10. Styles for devices(<=600px )
-11. Styles for devices(<=480px )
-12. Styles for devices(<=320px )
+1. Styles for devices(<=1300px)
+2. Styles for devices(>=1200px)
+3. Styles for devices(<=1199px)
+4. Styles for devices(<=991px )
+5. Styles for devices(>=768px and <= 991px)
+6. Styles for devices(<=767px )
+7. Styles for devices(>=481px and <= 767px)
+8. Styles for devices(<=480px )
+9. Styles for devices(<=320px )
 */
-
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+------------------------------------------------------------- */
+/* -------------------------------------------------------------
+ * Title:   SCSS VARIABLES
+ * Author:  http://themeforest.net/user/Kite-Themes
+------------------------------------------------------------- */
 /* 1. Retina logo */
-@media only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5),
-only screen and (min-resolution: 144dpi) {
-    .site-branding .site-logo.retina-logo-wrapper .retina-logo{ display: block; }
-    .site-branding .site-logo.retina-logo-wrapper .default-logo { display: none; }
-}
+@media only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .site-branding .site-logo.retina-logo-wrapper .retina-logo {
+    display: block; }
 
-/* 2. Styles for devices(>=1200px) */
-@media (min-width: 1200px) {
-    .col-clearfix-lg {
-        clear: both;
-    }
-}
-/* 3. Styles for devices(>=992px and <=1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-    .col-clearfix-md {
-        clear: both;
-    }
-}
-/* 4. Styles for devices(<=1199px) */
-@media (max-width: 1199px) {
-    #header-content{
-        display: none;
-    }
-}
+  .site-branding .site-logo.retina-logo-wrapper .default-logo {
+    display: none; } }
+@media (max-width: 767px) {
+  .main-class.col-md-12 .entry-header,
+  .main-class.col-md-12 .entry-content-outer,
+  .main-class.col-md-12 nav.post-navigation,
+  .main-class.col-md-12 .author-info,
+  .main-class.col-md-12 #related-article,
+  .main-class.col-md-12 #comments {
+    margin-left: 0;
+    margin-right: 0; }
 
-/* 5. Styles for devices(>=992px) */
-@media (min-width: 992px) {
-    .col-clearfix-md {
-        clear: both;
-    }
-}
-/* 6. Styles for devices(<=991px ) */
-@media (max-width: 991px) {
+  .main-class.col-md-12 .blog-posts-list .entry-main-content,
+  .main-class.col-md-12 .blog-posts-list .list-media-wrapper {
+    width: 100%;
+    margin: 0 0 30px; }
 
-    #mobile-nav-holder{
-        display: block;
-    }
-    .site-branding{
-        float: none;
-        text-align: center;
-    }
-    /* Posts */
-    .post-layout-classic .entry-share-box{
-        display: none;
-    }
-    .author-info .author-social:before{
-        display: none;
-    }
-    .author-info .author-social,
-    .author-info h2.author-title{
-        display: block;
-    }
+  .blog-posts-list .list-media-wrapper,
+  .blog-posts-list .entry-main-content {
+    width: 100%;
+    margin: 0 0 30px; } }
 
-    .author-info .author-social a:first-child{
-        padding-left: 0;
-    }
-
-
-    /* Header */
-
-
-
-    /* Footer */
-    #footer-copyright .display-table{
-        display: block;
-    }
-    #footer-copyright .display-table .display-td{
-        text-align: center;
-        display: block;
-        margin-bottom: 10px;
-    }
-    #footer-copyright .display-table .display-td:last-child{
-        margin-bottom: 0;
-    }
-
-
-}
-/* 7. Styles for devices(>=768px and <= 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-    .col-clearfix-sm {
-        clear: both;
-    }
-
-    /* Footer */
-
-}
-/* 8. Styles for devices(<=782px ) */
-@media screen and ( max-width: 782px ) {
-    body.admin-bar .header-container.sticky .apply-sticky,
-    body.admin-bar .sticky-header-down.header-container.is-sticky.sticky .apply-sticky{
-        top: 46px;
-    }
-    body.admin-bar #mobile-nav-content{
-        padding-top: 46px;
-    }
-}
-
-
-/* 9. Styles for devices(<=768px ) */
-@media (max-width: 768px) {
-    .col-clearfix-xs {
-        clear: both;
-    }
-
-    .coming-soon .wrap{
-        float: left;
-        margin-bottom: 15px;
-        padding: 0;
-        width: 50%;
-    }
-    .coming-soon .wrap.wrap-divider{
-        display: none;
-    }
-
-    /* Posts */
-    .comment-meta h5{
-        display: block;
-    }
-    .comment-meta h5::after{
-        display: none;
-    }
-
-    /* Footer */
-
-    /* widget */
-    .kt-ads-content a,
-    .kt-ads-content > img{
-        max-width:125px;
-    }
-    .kt_flickr a{
-        display: inline-block;
-        width:auto;
-    }
-
-    /* Woocommerce */
-    .woocommerce #content table.cart td.actions .btn,
-    .woocommerce table.cart td.actions .btn,
-    .woocommerce-page #content table.cart td.actions .btn,
-    .woocommerce-page table.cart td.actions .btn{
-        width: 48%;
-    }
-    .woocommerce #content table.cart td.actions .btn.update_cart,
-    .woocommerce table.cart td.actions .btn.update_cart,
-    .woocommerce-page #content table.cart td.actions .btn.update_cart,
-    .woocommerce-page table.cart td.actions .btn.update_cart{
-        float: right;
-    }
-
-    .woocommerce table.shop_table_responsive.customer_details tr:nth-child(2n) td,
-    .woocommerce-page table.shop_table_responsive.customer_details tr:nth-child(2n) td{
-        background: none;
-    }
-    .post-navigation .meta-nav.nav-previous > span span,
-    .post-navigation .meta-nav.nav-next > span span,
-    .post-navigation .meta-nav.nav-previous a span,
-    .post-navigation .meta-nav.nav-next a span{
-        display:none!important;
-    }
-    
-    
-    .blog-posts-packery .blog-posts-content.column3 article{
-        width:50%;
-    }
-    .blog-posts-packery .blog-posts-content.column3 article.big_size{
-        width:100%;
-    }
-}
-
-
-/* 10. Styles for devices(<=600px ) */
-@media (max-width: 600px) {
-    body.admin-bar .header-container.sticky .apply-sticky,
-    body.admin-bar .sticky-header-down.header-container.is-sticky.sticky .apply-sticky{
-        top: 0;
-    }
-    body.admin-bar #mobile-nav-content{
-        padding-top: 0;
-    }
-    .woocommerce div.product .woocommerce-tabs ul.tabs li{
-        border-bottom: medium none;
-        margin-bottom: 0;
-        margin-right: 0;
-        width: 100%;
-        padding: 0 15px;
-    }
-    .woocommerce div.product .woocommerce-tabs ul.tabs li:last-child{
-        border-bottom: 1px solid #e3e3e3;
-    }
-    .woocommerce div.product .woocommerce-tabs ul.tabs li.active{
-        margin-bottom: 0;
-    }
-    .woocommerce div.product .woocommerce-tabs ul.tabs li a{
-        display: block;
-    }
-    .woocommerce div.product .woocommerce-tabs .woocommerce-tabs-content{
-        padding: 30px 15px 20px;
-    }
-    .kt-callout-wrapper .callout-content .display-cell{
-        display: block;
-        text-align: center;
-        padding:0;
-    }
-    .kt-callout-wrapper .callout-content .display-cell:first-child{
-        margin-bottom:20px;
-    }
-    .testimonial-item.testimonial-layout-3 .display-cell,
-    .testimonial-item.testimonial-layout-3 .display-td{
-        display: block;
-    }
-    .testimonial-layout-3 .testimonial-img{
-        width:100px;
-        height:100px;
-    }
-}
-
-
-/* 11. Styles for devices(<=480px ) */
-@media (max-width: 480px) {
-    .container {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .coming-soon .wrap{
-        width:100%;
-    }
-
-    .alert-style-modern{
-        padding-left: 15px;
-    }
-
-    .alert-style-modern::before{
-        display: none;
-    }
-
-
-    /* Posts */
-    .author-info .author-avatar{
-        text-align: center;
-        margin-bottom: 25px;
-        position: static;
-    }
-    .author-info .author-social,
-    .author-info h2.author-title{
-        text-align: center;
-    }
-    .author-info .author-description{
-        padding: 0;
-    }
-    .author-info .author-bio{
-        margin-top: 25px;
-    }
-
-    .comment-item .comment-avatar{
-        width: 60px;
-        margin-right: 20px;
-    }
-    .comment-content{
-        margin-left: 80px;
-    }
-    .comment-list .comment-respond,
-    .comment ul.children{
-        margin-left: 80px;
-    }
-    .comment-list ul.children .comment-avatar{
-        width: 40px;
-    }
-    .comment-list ul.children .comment-content{
-        margin-left: 60px;
-    }
-    .comment-list ul.children .comment-respond{
-        margin-left: 0;
-    }
-    .comment-respond .comment-form-fields{
-        margin: 0;
-    }
-    .comment-respond .comment_field-column{
-        padding: 0;
-        width: 100%;
-    }
-
-
-    /* Footer */
-
-    /* Woocommerce */
-    .woocommerce ul.shop-products li.product{
-        width: 100%;
-    }
-    .woocommerce #content table.cart td.actions .btn,
-    .woocommerce table.cart td.actions .btn,
-    .woocommerce-page #content table.cart td.actions .btn,
-    .woocommerce-page table.cart td.actions .btn{
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    .woocommerce-page table.cart .quantity-group{
-        width: 41px;
-        padding-right: 0;
-    }
-    .woocommerce-page table.cart div.quantity-group .input-text{
-        border: none;
-    }
-    .woocommerce-page table.cart .quantity-group button{
-        display: none;
-    }
-    .woocommerce .order_details li{
-        border-bottom: 1px dashed #d3ced2;
-        border-right: medium none;
-        float: none;
-        margin-right: 0;
-        padding-bottom: 1em;
-        padding-right: 0;
-        padding-top: 1em;
-        width: auto;
-    }
-    .woocommerce table.my_account_orders {
-        font-size: inherit;
-    }
-    .woocommerce p.stars a.star-1,
-    .woocommerce p.stars a.star-2,
-    .woocommerce p.stars a.star-3,
-    .woocommerce p.stars a.star-4,
-    .woocommerce p.stars a.star-5{
-        border-right: none;
-        margin: 0;
-    }
-    .woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering,
-    .woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count{
-        float:none;
-    }
-    .woocommerce div.product form.cart .variations{
-        width: 100%;
-    }
-}
-
-
-/* 12. Styles for devices(<=320px ) */
-@media (max-width: 320px) {
-    .content-404 form{max-width: 320px;}
-
-    /* Woocommerce */
-    .woocommerce-checkout #payment .payment_method_paypal .about_paypal{
-        display: none;
-    }
-
-}
+/*# sourceMappingURL=queries.css.map */

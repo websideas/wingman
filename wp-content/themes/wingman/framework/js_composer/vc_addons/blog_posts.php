@@ -114,8 +114,8 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
             global $wp_query;
             
             $page_animation = kt_option( 'page_animation' );
-            $class_animation = ( $page_animation == 1 && ( $blog_type == 'grid' || $blog_type == 'list' || $blog_type == 'zigzag' ) ) ? 'animation-effect' : '';
-            $data_animation = ( $page_animation == 1 && ( $blog_type == 'grid' || $blog_type == 'list' || $blog_type == 'zigzag' ) ) ? 'data-animation="fadeInUp"' : '';
+            $class_animation = ( $page_animation == 1 && ( $blog_type == 'grid' || $blog_type == 'zigzag' ) ) ? 'animation-effect' : '';
+            $data_animation = ( $page_animation == 1 && ( $blog_type == 'grid' || $blog_type == 'zigzag' ) ) ? 'data-animation="fadeInUp"' : '';
             
             $animate_classic = ( $page_animation == 1 && ($blog_type == 'classic' || $blog_type == 'zigzag') ) ? 'animation-effect' : ' ';
             $data_animate_classic = ( $page_animation == 1 && ($blog_type == 'classic' || $blog_type == 'zigzag') ) ? 'data-animation="fadeInUp" data-timeeffect="0"' : ' ';
@@ -139,7 +139,7 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
 
             do_action('before_blog_posts_loop');
 
-            if( $blog_type == 'grid' || $blog_type == 'masonry' || $blog_type == 'list' ||  $blog_type == 'zigzag' ){
+            if( $blog_type == 'grid' || $blog_type == 'masonry' ||  $blog_type == 'zigzag' ){
                 echo "<div class='row ".$class_animation."' ".$data_animation." style='text-align: ".$blog_align.";'>";
             }
 
@@ -204,7 +204,7 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
                 $i++;
             endwhile;
 
-            if ($blog_type == 'grid' || $blog_type == 'masonry' || $blog_type == 'list' || $blog_type == 'zigzag' ) {
+            if ($blog_type == 'grid' || $blog_type == 'masonry' || $blog_type == 'zigzag' ) {
                 echo "</div><!-- .row -->";
             }
             echo "</div><!-- .blog-posts-content -->";

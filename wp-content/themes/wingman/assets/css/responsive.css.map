@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;AAuBA,yMAGyC;EACvC,0DAA0D;IAAE,OAAO,EAAE,KAAK;;EAC1E,2DAA4D;IAAE,OAAO,EAAE,IAAI;AAI7E,yBAA0B;EAEvB;;;;;iCAKS;IACP,WAAW,EAAC,CAAC;IACb,YAAY,EAAC,CAAC",
-"sources": ["responsive.scss"],
-"names": [],
-"file": "responsive.css"
-}

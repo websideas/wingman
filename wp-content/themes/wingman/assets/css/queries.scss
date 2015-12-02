@@ -41,5 +41,23 @@ only screen and (min-resolution: 144dpi) {
 	    margin-left:0;
 	    margin-right:0;
 	  }
+
+	}
+
+	.main-class.col-md-12{
+	  .blog-posts-list{
+	  	.entry-main-content,
+	    .list-media-wrapper{
+	      width: 100%;
+	      margin: 0 0 30px;
+	    }
+	  }
+	}
+	.blog-posts-list {
+	  .list-media-wrapper,
+	  .entry-main-content{
+	    width: 100%;
+	    margin: 0 0 30px;
+	  }
 	}
 }
