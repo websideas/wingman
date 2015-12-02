@@ -34,14 +34,6 @@
     $position = kt_get_header();
     $header_layout = kt_get_header_layout();
 
-    $header_scheme = 'light';
-    if($position == 'transparent'){
-        $header_positon = 'absolute';
-        $header_scheme = kt_get_header_scheme();
-    }else{
-        $header_positon = 'normal';
-    }
-
     ?>
 
     <div id="page_outter">
@@ -54,7 +46,7 @@
             	 * @hooked 
             	 */
             	do_action( 'theme_before_header' ); ?>
-                <div class="<?php echo esc_attr(apply_filters('theme_header_class', 'header-container header-'.$header_layout.' header-'.$header_scheme.' header-'.$header_positon.' header-'.$position, $header_layout)); ?>" data-scheme="<?php echo esc_attr($header_scheme) ?>" data-position="<?php echo esc_attr($header_positon) ?>">
+                <div class="<?php echo esc_attr(apply_filters('theme_header_class', 'header-container header-'.$header_layout.' header-'.$position, $header_layout)); ?>">
                     <header id="header" class="<?php echo apply_filters('theme_header_content_class', 'header-content', $header_layout) ?>">
                         <?php get_template_part( 'templates/headers/header',  $header_layout); ?>
                     </header><!-- #header -->
