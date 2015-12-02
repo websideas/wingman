@@ -2290,13 +2290,12 @@ article.post-item {
 .blog-posts-zigzag .list-media-wrapper,
 .blog-posts-list .list-media-wrapper {
   position: relative;
-  margin-left: 20px;
-  padding-left: 10px; }
+  padding-left: 40px; }
 .blog-posts-zigzag .post-item .meta-date,
 .blog-posts-list .post-item .meta-date {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 12px;
   -webkit-transform-origin: left top 0;
   -khtml-transform-origin: left top 0;
   -moz-transform-origin: left top 0;
@@ -2312,6 +2311,20 @@ article.post-item {
 .blog-posts-zigzag .post-item .entry-thumb,
 .blog-posts-list .post-item .entry-thumb {
   margin: 0; }
+
+.blog-posts-list .list-media-wrapper {
+  width: 360px;
+  float: left; }
+.blog-posts-list .entry-main-content {
+  margin-left: 400px;
+  padding-top: 12px; }
+
+.main-class.col-md-12 .blog-posts-list .list-media-wrapper {
+  width: 460px;
+  float: left; }
+.main-class.col-md-12 .blog-posts-list .entry-main-content {
+  margin-left: 500px;
+  padding-top: 52px; }
 
 .blog-posts.blog-posts-zigzag .entry-title,
 .blog-posts.blog-posts-list .entry-title {

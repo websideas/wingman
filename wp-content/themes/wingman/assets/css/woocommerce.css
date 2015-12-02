@@ -1139,8 +1139,7 @@ body .mCSB_scrollTools {
     .woocommerce ul.shop-products.lists li.product .product-image-container {
       width: 33%;
       float: left;
-      margin: 0;
-      border: 1px solid #e5e5e5; }
+      margin: 0; }
     .woocommerce ul.shop-products.lists li.product .product-attr-container {
       width: 67%;
       float: left;

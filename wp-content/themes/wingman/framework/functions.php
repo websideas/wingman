@@ -551,7 +551,7 @@ add_filter( 'body_class', 'theme_body_classes' );
 function kt_main_class_callback($classes, $layout){
     
     if($layout == 'left' || $layout == 'right'){
-        $classes .= ' col-md-9 col-sm-8 col-xs-12';
+        $classes .= ' col-md-9 col-sm-12 col-xs-12';
     }else{
         $classes .= ' col-md-12 col-xs-12';
     }
@@ -576,7 +576,7 @@ add_filter('kt_main_class', 'kt_main_class_callback', 10, 2);
  */
 function kt_sidebar_class_callback( $classes, $layout ){
     if($layout == 'left' || $layout == 'right'){
-        $classes .= ' col-md-3 col-sm-4 col-xs-12';
+        $classes .= ' col-md-3 col-sm-12 col-xs-12';
     }
     return $classes;
 }
@@ -794,26 +794,24 @@ if ( ! function_exists( 'kt_login_body_class' ) ) :
 endif;
 
 
-if ( ! function_exists( 'kt_register_account' ) ) :
+//if ( ! function_exists( 'kt_register_account' ) ) :
     /**
      * Change register account
      *
      */
+    /*
     function kt_register_account(){
         $rememberme = ! empty( $_POST['rememberme'] );
         ?>
         <p class="forgetmenot kt_forget"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever" <?php checked( $rememberme ); ?> /> <?php esc_attr_e('Remember Me'); ?></label></p>
         <?php
         if ( get_option( 'users_can_register' ) ) {
-            $registration_url = sprintf( '<p class="register"><a class="button button-primary button-large" href="%s">%s</a></p>', esc_url( wp_registration_url() ), __( 'Register' ) );
-
-            /** This filter is documented in wp-includes/general-template.php */
+            $registration_url = sprintf( '<p class="register"><a class="button button-primary button-large" href="%s">%s</a></p>', esc_url( wp_registration_url() ), __( 'Register' ) );            
             echo apply_filters( 'register', $registration_url );
         }
     }
-    add_action('login_form', 'kt_register_account');
-endif;
-
+    add_action('login_form', 'kt_register_account');*/
+//endif;
 
 if ( ! function_exists( 'kt_theme_before_main' ) ) :
     /**
