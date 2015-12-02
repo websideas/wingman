@@ -1444,6 +1444,65 @@ body .mCSB_scrollTools {
       .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .owl-item a {
         border: 1px solid #e5e5e5;
         display: inline-block; }
+  .woocommerce .product-detail-thumbarea.slick-carousel {
+    position: relative;
+    padding-left: 130px; }
+    .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails {
+      position: absolute;
+      width: 102px;
+      top: 0;
+      left: 0;
+      margin: -10px 0; }
+      .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-slide {
+        margin: 10px 0; }
+        .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-slide img {
+          border: 1px solid #e5e5e5; }
+        .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-slide.slick-current img {
+          border-color: #82c14f; }
+      .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-arrow {
+        left: 50%;
+        margin-left: -10px;
+        right: auto;
+        color: #252525;
+        border: 1px solid #000000;
+        -webkit-transform: translate(0);
+        -khtml-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+        transform: translate(0); }
+        .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-arrow.slick-prev {
+          top: -15px; }
+          .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-arrow.slick-prev:before {
+            font-family: FontAwesome;
+            content: "";
+            font-style: normal;
+            font-weight: normal;
+            line-height: 10px; }
+        .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-arrow.slick-next {
+          bottom: -10px;
+          top: auto; }
+          .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-arrow.slick-next:before {
+            font-family: FontAwesome;
+            content: "";
+            font-style: normal;
+            font-weight: normal; }
+        .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-arrow:before {
+          color: #252525;
+          font-size: 16px;
+          filter: alpha(opacity=100);
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          -webkit-opacity: 1;
+          -khtml-opacity: 1;
+          -moz-opacity: 1;
+          -ms-opacity: 1;
+          -o-opacity: 1;
+          opacity: 1; }
+        .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-arrow:hover, .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-arrow:focus {
+          color: #82c14f;
+          border-color: #82c14f; }
+          .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-arrow:hover:before, .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-arrow:focus:before {
+            color: #82c14f; }
 
 .woocommerce-page div.product.wc-single-product .quantity-group span,
 .woocommerce div.product.wc-single-product .quantity-group span {
@@ -2013,7 +2072,7 @@ div.swatch-wrapper {
     -ms-transform: translate(0);
     -o-transform: translate(0);
     transform: translate(0);
-    width: auto;
+    width: 160px;
     line-height: 24px;
     display: inline-block !important;
     font-family: "Poppins", sans-serif;
@@ -2039,7 +2098,11 @@ div.swatch-wrapper {
         content: "";
         font-style: normal;
         font-weight: normal;
-        font-size: 16px; }
+        font-size: 16px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        line-height: 36px; }
   .woocommerce table.wishlist_table th.product-stock-stauts {
     min-width: 20%; }
 .woocommerce th.product-name {

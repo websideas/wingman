@@ -16,7 +16,7 @@ $attachment_ids = $product->get_gallery_attachment_ids();
 $attachment_count   = count( $attachment_ids );
 
 	?>
-    <div class="single-product-main-thumbnails owl-carousel <?php if($attachment_count < 4){ echo " no-padding";} ?>" id="sync2">
+    <div class="single-product-main-thumbnails <?php if($attachment_count < 4){ echo " no-padding";} ?>" id="sync2">
         <?php
         if ( has_post_thumbnail() ) {
 
