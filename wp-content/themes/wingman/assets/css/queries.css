@@ -30,6 +30,14 @@
 
   .site-branding .site-logo.retina-logo-wrapper .default-logo {
     display: none; } }
+/* 8. Styles for devices(<=1199px) */
+@media (max-width: 1199px) {
+  .sticky-placeholder,
+  #header-content {
+    display: none; }
+
+  #header-content-mobile {
+    display: block; } }
 @media (max-width: 767px) {
   .main-class.col-md-12 .entry-header,
   .main-class.col-md-12 .entry-content-outer,
@@ -49,5 +57,11 @@
   .blog-posts-list .entry-main-content {
     width: 100%;
     margin: 0 0 30px; } }
+/**
+ * 6. Styles for devices(<=600px )
+ */
+@media (max-width: 600px) {
+  body.opened-nav-animate.admin-bar #wpadminbar {
+    margin-top: -46px; } }
 
 /*# sourceMappingURL=queries.css.map */

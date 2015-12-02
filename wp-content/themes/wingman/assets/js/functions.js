@@ -500,7 +500,12 @@
         });
 
         $(window).resize(function () {
-            var $navHeight = $(window).height() - $('.navbar-container').height();
+            var $navHeight = $(window).height() - $('#header-content-mobile').height();
+            console.log($navHeight);
+            if($('#wpadminbar').length > 0){
+                $navHeight -= parseInt( $('#wpadminbar').outerHeight(), 10 );
+            }
+            console.log($navHeight);
             $('.main-nav-mobile').css({'max-height': $navHeight});
         });
     }

@@ -45,9 +45,7 @@
             	 */
             	do_action( 'theme_before_header' ); ?>
 
-                <div class="container">
-                    <?php get_template_part( 'templates/headers/header',  'mobile'); ?>
-                </div>
+                <?php get_template_part( 'templates/headers/header',  'mobile'); ?>
 
                 <?php get_template_part( 'templates/headers/header',  'mobilenav'); ?>
 

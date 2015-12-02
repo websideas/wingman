@@ -139,6 +139,9 @@ p {
 .gray {
   color: #c5c5c5 !important; }
 
+#page_outter {
+  overflow: hidden; }
+
 #content {
   padding: 100px 0; }
 
@@ -1068,7 +1071,9 @@ select:not([multiple]) {
  * 10.4. Header mobile
  */
 #header-content-mobile {
-  position: relative; }
+  position: relative;
+  display: none;
+  margin: 0 15px; }
   #header-content-mobile .site-branding {
     float: left; }
   #header-content-mobile .header-mobile-tools {
@@ -1342,8 +1347,6 @@ body.opened-nav-animate {
   width: 100%; }
   body.opened-nav-animate .main-nav-mobile {
     display: block; }
-  body.opened-nav-animate.admin-bar #wpadminbar {
-    margin-top: -32px; }
   body.opened-nav-animate.opened-nav .main-nav-mobile > ul li {
     -webkit-transform: translateX(0);
     -khtml-transform: translateX(0);

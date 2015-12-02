@@ -114,6 +114,11 @@ p {
 .black{ color: #111 !important; }
 .gray{ color: $gray!important; }
 
+
+#page_outter{
+  overflow: hidden;
+}
+
 #content {
   padding: 100px 0;
 }
@@ -1002,6 +1007,8 @@ select:not([multiple]) {
 
 #header-content-mobile{
   position: relative;
+  display: none;
+  margin: 0 15px;
   .site-branding{
     float: left;
   }
@@ -1220,11 +1227,7 @@ body.opened-nav-animate{
     display: block;
   }
 
-  &.admin-bar{
-    #wpadminbar{
-      margin-top: -32px;
-    }
-  }
+
 
 
   &.opened-nav{
