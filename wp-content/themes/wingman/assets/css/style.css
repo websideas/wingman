@@ -3335,21 +3335,15 @@ article.post-item.post-layout-classic {
       padding: 0 10px;
       display: inline-block;
       position: relative; }
-      .wrapper-comingsoon.style3 .coming-soon .wrap:after {
-        width: 20px;
-        height: 20px;
+      .wrapper-comingsoon.style3 .coming-soon .wrap:before, .wrapper-comingsoon.style3 .coming-soon .wrap:after {
+        width: 1px;
+        height: 28px;
         content: "";
-        background: url(../images/icon-coming3.png) no-repeat center center;
+        background: rgba(0, 0, 0, 0.1); }
+      .wrapper-comingsoon.style3 .coming-soon .wrap:after {
         display: block;
         position: absolute;
-        right: -10px;
-        top: 50%;
-        -webkit-transform: translatey(-50%);
-        -khtml-transform: translatey(-50%);
-        -moz-transform: translatey(-50%);
-        -ms-transform: translatey(-50%);
-        -o-transform: translatey(-50%);
-        transform: translatey(-50%); }
+        top: 50%; }
       .wrapper-comingsoon.style3 .coming-soon .wrap:last-child:after {
         display: none; }
       .wrapper-comingsoon.style3 .coming-soon .wrap .title {
