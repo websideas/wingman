@@ -2234,48 +2234,49 @@ div.swatch-wrapper {
     text-align: center; }
     .woocommerce-category-products-tab ul.block-heading-tabs li {
       display: inline-block;
-      padding: 0 10px;
-      margin: 0 20px;
-      position: relative; }
-      .woocommerce-category-products-tab ul.block-heading-tabs li:before, .woocommerce-category-products-tab ul.block-heading-tabs li:after {
-        position: absolute;
-        content: "";
-        width: 1px;
-        height: 10px;
-        background: #82c14f;
-        top: 50%;
-        -webkit-transform: translatey(-65%);
-        -khtml-transform: translatey(-65%);
-        -moz-transform: translatey(-65%);
-        -ms-transform: translatey(-65%);
-        -o-transform: translatey(-65%);
-        transform: translatey(-65%);
-        -webkit-transition: all 0.2s ease-in-out 0s;
-        -khtml-transition: all 0.2s ease-in-out 0s;
-        -moz-transition: all 0.2s ease-in-out 0s;
-        -ms-transition: all 0.2s ease-in-out 0s;
-        -o-transition: all 0.2s ease-in-out 0s;
-        transition: all 0.2s ease-in-out 0s;
-        filter: alpha(opacity=0);
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-        -webkit-opacity: 0;
-        -khtml-opacity: 0;
-        -moz-opacity: 0;
-        -ms-opacity: 0;
-        -o-opacity: 0;
-        opacity: 0; }
-      .woocommerce-category-products-tab ul.block-heading-tabs li:before {
-        left: -10px; }
-      .woocommerce-category-products-tab ul.block-heading-tabs li:after {
-        right: -10px; }
+      margin: 0 20px; }
       .woocommerce-category-products-tab ul.block-heading-tabs li a {
+        padding: 0 10px;
         font-weight: 600;
         text-transform: uppercase;
         color: #707070;
-        letter-spacing: 0.2em; }
+        letter-spacing: 0.2em;
+        position: relative;
+        display: inline-block; }
+        .woocommerce-category-products-tab ul.block-heading-tabs li a:before, .woocommerce-category-products-tab ul.block-heading-tabs li a:after {
+          position: absolute;
+          content: "";
+          width: 1px;
+          height: 10px;
+          background: #82c14f;
+          top: 50%;
+          -webkit-transform: translatey(-65%);
+          -khtml-transform: translatey(-65%);
+          -moz-transform: translatey(-65%);
+          -ms-transform: translatey(-65%);
+          -o-transform: translatey(-65%);
+          transform: translatey(-65%);
+          -webkit-transition: all 0.2s ease-in-out 0s;
+          -khtml-transition: all 0.2s ease-in-out 0s;
+          -moz-transition: all 0.2s ease-in-out 0s;
+          -ms-transition: all 0.2s ease-in-out 0s;
+          -o-transition: all 0.2s ease-in-out 0s;
+          transition: all 0.2s ease-in-out 0s;
+          filter: alpha(opacity=0);
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+          -webkit-opacity: 0;
+          -khtml-opacity: 0;
+          -moz-opacity: 0;
+          -ms-opacity: 0;
+          -o-opacity: 0;
+          opacity: 0; }
+        .woocommerce-category-products-tab ul.block-heading-tabs li a:before {
+          left: -10px; }
+        .woocommerce-category-products-tab ul.block-heading-tabs li a:after {
+          right: -10px; }
       .woocommerce-category-products-tab ul.block-heading-tabs li a:hover, .woocommerce-category-products-tab ul.block-heading-tabs li.ui-tabs-active a {
         color: #363636; }
-      .woocommerce-category-products-tab ul.block-heading-tabs li.ui-tabs-active:before, .woocommerce-category-products-tab ul.block-heading-tabs li.ui-tabs-active:after {
+      .woocommerce-category-products-tab ul.block-heading-tabs li.ui-tabs-active a:before, .woocommerce-category-products-tab ul.block-heading-tabs li.ui-tabs-active a:after {
         filter: alpha(opacity=100);
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
         -webkit-opacity: 1;
@@ -2284,9 +2285,9 @@ div.swatch-wrapper {
         -ms-opacity: 1;
         -o-opacity: 1;
         opacity: 1; }
-      .woocommerce-category-products-tab ul.block-heading-tabs li.ui-tabs-active:before {
+      .woocommerce-category-products-tab ul.block-heading-tabs li.ui-tabs-active a:before {
         left: 0; }
-      .woocommerce-category-products-tab ul.block-heading-tabs li.ui-tabs-active:after {
+      .woocommerce-category-products-tab ul.block-heading-tabs li.ui-tabs-active a:after {
         right: 0; }
 
 /**

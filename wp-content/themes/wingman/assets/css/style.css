@@ -1591,6 +1591,10 @@ body.layout-boxed #footer {
     cursor: pointer; }
     .owl-carousel-kt .owl-pagination .owl-page.active, .owl-carousel-kt .owl-pagination .owl-page:hover {
       background: #82c14f; }
+    .owl-carousel-kt .owl-pagination .owl-page:first-child {
+      margin-left: 0; }
+    .owl-carousel-kt .owl-pagination .owl-page:last-child {
+      margin-right: 0; }
 .owl-carousel-kt.carousel-gutters {
   margin-left: -15px;
   margin-right: -15px; }
@@ -3201,6 +3205,10 @@ article.post-item.post-layout-classic {
     .testimonial-carousel-wrapper .owl-carousel-kt .owl-pagination .owl-page.active img, .testimonial-carousel-wrapper .owl-carousel-kt .owl-pagination .owl-page:hover img {
       filter: none;
       -webkit-filter: grayscale(0%); }
+    .testimonial-carousel-wrapper .owl-carousel-kt .owl-pagination .owl-page:first-child {
+      margin-left: 0; }
+    .testimonial-carousel-wrapper .owl-carousel-kt .owl-pagination .owl-page:last-child {
+      margin-right: 0; }
 
 /**
 * 5.1. Single image
