@@ -42,7 +42,22 @@ only screen and (min-resolution: 144dpi) {
   }
 }
 
-
+@media (max-width: 991px) {
+	.woocommerce{
+		table.cart {
+			tbody{
+				td{
+					&.actions{
+						padding: 20px;
+						a,input{
+							margin: 0 2%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 @media (max-width: 991px) {
   .woocommerce-products-carousel-tab{
@@ -87,6 +102,28 @@ only screen and (min-resolution: 144dpi) {
 	    width: 100%;
 	    margin: 0 0 30px;
 	  }
+	}
+
+	.woocommerce{
+		table.cart {
+			tbody{
+				td{
+					&.actions{
+						a,input{
+							width: 100%!important;
+							margin: 0;
+						}
+						a{
+							margin-bottom: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.table-responsive{
+		border-color: $border-color;
 	}
 }
 
@@ -143,5 +180,16 @@ only screen and (min-resolution: 144dpi) {
 				margin: 0 0 30px;
 			}
 		}
+	}
+	#customer_details {
+	    .woocommerce-billing-fields,
+	    .woocommerce-shipping-fields {
+	    	> p{
+			    padding:0;
+			    label{
+			    	position: static;
+			    }
+	    	}
+	    }
 	}
 }
