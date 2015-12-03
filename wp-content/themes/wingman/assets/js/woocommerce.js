@@ -79,7 +79,7 @@
                                     itemsDesktop : [1199,1], //1 items between 1000px and 901px
                                     itemsDesktopSmall : [991,1], // betweem 992px and 769px
                                     itemsTablet: [768,1], //1 items between 768 and 480
-                                    itemsMobile : [479, 1],
+                                    itemsMobile : [480, 1],
                                     theme: 'carousel-navigation-center',
                                     autoHeight: true,
                                     navigation: true,
@@ -124,14 +124,16 @@
                 options.itemsDesktop = [1199,options.desktop];
                 options.items = options.desktop;
             }
-
             if(typeof options.desktopsmall !== "undefined"){
                 options.itemsDesktopSmall = [991,options.desktopsmall];
             }
-
             if(typeof options.tablet !== "undefined"){
                 options.itemsTablet = [768,options.tablet];
             }
+            if(typeof options.mobile !== "undefined"){
+                options.itemsMobile = [480,options.mobile];
+            }
+
             if(typeof options.navigation_pos === "undefined"){
                 options.navigation_pos = '';
             }
@@ -142,9 +144,7 @@
             var owlNavigationIconArr = options.navigation_icon.split('|', 2);
             options.navigationText = ["<i class='"+owlNavigationIconArr[0]+"'></i>", "<i class='"+owlNavigationIconArr[1]+"'></i>"];
 
-            if(typeof options.mobile !== "undefined"){
-                options.itemsMobile = [479,options.mobile];
-            }
+
             options.afterInit  = function(elem) {
                 if(options.navigation_pos == "top" && options.navigation){
                     var $buttons = elem.find('.owl-buttons');

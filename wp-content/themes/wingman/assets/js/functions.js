@@ -550,6 +550,10 @@
                 options.itemsTablet = [768,options.tablet];
             }
 
+            if(typeof options.mobile !== "undefined"){
+                options.itemsMobile = [480, options.mobile];
+            }
+
             if(typeof options.navigation_pos === "undefined"){
                 options.navigation_pos = '';
             }
@@ -560,9 +564,7 @@
             var owlNavigationIconArr = options.navigation_icon.split('|', 2);
             options.navigationText = ["<i class='"+owlNavigationIconArr[0]+"'></i>", "<i class='"+owlNavigationIconArr[1]+"'></i>"];
 
-            if(typeof options.mobile !== "undefined"){
-                options.itemsMobile = [479,options.mobile];
-            }
+
 
             func_cb =  window[options.callback];
 

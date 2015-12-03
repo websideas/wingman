@@ -36,9 +36,17 @@ function kt_add_option_to_vc() {
         vc_remove_param('vc_btn', $item);
     }
 
-
 }
 
+function kt_add_visibility_shortcode($class, $base, $atts){
+
+    if(isset($atts['visibility'])){
+        $class .= ' '.$atts['visibility'];
+    }
+
+    return $class;
+}
+add_filter('vc_shortcodes_css_class', 'kt_add_visibility_shortcode', 20, 3);
 
 
 /*

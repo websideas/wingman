@@ -637,6 +637,7 @@ function kt_render_carousel($data, $extra = '', $class = 'owl-carousel kt-owl-ca
         'autoplayspeed' => 5000,
         'slidespeed' => 200,
         'desktop' => 4,
+        'desktopsmall' => '',
         'tablet' => 2,
         'mobile' => 1,
 
@@ -654,6 +655,9 @@ function kt_render_carousel($data, $extra = '', $class = 'owl-carousel kt-owl-ca
 
     ), $data );
 
+    if(!$data['desktopsmall']){
+        $data['desktopsmall'] = $data['desktop'];
+    }
 
     extract( $data );
 
@@ -707,6 +711,7 @@ function kt_render_carousel($data, $extra = '', $class = 'owl-carousel kt-owl-ca
         'navigation_pos' => $navigation_position,
         "slidespeed" => $slidespeed,
         'desktop' => $desktop,
+        'desktopsmall' => $desktopsmall,
         'tablet' => $tablet,
         'mobile' => $mobile,
         'pagination' => $pagination,

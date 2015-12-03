@@ -44,6 +44,21 @@ only screen and (min-resolution: 144dpi) {
 
 
 
+@media (max-width: 991px) {
+  .woocommerce-products-carousel-tab{
+    ul.block-heading-tabs{
+      li {
+        display: block;
+        margin: 0 0 15px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+
 @media (max-width: 767px) {
 	.main-class.col-md-12{
 	  .entry-header,
