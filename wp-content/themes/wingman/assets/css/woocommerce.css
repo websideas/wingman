@@ -1465,7 +1465,8 @@ body .mCSB_scrollTools {
     .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-slide {
       margin: 0 14px;
       border: 1px solid #e5e5e5;
-      display: inline-block; }
+      display: inline-block;
+      cursor: pointer; }
       .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-slide.slick-current {
         border-color: #82c14f; }
   .woocommerce .product-detail-thumbarea.slick-carousel {

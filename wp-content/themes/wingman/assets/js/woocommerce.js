@@ -261,6 +261,7 @@
         $('.single-product-main-images').slick({
             asNavFor: '.single-product-main-thumbnails',
             infinite: false,
+            draggable: false,
         });
         $('.single-product-main-thumbnails').slick(options);
     }

@@ -1525,6 +1525,7 @@ body{
 	    	margin: 0 14px;
         border:1px solid $border-color;
         display: inline-block;
+        cursor: pointer;
 	    	&.slick-current{
 	    		border-color:$primary-color;
 	    	}

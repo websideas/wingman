@@ -84,7 +84,7 @@ class WPBakeryShortCode_Comingsoon extends WPBakeryShortCode_VC_Custom_heading {
         }
         
         $elementClass = array(
-            'base' => apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'wrapper-comingsoon ', $this->settings['base'], $atts ),
+            'base' => apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'wrapper-comingsoon clearfix ', $this->settings['base'], $atts ),
             'extra' => $this->getExtraClass( $el_class ),
             'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' ),
             'animate' => $cl_animate,
@@ -93,14 +93,11 @@ class WPBakeryShortCode_Comingsoon extends WPBakeryShortCode_VC_Custom_heading {
         $elementClass = preg_replace( array( '/\s+/', '/^\s|\s$/' ), array( ' ', '' ), implode( ' ', $elementClass ) );
 
         $html = '<div class="wrap"><div class="value-time">266</div><div class="title">Days</div></div>
-                 <div class="wrap wrap-divider"><div class="value-time">:</div><div class="title">&nbsp;</div></div>
                  <div class="wrap"><div class="value-time">09</div><div class="title">Hours</div></div>
-                 <div class="wrap wrap-divider"><div class="value-time">:</div><div class="title">&nbsp;</div></div>
                  <div class="wrap"><div class="value-time">53</div><div class="title">Minutes</div></div>
-                 <div class="wrap wrap-divider"><div class="value-time">:</div><div class="title">&nbsp;</div></div>
                  <div class="wrap"><div class="value-time">59</div><div class="title">Seconds</div></div>';
         
-        $output = '<div class="'.esc_attr( $elementClass ).'" '.$data_animate.'><div id="kt_comming_'.$rand.'" class="coming-soon '.$animate_item.'" data-date="'.$date_coming.'">'.$html.'<div class="clearfix"></div></div>'.$custom_css.'</div>';
+        $output = '<div class="'.esc_attr( $elementClass ).'" '.$data_animate.'><div id="kt_comming_'.$rand.'" class="coming-soon '.$animate_item.'" data-date="'.$date_coming.'">'.$html.'</div>'.$custom_css.'</div>';
         
         return $output;
     }

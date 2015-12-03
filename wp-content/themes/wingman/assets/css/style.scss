@@ -3661,22 +3661,25 @@ article.post-item.post-layout-classic {
           height: 28px;
           content: "";
           background: rgba($black, .1);
-          
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          margin-top: -14px;
         }
 
         &:before{
-
+          @include rotate(45);
         }
 
         &:after{
+          @include rotate(-45);
+        }
+        
+        &:last-child:after,&:last-child:before{
+          display: none; 
+        }
 
-          display: block;
-          position: absolute;
-          top:50%;
-        }
-        &:last-child:after{
-          display: none;
-        }
         .title{
           font-weight: 600;
           text-transform: uppercase;

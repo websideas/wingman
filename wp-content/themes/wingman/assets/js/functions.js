@@ -690,53 +690,6 @@
     }
 
 
-    
-    /* ---------------------------------------------
-     Kt Client
-     --------------------------------------------- */
-     
-    function kt_changeSize(field){
-        $(field).each(function(){
-            var desktop = $(this).data('desktop'),
-                tablet = $(this).data('tablet'),
-                mobile = $(this).data('mobile'),
-                $width = $(window).width();
-                
-            if($width < 768){
-                kt_contentChange(mobile,$(this));
-            }else if($width < 992){
-                kt_contentChange(tablet,$(this));
-            }else{
-                kt_contentChange(desktop,$(this));
-            }
-        });
-    }
-
-
-    function kt_contentChange(n,field){
-        $(field).each(function(){
-            var $stt = $(this).find('.kt_client_col').length,
-                $lastrow;
-            
-            $(this).find('.kt_client_col').removeClass('lastrow');
-            $(this).find('.kt_client_col').removeClass('lastcol'); 
-
-            $(this).find('.kt_client_col').each(function( index ) {
-                if((index+1) % n == 0){
-                    $(this).addClass('lastcol');
-                }                          
-            });
-            
-            if($stt % n == 0){
-                $lastrow = $stt-n-1;
-            }else{
-                $lastrow = Math.floor($stt/n) * n - 1;
-            }
-            $(this).find(".kt_client_col:gt("+$lastrow+")" ).addClass('lastrow');
-        });
-    }
-
-
     /* ---------------------------------------------
      Height 100%
      --------------------------------------------- */
