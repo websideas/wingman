@@ -81,7 +81,6 @@ vc_add_params("vc_btn", array(
         'param_name' => 'el_class',
         'description' => __( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'js_composer' ),
     ),
-
     array(
         "type" => "kt_number",
         "heading" => __("Letter spacing", THEME_LANG),
@@ -96,6 +95,34 @@ vc_add_params("vc_btn", array(
 
 ));
 
+
+
+
+
+
+
+$visibilities_arr = array('vc_empty_space');
+foreach($visibilities_arr as $item){
+    vc_add_param($item, array(
+        "type" => "dropdown",
+        "heading" => __("Visibility",THEME_LANG),
+        "param_name" => "visibility",
+        "value" => array(
+            __('Always Visible', THEME_LANG) => '',
+            __('Visible on Phones', THEME_LANG) => 'visible-xs-block',
+            __('Visible on Tablets', THEME_LANG) => 'visible-sm-block',
+            __('Visible on Desktops', THEME_LANG) => 'visible-md-block',
+            __('Visible on Desktops Large', THEME_LANG) => 'visible-lg-block',
+
+            __('Hidden on Phones', THEME_LANG) => 'hidden-xs',
+            __('Hidden on Tablets', THEME_LANG) => 'hidden-sm',
+            __('Hidden on Desktops', THEME_LANG) => 'hidden-md',
+            __('Hidden on Desktops Large', THEME_LANG) => 'hidden-lg',
+        ),
+        "description" => __("",THEME_LANG),
+        "admin_label" => true,
+    ));
+}
 
 
 

@@ -23,6 +23,7 @@ class WPBakeryShortCode_Clients_Carousel extends WPBakeryShortCode {
             'autoplayspeed' => 5000,
             'slidespeed' => 200,
             'desktop' => 5,
+            'desktopsmall' => 4,
             'tablet' => 3,
             'mobile' => 1,
 
@@ -314,7 +315,7 @@ vc_map( array(
         array(
             "type" => "kt_number",
             "class" => "",
-            "edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
+            "edit_field_class" => "vc_col-sm-6 kt_margin_bottom",
             "heading" => __("On Desktop", THEME_LANG),
             "param_name" => "desktop",
             "value" => "5",
@@ -323,10 +324,23 @@ vc_map( array(
             "step" => "1",
             'group' => __( 'Carousel', THEME_LANG )
         ),
+
+        array(
+            'type' => 'kt_number',
+            'heading' => __( 'on Tablets Landscape', THEME_LANG ),
+            'param_name' => 'desktopsmall',
+            "value" => "5",
+            "min" => "1",
+            "max" => "25",
+            "step" => "1",
+            'std' => '4',
+            "edit_field_class" => "vc_col-sm-6 kt_margin_bottom",
+            'group' => __( 'Carousel', THEME_LANG )
+        ),
         array(
             "type" => "kt_number",
             "class" => "",
-            "edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
+            "edit_field_class" => "vc_col-sm-6 kt_margin_bottom",
             "heading" => __("On Tablet", THEME_LANG),
             "param_name" => "tablet",
             "value" => "3",
@@ -338,7 +352,7 @@ vc_map( array(
         array(
             "type" => "kt_number",
             "class" => "",
-            "edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
+            "edit_field_class" => "vc_col-sm-6 kt_margin_bottom",
             "heading" => __("On Mobile", THEME_LANG),
             "param_name" => "mobile",
             "value" => "1",

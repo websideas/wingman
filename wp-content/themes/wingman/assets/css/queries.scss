@@ -31,6 +31,8 @@ only screen and (min-resolution: 144dpi) {
 /* 8. Styles for devices(<=1199px) */
 @media (max-width: 1199px) {
 
+
+  
   .sticky-placeholder,
   #header-content,
   #header-inner > .container,
@@ -67,6 +69,21 @@ only screen and (min-resolution: 144dpi) {
 		}
 	}
 }
+
+@media (max-width: 991px) {
+  .woocommerce-products-carousel-tab{
+    ul.block-heading-tabs{
+      li {
+        display: block;
+        margin: 0 0 15px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
 
 @media (max-width: 767px) {
 	.main-class.col-md-12{

@@ -49,6 +49,12 @@
     padding: 20px; }
     .woocommerce table.cart tbody td.actions a, .woocommerce table.cart tbody td.actions input {
       margin: 0 2%; } }
+@media (max-width: 991px) {
+  .woocommerce-products-carousel-tab ul.block-heading-tabs li {
+    display: block;
+    margin: 0 0 15px; }
+    .woocommerce-products-carousel-tab ul.block-heading-tabs li:last-child {
+      margin-bottom: 0; } }
 @media (max-width: 767px) {
   .main-class.col-md-12 .entry-header,
   .main-class.col-md-12 .entry-content-outer,

@@ -11,6 +11,7 @@ class WPBakeryShortCode_Category_Products_Tab extends WPBakeryShortCode {
             'categories' => '',
             'per_page' => 4,
             'product_columns' => 4,
+            'product_columns_desktop' => 3,
             'product_columns_tablet' => 2,
             'orderby' => 'date',
             'meta_key' => '',
@@ -144,7 +145,21 @@ vc_map( array(
                 __( '6 columns', 'js_composer' ) => '6',
             ),
             'std' => '4',
-            "edit_field_class" => "vc_col-sm-6 vc_column",
+            "edit_field_class" => "vc_col-sm-4 vc_column",
+        ),
+        array(
+            'type' => 'dropdown',
+            'heading' => __( 'on Tablets Landscape', THEME_LANG ),
+            'param_name' => 'product_columns_desktop',
+            'value' => array(
+                __( '1 column', 'js_composer' ) => '1',
+                __( '2 columns', 'js_composer' ) => '2',
+                __( '3 columns', 'js_composer' ) => '3',
+                __( '4 columns', 'js_composer' ) => '4',
+                __( '6 columns', 'js_composer' ) => '6',
+            ),
+            'std' => '3',
+            "edit_field_class" => "vc_col-sm-4 vc_column",
         ),
         array(
             'type' => 'dropdown',
@@ -158,7 +173,7 @@ vc_map( array(
                 __( '6 columns', 'js_composer' ) => '6',
             ),
             'std' => '2',
-            "edit_field_class" => "vc_col-sm-6 vc_column",
+            "edit_field_class" => "vc_col-sm-4 vc_column",
         ),
         
         array(

@@ -13,6 +13,7 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
             'categories' => '',
             'per_page' => 8,
             'product_columns' => 4,
+            'product_columns_desktop' => 3,
             'product_columns_tablet' => 2,
             'orderby' => 'date',
             'order' => 'DESC',
@@ -86,6 +87,7 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
             'autoplayspeed' => 5000,
             'slidespeed' => 200,
             'desktop' => $product_columns,
+            'desktopsmall' => $product_columns_desktop,
             'tablet' => $product_columns_tablet,
             'mobile' => 1,
             'gutters' => false,
@@ -235,7 +237,7 @@ vc_map( array(
         array(
             'type' => 'dropdown',
             'heading' => __( 'on Desktop', THEME_LANG ),
-            'param_name' => 'navigation_always_on',
+            'param_name' => 'product_columns',
             'value' => array(
                 __( '1 column', 'js_composer' ) => '1',
                 __( '2 columns', 'js_composer' ) => '2',
@@ -244,7 +246,21 @@ vc_map( array(
                 __( '6 columns', 'js_composer' ) => '6',
             ),
             'std' => '4',
-            "edit_field_class" => "vc_col-sm-6 vc_column",
+            "edit_field_class" => "vc_col-sm-4 vc_column",
+        ),
+        array(
+            'type' => 'dropdown',
+            'heading' => __( 'on Tablets Landscape', THEME_LANG ),
+            'param_name' => 'product_columns_desktop',
+            'value' => array(
+                __( '1 column', 'js_composer' ) => '1',
+                __( '2 columns', 'js_composer' ) => '2',
+                __( '3 columns', 'js_composer' ) => '3',
+                __( '4 columns', 'js_composer' ) => '4',
+                __( '6 columns', 'js_composer' ) => '6',
+            ),
+            'std' => '3',
+            "edit_field_class" => "vc_col-sm-4 vc_column",
         ),
         array(
             'type' => 'dropdown',
@@ -258,7 +274,7 @@ vc_map( array(
                 __( '6 columns', 'js_composer' ) => '6',
             ),
             'std' => '2',
-            "edit_field_class" => "vc_col-sm-6 vc_column",
+            "edit_field_class" => "vc_col-sm-4 vc_column",
         ),
 
         array(
