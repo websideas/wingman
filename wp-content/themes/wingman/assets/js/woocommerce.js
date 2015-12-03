@@ -78,7 +78,7 @@
                     },
                     callbacks: {
                         open: function() {
-                            $('.single-product-quickview-images').waitForImages(function() {
+                            $('.single-product-quickview-images').imagesLoaded(function() {
                                 $(this).owlCarousel({
                                     items: 1,
                                     itemsDesktop : [1199,1], //1 items between 1000px and 901px
@@ -153,13 +153,11 @@
             options.afterInit  = function(elem) {
                 if(options.navigation_pos == "top" && options.navigation){
                     var $buttons = elem.find('.owl-buttons');
-
                     $buttons.prependTo(wooCarousel);
                 }
             };
 
-
-            objCarousel.waitForImages(function() {
+            objCarousel.imagesLoaded(function() {
                 objCarousel.owlCarousel(options);
             });
 

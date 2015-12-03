@@ -40,7 +40,7 @@
         setInterval(init_remove_space, 100);
 
         // Page Loader
-        $("body").waitForImages(function(){
+        $("body").imagesLoaded(function(){
             $(".kt_page_loader").delay(200).fadeOut('slow');
         });
 
@@ -166,8 +166,8 @@
      Masonry
      --------------------------------------------- */
     function init_masonry(){
-        $(".blog-posts-masonry .row").waitForImages(function(){
-            $(this).masonry();
+        $(".blog-posts-masonry .row").imagesLoaded(function(){
+            //$(this).masonry();
         });
     }
 
@@ -362,7 +362,7 @@
                     var $row = $content.children('.row');
                     if($type == 'masonry'){
                         var $elems = $(response.html);
-                        $row.waitForImages(function() {
+                        $row.imagesLoaded(function() {
                             $row.append($elems).masonry( 'appended', $elems, true );
                             loadmore_append();
                         });
@@ -580,7 +580,13 @@
 
             };
 
-            objCarousel.waitForImages(function() {
+            options.afterUpdate = function(elem){
+                if( typeof func_cb === 'function'){
+                    func_cb( 'afterUpdate',   elem );
+                }
+            };
+
+            objCarousel.imagesLoaded(function() {
                 objCarousel.owlCarousel(options);
             });
 
@@ -842,19 +848,28 @@
 function kt_testimonial_thumbnail( _type, elem ){
     "use strict"; // Start of use strict
 
-    if( _type === 'afterInit' ) {
-        var thumbnail_url = [];
-        elem.find('.owl-item').each(function () {
-            thumbnail_url.push(jQuery(this).find('.testimonial-item').data('thumbnail'));
-        });
+    var thumbnail_url = [];
+    elem.find('.owl-item').each(function () {
+        thumbnail_url.push(jQuery(this).find('.testimonial-item').data('thumbnail'));
+    });
 
-        var $pagination = elem.next('.owl-pagination');
+    var $pagination;
+
+    if( _type === 'afterInit' ) {
+
+        $pagination = elem.next('.owl-pagination');
         $pagination.prependTo(elem.closest('.owl-carousel-kt'));
 
-        $pagination.find('.owl-page').each(function (index) {
-            if (thumbnail_url[index] != '') {
-                jQuery(this).find('span').html('<img src="' + thumbnail_url[index] + '" />');
-            }
-        });
     }
+
+    if( _type == 'afterUpdate'){
+        $pagination = elem.closest('.owl-carousel-kt').find('.owl-pagination');
+    }
+
+    $pagination.find('.owl-page').each(function (index) {
+        if (thumbnail_url[index] != '') {
+            jQuery(this).find('span').html('<img src="' + thumbnail_url[index] + '" />');
+        }
+    });
+
 }

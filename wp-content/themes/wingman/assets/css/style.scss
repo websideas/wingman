@@ -1476,6 +1476,13 @@ body.layout-boxed{
       &:hover{
         background: $primary-color;
       }
+
+      &:first-child{
+        margin-left: 0;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
     }
   }
 
@@ -3410,6 +3417,13 @@ article.post-item.post-layout-classic {
             -webkit-filter: grayscale(0%);
           }
         }
+        &:first-child{
+          margin-left: 0;
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+
       }
     } 
   }
