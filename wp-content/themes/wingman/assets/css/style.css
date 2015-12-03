@@ -2626,7 +2626,7 @@ article.post-item {
 
 .blog-posts .entry-title {
   font-size: 22px;
-  line-height: 36px;
+  line-height: 30px;
   margin: 0 0 25px; }
   .blog-posts .entry-title a {
     color: #252525; }
@@ -2679,6 +2679,13 @@ article.post-item {
 .blog-posts.blog-posts-zigzag .entry-more,
 .blog-posts.blog-posts-list .entry-more {
   margin: 0; }
+
+.blog-posts-zigzag .list-media-wrapper {
+  padding-left: 30px; }
+.blog-posts-zigzag .entry-main-content {
+  padding-top: 10px; }
+.blog-posts-zigzag .post-layout-zigzag {
+  margin-bottom: 60px; }
 
 /* Blog Classic */
 article.post-item.post-layout-classic {

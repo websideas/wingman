@@ -2709,7 +2709,7 @@ article.post-item {
 .blog-posts{
   .entry-title{
     font-size: 22px;
-    line-height: 36px;
+    line-height: 30px;
     margin: 0 0 25px;
     a{
       color: $title-text;
@@ -2770,6 +2770,18 @@ article.post-item {
     margin: 0;
   }
 }
+.blog-posts-zigzag{
+  .list-media-wrapper{
+    padding-left: 30px;
+  }
+  .entry-main-content{
+    padding-top: 10px;
+  }
+  .post-layout-zigzag{
+    margin-bottom: 60px;
+  }
+}
+
 /* Blog Classic */
 article.post-item.post-layout-classic {
     margin-bottom: 90px;
