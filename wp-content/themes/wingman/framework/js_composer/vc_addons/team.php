@@ -19,10 +19,12 @@ class WPBakeryShortCode_Team extends WPBakeryShortCode {
             'linkedin_link' => '',
 
             'el_class' => '',
+            'css'      => '',
         ), $atts));
 
         $elementClass = array(
             'base' => apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'team ', $this->settings['base'], $atts ),
+            'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' ),
             'extra' => $this->getExtraClass( $el_class ),
         );
         $elementClass = preg_replace( array( '/\s+/', '/^\s|\s$/' ), array( ' ', '' ), implode( ' ', $elementClass ) );
@@ -31,10 +33,10 @@ class WPBakeryShortCode_Team extends WPBakeryShortCode {
         $img = wpb_getImageBySize( array(
             'attach_id' => $img_id,
             'thumb_size' => $image_size,
-            'class' => 'vc_single_image-img img-responsive'
+            'class' => 'vc_single_image-img img-responsive team-avatar'
         ) );
         if ( $img == null ) {
-            $img['thumbnail'] = '<img class="vc_img-placeholder vc_single_image-img" src="' . vc_asset_url( 'vc/no_image.png' ) . '" />';
+            $img['thumbnail'] = '<img class="vc_img-placeholder vc_single_image-img team-avatar" src="' . vc_asset_url( 'vc/no_image.png' ) . '" />';
         }
 
         $output = '';
@@ -136,5 +138,13 @@ vc_map( array(
             "param_name" => "el_class",
             "description" => __( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
         ),
+
+        array(
+            'type' => 'css_editor',
+            'heading' => __( 'CSS box', 'js_composer' ),
+            'param_name' => 'css',
+            // 'description' => __( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'js_composer' ),
+            'group' => __( 'Design Options', 'js_composer' )
+        )
     ),
 ));
