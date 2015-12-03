@@ -166,8 +166,13 @@
      Masonry
      --------------------------------------------- */
     function init_masonry(){
-        $(".blog-posts-masonry .row").imagesLoaded(function(){
-            //$(this).masonry();
+        $(".blog-posts-masonry .row").each(function(){
+            var $masonry = $(this);
+            $masonry.imagesLoaded(function(){
+                $masonry.isotope({
+                    itemSelector: '.article-post-item'
+                });
+            });
         });
     }
 
@@ -363,7 +368,8 @@
                     if($type == 'masonry'){
                         var $elems = $(response.html);
                         $row.imagesLoaded(function() {
-                            $row.append($elems).masonry( 'appended', $elems, true );
+                            $row.append($elems).isotope( 'appended', $elems );
+
                             loadmore_append();
                         });
                     }else{

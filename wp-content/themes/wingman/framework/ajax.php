@@ -61,15 +61,7 @@ function wp_ajax_fronted_loadmore_archive_callback(){
     while ( $wp_query->have_posts() ) : $wp_query->the_post();
         $blog_atts = $blog_atts_posts;
         if($blog_type == 'grid' || $blog_type == 'masonry'){
-            $classes_extra = '';
-            if($blog_type == 'grid'){
-                if (  ( $i - 1 ) % $blog_columns == 0 || 1 == $blog_columns )
-                    $classes_extra .= ' col-clearfix-md col-clearfix-lg ';
-
-                if ( ( $i - 1 ) % $blog_columns_tablet == 0 || 1 == $blog_columns )
-                    $classes_extra .= ' col-clearfix-sm';
-            }
-            echo "<div class='article-post-item ".$classes." ".$classes_extra."'>";
+            echo "<div class='article-post-item ".$classes."'>";
         }elseif( $blog_type == 'zigzag' && $i%2 == 0 ){
             echo "<div class='article-post-item box-even'>";
         }

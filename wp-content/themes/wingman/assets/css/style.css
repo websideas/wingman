@@ -144,6 +144,8 @@ p {
 
 #content {
   padding: 60px 0 100px; }
+  .page-template-page-blank #content {
+    padding: 0 !important; }
 
 /* ==============================
    3. Typography
@@ -2632,6 +2634,10 @@ article.post-item {
     color: #252525; }
     .blog-posts .entry-title a:hover {
       color: #82c14f; }
+
+.blog-posts-masonry .blog-posts-sizer {
+  margin: 0;
+  min-height: 0; }
 
 /* Blog List */
 .blog-posts-zigzag .list-media-wrapper,

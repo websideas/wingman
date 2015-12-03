@@ -121,6 +121,9 @@ p {
 
 #content {
   padding: 60px 0 100px;
+  .page-template-page-blank &{
+    padding: 0!important;
+  }
 }
 
 /* ==============================
@@ -2719,6 +2722,14 @@ article.post-item {
     }
   }
 }
+
+.blog-posts-masonry{
+  .blog-posts-sizer{
+    margin: 0;
+    min-height: 0;
+  }
+}
+
 /* Blog List */
 .blog-posts-zigzag,
 .blog-posts-list {

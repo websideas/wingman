@@ -15,10 +15,7 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
             'blog_type' => 'classic',
             'blog_columns' => 3,
             'blog_columns_tablet' => 2,
-            
-            'packery_columns' => 3,
-            'packery_style' => 'style1',
-            
+
             'row_height' => 250,
             'margin' => 10, 
             
@@ -121,34 +118,31 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
             $data_animate_classic = ( $page_animation == 1 && ($blog_type == 'classic' || $blog_type == 'zigzag') ) ? 'data-animation="fadeInUp" data-timeeffect="0"' : ' ';
 
             $align = '';
-            if( $blog_type == 'packery' || $blog_type == 'justified' ){
-                $align = 'style="text-align:'.$blog_align.'"';
-            }
-            $class_packery = '';
-            if( $blog_type == 'packery' ){
-                $class_packery = 'column'.$packery_columns.' '.$packery_style;
-            }
-            
-            $data_justified = '';
-            if( $blog_type == 'justified' ){
-                $data_justified = 'data-height="'.$row_height.'" data-margin="'.$margin.'"';
-            }
+
+
                         
             echo "<div class='blog-posts blog-posts-".esc_attr($blog_type)." blog-posts-".esc_attr($thumbnail_type)."' data-queryvars='".esc_attr(json_encode($args))."' data-settings='".$settings."' data-type='".$blog_type."' data-total='".$wp_query->max_num_pages."' data-current='1'>";
-            echo "<div class='blog-posts-content clearfix ".$animate_classic." ".$class_packery."' ".$data_justified." ".$data_animate_classic." ".$align.">";
+            echo "<div class='blog-posts-content clearfix' ".$animate_classic." ".$data_animate_classic." ".$align.">";
 
             do_action('before_blog_posts_loop');
-
-            if( $blog_type == 'grid' || $blog_type == 'masonry' ||  $blog_type == 'zigzag' ){
-                echo "<div class='row ".$class_animation."' ".$data_animation." style='text-align: ".$blog_align.";'>";
-            }
 
             if($blog_type == 'grid' || $blog_type == 'masonry'){
                 $elementClass[] = 'blog-posts-columns-'.$blog_columns;
                 $bootstrapColumn = round( 12 / $blog_columns );
                 $bootstrapTabletColumn = round( 12 / $blog_columns_tablet );
-                $classes = 'col-xs-12 col-sm-'.$bootstrapTabletColumn.' col-md-' . $bootstrapColumn;
+                $classes = 'col-xs-12 col-sm-'.$bootstrapTabletColumn.' col-md-' . $bootstrapColumn.' col-lg-' . $bootstrapColumn;
             }
+
+            if( $blog_type == 'grid' || $blog_type == 'masonry' ||  $blog_type == 'zigzag' ){
+                echo "<div class='row multi-columns-row ".$class_animation."' ".$data_animation." style='text-align: ".$blog_align.";'>";
+
+                if($blog_type == 'masonry'){
+                    echo '<div class="blog-posts-sizer '.$classes.'"></div>';
+                }
+
+            }
+
+
             $i = 1 ;
             $blog_atts_posts = array(
                 'image_size' => $image_size,
@@ -171,10 +165,6 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
                 $path = 'templates/blog/classic/content';
             }elseif( $blog_type == 'zigzag' ){
                 $path = 'templates/blog/zigzag/content';
-            }elseif( $blog_type == 'packery' ){
-                $path = 'templates/blog/packery/content';
-            }elseif( $blog_type == 'justified' ){
-                $path = 'templates/blog/justified/content';
             }elseif( $blog_type =='list' ){
                 $path = 'templates/blog/list/content';
             }else{
@@ -185,15 +175,7 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
                 $blog_atts = $blog_atts_posts;
                 $blog_atts['blog_number'] = $i;
                 if($blog_type == 'grid' || $blog_type == 'masonry'){
-                    $classes_extra = '';
-                    if($blog_type == 'grid'){
-                        if (  ( $i - 1 ) % $blog_columns == 0 || 1 == $blog_columns )
-                            $classes_extra .= ' col-clearfix-md col-clearfix-lg first ';
-
-                        if ( ( $i - 1 ) % $blog_columns_tablet == 0 || 1 == $blog_columns_tablet )
-                            $classes_extra .= ' col-clearfix-sm';
-                    }
-                    echo "<div class='article-post-item ".$classes." ".$classes_extra."'>";
+                    echo "<div class='article-post-item ".$classes."'>";
                 }
 
                 kt_get_template_part( $path, get_post_format(), $blog_atts);
@@ -258,8 +240,6 @@ vc_map( array(
                 __( 'List', 'js_composer' ) => 'list',
                 __( 'Masonry', 'js_composer' ) => 'masonry',
                 __( 'Zig Zag', 'js_composer' ) => 'zigzag',
-                __( 'Packery', 'js_composer' ) => 'packery',
-                __( 'Justified', 'js_composer' ) => 'justified',
             ),
             'description' => '',
         ),
@@ -320,64 +300,7 @@ vc_map( array(
                 'value' => array( 'grid', 'masonry' )
             ),
         ),
-        array(
-            'type' => 'dropdown',
-            'heading' => __( 'Style Packery', THEME_LANG ),
-            'param_name' => 'packery_style',
-            'value' => array(
-                __( 'Style 1', 'js_composer' ) => 'style1',
-                __( 'Style 2', 'js_composer' ) => 'style2',
-            ),
-            'std' => 'style1',
-            'dependency' => array(
-                'element' => 'blog_type',
-                'value' => array( 'packery' )
-            ),
-        ),
-        array(
-            'type' => 'dropdown',
-            'heading' => __( 'on Desktop Packery', THEME_LANG ),
-            'param_name' => 'packery_columns',
-            'value' => array(
-                __( '3 columns', 'js_composer' ) => '3',
-                __( '4 columns', 'js_composer' ) => '4',
-                __( '5 columns', 'js_composer' ) => '5',
-            ),
-            'std' => '3',
-            "edit_field_class" => "vc_col-sm-6 vc_column",
-            'dependency' => array(
-                'element' => 'blog_type',
-                'value' => array( 'packery' )
-            ),
-        ),
-        
-        array(
-            "type" => "kt_number",
-            "heading" => __("Row Height", THEME_LANG),
-            "param_name" => "row_height",
-            "value" => 250,
-            "min" => 0,
-            "max" => 500,
-            "suffix" => "px",
-            'dependency' => array(
-                'element' => 'blog_type',
-                'value' => array( 'justified' )
-            ),
-        ),
-        array(
-            "type" => "kt_number",
-            "heading" => __("Margin", THEME_LANG),
-            "param_name" => "margin",
-            "value" => 10,
-            "min" => 0,
-            "max" => 30,
-            "suffix" => "px",
-            'dependency' => array(
-                'element' => 'blog_type',
-                'value' => array( 'justified' )
-            ),
-        ),
-        
+
         
         array(
             "type" => "kt_heading",
@@ -419,10 +342,6 @@ vc_map( array(
             "type" => "kt_image_sizes",
             "heading" => __( "Select image sizes", THEME_LANG ),
             "param_name" => "image_size",
-            'dependency' => array(
-                'element' => 'blog_type',
-                'value_not_equal_to' => array( 'packery', 'justified' )
-            ),
         ),
         array(
             'type' => 'dropdown',
@@ -432,11 +351,7 @@ vc_map( array(
                 __( 'Post format', 'js_composer' ) => 'format',
                 __( 'Featured Image', 'js_composer' ) => 'image',
             ),
-            'description' => __( 'Select thumbnail type for article.', THEME_LANG ),
-            'dependency' => array(
-                'element' => 'blog_type',
-                'value_not_equal_to' => array( 'justified', 'packery' )
-            ),
+            'description' => __( 'Select thumbnail type for article.', THEME_LANG )
         ),
         array(
             'type' => 'kt_switch',
