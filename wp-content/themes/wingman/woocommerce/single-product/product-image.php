@@ -11,11 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 
-global $post, $woocommerce, $product, $sidebar;
+global $post, $woocommerce, $product;
 
 ?>
 <div class="images">
-    <div class="single-product-main-images <?php if( $sidebar['sidebar'] != 'full' ){ echo 'owl-carousel'; } ?>" id="sync1">
+    <div class="single-product-main-images" id="sync1">
         <?php
         if ( has_post_thumbnail() ) {
 
