@@ -20,6 +20,7 @@ class Widget_KT_Facebook extends WP_Widget {
     }
 
     function footer() {
+        /*
         $appID = kt_option('facebook_app', '417674911655656');
         ?>
         <div id="fb-root"></div>
@@ -31,6 +32,7 @@ class Widget_KT_Facebook extends WP_Widget {
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
         <?php
+        */
     }
 
 

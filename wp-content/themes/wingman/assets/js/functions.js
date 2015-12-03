@@ -80,9 +80,6 @@
 
 
 
-
-        $('.kt_client .style2').kt_client();
-
     });
     
     $(window).resize(function(){
@@ -501,11 +498,9 @@
 
         $(window).resize(function () {
             var $navHeight = $(window).height() - $('#header-content-mobile').height();
-            console.log($navHeight);
             if($('#wpadminbar').length > 0){
                 $navHeight -= parseInt( $('#wpadminbar').outerHeight(), 10 );
             }
-            console.log($navHeight);
             $('.main-nav-mobile').css({'max-height': $navHeight});
         });
     }

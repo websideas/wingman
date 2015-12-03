@@ -107,32 +107,15 @@ function kt_add_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-    
+
+
+
     wp_enqueue_script( 'jquery-ui-tabs' );
     wp_register_script('google-maps-api','http://maps.googleapis.com/maps/api/js?sensor=false', array( 'jquery' ), null, false);
     wp_enqueue_script( 'bootstrap-script', THEME_LIBS . 'bootstrap/js/bootstrap.min.js', array( 'jquery' ), null, true );
     wp_enqueue_script( 'plugins-script', THEME_JS . 'plugins.js', array( 'jquery' ), null, true );
-
-    wp_enqueue_script( 'slick', THEME_LIBS . 'slick/slick.min.js', array( 'jquery' ), null, true );
-    wp_enqueue_script( 'superfish-script', THEME_JS . 'jquery.superfish.custom.js', array( 'jquery', 'hoverIntent' ), null, true );
-
-    wp_enqueue_script( 'masonry', THEME_JS . 'masonry.pkgd.min.js', array( 'jquery' ), null, true );
-    wp_enqueue_script( 'isotope', THEME_JS . 'isotope.pkgd.min.js', array( 'jquery' ), null, true );
-    wp_enqueue_script( 'easy-pie-chart', THEME_JS . 'jquery.easy-pie-chart.js', array( 'jquery' ), null, true );
-
-
-    wp_enqueue_script( 'kt_client', THEME_JS . 'jquery.kt.client.js', array( 'jquery' ), null, true );
-
-    if(kt_option('fixed_header', 2) != 1){
-        wp_enqueue_script( 'ktSticky-script', THEME_JS . 'jquery.kt.sticky.js', array( 'jquery' ), null, true );
-    }
-
-
-    if(!kt_option('fixed_header', false)){
-        wp_enqueue_script( 'kt_footer', THEME_JS . 'jquery.kt.footer.js', array( 'jquery' ), null, true );
-    }
-
     wp_enqueue_script( 'main-script', THEME_JS . 'functions.js', array( 'jquery', 'mediaelement', 'wp-mediaelement' ), null, true );
+
 
     $navigation_height_fixed = kt_option('navigation_height_fixed');
     if(!$navigation_height_fixed['height'] || $navigation_height_fixed['height'] == 'px'){
