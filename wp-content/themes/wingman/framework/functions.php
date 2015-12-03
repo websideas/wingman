@@ -301,11 +301,14 @@ function kt_get_page_subtitle(){
     }elseif ( is_front_page() && is_singular('page') ){
         $tagline =  rwmb_meta('_kt_page_header_subtitle');
     }elseif ( is_archive() ){
-        $tagline =  get_the_archive_description( );
+        $tagline = get_the_archive_description( );
         if(kt_is_wc()){
             if(is_shop()){
                 $shop_page_id = get_option( 'woocommerce_shop_page_id' );
                 $tagline = rwmb_meta('_kt_page_header_subtitle', array(), $shop_page_id);
+            }
+            if( is_product_category() || is_product_tag() ){
+                $tagline = '';
             }
         }
     }elseif(is_search()){

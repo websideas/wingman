@@ -502,6 +502,31 @@
   margin-bottom: 30px;
 }
 
+.woocommerce{
+  .wishlist-title{
+    h2{
+      font-size: 24px;
+      padding: 0;
+    }
+  }
+  table.my_account_orders{
+    .order-actions{
+      .button{
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+      }
+    }
+  } 
+  header h2{
+    font-size: 24px;
+  }
+  mark, .mark{
+    background: $primary-color;
+    color: $white;
+  }
+}
+
+
 /** ================================================
     2. Woocommerce shopping cart
 *** ================================================*/
@@ -1478,11 +1503,11 @@ body{
 		    .owl-item{
 		    	padding: 0 14px;
 		    	&.synced{
-		    		a{
+		    		img{
 		    			border-color:$primary-color;
 		    		}
 		    	}
-		    	a{
+		    	img{
 		    		border:1px solid $border-color;
     				display: inline-block;
 		    	}

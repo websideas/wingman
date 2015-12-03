@@ -11,12 +11,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-global $post, $product, $woocommerce;
+global $post, $product, $woocommerce, $sidebar;
 $attachment_ids = $product->get_gallery_attachment_ids();
 $attachment_count   = count( $attachment_ids );
 
 	?>
-    <div class="single-product-main-thumbnails <?php if($attachment_count < 4){ echo " no-padding";} ?>" id="sync2">
+    <div class="single-product-main-thumbnails <?php if( $sidebar['sidebar'] != 'full' ){ echo 'owl-carousel'; } ?> <?php if($attachment_count < 4){ echo " no-padding";} ?>" id="sync2">
         <?php
         if ( has_post_thumbnail() ) {
 
@@ -37,7 +37,7 @@ $attachment_count   = count( $attachment_ids );
                 $gallery = '';
             }
 
-            echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<a href="%s" itemprop="image" class="woocommerce-main-image" title="%s">%s</a>', $image_link, $image_caption, $image ), $post->ID );
+            echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '%s', $image ), $post->ID );
 
         } else {
 

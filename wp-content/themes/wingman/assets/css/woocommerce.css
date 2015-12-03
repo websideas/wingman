@@ -519,6 +519,18 @@
 .shop-thumb {
   margin-bottom: 30px; }
 
+.woocommerce .wishlist-title h2 {
+  font-size: 24px;
+  padding: 0; }
+.woocommerce table.my_account_orders .order-actions .button {
+  text-transform: uppercase;
+  letter-spacing: 0.2em; }
+.woocommerce header h2 {
+  font-size: 24px; }
+.woocommerce mark, .woocommerce .mark {
+  background: #82c14f;
+  color: #FFFFFF; }
+
 /** ================================================
     2. Woocommerce shopping cart
 *** ================================================*/
@@ -1439,9 +1451,9 @@ body .mCSB_scrollTools {
     width: auto; }
     .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .owl-item {
       padding: 0 14px; }
-      .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .owl-item.synced a {
+      .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .owl-item.synced img {
         border-color: #82c14f; }
-      .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .owl-item a {
+      .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .owl-item img {
         border: 1px solid #e5e5e5;
         display: inline-block; }
   .woocommerce .product-detail-thumbarea.slick-carousel {

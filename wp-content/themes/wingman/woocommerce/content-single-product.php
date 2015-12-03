@@ -9,6 +9,8 @@
  * @version     1.6.4
  */
 
+global $sidebar;
+
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
@@ -33,7 +35,7 @@ if ( post_password_required() ) {
     <div class="product-detail-content">
         <div class="row product-detail-inner">
             <div class="<?php echo apply_filters('woocommerce_single_product_thumb_area', ''); ?>">
-                <div class="product-detail-thumbarea slick-carousel">
+                <div class="product-detail-thumbarea <?php if( $sidebar['sidebar'] == 'full' ){ echo 'slick-carousel'; } ?>">
                     <?php
                     /**
                      * woocommerce_before_single_product_summary hook

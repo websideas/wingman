@@ -19,8 +19,13 @@
         }
 
         init_ProductQuickView();
-        //init_productcarouselwoo();
-        init_productslickwoo();
+
+        if( $('.single-product .main-class').hasClass('col-md-12') ){
+            init_productslickwoo();
+        }else{
+            init_productcarouselwoo();
+        }
+        
         init_kt_remove_cart();
         init_carouselwoo();
         init_woo_quantily();
@@ -244,6 +249,7 @@
             navigation: true,
             navigationText: false,
             pagination:false,
+            autoHeight: true,
             responsiveRefreshRate : 100,
             afterInit : function(el){
                 el.find(".owl-item").eq(0).addClass("synced");

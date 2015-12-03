@@ -40,6 +40,15 @@ only screen and (min-resolution: 144dpi) {
   #header-content-mobile{
     display: block;
   }
+
+  .woocommerce{
+  	.woocommerce-per-page,
+  	.woocommerce-ordering{
+  		select:not([multiple]){
+  			min-width: 212px;
+  		}
+  	}
+  }
 }
 
 @media (max-width: 991px) {
@@ -110,6 +119,15 @@ only screen and (min-resolution: 144dpi) {
 	.table-responsive{
 		border-color: $border-color;
 	}
+	.woocommerce{
+		table.wishlist_table{
+			tr{
+				td.product-remove{
+					padding: 16px 10px 16px 0;
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 600px) {
@@ -176,5 +194,25 @@ only screen and (min-resolution: 144dpi) {
 			    }
 	    	}
 	    }
+	}
+	.page-header{
+		h1.page-header-title{
+			font-size: 30px;
+			padding: 0 30px;
+		}
+	}
+	.page-header{
+		padding-top: 30px;
+	}
+	.wrapper-googlemap{
+		.content-map{
+			padding: 20px;
+		}
+	}
+
+	.shop-products{
+		.product{
+			width: 100%!important;
+		}
 	}
 }

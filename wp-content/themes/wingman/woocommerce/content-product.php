@@ -54,7 +54,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns_tablet'] )
 // Bootstrap Column
 $bootstrapColumn = round( 12 / $woocommerce_loop['columns'] );
 $bootstrapTabletColumn = round( 12 / $woocommerce_loop['columns_tablet'] );
-$classes[] = 'col-xs-12 col-sm-'. $bootstrapTabletColumn .' col-md-' . $bootstrapColumn;
+$classes[] = 'col-xs-'. $bootstrapTabletColumn .' col-sm-'. $bootstrapTabletColumn .' col-md-' . $bootstrapColumn;
 
 
 ?>
