@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c7cfb02-0be5-4605-a0ec-58a67682dd43" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/content-product.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/content-product.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.css.map" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.scss" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css.map" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wingman.iws" />
@@ -34,7 +30,7 @@
       <file leaf-file-name="header-mobile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-mobile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125">
+            <state vertical-scroll-proportion="0.0">
               <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
               <folding />
             </state>
@@ -44,7 +40,7 @@
       <file leaf-file-name="header-mobilenav.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-mobilenav.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75">
+            <state vertical-scroll-proportion="0.0">
               <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding />
             </state>
@@ -54,7 +50,7 @@
       <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.875">
+            <state vertical-scroll-proportion="-6.25">
               <caret line="3630" column="0" selection-start-line="3630" selection-start-column="0" selection-end-line="3630" selection-end-column="0" />
               <folding />
             </state>
@@ -64,8 +60,8 @@
       <file leaf-file-name="queries.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33918127">
-              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.6315789">
+              <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -84,7 +80,7 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
               <folding />
             </state>
@@ -94,7 +90,7 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.3529415">
+            <state vertical-scroll-proportion="0.0">
               <caret line="763" column="8" selection-start-line="763" selection-start-column="8" selection-end-line="767" selection-end-column="9" />
               <folding />
             </state>
@@ -104,7 +100,7 @@
       <file leaf-file-name="header-tool.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-tool.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.875">
+            <state vertical-scroll-proportion="0.0">
               <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
               <folding />
             </state>
@@ -165,11 +161,11 @@
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/woocommerce.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-mobile.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.css" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-mobilenav.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/js/functions.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.scss" />
       </list>
     </option>
   </component>
@@ -212,6 +208,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -484,8 +482,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -571,11 +567,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -595,6 +591,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-tool.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/footer-blank.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -648,7 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.352941">
           <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -684,7 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41979522">
           <caret line="341" column="44" selection-start-line="341" selection-start-column="44" selection-end-line="341" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -699,7 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="1831" column="13" selection-start-line="1831" selection-start-column="13" selection-end-line="1831" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,7 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.3859649">
           <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="45" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -736,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45652175">
           <caret line="117" column="10" selection-start-line="117" selection-start-column="10" selection-end-line="117" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,7 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13651878">
           <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.0588236">
           <caret line="211" column="18" selection-start-line="211" selection-start-column="18" selection-end-line="211" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -760,10 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-23.125">
           <caret line="2396" column="26" selection-start-line="2396" selection-start-column="26" selection-end-line="2396" selection-end-column="26" />
-          <folding>
-            <marker date="1435341806000" expanded="true" signature="-1:-1" placeholder="SELECT p.ID ..." />
-            <marker date="1435341806000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -771,21 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44795322">
           <caret line="2870" column="0" selection-start-line="2870" selection-start-column="0" selection-end-line="2870" selection-end-column="0" />
-          <folding>
-            <marker date="1439285128000" expanded="true" signature="-1:-1" placeholder="SELECT YEAR(..." />
-            <marker date="1439285128000" expanded="true" signature="-1:-1" placeholder="SELECT YEAR(..." />
-            <marker date="1439285128000" expanded="true" signature="-1:-1" placeholder="SELECT YEAR(..." />
-            <marker date="1439285128000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
-            <marker date="1439285128000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1439285128000" expanded="true" signature="-1:-1" placeholder="SELECT 1 as ..." />
-            <marker date="1439285128000" expanded="true" signature="-1:-1" placeholder="SELECT MONTH..." />
-            <marker date="1439285128000" expanded="true" signature="-1:-1" placeholder="SELECT MONTH..." />
-            <marker date="1439285128000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1439285128000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1439285128000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1439285128000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1439285128000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -793,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36842105">
           <caret line="529" column="26" selection-start-line="529" selection-start-column="26" selection-end-line="529" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -801,7 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.375">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -809,11 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.625">
           <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
-          <folding>
-            <marker date="1449037665000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1449037665000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1449037665000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -846,7 +817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45614034">
           <caret line="353" column="66" selection-start-line="353" selection-start-column="66" selection-end-line="353" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -854,7 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.125">
           <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -862,7 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2982456">
           <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -870,7 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39532164">
           <caret line="228" column="59" selection-start-line="228" selection-start-column="59" selection-end-line="228" selection-end-column="82" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -878,12 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.6470585">
           <caret line="685" column="52" selection-start-line="685" selection-start-column="52" selection-end-line="685" selection-end-column="52" />
-          <folding>
-            <marker date="1449045954000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1449045954000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1449045954000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1449045954000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -891,7 +852,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.333333">
           <caret line="374" column="19" selection-start-line="374" selection-start-column="19" selection-end-line="374" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -907,7 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6971831">
           <caret line="365" column="5" selection-start-line="365" selection-start-column="5" selection-end-line="365" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -915,7 +874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20422535">
           <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -923,13 +881,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6105263">
           <caret line="1087" column="7" selection-start-line="1087" selection-start-column="7" selection-end-line="1087" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-tool.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875">
+        <state vertical-scroll-proportion="0.0">
           <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding />
         </state>
@@ -937,7 +894,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.3529415">
+        <state vertical-scroll-proportion="0.0">
           <caret line="763" column="8" selection-start-line="763" selection-start-column="8" selection-end-line="767" selection-end-column="9" />
           <folding />
         </state>
@@ -945,7 +902,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-mobilenav.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75">
+        <state vertical-scroll-proportion="0.0">
           <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding />
         </state>
@@ -953,7 +910,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-mobile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125">
+        <state vertical-scroll-proportion="0.0">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding />
         </state>
@@ -961,7 +918,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
           <folding />
         </state>
@@ -977,7 +934,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.875">
+        <state vertical-scroll-proportion="-6.25">
           <caret line="3630" column="0" selection-start-line="3630" selection-start-column="0" selection-end-line="3630" selection-end-column="0" />
           <folding />
         </state>
@@ -985,8 +942,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33918127">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.6315789">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
           <folding />
         </state>
       </provider>
