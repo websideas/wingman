@@ -4048,6 +4048,10 @@ form.wpcf7-form{
 
 .team{
   position: relative;
+  margin-bottom: 30px;
+  .team-avatar{
+    width: 100%;
+  }
   &:before{
     content: "";
     width: 100%;

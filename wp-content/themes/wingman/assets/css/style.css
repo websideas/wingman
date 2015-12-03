@@ -3723,7 +3723,10 @@ form.wpcf7-form p {
  * Team
  */
 .team {
-  position: relative; }
+  position: relative;
+  margin-bottom: 30px; }
+  .team .team-avatar {
+    width: 100%; }
   .team:before {
     content: "";
     width: 100%;
