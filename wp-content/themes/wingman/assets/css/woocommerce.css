@@ -2184,47 +2184,51 @@ div.swatch-wrapper {
   min-width: 100%; }
 .woocommerce table.wishlist_table.cart a.remove:hover {
   background: none; }
-.woocommerce table.cart tbody td {
-  border-bottom: 1px solid #e5e5e5;
-  border-top: none;
-  text-align: center;
-  font-size: 18px;
-  font-family: "Josefin Slab", serif;
-  color: #363636;
-  letter-spacing: 0.2em;
-  font-weight: 700; }
-  .woocommerce table.cart tbody td.actions {
-    border: none;
-    padding: 50px 0; }
-  .woocommerce table.cart tbody td .variation {
-    margin-top: 10px; }
-    .woocommerce table.cart tbody td .variation dt,
-    .woocommerce table.cart tbody td .variation dd {
-      margin: 0;
-      font-size: 16px; }
-.woocommerce table.cart tbody td.product-thumbnail {
-  padding-left: 0; }
-.woocommerce table.cart tbody td.product-name {
-  text-align: left; }
-  .woocommerce table.cart tbody td.product-name a {
+.woocommerce .table-responsive {
+  margin-bottom: 25px; }
+.woocommerce table.cart {
+  margin: 0; }
+  .woocommerce table.cart tbody td {
+    border-bottom: 1px solid #e5e5e5;
+    border-top: none;
+    text-align: center;
     font-size: 18px;
+    font-family: "Josefin Slab", serif;
+    color: #363636;
+    letter-spacing: 0.2em;
+    font-weight: 700; }
+    .woocommerce table.cart tbody td.actions {
+      border: none;
+      padding: 50px 0; }
+    .woocommerce table.cart tbody td .variation {
+      margin-top: 10px; }
+      .woocommerce table.cart tbody td .variation dt,
+      .woocommerce table.cart tbody td .variation dd {
+        margin: 0;
+        font-size: 16px; }
+  .woocommerce table.cart tbody td.product-thumbnail {
+    padding-left: 0; }
+  .woocommerce table.cart tbody td.product-name {
+    text-align: left; }
+    .woocommerce table.cart tbody td.product-name a {
+      font-size: 18px;
+      color: #252525;
+      font-family: "Poppins", sans-serif;
+      letter-spacing: 0;
+      font-weight: 400; }
+      .woocommerce table.cart tbody td.product-name a:hover, .woocommerce table.cart tbody td.product-name a:focus {
+        color: #82c14f; }
+  .woocommerce table.cart thead th {
+    background: #f4f6f9;
+    text-align: center;
+    font-family: "Josefin Slab", serif;
     color: #252525;
-    font-family: "Poppins", sans-serif;
-    letter-spacing: 0;
-    font-weight: 400; }
-    .woocommerce table.cart tbody td.product-name a:hover, .woocommerce table.cart tbody td.product-name a:focus {
-      color: #82c14f; }
-.woocommerce table.cart thead th {
-  background: #f4f6f9;
-  text-align: center;
-  font-family: "Josefin Slab", serif;
-  color: #252525;
-  letter-spacing: 0.2em;
-  font-weight: 700;
-  border: none;
-  font-size: 14px;
-  padding: 18px 0;
-  line-height: normal; }
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    border: none;
+    font-size: 14px;
+    padding: 18px 0;
+    line-height: normal; }
 
 /** =========================
     11. Woocommerce Composer

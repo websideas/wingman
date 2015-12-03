@@ -2352,7 +2352,11 @@ div.swatch-wrapper{
 			background: none;
 		}
 	}
+  .table-responsive{
+    margin-bottom: 25px;
+  }
 	table.cart {
+    margin: 0;
 		tbody{
 			td{
 				border-bottom: 1px solid $border-color;
