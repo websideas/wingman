@@ -33,7 +33,9 @@
 /* 8. Styles for devices(<=1199px) */
 @media (max-width: 1199px) {
   .sticky-placeholder,
-  #header-content {
+  #header-content,
+  #header-inner > .container,
+  .nav-container-inner {
     display: none; }
 
   #header-content-mobile {
