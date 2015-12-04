@@ -347,6 +347,96 @@
 
 
 
+/*
+ * 15.8 QuickView
+ */
+
+.themedev-product-popup.woocommerce{
+  margin: 0 auto;
+  max-width: 540px;
+  position: relative;
+  overflow: hidden;
+
+  .close-quickview{
+    font-size: 18px;
+    line-height: 1.4;
+    position: absolute;
+    right: 30px;
+    top: 35px;
+    &:hover{
+
+    }
+    &.mobile-version{
+      display: none;
+      height: 30px;
+      line-height: 30px;
+      right: 0;
+      text-align: center;
+      top: 0;
+      width: 30px;
+    }
+  }
+
+  .wc-single-product{
+    background: #FFF;
+    .product-detail-images{
+      max-width: 540px;
+      padding: 30px;
+    }
+    .product-detail-thumbarea{
+      margin: 0;
+      padding: 0;
+    }
+    .product-details-info{
+      position: absolute;
+      padding: 35px 30px 30px;
+      visibility: hidden;
+      @include opacity(0);
+      @include transition();
+      @include transform(translate3d(-40px, 0, 0));
+    }
+
+    div.images,
+    div.summary{
+      float: none;
+      width: 100%;
+    }
+
+    .woocommerce-product-rating,
+    .functional-buttons-product{
+      display: none;
+    }
+
+    h1.product_title{
+      
+    }
+
+  }
+
+  &.animate-width{
+    max-width: 1080px;
+    .product-detail-images{
+    }
+  }
+
+  &.add-content{
+    max-width: 1080px;
+    .product-detail-images{
+      width: 50%;
+      float: left;
+    }
+    .product-details-info {
+      position: relative;
+      visibility: visible;
+      opacity: 1;
+      float: left;
+      width: 50%;
+      @include transform(translate3d(0, 0, 0));
+    }
+  }
+
+}
+
 .woocommerce.compare-button,
 .yith-wcwl-add-to-wishlist {
     text-align: center;

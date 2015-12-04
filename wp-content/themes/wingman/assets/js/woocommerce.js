@@ -46,10 +46,62 @@
 
     });
 
+
+    /* ---------------------------------------------
+     QickView
+     --------------------------------------------- */
+    function init_ProductQuickView(){
+        $('body').on('click', '.product-quick-view', function(e){
+            e.preventDefault();
+            var objProduct = $(this);
+            objProduct.addClass('loading');
+
+            var data = {
+                action: 'frontend_product_quick_view',
+                security : ajax_frontend.security,
+                product_id: objProduct.data('id')
+            };
+
+            $.post(ajax_frontend.ajaxurl, data, function(response) {
+                objProduct.removeClass('loading');
+                $.magnificPopup.open({
+                    mainClass : 'mfp-zoom-in',
+                    showCloseBtn: false,
+                    removalDelay: 500,
+                    items: {
+                        src: '<div class="themedev-product-popup woocommerce mfp-with-anim">' + response + '</div>',
+                        type: 'inline'
+                    },
+                    callbacks: {
+                        open: function() {
+                            var $popup = $('.themedev-product-popup');
+                            $popup.imagesLoaded(function(){
+                                setTimeout(function(){
+                                    $popup.addClass('animate-width');
+                                }, 500);
+                                setTimeout(function(){
+                                    $popup.addClass('add-content');
+                                }, 1000);
+                            });
+                            $('.kt-product-popup form').wc_variation_form();
+                        },
+                        change: function() {
+                            $('.kt-product-popup form').wc_variation_form();
+                        }
+                    }
+                });
+            });
+            return false;
+        });
+
+
+    }
+
+
     /* ---------------------------------------------
      Product Quick View
      --------------------------------------------- */
-    function init_ProductQuickView(){
+    function init_ProductQuickViewOld(){
         $('body').on('click', '.product-quick-view', function(e){
             e.preventDefault();
             var objProduct = $(this);
