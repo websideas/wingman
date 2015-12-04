@@ -108,22 +108,12 @@ function kt_add_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-
-
     wp_enqueue_script( 'jquery-ui-tabs' );
     wp_register_script('google-maps-api','http://maps.googleapis.com/maps/api/js?sensor=false', array( 'jquery' ), null, false);
     wp_enqueue_script( 'bootstrap-script', THEME_LIBS . 'bootstrap/js/bootstrap.min.js', array( 'jquery' ), null, true );
     wp_enqueue_script( 'plugins-script', THEME_JS . 'plugins.js', array( 'jquery' ), null, true );
-
     wp_enqueue_script( 'main-script', THEME_JS . 'functions.js', array( 'jquery', 'mediaelement', 'wp-mediaelement' ), null, true );
 
-
-    $navigation_height_fixed = kt_option('navigation_height_fixed');
-    if(!$navigation_height_fixed['height'] || $navigation_height_fixed['height'] == 'px'){
-        $navigation_height_fixed['height'] = '100px';
-    }
-
-    $sticky_height = intval($navigation_height_fixed['height']);
 
     global $wp_query;
     wp_localize_script( 'main-script', 'ajax_frontend', array(
@@ -131,7 +121,6 @@ function kt_add_scripts() {
         'security' => wp_create_nonce( 'ajax_frontend' ),
         'current_date' => date_i18n('Y-m-d H:i:s'),
         'query_vars' => json_encode( $wp_query->query ),
-        'sticky_height' => $sticky_height,
         'days' => __('Days', THEME_LANG),
         'hours' => __('Hours', THEME_LANG),
         'minutes' => __('Minutes', THEME_LANG),

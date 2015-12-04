@@ -67,15 +67,6 @@
     height: 50px;
     margin: 10px 15px; } }
 @media (max-width: 767px) {
-  .main-class.col-md-12 .entry-header,
-  .main-class.col-md-12 .entry-content-outer,
-  .main-class.col-md-12 nav.post-navigation,
-  .main-class.col-md-12 .author-info,
-  .main-class.col-md-12 #related-article,
-  .main-class.col-md-12 #comments {
-    margin-left: 0;
-    margin-right: 0; }
-
   .main-class.col-md-12 .blog-posts-list .entry-main-content,
   .main-class.col-md-12 .blog-posts-list .list-media-wrapper {
     width: 100%;
@@ -91,19 +82,17 @@
     margin: 0; }
   .woocommerce table.cart tbody td.actions a {
     margin-bottom: 10px; }
+  .woocommerce table.wishlist_table tr td.product-remove {
+    padding: 16px 10px 16px 0; }
 
   .table-responsive {
-    border-color: #e5e5e5; }
-
-  .woocommerce table.wishlist_table tr td.product-remove {
-    padding: 16px 10px 16px 0; } }
+    border-color: #e5e5e5; } }
 @media (max-width: 600px) {
   .woocommerce ul.shop-products.lists li.product .product-image-container,
   .woocommerce ul.shop-products.lists li.product .product-attr-container {
     width: 100%;
     margin: 0 0 30px;
     padding: 0; }
-
   .woocommerce .upsells-products > h3,
   .woocommerce .related-products > h3,
   .woocommerce .cross-sells > h3 {

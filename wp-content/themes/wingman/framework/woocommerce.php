@@ -24,15 +24,7 @@ endif;
 
 function kt_wp_enqueue_scripts(){
     wp_enqueue_style( 'kt-woocommerce', THEME_CSS . 'woocommerce.css' );
-    wp_enqueue_style( 'easyzoom', THEME_CSS . 'easyzoom.css', array());
-
-    wp_enqueue_script( 'easyzoom', THEME_JS . 'easyzoom.js', array( 'jquery' ), null, true );
-    wp_enqueue_script( 'variations-plugin-script', THEME_JS . 'woo-variations-plugin.js', array( 'jquery' ), null, true );
-    wp_enqueue_script( 'mCustomScrollbar-script', THEME_JS . 'jquery.mCustomScrollbar.min.js', array( 'jquery' ), null, true );
-
-    wp_enqueue_script( 'jquery-ui-accordion' );
-    wp_enqueue_script( 'jquery-ui-tabs' );
-    wp_enqueue_script( 'kt-woocommerce', THEME_JS . 'woocommerce.js', array( 'jquery' ), null, true );
+    wp_enqueue_script( 'kt-woocommerce', THEME_JS . 'woocommerce.js', array( 'jquery', 'jquery-ui-accordion', 'jquery-ui-tabs' ), null, true );
 
 }
 add_action( 'wp_enqueue_scripts', 'kt_wp_enqueue_scripts' );
@@ -74,7 +66,7 @@ add_action( 'after_switch_theme', 'kt_woocommerce_image_dimensions', 1 );
 
 function kt_products_per_page_action() {
     if ( isset( $_REQUEST['per_page'] ) ) :
-        WC()->session->set( 'products_per_page', intval( $_REQUEST['per_page'] ) );
+        WC()->session->set( 'kt_products_per_page', intval( $_REQUEST['per_page'] ) );
     endif;
 }
 add_action( 'init', 'kt_products_per_page_action');
@@ -91,16 +83,17 @@ add_action( 'init', 'kt_products_per_page_action');
 function kt_loop_shop_per_page( $number = 12 ){
 
     if ( isset( $_REQUEST['per_page'] ) ) :
-        return intval( $_REQUEST['per_page'] );
-    elseif ( WC()->session->__isset( 'products_per_page' ) ) :
-        return intval( WC()->session->__get( 'products_per_page' ) );
+        $num = intval( $_REQUEST['per_page'] );
+    elseif ( WC()->session->__isset( 'kt_products_per_page' ) ) :
+        $num = intval( WC()->session->__get( 'kt_products_per_page' ) );
     else :
         $num = intval( kt_option('loop_shop_per_page', 12) );
         if( $num <=0 ){
             $num = $number;
         }
-        return $num;
     endif;
+
+    return $num;
 
 }
 add_filter('loop_shop_per_page', 'kt_loop_shop_per_page', 999 );
@@ -153,14 +146,14 @@ function products_per_page_dropdown() {
     do_action( 'woo_before_products_per_page_form' );
 
     ?><form method="GET" class="woocommerce-per-page">
-        <select name="per_page" onchange="this.form.submit()">
-            <?php foreach( $products_per_page_options as $key => $value ) : ?>
-                <option value="<?php echo esc_attr( $value ); ?>" <?php selected( $value, $current_per_page); ?>><?php
-            $text = apply_filters( 'woo_products_per_page_text', __( '%s item/pages', THEME_LANG ), $value );
-            esc_html( printf( $text, $value == -1 ? __( 'All', THEME_LANG ) : $value ) ); // Set to 'All' when value is -1
-            ?></option>
-            <?php endforeach; ?>
-        </select>
+    <select name="per_page" onchange="this.form.submit()">
+        <?php foreach( $products_per_page_options as $key => $value ) : ?>
+            <option value="<?php echo esc_attr( $value ); ?>" <?php selected( $value, $current_per_page); ?>><?php
+                $text = apply_filters( 'woo_products_per_page_text', __( '%s item/pages', THEME_LANG ), $value );
+                esc_html( printf( $text, $value == -1 ? __( 'All', THEME_LANG ) : $value ) ); // Set to 'All' when value is -1
+                ?></option>
+        <?php endforeach; ?>
+    </select>
     <?php
 
     // Keep query string vars intact
@@ -271,7 +264,7 @@ function kt_woocommerce_sale_price_html( $price, $product ) {
 add_filter('woocommerce_placeholder_img_src', 'kt_woocommerce_placeholder_img_src');
 
 function kt_woocommerce_placeholder_img_src( $src ) {
-	return THEME_IMG . 'placeholder.png';
+    return THEME_IMG . 'placeholder.png';
 }
 
 
@@ -292,55 +285,55 @@ function kt_woocommerce_get_cart( $wrapper = true ){
     $output = '';
     if ( kt_is_wc() ) {
         $cart_total = WC()->cart->get_cart_total();
-		$cart_count = WC()->cart->cart_contents_count;
+        $cart_count = WC()->cart->cart_contents_count;
         if( $wrapper == true ){
             $output .= '<li class="mini-cart">';
         }
         $output .= '<a href="'.WC()->cart->get_cart_url().'">';
-            $output .= '<i class="fa fa-shopping-cart"></i>';
-            $output .= '<span class="mini-cart-total">'.$cart_count.'</span>';
+        $output .= '<i class="fa fa-shopping-cart"></i>';
+        $output .= '<span class="mini-cart-total">'.$cart_count.'</span>';
         $output .= '</a>';
         $output .= '<div class="shopping-bag woocommerce">';
         $output .= '<div class="shopping-bag-wrapper ">';
         $output .= '<div class="shopping-bag-content">';
-            if ( sizeof(WC()->cart->cart_contents)>0 ) {
-                $output .= '<div class="cart-title">'.__( 'Recently added item(s)',THEME_LANG ).'</div>';
-                $output .= '<div class="bag-products mCustomScrollbar">';
-                $output .= '<div class="bag-products-content">';
-                foreach (WC()->cart->cart_contents as $cart_item_key => $cart_item) {
-                    $bag_product = $cart_item['data'];
+        if ( sizeof(WC()->cart->cart_contents)>0 ) {
+            $output .= '<div class="cart-title">'.__( 'Recently added item(s)',THEME_LANG ).'</div>';
+            $output .= '<div class="bag-products mCustomScrollbar">';
+            $output .= '<div class="bag-products-content">';
+            foreach (WC()->cart->cart_contents as $cart_item_key => $cart_item) {
+                $bag_product = $cart_item['data'];
 
-                    if ($bag_product->exists() && $cart_item['quantity']>0) {
-                        $output .= '<div class="bag-product clearfix">';
-    					$output .= '<figure><a class="bag-product-img" href="'.get_permalink($cart_item['product_id']).'">'.$bag_product->get_image().'</a></figure>';
-    					$output .= '<div class="bag-product-details">';
-        					$output .= '<h3 class="bag-product-title"><a href="'.get_permalink($cart_item['product_id']).'">' . apply_filters('woocommerce_cart_widget_product_title', $bag_product->get_title(), $bag_product) . '</a></h3>';
+                if ($bag_product->exists() && $cart_item['quantity']>0) {
+                    $output .= '<div class="bag-product clearfix">';
+                    $output .= '<figure><a class="bag-product-img" href="'.get_permalink($cart_item['product_id']).'">'.$bag_product->get_image().'</a></figure>';
+                    $output .= '<div class="bag-product-details">';
+                    $output .= '<h3 class="bag-product-title"><a href="'.get_permalink($cart_item['product_id']).'">' . apply_filters('woocommerce_cart_widget_product_title', $bag_product->get_title(), $bag_product) . '</a></h3>';
 
-                        $output .= WC()->cart->get_item_data( $cart_item );
+                    $output .= WC()->cart->get_item_data( $cart_item );
 
-        					$output .= '<div class="bag-product-price">'.$cart_item['quantity'].'x'.wc_price($bag_product->get_price()).'</div>';
+                    $output .= '<div class="bag-product-price">'.$cart_item['quantity'].'x'.wc_price($bag_product->get_price()).'</div>';
 
-    					$output .= '</div>';
-    					$output .= apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="#" data-itemkey="'.$cart_item_key.'" data-id="'.$cart_item['product_id'].'" class="remove" title="%s"></a>', __('Remove this item', 'woocommerce') ), $cart_item_key );
+                    $output .= '</div>';
+                    $output .= apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="#" data-itemkey="'.$cart_item_key.'" data-id="'.$cart_item['product_id'].'" class="remove" title="%s"></a>', __('Remove this item', 'woocommerce') ), $cart_item_key );
 
-    					$output .= '</div>';
-                    }
+                    $output .= '</div>';
                 }
-                $output .= '</div>';
-                $output .= '</div>';
-            }else{
-               $output .=  "<p class='cart_block_no_products'>".__('Your cart is currently empty.', THEME_LANG)."</p>";
             }
+            $output .= '</div>';
+            $output .= '</div>';
+        }else{
+            $output .=  "<p class='cart_block_no_products'>".__('Your cart is currently empty.', THEME_LANG)."</p>";
+        }
 
-            if ( sizeof(WC()->cart->cart_contents)>0 ) {
-                $output .= '<div class="bag-total"><strong>'.__('Subtotal: ', THEME_LANG).'</strong>'.$cart_total.'</div><!-- .bag-total -->';
-                $output .= '<div class="bag-buttons">';
-                $output .= '<div class="bag-buttons-content clearfix">';
-                    $output .= '<span><a href="'.esc_url( WC()->cart->get_cart_url() ).'" class="btn btn-default btn-animation"><span>'.__('View cart', THEME_LANG).'<i class="fa fa-long-arrow-right"></i></span></a></span>';
-                    $output .= '<span><a href="'.esc_url( WC()->cart->get_checkout_url() ).'" class="btn btn-default btn-animation"><span>'.__('Checkout', THEME_LANG).'<i class="fa fa-long-arrow-right"></i></span></a></span>';
-                $output .= '</div><!-- .bag-buttons -->';
-                $output .= '</div><!-- .bag-buttons -->';
-            }
+        if ( sizeof(WC()->cart->cart_contents)>0 ) {
+            $output .= '<div class="bag-total"><strong>'.__('Subtotal: ', THEME_LANG).'</strong>'.$cart_total.'</div><!-- .bag-total -->';
+            $output .= '<div class="bag-buttons">';
+            $output .= '<div class="bag-buttons-content clearfix">';
+            $output .= '<span><a href="'.esc_url( WC()->cart->get_cart_url() ).'" class="btn btn-default btn-animation"><span>'.__('View cart', THEME_LANG).'<i class="fa fa-long-arrow-right"></i></span></a></span>';
+            $output .= '<span><a href="'.esc_url( WC()->cart->get_checkout_url() ).'" class="btn btn-default btn-animation"><span>'.__('Checkout', THEME_LANG).'<i class="fa fa-long-arrow-right"></i></span></a></span>';
+            $output .= '</div><!-- .bag-buttons -->';
+            $output .= '</div><!-- .bag-buttons -->';
+        }
 
         $output .= '</div><!-- .shopping-bag-content -->';
         $output .= '</div><!-- .shopping-bag-wrapper -->';
@@ -384,7 +377,7 @@ function kt_woocommerce_get_cart_mobile( $wrapper = true ){
 function woocommerce_header_add_to_cart_fragment( $fragments ) {
     $fragments['.mini-cart'] = kt_woocommerce_get_cart();
     $fragments['.mobile-cart'] = kt_woocommerce_get_cart_mobile();
-	return $fragments;
+    return $fragments;
 }
 add_filter('add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment');
 
@@ -401,11 +394,11 @@ add_action('woocommerce_before_main_content', 'kt_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'kt_wrapper_end', 10);
 
 function kt_wrapper_start() {
-  echo '<div class="content-wrapper"><div class="container wc-container">';
+    echo '<div class="content-wrapper"><div class="container wc-container">';
 }
 
 function kt_wrapper_end() {
-  echo '</div><!-- .container --></div>';
+    echo '</div><!-- .container --></div>';
 }
 
 /**
@@ -534,17 +527,17 @@ function kt_woocommerce_add_archive_tool(){
     ?>
     <div class="product-image-tool tool-<?php echo $count; ?>">
         <?php
-            if(class_exists('YITH_WCWL_UI')){
-                echo do_shortcode('<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('wishlist',THEME_LANG).'">[yith_wcwl_add_to_wishlist]</div>');
-            }
-            printf(
-                '<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('Quick View',THEME_LANG).'"><a href="#" class="product-quick-view" data-id="%s">%s</a></div>',
-                get_the_ID(),
-                __('Quick view', THEME_LANG)
-            );
-            if(defined( 'YITH_WOOCOMPARE' )){
-                echo do_shortcode('<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('Compare',THEME_LANG).'">[yith_compare_button]</div>');
-            } 
+        if(class_exists('YITH_WCWL_UI')){
+            echo do_shortcode('<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('wishlist',THEME_LANG).'">[yith_wcwl_add_to_wishlist]</div>');
+        }
+        printf(
+            '<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('Quick View',THEME_LANG).'"><a href="#" class="product-quick-view" data-id="%s">%s</a></div>',
+            get_the_ID(),
+            __('Quick view', THEME_LANG)
+        );
+        if(defined( 'YITH_WOOCOMPARE' )){
+            echo do_shortcode('<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('Compare',THEME_LANG).'">[yith_compare_button]</div>');
+        }
         ?>
     </div>
     <?php
@@ -677,11 +670,11 @@ function woocommerce_show_product_loop_new_flash(){
     $time_new = kt_option('time_product_new', 30);
 
     $now = strtotime( date("Y-m-d H:i:s") );
-	$post_date = strtotime( $post->post_date );
-	$num_day = (int)(($now - $post_date)/(3600*24));
-	if( $num_day < $time_new ){
-		echo "<span class='kt_new'>".__( 'New',THEME_LANG )."</span>";
-	}
+    $post_date = strtotime( $post->post_date );
+    $num_day = (int)(($now - $post_date)/(3600*24));
+    if( $num_day < $time_new ){
+        echo "<span class='kt_new'>".__( 'New',THEME_LANG )."</span>";
+    }
 }
 add_action( 'woocommerce_shop_loop_item_before_image', 'woocommerce_show_product_loop_new_flash', 5 );
 add_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_loop_new_flash', 5 );
@@ -690,17 +683,17 @@ add_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_produ
 function woo_product_pagination(){ ?>
     <div class="kt_woo_pagination">
         <?php
-            if( !get_previous_post_link('&laquo; %link','<i class="fa fa-angle-left"></i>') ){
-                echo '<span><i class="fa fa-angle-left"></i></span>';
-            }else{
-                previous_post_link('%link','<i class="fa fa-angle-left"></i>');
-            }
-            
-            if( !get_next_post_link('&laquo; %link','<i class="fa fa-angle-right"></i>') ){
-                echo '<span><i class="fa fa-angle-right"></i></span>';
-            }else{
-                next_post_link('%link','<i class="fa fa-angle-right"></i>');
-            }
+        if( !get_previous_post_link('&laquo; %link','<i class="fa fa-angle-left"></i>') ){
+            echo '<span><i class="fa fa-angle-left"></i></span>';
+        }else{
+            previous_post_link('%link','<i class="fa fa-angle-left"></i>');
+        }
+
+        if( !get_next_post_link('&laquo; %link','<i class="fa fa-angle-right"></i>') ){
+            echo '<span><i class="fa fa-angle-right"></i></span>';
+        }else{
+            next_post_link('%link','<i class="fa fa-angle-right"></i>');
+        }
         ?>
     </div>
     <?php
@@ -779,12 +772,12 @@ function kt_template_single_excerpt(){
     global $post;
 
     if ( ! $post->post_excerpt ) {
-    	return;
+        return;
     }
-    
+
     ?>
     <div class="product-short-description">
-    	<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
+        <?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
     </div>
     <?php
 }
@@ -792,7 +785,7 @@ function kt_template_single_excerpt(){
 add_action( 'woocommerce_sale_sountdown_item', 'kt_template_single_excerpt', 10 );
 
 function kt_thumbnail_page_shop(){
-    
+
     if( is_shop() ){
         $banner = kt_option( 'shop_content_banner' );
         if( $banner ){

@@ -31,8 +31,6 @@ only screen and (min-resolution: 144dpi) {
 /* 8. Styles for devices(<=1199px) */
 @media (max-width: 1199px) {
 
-
-
   .sticky-placeholder,
   #header-content,
   #header-inner > .container,
@@ -112,15 +110,7 @@ only screen and (min-resolution: 144dpi) {
 
 @media (max-width: 767px) {
 	.main-class.col-md-12{
-	  .entry-header,
-	  .entry-content-outer,
-	  nav.post-navigation,
-	  .author-info,
-	  #related-article,
-	  #comments{
-	    margin-left:0;
-	    margin-right:0;
-	  }
+
 	}
 
 	.main-class.col-md-12{
@@ -132,6 +122,7 @@ only screen and (min-resolution: 144dpi) {
 	    }
 	  }
 	}
+
 	.blog-posts-list {
 	  .list-media-wrapper,
 	  .entry-main-content{
@@ -141,34 +132,32 @@ only screen and (min-resolution: 144dpi) {
 	}
 
 	.woocommerce{
-		table.cart {
-			tbody{
-				td{
-					&.actions{
-						a,input{
-							width: 100%!important;
-							margin: 0;
-						}
-						a{
-							margin-bottom: 10px;
-						}
-					}
-				}
-			}
-		}
+      table.cart {
+          tbody{
+              td{
+                  &.actions{
+                      a,input{
+                          width: 100%!important;
+                          margin: 0;
+                      }
+                      a{
+                          margin-bottom: 10px;
+                      }
+                  }
+              }
+          }
+      }
+      table.wishlist_table{
+        tr{
+          td.product-remove{
+            padding: 16px 10px 16px 0;
+          }
+        }
+      }
 	}
 
 	.table-responsive{
 		border-color: $border-color;
-	}
-	.woocommerce{
-		table.wishlist_table{
-			tr{
-				td.product-remove{
-					padding: 16px 10px 16px 0;
-				}
-			}
-		}
 	}
 }
 
@@ -186,24 +175,22 @@ only screen and (min-resolution: 144dpi) {
 				}
 			}
 		}
-	}
-	.woocommerce{
-	  .upsells-products,
-	  .related-products,
-	  .cross-sells {
-	    > h3{
-	        font-size: 30px;
-	    }
-	  }
+      .upsells-products,
+      .related-products,
+      .cross-sells {
+        > h3{
+          font-size: 30px;
+        }
+      }
 	}
 
 	body.opened-nav-animate{
-	    &.admin-bar{
-	      #wpadminbar{
-	        margin-top: -46px;
-	      }
-	    }
-	  }
+      &.admin-bar{
+        #wpadminbar{
+          margin-top: -46px;
+        }
+      }
+    }
 }
 @media (max-width: 480px) {
 	.comment-content{
