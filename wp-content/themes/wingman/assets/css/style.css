@@ -1499,7 +1499,7 @@ body.opened-nav-animate {
 
 #footer-copyright {
   background: #1e1e1e;
-  padding: 25px 0;
+  padding: 55px 0 98px;
   color: #707070; }
   #footer-copyright a {
     color: #FFFFFF; }
@@ -3214,7 +3214,13 @@ article.post-item.post-layout-classic {
       -moz-transition: all 0.2s ease-in-out 0s;
       -ms-transition: all 0.2s ease-in-out 0s;
       -o-transition: all 0.2s ease-in-out 0s;
-      transition: all 0.2s ease-in-out 0s; }
+      transition: all 0.2s ease-in-out 0s;
+      -webkit-border-radius: 100%;
+      -khtml-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -ms-border-radius: 100%;
+      -o-border-radius: 100%;
+      border-radius: 100%; }
     .testimonial-carousel-wrapper .owl-carousel-kt .owl-pagination .owl-page.active img, .testimonial-carousel-wrapper .owl-carousel-kt .owl-pagination .owl-page:hover img {
       filter: none;
       -webkit-filter: grayscale(0%); }
@@ -4119,5 +4125,51 @@ form.wpcf7-form p {
       bottom: -5px;
       left: 50%;
       margin-left: -7px; }
+
+/* ==============================
+   12.Popup
+   ============================== */
+#popup-wrap {
+  max-width: 600px;
+  background: #fff;
+  position: relative;
+  margin: 0 auto; }
+  #popup-wrap h3.title-top {
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+    padding: 17px; }
+  #popup-wrap .mfp-close {
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    top: 17px;
+    right: 17px; }
+    #popup-wrap .mfp-close:after, #popup-wrap .mfp-close:before {
+      width: 1px;
+      height: 30px;
+      background: #a4a4a4;
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 10px; }
+    #popup-wrap .mfp-close:after {
+      -webkit-transform: rotate(45deg);
+      -khtml-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      filter: progid:DXImageTransform.Microsoft.Matrix( M11=0, M12=0, M21=0, M22=0, sizingMethod='auto expand');
+      zoom: 1; }
+    #popup-wrap .mfp-close:before {
+      -webkit-transform: rotate(-45deg);
+      -khtml-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      filter: progid:DXImageTransform.Microsoft.Matrix( M11=0, M12=0, M21=0, M22=0, sizingMethod='auto expand');
+      zoom: 1; }
 
 /*# sourceMappingURL=style.css.map */

@@ -494,7 +494,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'footer_copyright_text',
                         'type'     => 'editor',
                         'title'    => __( 'Footer Copyright Text', THEME_LANG ),
-                        'default'  => 'Copyright &copy; 2015 - <a href="#">Wingman</a> - All Right Reserver.'
+                        'default'  => 'Copyright © 2015 - Wing Man - All rights reserved.<br />Powered by Wordpress'
                     ),
                     
                 )
@@ -3429,6 +3429,18 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG)
                     ),
+
+                    array(
+                        'id'       => '404_image',
+                        'type'     => 'media',
+                        'url'      => true,
+                        'compiler' => true,
+                        'title'    => __( '404 Image', THEME_LANG ),
+                        'default'  => array(
+                            'url' => THEME_IMG.'404.png'
+                        )
+                    ),
+
                     array(
                         'id' => 'notfound_page_type',
                         'type' => 'select',

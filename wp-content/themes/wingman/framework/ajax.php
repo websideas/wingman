@@ -199,6 +199,3 @@ function wp_ajax_fronted_popup_callback() {
     
     die();
 }
-
-
-

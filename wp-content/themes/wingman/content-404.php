@@ -1,8 +1,10 @@
 
 <div class="content-404">
     <div class="page-not-found">
-
-        <h1><img src="<?php echo THEME_IMG; ?>404.png" alt="404" class="img-responsive" /></h1>
+        <?php $image_404 = kt_option( '404_image' ); ?>
+        <?php if( $image_404['url'] ){ ?>
+            <h1><img src="<?php echo $image_404['url']; ?>" alt="404" class="img-responsive" /></h1>
+        <?php } ?>
         <h3><?php _e('OPPS! THIS PAGE COULD NOT BE FOUND!', THEME_LANG) ?></h3>
         <?php get_search_form(); ?>
         <p ><?php _e('Sorry bit the page you are looking for does not exist, <br />have been removed or name changed', THEME_LANG ); ?></p>
