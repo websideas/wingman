@@ -570,7 +570,7 @@
     display: none; }
 .woocommerce .woocommerce-error,
 .woocommerce-page .woocommerce-error {
-  background: #fff0ed;
+  background: #f4f6f9;
   border-color: #ea4f21;
   color: #82c14f; }
 .woocommerce .woocommerce-info,
@@ -2150,6 +2150,20 @@ div.swatch-wrapper {
         position: absolute;
         left: 0;
         top: 10px;
+        text-transform: uppercase;
+        color: #252525;
+        font-weight: normal; }
+        #customer_details .woocommerce-billing-fields > p label.checkbox,
+        #customer_details .woocommerce-shipping-fields > p label.checkbox {
+          margin: 0;
+          line-height: normal;
+          top: 6px; }
+    #customer_details .woocommerce-billing-fields p#account_password_field,
+    #customer_details .woocommerce-shipping-fields p#account_password_field {
+      padding: 0;
+      margin: 0; }
+      #customer_details .woocommerce-billing-fields p#account_password_field label,
+      #customer_details .woocommerce-shipping-fields p#account_password_field label {
         text-transform: uppercase;
         color: #252525;
         font-weight: normal; }

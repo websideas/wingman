@@ -1365,7 +1365,7 @@ body.opened-nav-animate{
 }
 #footer-copyright {
     background: $nav-bg;
-    padding: 25px 0;
+    padding: 55px 0 98px;
     color: $main-text;
     a{
       color: $white;
@@ -3432,6 +3432,7 @@ article.post-item.post-layout-classic {
           filter: gray; /* IE6-9 */
           -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
           @include transition();
+          @include border-radius(100%);
         }
         &.active,
         &:hover{
@@ -4428,6 +4429,44 @@ form.wpcf7-form{
       bottom: -5px;
       left: 50%;
       margin-left: -7px;
+    }
+  }
+}
+/* ==============================
+   12.Popup
+   ============================== */
+
+#popup-wrap{
+  max-width: 600px;
+  background: #fff;
+  position: relative;
+  margin: 0 auto;
+  h3.title-top{
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+    padding: 17px;
+  }
+  .mfp-close{
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    top:17px;
+    right: 17px;
+    &:after,&:before{
+      width: 1px;
+      height: 30px;
+      background: #a4a4a4;
+      content: "";
+      position: absolute;
+      top:-4px;
+      left: 10px;
+    }
+    &:after{
+      @include rotate(45);
+    }
+    &:before{
+      @include rotate(-45);
     }
   }
 }

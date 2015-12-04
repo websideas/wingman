@@ -556,7 +556,7 @@
     }
   }
   .woocommerce-error{
-    background: #fff0ed;
+    background: $qty_bg;
     border-color: #ea4f21;
     color: $primary-color;
   }
@@ -2269,8 +2269,22 @@ div.swatch-wrapper{
 			    text-transform: uppercase;
 			    color:$title-text;;
 			    font-weight: normal;
-		    }
+          &.checkbox{
+            margin: 0;
+            line-height: normal;
+            top: 6px;
+          }
+		    }        
     	}
+      p#account_password_field{
+        padding: 0;
+        margin: 0;
+        label{
+          text-transform: uppercase;
+          color:$title-text;;
+          font-weight: normal;
+        }
+      }
     }
 }
 .select2-container{
