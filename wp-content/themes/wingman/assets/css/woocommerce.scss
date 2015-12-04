@@ -389,7 +389,7 @@
     }
     .product-details-info{
       position: absolute;
-      padding: 35px 30px 30px;
+      padding: 35px 30px 30px 0;
       visibility: hidden;
       @include opacity(0);
       @include transition();
@@ -408,7 +408,7 @@
     }
 
     h1.product_title{
-      
+      margin-top: 15px;
     }
 
   }

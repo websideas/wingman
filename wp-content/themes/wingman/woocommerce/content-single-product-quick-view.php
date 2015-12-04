@@ -28,8 +28,9 @@ global $post, $product, $woocommerce;
 
     <div class="product-detail-images">
         <div class="carousel-navigation-center single-product-quickview">
-            <div class="single-product-quickview-images owl-kttheme carousel-pagination-circle-o visiable-navigation">
+            <div class="single-product-quickview-images">
             <?php
+
                 if ( has_post_thumbnail() ) {
 
                     $image_title 	= esc_attr( get_the_title( get_post_thumbnail_id() ) );
@@ -64,10 +65,7 @@ global $post, $product, $woocommerce;
                             if ( !$image_link )
                                 continue;
 
-                            $image = wp_get_attachment_image( $attachment_id, 'shop_catalog', false, array(
-                                'data-zoom-image' => $image_link,
-                                'class' => 'img-responsive'
-                            ) );
+                            $image = wp_get_attachment_image( $attachment_id, 'shop_catalog');
 
                             // Display other items
                             echo apply_filters( 'woocommerce_single_product_image_html', $image, $post->ID );

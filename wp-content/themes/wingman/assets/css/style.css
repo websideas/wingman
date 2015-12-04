@@ -1097,7 +1097,7 @@ select:not([multiple]) {
   position: fixed !important;
   width: 100%;
   top: 0;
-  z-index: 9999; }
+  z-index: 999; }
 .header-container.is-sticky.sticky .apply-sticky {
   -webkit-transition: all 0.2s ease-in-out 0s;
   -khtml-transition: all 0.2s ease-in-out 0s;
