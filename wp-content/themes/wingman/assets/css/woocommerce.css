@@ -1404,8 +1404,9 @@ body .mCSB_scrollTools {
 .woocommerce .product-detail-thumbarea {
   position: relative; }
   .woocommerce .product-detail-thumbarea .single-product-main-images {
-    border: 1px solid #dfdfdf;
     margin-bottom: 30px; }
+    .woocommerce .product-detail-thumbarea .single-product-main-images .slick-list {
+      border: 1px solid #dfdfdf; }
     .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow {
       -webkit-transform: translate(0);
       -khtml-transform: translate(0);

@@ -1464,8 +1464,10 @@ body{
 	.product-detail-thumbarea{
 		position: relative;
 		.single-product-main-images{
-        border: 1px solid $border-third-color;
         margin-bottom: 30px;
+        .slick-list{
+          border: 1px solid $border-third-color;
+        }
         .slick-arrow{
         @include transform(translate(0));
         color: $title-text;
