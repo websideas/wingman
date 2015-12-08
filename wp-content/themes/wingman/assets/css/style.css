@@ -2139,14 +2139,34 @@ body.layout-boxed #footer {
     max-width: 770px;
     margin: 0 auto;
     overflow: hidden; }
+    #search-fullwidth .searchform .wrap_product_cat {
+      width: 35%;
+      float: left;
+      position: relative; }
+      #search-fullwidth .searchform .wrap_product_cat:before {
+        position: absolute;
+        font-family: FontAwesome;
+        content: "";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        color: #FFFFFF;
+        right: 20px;
+        top: 50%;
+        -webkit-transform: translatey(-50%);
+        -khtml-transform: translatey(-50%);
+        -moz-transform: translatey(-50%);
+        -ms-transform: translatey(-50%);
+        -o-transform: translatey(-50%);
+        transform: translatey(-50%);
+        pointer-events: none; }
     #search-fullwidth .searchform .postform {
-      background: #82c14f url(../images/arrow-form-cat.png) no-repeat right center;
+      background: #82c14f;
       color: #FFFFFF;
       border: none;
       display: block;
       height: 50px;
-      width: 35%;
-      float: left;
+      width: 100%;
       text-align: center;
       font-weight: 600;
       text-transform: uppercase;

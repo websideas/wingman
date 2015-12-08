@@ -800,7 +800,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'preview'               => false,
                         'transparent'           => false,
                         'default'   => array(
-                            'background-color'      => '#FFFFFF',
+                            'background-color'      => '#252525',
                         ),
                         'output'      => array( '.header-sticky-background' ),
                     ),

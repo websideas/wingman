@@ -2114,14 +2114,28 @@ body.layout-boxed{
     max-width: 770px;
     margin: 0 auto;
     overflow: hidden;
+    .wrap_product_cat{
+      width: 35%;
+      float: left;
+      position: relative;
+      &:before{
+        position: absolute;
+        @include FontAwesome("\f107");
+        font-size: 18px;
+        color: $white;
+        right: 20px;
+        top: 50%;
+        @include transform(translatey(-50%));
+        pointer-events:none;
+      }
+    }
     .postform{
-      background: #82c14f url(../images/arrow-form-cat.png) no-repeat right center;   
+      background: #82c14f;   
       color: $white; 
       border: none;
       display: block;
       height:50px;
-      width: 35%;
-      float: left;
+      width: 100%;
       text-align: center;
       font-weight: 600;
       text-transform: uppercase;

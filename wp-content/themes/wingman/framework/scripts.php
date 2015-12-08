@@ -90,9 +90,30 @@ function kt_setting_script() {
             .comment-actions a:hover, 
             .comment-actions a:focus,
             .menu-bars-outer .menu-bars-items ul li a:hover,
+            .bag-products .bag-product .bag-product-title a:hover,
+            .woocommerce .widget_price_filter .price_slider_amount .price_label span,
+            .page-header .breadcrumbs a:hover,
+            .woocommerce table.cart tbody td.product-name a:hover, 
+            .woocommerce table.cart tbody td.product-name a:focus,
+            .widget_layered_nav ul li a:hover,
+            #main-nav-tool li > a:hover,
+            .woocommerce ul.shop-products h3 a:hover,
+            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover, 
+            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus,
+            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover::before, 
+            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus::before,
+            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover::before, 
+            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus::before,
+            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover, 
+            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus,
+            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover::before, 
+            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus::before,
             
             .woocommerce .widget_price_filter .price_slider_amount .button:hover, 
             .woocommerce .widget_price_filter .price_slider_amount .button:focus,
+            .entry-share-box a:hover,
+            .woocommerce-page div.product .product_meta > span a:hover, 
+            .woocommerce div.product .product_meta > span a:hover,
             .woocommerce .star-rating span:before
 
             {
@@ -143,6 +164,10 @@ function kt_setting_script() {
             .owl-carousel-kt .owl-pagination .owl-page:hover,
             #header-content-mobile .header-mobile-tools a.mobile-cart span,
             #cancel-comment-reply-link:hover,
+            body .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+            body .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
+            body .mCSB_scrollTools .mCSB_dragger:focus .mCSB_dragger_bar, 
+            body .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
 
             .widget_nav_menu ul li a:hover::after, 
             .widget_pages ul li a:hover::after, 
@@ -154,11 +179,12 @@ function kt_setting_script() {
             .kt-skill-wrapper .kt-skill-item-wrapper .kt-skill-bg-accent .kt-skill-bar,
             #main-nav-tool li.mini-cart > a span,
             #footer-area h3.widget-title:after,
+            #search-fullwidth .searchform .postform,
             #footer-area h3.widget-title:before,
             .readmore-link:before,
             .readmore-link:after
             {
-                background: <?php echo $accent; ?>;
+                background-color: <?php echo $accent; ?>;
             }
             
             .woocommerce #respond input#submit:hover, 
@@ -172,8 +198,14 @@ function kt_setting_script() {
             
             .owl-carousel-kt.carousel-dark .owl-buttons > div:hover,
             .owl-carousel-kt.carousel-light .owl-buttons > div:hover,
+            div.swatch-wrapper.selected, div.swatch-wrapper:hover,
             .btn-accent,
             .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-slide.slick-current,
+            .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-slide.slick-current,
+            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover, 
+            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus,
+            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover, 
+            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus,
             .post-single .tags-links a:hover, 
             .post-single .tags-links a:focus,
             blockquote, .blockquote,
