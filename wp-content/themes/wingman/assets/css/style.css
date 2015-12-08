@@ -3539,7 +3539,7 @@ article.post-item.post-layout-classic {
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg); }
 
-.social-background-empty a {
+.social-background-empty ul li a {
   border: none !important;
   width: auto;
   height: auto;

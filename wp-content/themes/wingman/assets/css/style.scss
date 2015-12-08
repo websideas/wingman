@@ -3813,12 +3813,17 @@ article.post-item.post-layout-classic {
   }
 }
 .social-background-empty{
-  a{
-    border: none !important;
-    width: auto;
-    height: auto;
-    line-height: 1;
+  ul{
+    li{
+      a{
+        border: none !important;
+        width: auto;
+        height: auto;
+        line-height: 1;
+      }
+    }
   }
+  
 }
 
 
