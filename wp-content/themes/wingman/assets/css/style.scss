@@ -2512,6 +2512,9 @@ article.post-item {
   margin: 0;
   li{
     list-style: none;
+    ul.children{
+      padding-left: 97px;
+    }
   }
 }
 .comment-form{
@@ -2661,8 +2664,6 @@ article.post-item {
 }
 .comment-respond{
   margin-bottom: 25px;
-  padding-top: 55px;
-  border-top: 1px solid $border-second-color;
 }
 .comment-notes,
 .form-allowed-tags {
@@ -2686,7 +2687,9 @@ article.post-item {
 }
 
 #related-article{
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $border-second-color;
+  margin-bottom: 55px;
   h2.entry-title{
     font-size: 14px;
     margin: 0;

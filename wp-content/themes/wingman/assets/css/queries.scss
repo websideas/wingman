@@ -208,6 +208,14 @@ only screen and (min-resolution: 144dpi) {
 	.table-responsive{
 		border-color: $border-color;
 	}
+
+	.comment-list{
+	  li{
+	    ul.children{
+	      padding-left: 0;
+	    }
+	  }
+	}
 }
 
 @media (max-width: 600px) {

@@ -86,6 +86,10 @@ function kt_setting_script() {
 
             .owl-carousel-kt.carousel-dark .owl-buttons > div:hover,
             .owl-carousel-kt.carousel-light .owl-buttons > div:hover,
+            .woocommerce p.stars a:hover,
+            .comment-actions a:hover, 
+            .comment-actions a:focus,
+            .menu-bars-outer .menu-bars-items ul li a:hover,
             
             .woocommerce .widget_price_filter .price_slider_amount .button:hover, 
             .woocommerce .widget_price_filter .price_slider_amount .button:focus,
@@ -138,6 +142,7 @@ function kt_setting_script() {
             .owl-carousel-kt .owl-pagination .owl-page.active, 
             .owl-carousel-kt .owl-pagination .owl-page:hover,
             #header-content-mobile .header-mobile-tools a.mobile-cart span,
+            #cancel-comment-reply-link:hover,
 
             .widget_nav_menu ul li a:hover::after, 
             .widget_pages ul li a:hover::after, 
@@ -172,6 +177,8 @@ function kt_setting_script() {
             .post-single .tags-links a:hover, 
             .post-single .tags-links a:focus,
             blockquote, .blockquote,
+            .comment-actions a:hover, 
+            .comment-actions a:focus,
             .woocommerce .gridlist-toggle li a:hover, 
             .woocommerce .gridlist-toggle li a.active,
             .btn-default:hover, .btn-default:focus, .btn-default:active,

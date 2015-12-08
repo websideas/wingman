@@ -2952,7 +2952,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Previous & next buttons', THEME_LANG),
                         'desc' => __('Show Previous & next buttons in blog posts.', THEME_LANG),
-                        "default" => 1,
+                        "default" => 0,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG)
                     ),
@@ -2961,7 +2961,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Author info in posts', THEME_LANG),
                         'desc' => __('Show author info in blog posts.', THEME_LANG),
-                        "default" => 1,
+                        "default" => 0,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG)
                     ),
@@ -2970,7 +2970,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Related posts', THEME_LANG),
                         'desc' => __('Show related posts in blog posts.', THEME_LANG),
-                        "default" => 1,
+                        "default" => 0,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG)
                     ),
