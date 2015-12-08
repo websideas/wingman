@@ -196,9 +196,8 @@ function wp_ajax_fronted_popup_callback() {
     $dont_show = $_POST['val_input'];
 
     if( $dont_show == true ){
-        setcookie('kt_popup', 1, time() + ( 1000*60), '/');
+        setcookie('kt_popup', 1, time() + ( 1000*60*60*24), '/');
     }
     
     die();
 }
-setcookie('kt_popup', 1, time() - ( 1000*60), '/');

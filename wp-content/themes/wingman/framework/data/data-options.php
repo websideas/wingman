@@ -922,19 +922,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'background',
                         'title'    => __( 'Footer widgets Background', THEME_LANG ),
                         'subtitle' => __( 'Footer widgets Background with image, color, etc.', THEME_LANG ),
-                        'default'   => array( 'background-color' => '#2e2e2e' ),
+                        'default'   => array( 'background-color' => '#1e1e1e' ),
                         'output'      => array( '#footer-area' ),
-                    ),
-                    array(
-                        'id'       => 'footer_widgets_border',
-                        'type'     => 'border',
-                        'title'    => __( 'Footer widgets Border', THEME_LANG ),
-                        'output'   => array( '#footer-area' ),
-                        'all'      => false,
-                        'left'     => false,
-                        'right'    => false,
-                        'top'      => false,
-                        'default'  => array( )
                     ),
                     array(
                         'id'       => 'footer_widgets_padding',
@@ -1000,12 +989,25 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'content'  => '<div class="section-heading">'.__( 'Footer copyright settings', THEME_LANG ).'</div>',
                         'full_width' => true
                     ),
+
+                    array(
+                        'id'       => 'footer_copyright_border',
+                        'type'     => 'border',
+                        'title'    => __( 'Footer Copyright Border', THEME_LANG ),
+                        'output'   => array( '#footer-copyright' ),
+                        'all'      => false,
+                        'left'     => false,
+                        'right'    => false,
+                        'bottom'      => false,
+                        'default'  => array( )
+                    ),
+
                     array(
                         'id'       => 'footer_copyright_background',
                         'type'     => 'background',
                         'title'    => __( 'Footer Background', THEME_LANG ),
                         'subtitle' => __( 'Footer Background with image, color, etc.', THEME_LANG ),
-                        'default'   => array( 'background-color' => '#252525' ),
+                        'default'   => array( 'background-color' => '#1e1e1e' ),
                         'output'      => array( '#footer-copyright' ),
                     ),
                     array(
