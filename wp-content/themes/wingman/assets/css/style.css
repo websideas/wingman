@@ -1500,7 +1500,9 @@ body.opened-nav-animate {
 #footer-copyright {
   background: #1e1e1e;
   padding: 55px 0 98px;
-  color: #707070; }
+  color: #707070;
+  letter-spacing: 0.2em;
+  line-height: 24px; }
   #footer-copyright a {
     color: #FFFFFF; }
   #footer-copyright .socials-icon-wrapper {

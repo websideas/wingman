@@ -1367,6 +1367,8 @@ body.opened-nav-animate{
     background: $nav-bg;
     padding: 55px 0 98px;
     color: $main-text;
+    letter-spacing: 0.2em;
+    line-height: 24px;
     a{
       color: $white;
     }
