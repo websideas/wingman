@@ -41,16 +41,38 @@ function kt_setting_script() {
             }
         ?>
 
-        <?php if( $accent !='82c14f' ){ ?>
-
+        <?php if( $accent !='#82c14f' ){ ?>
             ::-moz-selection{ background:<?php echo $accent; ?>;}
             ::-webkit-selection{ background:<?php echo $accent; ?>;}
             ::selection{ background:<?php echo $accent; ?>;}
 
+        .readmore-link,
+        .readmore-link:hover,
+        .testimonial-rate span:after,
+        .blog-posts .entry-title a:hover,
 
+        .woocommerce .star-rating span:before
+
+        {
+            color: <?php echo $accent; ?>
+        }
+
+        #footer-area h3.widget-title:after,
+        #footer-area h3.widget-title:before,
+        .readmore-link:before,
+        .readmore-link:after
+        {
+            background: <?php echo $accent; ?>;
+        }
 
         <?php } ?>
         <?php
+            $color_first_loader = kt_option('color_first_loader', $accent);
+            echo '.kt_page_loader.style-1 .page_loader_inner{border-color: '.$color_first_loader.';}';
+            echo '.kt_page_loader.style-1 .kt_spinner{background-color: '.$color_first_loader.';}';
+
+
+
 
             $is_shop = false;
             if(is_archive()){

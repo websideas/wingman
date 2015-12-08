@@ -464,8 +464,7 @@ select:not([multiple]) {
       opacity: 1; }
 
 /* Border more */
-.readmore-link,
-.readmore-link-white {
+.readmore-link {
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -474,9 +473,7 @@ select:not([multiple]) {
   display: inline;
   color: #82c14f;
   padding: 0 8px; }
-  .readmore-link:after, .readmore-link:before,
-  .readmore-link-white:after,
-  .readmore-link-white:before {
+  .readmore-link:after, .readmore-link:before {
     content: "";
     -webkit-transition: all 0.2s ease-in-out 0s;
     -khtml-transition: all 0.2s ease-in-out 0s;
@@ -498,18 +495,13 @@ select:not([multiple]) {
     position: absolute;
     top: 0;
     bottom: 2px; }
-  .readmore-link:before,
-  .readmore-link-white:before {
+  .readmore-link:before {
     left: -10px; }
-  .readmore-link:after,
-  .readmore-link-white:after {
+  .readmore-link:after {
     right: -10px; }
-  .readmore-link:hover,
-  .readmore-link-white:hover {
+  .readmore-link:hover {
     color: #82c14f; }
-    .readmore-link:hover:before, .readmore-link:hover:after,
-    .readmore-link-white:hover:before,
-    .readmore-link-white:hover:after {
+    .readmore-link:hover:before, .readmore-link:hover:after {
       filter: alpha(opacity=100);
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
       -webkit-opacity: 1;
@@ -518,15 +510,10 @@ select:not([multiple]) {
       -ms-opacity: 1;
       -o-opacity: 1;
       opacity: 1; }
-    .readmore-link:hover:before,
-    .readmore-link-white:hover:before {
+    .readmore-link:hover:before {
       left: 0; }
-    .readmore-link:hover:after,
-    .readmore-link-white:hover:after {
+    .readmore-link:hover:after {
       right: 0; }
-
-.readmore-link-white {
-  color: #FFFFFF; }
 
 /* ==============================
    10. Header

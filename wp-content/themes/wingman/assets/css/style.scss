@@ -381,8 +381,7 @@ select:not([multiple]) {
 
 
 /* Border more */
-.readmore-link,
-.readmore-link-white{
+.readmore-link{
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -423,11 +422,6 @@ select:not([multiple]) {
       right: 0;
     }
   }
-
-}
-
-.readmore-link-white{
-    color: #FFFFFF;
 }
 
 

@@ -252,12 +252,10 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'subtitle' => __( 'Please choose header layout', THEME_LANG ),
                         'options'  => array(
                             'layout1' => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'header/header-v1.png' ),
-                            'layout2' => array( 'alt' => __( 'Layout 2', THEME_LANG ), 'img' => FW_IMG . 'header/header-v2.png' )
+                            'layout2' => array( 'alt' => __( 'Layout 2', THEME_LANG ), 'img' => FW_IMG . 'header/header-v2.png' ),
                         ),
                         'default'  => 'layout1'
                     ),
-
-
 
                     array(
                         'id'   => 'divide_id',
@@ -514,7 +512,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Use Page Loader?', THEME_LANG),
                         'desc' => __('', THEME_LANG),
-                        "default" => 1,
+                        'default' => 1,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG)
                     ),
@@ -525,26 +523,36 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => __( 'Loader layout', THEME_LANG ),
                         'subtitle' => __( 'Please choose loader layout', THEME_LANG ),
                         'options'  => array(
-                            'style-1' => array( 'alt' => __( 'Style 1', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v2.png' ),
-                            'style-2' => array( 'alt' => __( 'Style 2', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v3.png' ),
+                            'style-1' => array( 'alt' => __( 'Style 1', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v1.png' ),
+                            'style-2' => array( 'alt' => __( 'Style 2', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v2.png' ),
+                            'style-3' => array( 'alt' => __( 'Style 2', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v3.png' ),
                         ),
                         'default'  => 'style-1',
                     ),
                     array(
                         'id'       => 'background_page_loader',
-                        'type'     => 'color',
+                        'type'     => 'background',
                         'title'    => __( 'Background Color Page Loader', THEME_LANG ),
-                        'default'  => '#ffffff',
-                        'transparent' => false,
-                        'required' => array('use_page_loader','equals', array( 1 ) ),
+                        'background-repeat'     => false,
+                        'background-attachment' => false,
+                        'background-position'   => false,
+                        'background-image'      => false,
+                        'background-size'       => false,
+                        'preview'               => false,
+                        'transparent'           => false,
+                        'default'   => array(
+                            'background-color'      => '#FFFFFF',
+                        ),
+                        'output'   => array( '.kt_page_loader' ),
+                        'required' => array( 'use_page_loader', 'equals', array( 1 ) ),
                     ),
                     array(
                         'id'       => 'color_first_loader',
                         'type'     => 'color',
                         'title'    => __( 'Color Loader', THEME_LANG ),
-                        'default'  => '#d0a852',
+                        'default'  => '#82c14f',
                         'transparent' => false,
-                        'required' => array('use_page_loader','equals', array( 1 ) ),
+                        'required' => array( 'use_page_loader', 'equals', array( 1 ) ),
                     ),
                     array(
                         'id'       => 'color_second_loader',
@@ -552,7 +560,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => __( 'Color Second Loader', THEME_LANG ),
                         'default'  => '#cccccc',
                         'transparent' => false,
-                        'required' => array('use_page_loader','equals', array( 1 ) ),
+                        'required' => array( 'use_page_loader', 'equals', array( 1 ) ),
                     ),
                 )
             );
@@ -589,8 +597,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array( 'a' ),
                         'default'  => array(
                             'regular' => '#82c14f',
-                            'hover' => '#b28c45',
-                            'active' => '#b28c45'
+                            'hover' => '#689a3f',
+                            'active' => '#689a3f'
                         )
                     ),
                 )
