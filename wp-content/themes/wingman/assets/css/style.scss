@@ -190,6 +190,8 @@ blockquote,
   }
   p{
     margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
   }
   footer,
   small{
@@ -1802,6 +1804,9 @@ body.layout-boxed{
     li{
       position: relative;
       margin: 0;
+      a{
+        color: $main-text;
+      }
     }
   }
 }
@@ -2359,14 +2364,14 @@ article.post-item {
     }
     a{
       display: inline-block;
-      padding: 8px 35px;
+      padding: 0 35px;
+      line-height: 28px;
       border:1px solid $border-third-color;
       text-transform: uppercase;
       color: $second-color;
       font-size:11px;
       border-radius:3px;
       margin-right: 10px;
-      line-height: 1;
       letter-spacing: 0.1em;
       &:hover,&:focus{
         border-color: $primary-color;

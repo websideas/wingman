@@ -936,21 +936,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => __( 'Footer widgets padding', THEME_LANG ),
                         'default'  => array( )
                     ),
-                    array(
-                        'type' => 'divide',
-                        'id' => 'divide_fake',
-                    ),
-                    array(
-                        'id'       => 'footer_widgets_title_border',
-                        'type'     => 'border',
-                        'title'    => __( 'Footer widgets title border', THEME_LANG ),
-                        'output'   => array( '#footer-area h3.widget-title' ),
-                        'all'      => false,
-                        'left'     => false,
-                        'right'    => false,
-                        'top'      => false,
-                        'default'  => array( )
-                    ),
 
                     //Footer bottom settings
                     array(
@@ -1288,6 +1273,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => __( 'MegaMenu Text Hover color', THEME_LANG ),
                         'default'  => '#82c14f',
                         'transparent' => false
+                    ),
+
+                    array(
+                        'id'       => 'typography_heading',
+                        'type'     => 'raw',
+                        'content'  => '<div style="height:150px"></div>',
+                        'full_width' => true
                     ),
                 )
             );

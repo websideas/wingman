@@ -205,7 +205,9 @@ blockquote,
     right: 45px; }
   blockquote p,
   .blockquote p {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1; }
   blockquote footer,
   blockquote small,
   .blockquote footer,
@@ -1836,6 +1838,17 @@ body.layout-boxed #footer {
   .yith-woocompare-widget ul li {
     position: relative;
     margin: 0; }
+    .widget_rss ul li a,
+    .widget_pages ul li a,
+    .widget_recent_comments ul li a,
+    .widget_recent_entries ul li a,
+    .widget_nav_menu ul li a,
+    .widget_meta ul li a,
+    .widget_archive ul li a,
+    .widget_categories ul li a,
+    .widget_product_categories ul li a,
+    .yith-woocompare-widget ul li a {
+      color: #707070; }
 
 .widget_nav_menu ul li a,
 .widget_meta ul li a,
@@ -2345,14 +2358,14 @@ article.post-item {
     display: none; }
   .post-single .tags-links a {
     display: inline-block;
-    padding: 8px 35px;
+    padding: 0 35px;
+    line-height: 28px;
     border: 1px solid #dfdfdf;
     text-transform: uppercase;
     color: #898989;
     font-size: 11px;
     border-radius: 3px;
     margin-right: 10px;
-    line-height: 1;
     letter-spacing: 0.1em; }
     .post-single .tags-links a:hover, .post-single .tags-links a:focus {
       border-color: #82c14f;
