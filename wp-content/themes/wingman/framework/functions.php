@@ -900,6 +900,9 @@ function theme_after_footer_add_popup(){
                 <div class="white-popup-block">
                     <?php echo do_shortcode($content_popup); ?>
                 </div>
+                <form class="dont-show" name="dont-show">
+                    <input id="dont-showagain" type="checkbox" value="" /><label for="dont-showagain"><?php _e( "Don’t Show Again.", THEME_LANG ); ?></label>
+                </form>
             </div>
         <?php }
     }

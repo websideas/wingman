@@ -786,6 +786,7 @@
                                     var data = {
                                         action: 'fronted_popup',
                                         security : ajax_frontend.security,
+                                        val_input : $('form.dont-show input').prop("checked")
                                     };
                                     $.post(ajax_frontend.ajaxurl, data, function(response) { }, 'json');
                                 }

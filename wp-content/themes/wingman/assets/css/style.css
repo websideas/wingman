@@ -4134,6 +4134,8 @@ form.wpcf7-form p {
   background: #fff;
   position: relative;
   margin: 0 auto; }
+  #popup-wrap .white-popup-block {
+    padding-bottom: 30px; }
   #popup-wrap h3.title-top {
     text-align: center;
     margin: 0;
@@ -4171,6 +4173,76 @@ form.wpcf7-form p {
       transform: rotate(-45deg);
       filter: progid:DXImageTransform.Microsoft.Matrix( M11=0, M12=0, M21=0, M22=0, sizingMethod='auto expand');
       zoom: 1; }
+  #popup-wrap .mailchimp-form {
+    max-width: 350px;
+    margin: 0 auto;
+    position: relative; }
+    #popup-wrap .mailchimp-form input {
+      border: none;
+      border-bottom: 1px solid #252525;
+      padding: 4px 0;
+      height: auto;
+      color: #707070; }
+    #popup-wrap .mailchimp-form button {
+      background: none;
+      width: auto;
+      height: auto;
+      padding: 0;
+      color: #82c14f;
+      border: none;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      -webkit-transform: translatey(-50%);
+      -khtml-transform: translatey(-50%);
+      -moz-transform: translatey(-50%);
+      -ms-transform: translatey(-50%);
+      -o-transform: translatey(-50%);
+      transform: translatey(-50%); }
+  #popup-wrap h4.newletter-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 24px;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin-bottom: 35px; }
+  #popup-wrap form.dont-show {
+    padding: 20px 0;
+    text-align: center;
+    background: #111111; }
+    #popup-wrap form.dont-show label {
+      font-size: 12px;
+      font-weight: 300;
+      position: relative;
+      padding-left: 18px;
+      margin: 0;
+      line-height: 1; }
+      #popup-wrap form.dont-show label:before {
+        width: 12px;
+        height: 12px;
+        border: 1px solid #FFFFFF;
+        -webkit-border-radius: 2px;
+        -khtml-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        border-radius: 2px;
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 1px; }
+    #popup-wrap form.dont-show input {
+      filter: alpha(opacity=0);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      -webkit-opacity: 0;
+      -khtml-opacity: 0;
+      -moz-opacity: 0;
+      -ms-opacity: 0;
+      -o-opacity: 0;
+      opacity: 0; }
+      #popup-wrap form.dont-show input:checked ~ label:before {
+        background: #FFFFFF; }
 
 /*
  * 14.3. Page Loader
