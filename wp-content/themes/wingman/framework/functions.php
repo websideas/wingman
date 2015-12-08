@@ -822,12 +822,12 @@ function kt_get_categories_product(){
 
     
     if( count($categories) > 0 ){
-        echo '<select id="product_cat" class="postform" name="product_cat">';
+        echo '<div class="wrap_product_cat"><select id="product_cat" class="postform" name="product_cat">';
             echo '<option value="-1">'.__('All Categories', THEME_LANG).'</option>';
             foreach ($categories as $key => $value) {
                 echo '<option value="'.$value->slug.'">'.$value->name.'</option>';
             }
-        echo '</select>';
+        echo '</select></div>';
     }
 }
 

@@ -492,9 +492,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'footer_copyright_text',
                         'type'     => 'editor',
                         'title'    => __( 'Footer Copyright Text', THEME_LANG ),
-                        'default'  => 'Copyright © 2015 - Wing Man - All rights reserved.<br />Powered by Wordpress'
+                        'default'  => '<p style="margin-bottom: 38px;"><a href="'.esc_url( home_url( '/' )).'"><img src="'.THEME_IMG.'logo-light.png" alt="Wingman" /></a></p><p style="margin-bottom: 24px;"><img src="'.THEME_IMG.'payment.png" alt="payment" /></p>Copyright © 2015 - <a href="'.esc_url( home_url( '/' )).'">Wing Man</a> - All rights reserved. <br />Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a>'
                     ),
-                    
                 )
             );
 
@@ -801,7 +800,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'preview'               => false,
                         'transparent'           => false,
                         'default'   => array(
-                            'background-color'      => '#FFFFFF',
+                            'background-color'      => '#252525',
                         ),
                         'output'      => array( '.header-sticky-background' ),
                     ),
@@ -841,7 +840,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'background',
                         'title'    => __( 'Footer Background', THEME_LANG ),
                         'subtitle' => __( 'Footer Background with image, color, etc.', THEME_LANG ),
-                        'default'   => array( ),
+                        'default'   => array( 'background-color' => '#1e1e1e' ),
                         'output'      => array( '#footer' ),
                     ),
 
@@ -922,7 +921,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'background',
                         'title'    => __( 'Footer widgets Background', THEME_LANG ),
                         'subtitle' => __( 'Footer widgets Background with image, color, etc.', THEME_LANG ),
-                        'default'   => array( 'background-color' => '#1e1e1e' ),
+                        'default'   => array(  ),
                         'output'      => array( '#footer-area' ),
                     ),
                     array(
@@ -935,21 +934,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
                         'title'    => __( 'Footer widgets padding', THEME_LANG ),
-                        'default'  => array( )
-                    ),
-                    array(
-                        'type' => 'divide',
-                        'id' => 'divide_fake',
-                    ),
-                    array(
-                        'id'       => 'footer_widgets_title_border',
-                        'type'     => 'border',
-                        'title'    => __( 'Footer widgets title border', THEME_LANG ),
-                        'output'   => array( '#footer-area h3.widget-title' ),
-                        'all'      => false,
-                        'left'     => false,
-                        'right'    => false,
-                        'top'      => false,
                         'default'  => array( )
                     ),
 
@@ -1007,7 +991,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'background',
                         'title'    => __( 'Footer Background', THEME_LANG ),
                         'subtitle' => __( 'Footer Background with image, color, etc.', THEME_LANG ),
-                        'default'   => array( 'background-color' => '#1e1e1e' ),
+                        'default'   => array( ),
                         'output'      => array( '#footer-copyright' ),
                     ),
                     array(
@@ -1289,6 +1273,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => __( 'MegaMenu Text Hover color', THEME_LANG ),
                         'default'  => '#82c14f',
                         'transparent' => false
+                    ),
+
+                    array(
+                        'id'       => 'typography_heading',
+                        'type'     => 'raw',
+                        'content'  => '<div style="height:150px"></div>',
+                        'full_width' => true
                     ),
                 )
             );
@@ -2961,7 +2952,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Previous & next buttons', THEME_LANG),
                         'desc' => __('Show Previous & next buttons in blog posts.', THEME_LANG),
-                        "default" => 1,
+                        "default" => 0,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG)
                     ),
@@ -2970,7 +2961,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Author info in posts', THEME_LANG),
                         'desc' => __('Show author info in blog posts.', THEME_LANG),
-                        "default" => 1,
+                        "default" => 0,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG)
                     ),
@@ -2979,7 +2970,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Related posts', THEME_LANG),
                         'desc' => __('Show related posts in blog posts.', THEME_LANG),
-                        "default" => 1,
+                        "default" => 0,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG)
                     ),

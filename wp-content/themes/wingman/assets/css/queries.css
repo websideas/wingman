@@ -109,7 +109,10 @@
     padding: 16px 10px 16px 0; }
 
   .table-responsive {
-    border-color: #e5e5e5; } }
+    border-color: #e5e5e5; }
+
+  .comment-list li ul.children {
+    padding-left: 0; } }
 @media (max-width: 600px) {
   .woocommerce ul.shop-products.lists li.product .product-image-container,
   .woocommerce ul.shop-products.lists li.product .product-attr-container {

@@ -190,6 +190,8 @@ blockquote,
   }
   p{
     margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
   }
   footer,
   small{
@@ -1802,6 +1804,9 @@ body.layout-boxed{
     li{
       position: relative;
       margin: 0;
+      a{
+        color: $main-text;
+      }
     }
   }
 }
@@ -2109,14 +2114,28 @@ body.layout-boxed{
     max-width: 770px;
     margin: 0 auto;
     overflow: hidden;
+    .wrap_product_cat{
+      width: 35%;
+      float: left;
+      position: relative;
+      &:before{
+        position: absolute;
+        @include FontAwesome("\f107");
+        font-size: 18px;
+        color: $white;
+        right: 20px;
+        top: 50%;
+        @include transform(translatey(-50%));
+        pointer-events:none;
+      }
+    }
     .postform{
-      background: #82c14f url(../images/arrow-form-cat.png) no-repeat right center;   
+      background: #82c14f;   
       color: $white; 
       border: none;
       display: block;
       height:50px;
-      width: 35%;
-      float: left;
+      width: 100%;
       text-align: center;
       font-weight: 600;
       text-transform: uppercase;
@@ -2359,14 +2378,14 @@ article.post-item {
     }
     a{
       display: inline-block;
-      padding: 8px 35px;
+      padding: 0 35px;
+      line-height: 28px;
       border:1px solid $border-third-color;
       text-transform: uppercase;
       color: $second-color;
       font-size:11px;
       border-radius:3px;
       margin-right: 10px;
-      line-height: 1;
       letter-spacing: 0.1em;
       &:hover,&:focus{
         border-color: $primary-color;
@@ -2507,6 +2526,9 @@ article.post-item {
   margin: 0;
   li{
     list-style: none;
+    ul.children{
+      padding-left: 97px;
+    }
   }
 }
 .comment-form{
@@ -2656,8 +2678,6 @@ article.post-item {
 }
 .comment-respond{
   margin-bottom: 25px;
-  padding-top: 55px;
-  border-top: 1px solid $border-second-color;
 }
 .comment-notes,
 .form-allowed-tags {
@@ -2681,7 +2701,9 @@ article.post-item {
 }
 
 #related-article{
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $border-second-color;
+  margin-bottom: 55px;
   h2.entry-title{
     font-size: 14px;
     margin: 0;
