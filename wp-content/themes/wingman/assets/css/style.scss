@@ -4470,3 +4470,124 @@ form.wpcf7-form{
     }
   }
 }
+
+
+/*
+ * 14.3. Page Loader
+ */
+.kt_page_loader{
+  position: fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background: #fff;
+  z-index: 999999999;
+
+  .kt_spinner{
+    width: 50px;
+    height: 50px;
+    margin:0 auto;
+  }
+
+  .page_loader_inner{
+    @include translate(c);
+    text-align: center;
+  }
+  &.style-1{
+    .page_loader_inner{
+      animation: loader 4s infinite ease;
+      width: 50px;
+      height: 50px;
+      border: 2px solid $primary-color;
+    }
+    .kt_spinner{
+      vertical-align: top;
+      display: inline-block;
+      width: 100%;
+      background-color: $primary-color;
+      animation: loader-inner 4s infinite ease-in;
+    }
+  }
+  &.style-2{
+    .kt_spinner {
+      border: 1px solid #cccccc;
+      @include animation(rotate 1.3s linear 0s infinite);
+      border-radius: 100%;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: #d0a852;
+        @include border-radius(50%);
+        @include animation(3s linear 0s infinite);
+        left: -5px;
+        top: 18px;
+      }
+    }
+  }
+  &.style-3{
+    .kt_spinner {
+      border: 2px solid #cccccc;
+      border-bottom-color: #d0a852;
+      @include animation(rotate 1.5s linear 0s infinite);
+      border-radius: 100%;
+    }
+  }
+}
+
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% { height: 0; }
+  25% { height: 0; }
+  50% { height: 100%; }
+  75% { height: 100%; }
+  100% { height: 0; }
+}
+
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

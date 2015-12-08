@@ -743,14 +743,9 @@ if ( ! function_exists( 'kt_page_loader' ) ) :
         $use_loader = kt_option( 'use_page_loader',1 );
         if( $use_loader ){
             $layout_loader = kt_option( 'layout_loader', 'style-1' );
-            $enable_logo = kt_option( 'show_logo_page_loader', 0 );
-            $logo_loader = kt_option( 'logo_page_loader' );
             ?>
             <div class="kt_page_loader <?php echo esc_attr($layout_loader); ?>">
                 <div class="page_loader_inner">
-                    <?php if( $logo_loader['url'] && $enable_logo == 1 ){ ?>
-                        <div class="logo-loader"><img alt="<?php bloginfo( 'name' ); ?>" class="logo-dark" src="<?php echo esc_url($logo_loader['url']); ?>" /></div>
-                    <?php } ?>
                     <div class="kt_spinner"></div>
                 </div>
             </div>

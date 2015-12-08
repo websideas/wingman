@@ -525,23 +525,10 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => __( 'Loader layout', THEME_LANG ),
                         'subtitle' => __( 'Please choose loader layout', THEME_LANG ),
                         'options'  => array(
-                            'style-1' => array( 'alt' => __( 'Style 1', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v1.png' ),
-                            'style-2' => array( 'alt' => __( 'Style 2', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v2.png' ),
-                            'style-3' => array( 'alt' => __( 'Style 3', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v3.png' ),
-                            'style-4' => array( 'alt' => __( 'Style 4', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v4.png' ),
+                            'style-1' => array( 'alt' => __( 'Style 1', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v2.png' ),
+                            'style-2' => array( 'alt' => __( 'Style 2', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v3.png' ),
                         ),
                         'default'  => 'style-1',
-                        'required' => array('use_page_loader','equals', array( 1 ) ),
-                    ),
-                    array(
-                        'id' => 'show_logo_page_loader',
-                        'type' => 'switch',
-                        'title' => __('Show Logo on page Loader?', THEME_LANG),
-                        'desc' => __('Show or hide the logo of page loader.', THEME_LANG),
-                        "default" => 0,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG),
-                        'required' => array('use_page_loader','equals', array( 1 ) ),
                     ),
                     array(
                         'id'       => 'background_page_loader',
@@ -566,14 +553,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'default'  => '#cccccc',
                         'transparent' => false,
                         'required' => array('use_page_loader','equals', array( 1 ) ),
-                    ),
-                    array(
-                        'id'       => 'logo_page_loader',
-                        'type'     => 'media',
-                        'url'      => true,
-                        'compiler' => true,
-                        'title'    => __( 'Logo Page Loader', THEME_LANG ),
-                        'required' => array('show_logo_page_loader','equals', array( 1 ) ),
                     ),
                 )
             );
