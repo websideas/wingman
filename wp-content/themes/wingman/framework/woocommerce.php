@@ -44,7 +44,7 @@ function kt_woocommerce_image_dimensions() {
 
     $catalog = array('width' => '500','height' => '555', 'crop' => 1 );
     $thumbnail = array('width' => '200', 'height' => '250', 'crop' => 1 );
-    $single = array( 'width' => '1000','height' => '1300', 'crop' => 1);
+    $single = array( 'width' => '800','height' => '1050', 'crop' => 1);
 
     // Image sizes
     update_option( 'shop_catalog_image_size', $catalog ); 		// Product category thumbs
