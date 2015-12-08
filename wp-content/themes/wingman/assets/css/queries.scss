@@ -65,7 +65,31 @@ only screen and (min-resolution: 144dpi) {
 				}
 			}
 		}
+      div.product{
+        .product-detail-thumbarea{
+          &.slick-carousel{
+            padding: 0;
+            .single-product-main-thumbnails{
+              position: relative;
+              margin: 0 -14px;
+              width: auto;
+              .slick-slide{
+                margin: 0 14px;
+              }
+            }
+          }
+        }
+      }
+
+
 	}
+
+  .entry-share-box{
+    a{
+      margin-left: 30px;
+    }
+  }
+
 	.wrapper-comingsoon {
 	  &.style1{
 	    .coming-soon{

@@ -1806,11 +1806,15 @@ body .mCSB_scrollTools {
     margin-right: 10px;
     color: #252525;
     text-transform: uppercase; }
-    .woocommerce-page div.product .product_meta > span a, .woocommerce-page div.product .product_meta > span span,
+    .woocommerce-page div.product .product_meta > span a,
+    .woocommerce-page div.product .product_meta > span span,
     .woocommerce div.product .product_meta > span a,
     .woocommerce div.product .product_meta > span span {
       text-transform: none;
       color: #707070; }
+    .woocommerce-page div.product .product_meta > span a:hover,
+    .woocommerce div.product .product_meta > span a:hover {
+      color: #82c14f; }
 .woocommerce-page div.product form.cart,
 .woocommerce-page div.product p.cart,
 .woocommerce div.product form.cart,

@@ -270,49 +270,53 @@
 
 
     function init_productslickwoo(){
+
+        $('.single-product-main-images').slick({
+            asNavFor: '.single-product-main-thumbnails',
+            infinite: false,
+            draggable: false
+        });
+
         var options = {
             asNavFor: '.single-product-main-images',
             infinite: false,
             focusOnSelect: true,
+            slidesToShow: 3
         };
+
+        //1199, 991, 768, 480
+
         if( $('.single-product .main-class').hasClass('col-md-12') ){
             options.slidesToShow = 4;
             options.vertical = true;
             options.verticalSwiping = true;
             options.responsive = [
                 {
-                  breakpoint: 1024,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                  }
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 3
+                    }
                 },
                 {
-                  breakpoint: 801,
-                  settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                  }
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 3,
+                        vertical : false,
+                        verticalSwiping: false
+                    }
                 },
                 {
                   breakpoint: 480,
                   settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToShow: 1
                   }
                 }
             ];
         }else{
-            options.slidesToShow = 3;
-            options.vertical = false;
-            options.verticalSwiping = false;
+
         }
 
-        $('.single-product-main-images').slick({
-            asNavFor: '.single-product-main-thumbnails',
-            infinite: false,
-            draggable: false,
-        });
+
         $('.single-product-main-thumbnails').slick(options);
     }
     
