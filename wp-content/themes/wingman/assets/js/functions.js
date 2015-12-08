@@ -58,7 +58,6 @@
         init_kt_animation();
         init_loadmore();
         init_VCLightBox();
-        init_mailchimp();
         //init_smooth_scrolling();
 
         kt_likepost();
@@ -600,44 +599,6 @@
 
     }
 
-
-
-
-    /* ---------------------------------------------
-     Mailchimp
-     --------------------------------------------- */
-    function init_mailchimp(){
-
-        $( 'body' ).on( 'submit', '.mailchimp-form', function ( e ){
-            e.preventDefault();
-            var $mForm = $(this),
-                $button = $mForm.find('.mailchimp-submit'),
-                $error = $mForm.find('.mailchimp-error').fadeOut(),
-                $success = $mForm.find('.mailchimp-success').fadeOut();
-
-            $button.addClass('loading').html($button.data('loading'));
-
-            var data = {
-                action: 'frontend_mailchimp',
-                security : ajax_frontend.security,
-                email: $mForm.find('input[name=email]').val(),
-                firstname: $mForm.find('input[name=firstname]').val(),
-                lastname: $mForm.find('input[name=lastname]').val(),
-                list_id: $mForm.find('input[name=list_id]').val(),
-                opt_in: $mForm.find('input[name=opt_in]').val()
-            };
-
-            $.post(ajax_frontend.ajaxurl, data, function(response) {
-                $button.removeClass('loading').html($button.data('text'));
-
-                if(response.error == '1'){
-                    $error.html(response.msg).fadeIn();
-                }else{
-                    $success.fadeIn();
-                }
-            }, 'json');
-        });
-    }
     
     /* ---------------------------------------------
      Kt Animation
@@ -776,24 +737,24 @@
             var $disable_mobile = $('#popup-wrap').data('mobile'),
                 time_show = $('#popup-wrap').data('timeshow');
             
-                if(ktmobile == false || (ktmobile == true && $disable_mobile == 0)){
-                    setTimeout(function(){
-                        $.magnificPopup.open({
-                            items: { src: '#popup-wrap' },
-                            type: 'inline',
-                            callbacks: {
-                                beforeClose: function() {
-                                    var data = {
-                                        action: 'fronted_popup',
-                                        security : ajax_frontend.security,
-                                        val_input : $('form.dont-show input').prop("checked")
-                                    };
-                                    $.post(ajax_frontend.ajaxurl, data, function(response) { }, 'json');
-                                }
+            //if(ktmobile == false || (ktmobile == true && $disable_mobile == 0)){
+                //setTimeout(function(){
+                    $.magnificPopup.open({
+                        items: { src: '#popup-wrap' },
+                        type: 'inline',
+                        callbacks: {
+                            beforeClose: function() {
+                                var data = {
+                                    action: 'fronted_popup',
+                                    security : ajax_frontend.security,
+                                    val_input : $('form.dont-show input').prop("checked")
+                                };
+                                $.post(ajax_frontend.ajaxurl, data, function(response) { }, 'json');
                             }
-                        });
-                    }, time_show*1000);
-                }
+                        }
+                    });
+                //}, time_show*1000);
+            //}
         }
     }
 

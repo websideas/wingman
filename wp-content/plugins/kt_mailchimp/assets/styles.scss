@@ -1,0 +1,39 @@
+
+.mailchimp-form {
+
+
+  .mailchimp-error,
+  .mailchimp-success{
+    display: none;
+    margin-top: 20px;
+    clear: both;
+  }
+
+  .mailchimp-error{
+    &:before {
+        margin-right: 5px;
+        content: '\f0da';
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+      }
+  }
+
+  .mailchimp-success{
+    &:before {
+    }
+  }
+
+  .mailchimp-email-button{
+    position: relative;
+
+
+  }
+
+  .mailchimp-input-button{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+}

@@ -206,7 +206,6 @@ function kt_get_page_layout(){
         }
     }
 
-
     if($page_header_layout == ''){
         $page_header_layout = kt_option('title_layout', 'sides');
     }
@@ -792,55 +791,6 @@ if ( ! function_exists( 'kt_login_body_class' ) ) :
 endif;
 
 
-//if ( ! function_exists( 'kt_register_account' ) ) :
-    /**
-     * Change register account
-     *
-     */
-    /*
-    function kt_register_account(){
-        $rememberme = ! empty( $_POST['rememberme'] );
-        ?>
-        <p class="forgetmenot kt_forget"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever" <?php checked( $rememberme ); ?> /> <?php esc_attr_e('Remember Me'); ?></label></p>
-        <?php
-        if ( get_option( 'users_can_register' ) ) {
-            $registration_url = sprintf( '<p class="register"><a class="button button-primary button-large" href="%s">%s</a></p>', esc_url( wp_registration_url() ), __( 'Register' ) );            
-            echo apply_filters( 'register', $registration_url );
-        }
-    }
-    add_action('login_form', 'kt_register_account');*/
-//endif;
-
-if ( ! function_exists( 'kt_theme_before_main' ) ) :
-    /**
-     * Add <div> overlap before row main
-     *
-     */
-    function kt_theme_before_main(){
-        $overlap = rwmb_meta('_kt_overlap_content');
-        if($overlap == 'yes'){
-            echo "<div class='overlap-maincontent'>";
-        }
-    }
-    add_action('theme_before_main', 'kt_theme_before_main');
-endif;
-
-
-
-if ( ! function_exists( 'kt_theme_after_main' ) ) :
-    /**
-     * Add </div> overlap after row main
-     *
-     */
-    function kt_theme_after_main(){
-        $overlap = rwmb_meta('_kt_overlap_content');
-        if($overlap == 'yes'){
-            echo "</div>";
-        }
-    }
-    add_action('theme_after_main', 'kt_theme_after_main');
-endif;
-
 
 remove_filter ('the_content', 'fbcommentbox', 100);
 
@@ -851,7 +801,6 @@ remove_filter ('the_content', 'fbcommentbox', 100);
 function advanced_search_query($query) {
 
     if($query->is_search()) {
-        // category terms search.
         if (isset($_GET['product_cat']) && !empty($_GET['product_cat'])) {
             $query->set('tax_query', array(array(
                 'taxonomy' => 'product_cat',
@@ -895,15 +844,16 @@ function theme_after_footer_add_popup(){
     $time_show = kt_option( 'time_show', 0 );
     
     if( $enable_popup == 1 ){ 
-        if(!isset($_COOKIE['kt_popup'])){ ?>
+        //if(!isset($_COOKIE['kt_popup'])){ ?>
             <div id="popup-wrap" class="mfp-hide" data-mobile="<?php echo esc_attr( $disable_popup_mobile ); ?>" data-timeshow="<?php echo esc_attr($time_show); ?>">     
                 <div class="white-popup-block">
                     <?php echo do_shortcode($content_popup); ?>
                 </div>
                 <form class="dont-show" name="dont-show">
-                    <input id="dont-showagain" type="checkbox" value="" /><label for="dont-showagain"><?php _e( "Don’t Show Again.", THEME_LANG ); ?></label>
+                    <input id="dont-showagain" type="checkbox" value="" />
+                    <label for="dont-showagain"><?php _e( "Don’t Show Again.", THEME_LANG ); ?></label>
                 </form>
             </div>
-        <?php }
+        <?php //}
     }
 }

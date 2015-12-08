@@ -37,19 +37,6 @@ require_once ( FW_DIR . 'ajax.php' );
 
 
 /**
- * Include Mailchim API.
- *
- */
-require_once ( FW_CLASS . 'MCAPI.class.php' );
-
-/**
- * Include Instagram API.
- *
- */
-
-require_once ( FW_CLASS . 'instagram-api.php' );
-
-/**
  * Get all functions for frontend
  *
  */
