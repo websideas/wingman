@@ -1303,7 +1303,7 @@ body.opened-nav-animate{
     padding: 0 0 30px;
 }
 #footer-area {
-  padding: 75px 0 55px 0;
+  padding: 75px 0 20px 0;
   background: $nav-bg;
   .footer-area-one{
     text-align: center;
@@ -1365,12 +1365,12 @@ body.opened-nav-animate{
 }
 #footer-copyright {
     background: $nav-bg;
-    padding: 55px 0 98px;
+    padding: 60px 0 98px;
     color: $main-text;
     letter-spacing: 0.2em;
     line-height: 24px;
     a{
-      color: $white;
+      color: $main-text;
     }
     .socials-icon-wrapper{
       margin: 0;

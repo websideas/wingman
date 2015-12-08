@@ -1422,7 +1422,7 @@ body.opened-nav-animate {
   padding: 0 0 30px; }
 
 #footer-area {
-  padding: 75px 0 55px 0;
+  padding: 75px 0 20px 0;
   background: #1e1e1e; }
   #footer-area .footer-area-one {
     text-align: center; }
@@ -1499,12 +1499,12 @@ body.opened-nav-animate {
 
 #footer-copyright {
   background: #1e1e1e;
-  padding: 55px 0 98px;
+  padding: 60px 0 98px;
   color: #707070;
   letter-spacing: 0.2em;
   line-height: 24px; }
   #footer-copyright a {
-    color: #FFFFFF; }
+    color: #707070; }
   #footer-copyright .socials-icon-wrapper {
     margin: 0; }
 
