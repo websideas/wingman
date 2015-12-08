@@ -49,6 +49,17 @@
     padding: 20px; }
     .woocommerce table.cart tbody td.actions a, .woocommerce table.cart tbody td.actions input {
       margin: 0 2%; }
+  .woocommerce div.product .product-detail-thumbarea.slick-carousel {
+    padding: 0; }
+    .woocommerce div.product .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails {
+      position: relative;
+      margin: 0 -14px;
+      width: auto; }
+      .woocommerce div.product .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-slide {
+        margin: 0 14px; }
+
+  .entry-share-box a {
+    margin-left: 30px; }
 
   .wrapper-comingsoon.style1 .coming-soon .wrap {
     display: inline-block;

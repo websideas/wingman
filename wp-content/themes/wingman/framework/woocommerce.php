@@ -467,9 +467,9 @@ add_filter( 'woocommerce_single_product_thumb_area', 'woocommerce_single_product
 function woocommerce_single_product_thumb_area_callback(){
     $sidebar = kt_get_woo_sidebar();
     if($sidebar['sidebar'] == 'left' || $sidebar['sidebar'] == 'right'){
-        return 'col-sm-12 col-md-5';
+        return 'col-xs-12 col-sm-5';
     }else{
-        return 'col-sm-6 col-md-6';
+        return 'col-xs-12 col-sm-6';
     }
 }
 
@@ -485,9 +485,9 @@ add_filter( 'woocommerce_single_product_summary_area', 'woocommerce_single_produ
 function woocommerce_single_product_summary_area_callback(){
     $sidebar = kt_get_woo_sidebar();
     if($sidebar['sidebar'] == 'left' || $sidebar['sidebar'] == 'right'){
-        return 'col-sm-12 col-md-7';
+        return 'col-xs-12 col-sm-7';
     }else{
-        return 'col-sm-6 col-md-6';
+        return 'col-xs-12 col-sm-6';
     }
 }
 

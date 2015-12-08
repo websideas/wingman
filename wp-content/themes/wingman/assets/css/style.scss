@@ -4588,7 +4588,7 @@ form.wpcf7-form{
         position: absolute;
         width: 15px;
         height: 15px;
-        background: #d0a852;
+        background: $primary-color;
         @include border-radius(50%);
         @include animation(3s linear 0s infinite);
         left: -5px;
@@ -4599,33 +4599,10 @@ form.wpcf7-form{
   &.style-3{
     .kt_spinner {
       border: 2px solid #cccccc;
-      border-bottom-color: #d0a852;
+      border-bottom-color: $primary-color;
       @include animation(rotate 1.5s linear 0s infinite);
       border-radius: 100%;
     }
-  }
-}
-
-
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  25% {
-    transform: rotate(180deg);
-  }
-
-  50% {
-    transform: rotate(180deg);
-  }
-
-  75% {
-    transform: rotate(360deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
   }
 }
 
@@ -4636,6 +4613,16 @@ form.wpcf7-form{
   75% { height: 100%; }
   100% { height: 0; }
 }
+
+@keyframes loader {
+  0% {  transform: rotate(0deg);  }
+  25% {  transform: rotate(180deg);  }
+  50% {  transform: rotate(180deg); }
+  75% {  transform: rotate(360deg);  }
+  100% {  transform: rotate(360deg);  }
+}
+
+
 
 
 @-webkit-keyframes rotate {

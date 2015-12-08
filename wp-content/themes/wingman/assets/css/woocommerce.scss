@@ -1833,17 +1833,25 @@ body{
 		    border-top:1px solid $border-second-color;
 		}
 		.product_meta{
-			clear: both;
-    		margin: 20px 0;
-    		> span{
-    			margin-right: 10px;
-			    color:$title-text;
-			    text-transform: uppercase;
-			    a,span{
-			    	text-transform: none;
-    				color:$main-text;
-			    }
-    		}
+          clear: both;
+          margin: 20px 0;
+          > span{
+            margin-right: 10px;
+            color:$title-text;
+            text-transform: uppercase;
+            a,
+            span{
+              text-transform: none;
+              color:$main-text;
+            }
+            a{
+              &:hover{
+                color: $primary-color;
+              }
+            }
+          }
+
+
 		}
 		form.cart,
 		p.cart{
