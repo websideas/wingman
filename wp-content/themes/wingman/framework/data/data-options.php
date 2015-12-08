@@ -492,9 +492,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'footer_copyright_text',
                         'type'     => 'editor',
                         'title'    => __( 'Footer Copyright Text', THEME_LANG ),
-                        'default'  => 'Copyright © 2015 - Wing Man - All rights reserved.<br />Powered by Wordpress'
+                        'default'  => '<p style="margin-bottom: 38px;"><a href="'.esc_url( home_url( '/' )).'"><img src="'.THEME_IMG.'logo-light.png" alt="Wingman" /></a></p><p style="margin-bottom: 24px;"><img src="'.THEME_IMG.'payment.png" alt="payment" /></p>Copyright © 2015 - <a href="'.esc_url( home_url( '/' )).'">Wing Man</a> - All rights reserved. <br />Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a>'
                     ),
-                    
                 )
             );
 
@@ -841,7 +840,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'background',
                         'title'    => __( 'Footer Background', THEME_LANG ),
                         'subtitle' => __( 'Footer Background with image, color, etc.', THEME_LANG ),
-                        'default'   => array( ),
+                        'default'   => array( 'background-color' => '#1e1e1e' ),
                         'output'      => array( '#footer' ),
                     ),
 
@@ -922,7 +921,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'background',
                         'title'    => __( 'Footer widgets Background', THEME_LANG ),
                         'subtitle' => __( 'Footer widgets Background with image, color, etc.', THEME_LANG ),
-                        'default'   => array( 'background-color' => '#1e1e1e' ),
+                        'default'   => array(  ),
                         'output'      => array( '#footer-area' ),
                     ),
                     array(
@@ -1007,7 +1006,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'background',
                         'title'    => __( 'Footer Background', THEME_LANG ),
                         'subtitle' => __( 'Footer Background with image, color, etc.', THEME_LANG ),
-                        'default'   => array( 'background-color' => '#1e1e1e' ),
+                        'default'   => array( ),
                         'output'      => array( '#footer-copyright' ),
                     ),
                     array(
