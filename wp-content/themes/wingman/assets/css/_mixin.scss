@@ -446,7 +446,7 @@
   #{$property}: calc(#{$expression});
 }
 
-/// Calc
+/// FontAwesome
 @mixin FontAwesome($glyph, $font : 'FontAwesome') {
   font-family: $font;
   content: "#{$glyph}";

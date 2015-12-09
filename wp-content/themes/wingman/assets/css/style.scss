@@ -1223,6 +1223,7 @@ select:not([multiple]) {
           list-style: none;
           > li {
             margin-bottom: 10px;
+            width: auto!important;
             > a,
             > span {
               display: block;

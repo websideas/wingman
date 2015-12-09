@@ -1929,10 +1929,14 @@ body .mCSB_scrollTools {
       right: 50px;
       left: auto; }
       .single-product-quickview .single-product-quickview-images .slick-arrow.slick-prev:before {
-        font-family: FontAwesome;
+        font-family: "FontAwesome";
         content: "";
-        font-style: normal;
+        speak: none;
         font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        -webkit-font-smoothing: antialiased;
+        text-decoration: none;
         font-size: 20px;
         line-height: 28px; }
       .single-product-quickview .single-product-quickview-images .slick-arrow.slick-prev:after {
@@ -1946,10 +1950,14 @@ body .mCSB_scrollTools {
     .single-product-quickview .single-product-quickview-images .slick-arrow.slick-next {
       right: 10px; }
       .single-product-quickview .single-product-quickview-images .slick-arrow.slick-next:before {
-        font-family: FontAwesome;
+        font-family: "FontAwesome";
         content: "";
-        font-style: normal;
+        speak: none;
         font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        -webkit-font-smoothing: antialiased;
+        text-decoration: none;
         font-size: 20px;
         line-height: 28px; }
     .single-product-quickview .single-product-quickview-images .slick-arrow:before {

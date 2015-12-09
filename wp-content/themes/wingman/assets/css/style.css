@@ -1370,7 +1370,8 @@ select:not([multiple]) {
           padding: 0;
           list-style: none; }
           .main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li {
-            margin-bottom: 10px; }
+            margin-bottom: 10px;
+            width: auto !important; }
             .main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li > a,
             .main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li > span {
               display: block;

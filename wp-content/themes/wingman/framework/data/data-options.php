@@ -170,7 +170,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'id' 	=> 'general',
                 'title'  => __( 'General', THEME_LANG ),
                 'desc'   => __( '', THEME_LANG ),
-                'icon'	=> 'icon_cogs'
+                'icon'	=> 'icon-Settings-Window'
             );
             $this->sections[] = array(
                 'id' 	=> 'general_layout',
@@ -571,7 +571,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 				'id'			=> 'styling',
 				'title'			=> __( 'Styling', THEME_LANG ),
 				'desc'			=> '',
-				'icon_class'	=> 'icon_camera_alt',
+				'icon'	=> 'icon-Palette',
             );
             /**
 			 *	Styling General
@@ -1427,44 +1427,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                 )
             );
             /**
-             *	Custom login
-             **/
-            $this->sections[] = array(
-                'id'			=> 'logos_admin',
-                'title'			=> __( 'Custom login', THEME_LANG ),
-                'desc'			=> '',
-                'subsection' => true,
-                'fields'		=> array(
-                    array(
-                        'id'       => 'logos_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Custom login', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id'       => 'logo_admin',
-                        'type'     => 'media',
-                        'url'      => true,
-                        'compiler' => true,
-                        'title'    => __( 'Logo Admin', THEME_LANG ),
-                    ),
-                    array(
-                        'id'       => 'background_admin',
-                        'type'     => 'background',
-                        'title'    => __( 'Body Background for admin', THEME_LANG ),
-                        'subtitle' => __( 'Body background with image, color, etc.', THEME_LANG )
-                    ),
-                )
-            );
-            
-            /**
 			 *	Typography
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'typography',
 				'title'			=> __( 'Typography', THEME_LANG ),
 				'desc'			=> '',
-				'icon_class'	=> 'icon_tool',
+				'icon_class'	=> 'icon-Font-Name',
             );
             
             /**
@@ -1475,7 +1444,6 @@ if ( ! class_exists( 'KT_config' ) ) {
 				'title'			=> __( 'General', THEME_LANG ),
 				'subsection' => true,
                 'fields'		=> array(
-                    /*
                     array(
                         'id'       => 'typography_body',
                         'type'     => 'typography',
@@ -1484,14 +1452,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'text-align' => false,
                         'letter-spacing'  => true,
                         'output'      => array( 'body' ),
-                        'default'  => array(
-                            'font-family'     => 'Poppins',
-                            'font-size'       => '14px',
-                            'line-height'     => '24px',
-                            'color'           => '#707070',
-                        )
+                        'default'  => array( )
                     ),
-                    */
                     array(
                         'id'       => 'typography_pragraph',
                         'type'     => 'typography',
@@ -1812,7 +1774,7 @@ if ( ! class_exists( 'KT_config' ) ) {
             /**
 			 *	Typography Navigation
 			 **/
-            /*
+
 			$this->sections[] = array(
 				'id'			=> 'typography_navigation',
 				'title'			=> __( 'Main Navigation', THEME_LANG ),
@@ -1828,9 +1790,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'color'           => false,
                         'line-height'     => false,
                         'text-transform' => true,
-                        'output'      => array( '#nav > ul > li > a' ),
+                        'output'      => array( '#main-navigation > li > a' ),
                         'default'  => array(
-                            'font-family'     => 'Poppins',
                             'text-transform' => 'uppercase',
                             'font-weight'    => '600'
                         ),
@@ -1855,8 +1816,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'line-height'     => false,
                         'text-transform' => true,
                         'output'      => array(
-                            '#main-nav-tool .kt-wpml-languages ul li > a',
-                            '#main-navigation > li ul.sub-menu-dropdown > li > a'
+                            '#main-navigation > li ul.sub-menu-dropdown li > a'
                         ),
                         'default'  => array(
                             'font-family'     => 'Poppins',
@@ -1879,9 +1839,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'line-height'     => false,
                         'text-transform' => true,
                         'output'      => array( 
-                            '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a',
-                            '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > span',
-                            '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li .widget-title'
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a',
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span',
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li .widget-title'
                         ),
                         'default'  => array(
                             'font-family'     => 'Josefin Slab',
@@ -1899,19 +1859,19 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'text-transform' => true,
                         'line-height'     => false,
                         'output'      => array(
-                            '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > .sub-menu-megamenu > li > a'
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu a'
                         ),
                         'default'  => array( ),
                     )
 
                 )
             );
-*/
+
 
             /**
              *	Typography mobile Navigation
              **/
-            /*
+
             $this->sections[] = array(
                 'id'			=> 'typography_mobile_navigation',
                 'title'			=> __( 'Mobile Navigation', THEME_LANG ),
@@ -1929,7 +1889,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'text-transform' => true,
                         'output'      => array( 'ul.navigation-mobile > li > a' ),
                         'default'  => array(
-                            'font-family'     => 'Poppins',
                             'text-transform' => 'uppercase',
                         ),
                     ),
@@ -1947,8 +1906,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'line-height'     => false,
                         'text-transform' => true,
                         'output'      => array(
-                            'ul.navigation-mobile > li .sub-menu-dropdown > li > a',
-                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > .sub-menu-megamenu > li > a'
+                            '.main-nav-mobile > ul > li ul.sub-menu-dropdown li a',
+                            '.main-nav-mobile > ul > li ul.sub-menu-megamenu li a'
                         ),
                     ),
                     array(
@@ -1961,45 +1920,19 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'line-height'     => false,
                         'text-transform' => true,
                         'output'      => array(
-                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a',
-                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > span',
-                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li .widget-title'
+                            '.main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li > a',
+                            '.main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li > span',
+                            '.main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li .widget-title'
                         ),
                         'default'  => array(
-                            'font-family'     => 'Josefin Slab',
                             'text-transform' => 'uppercase',
                             'font-weight'  => '700'
                         ),
                     ),
                 )
             );
-*/
 
-            /**
-             *	Typography Woocommerce
-             **/
-            $this->sections[] = array(
-                'id'			=> 'typography_woocommerce',
-                'title'			=> __( 'Woocommerce', THEME_LANG ),
-                'desc'			=> '',
-                'subsection' => true,
-                'fields'		=> array(
-                    array(
-                        'id'       => 'typography_woocommerce_tab',
-                        'type'     => 'typography',
-                        'title'    => __( 'Woocommerce tab', THEME_LANG ),
-                        'google'   => true,
-                        'text-align'      => false,
-                        'color'           => false,
-                        'line-height'     => false,
-                        'text-transform' => true,
-                        'output'      => array( '.woocommerce div.product .woocommerce-tabs ul.tabs li a' ),
-                        'default'  => array(
-                            'font-family'     => 'Montserrat',
-                        ),
-                    ),
-                )
-            );
+
 
             /**
              *	Sidebar
@@ -2008,7 +1941,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'id'			=> 'sidebar_section',
                 'title'			=> __( 'Sidebar Widgets', THEME_LANG ),
                 'desc'			=> '',
-                'icon'          => 'icon_plus_alt2',
+                'icon'          => 'icon-Sidebar-Window',
                 'fields'		=> array(
 
                     array(
@@ -2039,7 +1972,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'id'			=> 'page_header_section',
                 'title'			=> __( 'Page header', THEME_LANG ),
                 'desc'			=> '',
-                'icon'          => 'icon_archive_alt',
+                'icon'          => 'icon-Add-SpaceBeforeParagraph',
                 'fields'		=> array(
 
                     array(
@@ -2187,7 +2120,7 @@ if ( ! class_exists( 'KT_config' ) ) {
             $this->sections[] = array(
                 'title' => __('Page', THEME_LANG),
                 'desc' => __('General Page Options', THEME_LANG),
-                'icon' => 'icon_document_alt',
+                'icon' => 'icon-Code-Window',
                 'fields' => array(
                     array(
                         'id' => 'show_page_header',
@@ -2241,11 +2174,8 @@ if ( ! class_exists( 'KT_config' ) ) {
              */
             $this->sections[] = array(
                 'title' => __('Blog', THEME_LANG),
-                'icon' => 'icon_pencil-edit',
-                'desc' => __('General Blog Options', THEME_LANG),
-                'fields' => array(
-
-                )
+                'icon' => 'icon-Pen-2',
+                'desc' => __('General Blog Options', THEME_LANG)
             );
 
 
@@ -3111,7 +3041,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'id'			=> 'search_section',
                 'title'			=> __( 'Search', THEME_LANG ),
                 'desc'			=> 'Search settings',
-                'icon'          => 'icon_search',
+                'icon'          => 'icon-Data-Search',
                 'fields'		=> array(
                     array(
                         'id'       => 'search_heading',
@@ -3392,7 +3322,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'id'			=> '404_section',
                 'title'			=> __( '404 Page', THEME_LANG ),
                 'desc'			=> '404 Page settings',
-                'icon'          => 'icon_error-circle_alt',
+                'icon'          => 'icon-Error-404Window',
                 'fields'		=> array(
                     array(
                         'id'       => 'notfound_heading',
@@ -3454,7 +3384,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 				'id'			=> 'woocommerce',
 				'title'			=> __( 'Woocommerce', THEME_LANG ),
 				'desc'			=> '',
-				'icon'	=> 'icon_cart_alt',
+				'icon'	=> 'icon-Full-Cart',
 				'fields'		=> array(
                     array(
                         'id'       => 'shop_products_heading',
@@ -3634,7 +3564,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 				'id'			=> 'social',
 				'title'			=> __( 'Socials', THEME_LANG ),
 				'desc'			=> __('Social and share settings', THEME_LANG),
-				'icon_class'	=> 'social_facebook',
+				'icon'	=> 'icon-Facebook-2',
 				'fields'		=> array(
 
                     array(
@@ -3732,7 +3662,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 				'id'			=> 'popup',
 				'title'			=> __( 'Popup', THEME_LANG ),
 				'desc'			=> '',
-				'icon_class'	=> 'icon_desktop',
+				'icon_class'	=> 'icon-Studio-Flash',
 				'fields'		=> array(
                     array(
 						'id'		=> 'enable_popup',
@@ -3817,24 +3747,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                  'id' => 'wbc_importer_section',
                  'title'  => esc_html__( 'Demo Content', THEME_LANG ),
                  'desc'   => esc_html__( 'Chose a demo to import', THEME_LANG ),
-                 'icon'   => 'el-icon-website',
+                 'icon'   => 'icon-Blackboard',
                  'fields' => $importer
-            );
-
-            /**
-             *	Advertising
-             **/
-            $this->sections[] = array(
-                'id'			=> 'advertising_section',
-                'title'			=> __( 'Advertising', THEME_LANG ),
-                'desc'			=> 'Advertising settings',
-                'icon'          => 'icon_target',
-                'fields'		=> array(
-                    //Advertising type - Display code , Custom Image
-                    //Advertising Code html ( Ex: Google ads)
-                    //Image URL
-                    //Advertising url
-                )
             );
 
             /**
@@ -3844,7 +3758,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 				'id'			=> 'advanced',
 				'title'			=> __( 'Advanced', THEME_LANG ),
 				'desc'			=> '',
-                'icon'	=> 'icon_star_alt',
+                'icon'	=> 'icon-Settings-Window',
             );
 
 
