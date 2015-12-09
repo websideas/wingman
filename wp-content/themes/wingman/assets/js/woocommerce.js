@@ -74,6 +74,12 @@
                     },
                     callbacks: {
                         open: function() {
+                            var obj = $('.single-product-quickview-images');
+                            obj.imagesLoaded(function(){
+                                obj.slick({
+                                    slidesToShow: 1
+                                });
+                            });
                             var $popup = $('.themedev-product-popup');
                             $popup.imagesLoaded(function(){
                                 setTimeout(function(){

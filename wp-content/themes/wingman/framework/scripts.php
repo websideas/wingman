@@ -108,6 +108,8 @@ function kt_setting_script() {
             .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus,
             .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover::before, 
             .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus::before,
+            .single-product-quickview .single-product-quickview-images .slick-arrow:hover::before, 
+            .single-product-quickview .single-product-quickview-images .slick-arrow:focus::before,
             
             .woocommerce .widget_price_filter .price_slider_amount .button:hover, 
             .woocommerce .widget_price_filter .price_slider_amount .button:focus,
@@ -168,6 +170,8 @@ function kt_setting_script() {
             body .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
             body .mCSB_scrollTools .mCSB_dragger:focus .mCSB_dragger_bar, 
             body .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+            .woocommerce-category-products-tab ul.block-heading-tabs li a::before, 
+            .woocommerce-category-products-tab ul.block-heading-tabs li a::after,
 
             .widget_nav_menu ul li a:hover::after, 
             .widget_pages ul li a:hover::after, 
@@ -206,6 +210,8 @@ function kt_setting_script() {
             .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus,
             .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover, 
             .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus,
+            .single-product-quickview .single-product-quickview-images .slick-arrow:hover, 
+            .single-product-quickview .single-product-quickview-images .slick-arrow:focus,
             .post-single .tags-links a:hover, 
             .post-single .tags-links a:focus,
             blockquote, .blockquote,
