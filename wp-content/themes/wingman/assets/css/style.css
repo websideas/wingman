@@ -193,10 +193,14 @@ blockquote,
   position: relative; }
   blockquote:after,
   .blockquote:after {
-    font-family: FontAwesome;
+    font-family: "FontAwesome";
     content: "";
-    font-style: normal;
+    speak: none;
     font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
     font-size: 60px;
     letter-spacing: 0.1em;
     color: #e5e5e5;
@@ -1331,10 +1335,14 @@ select:not([multiple]) {
         width: 40px; }
         .main-nav-mobile > ul > li a > .open-submenu:after {
           font-size: 15px;
-          font-family: FontAwesome;
+          font-family: "FontAwesome";
           content: "";
-          font-style: normal;
-          font-weight: normal; }
+          speak: none;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          -webkit-font-smoothing: antialiased;
+          text-decoration: none; }
       .main-nav-mobile > ul > li ul.sub-menu-dropdown,
       .main-nav-mobile > ul > li div.kt-megamenu-wrapper {
         border-bottom: 1px solid #e5e5e5;
@@ -2145,10 +2153,14 @@ body.layout-boxed #footer {
       position: relative; }
       #search-fullwidth .searchform .wrap_product_cat:before {
         position: absolute;
-        font-family: FontAwesome;
+        font-family: "FontAwesome";
         content: "";
-        font-style: normal;
+        speak: none;
         font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        -webkit-font-smoothing: antialiased;
+        text-decoration: none;
         font-size: 18px;
         color: #FFFFFF;
         right: 20px;
@@ -3150,10 +3162,14 @@ article.post-item.post-layout-classic {
   max-width: 830px;
   margin: 0 auto; }
   .testimonial-item .testimonial-content:after {
-    font-family: FontAwesome;
+    font-family: "FontAwesome";
     content: "";
-    font-style: normal;
+    speak: none;
     font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
     font-size: 60px;
     line-height: 60px;
     position: absolute;
