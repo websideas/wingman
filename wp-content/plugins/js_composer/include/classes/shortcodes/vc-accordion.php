@@ -16,7 +16,7 @@ class WPBakeryShortCode_VC_Accordion extends WPBakeryShortCode {
 		parent::__construct( $settings );
 	}
 
-	public function contentAdmin( $atts, $content ) {
+	public function contentAdmin( $atts, $content = null ) {
 		$width = $custom_markup = '';
 		$shortcode_attributes = array( 'width' => '1/1' );
 		foreach ( $this->settings['params'] as $param ) {

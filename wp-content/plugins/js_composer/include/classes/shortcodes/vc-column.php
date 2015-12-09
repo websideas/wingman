@@ -28,7 +28,7 @@ class WPBakeryShortCode_VC_Column extends WPBakeryShortCode {
 	 * @return string
 	 */
 	public function getColumnControls( $controls, $extended_css = '' ) {
-		$output = '<div class="vc_controls vc_control-column vc_controls-visible controls' . ( ! empty( $extended_css ) ? " {$extended_css}" : '' ) . '">';
+		$output = '<div class="vc_controls vc_control-column vc_controls-visible' . ( ! empty( $extended_css ) ? " {$extended_css}" : '' ) . '">';
 		$controls_end = '</div>';
 
 		if ( ' bottom-controls' === $extended_css ) {

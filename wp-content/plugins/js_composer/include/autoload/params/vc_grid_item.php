@@ -40,8 +40,7 @@ function vc_vc_grid_item_form_field( $settings, $value ) {
 function vc_load_vc_grid_item_param() {
 	vc_add_shortcode_param(
 		'vc_grid_item',
-		'vc_vc_grid_item_form_field',
-		vc_asset_url( 'js/params/vc_grid_item/param.js' )
+		'vc_vc_grid_item_form_field'
 	);
 }
 

@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @var $this WPBakeryShortCode_VC_Basic_Grid
  */
 $css = $el_class = '';
-$isotope_options = $posts = $filter_terms = array();
+$posts = $filter_terms = array();
 $this->buildAtts( $atts, $content );
 
 $css = isset( $atts['css'] ) ? $atts['css'] : '';

@@ -43,6 +43,19 @@ class Vc_Post_Admin {
 
 			$this->setSettings( $post_id );
 		}
+		/**
+		 * vc_filter: vc_base_save_post_custom_css
+		 * @since 4.4
+		 */
+		$post_custom_css = apply_filters( 'vc_base_save_post_custom_css',
+			vc_post_param( 'vc_post_custom_css' ) );
+		if ( null !== $post_custom_css && empty( $post_custom_css ) ) {
+			delete_post_meta( $post_id, '_wpb_post_custom_css' );
+		} elseif ( null !== $post_custom_css ) {
+			$post_custom_css = strip_tags( $post_custom_css );
+			update_post_meta( $post_id, '_wpb_post_custom_css', $post_custom_css );
+		}
+		visual_composer()->buildShortcodesCustomCss( $post_id );
 	}
 
 	/**

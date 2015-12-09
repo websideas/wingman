@@ -90,11 +90,13 @@ if (!function_exists('kt_get_image_sizes')){
 
             $option_text = array();
             $option_text[] = ucfirst(str_replace('_', ' ', $_size));
-            $option_text[] = '('.$sizes[ $_size ]['width'].' x '.$sizes[ $_size ]['height'].')';
-            if($sizes[ $_size ]['crop']){
-                $option_text[] = __('Crop', THEME_LANG);
+            if( isset($sizes[ $_size ]) ){
+                $option_text[] = '('.$sizes[ $_size ]['width'].' x '.$sizes[ $_size ]['height'].')';
+                if($sizes[ $_size ]['crop']){
+                    $option_text[] = __('Crop', THEME_LANG);
+                }
+                $sizes[ $_size ] = implode(' - ', $option_text);
             }
-            $sizes[ $_size ] = implode(' - ', $option_text);
         }
 
         if($full){
