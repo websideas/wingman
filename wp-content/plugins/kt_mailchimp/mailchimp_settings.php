@@ -1,5 +1,8 @@
 <?php
 
+// Exit if accessed directly
+if ( !defined('ABSPATH')) exit;
+
 class KT_MailChimp_Settings
 {
     /**
@@ -168,7 +171,7 @@ class KT_MailChimp_Settings
             echo "<ul class='kt_mailchimp_lists'>";
             foreach ($lists['data'] as $key => $item) {
                 printf(
-                    '<li>%1$s (ID: %2$s, Subscribers: %3$s)<br/><input type="text" onclick="this.select()" class="large-text" style="font-weight:bold;text-align:left;" size="40" value=\'[mailchimp list="%2$s"]\' readonly="readonly"></li>',
+                    '<li>%1$s (ID: %2$s, Subscribers: %3$s)<br/><input type="text" onclick="this.select()" class="large-text" style="font-weight:bold;text-align:left;" size="40" value=\'[kt_mailchimp list="%2$s"]\' readonly="readonly"></li>',
                     $item['name'],
                     $item['id'],
                     $item['stats']['member_count']

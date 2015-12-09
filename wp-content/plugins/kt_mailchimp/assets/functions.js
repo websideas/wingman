@@ -27,10 +27,9 @@
                 $error.html(response.msg).fadeIn();
             }else{
                 $success.fadeIn();
+                $mForm.find('input[name=firstname], input[name=lastname], [name=email]').val('');
             }
         }, 'json');
     });
-
-
 
 })(jQuery); // End of use strict

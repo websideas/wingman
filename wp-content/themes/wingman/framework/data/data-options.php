@@ -1819,7 +1819,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li ul.sub-menu-dropdown li > a'
                         ),
                         'default'  => array(
-                            'font-family'     => 'Poppins',
                             'text-transform' => 'uppercase',
                         ),
                     ),
