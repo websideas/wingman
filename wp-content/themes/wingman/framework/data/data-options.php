@@ -3690,6 +3690,24 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'default' => __('0', THEME_LANG),
                         'required' => array('enable_popup','equals', 1)
                     ),
+
+                    array(
+                        'id' => 'title_popup',
+                        'type' => 'text',
+                        'title' => __('Title Popup', THEME_LANG), 
+                        'default' => __('Advanced Popup Module', THEME_LANG),
+                    ),
+
+                    array(
+                        'id'       => 'popup_image',
+                        'type'     => 'media',
+                        'url'      => true,
+                        'compiler' => true,
+                        'title'    => __( 'Popup Image', THEME_LANG ),
+                        'default'  => array(
+                            'url' => THEME_IMG.'popup_image.png'
+                        )
+                    ),
                     
                     array(
                         'id'       => 'content_popup',
@@ -3697,7 +3715,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => __( 'Content Popup', THEME_LANG ),
                         'subtitle' => __( '', THEME_LANG ),
                         'required' => array('enable_popup','equals', 1),
-                        'default'  => __('<h3 class="title-top">Advanced Popup Module</h3><p><img src="'.THEME_IMG.'popup_image.png" /></p><h4 class="newletter-title">Sign up for out newsletter<br /> to receive special offers.</h4><form method="post" action="#" class="mailchimp-form clearfix"><input type="text" placeholder="Email" class="mailchimp-email" name="email"><button type="submit" class="btn btn-default mailchimp-submit"><i class="fa fa-long-arrow-right"></i></button></form>', THEME_LANG),
+                        'default'  => __('<h4 class="newletter-title">Sign up for out newsletter<br /> to receive special offers.</h4><form method="post" action="#" class="mailchimp-form clearfix"><input type="text" placeholder="Email" class="mailchimp-email" name="email"><button type="submit" class="btn btn-default mailchimp-submit"><i class="fa fa-long-arrow-right"></i></button></form>', THEME_LANG),
                     ),
                 )
             );
