@@ -402,13 +402,6 @@ function kt_wrapper_end() {
 }
 
 /**
- * Add checkout button to cart page
- *
- */
-//add_action('woocommerce_cart_actions', 'woocommerce_button_proceed_to_checkout');
-
-
-/**
  * Change columns of shop
  *
  */
@@ -811,3 +804,62 @@ function kt_woocommerce_pagination_args($args){
     return $args;
 }
 add_filter('woocommerce_pagination_args', 'kt_woocommerce_pagination_args');
+
+
+
+if (!function_exists('kt_get_woo_sidebar')) {
+    /**
+     * Get woo sidebar
+     *
+     * @param null $post_id
+     * @return array
+     */
+    function kt_get_woo_sidebar( $post_id = null )
+    {
+
+
+        $sidebar = array('sidebar_area' => '');
+
+        if(isset($_REQUEST['sidebar'])){
+            $sidebar['sidebar'] = $_REQUEST['sidebar'];
+        }
+
+        if(is_product() || $post_id || is_shop()){
+            if(is_shop() && !$post_id){
+                $post_id = get_option( 'woocommerce_shop_page_id' );
+            }
+            global $post;
+            if(!$post_id) $post_id = $post->ID;
+
+            if(!isset($sidebar['sidebar'])){
+                $sidebar['sidebar'] = rwmb_meta('_kt_sidebar', array(), $post_id);
+            }
+
+            if($sidebar['sidebar'] == '' || $sidebar['sidebar'] == 'default' ){
+                $sidebar['sidebar'] = kt_option('product_sidebar', 'right');
+                if($sidebar['sidebar'] == 'left' ){
+                    $sidebar['sidebar_area'] = kt_option('product_sidebar_left', 'shop-widget-area');
+                }elseif($sidebar['sidebar'] == 'right'){
+                    $sidebar['sidebar_area'] = kt_option('product_sidebar_right', 'shop-widget-area');
+                }
+            }elseif($sidebar['sidebar'] == 'left'){
+                $sidebar['sidebar_area'] = rwmb_meta('_kt_left_sidebar', array(), $post_id);
+            }elseif($sidebar['sidebar'] == 'right'){
+                $sidebar['sidebar_area'] = rwmb_meta('_kt_right_sidebar', array(), $post_id);
+            }
+        }elseif( is_product_taxonomy() || is_product_tag()){
+            if(!isset($sidebar['sidebar'])) {
+                $sidebar['sidebar'] = kt_option('shop_sidebar', 'right');
+            }
+
+            if($sidebar['sidebar'] == 'left' ){
+                $sidebar['sidebar_area'] = kt_option('shop_sidebar_left', 'shop-widget-area');
+            }elseif($sidebar['sidebar'] == 'right'){
+                $sidebar['sidebar_area'] = kt_option('shop_sidebar_right', 'shop-widget-area');
+            }
+        }elseif(is_cart()){
+            $sidebar['sidebar'] = 'full';
+        }
+        return apply_filters('woo_sidebar', $sidebar);
+    }
+}
