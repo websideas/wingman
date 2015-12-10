@@ -4498,26 +4498,7 @@ form.wpcf7-form{
   .mailchimp-form{
     max-width: 350px;
     margin: 0 auto;
-    position: relative;
-    input{
-      border: none;
-      border-bottom: 1px solid $title-text;
-      padding: 4px 0;
-      height: auto;
-      color: $main-text;
-    }
-    button{
-      background: none;
-      width: auto;
-      height: auto;
-      padding: 0;
-      color: $primary-color;
-      border: none;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      @include transform(translatey(-50%));
-    }
+
   }
   h4.newletter-title{
     font-size: 14px;

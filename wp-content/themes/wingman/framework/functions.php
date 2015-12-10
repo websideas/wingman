@@ -33,7 +33,7 @@ add_filter( 'next_posts_link_attributes', 'kt_next_posts_link_attributes', 15 );
 
 /**
  * Add class to prev button
- *
+ *p
  * @param string $attr
  * @return string
  */
@@ -843,7 +843,7 @@ function theme_after_footer_add_popup(){
     $content_popup = kt_option( 'content_popup' );
     $time_show = kt_option( 'time_show', 0 );
     
-    if( $enable_popup == 1 && !isset($_COOKIE['kt_popup']) ){ 
+    //if( $enable_popup == 1 && !isset($_COOKIE['kt_popup']) ){
         ?>
             <div id="popup-wrap" class="mfp-hide" data-mobile="<?php echo esc_attr( $disable_popup_mobile ); ?>" data-timeshow="<?php echo esc_attr($time_show); ?>">     
                 <div class="white-popup-block">
@@ -855,5 +855,5 @@ function theme_after_footer_add_popup(){
                 </form>
             </div>
         <?php
-    }
+    //}
 }

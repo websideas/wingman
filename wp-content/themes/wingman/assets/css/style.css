@@ -4215,30 +4215,7 @@ form.wpcf7-form p {
       zoom: 1; }
   #popup-wrap .mailchimp-form {
     max-width: 350px;
-    margin: 0 auto;
-    position: relative; }
-    #popup-wrap .mailchimp-form input {
-      border: none;
-      border-bottom: 1px solid #252525;
-      padding: 4px 0;
-      height: auto;
-      color: #707070; }
-    #popup-wrap .mailchimp-form button {
-      background: none;
-      width: auto;
-      height: auto;
-      padding: 0;
-      color: #82c14f;
-      border: none;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      -webkit-transform: translatey(-50%);
-      -khtml-transform: translatey(-50%);
-      -moz-transform: translatey(-50%);
-      -ms-transform: translatey(-50%);
-      -o-transform: translatey(-50%);
-      transform: translatey(-50%); }
+    margin: 0 auto; }
   #popup-wrap h4.newletter-title {
     font-size: 14px;
     text-transform: uppercase;
