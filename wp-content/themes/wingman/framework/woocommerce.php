@@ -17,15 +17,14 @@ if ( ! function_exists( 'woocommerce_theme_setup' ) ):
     }
 endif;
 
+
 /**
  * Add custom style to woocommerce
  *
  */
-
 function kt_wp_enqueue_scripts(){
     wp_enqueue_style( 'kt-woocommerce', THEME_CSS . 'woocommerce.css' );
     wp_enqueue_script( 'kt-woocommerce', THEME_JS . 'woocommerce.js', array( 'jquery', 'jquery-ui-accordion', 'jquery-ui-tabs' ), null, true );
-
 }
 add_action( 'wp_enqueue_scripts', 'kt_wp_enqueue_scripts' );
 
@@ -119,8 +118,6 @@ function kt_woocommerce_product_query( $q, $class ) {
 add_action( 'woocommerce_product_query', 'kt_woocommerce_product_query', 50, 2 );
 
 
-
-
 /**
  * Display drop down.
  *
@@ -132,6 +129,11 @@ function products_per_page_dropdown() {
 
     $per_page =  kt_option('loop_shop_per_page');
     $cols =  kt_option('shop_gird_cols');
+
+    if(isset($_REQUEST['cols'])){
+        $cols = $_REQUEST['cols'];
+    }
+
     $products_per_page = sprintf('%s %s %s -1', $per_page, $per_page + $cols*2,$per_page + $cols*3);
 
     // Set the products per page options (e.g. 4, 8, 12)
@@ -187,12 +189,12 @@ function woocommerce_gridlist_toggle(){ ?>
     <?php $gridlist = apply_filters('woocommerce_gridlist_toggle', kt_get_gridlist_toggle()) ?>
     <ul class="gridlist-toggle hidden-xs clearfix">
         <li>
-            <a class="list<?php if($gridlist == 'lists'){ ?> active<?php } ?>" data-placement="top" data-toggle="tooltip" href="#" title="<?php _e('List view', THEME_LANG) ?>" data-layout="lists" data-remove="grid">
+            <a class="list<?php if($gridlist == 'list'){ ?> active<?php } ?>" data-placement="top" data-toggle="tooltip" href="#" title="<?php _e('List view', THEME_LANG) ?>" data-layout="list" data-remove="grid">
                 <span class="style-toggle"><span></span><span></span><span></span><span></span></span>
             </a>
         </li>
         <li>
-            <a class="grid<?php if($gridlist == 'grid'){ ?> active<?php } ?>" data-placement="top" data-toggle="tooltip" href="#" title="<?php _e('Grid view', THEME_LANG) ?>" data-layout="grid" data-remove="lists">
+            <a class="grid<?php if($gridlist == 'grid'){ ?> active<?php } ?>" data-placement="top" data-toggle="tooltip" href="#" title="<?php _e('Grid view', THEME_LANG) ?>" data-layout="grid" data-remove="list">
                 <span class="style-toggle"><span></span><span></span><span></span><span></span></span>
             </a>
         </li>
@@ -224,13 +226,13 @@ add_action( 'wp_ajax_nopriv_frontend_update_posts_layout', 'kt_frontend_update_p
  *
  */
 function kt_get_gridlist_toggle( $layout = 'grid' ){
-
-    if ( WC()->session->__isset( 'products_layout' ) ) :
+    if(isset($_REQUEST['view'])){
+        return $_REQUEST['view'];
+    }elseif ( WC()->session->__isset( 'products_layout' ) ) {
         return WC()->session->__get( 'products_layout' );
-    else :
+    }else{
         return kt_option('shop_products_layout', $layout);
-    endif;
-
+    }
 }
 
 
@@ -409,6 +411,11 @@ function kt_wrapper_end() {
 add_filter( 'loop_shop_columns', 'kt_woo_shop_columns' );
 function kt_woo_shop_columns( $columns ) {
     $cols =  kt_option('shop_gird_cols');
+    if(isset($_REQUEST['cols'])){
+        $cols = $_REQUEST['cols'];
+    }
+
+
     $cols = intval(  $cols );
     if( $cols <= 0 ){
         $layout = kt_option('shop_sidebar','full');
@@ -577,22 +584,6 @@ function woocommerce_shop_loop_item_action_action_product(){
         echo "</div>";
     }
 }
-
-
-
-
-
-
-/**
- * Add count products before cart
- *
- */
-/*
-add_action('woocommerce_before_cart_table', 'kt_woocommerce_before_cart_table', 20);
-function kt_woocommerce_before_cart_table( $args ){
-    $html = '<h2 class="shopping-cart-title">'. sprintf( __( 'Your shopping cart: <span>(%d items)</span>', THEME_LANG ), WC()->cart->cart_contents_count ) . '</h2>';
-	echo $html;
-}*/
 
 
 
@@ -819,9 +810,11 @@ if (!function_exists('kt_get_woo_sidebar')) {
 
 
         $sidebar = array('sidebar_area' => '');
+        $requestCustom = false;
 
         if(isset($_REQUEST['sidebar'])){
             $sidebar['sidebar'] = $_REQUEST['sidebar'];
+            $requestCustom = true;
         }
 
         if(is_product() || $post_id || is_shop()){
@@ -835,8 +828,10 @@ if (!function_exists('kt_get_woo_sidebar')) {
                 $sidebar['sidebar'] = rwmb_meta('_kt_sidebar', array(), $post_id);
             }
 
-            if($sidebar['sidebar'] == '' || $sidebar['sidebar'] == 'default' ){
-                $sidebar['sidebar'] = kt_option('product_sidebar', 'right');
+            if($sidebar['sidebar'] == '' || $sidebar['sidebar'] == 'default' || $requestCustom){
+                if(!$requestCustom){
+                    $sidebar['sidebar'] = kt_option('product_sidebar', 'right');
+                }
                 if($sidebar['sidebar'] == 'left' ){
                     $sidebar['sidebar_area'] = kt_option('product_sidebar_left', 'shop-widget-area');
                 }elseif($sidebar['sidebar'] == 'right'){

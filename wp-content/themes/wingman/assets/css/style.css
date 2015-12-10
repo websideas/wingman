@@ -60,7 +60,7 @@ img:not([draggable]), embed, object, video {
   height: auto; }
 
 p {
-  margin-bottom: 30px; }
+  margin-bottom: 20px; }
 
 .appear-animate .wow {
   visibility: hidden; }
