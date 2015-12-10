@@ -52,7 +52,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type'             => 'file_advanced',
                 'max_file_uploads' => 1,
                 'mime_type'        => 'audio', // Leave blank for all file types
-                'required' => array($prefix . 'audio_type','=', 'upload' ),
+                'compare' => array($prefix . 'audio_type','=', 'upload' ),
             ),
             array(
                 'name' => __( 'Soundcloud', THEME_LANG ),
@@ -61,7 +61,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'textarea',
                 'cols' => 20,
                 'rows' => 3,
-                'required' => array($prefix . 'audio_type','=', 'soundcloud' ),
+                'compare' => array($prefix . 'audio_type','=', 'soundcloud' ),
             ),
         ),
     );
@@ -96,14 +96,14 @@ function kt_register_meta_boxes( $meta_boxes )
                     'youtube' => __('Youtube', THEME_LANG),
                     'vimeo' => __('Vimeo', THEME_LANG),
                 ),
-                'required' => array($prefix . 'video_type','=', 'external' ),
+                'compare' => array($prefix . 'video_type','=', 'external' ),
             ),
             array(
                 'name' => __( 'Video id', THEME_LANG ),
                 'id' => $prefix . 'video_id',
                 'desc' => sprintf( __( 'Enter id of video .Example: <br />- Link video youtube: https://www.youtube.com/watch?v=nPOO1Coe2DI id of video: nPOO1Coe2DI <br /> -Link vimeo: https://vimeo.com/70296428 id video: 70296428.', THEME_LANG ) ),
                 'type'  => 'text',
-                'required' => array($prefix . 'video_type','=', 'external' ),
+                'compare' => array($prefix . 'video_type','=', 'external' ),
             ),
         ),
     );
@@ -137,21 +137,21 @@ function kt_register_meta_boxes( $meta_boxes )
                 'id' => $prefix . 'gallery_rev_slider',
                 'default' => true,
                 'type' => 'revSlider',
-                'required' => array($prefix . 'gallery_type','=', 'rev' ),
+                'compare' => array($prefix . 'gallery_type','=', 'rev' ),
             ),
             array(
                 'name' => __('Select Layer Slider', THEME_LANG),
                 'id' => $prefix . 'gallery_layerslider',
                 'default' => true,
                 'type' => 'layerslider',
-                'required' => array($prefix . 'gallery_type','=', 'layer' ),
+                'compare' => array($prefix . 'gallery_type','=', 'layer' ),
             ),
             array(
                 'name' => __( 'Gallery images', 'your-prefix' ),
                 'id'  => "{$prefix}gallery_images",
                 'type' => 'image_advanced',
                 'desc' => __( "You can drag and drop for change order image", THEME_LANG ),
-                'required' => array($prefix . 'gallery_type','=', '' ),
+                'compare' => array($prefix . 'gallery_type','=', '' ),
             ),
         ),
     );
@@ -169,7 +169,6 @@ function kt_register_meta_boxes( $meta_boxes )
         'show'   => array(
             'post_format' => array( 'Link'),
         ),
-
         'fields' => array(
             array(
                 'name' => __( 'External URL', THEME_LANG ),
@@ -359,19 +358,6 @@ function kt_register_meta_boxes( $meta_boxes )
                 ),
                 'std'  => -1
             ),
-
-            array(
-                'name' => __('Select Thumbnail size for Random Layout Packery', THEME_LANG),
-                'id'   => "{$prefix}thumbnail_packery",
-                'type' => 'select',
-                'options' => array(
-                    'small_squared' => __('Small Squared', THEME_LANG),
-                    'big_squared'	=> __('Big Squared', THEME_LANG),
-                    'landscape'		=> __('Landscape', THEME_LANG),
-                    'portrait'		=> __('Portrait', THEME_LANG),
-                ),
-                'std'  => 'small_squared'
-            ),
         )
     );
 
@@ -437,91 +423,6 @@ function kt_register_meta_boxes( $meta_boxes )
 
         )
     );
-    
-    
-    /**
-     * For Portfolio
-     * 
-     */
-    
-    $meta_boxes[] = array(
-        'id' => 'portfolio_meta_boxes',
-        'title' => 'Portfolio Options',
-        'pages' => array( 'portfolio' ),
-        'context' => 'normal',
-        'priority' => 'default',
-        'fields' => array(
-            array(
-                'name' => __('Layout configuration', THEME_LANG),
-                'id' => $prefix . 'sidebar',
-                'desc' => __("Choose the sidebar configuration for the detail page.", THEME_LANG),
-                'type' => 'select',
-                'options' => array(
-                    'full' => __('Full Width', THEME_LANG),
-                    'left' => __('Left Sidebar', THEME_LANG),
-                    'right' => __('Right Sidebar', THEME_LANG)
-                ),
-                'std' => 'default'
-            ),
-            array(
-                'name' => __('Left sidebar', THEME_LANG),
-                'id' => $prefix . 'left_sidebar',
-                'default' => true,
-                'type' => 'sidebars',
-            ),
-            array(
-                'name' => __('Right sidebar', THEME_LANG),
-                'id' => $prefix . 'right_sidebar',
-                'default' => true,
-                'type' => 'sidebars'
-            ),
-            
-            array(
-                'name' => __('Video Type', THEME_LANG),
-                'id' => $prefix . 'video_type',
-                'type'     => 'select',
-                'options'  => array(
-                    '' => __('Select Option', THEME_LANG),
-                    //'upload' => __('Upload', THEME_LANG),
-                    'youtube' => __('Youtube', THEME_LANG),
-                    'vimeo' => __('Vimeo', THEME_LANG),
-                    'dailymotion' => __('Daily Motion', THEME_LANG)
-                ),
-            ),
-            array(
-                'name' => __( 'Video Id', THEME_LANG ),
-                'id' => $prefix . 'video_id',
-                'desc' => __( "Please fill this option with the required ID.", THEME_LANG ),
-                'type'  => 'text',
-            ),
-            
-            array(
-                'name' => __('Select Image', THEME_LANG),
-                'id' => $prefix . 'list_image',
-                'type' => 'image_advanced'
-            ),
-            
-            array(
-                'name' => __( 'Client', THEME_LANG ),
-                'id' => $prefix . 'client',
-                'desc' => __( "Please enter your client.", THEME_LANG ),
-                'type'  => 'text',
-            ),
-            array(
-                'name' => __( 'Project Date', THEME_LANG ),
-                'id' => $prefix . 'project_date',
-                'desc' => __( "Please enter your date of project.", THEME_LANG ),
-                'type'  => 'date',
-            ),
-            array(
-                'name' => __( 'Link Project', THEME_LANG ),
-                'id' => $prefix . 'link_project',
-                'desc' => __( "Please enter your link project.", THEME_LANG ),
-                'type'  => 'text',
-            ),
-        )
-    );
-
 
     /**
      * For Layout option
@@ -530,7 +431,7 @@ function kt_register_meta_boxes( $meta_boxes )
     $meta_boxes[] = array(
         'id' => 'page_meta_boxes',
         'title' => 'Page Options',
-        'pages' => array( 'page', 'post', 'portfolio','product' ),
+        'pages' => array( 'page', 'post', 'product' ),
         'context' => 'normal',
         'priority' => 'high',
         'tabs'      => array(
@@ -548,140 +449,7 @@ function kt_register_meta_boxes( $meta_boxes )
             )
         ),
         'fields' => array(
-            // Page Header
-            array(
 
-                'name' => __( 'Page Header', THEME_LANG ),
-                'id' => $prefix . 'page_header',
-                'desc' => __( "Show Page Header.", THEME_LANG ),
-                'type' => 'select',
-                'options' => array(
-                    -1    => __('Default', THEME_LANG),
-                    0		=> __('Hidden', THEME_LANG),
-                    1		=> __('Show', THEME_LANG),
-                ),
-                'std'  => -1,
-                'tab'  => 'page_header',
-            ),
-            array(
-                'name' => __( 'Page Header Custom Text', THEME_LANG ),
-                'id' => $prefix . 'page_header_custom',
-                'desc' => __( "Enter cstom Text for page header.", THEME_LANG ),
-                'type'  => 'text',
-                'tab'  => 'page_header',
-                'required' => array($prefix . 'page_header','!=', '0' ),
-            ),
-
-            array(
-                'name' => __( 'Page header subtitle', THEME_LANG ),
-                'id' => $prefix . 'page_header_subtitle',
-                'desc' => __( "Enter subtitle for page.", THEME_LANG ),
-                'type'  => 'text',
-                'tab'  => 'page_header',
-                'required' => array($prefix . 'page_header','!=', '0' ),
-            ),
-
-            array(
-                'id'       => "{$prefix}page_header_align",
-                'type'     => 'select',
-                'name'    => __( 'Page Header align', THEME_LANG ),
-                'desc'     => __( 'Please select Page Header align', THEME_LANG ),
-                'options'  => array(
-                    ''    => __('Default', THEME_LANG),
-                    'left' => __('Left', THEME_LANG ),
-                    'center' => __('Center', THEME_LANG),
-                    'right' => __('Right', THEME_LANG)
-                ),
-                'std'  => '',
-                'tab'  => 'page_header',
-                'required' => array($prefix . 'page_header','!=', '0' ),
-            ),
-
-            array(
-                'name' => __('Page breadcrumb', THEME_LANG),
-                'id'   => "{$prefix}show_breadcrumb",
-                'type' => 'select',
-                'options' => array(
-                    -1    => __('Default', THEME_LANG),
-                    0		=> __('Hidden', THEME_LANG),
-                    1		=> __('Show', THEME_LANG),
-                ),
-                'std'  => -1,
-                'desc' => __( "Show page breadcrumb.", THEME_LANG ),
-                'tab'  => 'page_header',
-                'required' => array($prefix . 'page_header','!=', '0' ),
-            ),
-
-            array(
-                'name' => __('Separator bettwen title and subtitle', THEME_LANG),
-                'id'   => "{$prefix}page_header_separator",
-                'type' => 'select',
-                'options' => array(
-                    -1    => __('Default', THEME_LANG),
-                    0		=> __('Hidden', THEME_LANG),
-                    1		=> __('Show', THEME_LANG),
-                ),
-                'std'  => -1,
-                'desc' => __( "Show separator bettwen title and subtitle.", THEME_LANG ),
-                'tab'  => 'page_header',
-                'required' => array($prefix . 'page_header','!=', '0' ),
-            ),
-
-            array(
-                'name' => __('Page header top spacing', THEME_LANG),
-                'id' => $prefix . 'page_header_top',
-                'desc' => __("(Example: 60px). Emtpy for use default", THEME_LANG ),
-                'type'  => 'text',
-                'tab'  => 'page_header',
-                'required' => array($prefix . 'page_header','!=', '0' ),
-            ),
-            array(
-                'name' => __('Page header bottom spacing', THEME_LANG),
-                'id' => $prefix . 'page_header_bottom',
-                'desc' => __("(Example: 60px). Emtpy for use default", THEME_LANG ),
-                'type'  => 'text',
-                'tab'  => 'page_header',
-                'required' => array($prefix . 'page_header','!=', '0' ),
-            ),
-            array(
-                'name' => __( 'Separator custom color', THEME_LANG ),
-                'id'   => "{$prefix}page_header_separator_color",
-                'type' => 'color',
-                'tab'  => 'page_header',
-                'desc' => __( "Choose custom color for separator.", THEME_LANG ),
-                'required' => array($prefix . 'page_header','!=', '0' ),
-            ),
-            array(
-                'name' => __( 'Typography title custom color', THEME_LANG ),
-                'id'   => "{$prefix}page_header_title_color",
-                'type' => 'color',
-                'tab'  => 'page_header',
-                'desc' => __( "Choose custom color for title.", THEME_LANG ),
-                'required' => array($prefix . 'page_header','!=', '0' ),
-            ),
-            array(
-                'name' => __( 'Typography sub title custom color', THEME_LANG ),
-                'id'   => "{$prefix}page_header_subtitle_color",
-                'type' => 'color',
-                'tab'  => 'page_header',
-                'desc' => __( "Choose custom color for sub title.", THEME_LANG ),
-                'required' => array($prefix . 'page_header','!=', '0' ),
-            ),
-            array(
-                'name' => __( 'Typography breadcrumbs custom color', THEME_LANG ),
-                'id'   => "{$prefix}page_header_breadcrumbs_color",
-                'type' => 'color',
-                'tab'  => 'page_header',
-                'desc' => __( "Choose custom color for breadcrumbs.", THEME_LANG ),
-                'required' => array($prefix . 'page_header','!=', '0' ),
-            ),
-            array(
-                'name' => __('Background Options for page header', THEME_LANG),
-                'id' => $prefix.'page_header_bg',
-                'type'  => 'background',
-                'tab'  => 'page_header',
-                'required' => array($prefix . 'page_header','!=', '0' ),
-            ),
 
             //Header
             array(
@@ -708,7 +476,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 ),
                 'std'  => 'light',
                 'tab'  => 'header',
-                'required' => array($prefix . 'header_position','=', 'transparent' ),
+                'compare' => array($prefix . 'header_position','=', 'transparent' ),
             ),
 
             array(
@@ -730,7 +498,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'revSlider',
                 'tab'  => 'header',
                 'desc' => __('Select the Revolution Slider.', THEME_LANG),
-                'required' => array($prefix . 'slideshow_source','=', 'revslider' ),
+                'compare' => array($prefix . 'slideshow_source','=', 'revslider' ),
             ),
             array(
                 'name' => __('Select Layer Slider', THEME_LANG),
@@ -739,7 +507,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'layerslider',
                 'tab'  => 'header',
                 'desc' => __('Select the Layer Slider.', THEME_LANG),
-                'required' => array($prefix . 'slideshow_source','=', 'layerslider' ),
+                'compare' => array($prefix . 'slideshow_source','=', 'layerslider' ),
             ),
 
             /*
@@ -752,6 +520,112 @@ function kt_register_meta_boxes( $meta_boxes )
                 'tab'  => 'header',
             ),
             */
+
+            // Page Header
+            array(
+
+                'name' => __( 'Page Header', THEME_LANG ),
+                'id' => $prefix . 'page_header',
+                'desc' => __( "Show Page Header.", THEME_LANG ),
+                'type' => 'select',
+                'options' => array(
+                    -1    => __('Default', THEME_LANG),
+                    0		=> __('Hidden', THEME_LANG),
+                    1		=> __('Show', THEME_LANG),
+                ),
+                'std'  => -1,
+                'tab'  => 'page_header',
+            ),
+            array(
+                'name' => __( 'Page Header Custom Text', THEME_LANG ),
+                'id' => $prefix . 'page_header_custom',
+                'desc' => __( "Enter cstom Text for page header.", THEME_LANG ),
+                'type'  => 'text',
+                'tab'  => 'page_header',
+                'compare' => array($prefix . 'page_header','!=', '0' ),
+            ),
+
+            array(
+                'name' => __( 'Page header subtitle', THEME_LANG ),
+                'id' => $prefix . 'page_header_subtitle',
+                'desc' => __( "Enter subtitle for page.", THEME_LANG ),
+                'type'  => 'text',
+                'tab'  => 'page_header',
+                'compare' => array($prefix . 'page_header','!=', '0' ),
+            ),
+
+            array(
+                'id'       => "{$prefix}page_header_align",
+                'type'     => 'select',
+                'name'    => __( 'Page Header align', THEME_LANG ),
+                'desc'     => __( 'Please select Page Header align', THEME_LANG ),
+                'options'  => array(
+                    ''    => __('Default', THEME_LANG),
+                    'left' => __('Left', THEME_LANG ),
+                    'center' => __('Center', THEME_LANG),
+                    'right' => __('Right', THEME_LANG)
+                ),
+                'std'  => '',
+                'tab'  => 'page_header',
+                'compare' => array($prefix . 'page_header','!=', '0' ),
+            ),
+
+            array(
+                'name' => __('Page breadcrumb', THEME_LANG),
+                'id'   => "{$prefix}show_breadcrumb",
+                'type' => 'select',
+                'options' => array(
+                    -1    => __('Default', THEME_LANG),
+                    0		=> __('Hidden', THEME_LANG),
+                    1		=> __('Show', THEME_LANG),
+                ),
+                'std'  => -1,
+                'desc' => __( "Show page breadcrumb.", THEME_LANG ),
+                'tab'  => 'page_header',
+                'compare' => array($prefix . 'page_header','!=', '0' ),
+            ),
+
+            array(
+                'name' => __('Page header top spacing', THEME_LANG),
+                'id' => $prefix . 'page_header_top',
+                'desc' => __("(Example: 60px). Emtpy for use default", THEME_LANG ),
+                'type'  => 'text',
+                'tab'  => 'page_header',
+                'compare' => array($prefix . 'page_header','!=', '0' ),
+            ),
+            array(
+                'name' => __('Page header bottom spacing', THEME_LANG),
+                'id' => $prefix . 'page_header_bottom',
+                'desc' => __("(Example: 60px). Emtpy for use default", THEME_LANG ),
+                'type'  => 'text',
+                'tab'  => 'page_header',
+                'compare' => array($prefix . 'page_header','!=', '0' ),
+            ),
+            array(
+                'name' => __( 'Typography title custom color', THEME_LANG ),
+                'id'   => "{$prefix}page_header_title_color",
+                'type' => 'color',
+                'tab'  => 'page_header',
+                'desc' => __( "Choose custom color for title.", THEME_LANG ),
+                'compare' => array($prefix . 'page_header','!=', '0' ),
+            ),
+            array(
+                'name' => __( 'Typography sub title custom color', THEME_LANG ),
+                'id'   => "{$prefix}page_header_subtitle_color",
+                'type' => 'color',
+                'tab'  => 'page_header',
+                'desc' => __( "Choose custom color for sub title.", THEME_LANG ),
+                'compare' => array($prefix . 'page_header','!=', '0' ),
+            ),
+            array(
+                'name' => __( 'Typography breadcrumbs custom color', THEME_LANG ),
+                'id'   => "{$prefix}page_header_breadcrumbs_color",
+                'type' => 'color',
+                'tab'  => 'page_header',
+                'desc' => __( "Choose custom color for breadcrumbs.", THEME_LANG ),
+                'compare' => array($prefix . 'page_header','!=', '0' ),
+            ),
+
 
             //Page layout
             array(
@@ -775,7 +649,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'sidebars',
                 'tab'  => 'page_layout',
                 'desc' => __("Select your sidebar.", THEME_LANG),
-                'required' => array($prefix . 'sidebar','=', 'left' ),
+                'compare' => array($prefix . 'sidebar','=', 'left' ),
             ),
             array(
                 'name' => __('Right sidebar', THEME_LANG),
@@ -784,7 +658,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'sidebars',
                 'tab'  => 'page_layout',
                 'desc' => __("Select your sidebar.", THEME_LANG),
-                'required' => array($prefix . 'sidebar','=', 'right' ),
+                'compare' => array($prefix . 'sidebar','=', 'right' ),
             ),
             array(
                 'name' => __('Page top spacing', THEME_LANG),

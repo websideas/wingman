@@ -1612,7 +1612,7 @@ body.layout-boxed{
   &.carousel-dark{
     .owl-buttons {
       > div{
-        color: $black;
+        color: $border-dark-color;
         border-color: $black;
         &:first-child{
           &:after {

@@ -3,7 +3,7 @@
 		kt_showhide: function(options) {   
             var defaults = {
 				parent: '.rwmb-field'
-            }
+            };
             var o = $.extend(defaults,options);
     		return this.each(function() {
                 var obj = $(this);

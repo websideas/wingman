@@ -25,56 +25,57 @@ add_filter('rwmb_sidebars_html', 'kt_rwmb_select_html', 10, 3);
 add_filter('rwmb_layerslider_html', 'kt_rwmb_select_html', 10, 3);
 
 function kt_rwmb_select_html($input_html, $field, $sub_meta){
-	if($field['required']){
-		$input_html = str_replace('<select', '<select data-id="'.$field['required'][0].'" data-compare="'.$field['required'][1].'" data-value="'.$field['required'][2].'"', $input_html);
+
+	if(isset($field['compare'])){
+		$input_html = str_replace('<select', '<select data-id="'.$field['compare'][0].'" data-compare="'.$field['compare'][1].'" data-value="'.$field['compare'][2].'"', $input_html);
 	}
 	return $input_html;
 }
 
 add_filter('rwmb_text_html', 'kt_rwmb_input_html', 10, 3);
 function kt_rwmb_input_html($input_html, $field, $sub_meta){
-	if($field['required']){
-		$input_html = str_replace('<input', '<input data-id="'.$field['required'][0].'" data-compare="'.$field['required'][1].'" data-value="'.$field['required'][2].'"', $input_html);
+	if(isset($field['compare'])){
+		$input_html = str_replace('<input', '<input data-id="'.$field['compare'][0].'" data-compare="'.$field['compare'][1].'" data-value="'.$field['compare'][2].'"', $input_html);
 	}
 	return $input_html;
 }
 
 add_filter('rwmb_color_html', 'kt_rwmb_color_html', 10, 3);
 function kt_rwmb_color_html($input_html, $field, $sub_meta){
-	if($field['required']){
-		$input_html = str_replace('<input', '<input data-id="'.$field['required'][0].'" data-compare="'.$field['required'][1].'" data-value="'.$field['required'][2].'"', $input_html);
+	if(isset($field['compare'])){
+		$input_html = str_replace('<input', '<input data-id="'.$field['compare'][0].'" data-compare="'.$field['compare'][1].'" data-value="'.$field['compare'][2].'"', $input_html);
 	}
 	return $input_html;
 }
 
 add_filter('rwmb_background_html', 'kt_rwmb_background_html', 10, 3);
 function kt_rwmb_background_html($input_html, $field, $sub_meta){
-	if($field['required']){
-		$input_html = str_replace('<div class="wrapper wrapper_kt_image_upload"', '<div class="wrapper wrapper_kt_image_upload" data-id="'.$field['required'][0].'" data-compare="'.$field['required'][1].'" data-value="'.$field['required'][2].'"', $input_html);
+	if(isset($field['compare'])){
+		$input_html = str_replace('<div class="wrapper wrapper_kt_image_upload"', '<div class="wrapper wrapper_kt_image_upload" data-id="'.$field['compare'][0].'" data-compare="'.$field['compare'][1].'" data-value="'.$field['compare'][2].'"', $input_html);
 	}
 	return $input_html;
 }
 
 add_filter('rwmb_textarea_html', 'kt_rwmb_textarea_html', 10, 3);
 function kt_rwmb_textarea_html($input_html, $field, $sub_meta){
-	if($field['required']){
-		$input_html = str_replace('<textarea', '<textarea data-id="'.$field['required'][0].'" data-compare="'.$field['required'][1].'" data-value="'.$field['required'][2].'"', $input_html);
+	if(isset($field['compare'])){
+		$input_html = str_replace('<textarea', '<textarea data-id="'.$field['compare'][0].'" data-compare="'.$field['compare'][1].'" data-value="'.$field['compare'][2].'"', $input_html);
 	}
 	return $input_html;
 }
 
 add_filter('rwmb_file_advanced_html', 'kt_rwmb_file_advanced_html', 10, 3);
 function kt_rwmb_file_advanced_html($input_html, $field, $sub_meta){
-	if($field['required']){
-		$input_html = str_replace('<ul', '<ul data-id="'.$field['required'][0].'" data-compare="'.$field['required'][1].'" data-value="'.$field['required'][2].'"', $input_html);
+	if(isset($field['compare'])){
+		$input_html = str_replace('<ul', '<ul data-id="'.$field['compare'][0].'" data-compare="'.$field['compare'][1].'" data-value="'.$field['compare'][2].'"', $input_html);
 	}
 	return $input_html;
 }
 
 add_filter('rwmb_image_advanced_html', 'kt_rwmb_image_advanced_html', 10, 3);
 function kt_rwmb_image_advanced_html($input_html, $field, $sub_meta){
-	if($field['required']){
-		$input_html = str_replace('<ul', '<ul data-id="'.$field['required'][0].'" data-compare="'.$field['required'][1].'" data-value="'.$field['required'][2].'"', $input_html);
+	if(isset($field['compare'])){
+		$input_html = str_replace('<ul', '<ul data-id="'.$field['compare'][0].'" data-compare="'.$field['compare'][1].'" data-value="'.$field['compare'][2].'"', $input_html);
 	}
 	return $input_html;
 }

@@ -104,64 +104,6 @@
     }
 
 
-    /* ---------------------------------------------
-     Product Quick View
-     --------------------------------------------- */
-    function init_ProductQuickViewOld(){
-        $('body').on('click', '.product-quick-view', function(e){
-            e.preventDefault();
-            var objProduct = $(this);
-            objProduct.addClass('loading');
-            var data = {
-                action: 'frontend_product_quick_view',
-                security : ajax_frontend.security,
-                product_id: objProduct.data('id')
-            };
-
-
-            $.post(ajax_frontend.ajaxurl, data, function(response) {
-                objProduct.removeClass('loading');
-                $.magnificPopup.open({
-                    mainClass : 'mfp-zoom-in',
-                    removalDelay: 500,
-                    items: {
-                        src: '<div class="kt-product-popup woocommerce mfp-with-anim">' + response + '</div>',
-                        type: 'inline'
-                    },
-                    callbacks: {
-                        open: function() {
-                            $('.single-product-quickview-images').imagesLoaded(function() {
-                                $(this).owlCarousel({
-                                    items: 1,
-                                    itemsDesktop : [1199,1], //1 items between 1000px and 901px
-                                    itemsDesktopSmall : [991,1], // betweem 992px and 769px
-                                    itemsTablet: [768,1], //1 items between 768 and 480
-                                    itemsMobile : [480, 1],
-                                    theme: 'carousel-navigation-center',
-                                    autoHeight: true,
-                                    navigation: true,
-                                    navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-                                    pagination: false
-                                });
-                            });
-                            $('.kt-product-popup form').wc_variation_form();
-
-                        },
-                        close: function(){
-                            objProduct.css('display','none');
-                            setTimeout(function(){
-                                objProduct.removeAttr('style');
-                            }, 50 );
-                        },
-                        change: function() {
-                            $('.kt-product-popup form').wc_variation_form();
-                        }
-                    }
-                });
-            });
-        });
-    }
-
 
     /* ---------------------------------------------
      Owl carousel woo
@@ -279,13 +221,13 @@
 
         $('.single-product-main-images').slick({
             asNavFor: '.single-product-main-thumbnails',
-            infinite: false,
+            infinite: true,
             draggable: false
         });
 
         var options = {
             asNavFor: '.single-product-main-images',
-            infinite: false,
+            infinite: true,
             focusOnSelect: true,
             slidesToShow: 3
         };
