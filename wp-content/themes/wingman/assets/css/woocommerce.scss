@@ -29,17 +29,14 @@
 	    border:2px solid $border-color;
 	    border-radius:0;
 	    font-size:0;
-	    line-height: 25px;
+	    line-height: 26px;
 	    &:hover{
 	    	color: red !important;
     		background: none !important;
 	    }
 	    &:after{
-	    	content: '\f00d';
-		    font-family: FontAwesome;
-		    font-size: 18px;
-		    font-style: normal;
-		    font-weight: normal;
+          @include FontAwesome('\f00d');
+		    font-size: 14px;
 		    letter-spacing: 0;
 	    }
 	  }
@@ -67,7 +64,7 @@
   span.kt_new,
   span.onsale{
     background: $title-text;
-    border-radius: 0;
+    @include border-radius(0);
     color: $white;
     font-size: 11px;
     font-weight: normal;

@@ -32,18 +32,22 @@
   border: 2px solid #e5e5e5;
   border-radius: 0;
   font-size: 0;
-  line-height: 25px; }
+  line-height: 26px; }
   .yith-woocompare-widget a.remove:hover,
   .woocommerce a.remove:hover {
     color: red !important;
     background: none !important; }
   .yith-woocompare-widget a.remove:after,
   .woocommerce a.remove:after {
-    content: '\f00d';
-    font-family: FontAwesome;
-    font-size: 18px;
-    font-style: normal;
+    font-family: "FontAwesome";
+    content: "";
+    speak: none;
     font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    font-size: 14px;
     letter-spacing: 0; }
 
 .woocommerce .star-rating {
@@ -59,6 +63,11 @@
 .woocommerce span.kt_new,
 .woocommerce span.onsale {
   background: #252525;
+  -webkit-border-radius: 0;
+  -khtml-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0;
   color: #FFFFFF;
   font-size: 11px;

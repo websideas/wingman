@@ -17,7 +17,7 @@ $parent_product_post = $post;
 
 do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
-<form class="cart" method="post" enctype='multipart/form-data'>
+<form class="cart" method="post" enctype='multipart/form-data' action="<?php the_permalink() ?>">
 	<table class="group_table">
 		<tbody>
 			<?php
