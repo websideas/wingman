@@ -27,43 +27,6 @@ vc_add_params("vc_custom_heading", array(
 ));
 
 
-$tabs_arr = array(
-    'use_theme_fonts' => array(
-        'type' => 'checkbox',
-        'heading' => __( 'Use theme default font family?', 'js_composer' ),
-        'param_name' => 'use_theme_fonts',
-        'value' => array( __( 'Yes', 'js_composer' ) => 'yes' ),
-        'description' => __( 'Use font family from the theme.', 'js_composer' ),
-        'group' => __( 'Typography', THEME_LANG ),
-        'std' => 'yes'
-    ),
-    'google_fonts' => array(
-        'type' => 'google_fonts',
-        'param_name' => 'google_fonts',
-        'value' => 'font_family:Montserrat|font_style:400%20regular%3A400%3Anormal',
-        'settings' => array(
-            'fields' => array(
-                'font_family_description' => __( 'Select font family.', 'js_composer' ),
-                'font_style_description' => __( 'Select font styling.', 'js_composer' )
-            )
-        ),
-        'group' => __( 'Typography', THEME_LANG ),
-        'dependency' => array(
-            'element' => 'use_theme_fonts',
-            'value_not_equal_to' => 'yes',
-        ),
-        'description' => __( '', 'js_composer' ),
-    )
-);
-
-
-vc_add_params("vc_tta_accordion", $tabs_arr);
-vc_add_params("vc_tta_pageable", $tabs_arr);
-
-$tabs_arr['use_theme_fonts']['std'] = false;
-vc_add_params("vc_tta_tour", $tabs_arr);
-vc_add_params("vc_tta_tabs", $tabs_arr);
-
 
 vc_add_params("vc_btn", array(
     array(

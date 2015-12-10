@@ -135,7 +135,17 @@ if ( ! class_exists( 'RWMB_Helper' ) )
 					'multiple' => false,
 					'clone'    => false,
 				);
-				$meta = RWMB_Map_Field::the_value( $field, $args, $post_id );
+				$meta  = RWMB_Map_Field::the_value( $field, $args, $post_id );
+			}
+			// Display oembed content
+			elseif ( 'oembed' == $args['type'] )
+			{
+				$field = array(
+					'id'       => $key,
+					'clone'    => isset( $args['clone'] ) ? $args['clone'] : false,
+					'multiple' => isset( $args['multiple'] ) ? $args['multiple'] : false,
+				);
+				$meta  = RWMB_OEmbed_Field::the_value( $field, $args, $post_id );
 			}
 			return apply_filters( 'rwmb_meta', $meta, $key, $args, $post_id );
 		}

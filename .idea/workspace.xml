@@ -2,9 +2,174 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c7cfb02-0be5-4605-a0ec-58a67682dd43" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/justified/content.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/packery/content.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/blog_posts.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/blog_posts.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/color-picker/color-picker.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/media/media.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/redux-admin.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/rtl.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/vendor/jquery-ui-bootstrap/jquery-ui-1.10.0.custom.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/extensions/import_export/import_export/field_import_export.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/extensions/options_object/options_object/field_options_object.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/ace_editor/field_ace_editor.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/background/field_background.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/border/field_border.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/checkbox/field_checkbox.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/color_gradient/field_color_gradient.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/color_rgba/field_color_rgba.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/date/field_date.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/dimensions/field_dimensions.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/divide/field_divide.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/editor/field_editor.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/image_select/field_image_select.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/info/field_info.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/link_color/field_link_color.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/media/field_media.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/multi_text/field_multi_text.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/palette/field_palette.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/section/field_section.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/select/field_select.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/select_image/field_select_image.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/slider/field_slider.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/slides/field_slides.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/sortable/field_sortable.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/sorter/field_sorter.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/spacing/field_spacing.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/spinner/field_spinner.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/switch/field_switch.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/text/field_text.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/typography/field_typography.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/welcome/css/redux-welcome.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/js/file-advanced.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/js/image-advanced.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/lang/ar.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/lang/de_DE.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/lang/es_ES.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/lang/fa_IR.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/lang/fr_FR.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/lang/it_IT.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/lang/nb_NO.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/lang/nl.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/lang/pl_PL.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/lang/pt_BR.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/lang/sv_SE.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/lang/tr_TR.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/lang/vi.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/lang/zh_CN.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_tta_global.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/_mixin.scss" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/_mixin.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/checkbox.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/checkbox.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/class.redux_admin_notices.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/class.redux_admin_notices.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/class.redux_filesystem.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/class.redux_filesystem.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/class.redux_functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/class.redux_functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/class.redux_helpers.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/class.redux_helpers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/js/clone.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/js/clone.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/color-picker/color-picker.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/color-picker/color-picker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/css/color.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/css/color.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/js/color.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/js/color.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/color.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/color.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/common.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/common.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/js/date.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/js/date.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/date.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/date.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/datetime.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/datetime.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/divider.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/divider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/vendor/elusive-icons/scss/elusive-icons.css.map" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/vendor/elusive-icons/scss/elusive-icons.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/vendor/elusive-icons/scss/elusive-icons.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/vendor/elusive-icons/scss/elusive-icons.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/email.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/email.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/core/enqueue.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/core/enqueue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/extensions/customizer/extension_customizer.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/extensions/customizer/extension_customizer.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/extensions/customizer/extension_customizer.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/extensions/customizer/extension_customizer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/extensions/customizer/extension_customizer.min.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/extensions/customizer/extension_customizer.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/extensions/customizer/extension_customizer.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/extensions/customizer/extension_customizer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/extensions/customizer/extension_customizer.scss" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/extensions/customizer/extension_customizer.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/welcome/views/extensions.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/welcome/views/extensions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/field.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/field.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/ace_editor/field_ace_editor.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/ace_editor/field_ace_editor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/background/field_background.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/background/field_background.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/border/field_border.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/border/field_border.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/border/field_border.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/border/field_border.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/checkbox/field_checkbox.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/checkbox/field_checkbox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/color/field_color.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/color/field_color.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/color/field_color.min.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/color/field_color.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/color_gradient/field_color_gradient.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/color_gradient/field_color_gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/color_rgba/field_color_rgba.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/color_rgba/field_color_rgba.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/color_rgba/field_color_rgba.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/color_rgba/field_color_rgba.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/date/field_date.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/date/field_date.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/dimensions/field_dimensions.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/dimensions/field_dimensions.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/divide/field_divide.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/divide/field_divide.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/editor/field_editor.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/editor/field_editor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/editor/field_editor.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/editor/field_editor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/editor/field_editor.min.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/editor/field_editor.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/image_select/field_image_select.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/image_select/field_image_select.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/extensions/import_export/import_export/field_import_export.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/extensions/import_export/import_export/field_import_export.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/info/field_info.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/info/field_info.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/link_color/field_link_color.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/link_color/field_link_color.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/link_color/field_link_color.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/link_color/field_link_color.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/media/field_media.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/media/field_media.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/multi_text/field_multi_text.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/multi_text/field_multi_text.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/extensions/options_object/options_object/field_options_object.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/extensions/options_object/options_object/field_options_object.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/palette/field_palette.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/palette/field_palette.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/raw/field_raw.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/raw/field_raw.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/section/field_section.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/section/field_section.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/select/field_select.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/select/field_select.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/select_image/field_select_image.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/select_image/field_select_image.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/slider/field_slider.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/slider/field_slider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/slides/field_slides.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/slides/field_slides.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/sortable/field_sortable.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/sortable/field_sortable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/sorter/field_sorter.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/sorter/field_sorter.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/sorter/field_sorter.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/sorter/field_sorter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/spacing/field_spacing.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/spacing/field_spacing.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/spinner/field_spinner.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/spinner/field_spinner.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/switch/field_switch.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/switch/field_switch.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/text/field_text.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/text/field_text.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/typography/field_typography.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/typography/field_typography.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/file-advanced.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/file-advanced.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/templates/panel/footer.tpl.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/templates/panel/footer.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/framework.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/framework.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/typography/googlefonts.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/typography/googlefonts.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/heading.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/heading.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/helpers.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/helpers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/hidden.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/hidden.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/image-advanced.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/image-advanced.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/image.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/image.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/init.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/init.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/vendor/jquery-ui-bootstrap/jquery-ui-1.10.0.custom.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/vendor/jquery-ui-bootstrap/jquery-ui-1.10.0.custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/vendor/qtip/jquery.qtip.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/vendor/qtip/jquery.qtip.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/js/vendor/qtip/jquery.qtip.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/js/vendor/qtip/jquery.qtip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/vendor/qtip/jquery.qtip.min.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/vendor/qtip/jquery.qtip.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/js/vendor/qtip/jquery.qtip.min.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/js/vendor/qtip/jquery.qtip.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_bridge.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_bridge.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/js/map.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/js/map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/media/media.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/media/media.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/meta-box.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/meta-box.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/meta-box.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/meta-box.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/number.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/number.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/oembed.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/oembed.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/password.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/password.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/post.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/post.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.css.map" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/radio.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/radio.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/range.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/range.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/readme.txt" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/redux-admin.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/redux-admin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/welcome/css/redux-welcome.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/welcome/css/redux-welcome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/js/redux.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/js/redux.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/js/redux.min.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/js/redux.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/js/vendor/redux.select2.sortable.min.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/js/vendor/redux.select2.sortable.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/rtl.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/assets/css/rtl.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/select-advanced.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/select-advanced.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/css/select.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/css/select.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css.map" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/css/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/welcome/views/support.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/welcome/views/support.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/taxonomy-advanced.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/taxonomy-advanced.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/taxonomy.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/taxonomy.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/text.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/text.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/time.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/time.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/url.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/inc/fields/url.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/js/validate.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/js/validate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/welcome/welcome.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/welcome/welcome.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.css.map" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wingman.iws" />
@@ -27,12 +192,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="blog_posts.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/blog_posts.php">
+      <file leaf-file-name="meta-box.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/meta-box.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22807017">
-              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-              <folding />
+            <state vertical-scroll-proportion="0.3508772">
+              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+              <folding>
+                <element signature="e#6#310#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,13 +212,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-branding.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/responsive.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/_variables.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-mobile.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-mobilenav.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_bridge.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_update.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/category_products_tab.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/products_carousel_tab.php" />
@@ -71,7 +235,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/core.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/js/functions.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/_mixin.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/frontend.php" />
         <option value="&lt;96cc41cf-a6ef-4174-8206-5b4b2c726204&gt;/delphinus/pages-intro.php" />
@@ -82,7 +245,6 @@
         <option value="$PROJECT_DIR$/wp-content/plugins/kt_mailchimp/kt_mailchimp.php" />
         <option value="&lt;96cc41cf-a6ef-4174-8206-5b4b2c726204&gt;/wingman/main/wp-content/plugins/kt_mailchimp/kt_mailchimp.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" />
         <option value="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce.scss" />
         <option value="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/_mixins.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php" />
@@ -96,6 +258,11 @@
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/plugins.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/blog_posts.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_bridge.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/_mixin.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/meta-box.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content.php" />
       </list>
     </option>
   </component>
@@ -289,6 +456,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wingman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wingman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wingman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="framework" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -319,41 +520,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js_composer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js_composer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vc_addons" />
+              <option name="myItemId" value="extensions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -473,128 +640,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_mailchimp/assets/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7679181">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/_animation.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07017544">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/typography/field_typography.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-571.25">
-          <caret line="928" column="17" selection-start-line="928" selection-start-column="17" selection-end-line="928" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/fields/typography/googlefonts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="76.64706">
-          <caret line="0" column="43392" selection-start-line="0" selection-start-column="43392" selection-end-line="0" selection-end-column="43392" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.125">
-          <caret line="13" column="67" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_mailchimp/assets/font-awesome/css/font-awesome.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32423207">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/_mixin.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2736842">
-          <caret line="436" column="14" selection-start-line="436" selection-start-column="14" selection-end-line="436" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/frontend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.875">
-          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_mailchimp/assets/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5631399">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/include/autoload/vendors/cf7.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3859649">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/divider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03508772">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/alert.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9473684">
-          <caret line="111" column="3" selection-start-line="111" selection-start-column="3" selection-end-line="111" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_bridge.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.5789473">
-          <caret line="147" column="31" selection-start-line="147" selection-start-column="31" selection-end-line="147" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/core.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.0701756">
-          <caret line="232" column="20" selection-start-line="232" selection-start-column="20" selection-end-line="232" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/config/content/shortcode-vc-pie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/config/content/shortcode-vc-message.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/config/tta/shortcode-vc-tta-tabs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2982456">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="22" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/config/lean-map.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -606,6 +651,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -613,6 +659,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -620,6 +667,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5263158">
           <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -627,6 +675,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -634,6 +683,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -641,6 +691,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.625">
           <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -686,14 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1754386">
           <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51449275">
-          <caret line="4519" column="16" selection-start-line="4519" selection-start-column="16" selection-end-line="4519" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -862,9 +905,155 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/blog_posts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22807017">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.45614034">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_empty_space.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_icon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_single_image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_custom_heading.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_column_text.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_btn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0350878">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_bridge.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.5">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_parrams.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="206.25">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="10.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/archive.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/fonts/font-awesome/css/font-awesome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43686005">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-76.37202">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.705882">
+          <caret line="4633" column="8" selection-start-line="4633" selection-start-column="8" selection-end-line="4633" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/_mixin.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.875">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/framework.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2389.375">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCore/inc/class.redux_filesystem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45614034">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box/meta-box.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3508772">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <element signature="e#6#310#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -439,13 +439,6 @@
 }
 
 
-/// Calc
-@mixin calc($property, $expression) {
-  #{$property}: -moz-calc(#{$expression});
-  #{$property}: -webkit-calc(#{$expression});
-  #{$property}: calc(#{$expression});
-}
-
 /// FontAwesome
 @mixin FontAwesome($glyph, $font : 'FontAwesome') {
   font-family: $font;
