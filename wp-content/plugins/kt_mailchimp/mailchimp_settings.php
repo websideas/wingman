@@ -135,9 +135,7 @@ class KT_MailChimp_Settings
         if( isset( $input['api_key'] ) )
             $new_input['api_key'] = sanitize_text_field( $input['api_key'] );
 
-
         $new_input['messages_successfully'] = $input['messages_successfully'];
-        $new_input['invalid_email'] = $input['invalid_email'];
 
 
         return $new_input;
@@ -190,7 +188,8 @@ class KT_MailChimp_Settings
     public function other_option_callback(){
         echo "<ul class='kt_mailchimp_option'>";
         echo '<li><strong>'.__('Double Opt In', 'kt_mailchimp').'</strong> : opt_in="yes". ( EX: yes or no)</li>';
-        echo '<li><strong>'.__('Layout', 'kt_mailchimp').'</strong> : layout="one" (EX: one, two)</li>';
+        echo '<li><strong>'.__('Disable Names', 'kt_mailchimp').'</strong> : disable_names="yes". ( EX: yes or no)</li>';
+        echo '<li><strong>'.__('Layout', 'kt_mailchimp').'</strong> : layout="1" (EX: 1, 2)</li>';
         echo "</ul>";
     }
 
