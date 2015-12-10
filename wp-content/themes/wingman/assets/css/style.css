@@ -75,11 +75,11 @@ p {
 /*
  * 1.2. Helper CSS
  */
-.kt-table {
+.display-table {
   display: table;
   width: 100%;
   height: 100%; }
-  .kt-table .kt-col {
+  .display-table .display-cell {
     display: table-cell;
     vertical-align: middle; }
 
@@ -3519,6 +3519,7 @@ article.post-item.post-layout-classic {
         -ms-transition: all 0.5s ease 0s;
         -o-transition: all 0.5s ease 0s;
         transition: all 0.5s ease 0s;
+        letter-spacing: 0;
         font-size: 16px;
         height: 34px;
         line-height: 32px;

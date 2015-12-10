@@ -11,10 +11,10 @@ if(!$footer_left && !$footer_right) return;
 
 ?>
 <div class="display-table">
-    <div class="display-td footer-left">
+    <div class="display-cell footer-left">
         <?php get_template_part( 'templates/footers/footer', $footer_left ); ?>
     </div>
-    <div class="display-td footer-right">
+    <div class="display-cell footer-right">
         <?php get_template_part( 'templates/footers/footer', $footer_right ); ?>
     </div>
 </div>
