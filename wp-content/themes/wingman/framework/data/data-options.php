@@ -1819,7 +1819,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li ul.sub-menu-dropdown li > a'
                         ),
                         'default'  => array(
-                            'text-transform' => 'uppercase',
+
                         ),
                     ),
                     array(
