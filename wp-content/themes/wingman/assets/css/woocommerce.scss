@@ -1296,10 +1296,10 @@ body{
 		    margin: 0 auto;
 		    height: 18px;
 	    }
-	    .kt-woocommerce-tool-lists{
+	    .kt-woocommerce-tool-list{
 	    	display: none;
 	    }
-	    &.lists{
+	    &.list{
 			li.product{
 				width: auto;
 			    float: none;
@@ -1369,7 +1369,7 @@ body{
 		    	text-decoration: none;
 		    }
 	    }
-	    &.lists{
+	    &.list{
 	    	p.price,
   			span.price,
   			.price{
