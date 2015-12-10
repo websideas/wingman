@@ -16,8 +16,6 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
             'blog_columns' => 3,
             'blog_columns_tablet' => 2,
 
-            'row_height' => 250,
-            'margin' => 10, 
             
             'thumbnail_type' => 'format',
             'show_excerpt' => 'true',
