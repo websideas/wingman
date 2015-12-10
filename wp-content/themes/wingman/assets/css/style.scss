@@ -4464,14 +4464,19 @@ form.wpcf7-form{
   background: #fff;
   position: relative;
   margin: 0 auto;
-  .white-popup-block{
-    padding-bottom: 30px;
-  }
   h3.title-top{
     text-align: center;
     margin: 0;
     font-size: 18px;
-    padding: 17px;
+    padding: 17px 40px;
+    min-height: 59px;
+  }
+  .content-popup{
+    padding: 30px;
+    .kt-mailchimp-wrapper{
+      margin: 0;
+    }
+
   }
   .mfp-close{
     font-size: 0;

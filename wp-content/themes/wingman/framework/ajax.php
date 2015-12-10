@@ -201,4 +201,3 @@ function wp_ajax_fronted_popup_callback() {
     
     die();
 }
-setcookie('kt_popup', 1, time() - ( 1000*60*60*24), '/');

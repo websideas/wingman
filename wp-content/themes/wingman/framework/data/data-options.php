@@ -3715,7 +3715,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => __( 'Content Popup', THEME_LANG ),
                         'subtitle' => __( '', THEME_LANG ),
                         'required' => array('enable_popup','equals', 1),
-                        'default'  => __('<h4 class="newletter-title">Sign up for out newsletter<br /> to receive special offers.</h4><form method="post" action="#" class="mailchimp-form clearfix"><input type="text" placeholder="Email" class="mailchimp-email" name="email"><button type="submit" class="btn btn-default mailchimp-submit"><i class="fa fa-long-arrow-right"></i></button></form>', THEME_LANG),
+                        'default'  => __('<h4 class="newletter-title">Sign up for out newsletter<br /> to receive special offers.</h4>[kt_mailchimp list="9306fec7e3" disable_names="yes"]', THEME_LANG),
                     ),
                 )
             );

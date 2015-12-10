@@ -842,12 +842,20 @@ function theme_after_footer_add_popup(){
     $disable_popup_mobile = kt_option( 'disable_popup_mobile' );
     $content_popup = kt_option( 'content_popup' );
     $time_show = kt_option( 'time_show', 0 );
+    $title_popup = kt_option( 'title_popup' );
+    $image_popup = kt_option( 'popup_image' );
     
-    //if( $enable_popup == 1 && !isset($_COOKIE['kt_popup']) ){
+    if( $enable_popup == 1 && !isset($_COOKIE['kt_popup']) ){
         ?>
             <div id="popup-wrap" class="mfp-hide" data-mobile="<?php echo esc_attr( $disable_popup_mobile ); ?>" data-timeshow="<?php echo esc_attr($time_show); ?>">     
                 <div class="white-popup-block">
-                    <?php echo do_shortcode($content_popup); ?>
+                    <h3 class="title-top"><?php echo $title_popup; ?></h3>
+                    <?php if( $image_popup['url'] ){ ?>
+                        <img src="<?php echo $image_popup['url']; ?>" alt="" class="img-responsive">
+                    <?php } ?>
+                    <div class="content-popup">
+                        <?php echo do_shortcode($content_popup); ?>
+                    </div>
                 </div>
                 <form class="dont-show" name="dont-show">
                     <input id="dont-showagain" type="checkbox" value="" />
@@ -855,5 +863,5 @@ function theme_after_footer_add_popup(){
                 </form>
             </div>
         <?php
-    //}
+    }
 }
