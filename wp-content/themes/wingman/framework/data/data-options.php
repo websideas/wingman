@@ -155,15 +155,6 @@ if ( ! class_exists( 'KT_config' ) ) {
         public function setSections() {
             
 
-
-
-            global $wp_registered_sidebars;
-            $sidebars = array();
-
-            foreach ( $wp_registered_sidebars as $sidebar ){
-                $sidebars[  $sidebar['id'] ] =   $sidebar['name'];
-            }
-
             $image_sizes = kt_get_image_sizes();
 
             $this->sections[] = array(
@@ -2141,7 +2132,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'select',
                         'title'    => __( 'Sidebar left area', THEME_LANG ),
                         'subtitle'     => __( "Please choose default layout", THEME_LANG ),
-                        'options'  => $sidebars,
+                        'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('sidebar','equals','left')
                         //'clear' => false
@@ -2152,7 +2143,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'select',
                         'title'    => __( 'Sidebar right area', THEME_LANG ),
                         'subtitle'     => __( "Please choose page layout", THEME_LANG ),
-                        'options'  => $sidebars,
+                        'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('sidebar','equals','right')
                         //'clear' => false
@@ -2225,7 +2216,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'select',
                         'title'    => __( 'Sidebar left area', THEME_LANG ),
                         'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
-                        'options'  => $sidebars,
+                        'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('archive_sidebar','equals','left'),
                         'clear' => false
@@ -2235,7 +2226,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'select',
                         'title'    => __( 'Sidebar right area', THEME_LANG ),
                         'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
-                        'options'  => $sidebars,
+                        'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('archive_sidebar','equals','right'),
                         'clear' => false
@@ -2518,7 +2509,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'select',
                         'title'    => __( 'Sidebar left area', THEME_LANG ),
                         'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
-                        'options'  => $sidebars,
+                        'data'     => 'sidebars',
                         'default'  => 'blog-widget-area',
                         'required' => array('author_sidebar','equals','left'),
                         'clear' => false
@@ -2528,7 +2519,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'select',
                         'title'    => __( 'Sidebar right area', THEME_LANG ),
                         'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
-                        'options'  => $sidebars,
+                        'data'     => 'sidebars',
                         'default'  => 'blog-widget-area',
                         'required' => array('author_sidebar','equals','right'),
                         'clear' => false
@@ -2821,7 +2812,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'select',
                         'title'    => __( 'Single post: Sidebar left area', THEME_LANG ),
                         'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
-                        'options'  => $sidebars,
+                        'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('blog_sidebar','equals','left'),
                         'clear' => false
@@ -2831,7 +2822,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'select',
                         'title'    => __( 'Single post: Sidebar right area', THEME_LANG ),
                         'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
-                        'options'  => $sidebars,
+                        'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('blog_sidebar','equals','right'),
                         'clear' => false
@@ -3080,7 +3071,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'select',
                         'title'    => __( 'Sidebar left area', THEME_LANG ),
                         'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
-                        'options'  => $sidebars,
+                        'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('search_sidebar','equals','left'),
                         'clear' => false
@@ -3090,7 +3081,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'select',
                         'title'    => __( 'Search: Sidebar right area', THEME_LANG ),
                         'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
-                        'options'  => $sidebars,
+                        'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('search_sidebar','equals','right'),
                         'clear' => false
@@ -3431,7 +3422,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'select',
                         'title'    => __( 'Shop: Sidebar left area', THEME_LANG ),
                         'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
-                        'options'  => $sidebars,
+                        'data'     => 'sidebars',
                         'default'  => 'shop-widget-area',
                         'required' => array('shop_sidebar','equals','left'),
                         'clear' => false
@@ -3441,7 +3432,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'select',
                         'title'    => __( 'Shop: Sidebar right area', THEME_LANG ),
                         'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
-                        'options'  => $sidebars,
+                        'data'     => 'sidebars',
                         'default'  => 'shop-widget-area',
                         'required' => array('shop_sidebar','equals','right'),
                         'clear' => false
@@ -3523,7 +3514,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'select',
                         'title'    => __( 'Product: Sidebar left area', THEME_LANG ),
                         'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
-                        'options'  => $sidebars,
+                        'data'     => 'sidebars',
                         'default'  => 'shop-widget-area',
                         'required' => array('product_sidebar','equals','left'),
                         'clear' => false
@@ -3533,7 +3524,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'select',
                         'title'    => __( 'Product: Sidebar right area', THEME_LANG ),
                         'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
-                        'options'  => $sidebars,
+                        'data'     => 'sidebars',
                         'default'  => 'shop-widget-area',
                         'required' => array('product_sidebar','equals','right'),
                         'clear' => false
