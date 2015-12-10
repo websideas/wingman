@@ -1423,7 +1423,12 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'transparent' => false
                     ),
 
-
+                    array(
+                        'id'       => 'typography_heading',
+                        'type'     => 'raw',
+                        'content'  => '<div style="height:150px"></div>',
+                        'full_width' => true
+                    ),
                 )
             );
             /**
