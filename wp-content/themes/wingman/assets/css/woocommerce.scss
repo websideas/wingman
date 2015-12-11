@@ -71,8 +71,8 @@
     height: 20px;
     line-height: 22px;
     min-height: 0;
-    min-width: 50px;
-    padding: 0 10px;
+    min-width: 60px;
+    padding: 0 10px 0 12px;
     position: absolute;
     text-align: center;
     text-transform: uppercase;
@@ -384,6 +384,9 @@
     .product-detail-thumbarea{
       margin: 0;
       padding: 0;
+
+
+
     }
     .product-details-info{
       position: absolute;
@@ -1550,7 +1553,15 @@ body{
 		}
 	}
 	.product-detail-thumbarea{
-		position: relative;
+      position: relative;
+      .kt_new{
+        left: auto;
+        right: 19px;
+
+        +.onsale{
+          top: 50px;
+        }
+      }
 
 		.single-product-main-images{
           margin-bottom: 30px;
@@ -1957,20 +1968,27 @@ div.swatch-wrapper{
   margin: 5px;
   background: $qty_bg;
   text-align: center;
+  @include border-radius(50%);
+  overflow: hidden;
+  padding: 0;
+
+  .swatch-anchor{
+    width: 30px!important;
+    height: 30px!important;
+    @include border-radius(50%);
+    overflow: hidden;
+  }
 
   &.selected,
   &:hover{
     border: 1px solid $primary-color;
-    padding: 2px;
+    padding: 0;
   }
-
   .attribute_pa_color_picker &{
     padding: 1px;
-    @include border-radius(100%);
     .swatch-anchor{
       width: 14px!important;
       height: 14px!important;
-      @include border-radius(100%);
     }
   }
 }
@@ -2003,6 +2021,7 @@ div.swatch-wrapper{
       font-size: 18px;
     }
     .shop_attributes{
+      border: none;
       .alt{
         td{
           background: $qty_bg;
@@ -2014,6 +2033,7 @@ div.swatch-wrapper{
       }
       th,td{
         border: none;
+        padding: 0 8px;
       }
     }
   }
@@ -2132,6 +2152,9 @@ div.swatch-wrapper{
 	}
 }
 .woocommerce-cart{
+  .shipping-calculator-form{
+    display: block!important;
+  }
 	.wc-proceed-to-checkout{
 		padding: 0;
     	margin-bottom: 40px;
@@ -2166,30 +2189,31 @@ div.swatch-wrapper{
 		}
 	}
 	table.cart{
-		th.product-name{
-			min-width: 25%;
-		}
-		.product-thumbnail{
-			width: 150px;
-		}
-		td.product-thumbnail{
-			padding-left: 0;
-    		text-align: left;
-		}
-		img{
-			width: 130px;
-		}
-		.product-remove{
-			width: 30px;
-		}
-		input.btn,
-		input.button{
-			line-height: 1.42857;
-		}
-		.quantity-group{
-			float: none;
-			margin: 0 auto;
-		}
+      margin: 0 0 30px;
+      th.product-name{
+          min-width: 25%;
+      }
+      .product-thumbnail{
+          width: 140px;
+      }
+      td.product-thumbnail{
+          padding-left: 0;
+          text-align: left;
+      }
+      img{
+          width: 120px;
+      }
+      .product-remove{
+          width: 30px;
+      }
+      input.btn,
+      input.button{
+          line-height: 1.42857;
+      }
+      .quantity-group{
+          float: none;
+          margin: 0 auto;
+      }
 	}
 	table.shop_table{
 		.product-stock-stauts,
@@ -2200,26 +2224,26 @@ div.swatch-wrapper{
 		}
 	}
 	ul#shipping_method{
-		li{
-			text-indent: 0;
-	    	line-height: normal;
-	    	padding-left: 0;
-	    	label{
-	    		display: inline;
-			    font-weight: normal;
-			    margin: 0;
-	    	}
-		}
+      li{
+          text-indent: 0;
+          line-height: normal;
+          padding-left: 0;
+          label{
+              display: inline;
+              font-weight: normal;
+              margin: 0;
+          }
+      }
 	}
 }
 .woocommerce-page{
-	.cart_totals{
-		table{
-			td{
-				text-align: right;
-			}
-		}
-	}
+  .cart_totals{
+    table{
+      td{
+          text-align: right;
+      }
+    }
+  }
 }
 /** =========================
     9. Page Checkout
