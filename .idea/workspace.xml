@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c7cfb02-0be5-4605-a0ec-58a67682dd43" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/blog_posts.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/blog_posts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css.map" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.css.map" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.scss" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wingman.iws" />
@@ -29,14 +30,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="2495" column="8" selection-start-line="2495" selection-start-column="8" selection-end-line="2495" selection-end-column="8" />
+            <state vertical-scroll-proportion="-1866.875">
+              <caret line="3500" column="9" selection-start-line="3500" selection-start-column="9" selection-end-line="3500" selection-end-column="9" />
               <folding>
-                <element signature="e#61495#61746#2" expanded="true" />
+                <element signature="e#61332#61583#2" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="woocommerce.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2631579">
+              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_variables.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/_variables.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.625">
+              <caret line="16" column="11" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,10 +117,10 @@
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/cart/cart-totals.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/woocommerce/templates/cart/shipping-calculator.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/woocommerce.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/blog_posts.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.scss" />
       </list>
     </option>
   </component>
@@ -461,13 +482,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/vc_templates/vc_btn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0350878">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_parrams.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="206.25">
@@ -662,14 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.375">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/product_category_banner.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.25">
@@ -803,14 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2789855">
-          <caret line="1819" column="38" selection-start-line="1819" selection-start-column="38" selection-end-line="1819" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4213615">
@@ -840,25 +838,49 @@
         <state vertical-scroll-proportion="0.5326087">
           <caret line="2894" column="30" selection-start-line="2894" selection-start-column="30" selection-end-line="2894" selection-end-column="30" />
           <folding>
-            <marker date="1449838991000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1449838991000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1449838991000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1449838991000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1449838991000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1449838991000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1449838991000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1449838991000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449844155000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449844155000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449844155000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449844155000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449844155000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449844155000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449844155000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1449844155000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/sass/lib/sass.jar!/org/jetbrains/plugins/sass/stdlib/sass_functions.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3941522">
+          <caret line="521" column="10" selection-start-line="521" selection-start-column="10" selection-end-line="521" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="2495" column="8" selection-start-line="2495" selection-start-column="8" selection-end-line="2495" selection-end-column="8" />
+        <state vertical-scroll-proportion="-1866.875">
+          <caret line="3500" column="9" selection-start-line="3500" selection-start-column="9" selection-end-line="3500" selection-end-column="9" />
           <folding>
-            <element signature="e#61495#61746#2" expanded="true" />
+            <element signature="e#61332#61583#2" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.625">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2631579">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

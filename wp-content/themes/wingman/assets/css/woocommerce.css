@@ -501,6 +501,13 @@
     left: 0;
     line-height: 40px;
     margin: 0 !important;
+    filter: alpha(opacity=60);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    -webkit-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    -moz-opacity: 0.6;
+    -ms-opacity: 0.6;
+    -o-opacity: 0.6;
     opacity: 0.6;
     text-indent: 0;
     top: 0;
@@ -562,6 +569,11 @@
 .woocommerce table.shop_table,
 .woocommerce-page table.shop_table {
   border: none;
+  -webkit-border-radius: 0;
+  -khtml-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0; }
   .woocommerce table.shop_table th,
   .woocommerce-page table.shop_table th {
@@ -578,7 +590,8 @@
 .woocommerce ul#shipping_method,
 .woocommerce-page ul#shipping_method {
   white-space: nowrap; }
-.woocommerce td.product-name dl.variatio dt, .woocommerce td.product-name dl.variatio dd,
+.woocommerce td.product-name dl.variatio dt,
+.woocommerce td.product-name dl.variatio dd,
 .woocommerce-page td.product-name dl.variatio dt,
 .woocommerce-page td.product-name dl.variatio dd {
   margin-bottom: 0; }
@@ -620,10 +633,14 @@
   border: none; }
   .woocommerce .woocommerce-message .button.wc-forward:after,
   .woocommerce-page .woocommerce-message .button.wc-forward:after {
-    content: '\f0da';
-    font-family: FontAwesome;
+    font-family: "FontAwesome";
+    content: "";
+    speak: none;
     font-weight: normal;
-    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
     margin-left: 5px; }
   .woocommerce .woocommerce-message .button.wc-forward:hover,
   .woocommerce-page .woocommerce-message .button.wc-forward:hover {
@@ -640,7 +657,8 @@
   letter-spacing: 0.2em; }
 .woocommerce header h2 {
   font-size: 24px; }
-.woocommerce mark, .woocommerce .mark {
+.woocommerce mark,
+.woocommerce .mark {
   background: #82c14f;
   color: #252525; }
 
@@ -1236,7 +1254,7 @@ body .mCSB_scrollTools {
     font-size: 14px;
     font-weight: normal;
     letter-spacing: 0.2em;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     margin: 0 0 8px;
     text-transform: none;
@@ -1250,7 +1268,6 @@ body .mCSB_scrollTools {
         color: #82c14f; }
   .woocommerce ul.shop-products .star-rating {
     display: block;
-    margin-top: 2px;
     float: none;
     margin: 0 auto;
     height: 18px; }
@@ -1378,11 +1395,11 @@ body .mCSB_scrollTools {
   width: 100%; }
 .woocommerce .tool-inner {
   height: 40px;
-  padding: 0;
   z-index: 1;
   float: left;
-  padding-right: 1px; }
-  .woocommerce .tool-inner > div, .woocommerce .tool-inner > a {
+  padding: 0 1px 0 0; }
+  .woocommerce .tool-inner > div,
+  .woocommerce .tool-inner > a {
     width: 100% !important;
     margin: 0 !important; }
 .woocommerce .added_to_cart,

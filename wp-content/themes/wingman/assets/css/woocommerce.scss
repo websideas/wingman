@@ -22,27 +22,26 @@
 
 .yith-woocompare-widget,
 .woocommerce{
-	a.remove{
-	    color: $main-text !important;
-	    width:30px;
-	    height:30px;
-	    border:2px solid $border-color;
-	    border-radius:0;
-	    font-size:0;
-	    line-height: 26px;
-	    &:hover{
-	    	color: red !important;
-    		background: none !important;
-	    }
-	    &:after{
-          @include FontAwesome('\f00d');
-		    font-size: 14px;
-		    letter-spacing: 0;
-	    }
-	  }
+  a.remove{
+    color: $main-text !important;
+    width:30px;
+    height:30px;
+    border:2px solid $border-color;
+    border-radius:0;
+    font-size:0;
+    line-height: 26px;
+    &:hover{
+        color: red !important;
+        background: none !important;
+    }
+    &:after{
+      @include FontAwesome('\f00d');
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+  }
 }
 .woocommerce{
-
   .star-rating{
     font-size: 11px;
     width: 75px;
@@ -440,88 +439,88 @@
 
 .woocommerce.compare-button,
 .yith-wcwl-add-to-wishlist {
-    text-align: center;
-    margin: 0;
-    .feedback{
-    	display: none;
-    }
+  text-align: center;
+  margin: 0;
+  .feedback{
+      display: none;
+  }
 }
 
 
 .woocommerce.compare-button{
-	a:before{
-      content: "\f0ec";
-	}
-	.blockUI.blockOverlay{
-		background: $primary-color !important;
-	    opacity: 1 !important;
-	    cursor: pointer !important;
-	    &:before{
-          background: none !important;
-          color: $white;
-          @include FontAwesome('\f110');
-          @include animation(spin 2s linear infinite);
-          font-size: 20px;
-          height: 100%;
-          left: 0;
-          line-height: 40px;
-          margin: 0 !important;
-          opacity: 0.6;
-          text-indent: 0;
-          top: 0;
-          width: 100% !important;
-	    }
-	}
+  a:before{
+    content: "\f0ec";
+  }
+  .blockUI.blockOverlay{
+    background: $primary-color !important;
+    opacity: 1 !important;
+    cursor: pointer !important;
+    &:before{
+      background: none !important;
+      color: $white;
+      @include FontAwesome('\f110');
+      @include animation(spin 2s linear infinite);
+      font-size: 20px;
+      height: 100%;
+      left: 0;
+      line-height: 40px;
+      margin: 0 !important;
+      @include opacity(.6);
+      text-indent: 0;
+      top: 0;
+      width: 100% !important;
+    }
+  }
 }
 .woocommerce,
 .woocommerce-page{
   div.quantity-group{
-      background: $qty_bg;
-      display: block;
+    background: $qty_bg;
+    display: block;
+    float: left;
+    margin: 0 30px 10px 0;
+    padding:0 20px;
+    position: relative;
+    width: 87px;
+    .input-text{
+      @include border-radius(0);
       float: left;
-      margin: 0 30px 10px 0;
-      padding:0 20px;
-      position: relative;
-      width: 87px;
-      .input-text{
-          @include border-radius(0);
-          float: left;
-          border: none;
-          padding: 0 6px;
-          text-align: center;
-          width: 100%;
-          height: 40px;
-          font-size: 14px;
-          color: $title-text;
-          background: $qty_bg;
-          @include css3-prefix('appearance','textfield');
+      border: none;
+      padding: 0 6px;
+      text-align: center;
+      width: 100%;
+      height: 40px;
+      font-size: 14px;
+      color: $title-text;
+      background: $qty_bg;
+      @include css3-prefix('appearance','textfield');
+    }
+    button[type=button]{
+      border: medium none;
+      color: $title-text;
+      height: 100%;
+      line-height: 17px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 24px;
+      background: $qty_bg;
+      font-size:14px;
+      text-align: center;
+      &.quantity-minus{
+        border: none;
+        left:0;
+        bottom: 0;
+        top: auto;
       }
-      button[type=button]{
-          border: medium none;
-          color: $title-text;
-          height: 100%;
-          line-height: 17px;
-          overflow: hidden;
-          padding: 0;
-          position: absolute;
-          right: 0;
-          top: 0;
-          width: 24px;
-          background: $qty_bg;
-          font-size:14px;
-          text-align: center;
-          &.quantity-minus{
-              border: none;
-              left:0;
-              bottom: 0;
-              top: auto;
-          }
-      }
+    }
   }
 
   table.shop_table{
     border: none;
-    border-radius: 0;
+    @include border-radius(0);
     th{
       color: $title-text;
       line-height: normal;
@@ -541,11 +540,13 @@
   }
   td.product-name{
     dl.variatio{
-      dt,dd{
+      dt,
+      dd{
         margin-bottom: 0;
       }
     }
   }
+
   .woocommerce-error,
   .woocommerce-info,
   .woocommerce-message{
@@ -576,10 +577,7 @@
       padding: 0;
       border: none;
       &:after{
-        content: '\f0da';
-        font-family: FontAwesome;
-        font-weight: normal;
-        font-style: normal;
+        @include FontAwesome('\f0da');
         margin-left: 5px;
       }
       &:hover{
@@ -611,7 +609,8 @@
   header h2{
     font-size: 24px;
   }
-  mark, .mark{
+  mark,
+  .mark{
     background: $primary-color;
     color: $title-text;
   }
@@ -1276,7 +1275,7 @@ body{
           font-size: 14px;
           font-weight: normal;
           letter-spacing: 0.2em;
-          font-family:Poppins;
+          font-family: $font-stack;
           text-align: center;
           margin: 0 0 8px;
           text-transform: none;
@@ -1294,7 +1293,6 @@ body{
 	    }
 	    .star-rating{
 	    	display: block;
-		    margin-top: 2px;
 		    float:none;
 		    margin: 0 auto;
 		    height: 18px;
@@ -1424,11 +1422,11 @@ body{
 	}
 	.tool-inner{
 	    height: 40px;
-	    padding: 0;
 	    z-index: 1;
 	    float: left;
-      padding-right: 1px;
-	    > div, > a{
+        padding: 0 1px 0 0;
+	    > div,
+        > a{
 	    	width: 100%!important;
 	    	margin: 0!important;
 	    }

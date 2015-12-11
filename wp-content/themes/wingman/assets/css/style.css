@@ -114,16 +114,6 @@ p {
   position: absolute !important;
   width: 1px; }
 
-.kt-column-bg {
-  -webkit-background-size: cover;
-  -khtml-background-size: cover;
-  -moz-background-size: cover;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat; }
-
 .letter-spacing {
   letter-spacing: 0.2em; }
 
@@ -573,10 +563,10 @@ select:not([multiple]) {
       right: 0; }
 
 /* ==============================
-   10. Header
+   6. Header
    ============================== */
 /*
- * 10.1 Header common styles
+ * 6.1 Header common styles
  */
 #site-title,
 #site-description {
@@ -1079,7 +1069,7 @@ select:not([multiple]) {
     top: 32px; }
 
 /*
- * 10.2. Header layout version
+ * 6.2. Header layout version
  */
 .header-layout2 .site-branding {
   position: absolute;
@@ -1126,7 +1116,7 @@ select:not([multiple]) {
     left: auto; }
 
 /*
- * 10.3. Header sticky
+ * 6.3. Header sticky
  */
 .header-container.is-sticky .nav-container {
   background: none;
@@ -1161,7 +1151,7 @@ select:not([multiple]) {
   top: 32px !important; }
 
 /*
- * 10.4. Header mobile
+ * 6.4. Header mobile
  */
 #header-content-mobile {
   position: relative;
@@ -1462,7 +1452,7 @@ body.opened-nav-animate {
     opacity: 1; }
 
 /* ==============================
-   10. Footer
+   7. Footer
    ============================== */
 #footer {
   background: #1e1e1e;
@@ -1607,7 +1597,7 @@ body.layout-boxed #footer {
   padding: 40px 0; }
 
 /* ==============================
-   2. KT Owl Carousel
+   8. KT Owl Carousel
    ============================== */
 .owl-carousel-kt .owl-buttons {
   text-align: center;
@@ -1796,7 +1786,7 @@ body.layout-boxed #footer {
     color: #FFFFFF; }
 
 /* ==============================
-   2. Rev slider custom
+   9. Rev slider custom
    ============================== */
 .uranus.tparrows {
   width: 40px;
@@ -1846,7 +1836,7 @@ body.layout-boxed #footer {
     transform: scale(1.4); }
 
 /* ==============================
-   2. Widgets
+   10. Widgets
    ============================== */
 .widget,
 .widget-container {
@@ -2323,7 +2313,7 @@ body.layout-boxed #footer {
       right: 10px; }
 
 /* ==============================
-   3. Blog
+   11. Blog
    ============================== */
 div.post-item,
 article.post-item {
@@ -2445,8 +2435,6 @@ article.post-item {
     margin-left: 0;
     margin-right: 0; }
   .entry-meta-data > a.kt_likepost:before {
-    font-family: FontAwesome;
-    content: "";
     font-family: "FontAwesome";
     content: "";
     speak: none;
@@ -2557,12 +2545,15 @@ article.post-item {
   .entry-content .edit-link a {
     margin-right: 10px; }
     .entry-content .edit-link a:before {
-      -webkit-font-smoothing: antialiased;
       display: inline-block;
-      font-family: "Simple-Line-Icons";
-      text-decoration: inherit;
-      vertical-align: text-bottom;
-      content: "\e05f";
+      font-family: "FontAwesome";
+      content: "";
+      speak: none;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      text-decoration: none;
       margin-right: 5px; }
 
 .author-info {
@@ -2881,18 +2872,24 @@ article.post-item.post-layout-classic {
   margin-top: -15px; }
 
 /* ==============================
-   4. Breadcrumb
+   12. Breadcrumb
    ============================== */
 .woocommerce-breadcrumb .navigation-pipe:after,
 .breadcrumbs .navigation-pipe:after {
-  content: "\f111";
-  font-family: FontAwesome;
+  font-family: "FontAwesome";
+  content: "";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
   font-size: 6px;
   padding: 0 15px;
   vertical-align: middle; }
 
 /* ==============================
-   5. Page Header
+   13. Page Header
    ============================== */
 .page-header {
   margin: 0;
@@ -2958,10 +2955,10 @@ article.post-item.post-layout-classic {
     margin-right: auto; }
 
 /* ==============================
-   5. Shortcodes
+   14. Shortcodes
    ============================== */
 /**
-* 5.1. Single image
+* 14.1. Single image
 **/
 .wpb_single_image .border-left,
 .wpb_single_image .border-right {
@@ -3265,8 +3262,14 @@ article.post-item.post-layout-classic {
   letter-spacing: 0.2em;
   display: none; }
   .testimonial-rate:after {
-    font-family: FontAwesome;
-    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "FontAwesome";
+    content: "";
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
     font-size: 12px;
     color: #c5c5c5; }
   .testimonial-rate span {
@@ -3277,7 +3280,14 @@ article.post-item.post-layout-classic {
     height: 100%;
     line-height: 16px; }
     .testimonial-rate span:after {
-      font-family: FontAwesome;
+      font-family: "FontAwesome";
+      content: "";
+      speak: none;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      text-decoration: none;
       font-size: 12px;
       color: #82c14f; }
   .testimonial-rate.rate-1, .testimonial-rate.rate-2, .testimonial-rate.rate-3, .testimonial-rate.rate-4, .testimonial-rate.rate-5 {
@@ -3422,7 +3432,7 @@ article.post-item.post-layout-classic {
   width: 100%; }
 
 /* ==============================
-   10. Composer
+   15. Composer
    ============================== */
 /**
 * 5.1. KT Heading
@@ -4180,7 +4190,7 @@ form.wpcf7-form p {
   margin: 0; }
 
 /* ==============================
-   11. Page Content
+   16. Page Content
    ============================== */
 /**
 * 11.2. Page 404
