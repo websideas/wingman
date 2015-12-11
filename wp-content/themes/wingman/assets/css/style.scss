@@ -171,6 +171,7 @@ a {
   font-weight: 900;
 }
 
+.post-link-outer,
 blockquote,
 .blockquote{
   border: 1px solid $primary-color;
@@ -193,6 +194,7 @@ blockquote,
     position: relative;
     z-index: 1;
   }
+  .post-link-url,
   footer,
   small{
     padding-top: 14px;
@@ -202,6 +204,7 @@ blockquote,
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-size: 14px;
+    text-align: left;
     &:before{
       content: "";
       width: 31px;
@@ -211,6 +214,33 @@ blockquote,
       top: 0;
       left: 0;
     }
+  }
+}
+.post-link-outer{
+  &:after{
+    @include FontAwesome('\f0c1');
+    right: 10px;
+  }
+  .post-link-title{
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+  }
+  .post-link-url{
+    position: relative;
+    z-index: 2;
+  }
+}
+.post-link-wrapper{
+  position: relative;
+  .post-link-link{
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -999px;
+    top: 0;
+    width: 100%;
   }
 }
 

@@ -26,8 +26,8 @@ get_header(); ?>
                     <?php
                         $page_animation = kt_option( 'page_animation' );
 
-                        $animate_classic = ( $page_animation == 1 && $settings['blog_type'] == 'classic' ) ? 'animation-effect' : ' ';
-                        $data_animate_classic = ( $page_animation == 1 && $settings['blog_type'] == 'classic' ) ? 'data-animation="fadeInUp" data-timeeffect="0"' : ' ';
+                        $animate_classic = ( $page_animation == 1 && ($settings['blog_type'] == 'classic' || $settings['blog_type'] == 'zigzag' ) ) ? 'animation-effect' : ' ';
+                        $data_animate_classic = ( $page_animation == 1 && ($settings['blog_type'] == 'classic' || $settings['blog_type'] == 'zigzag' ) ) ? 'data-animation="fadeInUp" data-timeeffect="0"' : ' ';
                     ?>
                     <div class='blog-posts blog-posts-<?php echo esc_attr($settings['blog_type']); ?> <?php echo $animate_classic; ?>'
                          data-settings="<?php echo esc_attr( json_encode( $settings ) ); ?>"
@@ -46,7 +46,6 @@ get_header(); ?>
                             $classes = 'col-xs-12 col-sm-'.$bootstrapTabletColumn.' col-md-' . $bootstrapColumn;
                         }
                         $blog_atts_posts = array(
-                            'image_size' => $settings['image_size'],
                             'readmore' => $settings['readmore'],
                             'show_meta' =>  apply_filters('sanitize_boolean', $settings['show_meta']),
                             "show_author" => apply_filters('sanitize_boolean', $settings['show_author']),
@@ -59,7 +58,8 @@ get_header(); ?>
                             "show_view_number" => apply_filters('sanitize_boolean', $settings['show_view_number']),
                             'thumbnail_type' => $settings['thumbnail_type'],
                             'sharebox' => apply_filters('sanitize_boolean', $settings['sharebox']),
-                            "class" => ''
+                            "class" => '',
+                            "type" => $settings['blog_type'],
                         );
                         
                         if( $settings['blog_type'] == 'classic' ){
@@ -72,17 +72,18 @@ get_header(); ?>
                             $path = 'templates/blog/layout/content';
                         }
                         
-                        $class_animation = ( $page_animation == 1 && ( $settings['blog_type'] == 'grid' || $settings['blog_type'] == 'list' ) ) ? 'animation-effect' : '';
-                        $data_animation = ( $page_animation == 1 && ( $settings['blog_type'] == 'grid' || $settings['blog_type'] == 'list' ) ) ? 'data-animation="fadeInUp"' : '';
+                        $class_animation = ( $page_animation == 1 && ( $settings['blog_type'] == 'grid' || $settings['blog_type'] == 'zigzag' ) ) ? 'animation-effect' : '';
+                        $data_animation = ( $page_animation == 1 && ( $settings['blog_type'] == 'grid' || $settings['blog_type'] == 'zigzag' ) ) ? 'data-animation="fadeInUp"' : '';
                         
                         echo "<div class='blog-posts-content clearfix' style='text-align: ".esc_attr($settings['align'])."'>";
-                        if($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry' || $settings['blog_type'] == 'list'){
+                        if($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry' || $settings['blog_type'] == 'zigzag'){
                             echo "<div class='row ".$class_animation."' ".$data_animation.">";
                         }
 
                         $i = 1;
                         while ( have_posts() ) : the_post();
                             $blog_atts = $blog_atts_posts;
+                            $blog_atts['blog_number'] = $i;
                             if($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry'){
                                 $classes_extra = '';
                                 if($settings['blog_type'] == 'grid'){
@@ -93,13 +94,11 @@ get_header(); ?>
                                         $classes_extra .= ' col-clearfix-sm';
                                 }
                                 echo "<div class='article-post-item ".$classes." ".$classes_extra." ".$i."'>";
-                            }elseif( $settings['blog_type'] == 'zigzag' && $i%2 == 0 ){
-                                echo "<div class='article-post-item box-even'>";
                             }
                                 
                             kt_get_template_part( $path, get_post_format(), $blog_atts);
 
-                            if($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry' || ( $settings['blog_type'] == 'zigzag' && $i%2 == 0 )){
+                            if($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry'){
                                 echo "</div><!-- .article-post-item -->";
                             }
 
@@ -107,7 +106,7 @@ get_header(); ?>
                             // End the loop.
                         endwhile;
 
-                        if ($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry' || $settings['blog_type'] == 'list') {
+                        if ($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry' || $settings['blog_type'] == 'zigzag') {
                             echo "</div><!-- .row -->";
                         }
                         echo "</div><!-- .blog-posts-content -->";

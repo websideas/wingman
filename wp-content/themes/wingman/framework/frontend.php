@@ -321,7 +321,7 @@ if ( ! function_exists( 'kt_post_thumbnail' ) ) :
                     foreach($images as $image){
                         $galleries_html .= '<div class="recent-posts-item"><img src="'.$image['url'].'" alt="" /></div>';
                     }
-                    $atts = array( 'navigation_always_on' => 'true', 'navigation_background' => "rgba(255,255,255,0.8)", 'navigation_color'=>"#5c5c5c", 'desktop' => 1, 'tablet' => 1, 'mobile' => 1, 'navigation_style' => "square", 'navigation_icon' => "fa fa-angle-left|fa fa-angle-right", 'navigation_position' => 'top_right', 'margin' => 0, 'pagination' => 'false');
+                    $atts = array( "pagination"=> false, "navigation"=> false, "desktop"=> 1, "desktopsmall" => 1, "tablet" => 1, "mobile" => 1);
                     $carousel_ouput = kt_render_carousel($atts);
                     echo str_replace('%carousel_html%', $galleries_html, $carousel_ouput);
 

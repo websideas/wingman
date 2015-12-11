@@ -1,5 +1,11 @@
-<?php $classes = array('post-item post-layout-1', $blog_atts['class']);  ?>
-<?php //print_r($blog_atts); ?>
+<?php $classes = array('post-item post-layout-1', $blog_atts['class']); ?>
+<?php
+    if( $blog_atts['type'] == 'masonry' ){
+        $image_size = 'full';
+    }else{
+        $image_size = 'recent_posts';
+    }
+?>
 <article <?php post_class($classes); ?>>
     <?php if($blog_atts['show_meta']){ ?>
         <div class="entry-meta-data">
@@ -27,9 +33,9 @@
     <?php } ?>
     <?php
         if($blog_atts['thumbnail_type'] == 'image'){
-            kt_post_thumbnail_image($blog_atts['image_size'], 'img-responsive');
+            kt_post_thumbnail_image($image_size, 'img-responsive');
         }else{
-            kt_post_thumbnail($blog_atts['image_size'], 'img-responsive');
+            kt_post_thumbnail($image_size, 'img-responsive');
         }
     ?>
     <div class="entry-main-content">

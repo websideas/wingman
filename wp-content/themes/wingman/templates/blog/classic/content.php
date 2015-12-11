@@ -6,9 +6,9 @@
 
     <?php
     if($blog_atts['thumbnail_type'] == 'image'){
-        kt_post_thumbnail_image($blog_atts['image_size'], 'img-responsive', true, false);
+        kt_post_thumbnail_image('blog_post_sidebar', 'img-responsive', true, false);
     }else{
-        kt_post_thumbnail($blog_atts['image_size'], 'img-responsive', true, false);
+        kt_post_thumbnail('blog_post_sidebar', 'img-responsive', true, false);
     }
     ?>
     <?php

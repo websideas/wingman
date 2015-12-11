@@ -27,8 +27,8 @@ get_header(); ?>
                         <?php global $wp_query; ?>
                         <?php
                             $page_animation = kt_option( 'page_animation' );
-                            $animate_classic = ( $page_animation == 1 && ($settings['blog_type'] == 'classic' || $settings['blog_type'] == 'list') ) ? 'animation-effect' : ' ';
-                            $data_animate_classic = ( $page_animation == 1 && ($settings['blog_type'] == 'classic' || $settings['blog_type'] == 'list') ) ? 'data-animation="fadeInUp" data-timeeffect="0"' : ' ';
+                            $animate_classic = ( $page_animation == 1 && ($settings['blog_type'] == 'classic' || $settings['blog_type'] == 'zigzag') ) ? 'animation-effect' : ' ';
+                            $data_animate_classic = ( $page_animation == 1 && ($settings['blog_type'] == 'classic' || $settings['blog_type'] == 'zigzag') ) ? 'data-animation="fadeInUp" data-timeeffect="0"' : ' ';
                         ?>
                         <div class='blog-posts blog-posts-<?php echo esc_attr($settings['blog_type']); ?> <?php echo $animate_classic; ?>' data-settings="<?php echo esc_attr( json_encode( $settings ) ); ?>" data-type='<?php echo esc_attr($settings['blog_type']) ?>' data-total='<?php echo esc_attr($wp_query->max_num_pages); ?>' data-current='1' <?php echo $data_animate_classic; ?>>
 
@@ -39,11 +39,10 @@ get_header(); ?>
                                 $elementClass[] = 'blog-posts-columns-'.$settings['blog_columns'];
                                 $bootstrapColumn = round( 12 / $settings['blog_columns'] );
                                 $bootstrapTabletColumn = round( 12 / $settings['blog_columns_tablet'] );
-                                $classes = 'col-xs-12 col-sm-'.$bootstrapTabletColumn.' col-md-' . $bootstrapColumn;
+                                $classes = 'col-xs-12 col-sm-'.$bootstrapTabletColumn.' col-md-' . $bootstrapColumn.' col-lg-' . $bootstrapColumn;
                             }
 
                             $blog_atts_s = array(
-                                'image_size' => $settings['image_size'],
                                 'readmore' => $settings['readmore'],
                                 'show_meta' =>  apply_filters('sanitize_boolean', $settings['show_meta']),
                                 "show_author" => apply_filters('sanitize_boolean', $settings['show_author']),
@@ -56,7 +55,8 @@ get_header(); ?>
                                 'thumbnail_type' => $settings['thumbnail_type'],
                                 'sharebox' => apply_filters('sanitize_boolean', $settings['sharebox']),
                                 "show_excerpt" => apply_filters('sanitize_boolean', $settings['show_excerpt']),
-                                "class" => ''
+                                "class" => '',
+                                "type" => $settings['blog_type'],
                             );
 
                             if( $settings['blog_type'] == 'classic' ){
@@ -73,32 +73,23 @@ get_header(); ?>
                             $data_animation = ( $page_animation == 1 && $settings['blog_type'] == 'grid' ) ? 'data-animation="fadeInUp"' : '';
                             
                             echo "<div class='blog-posts-content clearfix' style='text-align: ".$settings['align']."'>";
-                            if($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry' || $settings['blog_type'] == 'list'){
-                                echo "<div class='row ".$class_animation."' ".$data_animation.">";
+                            if($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry' || $settings['blog_type'] == 'zigzag'){
+                                echo "<div class='row multi-columns-row ".$class_animation."' ".$data_animation.">";
                             }
 
                             $i = 1;
                             while ( have_posts() ) : the_post();
 
                                 $blog_atts = $blog_atts_s;
+                                $blog_atts['blog_number'] = $i;
 
                                 if($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry'){
-                                    $classes_extra = '';
-                                    if($settings['blog_type'] == 'grid'){
-                                        if (  ( $i - 1 ) % $settings['blog_columns'] == 0 || 1 == $settings['blog_columns'] )
-                                            $classes_extra .= ' col-clearfix-md col-clearfix-lg first ';
-
-                                        if ( ( $i - 1 ) % $settings['blog_columns_tablet'] == 0 || 1 == $settings['blog_columns_tablet'] )
-                                            $classes_extra .= ' col-clearfix-sm';
-                                    }
-                                    echo "<div class='article-post-item ".$classes." ".$classes_extra." ".$i."'>";
-                                }elseif( $settings['blog_type'] == 'zigzag' && $i%2 == 0 ){
-                                    echo "<div class='article-post-item box-even'>";
+                                    echo "<div class='article-post-item ".$classes."'>";
                                 }
 
                                 kt_get_template_part( $path, get_post_format(), $blog_atts );
 
-                                if($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry' || ( $settings['blog_type'] == 'zigzag' && $i%2 == 0 )){
+                                if($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry'){
                                     echo "</div><!-- .article-post-item -->";
                                 }
 
@@ -106,11 +97,10 @@ get_header(); ?>
                                 // End the loop.
                             endwhile;
 
-                            if ($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry' || $settings['blog_type'] == 'list') {
+                            if ($settings['blog_type'] == 'grid' || $settings['blog_type'] == 'masonry' || $settings['blog_type'] == 'zigzag') {
                                 echo "</div><!-- .row -->";
                             }
                             echo "</div><!-- .blog-posts-content -->";
-
 
                             // Previous/next page navigation.
                             kt_paging_nav($settings['blog_pagination']);

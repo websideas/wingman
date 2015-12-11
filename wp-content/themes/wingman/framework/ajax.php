@@ -26,11 +26,10 @@ function wp_ajax_fronted_loadmore_archive_callback(){
         $elementClass[] = 'blog-posts-columns-'.$blog_columns;
         $bootstrapColumn = round( 12 / $blog_columns );
         $bootstrapTabletColumn = round( 12 / $blog_columns_tablet );
-        $classes = 'col-xs-12 col-sm-'.$bootstrapTabletColumn.' col-md-' . $bootstrapColumn;
+        $classes = 'col-xs-12 col-sm-'.$bootstrapTabletColumn.' col-md-' . $bootstrapColumn.' col-lg-' . $bootstrapColumn;
     }
 
     $blog_atts_posts = array(
-        'image_size' => $image_size,
         'readmore' => $readmore,
         'show_excerpt' =>  apply_filters('sanitize_boolean', $show_excerpt),
         'show_meta' =>  apply_filters('sanitize_boolean', $show_meta),
@@ -43,7 +42,8 @@ function wp_ajax_fronted_loadmore_archive_callback(){
         "show_view_number" => apply_filters('sanitize_boolean', $show_view_number),
         'thumbnail_type' => $thumbnail_type,
         'sharebox' => apply_filters('sanitize_boolean', $sharebox),
-        "class" => 'loadmore-item'
+        "class" => 'loadmore-item',
+        "type" => $blog_type,
     );
 
 
@@ -51,6 +51,8 @@ function wp_ajax_fronted_loadmore_archive_callback(){
         $path = 'templates/blog/classic/content';
     }elseif( $blog_type == 'zigzag' ){
         $path = 'templates/blog/zigzag/content';
+    }elseif( $blog_type =='list' ){
+        $path = 'templates/blog/list/content';
     }else{
         $path = 'templates/blog/layout/content';
     }
@@ -58,17 +60,17 @@ function wp_ajax_fronted_loadmore_archive_callback(){
     ob_start();
 
     $i = ( $query_vars['paged'] - 1 ) * $max_items + 1 ;
+
     while ( $wp_query->have_posts() ) : $wp_query->the_post();
         $blog_atts = $blog_atts_posts;
+        $blog_atts['blog_number'] = $i;
         if($blog_type == 'grid' || $blog_type == 'masonry'){
             echo "<div class='article-post-item ".$classes."'>";
-        }elseif( $blog_type == 'zigzag' && $i%2 == 0 ){
-            echo "<div class='article-post-item box-even'>";
         }
 
         kt_get_template_part( $path, get_post_format(), $blog_atts);
 
-        if($blog_type == 'grid' || $blog_type == 'masonry' || ( $blog_type == 'zigzag' && $i%2 == 0 )){
+        if($blog_type == 'grid' || $blog_type == 'masonry'){
             echo "</div><!-- .article-post-item -->";
         }
         $i++;
