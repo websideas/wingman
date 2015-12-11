@@ -232,7 +232,7 @@ vc_map( array(
             'heading' => __( 'Loop Style', THEME_LANG ),
             'param_name' => 'blog_type',
             'value' => array(
-                __( 'Standand', 'js_composer' ) => 'classic',
+                __( 'Standard', 'js_composer' ) => 'classic',
                 __( 'Grid', 'js_composer' ) => 'grid',
                 __( 'List', 'js_composer' ) => 'list',
                 __( 'Masonry', 'js_composer' ) => 'masonry',

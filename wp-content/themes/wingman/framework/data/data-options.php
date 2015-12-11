@@ -2245,13 +2245,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title' => __('Loop Style', THEME_LANG),
                         'desc' => '',
                         'options' => array(
-                            'classic' => __( 'Standand', 'js_composer' ),
+                            'classic' => __( 'Standard', 'js_composer' ),
                             'grid' => __( 'Grid', 'js_composer' ),
                             'list' => __( 'List', 'js_composer' ),
                             'masonry' => __( 'Masonry', 'js_composer' ),
                             'zigzag' => __( 'Zig Zag', 'js_composer' ),
                         ),
-                        'default' => 'classic'
+                        'default' => 'list'
                     ),
                     array(
                         'id' => 'archive_columns',
@@ -2301,7 +2301,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id' => 'archive_align',
                         'type' => 'select',
                         'title' => __('Text align', THEME_LANG),
-                        'desc' => __('Not working for archive style standand', THEME_LANG),
+                        'desc' => __('Not working for archive style Standard', THEME_LANG),
                         'options' => array(
                             'left' => __( 'Left', THEME_LANG ) ,
                             'center' => __( 'Center', THEME_LANG ) ,
@@ -2353,7 +2353,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title' => __('Pagination Type', THEME_LANG),
                         'desc' => __('Select the pagination type.', THEME_LANG),
                         'options' => array(
-                            'classic' => __( 'Standand pagination', THEME_LANG ),
+                            'classic' => __( 'Standard pagination', THEME_LANG ),
                             'loadmore' => __( 'Load More button', THEME_LANG ),
                             'normal' => __( 'Normal pagination', THEME_LANG ),
                         ),
@@ -2522,13 +2522,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title' => __('Loop Style', THEME_LANG),
                         'desc' => '',
                         'options' => array(
-                            'classic' => __( 'Standand', 'js_composer' ),
+                            'classic' => __( 'Standard', 'js_composer' ),
                             'grid' => __( 'Grid', 'js_composer' ),
                             'list' => __( 'List', 'js_composer' ),
                             'masonry' => __( 'Masonry', 'js_composer' ),
                             'zigzag' => __( 'Zig Zag', 'js_composer' ),
                         ),
-                        'default' => 'classic'
+                        'default' => 'list'
                     ),
                     array(
                         'id' => 'author_columns',
@@ -2578,7 +2578,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id' => 'author_align',
                         'type' => 'select',
                         'title' => __('Text align', THEME_LANG),
-                        'desc' => __('Not working for archive style standand', THEME_LANG),
+                        'desc' => __('Not working for archive style Standard', THEME_LANG),
                         'options' => array(
                             'left' => __( 'Left', THEME_LANG ) ,
                             'center' => __( 'Center', THEME_LANG ) ,
@@ -2630,7 +2630,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title' => __('Pagination Type', THEME_LANG),
                         'desc' => __('Select the pagination type.', THEME_LANG),
                         'options' => array(
-                            'classic' => __( 'Standand pagination', THEME_LANG ),
+                            'classic' => __( 'Standard pagination', THEME_LANG ),
                             'loadmore' => __( 'Load More button', THEME_LANG ),
                             'normal' => __( 'Normal pagination', THEME_LANG ),
                         ),
@@ -2756,17 +2756,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'off' =>__('Disabled', THEME_LANG)
                     ),
                     array(
-                        'id' => 'blog_layout',
-                        'type' => 'select',
-                        'title' => __('Post layouts', THEME_LANG),
-                        'desc' => __('Select the format position.', THEME_LANG),
-                        'options' => array(
-                            '1' => __( 'Layout 1', THEME_LANG ),
-                            '2' => __( 'Layout 2', THEME_LANG ),
-                        ),
-                        'default' => '1'
-                    ),
-                    array(
                         'id'       => 'blog_sidebar',
                         'type'     => 'select',
                         'title'    => __( 'Sidebar configuration', THEME_LANG ),
@@ -2887,23 +2876,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         ),
                         'default'  => 'categories',
                         'clear' => false,
-                    ),
-
-                    array(
-                        'id' => 'blog_related_full',
-                        'type' => 'text',
-                        'title' => __('Related number for full width', THEME_LANG),
-                        'subtitle' => '',
-                        'desc' => '',
-                        'default' => '4',
-                    ),
-                    array(
-                        'id' => 'blog_related_sidebar',
-                        'type' => 'text',
-                        'title' => __('Related number for sidebar', THEME_LANG),
-                        'subtitle' => '',
-                        'desc' => '',
-                        'default' => '3'
                     ),
 
                     array(

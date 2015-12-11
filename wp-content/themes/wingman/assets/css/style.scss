@@ -795,7 +795,7 @@ select:not([multiple]) {
 
     > .kt-megamenu-wrapper{
       width: 100%;
-      padding: 50px 60px;
+      padding: 50px;
 
       > .kt-megamenu-ul{
         margin: 0;
@@ -804,6 +804,7 @@ select:not([multiple]) {
         > li{
           float: left;
           width: 25%;
+          padding: 0 10px;
           > a,
           > span{
             font-size: 18px;
@@ -1892,9 +1893,8 @@ body.layout-boxed{
         text-align: right;
         cursor: pointer;
         &:after{
-          content:"\f067";
-          font-family:FontAwesome;
           font-size:8px;
+          @include FontAwesome("\f067");
         }
       }
     }
@@ -2110,6 +2110,39 @@ body.layout-boxed{
 
 
 /**
+ * KT image
+ **/
+.widget_kt_image{
+  .kt-image-content{
+    position: relative;
+    overflow: hidden;
+    &:before{
+      position: absolute;
+      top: 0;
+      left: -75%;
+      z-index: 2;
+      display: block;
+      content: '';
+      width: 50%;
+      height: 100%;
+      background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+      @include transform(skewX(-25deg));
+    }
+    &:hover{
+      &:before{
+        @include animation(shine .75s);
+      }
+    }
+  }
+
+}
+@include keyframes('shine'){
+  100% {
+    left: 125%;
+  }
+}
+/**
  * Search
  **/
 .searchform {
@@ -2152,9 +2185,8 @@ body.layout-boxed{
     @include opacity(1);
     font-size: 0; 
     &:after{
-      content: "\f00d";
-      font-family: FontAwesome;
       font-size:18px;
+      @include FontAwesome("\f00d");
     }
   }
   .searchform{
@@ -2328,8 +2360,7 @@ article.post-item {
       margin-right: 0;
     }
     > a.kt_likepost:before{
-      font-family: FontAwesome;
-      content: "\f08a";
+      @include FontAwesome('\f08a');
       margin-right: 5px;
     }
     > a.kt_likepost.liked{
