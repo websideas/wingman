@@ -44,11 +44,14 @@ function kt_woocommerce_image_dimensions() {
     $catalog = array('width' => '500','height' => '555', 'crop' => 1 );
     $thumbnail = array('width' => '200', 'height' => '250', 'crop' => 1 );
     $single = array( 'width' => '800','height' => '1050', 'crop' => 1);
+    $swatches = array( 'width' => '30','height' => '30', 'crop' => 1);
 
     // Image sizes
     update_option( 'shop_catalog_image_size', $catalog ); 		// Product category thumbs
     update_option( 'shop_single_image_size', $single ); 		// Single product image
     update_option( 'shop_thumbnail_image_size', $thumbnail ); 	// Image gallery thumbs
+    update_option( 'swatches_image_size', $swatches ); 	// Image gallery thumbs
+
 
 
 }
@@ -454,6 +457,13 @@ function woocommerce_single_product_carousel_callback( $columns ) {
         return '{"pagination": false, "navigation": true, "desktop": 4, "desktopsmall" : 3, "tablet" : 2, "mobile" : 1, "navigation_pos": "top"}';
     }
 }
+
+/**
+ * Remove tab heading
+ *
+ */
+add_filter('woocommerce_product_additional_information_heading', '__return_false');
+add_filter('woocommerce_product_description_heading', '__return_false');
 
 /**
  * Layout for thumbarea

@@ -456,6 +456,14 @@ select:not([multiple]) {
     color: #FFFFFF; }
     .btn-accent:hover, .btn-accent:focus, .btn-accent:active {
       color: #FFFFFF; }
+  .btn-light {
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+    color: #707070; }
+    .btn-light:hover, .btn-light:focus, .btn-light:active {
+      border-color: #e5e5e5;
+      background: #e5e5e5;
+      color: #707070; }
   .btn-animation span {
     -webkit-transform: translateX(0);
     -khtml-transform: translateX(0);
@@ -463,12 +471,12 @@ select:not([multiple]) {
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0);
-    -webkit-transition: all .3s ease-in-out 0s;
-    -khtml-transition: all .3s ease-in-out 0s;
-    -moz-transition: all .3s ease-in-out 0s;
-    -ms-transition: all .3s ease-in-out 0s;
-    -o-transition: all .3s ease-in-out 0s;
-    transition: all .3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -khtml-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
     display: inline-block;
     position: relative; }
     .btn-animation span i {
@@ -480,12 +488,12 @@ select:not([multiple]) {
       -ms-opacity: 0;
       -o-opacity: 0;
       opacity: 0;
-      -webkit-transition: all .3s ease-in-out 0s;
-      -khtml-transition: all .3s ease-in-out 0s;
-      -moz-transition: all .3s ease-in-out 0s;
-      -ms-transition: all .3s ease-in-out 0s;
-      -o-transition: all .3s ease-in-out 0s;
-      transition: all .3s ease-in-out 0s;
+      -webkit-transition: all 0.3s ease 0s;
+      -khtml-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -ms-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
       -webkit-transform: translate(30px, -50%);
       -khtml-transform: translate(30px, -50%);
       -moz-transform: translate(30px, -50%);
@@ -1007,10 +1015,10 @@ select:not([multiple]) {
             #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu.right-overflow {
               right: 0;
               left: auto; }
-        #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul.megamenu-columns-3 li {
-          width: 33.33%; }
-        #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul.megamenu-columns-2 li {
-          width: 50%; }
+      #main-navigation > li > .kt-megamenu-wrapper.megamenu-columns-3 > .kt-megamenu-ul > li {
+        width: 33.33%; }
+      #main-navigation > li > .kt-megamenu-wrapper.megamenu-columns-2 > .kt-megamenu-ul > li {
+        width: 50%; }
     #main-navigation > li.kt-megamenu-item {
       position: static; }
     #main-navigation > li.kt-megamenu-item-half > .kt-megamenu-wrapper {

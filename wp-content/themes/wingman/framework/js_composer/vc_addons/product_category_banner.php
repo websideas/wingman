@@ -10,7 +10,6 @@ class WPBakeryShortCode_Product_Category_Banner extends WPBakeryShortCode {
             'product_category' => '',
             'image_size' => 'full',
             'position' => 'position-center',
-            'hover_effect' => '',
 
             'css' => '',
             'css_animation' => '',
@@ -26,24 +25,20 @@ class WPBakeryShortCode_Product_Category_Banner extends WPBakeryShortCode {
             'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' ),
             'position' => $position,
         );
-        if($hover_effect){
-            $elementClass['hover'] = 'hover-effect-'.$hover_effect;
-        }
 
         $elementClass = preg_replace( array( '/\s+/', '/^\s|\s$/' ), array( ' ', '' ), implode( ' ', $elementClass ) );
         
         if( $product_category && function_exists( 'get_woocommerce_term_meta' )){
             $term = get_term( $product_category, 'product_cat' );
             $link = get_term_link( $term->slug, 'product_cat' );
-            
+
             $thumbnail_id = get_woocommerce_term_meta( $product_category, 'thumbnail_id', true );
             $image = wp_get_attachment_image( $thumbnail_id, $image_size, false, array( 'class' => 'vc_single_image-img img-responsive attachment-'.$image_size, 'alt' => $term->name ) );
             
             if( !$image ){ $image = '<img class="vc_img-placeholder vc_single_image-img img-responsive" src="' . vc_asset_url( 'vc/no_image.png' ) . '" />'; }
             
-            $output .= '<div class="kt_image_banner '.esc_attr( $elementClass ).'">'.$image;
-                $output .= '<div class="content_banner_wrapper"><div class="content_banner"><span class="btn btn-light btn-block">'.$term->name.'</span></div></div>';             
-                $output .= '<a class="banner-link" href="'.esc_attr( $link ).'" title="'.esc_attr( $term->name ).'" alt="'.esc_attr( $term->name ).'"></a>';
+            $output .= '<div class="banner '.esc_attr( $elementClass ).'">'.$image;
+                $output .= '<div class="banner-content"><div class="content_banner"><a class="btn btn-light btn-block btn-animation" href="'.esc_attr( $link ).'"><span>'.$term->name.'('.$term->count.') <i class="fa fa-long-arrow-right"></i></span></a></div></div>';
             $output .= '</div>';
         }else{
             $output .= '<p>'.__( 'No product category',THEME_LANG ).'</p>';
@@ -90,18 +85,6 @@ vc_map( array(
             "admin_label" => true,
         ),
 
-        array(
-            'type' => 'dropdown',
-            'heading' => __( 'Hover Effect', THEME_LANG ),
-            'param_name' => 'hover_effect',
-            'value' => array(
-                __( 'No', 'js_composer' ) => '',
-                __( 'Dark Overlay', THEME_LANG ) => 'dark',
-                __( 'Light Overlay', THEME_LANG ) => 'light'
-            ),
-            "admin_label" => true,
-        ),
-        
         array(
         	'type' => 'dropdown',
         	'heading' => __( 'CSS Animation', 'js_composer' ),
