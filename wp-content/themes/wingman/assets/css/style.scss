@@ -796,6 +796,7 @@ select:not([multiple]) {
     > .kt-megamenu-wrapper{
       width: 100%;
       padding: 50px 60px;
+
       > .kt-megamenu-ul{
         margin: 0;
         padding: 0;
@@ -873,18 +874,21 @@ select:not([multiple]) {
             }
 
           }
-
-
-
         }
 
-        &.megamenu-columns-3{
-          li{
+
+      }
+      &.megamenu-columns-3{
+        > .kt-megamenu-ul{
+          > li{
             width: 33.33%;
           }
         }
-        &.megamenu-columns-2{
-          li{
+
+      }
+      &.megamenu-columns-2{
+        > .kt-megamenu-ul{
+          > li{
             width: 50%;
           }
         }

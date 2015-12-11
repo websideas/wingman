@@ -1015,10 +1015,10 @@ select:not([multiple]) {
             #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu.right-overflow {
               right: 0;
               left: auto; }
-        #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul.megamenu-columns-3 li {
-          width: 33.33%; }
-        #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul.megamenu-columns-2 li {
-          width: 50%; }
+      #main-navigation > li > .kt-megamenu-wrapper.megamenu-columns-3 > .kt-megamenu-ul > li {
+        width: 33.33%; }
+      #main-navigation > li > .kt-megamenu-wrapper.megamenu-columns-2 > .kt-megamenu-ul > li {
+        width: 50%; }
     #main-navigation > li.kt-megamenu-item {
       position: static; }
     #main-navigation > li.kt-megamenu-item-half > .kt-megamenu-wrapper {
