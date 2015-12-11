@@ -351,19 +351,33 @@ select:not([multiple]) {
     background: $primary-color;
     border-color: $primary-color;
     color: $white;
-    &:hover,&:focus,&:active{
+    &:hover,
+    &:focus,
+    &:active{
       color: $white;
+    }
+  }
+  &-light{
+    background: $white;
+    border-color: $white;
+    color: $main-text;
+    &:hover,
+    &:focus,
+    &:active{
+      border-color: $border-color;
+      background: $border-color;
+      color: $main-text;
     }
   }
   &-animation{
     span{
       @include transform(translateX(0));
-      @include transition("all .3s ease-in-out 0s");
+      @include transition("all 0.3s ease 0s");
       display: inline-block;
       position: relative;
       i{
         @include opacity(0);
-        @include transition("all .3s ease-in-out 0s");
+        @include transition("all 0.3s ease 0s");
         @include transform(translate(30px, -50%));
         position: absolute;
         right: 0;

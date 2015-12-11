@@ -85,6 +85,8 @@ function kt_register_plugins() {
             'required' => false,
         ),
 
+        //Breadcrumb NavXT
+
     );
   
     // Change this to your theme text domain, used for internationalising strings

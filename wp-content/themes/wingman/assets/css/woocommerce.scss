@@ -1314,7 +1314,7 @@ body{
 			    	width:67%;
 				    float:left;
 				    padding-left:30px;
-            position: relative;
+                    position: relative;
 			    }
 			    .product-image-content{
 			    	.product-image-tool,
@@ -1331,7 +1331,7 @@ body{
     				width: 50%;
     			}
 			}
-			.kt-woocommerce-tool-lists{
+			.kt-woocommerce-tool-list{
 				width:266px;
 			    position: relative;
 			    height:40px;
@@ -2703,6 +2703,90 @@ div.swatch-wrapper{
         }
       }
     }
+  }
+}
+/**
+ * Banner Categories
+ */
+
+.banner{
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 30px;
+  &.banner-dark{
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(#000000,.4);
+      z-index: 5;
+      @include transition();
+    }
+  }
+  &:hover{
+    &.banner-dark{
+      &:after{
+        background: rgba(#000000,.6);
+      }
+    }
+  }
+
+  img{
+    width: 100%;
+  }
+
+  .banner-content{
+    width: 100%;
+    @include translate(c);
+    z-index: 10;
+    padding: 30px;
+    > *:last-child{
+      margin-bottom: 0;
+    }
+  }
+  .banner-link{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+  }
+
+  &.position-bottom{
+    .banner-content{
+      bottom: 0;
+      left: 0;
+      top: auto;
+      @include transform(translate(0px, 0px));
+    }
+    .btn{
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+
+  &.position-top{
+    .banner-content{
+      top: 0;
+      left: 0;
+      @include transform(translate(0px, 0px));
+    }
+    .btn{
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+
+  &.banner-left{
+    text-align: left;
+  }
+  &.banner-right{
+    text-align: right;
   }
 }
 
