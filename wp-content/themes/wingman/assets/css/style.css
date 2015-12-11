@@ -2258,6 +2258,7 @@ body.layout-boxed #footer {
 /* ==============================
    3. Blog
    ============================== */
+div.post-item,
 article.post-item {
   margin-bottom: 50px; }
 

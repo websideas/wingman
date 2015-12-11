@@ -937,7 +937,8 @@ if ( ! function_exists( 'kt_related_article' ) ) :
                         'thumbnail_type' => 'image',
                         "class" => '',
                         'show_view_number' => false,
-                        'show_excerpt' => false
+                        'show_excerpt' => false,
+                        'type' => ''
                     );
 
                     $i = 1;
