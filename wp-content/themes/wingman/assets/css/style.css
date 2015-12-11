@@ -4017,7 +4017,8 @@ form.wpcf7-form p {
       margin-bottom: 10px;
       padding-left: 35px;
       position: relative;
-      list-style: none !important; }
+      list-style: none !important;
+      word-break: break-all; }
       .contact-info-wrapper > ul li i {
         display: inline-block;
         left: 3px;
