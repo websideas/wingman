@@ -2243,47 +2243,57 @@ article.post-item {
   .format-audio,
   .format-gallery{
     .entry-thumb:before{
-      font-family: 'ElegantIcons';
-      font-weight: normal;
-      font-style: normal;
+      @include FontAwesome('\f03e');
       background: rgba(255,255,255,.4);
       width: 60px;
       height: 60px;
       line-height: 60px;
       font-size: 20px;
       @include border-radius(50%);
-      content: "\e005";
       @include translate();
       color: rgba(0,0,0,.7);
       text-align: center;
       @include transition();
+      @include opacity(0);
     }
   }
   .format-quote{
     .entry-thumb:before{
-      content: "\7b";
-      font-size: 38px;
+      content: "\f10d";
     }
   }
   .format-link{
     .entry-thumb:before{
-      content: "\e02b";
+      content: "\f0c1";
     }
   }
   .format-audio{
     .entry-thumb:before{
-      content: "\e08e";
+      content: "\f001";
     }
   }
   .format-video{
     .entry-thumb:before{
-      content: "\45";
-      font-size: 38px;
+      content: "\f03d";
     }
   }
   .format-gallery{
     .entry-thumb:before{
-      content: "\e006";
+      content: "\f083";
+    }
+  }
+}
+.blog-posts-image{
+  .post-item:hover{
+    &.format-quote,
+    &.format-link,
+    &.format-image,
+    &.format-video,
+    &.format-audio,
+    &.format-gallery{
+      .entry-thumb:before{
+        @include opacity(1);
+      }
     }
   }
 }
