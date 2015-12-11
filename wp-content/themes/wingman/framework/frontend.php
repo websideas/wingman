@@ -108,7 +108,6 @@ function kt_add_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-    wp_enqueue_script( 'jquery-ui-tabs' );
     wp_register_script('google-maps-api','http://maps.googleapis.com/maps/api/js?sensor=false', array( 'jquery' ), null, false);
     wp_enqueue_script( 'bootstrap-script', THEME_LIBS . 'bootstrap/js/bootstrap.min.js', array( 'jquery' ), null, true );
     wp_enqueue_script( 'plugins-script', THEME_JS . 'plugins.js', array( 'jquery' ), null, true );
@@ -475,8 +474,6 @@ if ( ! function_exists( 'kt_post_nav' ) ) :
      * Display navigation to next/previous set of posts when applicable.
      */
     function kt_post_nav($post_id = null) {
-        global $post;
-        if(!$post_id) $post_id = $post->ID;
         // Don't print empty markup if there's nowhere to navigate.
         $previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
         $next     = get_adjacent_post( false, '', false );
@@ -960,7 +957,6 @@ if ( ! function_exists( 'kt_related_article' ) ) :
 
                         ?>
                         <div class="article-post-item <?php echo $classes." ".$classes_extra; ?>">
-                            <?php //print_r($blog_atts); ?>
                             <?php kt_get_template_part( 'templates/blog/layout/content', get_post_format(), $blog_atts); ?>
                         </div><!-- .article-post-item -->
                     <?php $i++; endwhile; ?>

@@ -9,7 +9,44 @@
 1. Base Styles
   1.1. Common styles
   1.2. Helper CSS
-
+2. Typography
+3. Forms fields
+4. Buttons
+5. Page Loader
+6. Popup
+7. Header
+  7.1. Header common styles
+  7.2. Nav tool
+  7.3. Menu bars
+  7.4. Main navigation
+  7.5. Header transparent
+  7.6. Header layout version
+  7.7. Header sticky
+  7.8. Header mobile
+8. Footer
+  8.1. Footer common styles
+  8.2. Footer Top & Bottom
+  8.3. Footer Area
+  8.4. Footer Copyright
+9. KT Owl Carousel
+10. Rev slider custom
+11. Widgets
+12. Blog
+  12.1. Footer common styles
+  12.2. Blog Posts
+  12.3. Single Post
+  12.4. Author Info
+  12.5. Post Navigation
+  12.6. Comments
+  12.7. Comment Form
+  12.8. Related article
+13. Breadcrumb
+14. Page Header
+15. Shortcodes
+16. Page Content
+  16.1. Page 404
+17. Contact Form
+18. Pagination
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -120,10 +157,10 @@ p {
 }
 
 /* ==============================
-   3. Typography
+   2. Typography
    ============================== */
 /*
- * 3.1 Typography common styles
+ * 2.1 Typography common styles
  */
 
 body {
@@ -140,7 +177,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font;
   text-transform: uppercase;
   font-weight: 700;
-  color: #000000;
+  color: $black;
 }
 
 h1, h2, h3{
@@ -239,7 +276,7 @@ blockquote,
 
 
 /* ==============================
-   4. Forms fields
+   3. Forms fields
    ============================== */
 input[type=email],
 input[type=password],
@@ -301,7 +338,7 @@ select:not([multiple]) {
 
 
 /* ==============================
-   5. Buttons
+   4. Buttons
    ============================== */
 
 .btn {
@@ -465,10 +502,195 @@ select:not([multiple]) {
 
 
 /* ==============================
-   6. Header
+   5. Page Loader
+   ============================== */
+.kt_page_loader{
+  position: fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background: #fff;
+  z-index: 999999999;
+
+  .kt_spinner{
+    width: 50px;
+    height: 50px;
+    margin:0 auto;
+  }
+
+  .page_loader_inner{
+    @include translate(c);
+    text-align: center;
+  }
+  &.style-1{
+    .page_loader_inner{
+      @include animation(loader 4s infinite ease);
+      width: 50px;
+      height: 50px;
+      border: 2px solid $primary-color;
+    }
+    .kt_spinner{
+      vertical-align: top;
+      display: inline-block;
+      width: 100%;
+      background-color: $primary-color;
+      @include animation(loader-inner 4s infinite ease-in);
+    }
+  }
+  &.style-2{
+    .kt_spinner {
+      border: 1px solid #cccccc;
+      @include animation(rotate 1.3s linear 0s infinite);
+      @include border-radius(100%);
+      &:after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: $primary-color;
+        @include border-radius(50%);
+        @include animation(3s linear 0s infinite);
+        left: -5px;
+        top: 18px;
+      }
+    }
+  }
+  &.style-3{
+    .kt_spinner {
+      border: 2px solid #cccccc;
+      border-bottom-color: $primary-color;
+      @include animation(rotate 1.5s linear 0s infinite);
+      @include border-radius(100%);
+    }
+  }
+}
+
+
+@include keyframes('loader'){
+  0% {  @include rotate(0); }
+  25% {  @include rotate(180);}
+  50% {  @include rotate(180); }
+  75% {  @include rotate(360);}
+  100% {  @include rotate(360);}
+}
+
+@include keyframes('loader-inner'){
+  0% { height: 0; }
+  25% { height: 0; }
+  50% { height: 100%; }
+  75% { height: 100%; }
+  100% { height: 0; }
+}
+@include keyframes('rotate'){
+  from {
+    @include rotate(0);
+  }
+  to {
+    @include rotate(360);
+  }
+}
+
+
+/* ==============================
+   6. Popup
+   ============================== */
+
+#popup-wrap{
+  max-width: 600px;
+  background: #fff;
+  position: relative;
+  margin: 0 auto;
+  h3.title-top{
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+    padding: 17px 40px;
+    min-height: 59px;
+  }
+  .content-popup{
+    padding: 30px;
+    .kt-mailchimp-wrapper{
+      margin: 0;
+    }
+
+  }
+  .mfp-close{
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    top:17px;
+    right: 17px;
+    &:after,&:before{
+      width: 1px;
+      height: 30px;
+      background: #a4a4a4;
+      content: "";
+      position: absolute;
+      top:-4px;
+      left: 10px;
+    }
+    &:after{
+      @include rotate(45);
+    }
+    &:before{
+      @include rotate(-45);
+    }
+  }
+  .mailchimp-form{
+    max-width: 350px;
+    margin: 0 auto;
+
+  }
+  h4.newletter-title{
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 24px;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  form.dont-show{
+    padding: 20px 0;
+    text-align: center;
+    background: $bg-popup;
+    label{
+      font-size: 12px;
+      font-weight: 300;
+      position: relative;
+      padding-left: 18px;
+      margin: 0;
+      line-height: 1;
+      cursor: pointer;
+      &:before{
+        width: 12px;
+        height: 12px;
+        border: 1px solid $white;
+        @include border-radius('2px');
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 1px;
+      }
+    }
+    input{
+      @include opacity(0);
+      &:checked{
+        ~ label:before{
+          background: $white;
+        }
+      }
+    }
+  }
+}
+
+
+/* ==============================
+   7. Header
    ============================== */
 /*
- * 6.1 Header common styles
+ * 7.1. Header common styles
  */
 #site-title,
 #site-description{
@@ -493,7 +715,9 @@ select:not([multiple]) {
     }
   }
 }
-
+/*
+ * 7.2. Nav tool
+ */
 #main-nav-tool{
   @include translate(y);
   right: 0;
@@ -538,7 +762,9 @@ select:not([multiple]) {
   }
 }
 
-
+/*
+ * 7.3. Menu bars
+ */
 .menu-bars-outer{
   @include translate(y);
   left: 0;
@@ -667,7 +893,9 @@ select:not([multiple]) {
 
 }
 
-
+/*
+ * 7.4. Main navigation
+ */
 #main-navigation {
   margin: 0;
   padding: 0;
@@ -937,6 +1165,9 @@ select:not([multiple]) {
   }
 }
 
+/*
+ * 7.5. Header transparent
+ */
 .header-transparent{
 
   .sticky-placeholder{
@@ -979,7 +1210,7 @@ select:not([multiple]) {
 }
 
 /*
- * 6.2. Header layout version
+ * 7.6. Header layout version
  */
 .header-layout2 {
   .site-branding{
@@ -1018,11 +1249,8 @@ select:not([multiple]) {
 
 
 /*
- * 6.3. Header sticky
+ * 7.7. Header sticky
  */
-
-
-
 .header-container.is-sticky{
 
   .nav-container{
@@ -1074,13 +1302,9 @@ select:not([multiple]) {
 }
 
 
-
-
-
 /*
- * 6.4. Header mobile
+ * 7.8. Header mobile
  */
-
 #header-content-mobile{
   position: relative;
   display: none;
@@ -1119,44 +1343,6 @@ select:not([multiple]) {
     }
   }
 }
-
-#hamburger-icon {
-  padding: 10px;
-  margin-top: 5px;
-  .hamburger-icon-inner{
-    width:$hamburger-widthline;
-    height:$hamburger-heighticon;
-    position: relative;
-    display: block;
-  }
-  .line {
-    display:block;
-    background: $tool-font;
-    width:$hamburger-widthline;
-    height:$hamburger-heightline;
-    position:absolute;
-    left:0;
-    @include border-radius($hamburger-heightline / 2);
-    @include transition(all $hamburger-transition-time);
-
-    &.line-1 {  top:0;  }
-    &.line-2 {  top:50%; }
-    &.line-3 {  top:100%; }
-  }
-  &.active {
-    .line-1 {
-      @include transform(translateY($hamburger-translateY) translateX($hamburger-translateX) rotate($hamburger-rotation));
-    }
-    .line-2 {
-      top: 100%;
-      @include transform(translateY($hamburger-translateY));
-    }
-    .line-3 {
-      @include transform(translateY($hamburger-translateY * -1) translateX($hamburger-translateX) rotate($hamburger-rotation * -1));
-    }
-  }
-}
-
 
 .main-nav-mobile{
   overflow-y: scroll;
@@ -1303,10 +1489,6 @@ body.opened-nav-animate{
   .main-nav-mobile {
     display: block;
   }
-
-
-
-
   &.opened-nav{
     .main-nav-mobile{
       > ul{
@@ -1317,25 +1499,68 @@ body.opened-nav-animate{
       }
     }
   }
+}
 
+#hamburger-icon {
+  padding: 10px;
+  margin-top: 5px;
+  .hamburger-icon-inner{
+    width:$hamburger-widthline;
+    height:$hamburger-heighticon;
+    position: relative;
+    display: block;
+  }
+  .line {
+    display:block;
+    background: $tool-font;
+    width:$hamburger-widthline;
+    height:$hamburger-heightline;
+    position:absolute;
+    left:0;
+    @include border-radius($hamburger-heightline / 2);
+    @include transition(all $hamburger-transition-time);
 
-
-
-
-
-
+    &.line-1 {  top:0;  }
+    &.line-2 {  top:50%; }
+    &.line-3 {  top:100%; }
+  }
+  &.active {
+    .line-1 {
+      @include transform(translateY($hamburger-translateY) translateX($hamburger-translateX) rotate($hamburger-rotation));
+    }
+    .line-2 {
+      top: 100%;
+      @include transform(translateY($hamburger-translateY));
+    }
+    .line-3 {
+      @include transform(translateY($hamburger-translateY * -1) translateX($hamburger-translateX) rotate($hamburger-rotation * -1));
+    }
+  }
 }
 
 /* ==============================
-   7. Footer
+   8. Footer
    ============================== */
+/*
+ * 8.1. Footer common styles
+ */
 #footer{
   background: $nav-bg;
   color: $main-text;
 }
+/*
+ * 8.2. Footer Top & Bottom
+ */
+#footer-bottom {
+  padding: 40px 0;
+}
 #footer-top {
     padding: 0 0 30px;
 }
+
+/*
+ * 8.3. Footer Area
+ */
 #footer-area {
   padding: 75px 0 20px 0;
   background: $nav-bg;
@@ -1397,6 +1622,11 @@ body.opened-nav-animate{
     }
   }
 }
+
+/*
+ * 8.4. Footer Copyright
+ */
+
 #footer-copyright {
     background: $nav-bg;
     padding: 60px 0 98px;
@@ -1452,34 +1682,10 @@ body.opened-nav-animate{
       margin: 0;
     }
 }
-body.layout-boxed{
-  #footer{
-    max-width: 1200px;
-  }
-}
-.footer_fixed{
-  #footer{
-    position: fixed;
-    bottom: 0;
-    margin: auto;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 0;
-  }
-  .static-footer{
-    padding: 0 !important;
-    #footer{
-      position: static;
-    }
-  }
-}
-#footer-bottom {
-    padding: 40px 0;
-}
+
 
 /* ==============================
-   8. KT Owl Carousel
+   9. KT Owl Carousel
    ============================== */
 .owl-carousel-kt{
   .owl-buttons{
@@ -1741,7 +1947,7 @@ body.layout-boxed{
 }
 
 /* ==============================
-   9. Rev slider custom
+   10. Rev slider custom
    ============================== */
 .uranus.tparrows{
   width: 40px;
@@ -1792,7 +1998,7 @@ body.layout-boxed{
 
 
 /* ==============================
-   10. Widgets
+   11. Widgets
    ============================== */
 .widget,
 .widget-container {
@@ -2026,6 +2232,8 @@ body.layout-boxed{
     }
   }
 }
+
+
 /**
  * Calendar
  **/
@@ -2096,7 +2304,6 @@ body.layout-boxed{
   }
 }
 
-
 /**
  * KT image
  **/
@@ -2130,6 +2337,8 @@ body.layout-boxed{
     left: 125%;
   }
 }
+
+
 /**
  * Search
  **/
@@ -2199,7 +2408,7 @@ body.layout-boxed{
       }
     }
     .postform{
-      background: #82c14f;   
+      background: $primary-color;
       color: $white; 
       border: none;
       display: block;
@@ -2234,8 +2443,11 @@ body.layout-boxed{
 }
 
 /* ==============================
-   11. Blog
+   12. Blog
    ============================== */
+/*
+ * 12.1. Footer common styles
+ */
 div.post-item,
 article.post-item {
     margin-bottom: 50px;
@@ -2246,7 +2458,8 @@ article.post-item {
 }
 
 .posted-on {
-  .entry-date.published{
+  .entry-date
+  .published{
     display: inline;
   }
 }
@@ -2276,6 +2489,12 @@ article.post-item {
       @include transition();
       @include opacity(0);
     }
+    :hover{
+      .entry-thumb:before{
+        @include opacity(1);
+      }
+    }
+
   }
   .format-quote{
     .entry-thumb:before{
@@ -2302,28 +2521,14 @@ article.post-item {
       content: "\f083";
     }
   }
-}
-.blog-posts-image{
-  .post-item:hover{
-    &.format-quote,
-    &.format-link,
-    &.format-image,
-    &.format-video,
-    &.format-audio,
-    &.format-gallery{
-      .entry-thumb:before{
-        @include opacity(1);
-      }
-    }
-  }
-}
-.blog-posts-image{
+
   .entry-thumb{
     img{
       width: 100%;
     }
   }
 }
+
 .entry-thumb.no-image:before {
     position: absolute;
     width: 100%;
@@ -2334,43 +2539,43 @@ article.post-item {
     border: 2px solid $border-color;
 }
 .entry-meta-data {
+  color: $icon-list;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size:12px;
+  letter-spacing: 0.1em;
+  line-height: normal;
+  a{
     color: $icon-list;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    font-size:12px;
-    letter-spacing: 0.1em;
-    line-height: normal;
-    a{
-      color: $icon-list;
-      &:hover{
-        text-decoration: none;
-        color: $title-text;
-      }
+    &:hover{
+      text-decoration: none;
+      color: $title-text;
     }
-    > span:after{
-      content: "|";
-      margin-right: 8px;
-      margin-left: 10px;
-      color:$border-second-color;
+  }
+  > span:after{
+    content: "|";
+    margin-right: 8px;
+    margin-left: 10px;
+    color:$border-second-color;
+  }
+  > span:last-child:after{
+    content: '';
+    margin-left: 0;
+    margin-right: 0;
+  }
+  > a.kt_likepost:before{
+    @include FontAwesome('\f08a');
+    margin-right: 5px;
+  }
+  > a.kt_likepost.liked{
+    cursor: text;
+    &:before{
+      content: "\f004";
     }
-    > span:last-child:after{
-      content: '';
-      margin-left: 0;
-      margin-right: 0;
+    &:hover{
+      color: inherit;
     }
-    > a.kt_likepost:before{
-      @include FontAwesome('\f08a');
-      margin-right: 5px;
-    }
-    > a.kt_likepost.liked{
-      cursor: text;
-      &:before{
-        content: "\f004";
-      }
-      &:hover{
-        color: inherit;
-      }
-    }
+  }
 }
 .entry-share-box{
   a{
@@ -2405,30 +2610,141 @@ article.post-item {
   }
 }
 
-.post-item.format-audio{
-  .entry-thumb-audio{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+
+.post-item{
+  .format-audio{
+    .entry-thumb-audio{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+  .format-audio {
+    .entry-thumb{
+      min-height: 55px;
+      overflow: hidden;
+    }
   }
 }
 
-.post-item.format-audio {
-  .entry-thumb{
-    min-height: 55px;
-    overflow: hidden;
+/*
+ * 12.2. Blog Posts
+ */
+
+.blog-posts-loadmore {
+  text-align: center;
+}
+
+
+.blog-posts{
+  .entry-title{
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 25px;
+    a{
+      color: $title-text;
+      &:hover{
+        color: $primary-color;
+      }
+    }
+  }
+  &-masonry{
+    .blog-posts-sizer{
+      margin: 0;
+      min-height: 0;
+    }
+  }
+  &-zigzag,
+  &-list {
+    .entry-title{
+      margin: 0 0 20px;
+    }
+    .entry-more{
+      margin: 0;
+    }
+    .list-media-wrapper{
+      position: relative;
+      padding-left:40px;
+    }
+    .post-item{
+      .meta-date{
+        position: absolute;
+        top:0;
+        left:12px;
+        @include transform-origin(left top 0);
+        @include transform(rotate(90deg));
+      }
+      .entry-thumb{
+        margin: 0;
+      }
+    }
+  }
+  &-list {
+    .list-media-wrapper{
+      width: 360px;
+      float: left;
+    }
+    .entry-main-content{
+      margin-left: 400px;
+      padding-top: 12px;
+    }
+  }
+  &-zigzag{
+    .list-media-wrapper{
+      padding-left: 30px;
+    }
+    .entry-main-content{
+      padding-top: 10px;
+    }
+    .post-layout-zigzag{
+      margin-bottom: 60px;
+    }
+  }
+
+  .main-class.col-md-12 &{
+    .blog-posts-list {
+      .list-media-wrapper{
+        width: 460px;
+        float: left;
+      }
+      .entry-main-content{
+        margin-left: 500px;
+        padding-top: 52px;
+      }
+    }
+  }
+
+}
+
+
+
+/* Blog Classic */
+article.post-item.post-layout-classic {
+  margin-bottom: 90px;
+}
+.post-layout-classic{
+  .entry-excerpt{
+    margin-bottom: 30px;
+  }
+  .entry-share-box{
+    float: right;
+    margin-bottom: 15px;
+    margin-top: -15px;
   }
 }
 
-.entry-thumb-fullwidth,
+
+
+
+/*
+ * 12.3. Single Post
+ */
+
 .post-single{
   .entry-thumb{
     margin-bottom: 55px;
   }
-}
-
-.post-single{
   .entry-header{
     margin-bottom: 30px;
     .entry-title{
@@ -2498,6 +2814,9 @@ article.post-item {
   }
 }
 
+/*
+ * 12.4. Author Info
+ */
 .author-info{
   background: $border-second-color;
   margin-bottom: 50px;
@@ -2550,7 +2869,9 @@ article.post-item {
 }
 
 
-
+/*
+ * 12.5. Post Navigation
+ */
 .post-navigation{
   position: relative;
   margin-bottom:50px;
@@ -2561,6 +2882,9 @@ article.post-item {
     float: left;
   }
 }
+/*
+ * 12.6. Comments
+ */
 .title-article{
   margin: 0 0 60px;
   padding: 0;
@@ -2758,6 +3082,11 @@ article.post-item {
 .form-allowed-tags {
     display: none;
 }
+
+/*
+ * 12.7. Comment Form
+ */
+
 #commentform{
   textarea,
   input[type="text"]{
@@ -2774,6 +3103,10 @@ article.post-item {
     }
   }
 }
+
+/*
+ * 12.8. Related article
+ */
 
 #related-article{
   padding-bottom: 10px;
@@ -2798,111 +3131,9 @@ article.post-item {
   }
 }
 
-/* Blog Posts */
-.blog-posts-loadmore {
-    text-align: center;
-}
-.blog-posts{
-  .entry-title{
-    font-size: 22px;
-    line-height: 30px;
-    margin: 0 0 25px;
-    a{
-      color: $title-text;
-      &:hover{
-        color: $primary-color;
-      }
-    }
-  }
-}
-
-.blog-posts-masonry{
-  .blog-posts-sizer{
-    margin: 0;
-    min-height: 0;
-  }
-}
-
-/* Blog List */
-.blog-posts-zigzag,
-.blog-posts-list {
-  .list-media-wrapper{
-    position: relative;
-    padding-left:40px;
-  }
-  .post-item{
-    .meta-date{
-      position: absolute;
-      top:0;
-      left:12px;
-      @include transform-origin(left top 0);
-      @include transform(rotate(90deg));
-    }
-    .entry-thumb{
-      margin: 0;
-    }
-  }
-}
-.blog-posts-list {
-  .list-media-wrapper{
-    width: 360px;
-    float: left;
-  }
-  .entry-main-content{
-    margin-left: 400px;
-    padding-top: 12px;
-  }
-}
-.main-class.col-md-12{
-  .blog-posts-list {
-    .list-media-wrapper{
-      width: 460px;
-      float: left;
-    }
-    .entry-main-content{
-      margin-left: 500px;
-      padding-top: 52px;
-    }
-  }
-}
-.blog-posts.blog-posts-zigzag,
-.blog-posts.blog-posts-list{
-  .entry-title{
-    margin: 0 0 20px;
-  }
-  .entry-more{
-    margin: 0;
-  }
-}
-.blog-posts-zigzag{
-  .list-media-wrapper{
-    padding-left: 30px;
-  }
-  .entry-main-content{
-    padding-top: 10px;
-  }
-  .post-layout-zigzag{
-    margin-bottom: 60px;
-  }
-}
-
-/* Blog Classic */
-article.post-item.post-layout-classic {
-    margin-bottom: 90px;
-}
-.post-layout-classic{
-  .entry-excerpt{
-    margin-bottom: 30px;
-  }
-  .entry-share-box{
-    float: right;
-    margin-bottom: 15px;
-    margin-top: -15px;
-  }
-}
 
 /* ==============================
-   12. Breadcrumb
+   13. Breadcrumb
    ============================== */
 
 .woocommerce-breadcrumb,
@@ -2915,7 +3146,7 @@ article.post-item.post-layout-classic {
   }
 }
 /* ==============================
-   13. Page Header
+   14. Page Header
    ============================== */
 .page-header {
   margin: 0;
@@ -2944,64 +3175,49 @@ article.post-item.post-layout-classic {
     border: none;
     padding: 0 50px;
     position: relative;
-    &:after,&:before{
+    &:before,
+    &:after{
       content: "";
       width:2px;
       height:26px;
       background: #252525;
       position: absolute;
       top:50%;
-      transform: translatey(-65%);
-      -webkit-transform: translatey(-65%);
-      -moz-transform: translatey(-65%);
-      -ms-transform: translatey(-65%);
-      right:0;
+      @include transform(translateY(-65%));
     }
     &:before{
       left:0;
+    }
+    &:after{
+      right:0;
     }
   }
   .page-header-subtitle{
     position: relative;
     margin-top: 10px;
   }
-  .page-header-separator{
-    background: $white;
-    height: 2px;
-    margin: 10px 0 15px;
-    width: 38px;
-  }
   .breadcrumbs{
     margin: 0 0 15px;
   }
-}
-.page-header-left {
+  &-left {
     text-align: left;
-}
-
-.page-header-right {
-  text-align: right;
-  .page-header-separator{
-    float: right;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-center {
+    text-align: center;
   }
 }
-.page-header-center {
-    text-align: center;
-    .page-header-separator{
-      margin-left: auto;
-      margin-right: auto;
-    }
-}
-/* ==============================
-   14. Shortcodes
-   ============================== */
 
+/* ==============================
+   15. Shortcodes
+   ============================== */
 /**
-* 14.1. Single image
+* 15.1. Single image
 **/
 
 .wpb_single_image{
-
   .border-left,
   .border-right{
     margin-bottom: 30px;
@@ -3229,13 +3445,11 @@ article.post-item.post-layout-classic {
 
 
   }
-
 }
 
 /*
- *  11.4 Custom vc Btn3
+ *  15.2 Custom vc Btn3
  */
-
 .vc_general.vc_btn3{
   font-weight: 600;
   letter-spacing: 0.2em;
@@ -3257,12 +3471,9 @@ article.post-item.post-layout-classic {
   }
 }
 
-
-
 /*
- *  11.4 Custom VC icon
+ *  15.3 Custom VC icon
  */
-
 .vc_icon_element{
 
   .vc_icon_element-color-accent{
@@ -3275,9 +3486,7 @@ article.post-item.post-layout-classic {
     @include transition( all 0.3s );
   }
 
-
   &.vc_icon_element-outer{
-
     &.vc_icon_image{
       .vc_icon_element-inner{
         width: auto!important;
@@ -3296,15 +3505,12 @@ article.post-item.post-layout-classic {
     .vc_icon_element-image{
       @include translate();
     }
-
   }
-
 }
 
-
-/**
-* 5.1. Features box
-**/
+/*
+ *  15.4 Features box
+ */
 .features-box{
   margin-bottom: 30px;
   text-align: center;
@@ -3318,7 +3524,6 @@ article.post-item.post-layout-classic {
     color: #959595;
     font-size: 12px;
   }
-
   &.layout-2{
     text-align: left;
     .features-box-left,
@@ -3337,12 +3542,9 @@ article.post-item.post-layout-classic {
     .features-box-right{
       padding-top: 5px;
     }
-
   }
-
   .vc_icon_element-background-color-accent{
     background: $primary-color;
-
   }
   .vc_icon_element-color-accen{
     color: $primary-color;
@@ -3350,10 +3552,9 @@ article.post-item.post-layout-classic {
 
 }
 
-/**
-* 5.1. Testimonials
-**/
-
+/*
+ *  15.5 Testimonials
+ */
 .testimonial-carousel-wrapper{
   text-align: center;
   margin-bottom: 30px;
@@ -3478,7 +3679,6 @@ article.post-item.post-layout-classic {
   }
 }
 
-
 .testimonial-carousel-skin-light{
   .testimonial-item{
 
@@ -3544,31 +3744,16 @@ article.post-item.post-layout-classic {
   }
 }
 
-/**
-* 5.1. Single image
-**/
-
+/*
+ *  15.6 clients carousel
+ */
 .clients-carousel-wrapper{
   text-align: center;
 }
 
 /**
-* 5.1. Single image
-**/
-.woocommerce-carousel-wrapper{
-  .owl-kttheme {
-    .product{
-      width: 100%;
-    }
-  }
-}
-
-/* ==============================
-   15. Composer
-   ============================== */
-/**
-* 5.1. KT Heading
-**/
+ * 15.7. KT Heading
+ **/
 .kt-heading-wrapper {
   margin-bottom: 30px;
   text-align: left;
@@ -3598,7 +3783,6 @@ article.post-item.post-layout-classic {
   }
 
   &.layout-1{
-
     .kt-heading-title{
       padding:0 50px;
       display: inline-block;
@@ -3640,8 +3824,6 @@ article.post-item.post-layout-classic {
 
   }
 
-
-
   &.kt-heading-align-center {
     text-align: center;
   }
@@ -3670,14 +3852,11 @@ article.post-item.post-layout-classic {
     }
   }
 
-
-
 }
 
-
 /**
-* 5.2. Coming soon
-**/
+ * 15.8. Coming soon
+ **/
 .wrapper-comingsoon {
   margin-bottom: 20px;
   text-align: center;
@@ -3828,8 +4007,8 @@ article.post-item.post-layout-classic {
 }
 
 /**
-* 5.2. Social
-**/
+ * 15.9. Socials
+ **/
 .socials-icon-wrapper {
   margin: 0 auto 20px;
   ul{
@@ -3914,7 +4093,6 @@ article.post-item.post-layout-classic {
   }
   
 }
-
 
 .social-background-fill.social-style-accent{
   a{
@@ -4112,33 +4290,9 @@ article.post-item.post-layout-classic {
   }
 }
 
-/*
- * Contact Form
- */
-form.wpcf7-form{
-  .wpcf7-text,.wpcf7-textarea{
-    padding: 12px 0;
-    border: none;
-    border-bottom: 1px solid $border-color;
-    height: auto;
-    color:$main-text;
-  }
-  .wpcf7-textarea{
-    width: 100%!important;
-    height: 80px;
-  }
-  p{
-    margin-bottom: 10px;
-    &.wrap-submit{
-      margin-top: 60px;
-      text-align: center;
-    }
-  }
-}
-
-/*
- * Google Map
- */
+/**
+ * 15.10. Google Map
+ **/
  
 .wrapper-googlemap{
     position: relative;
@@ -4149,10 +4303,9 @@ form.wpcf7-form{
       @include translate;
     }
 }
-
-/*
- * Team
- */
+/**
+ * 15.11. Team
+ **/
 
 .team{
   position: relative;
@@ -4252,10 +4405,9 @@ form.wpcf7-form{
     }
   }
 }
-
 /**
-* 11.3. Contact Info
-**/
+ * 15.12. Contact Info
+ **/
 .contact-info-wrapper{
   margin-bottom: 12px;
   > ul{
@@ -4288,35 +4440,37 @@ form.wpcf7-form{
     margin-bottom: 0;
   }
 }
+
+
 /**
-* 11.3. Skill
-**/
+ * 15.13. Skill
+ **/
 .kt-skill-wrapper {
+  margin-bottom: 30px;
+  .kt-skill-item-wrapper {
     margin-bottom: 30px;
-    .kt-skill-item-wrapper {
-      margin-bottom: 30px;
-      &:last-child{
-        margin-bottom: 0;
-      }
-      .kt-skill-content,
-      .kt-skill-bg {
-          position: relative;
-      }
-      .kt-skill-bg{
-        background: $border-image;
-      }
-      .kt-skill-bar{
-        width: 0;
-        @include transition('width 1s linear');
-        overflow: hidden;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    .kt-skill-content,
+    .kt-skill-bg {
         position: relative;
-      }
-      .kt-skill-bg-accent{
-        .kt-skill-bar{
-          background: $primary-color;
-        }
+    }
+    .kt-skill-bg{
+      background: $border-image;
+    }
+    .kt-skill-bar{
+      width: 0;
+      @include transition('width 1s linear');
+      overflow: hidden;
+      position: relative;
+    }
+    .kt-skill-bg-accent{
+      .kt-skill-bar{
+        background: $primary-color;
       }
     }
+  }
 }
 .kt-style-inner{
   .kt-skill-bar{
@@ -4376,13 +4530,35 @@ form.wpcf7-form{
   }
 }
 
+/*
+ * 15.14. Tooltip
+ */
+.tooltip{
+  opacity: 1;
+  font-size: 14px;
+  font-family: $font-stack;
+  text-transform: capitalize;
+  .tooltip-inner{
+    @include border-radius(0);
+    padding: 10px 15px;
+  }
 
+  &.top {
+    margin-top: -10px;
+    .tooltip-arrow{
+      border-width: 10px 10px 0;
+      bottom: -5px;
+      left: 50%;
+      margin-left: -7px;
+    }
+  }
+}
 /* ==============================
    16. Page Content
    ============================== */
 /**
-* 11.2. Page 404
-**/
+ * 16.1. Page 404
+ **/
 .content-404 {
   margin: 0 auto 50px;
   max-width: 1140px;
@@ -4429,11 +4605,33 @@ form.wpcf7-form{
     }
   }
 }
-
-/*
- * 14.4. Pagination
- */
-
+/* ==============================
+   17. Contact Form
+   ============================== */
+form.wpcf7-form{
+  .wpcf7-text,
+  .wpcf7-textarea{
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid $border-color;
+    height: auto;
+    color:$main-text;
+  }
+  .wpcf7-textarea{
+    width: 100%!important;
+    height: 80px;
+  }
+  p{
+    margin-bottom: 10px;
+    &.wrap-submit{
+      margin-top: 60px;
+      text-align: center;
+    }
+  }
+}
+/* ==============================
+   18. Pagination
+   ============================== */
 .woocommerce .woocommerce-pagination,
 .pagination {
   display: block;
@@ -4487,227 +4685,5 @@ form.wpcf7-form{
       margin-left: 0;
     }
 
-  }
-}
-
-.woocommerce{
-  nav.woocommerce-pagination{
-    ul.page-numbers{
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      border: none;
-      li{
-        border: medium none;
-        float: none;
-      }
-    }
-  }
-}
-
-/*
- * 10.8 Tooltip
- */
-.tooltip{
-  opacity: 1;
-  font-size: 14px;
-  font-family: $font-stack;
-  text-transform: capitalize;
-  .tooltip-inner{
-    @include border-radius(0);
-    padding: 10px 15px;
-  }
-
-  &.top {
-    margin-top: -10px;
-    .tooltip-arrow{
-      border-width: 10px 10px 0;
-      bottom: -5px;
-      left: 50%;
-      margin-left: -7px;
-    }
-  }
-}
-/* ==============================
-   12.Popup
-   ============================== */
-
-#popup-wrap{
-  max-width: 600px;
-  background: #fff;
-  position: relative;
-  margin: 0 auto;
-  h3.title-top{
-    text-align: center;
-    margin: 0;
-    font-size: 18px;
-    padding: 17px 40px;
-    min-height: 59px;
-  }
-  .content-popup{
-    padding: 30px;
-    .kt-mailchimp-wrapper{
-      margin: 0;
-    }
-
-  }
-  .mfp-close{
-    font-size: 0;
-    width: 20px;
-    height: 20px;
-    top:17px;
-    right: 17px;
-    &:after,&:before{
-      width: 1px;
-      height: 30px;
-      background: #a4a4a4;
-      content: "";
-      position: absolute;
-      top:-4px;
-      left: 10px;
-    }
-    &:after{
-      @include rotate(45);
-    }
-    &:before{
-      @include rotate(-45);
-    }
-  }
-  .mailchimp-form{
-    max-width: 350px;
-    margin: 0 auto;
-
-  }
-  h4.newletter-title{
-    font-size: 14px;
-    text-transform: uppercase;
-    line-height: 24px;
-    letter-spacing: 0.2em;
-    text-align: center;
-    margin-bottom: 35px;
-  }
-  form.dont-show{
-    padding: 20px 0;
-    text-align: center;
-    background: $bg-popup;
-    label{
-      font-size: 12px;
-      font-weight: 300;
-      position: relative;
-      padding-left: 18px;
-      margin: 0;
-      line-height: 1;
-      cursor: pointer;
-      &:before{
-        width: 12px;
-        height: 12px;
-        border: 1px solid $white;
-        @include border-radius('2px');
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: 1px;
-      }
-    }
-    input{
-      @include opacity(0);
-      &:checked{
-        ~ label:before{
-          background: $white;
-        }
-      }
-    }
-  }
-}
-
-
-/*
- * 14.3. Page Loader
- */
-.kt_page_loader{
-  position: fixed;
-  width:100%;
-  height:100%;
-  top:0;
-  left:0;
-  background: #fff;
-  z-index: 999999999;
-
-  .kt_spinner{
-    width: 50px;
-    height: 50px;
-    margin:0 auto;
-  }
-
-  .page_loader_inner{
-    @include translate(c);
-    text-align: center;
-  }
-  &.style-1{
-    .page_loader_inner{
-      @include animation(loader 4s infinite ease);
-      width: 50px;
-      height: 50px;
-      border: 2px solid $primary-color;
-    }
-    .kt_spinner{
-      vertical-align: top;
-      display: inline-block;
-      width: 100%;
-      background-color: $primary-color;
-      @include animation(loader-inner 4s infinite ease-in);
-    }
-  }
-  &.style-2{
-    .kt_spinner {
-      border: 1px solid #cccccc;
-      @include animation(rotate 1.3s linear 0s infinite);
-      @include border-radius(100%);
-      &:after {
-        content: '';
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        background: $primary-color;
-        @include border-radius(50%);
-        @include animation(3s linear 0s infinite);
-        left: -5px;
-        top: 18px;
-      }
-    }
-  }
-  &.style-3{
-    .kt_spinner {
-      border: 2px solid #cccccc;
-      border-bottom-color: $primary-color;
-      @include animation(rotate 1.5s linear 0s infinite);
-      @include border-radius(100%);
-    }
-  }
-}
-
-
-@include keyframes('loader'){
-  0% {  @include rotate(0); }
-  25% {  @include rotate(180);}
-  50% {  @include rotate(180); }
-  75% {  @include rotate(360);}
-  100% {  @include rotate(360);}
-}
-
-@include keyframes('loader-inner'){
-  0% { height: 0; }
-  25% { height: 0; }
-  50% { height: 100%; }
-  75% { height: 100%; }
-  100% { height: 0; }
-}
-@include keyframes('rotate'){
-  from {
-    @include rotate(0);
-  }
-  to {
-    @include rotate(360);
   }
 }
