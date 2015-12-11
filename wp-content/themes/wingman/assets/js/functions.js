@@ -362,7 +362,7 @@
                     $loadmore.closest('.blog-posts-loadmore').hide();
                 }
 
-                if($type == 'grid' || $type == 'masonry'){
+                if($type == 'grid' || $type == 'masonry' || $type == 'zigzag'){
                     var $row = $content.children('.row');
                     if($type == 'masonry'){
                         var $elems = $(response.html);

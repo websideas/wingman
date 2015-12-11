@@ -8,7 +8,6 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
 
     protected function content($atts, $content = null) {
         $atts = shortcode_atts( array(
-            'image_size' => '',
             'readmore' => '',
             'blog_pagination' => 'classic',
             'sharebox' => 'true',
@@ -143,7 +142,6 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
 
             $i = 1 ;
             $blog_atts_posts = array(
-                'image_size' => $image_size,
                 'readmore' => $readmore,
                 'show_excerpt' =>  apply_filters('sanitize_boolean', $show_excerpt),
                 'show_meta' =>  apply_filters('sanitize_boolean', $show_meta),
@@ -157,6 +155,7 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
                 'thumbnail_type' => $thumbnail_type,
                 'sharebox' => apply_filters('sanitize_boolean', $sharebox),
                 "class" => '',
+                "type" => $blog_type,
             );
 
             if( $blog_type == 'classic' ){
@@ -326,20 +325,8 @@ vc_map( array(
             'value' => array(
                 __('None', THEME_LANG) => '',
                 __( 'Link', 'js_composer' ) => 'link',
-                __( 'Button Accent', 'js_composer' ) => 'btn-default',
-                __( 'Button Light', 'js_composer' ) => 'btn-light',
-                __( 'Button Dark', 'js_composer' ) => 'btn-dark',
-                __( 'Button Gray', 'js_composer' ) => 'btn-gray',
-                __( 'Button Accent Border', 'js_composer' ) => 'btn-default-b',
-                __( 'Button Light Border', 'js_composer' ) => 'btn-light-b',
-                __( 'Button Dark Border', 'js_composer' ) => 'btn-dark-b',
             ),
             "description" => __("Show or hide the readmore button.", THEME_LANG),
-        ),
-        array(
-            "type" => "kt_image_sizes",
-            "heading" => __( "Select image sizes", THEME_LANG ),
-            "param_name" => "image_size",
         ),
         array(
             'type' => 'dropdown',
@@ -369,16 +356,6 @@ vc_map( array(
                 'value' => 'true'
             ),
         ),
-
-        /*
-        array(
-            "type" => "textfield",
-            "heading" => __( "Image size custom", THEME_LANG ),
-            "param_name" => "img_size_custom",
-            'description' => __('Default: 300x200 (Width x Height)', THEME_LANG),
-            "dependency" => array("element" => "image_size","value" => array('custom')),
-        ),
-        */
 
 
         array(

@@ -183,6 +183,7 @@ a {
 .font-black {
   font-weight: 900; }
 
+.post-link-outer,
 blockquote,
 .blockquote {
   border: 1px solid #82c14f;
@@ -191,6 +192,7 @@ blockquote,
   line-height: 24px;
   padding: 30px 30px 23px 30px;
   position: relative; }
+  .post-link-outer:after,
   blockquote:after,
   .blockquote:after {
     font-family: "FontAwesome";
@@ -207,13 +209,19 @@ blockquote,
     position: absolute;
     bottom: 35px;
     right: 45px; }
+  .post-link-outer p,
   blockquote p,
   .blockquote p {
     margin-bottom: 20px;
     position: relative;
     z-index: 1; }
+  .post-link-outer .post-link-url,
+  .post-link-outer footer,
+  .post-link-outer small,
+  blockquote .post-link-url,
   blockquote footer,
   blockquote small,
+  .blockquote .post-link-url,
   .blockquote footer,
   .blockquote small {
     padding-top: 14px;
@@ -222,9 +230,15 @@ blockquote,
     color: #252525;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    font-size: 14px; }
+    font-size: 14px;
+    text-align: left; }
+    .post-link-outer .post-link-url:before,
+    .post-link-outer footer:before,
+    .post-link-outer small:before,
+    blockquote .post-link-url:before,
     blockquote footer:before,
     blockquote small:before,
+    .blockquote .post-link-url:before,
     .blockquote footer:before,
     .blockquote small:before {
       content: "";
@@ -234,6 +248,35 @@ blockquote,
       position: absolute;
       top: 0;
       left: 0; }
+
+.post-link-outer:after {
+  font-family: "FontAwesome";
+  content: "";
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  right: 10px; }
+.post-link-outer .post-link-title {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px; }
+.post-link-outer .post-link-url {
+  position: relative;
+  z-index: 2; }
+
+.post-link-wrapper {
+  position: relative; }
+  .post-link-wrapper .post-link-link {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -999px;
+    top: 0;
+    width: 100%; }
 
 /* ==============================
    4. Forms fields

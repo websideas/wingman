@@ -2179,14 +2179,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
-             *	Archive settings
+             *  Archive settings
              **/
             $this->sections[] = array(
-                'id'			=> 'archive_section',
-                'title'			=> __( 'Archive', THEME_LANG ),
-                'desc'			=> 'Archive post settings',
+                'id'            => 'archive_section',
+                'title'         => __( 'Archive', THEME_LANG ),
+                'desc'          => 'Archive post settings',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'archive_heading',
                         'type'     => 'raw',
@@ -2317,14 +2317,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'options' => array(
                             '' => __('None', THEME_LANG),
                             'link' => __( 'Link', 'js_composer' ),
-                            'btn-default' => __( 'Button Accent', 'js_composer' ),
-                            'btn-white' => __( 'Button White', 'js_composer' ),
-                            'btn-dark' => __( 'Button Dark', 'js_composer' ),
-                            'btn-darkl' => __( 'Button Dark lighter', 'js_composer' ),
-                            'btn-gray' => __( 'Button Gray', 'js_composer' ) ,
-                            'btn-default-b' => __( 'Button Accent Border', 'js_composer' ) ,
-                            'btn-white-b' => __( 'Button White Border', 'js_composer' ),
-                            'btn-dark-b' => __( 'Button Dark Border', 'js_composer' ),
                         ),
                     ),
 
@@ -2338,14 +2330,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'image' => __( 'Featured Image', THEME_LANG ) ,
                         ),
                         'default' => 'image'
-                    ),
-                    array(
-                        'id'   => 'archive_image_size',
-                        'type' => 'select',
-                        'options' => $image_sizes,
-                        'title'    => __( 'Image size', THEME_LANG ),
-                        'desc' => __("Select image size.", THEME_LANG),
-                        'default' => 'blog_post'
                     ),
                     array(
                         'id' => 'archive_excerpt',
@@ -2472,14 +2456,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
-             *	Author settings
+             *  Author settings
              **/
             $this->sections[] = array(
-                'id'			=> 'author_section',
-                'title'			=> __( 'Author', THEME_LANG ),
-                'desc'			=> 'Author post settings',
+                'id'            => 'author_section',
+                'title'         => __( 'Author', THEME_LANG ),
+                'desc'          => 'Author post settings',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'author_heading',
                         'type'     => 'raw',
@@ -2610,14 +2594,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'options' => array(
                             '' => __('None', THEME_LANG),
                             'link' => __( 'Link', 'js_composer' ),
-                            'btn-default' => __( 'Button Accent', 'js_composer' ),
-                            'btn-white' => __( 'Button White', 'js_composer' ),
-                            'btn-dark' => __( 'Button Dark', 'js_composer' ),
-                            'btn-darkl' => __( 'Button Dark lighter', 'js_composer' ),
-                            'btn-gray' => __( 'Button Gray', 'js_composer' ) ,
-                            'btn-default-b' => __( 'Button Accent Border', 'js_composer' ) ,
-                            'btn-white-b' => __( 'Button White Border', 'js_composer' ),
-                            'btn-dark-b' => __( 'Button Dark Border', 'js_composer' ),
                         ),
                     ),
 
@@ -2631,14 +2607,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'image' => __( 'Featured Image', THEME_LANG ) ,
                         ),
                         'default' => 'image'
-                    ),
-                    array(
-                        'id'   => 'author_image_size',
-                        'type' => 'select',
-                        'options' => $image_sizes,
-                        'title'    => __( 'Image size', THEME_LANG ),
-                        'desc' => __("Select image size.", THEME_LANG),
-                        'default' => 'blog_post'
                     ),
                     array(
                         'id' => 'author_excerpt',
@@ -3034,14 +3002,14 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
             /**
-             *	Search settings
+             *  Search settings
              **/
             $this->sections[] = array(
-                'id'			=> 'search_section',
-                'title'			=> __( 'Search', THEME_LANG ),
-                'desc'			=> 'Search settings',
+                'id'            => 'search_section',
+                'title'         => __( 'Search', THEME_LANG ),
+                'desc'          => 'Search settings',
                 'icon'          => 'icon-Data-Search',
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'search_heading',
                         'type'     => 'raw',
@@ -3100,13 +3068,12 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title' => __('Search Loop Style', THEME_LANG),
                         'desc' => '',
                         'options' => array(
-                            'classic' => __( 'Standand', 'js_composer' ),
                             'grid' => __( 'Grid', 'js_composer' ),
                             'list' => __( 'List', 'js_composer' ),
                             'masonry' => __( 'Masonry', 'js_composer' ),
                             'zigzag' => __( 'Zig Zag', 'js_composer' ),
                         ),
-                        'default' => 'masonry'
+                        'default' => 'grid'
                     ),
                     array(
                         'id' => 'search_sharebox',
@@ -3130,7 +3097,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '4' => __( '4 columns', 'js_composer' ) ,
                             '6' => __( '6 columns', 'js_composer' ) ,
                         ),
-                        'default' => '3',
+                        'default' => '2',
                         'required' => array('search_loop_style','equals', array( 'grid', 'masonry' ) ),
                     ),
                     array(
@@ -3172,14 +3139,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'options' => array(
                             '' => __('None', THEME_LANG),
                             'link' => __( 'Link', 'js_composer' ),
-                            'btn-default' => __( 'Button Accent', 'js_composer' ),
-                            'btn-white' => __( 'Button White', 'js_composer' ),
-                            'btn-dark' => __( 'Button Dark', 'js_composer' ),
-                            'btn-darkl' => __( 'Button Dark lighter', 'js_composer' ),
-                            'btn-gray' => __( 'Button Gray', 'js_composer' ) ,
-                            'btn-default-b' => __( 'Button Accent Border', 'js_composer' ) ,
-                            'btn-white-b' => __( 'Button White Border', 'js_composer' ),
-                            'btn-dark-b' => __( 'Button Dark Border', 'js_composer' ),
                         ),
                     ),
                     array(
@@ -3209,14 +3168,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title' => __('Excerpt Length', THEME_LANG),
                         'desc' => __("Insert the number of words you want to show in the post excerpts.", THEME_LANG),
                         'default' => '30',
-                    ),
-                    array(
-                        'id'   => 'search_image_size',
-                        'type' => 'select',
-                        'options' => $image_sizes,
-                        'title'    => __( 'Image size', THEME_LANG ),
-                        'desc' => __("Select image size.", THEME_LANG),
-                        'default' => 'recent_posts'
                     ),
 
                     array(
