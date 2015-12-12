@@ -880,9 +880,9 @@
       font-size: 14px;
       font-family: "Poppins", sans-serif;
       font-weight: normal;
-      line-height: normal;
       text-transform: none;
-      letter-spacing: 0; }
+      letter-spacing: 0;
+      line-height: 20px; }
       .bag-products .bag-product .bag-product-title a {
         color: #252525; }
         .bag-products .bag-product .bag-product-title a:hover {
@@ -1922,12 +1922,16 @@ body .mCSB_scrollTools {
 .woocommerce-page div.product form.cart .group_table .quantity-group span,
 .woocommerce div.product form.cart .group_table .quantity-group span {
   display: none; }
+.woocommerce-page div.product form.cart .group_table p.stock,
+.woocommerce div.product form.cart .group_table p.stock {
+  margin-bottom: 0; }
 .woocommerce-page div.product form.cart .group_table .label,
 .woocommerce div.product form.cart .group_table .label {
   display: table-cell;
   font-size: 100%;
   font-weight: normal;
-  white-space: inherit; }
+  white-space: inherit;
+  padding-top: 0; }
 .woocommerce-page div.product form.cart .group_table label,
 .woocommerce div.product form.cart .group_table label {
   display: inline;

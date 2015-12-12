@@ -788,9 +788,9 @@
       font-size: 14px;
       font-family:$font-stack;
       font-weight: normal;
-      line-height: normal;
       text-transform: none;
       letter-spacing: 0;
+      line-height: 20px;
       a{
         color: $title-text;
         &:hover{
@@ -1861,30 +1861,34 @@ body{
           }
           .group_table{
             td{
-                padding-bottom: 20px;
-                vertical-align: middle;
+              padding-bottom: 20px;
+              vertical-align: middle;
             }
             .price{
               display: table-cell;
             }
             div.quantity-group{
-                margin: 0;
+              margin: 0;
             }
             .quantity-group{
-                span{
-                    display: none;
-                }
+              span{
+                display: none;
+              }
+            }
+            p.stock{
+              margin-bottom: 0;
             }
             .label{
-                display: table-cell;
-                font-size: 100%;
-                font-weight: normal;
-                white-space: inherit;
+              display: table-cell;
+              font-size: 100%;
+              font-weight: normal;
+              white-space: inherit;
+              padding-top: 0;
             }
             label{
-                display: inline;
-                font-weight: normal;
-                margin: 0;
+              display: inline;
+              font-weight: normal;
+              margin: 0;
             }
           }
 		}

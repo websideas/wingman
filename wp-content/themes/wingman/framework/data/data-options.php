@@ -1451,7 +1451,15 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'subtitle' => __( 'Specify the body font properties.', THEME_LANG ),
                         'text-align' => false,
                         'letter-spacing'  => true,
-                        'output'      => array( 'body' ),
+                        'output'      => array(
+                            'body',
+                            '.tooltip',
+                            '.woocommerce ul.shop-products h3',
+                            '.woocommerce ul.shop-products h3',
+                            '.woocommerce div.product .product_title',
+                            '.woocommerce table.cart tbody td.product-name a',
+                            '.woocommerce table.wishlist_table tbody td.product-add-to-cart a'
+                        ),
                         'default'  => array( )
                     ),
                     array(
