@@ -47,6 +47,7 @@
   16.1. Page 404
 17. Contact Form
 18. Pagination
+19. Back To Top
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -4686,5 +4687,32 @@ form.wpcf7-form{
       margin-left: 0;
     }
 
+  }
+}
+
+/* ==============================
+   19. Back to top
+   ============================== */
+#back-to-top{
+  background: $primary-color;
+  bottom: 30px;
+  color: $white;
+  cursor: pointer;
+  display: none;
+  height: 40px;
+  position: fixed;
+  right: 30px;
+  text-align: center;
+  width: 40px;
+  z-index: 100;
+  i{
+    font-size: 18px;
+    line-height: 40px;
+    @include transition();
+  }
+  &:hover{
+    i{
+      @include transform(scale(1.5));
+    }
   }
 }

@@ -514,14 +514,28 @@
      Back to top
      --------------------------------------------- */
     function init_backtotop(){
-    	var backtotop = $('#backtotop').hide();
-    	$(window).scroll(function() {
-    		($(window).scrollTop() != 0) ? backtotop.fadeIn() : backtotop.fadeOut();
-    	});
-    	backtotop.click(function(e) {
+
+        $('body').append('<div id="back-to-top"><i class="fa fa-angle-up"></i></div>');
+        var $backtotop = $('#back-to-top');
+
+        $backtotop.hide();
+
+
+        $(window).scroll(function() {
+            var heightbody = $('body').outerHeight(),
+                window_height = $(window).outerHeight(),
+                top_pos = heightbody/2-25;
+            if($(window).scrollTop() + window_height/2 >= top_pos && heightbody > window_height) {
+                $backtotop.fadeIn();
+            } else {
+                $backtotop.fadeOut();
+            }
+        });
+
+        $backtotop.on('click', function(e) {
             e.preventDefault();
-    		$('html, body').animate({scrollTop:0},500);
-    	});
+            $('html, body').animate({scrollTop:0},500);
+        });
     }
 
     /* ---------------------------------------------

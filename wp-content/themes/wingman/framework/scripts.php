@@ -172,6 +172,8 @@ function kt_setting_script() {
             body .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
             .woocommerce-category-products-tab ul.block-heading-tabs li a::before, 
             .woocommerce-category-products-tab ul.block-heading-tabs li a::after,
+            .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a span::after,
+            #back-to-top,
 
             .widget_nav_menu ul li a:hover::after, 
             .widget_pages ul li a:hover::after, 

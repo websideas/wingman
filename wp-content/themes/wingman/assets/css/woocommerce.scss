@@ -2086,6 +2086,12 @@ div.swatch-wrapper{
     }
   }
 }
+
+.woocommerce{
+  .cross-sells {
+    margin-top: 50px;
+  }
+}
 /** =========================
     9. Page Cart
 *** =========================*/
@@ -2150,30 +2156,53 @@ div.swatch-wrapper{
 	.cart-collaterals{
 		.cart_totals{
 			tr{
-				th,td{
-					border: none;
-				    font-size:18px;
-				    font-weight: 400;
-				    text-transform: uppercase;
-				    line-height: 21px;
-				}
-				td{
-					letter-spacing: 0.2em;
-					strong{
-						font-weight: 300;
-					}
-				}
-				th{
-					padding: 12px 30px;
-				}
-			}
+        th,td{
+          border: none;
+          font-size:18px;
+          font-weight: 400;
+          text-transform: uppercase;
+          line-height: 21px;
+          color: $title-text;
+        }
+        td{
+          letter-spacing: 0.2em;
+          strong{
+            font-weight: 300;
+          }
+          label{
+            letter-spacing: 0;
+          }
+          #shipping_method{
+            li{
+              .amount{
+                letter-spacing: 0.2em;
+                font-weight: 300;
+              }
+            }
+          }
+        }
+        th{
+          padding: 12px 30px;
+        }
+      }
 		}
 	}
 }
 .woocommerce{
 	form.woocommerce-shipping-calculator{
 		.form-row{
-			padding: 0;
+			padding: 0 0 0 165px;
+      position: relative;
+      margin: 0 0 20px;
+      label{
+        position: absolute;
+        top:50%;
+        @include transform(translatey(-50%));
+        left:0;
+        font-weight: 400;
+        color: $title-text;
+        text-transform: uppercase;
+      }
 		}
 	}
 	table.cart{
@@ -2322,6 +2351,9 @@ div.swatch-wrapper{
 			    letter-spacing: 0.2em;
 			    font-weight: 700;
 		    }
+        strong{
+          font-weight: 400;
+        }
 		}
 	}
 	form.checkout_coupon,
@@ -2342,7 +2374,7 @@ div.swatch-wrapper{
     .woocommerce-billing-fields,
     .woocommerce-shipping-fields {
     	margin-bottom: 40px;
-    	> p{
+    	p.form-row{
     		position: relative;
 		    padding:0 0 0 190px;
 		    margin-bottom: 30px;
@@ -2373,6 +2405,9 @@ div.swatch-wrapper{
           color:$title-text;;
           font-weight: normal;
         }
+      }
+      #ship-to-different-address-checkbox{
+        margin: 0;
       }
     }
 }
@@ -2605,7 +2640,7 @@ div.swatch-wrapper{
         text-align: center;
         font-size:18px;
         font-family:$heading-font;
-        color:$border-dark-color;
+        color:$title-text;
         letter-spacing: 0.2em;
         font-weight: 700;
         &.actions{
@@ -2628,7 +2663,7 @@ div.swatch-wrapper{
         text-align: left;
         a{
           font-size:18px;
-          color:$title-text;
+          color:$main-text;
           font-family:$font-stack;
           letter-spacing: 0;
           font-weight: 400;
@@ -2645,7 +2680,6 @@ div.swatch-wrapper{
         text-align: center;
         font-family:$heading-font;
         color:$title-text;
-        letter-spacing: 0.2em;
         font-weight: 700;
         border:none;
         font-size:14px;

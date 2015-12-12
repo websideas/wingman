@@ -2111,6 +2111,9 @@ div.swatch-wrapper {
   .woocommerce .cross-sells ul.shop-products li.product {
     width: 100% !important; }
 
+.woocommerce .cross-sells {
+  margin-top: 50px; }
+
 /** =========================
     9. Page Cart
 *** =========================*/
@@ -2166,16 +2169,37 @@ div.swatch-wrapper {
   font-size: 18px;
   font-weight: 400;
   text-transform: uppercase;
-  line-height: 21px; }
+  line-height: 21px;
+  color: #252525; }
 .woocommerce-cart .cart-collaterals .cart_totals tr td {
   letter-spacing: 0.2em; }
   .woocommerce-cart .cart-collaterals .cart_totals tr td strong {
+    font-weight: 300; }
+  .woocommerce-cart .cart-collaterals .cart_totals tr td label {
+    letter-spacing: 0; }
+  .woocommerce-cart .cart-collaterals .cart_totals tr td #shipping_method li .amount {
+    letter-spacing: 0.2em;
     font-weight: 300; }
 .woocommerce-cart .cart-collaterals .cart_totals tr th {
   padding: 12px 30px; }
 
 .woocommerce form.woocommerce-shipping-calculator .form-row {
-  padding: 0; }
+  padding: 0 0 0 165px;
+  position: relative;
+  margin: 0 0 20px; }
+  .woocommerce form.woocommerce-shipping-calculator .form-row label {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translatey(-50%);
+    -khtml-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
+    transform: translatey(-50%);
+    left: 0;
+    font-weight: 400;
+    color: #252525;
+    text-transform: uppercase; }
 .woocommerce table.cart {
   margin: 0 0 30px; }
   .woocommerce table.cart th.product-name {
@@ -2285,6 +2309,8 @@ div.swatch-wrapper {
       font-size: 18px;
       letter-spacing: 0.2em;
       font-weight: 700; }
+    .woocommerce table.shop_table.woocommerce-checkout-review-order-table td strong {
+      font-weight: 400; }
 .woocommerce form.checkout_coupon,
 .woocommerce form.login,
 .woocommerce form.register {
@@ -2299,26 +2325,26 @@ div.swatch-wrapper {
   #customer_details .woocommerce-billing-fields,
   #customer_details .woocommerce-shipping-fields {
     margin-bottom: 40px; }
-    #customer_details .woocommerce-billing-fields > p,
-    #customer_details .woocommerce-shipping-fields > p {
+    #customer_details .woocommerce-billing-fields p.form-row,
+    #customer_details .woocommerce-shipping-fields p.form-row {
       position: relative;
       padding: 0 0 0 190px;
       margin-bottom: 30px; }
-      #customer_details .woocommerce-billing-fields > p input,
-      #customer_details .woocommerce-shipping-fields > p input {
+      #customer_details .woocommerce-billing-fields p.form-row input,
+      #customer_details .woocommerce-shipping-fields p.form-row input {
         border: none;
         border-bottom: 1px solid #e5e5e5;
         padding: 10px 0; }
-      #customer_details .woocommerce-billing-fields > p label,
-      #customer_details .woocommerce-shipping-fields > p label {
+      #customer_details .woocommerce-billing-fields p.form-row label,
+      #customer_details .woocommerce-shipping-fields p.form-row label {
         position: absolute;
         left: 0;
         top: 10px;
         text-transform: uppercase;
         color: #252525;
         font-weight: normal; }
-        #customer_details .woocommerce-billing-fields > p label.checkbox,
-        #customer_details .woocommerce-shipping-fields > p label.checkbox {
+        #customer_details .woocommerce-billing-fields p.form-row label.checkbox,
+        #customer_details .woocommerce-shipping-fields p.form-row label.checkbox {
           margin: 0;
           line-height: normal;
           top: 6px; }
@@ -2331,6 +2357,9 @@ div.swatch-wrapper {
         text-transform: uppercase;
         color: #252525;
         font-weight: normal; }
+    #customer_details .woocommerce-billing-fields #ship-to-different-address-checkbox,
+    #customer_details .woocommerce-shipping-fields #ship-to-different-address-checkbox {
+      margin: 0; }
 
 .select2-container .select2-choice {
   border: none;
@@ -2508,7 +2537,7 @@ div.swatch-wrapper {
     text-align: center;
     font-size: 18px;
     font-family: "Josefin Slab", serif;
-    color: #363636;
+    color: #252525;
     letter-spacing: 0.2em;
     font-weight: 700; }
     .woocommerce table.cart tbody td.actions {
@@ -2526,7 +2555,7 @@ div.swatch-wrapper {
     text-align: left; }
     .woocommerce table.cart tbody td.product-name a {
       font-size: 18px;
-      color: #252525;
+      color: #707070;
       font-family: "Poppins", sans-serif;
       letter-spacing: 0;
       font-weight: 400; }
@@ -2537,7 +2566,6 @@ div.swatch-wrapper {
     text-align: center;
     font-family: "Josefin Slab", serif;
     color: #252525;
-    letter-spacing: 0.2em;
     font-weight: 700;
     border: none;
     font-size: 14px;
