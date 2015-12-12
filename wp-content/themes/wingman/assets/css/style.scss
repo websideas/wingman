@@ -860,6 +860,7 @@ select:not([multiple]) {
           padding: 0;
           img{
             width: 30px;
+            @include border-radius(3px);
           }
           span{
             display: none;

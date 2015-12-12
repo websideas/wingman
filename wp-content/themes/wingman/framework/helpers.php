@@ -488,7 +488,7 @@ if (!function_exists('kt_custom_wpml')){
                     $language_html = '<ul>' . $language_html . '</ul>';
                 }
 
-                $output = $language_html;
+                $output .= $language_html;
 
             }
 

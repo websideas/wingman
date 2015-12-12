@@ -1393,7 +1393,13 @@ select:not([multiple]) {
           margin: 0 10px 5px 0;
           padding: 0; }
           .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-language li img {
-            width: 30px; }
+            width: 30px;
+            -webkit-border-radius: 3px;
+            -khtml-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -o-border-radius: 3px;
+            border-radius: 3px; }
           .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-language li span {
             display: none; }
     .menu-bars-outer .menu-bars-items h4 {
