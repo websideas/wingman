@@ -119,7 +119,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                         <td colspan="6" class="actions">
 
                             <a href="#" class="btn btn-default pull-left"><?php _e( 'Continue shopping', THEME_LANG ); ?></a>
-                            <input type="submit" class="btn btn-default update_cart" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" />
+                            <input type="submit" class="btn btn-default update_cart pull-right" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" />
 
                             <?php do_action( 'woocommerce_cart_actions' ); ?>
 

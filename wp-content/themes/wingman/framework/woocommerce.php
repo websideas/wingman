@@ -450,7 +450,7 @@ function woocommerce_single_product_carousel_callback( $columns ) {
 
     $sidebar = kt_get_woo_sidebar();
 
-    if($sidebar['sidebar'] == 'left' || $sidebar['sidebar'] == 'right'){
+    if( isset($sidebar['sidebar']) && ($sidebar['sidebar'] == 'left' || $sidebar['sidebar'] == 'right')){
         return '{"pagination": false, "navigation": true, "desktop": 3, "desktopsmall" : 2, "tablet" : 2, "mobile" : 1, "navigation_pos": "top"}';
     }else{
         return '{"pagination": false, "navigation": true, "desktop": 4, "desktopsmall" : 3, "tablet" : 2, "mobile" : 1, "navigation_pos": "top"}';
@@ -475,7 +475,7 @@ add_filter('woocommerce_product_description_heading', '__return_false');
 add_filter( 'woocommerce_single_product_thumb_area', 'woocommerce_single_product_thumb_area_callback' );
 function woocommerce_single_product_thumb_area_callback(){
     $sidebar = kt_get_woo_sidebar();
-    if($sidebar['sidebar'] == 'left' || $sidebar['sidebar'] == 'right'){
+    if(isset($sidebar['sidebar']) && ($sidebar['sidebar'] == 'left' || $sidebar['sidebar'] == 'right')){
         return 'col-xs-12 col-sm-5';
     }else{
         return 'col-xs-12 col-sm-6';
@@ -493,7 +493,7 @@ function woocommerce_single_product_thumb_area_callback(){
 add_filter( 'woocommerce_single_product_summary_area', 'woocommerce_single_product_summary_area_callback' );
 function woocommerce_single_product_summary_area_callback(){
     $sidebar = kt_get_woo_sidebar();
-    if($sidebar['sidebar'] == 'left' || $sidebar['sidebar'] == 'right'){
+    if(isset($sidebar['sidebar']) && ($sidebar['sidebar'] == 'left' || $sidebar['sidebar'] == 'right')){
         return 'col-xs-12 col-sm-7';
     }else{
         return 'col-xs-12 col-sm-6';
@@ -863,6 +863,28 @@ if (!function_exists('kt_get_woo_sidebar')) {
             }
         }elseif(is_cart()){
             $sidebar['sidebar'] = 'full';
+        }elseif(is_page()){
+            global $wp_query;
+            if(!$post_id) $post_id = $wp_query->post->ID;
+
+            if(!isset($sidebar['sidebar'])){
+                $sidebar['sidebar'] = rwmb_meta('_kt_sidebar', array(), $post_id);
+            }
+
+            if($sidebar['sidebar'] == '' || $sidebar['sidebar'] == 'default' || $requestCustom){
+                if(!$requestCustom){
+                    $sidebar['sidebar'] = kt_option('sidebar', 'full');
+                }
+                if($sidebar['sidebar'] == 'left' ){
+                    $sidebar['sidebar_area'] = kt_option('sidebar_left', 'primary-widget-area');
+                }elseif($sidebar['sidebar'] == 'right'){
+                    $sidebar['sidebar_area'] = kt_option('sidebar_right', 'primary-widget-area');
+                }
+            }elseif($sidebar['sidebar'] == 'left'){
+                $sidebar['sidebar_area'] = rwmb_meta('_kt_left_sidebar', array(), $post_id);
+            }elseif($sidebar['sidebar'] == 'right'){
+                $sidebar['sidebar_area'] = rwmb_meta('_kt_right_sidebar', array(), $post_id);
+            }
         }
         return apply_filters('woo_sidebar', $sidebar);
     }

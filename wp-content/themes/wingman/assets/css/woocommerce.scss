@@ -1786,6 +1786,17 @@ body{
     }
   }
 }
+
+#content{
+    div.product{
+        div.images,
+        div.summary{
+            float: none;
+            width: 100%;
+        }
+    }
+}
+
 .woocommerce-page,
 .woocommerce{
 	div.product{
@@ -2145,7 +2156,7 @@ div.swatch-wrapper{
 		}
 	}
 }
-.woocommerce-cart{
+.woocommerce{
   .shipping-calculator-form{
     display: block!important;
   }
@@ -2166,6 +2177,8 @@ div.swatch-wrapper{
         }
         td{
           letter-spacing: 0.2em;
+          text-transform: none;
+          text-align: right;
           strong{
             font-weight: 300;
           }

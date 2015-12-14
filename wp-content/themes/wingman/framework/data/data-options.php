@@ -2140,6 +2140,20 @@ if ( ! class_exists( 'KT_config' ) ) {
                     ),
 
                     array(
+                        'id'       => 'sidebar',
+                        'type'     => 'select',
+                        'title'    => __( 'Sidebar configuration', THEME_LANG ),
+                        'subtitle'     => __( "Please choose page layout", THEME_LANG ),
+                        'options'  => array(
+                            'full' => __('No sidebars', THEME_LANG),
+                            'left' => __('Left Sidebar', THEME_LANG),
+                            'right' => __('Right Layout', THEME_LANG)
+                        ),
+                        'default'  => 'full',
+                        'clear' => false,
+                    ),
+
+                    array(
                         'id'       => 'sidebar_left',
                         'type' => 'select',
                         'title'    => __( 'Sidebar left area', THEME_LANG ),
