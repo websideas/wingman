@@ -816,6 +816,7 @@ add_action('pre_get_posts', 'advanced_search_query', 1000);
 /**
  * Add Category by Search form Product
  **/
+/*
 function kt_get_categories_product(){
     global $post;
     $categories = get_terms( 'product_cat' );
@@ -823,13 +824,13 @@ function kt_get_categories_product(){
     
     if( count($categories) > 0 ){
         echo '<div class="wrap_product_cat"><select id="product_cat" class="postform" name="product_cat">';
-            echo '<option value="-1">'.__('All Categories', THEME_LANG).'</option>';
+            echo '<option value="">'.__('All Categories', THEME_LANG).'</option>';print_r($categories);
             foreach ($categories as $key => $value) {
                 echo '<option value="'.$value->slug.'">'.$value->name.'</option>';
             }
         echo '</select></div>';
     }
-}
+}*/
 
 /**
  * Add popup 
