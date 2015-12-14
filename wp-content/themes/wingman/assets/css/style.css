@@ -2913,7 +2913,8 @@ body.opened-nav-animate {
       text-transform: uppercase;
       letter-spacing: 0.2em; }
       #search-fullwidth .searchform .postform option {
-        padding: 5px 0; }
+        padding: 5px 10px;
+        text-align: left; }
     #search-fullwidth .searchform input[type="text"] {
       background-color: #FFFFFF;
       border-radius: 0;
