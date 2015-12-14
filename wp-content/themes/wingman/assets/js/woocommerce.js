@@ -234,7 +234,7 @@
 
         //1199, 991, 768, 480
 
-        if( $('.single-product .main-class').hasClass('col-md-12') ){
+        if( $('.main-class').hasClass('col-md-12') ){
             options.slidesToShow = 4;
             options.vertical = true;
             options.verticalSwiping = true;

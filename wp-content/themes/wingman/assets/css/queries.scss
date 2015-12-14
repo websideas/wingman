@@ -154,6 +154,16 @@ only screen and (min-resolution: 144dpi) {
     }
   }
 
+  .woocommerce{
+	  .upsells-products,
+	  .related-products,
+	  .cross-sells {
+		> h3{
+			font-size: 30px;
+		}
+	  }
+	}
+
 }
 
 

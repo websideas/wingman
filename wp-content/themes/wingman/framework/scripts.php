@@ -174,6 +174,10 @@ function kt_setting_script() {
             .woocommerce-category-products-tab ul.block-heading-tabs li a::after,
             .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a span::after,
             #back-to-top,
+            .woocommerce-page div.product .cart .single_add_to_cart_button:hover, 
+            .woocommerce div.product .cart .single_add_to_cart_button:hover,
+            .woocommerce-page div.product .cart .single_add_to_cart_button:focus,
+            .woocommerce div.product .cart .single_add_to_cart_button:focus,
 
             .widget_nav_menu ul li a:hover::after, 
             .widget_pages ul li a:hover::after, 
@@ -201,6 +205,11 @@ function kt_setting_script() {
             .woocommerce a.button.alt:hover, 
             .woocommerce button.button.alt:hover, 
             .woocommerce input.button.alt:hover,
+
+            .woocommerce-page div.product .cart .single_add_to_cart_button:hover, 
+            .woocommerce div.product .cart .single_add_to_cart_button:hover,
+            .woocommerce-page div.product .cart .single_add_to_cart_button:focus,
+            .woocommerce div.product .cart .single_add_to_cart_button:focus,
             
             .owl-carousel-kt.carousel-dark .owl-buttons > div:hover,
             .owl-carousel-kt.carousel-light .owl-buttons > div:hover,

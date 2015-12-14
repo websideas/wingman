@@ -1837,6 +1837,11 @@ body .mCSB_scrollTools {
           -o-opacity: 0.6;
           opacity: 0.6; }
 
+#content div.product div.images,
+#content div.product div.summary {
+  float: none;
+  width: 100%; }
+
 .woocommerce-page div.product.wc-single-product .quantity-group span,
 .woocommerce div.product.wc-single-product .quantity-group span {
   display: block; }
@@ -1974,8 +1979,8 @@ body .mCSB_scrollTools {
 .woocommerce div.product .cart .single_add_to_cart_button {
   letter-spacing: 0;
   height: 40px; }
-  .woocommerce-page div.product .cart .single_add_to_cart_button.button,
-  .woocommerce div.product .cart .single_add_to_cart_button.button {
+  .woocommerce-page div.product .cart .single_add_to_cart_button.btn,
+  .woocommerce div.product .cart .single_add_to_cart_button.btn {
     margin-right: 1px;
     float: left;
     border: 2px solid #252525;
@@ -2159,28 +2164,30 @@ div.swatch-wrapper {
     border-bottom: 1px solid #e5e5e5;
     margin-bottom: 15px; }
 
-.woocommerce-cart .shipping-calculator-form {
+.woocommerce .shipping-calculator-form {
   display: block !important; }
-.woocommerce-cart .wc-proceed-to-checkout {
+.woocommerce .wc-proceed-to-checkout {
   padding: 0;
   margin-bottom: 40px; }
-.woocommerce-cart .cart-collaterals .cart_totals tr th, .woocommerce-cart .cart-collaterals .cart_totals tr td {
+.woocommerce .cart-collaterals .cart_totals tr th, .woocommerce .cart-collaterals .cart_totals tr td {
   border: none;
   font-size: 18px;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 21px;
   color: #252525; }
-.woocommerce-cart .cart-collaterals .cart_totals tr td {
-  letter-spacing: 0.2em; }
-  .woocommerce-cart .cart-collaterals .cart_totals tr td strong {
+.woocommerce .cart-collaterals .cart_totals tr td {
+  letter-spacing: 0.2em;
+  text-transform: none;
+  text-align: right; }
+  .woocommerce .cart-collaterals .cart_totals tr td strong {
     font-weight: 300; }
-  .woocommerce-cart .cart-collaterals .cart_totals tr td label {
+  .woocommerce .cart-collaterals .cart_totals tr td label {
     letter-spacing: 0; }
-  .woocommerce-cart .cart-collaterals .cart_totals tr td #shipping_method li .amount {
+  .woocommerce .cart-collaterals .cart_totals tr td #shipping_method li .amount {
     letter-spacing: 0.2em;
     font-weight: 300; }
-.woocommerce-cart .cart-collaterals .cart_totals tr th {
+.woocommerce .cart-collaterals .cart_totals tr th {
   padding: 12px 30px; }
 
 .woocommerce form.woocommerce-shipping-calculator .form-row {
