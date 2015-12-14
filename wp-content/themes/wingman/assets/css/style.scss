@@ -530,6 +530,8 @@ select:not([multiple]) {
       width: 50px;
       height: 50px;
       border: 2px solid $primary-color;
+      margin-left: -25px;
+      margin-top: -25px;
     }
     .kt_spinner{
       vertical-align: top;
@@ -1441,13 +1443,13 @@ select:not([multiple]) {
 
 
       div.kt-megamenu-wrapper{
-        padding: 10px 0;
+        padding: 20px 0;
         > ul {
           margin: 0;
           padding: 0;
           list-style: none;
           > li {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             width: auto!important;
             > a,
             > span {
@@ -1456,6 +1458,10 @@ select:not([multiple]) {
               color: #000000;
               padding: 3px 10px 3px 25px;
               text-transform: uppercase;
+            }
+            .widget-container{
+              padding: 0 25px;
+              margin-bottom: 20px;
             }
           }
         }

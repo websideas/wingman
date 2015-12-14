@@ -1388,7 +1388,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > .sub-menu-megamenu > li > a:hover',
                         ),
                         'title'    => __( 'Text Hover color', THEME_LANG ),
-                        'default'  => '#d0a852',
+                        'default'  => '#82c14f',
                         'transparent' => false
                     ),
                     array(
@@ -1414,7 +1414,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a:hover',
                         ),
                         'title'    => __( 'MegaMenu Title Hover Color', THEME_LANG ),
-                        'default'  => '#d0a852',
+                        'default'  => '#82c14f',
                         'transparent' => false
                     ),
 

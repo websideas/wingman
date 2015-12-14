@@ -635,7 +635,9 @@ select:not([multiple]) {
     animation: loader 4s infinite ease;
     width: 50px;
     height: 50px;
-    border: 2px solid #82c14f; }
+    border: 2px solid #82c14f;
+    margin-left: -25px;
+    margin-top: -25px; }
   .kt_page_loader.style-1 .kt_spinner {
     vertical-align: top;
     display: inline-block;
@@ -1982,13 +1984,13 @@ select:not([multiple]) {
           margin-left: 20px;
           padding: 0; }
       .main-nav-mobile > ul > li div.kt-megamenu-wrapper {
-        padding: 10px 0; }
+        padding: 20px 0; }
         .main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul {
           margin: 0;
           padding: 0;
           list-style: none; }
           .main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             width: auto !important; }
             .main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li > a,
             .main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li > span {
@@ -1997,6 +1999,9 @@ select:not([multiple]) {
               color: #000000;
               padding: 3px 10px 3px 25px;
               text-transform: uppercase; }
+            .main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li .widget-container {
+              padding: 0 25px;
+              margin-bottom: 20px; }
       .main-nav-mobile > ul > li .searchform {
         margin: 10px; }
         .main-nav-mobile > ul > li .searchform input[type="text"] {

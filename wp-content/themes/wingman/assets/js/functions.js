@@ -106,13 +106,7 @@
          ===============================**/
         init_js_height();
 
-        /**==============================
-         ***  Disable mobile menu in desktop
-         ===============================**/
-        if ($(window).width() >= 992) {
-            $('body').removeClass('menu-animate');
-            $('.mobile-nav-bar').removeClass('active');
-        }
+
 
 
         /**==============================
@@ -486,8 +480,7 @@
                 $('body').toggleClass('opened-nav-animate');
                 setTimeout(function () {
                     $('body').toggleClass('opened-nav');
-                }, 100)
-
+                }, 100);
             });
 
         $('ul.navigation-mobile ul.sub-menu-dropdown, ul.navigation-mobile .kt-megamenu-wrapper').each(function () {
@@ -507,6 +500,12 @@
                 $navHeight -= parseInt( $('#wpadminbar').outerHeight(), 10 );
             }
             $('.main-nav-mobile').css({'max-height': $navHeight});
+
+            //Disable mobile menu in desktop
+            if ($(window).width() >= 992) {
+                $('body').removeClass('opened-nav-animate opened-nav');
+            }
+
         });
     }
     
