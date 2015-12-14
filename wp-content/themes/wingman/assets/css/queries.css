@@ -100,7 +100,8 @@
     width: 100%;
     margin: 0 0 30px; }
 
-  .woocommerce table.cart tbody td.actions a, .woocommerce table.cart tbody td.actions input {
+  .woocommerce table.cart tbody td.actions a,
+  .woocommerce table.cart tbody td.actions input {
     width: 100% !important;
     margin: 0; }
   .woocommerce table.cart tbody td.actions a {

@@ -182,19 +182,20 @@ only screen and (min-resolution: 144dpi) {
 
 	.woocommerce{
       table.cart {
-          tbody{
-              td{
-                  &.actions{
-                      a,input{
-                          width: 100%!important;
-                          margin: 0;
-                      }
-                      a{
-                          margin-bottom: 10px;
-                      }
-                  }
+        tbody{
+          td{
+            &.actions{
+              a,
+              input{
+                  width: 100%!important;
+                  margin: 0;
               }
+              a{
+                  margin-bottom: 10px;
+              }
+            }
           }
+        }
       }
       table.wishlist_table{
         tr{
@@ -220,18 +221,18 @@ only screen and (min-resolution: 144dpi) {
 
 @media (max-width: 600px) {
 	.woocommerce{
-		ul.shop-products{
-			&.lists{
-				li.product{
-					.product-image-container,
-					.product-attr-container{
-						width: 100%;
-						margin: 0 0 30px;
-						padding: 0;
-					}
-				}
-			}
-		}
+      ul.shop-products{
+        &.lists{
+          li.product{
+            .product-image-container,
+            .product-attr-container{
+                width: 100%;
+                margin: 0 0 30px;
+                padding: 0;
+            }
+          }
+        }
+      }
       .upsells-products,
       .related-products,
       .cross-sells {
