@@ -249,7 +249,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                                 'presets'   => array(
                                     'logo_margin_spacing' => array( 'margin-top' => '40px','margin-bottom' => '40px' ),
                                     'navigation_height' => array( 'height' => '60', 'units'  => 'px' ),
-                                    'navigation_color' => '#ffffff'
+                                    'navigation_color' => '#ffffff',
+                                    'header_sticky_background' => array( 'background-color' => '#252525' )
                                 )
                             ),
                             'layout2' => array( 
@@ -258,7 +259,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                                 'presets'   => array(
                                     'logo_margin_spacing' => array( 'margin-top' => '0px','margin-bottom' => '0px' ),
                                     'navigation_height' => array( 'height' => '120', 'units'  => 'px' ),
-                                    'navigation_color' => '#252525'
+                                    'navigation_color' => '#252525',
+                                    'header_sticky_background' => array( 'background-color' => '#ffffff' )
                                 )
                             ),
                         ),
