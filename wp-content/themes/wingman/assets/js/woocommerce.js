@@ -26,7 +26,7 @@
         init_gridlistToggle();
         init_currency();
         
-        $('.woocommerce-accordions').accordion({ 
+        $('.woocommerce-accordions').accordion({
             'heightStyle': 'content',
             'header': '.accordions-title' 
         });

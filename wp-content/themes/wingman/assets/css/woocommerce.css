@@ -556,7 +556,7 @@
 .woocommerce-page .woocommerce-error {
   background: #f4f6f9;
   border-color: #ea4f21;
-  color: #82c14f; }
+  color: red; }
 .woocommerce .woocommerce-info,
 .woocommerce .woocommerce-message,
 .woocommerce-page .woocommerce-info,
