@@ -111,6 +111,7 @@ function kt_setting_script() {
             .single-product-quickview .single-product-quickview-images .slick-arrow:hover::before, 
             .single-product-quickview .single-product-quickview-images .slick-arrow:focus::before,
             
+            .menu-bars-outer > a:hover,
             .woocommerce .widget_price_filter .price_slider_amount .button:hover, 
             .woocommerce .widget_price_filter .price_slider_amount .button:focus,
             .entry-share-box a:hover,

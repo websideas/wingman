@@ -239,11 +239,30 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'header',
                         'type'     => 'image_select',
                         'compiler' => true,
+                        'presets'  => true,
                         'title'    => __( 'Header layout', THEME_LANG ),
                         'subtitle' => __( 'Please choose header layout', THEME_LANG ),
                         'options'  => array(
-                            'layout1' => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'header/header-v1.png' ),
-                            'layout2' => array( 'alt' => __( 'Layout 2', THEME_LANG ), 'img' => FW_IMG . 'header/header-v2.png' ),
+                            'layout1' => array( 
+                                'alt' => __( 'Layout 1', THEME_LANG ), 
+                                'img' => FW_IMG . 'header/header-v1.png',
+                                'presets'   => array(
+                                    'logo_margin_spacing' => array( 'margin-top' => '40px','margin-bottom' => '40px' ),
+                                    'navigation_height' => array( 'height' => '60', 'units'  => 'px' ),
+                                    'navigation_color' => '#ffffff',
+                                    'header_sticky_background' => array( 'background-color' => '#252525' )
+                                )
+                            ),
+                            'layout2' => array( 
+                                'alt' => __( 'Layout 2', THEME_LANG ), 
+                                'img' => FW_IMG . 'header/header-v2.png',
+                                'presets'   => array(
+                                    'logo_margin_spacing' => array( 'margin-top' => '0px','margin-bottom' => '0px' ),
+                                    'navigation_height' => array( 'height' => '120', 'units'  => 'px' ),
+                                    'navigation_color' => '#252525',
+                                    'header_sticky_background' => array( 'background-color' => '#ffffff' )
+                                )
+                            ),
                         ),
                         'default'  => 'layout1'
                     ),
@@ -499,6 +518,89 @@ if ( ! class_exists( 'KT_config' ) ) {
                     ),
                 )
             );
+
+
+            $this->sections[] = array(
+                'icon'      => 'el-icon-cog',
+                'title'     => __('Color Preset', THEME_LANG),
+                'fields'    => array(
+                    array(
+                        'id'       => 'kt-presets',
+                        'type'     => 'image_select', 
+                        'presets'  => true,
+                        'title'    => __('Color Preset', THEME_LANG),
+                        'subtitle' => __('Select the color you want to use for the theme.', THEME_LANG),
+                        'default'  => 0,
+                        'options'  => array(
+                            'color_default'      => array(
+                                'alt'   => 'Default', 
+                                'img'   => FW_IMG.'preset/default.jpg', 
+                                'presets'   => array(
+                                    'color_first_loader' => '#82c14f',
+                                    'styling_accent' => '#82c14f',
+                                    'navigation_box_border' => array( 'border-color' => '#82c14f'),
+                                    'navigation_color_hover' => '#82c14f',
+                                    'dropdown_color_hover' => '#82c14f',
+                                    'mega_title_color_hover' => '#82c14f',
+                                    'mobile_sub_color_hover' => '#82c14f',
+                                    'mega_title_color_hover' => '#82c14f',
+                                    'mega_color_hover' => '#82c14f',
+                                    'mobile_title_color_hover' => '#82c14f',
+                                    'styling_link' => array(
+                                        'regular' => '#82c14f',
+                                        'hover' => '#689a3f',
+                                        'active' => '#689a3f'
+                                    ),
+                                )
+                            ),
+                            'color_pale_red'      => array(
+                                'alt'   => 'Pale Red', 
+                                'img'   => FW_IMG.'preset/pale-red.jpg', 
+                                'presets'   => array(
+                                    'color_first_loader' => '#ed727c',
+                                    'styling_accent' => '#ed727c',
+                                    'navigation_box_border' => array( 'border-color' => '#ed727c'),
+                                    'navigation_color_hover' => '#ed727c',
+                                    'dropdown_color_hover' => '#ed727c',
+                                    'mega_title_color_hover' => '#ed727c',
+                                    'mobile_sub_color_hover' => '#ed727c',
+                                    'mega_title_color_hover' => '#ed727c',
+                                    'mega_color_hover' => '#ed727c',
+                                    'mobile_title_color_hover' => '#ed727c',
+                                    'styling_link' => array(
+                                        'regular' => '#ed727c',
+                                        'hover' => '#689a3f',
+                                        'active' => '#689a3f'
+                                    ),
+                                )
+                            ),
+                            'color_purple'      => array(
+                                'alt'   => 'purple', 
+                                'img'   => FW_IMG.'preset/purple.jpg', 
+                                'presets'   => array(
+                                    'color_first_loader' => '#ec6aec',
+                                    'styling_accent' => '#ec6aec',
+                                    'navigation_box_border' => array( 'border-color' => '#ec6aec'),
+                                    'navigation_color_hover' => '#ec6aec',
+                                    'dropdown_color_hover' => '#ec6aec',
+                                    'mega_title_color_hover' => '#ec6aec',
+                                    'mobile_sub_color_hover' => '#ec6aec',
+                                    'mega_title_color_hover' => '#ec6aec',
+                                    'mega_color_hover' => '#ec6aec',
+                                    'mobile_title_color_hover' => '#ec6aec',
+                                    'styling_link' => array(
+                                        'regular' => '#ec6aec',
+                                        'hover' => '#1e73be',
+                                        'active' => '#1e73be'
+                                    ),
+                                )
+                            ),
+                        )
+                    )
+                )
+            );
+
+            
 
             /**
 			 *	Styling
@@ -1028,7 +1130,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'subtitle'          => __( 'Change height of main navigation', THEME_LANG ),
                         'width'         => false,
                         'default'        => array(
-                            'height'  => '100',
+                            'height'  => '60',
                             'units'  => 'px'
                         ),
                         'output'   => array(
