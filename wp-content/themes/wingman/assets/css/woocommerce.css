@@ -1978,7 +1978,8 @@ body .mCSB_scrollTools {
 .woocommerce-page div.product .cart .single_add_to_cart_button,
 .woocommerce div.product .cart .single_add_to_cart_button {
   letter-spacing: 0;
-  height: 40px; }
+  height: 40px;
+  margin-right: 1px; }
   .woocommerce-page div.product .cart .single_add_to_cart_button.btn,
   .woocommerce div.product .cart .single_add_to_cart_button.btn {
     margin-right: 1px;
