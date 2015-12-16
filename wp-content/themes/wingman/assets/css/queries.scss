@@ -227,6 +227,15 @@ only screen and (min-resolution: 144dpi) {
 	    }
 	  }
 	}
+
+	.themedev-product-popup.woocommerce.add-content{
+		.product-details-info,
+		.product-detail-images{
+			width: 100%;
+			padding: 30px;
+		}		
+	}
+
 }
 
 @media (max-width: 600px) {

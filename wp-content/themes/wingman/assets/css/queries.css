@@ -118,7 +118,12 @@
     border-color: #e5e5e5; }
 
   .comment-list li ul.children {
-    padding-left: 0; } }
+    padding-left: 0; }
+
+  .themedev-product-popup.woocommerce.add-content .product-details-info,
+  .themedev-product-popup.woocommerce.add-content .product-detail-images {
+    width: 100%;
+    padding: 30px; } }
 @media (max-width: 600px) {
   .woocommerce ul.shop-products.lists li.product .product-image-container,
   .woocommerce ul.shop-products.lists li.product .product-attr-container {
