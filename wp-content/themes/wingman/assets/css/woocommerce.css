@@ -571,7 +571,8 @@
   line-height: normal;
   margin: 5px 0 0;
   padding: 0;
-  border: none; }
+  border: none;
+  letter-spacing: 0; }
   .woocommerce .woocommerce-message .button.wc-forward:after,
   .woocommerce-page .woocommerce-message .button.wc-forward:after {
     font-family: "FontAwesome";
@@ -2322,7 +2323,16 @@ div.swatch-wrapper {
 .woocommerce form.checkout_coupon,
 .woocommerce form.login,
 .woocommerce form.register {
-  border-radius: 0; }
+  border-radius: 0;
+  border-color: #e5e5e5; }
+  .woocommerce form.checkout_coupon .input-text,
+  .woocommerce form.login .input-text,
+  .woocommerce form.register .input-text {
+    border-color: #e5e5e5; }
+  .woocommerce form.checkout_coupon label,
+  .woocommerce form.login label,
+  .woocommerce form.register label {
+    font-weight: normal; }
 .woocommerce #ship-to-different-address label {
   display: inline;
   margin: 0;
@@ -2356,15 +2366,11 @@ div.swatch-wrapper {
           margin: 0;
           line-height: normal;
           top: 6px; }
-    #customer_details .woocommerce-billing-fields p#account_password_field,
-    #customer_details .woocommerce-shipping-fields p#account_password_field {
-      padding: 0;
-      margin: 0; }
-      #customer_details .woocommerce-billing-fields p#account_password_field label,
-      #customer_details .woocommerce-shipping-fields p#account_password_field label {
-        text-transform: uppercase;
-        color: #252525;
-        font-weight: normal; }
+    #customer_details .woocommerce-billing-fields p#account_password_field label,
+    #customer_details .woocommerce-shipping-fields p#account_password_field label {
+      text-transform: uppercase;
+      color: #252525;
+      font-weight: normal; }
     #customer_details .woocommerce-billing-fields #ship-to-different-address-checkbox,
     #customer_details .woocommerce-shipping-fields #ship-to-different-address-checkbox {
       margin: 0; }

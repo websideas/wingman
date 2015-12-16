@@ -569,8 +569,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                                     'mobile_title_color_hover' => '#ed727c',
                                     'styling_link' => array(
                                         'regular' => '#ed727c',
-                                        'hover' => '#689a3f',
-                                        'active' => '#689a3f'
+                                        'hover' => '#e74552',
+                                        'active' => '#e74552'
                                     ),
                                 )
                             ),
@@ -590,8 +590,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                                     'mobile_title_color_hover' => '#ec6aec',
                                     'styling_link' => array(
                                         'regular' => '#ec6aec',
-                                        'hover' => '#1e73be',
-                                        'active' => '#1e73be'
+                                        'hover' => '#e63de6',
+                                        'active' => '#e63de6'
                                     ),
                                 )
                             ),

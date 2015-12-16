@@ -111,6 +111,10 @@ function kt_setting_script() {
             .single-product-quickview .single-product-quickview-images .slick-arrow:hover::before, 
             .single-product-quickview .single-product-quickview-images .slick-arrow:focus::before,
             
+            .woocommerce .woocommerce-per-page::after, 
+            .woocommerce .woocommerce-ordering::after,
+            .woocommerce .woocommerce-message .button.wc-forward:hover, 
+            .woocommerce-page .woocommerce-message .button.wc-forward:hover,
             .menu-bars-outer > a:hover,
             .woocommerce .widget_price_filter .price_slider_amount .button:hover, 
             .woocommerce .widget_price_filter .price_slider_amount .button:focus,
@@ -235,6 +239,15 @@ function kt_setting_script() {
             .menu-bars-outer .menu-bars-items,
             .mini-cart .shopping-bag-wrapper{
                 border-color: <?php echo $accent; ?>;
+            }
+
+            .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li.active span, 
+            .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:hover span, 
+            .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:focus span{
+                box-shadow: 0 0 0 1px <?php echo $accent; ?> inset;
+                -webkit-box-shadow: 0 0 0 1px <?php echo $accent; ?> inset;
+                -moz-box-shadow: 0 0 0 1px <?php echo $accent; ?> inset;
+                -ms-box-shadow: 0 0 0 1px <?php echo $accent; ?> inset;
             }
 
         <?php } ?>

@@ -513,6 +513,7 @@
       margin: 5px 0 0;
       padding: 0;
       border: none;
+      letter-spacing: 0;
       &:after{
         @include FontAwesome('\f0da');
         margin-left: 5px;
@@ -2374,6 +2375,13 @@ div.swatch-wrapper{
 	form.login,
 	form.register{
 		border-radius: 0;
+    border-color: $border-color;
+    .input-text{
+      border-color: $border-color;
+    }
+    label{
+      font-weight: normal;
+    }
 	}
 	#ship-to-different-address{
 		label{
@@ -2412,8 +2420,6 @@ div.swatch-wrapper{
 		    }        
     	}
       p#account_password_field{
-        padding: 0;
-        margin: 0;
         label{
           text-transform: uppercase;
           color:$title-text;;
