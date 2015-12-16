@@ -219,7 +219,8 @@ blockquote,
   font-family: "Josefin Slab", serif;
   line-height: 24px;
   padding: 30px 30px 23px 30px;
-  position: relative; }
+  position: relative;
+  text-align: left; }
   .post-link-outer:after,
   blockquote:after,
   .blockquote:after {
@@ -296,7 +297,8 @@ blockquote,
   z-index: 2; }
 
 .post-link-wrapper {
-  position: relative; }
+  position: relative;
+  text-align: left; }
   .post-link-wrapper .post-link-link {
     height: 100%;
     left: 0;

@@ -16,7 +16,8 @@ if ( has_nav_menu( 'primary' ) ) {
     ) );
 }else{
     printf(
-        '<ul><li><a href="#">%s</a></li></ul>',
+        '<ul id="main-navigation"><li><a href="%s">%s</a></li></ul>',
+        admin_url( 'nav-menus.php'),
         __("Define your site main menu!", THEME_LANG)
     );
 }

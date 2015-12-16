@@ -211,6 +211,7 @@ blockquote,
   line-height: 24px;
   padding: 30px 30px 23px 30px;
   position: relative;
+  text-align: left;
   &:after{
     @include FontAwesome('\f10d');
     font-size: 60px;
@@ -264,6 +265,7 @@ blockquote,
 }
 .post-link-wrapper{
   position: relative;
+  text-align: left;
   .post-link-link{
     height: 100%;
     left: 0;

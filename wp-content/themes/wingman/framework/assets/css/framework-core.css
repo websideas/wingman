@@ -22,6 +22,9 @@
 .toplevel_page_theme_options .media-sidebar .collection-settings{
     display: none;
 }
+#setting-error-tgmpa{
+    display: block;
+}
 /*==================================
 * Spinner
 ===================================*/

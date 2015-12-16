@@ -1535,7 +1535,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 				'id'			=> 'typography',
 				'title'			=> __( 'Typography', THEME_LANG ),
 				'desc'			=> '',
-				'icon_class'	=> 'icon-Font-Name',
+				'icon'	=> 'icon-Font-Name',
             );
             
             /**

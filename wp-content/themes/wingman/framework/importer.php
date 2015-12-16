@@ -16,16 +16,14 @@ if ( !function_exists( 'kt_wbc_extended_imported' ) ) {
      * @param $demo_active_import
      * @param $demo_directory_path
      */
-	function kt_wbc_extended_imported( $demo_active_import , $demo_directory_path ) {
+    function kt_wbc_extended_imported( $demo_active_import , $demo_directory_path ) {
+        reset( $demo_active_import );
+        $current_key = key( $demo_active_import );
+        /************************************************************************
+        * Import slider(s) for the current demo being imported
+        *************************************************************************/
 
-		reset( $demo_active_import );
-		$current_key = key( $demo_active_import );
-
-		/************************************************************************
-		* Import slider(s) for the current demo being imported
-		*************************************************************************/
-
-		if ( class_exists( 'RevSlider' ) ) {
+        if ( class_exists( 'RevSlider' ) ) {
 
             $wbc_sliders_array = array(
                 'demo1' => 'slider1.zip',
@@ -34,11 +32,11 @@ if ( !function_exists( 'kt_wbc_extended_imported' ) ) {
             );
             if ( isset( $demo_active_import[$current_key]['directory'] ) && !empty( $demo_active_import[$current_key]['directory'] ) && array_key_exists( $demo_active_import[$current_key]['directory'], $wbc_sliders_array ) ) {
                 $wbc_slider_import = $wbc_sliders_array[$demo_active_import[$current_key]['directory']];
-                if ( file_exists( $demo_directory_path.$wbc_slider_import ) ) {
 
-                    $revslider = THEME_DIR.'dummy-data/revslider/'.$wbc_slider_import;
+                $slider_import = THEME_DIR.'dummy-data/revslider/'.$wbc_slider_import;
+                if ( file_exists( $slider_import ) ) {
                     $slider = new RevSlider();
-                    $slider->importSliderFromPost( true, true, $demo_directory_path.$revslider );
+                    $slider->importSliderFromPost( true, true, $slider_import );
                 }
             }
 
@@ -49,11 +47,8 @@ if ( !function_exists( 'kt_wbc_extended_imported' ) ) {
          *************************************************************************/
 
         $main_menu = get_term_by( 'name', __('Main menu', THEME_LANG), 'nav_menu' );
-        $footer_menu = get_term_by( 'name', __('Footer menu', THEME_LANG), 'nav_menu' );
-
         set_theme_mod( 'nav_menu_locations', array(
-                'primary' => $main_menu->term_id,
-                'bottom'  => $footer_menu->term_id
+                'primary' => $main_menu->term_id
             )
         );
 
