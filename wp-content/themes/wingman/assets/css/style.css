@@ -2945,6 +2945,8 @@ body.opened-nav-animate {
       color: #636363;
       font-size: 18px;
       right: 10px; }
+    #search-fullwidth .searchform.search-post input[type="text"] {
+      width: 100%; }
 
 /* ==============================
    12. Blog

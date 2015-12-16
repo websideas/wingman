@@ -111,7 +111,7 @@ function kt_add_scripts() {
     wp_register_script('google-maps-api','http://maps.googleapis.com/maps/api/js?sensor=false', array( 'jquery' ), null, false);
     wp_enqueue_script( 'bootstrap-script', THEME_LIBS . 'bootstrap/js/bootstrap.min.js', array( 'jquery' ), null, true );
     wp_enqueue_script( 'plugins-script', THEME_JS . 'plugins.js', array( 'jquery' ), null, true );
-    wp_enqueue_script( 'main-script', THEME_JS . 'functions.js', array( 'jquery', 'mediaelement', 'wp-mediaelement' ), null, true );
+    wp_enqueue_script( 'main-script', THEME_JS . 'functions.js', array( 'jquery', 'mediaelement', 'wp-mediaelement', 'jquery-ui-tabs' ), null, true );
 
 
     global $wp_query;

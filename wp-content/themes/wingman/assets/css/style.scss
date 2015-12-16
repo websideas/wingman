@@ -2448,6 +2448,11 @@ body.opened-nav-animate{
       font-size: 18px;
       right: 10px;
     }
+    &.search-post{
+      input[type="text"]{
+        width: 100%;
+      }
+    }
   }
 }
 
