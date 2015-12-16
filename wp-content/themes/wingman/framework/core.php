@@ -119,15 +119,6 @@ if ( class_exists( 'RW_Meta_Box' ) ) {
  * 
  */
 
-
-
-
-if ( !class_exists( 'ReduxFramework' ) && file_exists( FW_EXT_DIR . 'ReduxCore/framework.php' ) ) {
-    require_once( FW_EXT_DIR . 'ReduxCore/framework.php' );
-}
-
-
-
 if(!function_exists('redux_register_custom_extension_loader')) :
 	function redux_register_custom_extension_loader($ReduxFramework) {
 		$path = FW_EXT_DIR . '/ReduxCoreExt/';

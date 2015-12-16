@@ -27,16 +27,18 @@ if ( !function_exists( 'kt_wbc_extended_imported' ) ) {
 
 		if ( class_exists( 'RevSlider' ) ) {
 
-			$wbc_sliders_array = array(
-                'Slide 1' => 'slide1.zip',
-                'Slide 2' => 'slide2.zip',
-			);
+            $wbc_sliders_array = array(
+                'demo1' => 'slider1.zip',
+                'demo2' => 'slider2.zip',
+                'demo3' => 'slider3.zip',
+            );
+            if ( isset( $demo_active_import[$current_key]['directory'] ) && !empty( $demo_active_import[$current_key]['directory'] ) && array_key_exists( $demo_active_import[$current_key]['directory'], $wbc_sliders_array ) ) {
+                $wbc_slider_import = $wbc_sliders_array[$demo_active_import[$current_key]['directory']];
+                if ( file_exists( $demo_directory_path.$wbc_slider_import ) ) {
 
-            foreach( $wbc_sliders_array as $k => $wbc_slider_import ){
-                $revslider = THEME_DIR.'dummy-data/revslider/'.$wbc_slider_import;
-                if ( file_exists( $revslider ) ) {
+                    $revslider = THEME_DIR.'dummy-data/revslider/'.$wbc_slider_import;
                     $slider = new RevSlider();
-                    $slider->importSliderFromPost( true, true, $revslider );
+                    $slider->importSliderFromPost( true, true, $demo_directory_path.$revslider );
                 }
             }
 
@@ -47,13 +49,11 @@ if ( !function_exists( 'kt_wbc_extended_imported' ) ) {
          *************************************************************************/
 
         $main_menu = get_term_by( 'name', __('Main menu', THEME_LANG), 'nav_menu' );
-        //$top_menu = get_term_by( 'name', __('Top menu', THEME_LANG), 'nav_menu' );
         $footer_menu = get_term_by( 'name', __('Footer menu', THEME_LANG), 'nav_menu' );
 
         set_theme_mod( 'nav_menu_locations', array(
                 'primary' => $main_menu->term_id,
-                //'top'  => $top_menu->term_id,
-                //'bottom'  => $footer_menu->term_id
+                'bottom'  => $footer_menu->term_id
             )
         );
 
@@ -63,9 +63,9 @@ if ( !function_exists( 'kt_wbc_extended_imported' ) ) {
 
         // array of demos/homepages to check/select from
         $wbc_home_pages = array(
-            'demo1' => 'Homepage 1',
-            'demo2' => 'Homepage 2',
-            'demo3' => 'Homepage 3',
+            'demo1' => 'Home',
+            'demo2' => 'Home',
+            'demo3' => 'Home',
         );
 
         if ( isset( $demo_active_import[$current_key]['directory'] ) && !empty( $demo_active_import[$current_key]['directory'] ) && array_key_exists( $demo_active_import[$current_key]['directory'], $wbc_home_pages ) ) {

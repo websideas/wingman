@@ -60,6 +60,11 @@ function kt_register_plugins() {
             'external_url'      => '', // If set, overrides default API URL and points to an external URL
         ),
         array(
+            'name' => 'Redux - Options framework',
+            'slug' => 'redux-framework',
+            'required' => true,
+        ),
+        array(
             'name' => 'WooCommerce - excelling eCommerce',
             'slug' => 'woocommerce',
             'required' => true,
@@ -106,7 +111,7 @@ function kt_register_plugins() {
         'capability'            => 'manage_options',
         'menu'          => 'install-required-plugins', // Menu slug
         'has_notices'       => true, // Show admin notices or not
-        'is_automatic'      => false, // Automatically activate plugins after installation or not
+        'is_automatic'      => true, // Automatically activate plugins after installation or not
     );
     tgmpa( $plugins, $config );
 }
