@@ -4772,12 +4772,19 @@ article.post-item.post-layout-classic {
   background-image: -ms-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  -webkit-background-size: 40px;
-  -khtml-background-size: 40px;
-  -moz-background-size: 40px;
-  -ms-background-size: 40px;
-  -o-background-size: 40px;
-  background-size: 40px; }
+  -webkit-background-size: 40px 40px;
+  -khtml-background-size: 40px 40px;
+  -moz-background-size: 40px 40px;
+  -ms-background-size: 40px 40px;
+  -o-background-size: 40px 40px;
+  background-size: 40px 40px; }
+.kt-skill-bar.animated span {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+  -khtml-animation: progress-bar-stripes 2s linear infinite;
+  -moz-animation: progress-bar-stripes 2s linear infinite;
+  -ms-animation: progress-bar-stripes 2s linear infinite;
+  -o-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite; }
 
 .kt-skill-text {
   position: relative;

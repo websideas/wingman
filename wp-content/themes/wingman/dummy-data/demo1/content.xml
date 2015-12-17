@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.4" created="2015-12-16 13:38" -->
+<!-- generator="WordPress/4.4" created="2015-12-17 09:49" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Wingman</title>
 	<link>http://wingman.kitethemes.com</link>
 	<description>Responsive WooCommerce Theme</description>
-	<pubDate>Wed, 16 Dec 2015 13:38:36 +0000</pubDate>
+	<pubDate>Thu, 17 Dec 2015 09:49:56 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://wingman.kitethemes.com</wp:base_site_url>
@@ -12718,213 +12718,6 @@ Thanks so much for sharing.]]></content:encoded>
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Homepage 2</title>
-		<link>http://wingman.kitethemes.com/homepage-2/</link>
-		<pubDate>Wed, 25 Nov 2015 03:37:13 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/?page_id=206</guid>
-		<description></description>
-		<content:encoded><![CDATA[[vc_row css=".vc_custom_1448555696520{margin-bottom: 0px !important;}"][vc_column width="1/2"][vc_single_image image="244" img_size="full" alignment="center" style="creative-left" onclick="custom_link" link="#"][kt_heading text="woMen’s" layout="2" letter_spacing="0" font_container="tag:h2"]Summer COLLECTION’s 2015[/kt_heading][/vc_column][vc_column width="1/2"][kt_heading text="Men’S" layout="2" letter_spacing="0" font_container="tag:h2" css=".vc_custom_1448680643337{margin-top: 145px !important;}"]Clothing collection’s[/kt_heading][vc_single_image image="245" img_size="full" alignment="center" style="creative-right" onclick="custom_link" link="#"][/vc_column][/vc_row][vc_row full_width="stretch_row" css=".vc_custom_1448555469774{padding-top: 80px !important;padding-bottom: 80px !important;background-color: #f4f6f9 !important;}"][vc_column][products_carousel_tab per_page="6"][/vc_column][/vc_row][vc_row css=".vc_custom_1449116117149{margin-top: 100px !important;margin-bottom: 100px !important;}"][vc_column width="2/3"][vc_empty_space height="100px" visibility="hidden-sm"][kt_heading text="Long-sleeved T-shirt" align="left" layout="2" letter_spacing="5" font_container="tag:h2|font_size:36|line_height:50px" css=".vc_custom_1449116178096{margin-bottom: 40px !important;}"]Sale Minimum 50% Discount Or Up To 80% Off On A Big Range Of Clothing.[/kt_heading][comingsoon style_coming="style2" css=".vc_custom_1449116503525{margin-bottom: 50px !important;}"][vc_btn title="SHOP ALL" style="outline" shape="square" color="black" align="left" letter_spacing="0" i_type="typicons" i_icon_typicons="typcn typcn-anchor-outline" link="url:%23||" css=".vc_custom_1449116497599{margin-bottom: 50px !important;}"][/vc_column][vc_column width="1/3"][vc_single_image image="248" img_size="full" alignment="center" style="border-box" onclick="custom_link" link="#"][/vc_column][/vc_row][vc_row full_width="stretch_row" css=".vc_custom_1448856079621{margin-bottom: 0px !important;padding-top: 90px !important;padding-bottom: 70px !important;background-color: #f4f6f9 !important;}"][vc_column][kt_heading text="BEST SELLERS" letter_spacing="0" font_container="tag:h2|font_size:36" height="2"][/kt_heading][category_products_tab per_page="4" show="all" categories="22,16,17,18"][/vc_column][/vc_row][vc_row css=".vc_custom_1449548009421{margin-bottom: 0px !important;}"][vc_column width="1/3"][icon_box title="OPENING ALL WEEK " icon_box_layout="2" icon_type="image" letter_spacing="3" font_container="tag:h4|font_size:14px" css=".vc_custom_1449547999118{margin-top: 30px !important;margin-bottom: 30px !important;}" iconbox_image="236"]8AM - 10PM[/icon_box][/vc_column][vc_column width="1/3" css=".vc_custom_1449547908907{border-right-width: 1px !important;border-left-width: 1px !important;border-left-color: #e7e7e7 !important;border-left-style: solid !important;border-right-color: #e7e7e7 !important;border-right-style: solid !important;}"][icon_box title="25% OFF WOMEN T-SHIRT" icon_box_layout="2" icon_type="image" letter_spacing="3" font_container="tag:h4|font_size:14px" css=".vc_custom_1449548033368{margin-top: 30px !important;margin-bottom: 30px !important;}" iconbox_image="238"]On or der over 500 USD[/icon_box][/vc_column][vc_column width="1/3"][icon_box title="free ship all order" icon_box_layout="2" icon_type="image" letter_spacing="0" font_container="tag:h4|font_size:14px" css=".vc_custom_1449548633163{margin-top: 30px !important;margin-bottom: 30px !important;}" iconbox_image="237"]Worldwide Shipping[/icon_box][/vc_column][/vc_row][vc_row css=".vc_custom_1448438223542{margin-bottom: 80px !important;}"][vc_column][vc_separator color="custom" accent_color="#e5e5e5"][/vc_column][/vc_row][vc_row][vc_column][kt_heading text="Lastest blogs" letter_spacing="0" font_container="tag:h2" height="2" css=".vc_custom_1448848980696{margin-bottom: 80px !important;}"][/kt_heading][list_blog_posts blog_type="zigzag" readmore="link" thumbnail_type="image" excerpt_length="20" blog_pagination="none" max_items="3" image_size="recent_posts_list"][/vc_column][/vc_row][vc_row css=".vc_custom_1448468664710{margin-bottom: 70px !important;}"][vc_column][vc_separator color="custom" accent_color="#e5e5e5"][/vc_column][/vc_row][vc_row css=".vc_custom_1448468578350{margin-bottom: 60px !important;}"][vc_column][clients_carousel source="" mousedrag="false" autoplay="true" tablet="4" navigation_style="square_border" pagination="false" border_radius="0" img_size="full" navigation_color="#d6d6d6"][/vc_column][/vc_row][vc_row css=".vc_custom_1448468558247{margin-bottom: 60px !important;}"][vc_column][vc_separator color="custom" accent_color="#e5e5e5"][/vc_column][/vc_row][vc_row css=".vc_custom_1448468611414{margin-bottom: 0px !important;}"][vc_column][testimonial_carousel source="" max_items="10" navigation_always_on="true" navigation_icon="fa fa-long-arrow-left|fa fa-long-arrow-right" pagination="false" letter_spacing="0" letter_spacing_company="0"][/vc_column][/vc_row]]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>206</wp:post_id>
-		<wp:post_date><![CDATA[2015-11-25 03:37:13]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-11-25 03:37:13]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[homepage-2]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[page]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[true]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_show_breadcrumb]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header_separator]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header_bg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[transparent]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_scheme]]></wp:meta_key>
-			<wp:meta_value><![CDATA[light]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_body_background]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_boxed_background]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_shortcodes_custom_css]]></wp:meta_key>
-			<wp:meta_value><![CDATA[.vc_custom_1448555696520{margin-bottom: 0px !important;}.vc_custom_1448555469774{padding-top: 80px !important;padding-bottom: 80px !important;background-color: #f4f6f9 !important;}.vc_custom_1449116117149{margin-top: 100px !important;margin-bottom: 100px !important;}.vc_custom_1448856079621{margin-bottom: 0px !important;padding-top: 90px !important;padding-bottom: 70px !important;background-color: #f4f6f9 !important;}.vc_custom_1449548009421{margin-bottom: 0px !important;}.vc_custom_1448438223542{margin-bottom: 80px !important;}.vc_custom_1448468664710{margin-bottom: 70px !important;}.vc_custom_1448468578350{margin-bottom: 60px !important;}.vc_custom_1448468558247{margin-bottom: 60px !important;}.vc_custom_1448468611414{margin-bottom: 0px !important;}.vc_custom_1448680643337{margin-top: 145px !important;}.vc_custom_1449116178096{margin-bottom: 40px !important;}.vc_custom_1449116503525{margin-bottom: 50px !important;}.vc_custom_1449116497599{margin-bottom: 50px !important;}.vc_custom_1449547908907{border-right-width: 1px !important;border-left-width: 1px !important;border-left-color: #e7e7e7 !important;border-left-style: solid !important;border-right-color: #e7e7e7 !important;border-right-style: solid !important;}.vc_custom_1449547999118{margin-top: 30px !important;margin-bottom: 30px !important;}.vc_custom_1449548033368{margin-top: 30px !important;margin-bottom: 30px !important;}.vc_custom_1449548633163{margin-top: 30px !important;margin-bottom: 30px !important;}.vc_custom_1448848980696{margin-bottom: 80px !important;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_slideshow_source]]></wp:meta_key>
-			<wp:meta_value><![CDATA[revslider]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_rev_slider]]></wp:meta_key>
-			<wp:meta_value><![CDATA[slider1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_top_spacing]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Homepage 3</title>
-		<link>http://wingman.kitethemes.com/homepage-3/</link>
-		<pubDate>Wed, 25 Nov 2015 03:37:27 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/?page_id=207</guid>
-		<description></description>
-		<content:encoded><![CDATA[[vc_row css=".vc_custom_1449125839217{margin-top: 40px !important;margin-bottom: 55px !important;}"][vc_column width="1/2"][vc_empty_space height="40px" visibility="hidden-xs"][kt_heading text="MAKE-UP" align="left" layout="2" letter_spacing="7" font_container="tag:h2|font_size:36px" css=".vc_custom_1449125508537{margin-bottom: 45px !important;}"]Cosmetic Products[/kt_heading][vc_single_image image="269" img_size="full" alignment="center" style="creative-hover" onclick="link_image" css=".vc_custom_1449125705134{margin-bottom: 45px !important;}"][vc_empty_space height="92px" visibility="hidden-xs"][vc_single_image image="271" img_size="full" alignment="center" style="creative-hover" onclick="img_link_large" css=".vc_custom_1449125712039{margin-bottom: 45px !important;}"][/vc_column][vc_column width="5/12" offset="vc_col-sm-offset-1"][vc_single_image image="270" img_size="full" style="creative-hover" css=".vc_custom_1449126236138{margin-bottom: 45px !important;}"][vc_empty_space height="80px" visibility="hidden-xs"][vc_single_image image="272" img_size="full" style="creative-hover" css=".vc_custom_1449126244078{margin-bottom: 40px !important;}"][kt_heading text="Jason Pietra" align="left" layout="2" letter_spacing="7" font_container="tag:h2|font_size:36"]Spring collection[/kt_heading][/vc_column][/vc_row][vc_row full_width="stretch_row_content" css=".vc_custom_1448701483286{margin-bottom: 0px !important;padding-top: 100px !important;padding-bottom: 100px !important;background-color: #f4f6f9 !important;}"][vc_column][products_carousel_tab per_page="8" product_columns="6"][/vc_column][/vc_row][vc_row full_width="stretch_row" css=".vc_custom_1448698782529{margin-bottom: 85px !important;padding-top: 100px !important;padding-bottom: 90px !important;background: #040404 url(http://wingman.kitethemes.com/wp-content/uploads/2015/11/bg-01.png?id=274) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}"][vc_column][vc_row_inner css=".vc_custom_1449129143251{margin-bottom: 0px !important;padding-top: 65px !important;padding-bottom: 130px !important;background: #ffffff url(http://wingman.kitethemes.com/wp-content/uploads/2015/11/bg-deal.png?id=273) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}"][vc_column_inner][kt_heading text="DEAL OF WEEK" layout="2" letter_spacing="5" font_container="tag:h2|font_size:36px|line_height:60px" css=".vc_custom_1448698629876{margin-bottom: 40px !important;}"]
-<p style="text-align: center; margin-bottom: 20px;">Sale Minimum 50% Discount Or Up To 80% Off On A Big Range Of Costemics</p>
-<p style="margin: 0;"><img src="http://wingman.kitethemes.com/wp-content/uploads/2015/11/divider.png" alt="divider" /></p>
-[/kt_heading][comingsoon style_coming="style3" css=".vc_custom_1448698394321{margin-bottom: 60px !important;}"][vc_btn title="SHOP NOW!" style="outline" shape="square" color="black" align="center" letter_spacing="0" link="url:%23||"][/vc_column_inner][/vc_row_inner][testimonial_carousel layout="2" skin="light" source="" max_items="10" letter_spacing="0" letter_spacing_company="0" css=".vc_custom_1448697325497{margin-top: -35px !important;}"][/vc_column][/vc_row][vc_row css=".vc_custom_1448850234708{margin-bottom: 60px !important;}"][vc_column][kt_heading text="Lastest blogs" letter_spacing="0" font_container="tag:h2" css=".vc_custom_1448698833294{margin-bottom: 40px !important;}"][/kt_heading][list_blog_posts blog_type="grid" blog_align="center" readmore="link" excerpt_length="20" blog_pagination="none" max_items="3" image_size="recent_posts"][vc_btn title="SHOW ALL" style="outline" shape="square" color="black" align="center" letter_spacing="0" link="url:%23||"][/vc_column][/vc_row][vc_row css=".vc_custom_1448850315023{margin-bottom: 55px !important;}"][vc_column][vc_separator el_width="40"][/vc_column][/vc_row][vc_row css=".vc_custom_1448850376148{margin-bottom: 0px !important;}"][vc_column][clients_carousel source="" navigation_style="square_border" pagination="false" border_radius="0" img_size="thumbnail"][/vc_column][/vc_row]]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>207</wp:post_id>
-		<wp:post_date><![CDATA[2015-11-25 03:37:27]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-11-25 03:37:27]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[homepage-3]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[page]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[true]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_show_breadcrumb]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header_separator]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header_bg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[below]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_scheme]]></wp:meta_key>
-			<wp:meta_value><![CDATA[light]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_body_background]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_boxed_background]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_slideshow_source]]></wp:meta_key>
-			<wp:meta_value><![CDATA[revslider]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_rev_slider]]></wp:meta_key>
-			<wp:meta_value><![CDATA[notgeneric1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_shortcodes_custom_css]]></wp:meta_key>
-			<wp:meta_value><![CDATA[.vc_custom_1449125839217{margin-top: 40px !important;margin-bottom: 55px !important;}.vc_custom_1448701483286{margin-bottom: 0px !important;padding-top: 100px !important;padding-bottom: 100px !important;background-color: #f4f6f9 !important;}.vc_custom_1448698782529{margin-bottom: 85px !important;padding-top: 100px !important;padding-bottom: 90px !important;background: #040404 url(http://wingman.kitethemes.com/wp-content/uploads/2015/11/bg-01.png?id=274) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1448850234708{margin-bottom: 60px !important;}.vc_custom_1448850315023{margin-bottom: 55px !important;}.vc_custom_1448850376148{margin-bottom: 0px !important;}.vc_custom_1449125508537{margin-bottom: 45px !important;}.vc_custom_1449125705134{margin-bottom: 45px !important;}.vc_custom_1449125712039{margin-bottom: 45px !important;}.vc_custom_1449126236138{margin-bottom: 45px !important;}.vc_custom_1449126244078{margin-bottom: 40px !important;}.vc_custom_1449129143251{margin-bottom: 0px !important;padding-top: 65px !important;padding-bottom: 130px !important;background: #ffffff url(http://wingman.kitethemes.com/wp-content/uploads/2015/11/bg-deal.png?id=273) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1448697325497{margin-top: -35px !important;}.vc_custom_1448698629876{margin-bottom: 40px !important;}.vc_custom_1448698394321{margin-bottom: 60px !important;}.vc_custom_1448698833294{margin-bottom: 40px !important;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_bottom_spacing]]></wp:meta_key>
-			<wp:meta_value><![CDATA[80px]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
 		<title>All Categories</title>
 		<link>http://wingman.kitethemes.com/all-categories/</link>
 		<pubDate>Mon, 30 Nov 2015 04:10:12 +0000</pubDate>
@@ -13020,6 +12813,173 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_page_top_spacing]]></wp:meta_key>
 			<wp:meta_value><![CDATA[100px]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Blog zig zag</title>
+		<link>http://wingman.kitethemes.com/blog-zig-zag/</link>
+		<pubDate>Wed, 02 Dec 2015 06:19:43 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/?page_id=307</guid>
+		<description></description>
+		<content:encoded><![CDATA[[vc_row][vc_column][list_blog_posts blog_type="zigzag" readmore="link" excerpt_length="20" max_items="6" image_size="recent_posts_list"][/vc_column][/vc_row]]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>307</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-02 06:19:43]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-02 06:19:43]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[blog-zig-zag]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
+			<wp:meta_value><![CDATA[true]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_show_breadcrumb]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header_separator]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header_bg]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_scheme]]></wp:meta_key>
+			<wp:meta_value><![CDATA[light]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_layout]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_body_background]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_boxed_background]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>About Us</title>
+		<link>http://wingman.kitethemes.com/about-us/</link>
+		<pubDate>Thu, 03 Dec 2015 08:38:45 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/?page_id=313</guid>
+		<description></description>
+		<content:encoded><![CDATA[[vc_row css=".vc_custom_1449133981249{margin-bottom: 55px !important;}"][vc_column][vc_single_image image="315" img_size="full" alignment="center" style="creative-hover" css=".vc_custom_1449133004938{margin-bottom: 65px !important;}"][vc_custom_heading text="Our Story" font_container="tag:h2|font_size:24px|text_align:center|color:%23252525" use_theme_fonts="yes" css=".vc_custom_1448873832149{margin-bottom: 25px !important;}"][vc_column_text css=".vc_custom_1448874022800{margin-bottom: 55px !important;}"]
+<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<p style="text-align: center;"><a class="readmore-link" href="#">Read more</a></p>
+[/vc_column_text][socials social="facebook,twitter,pinterest,dribbble,vimeo" style="custom" align="center" space_between_item="12" custom_color="#b2b2b2"][/vc_column][/vc_row][vc_row css=".vc_custom_1449134000467{margin-bottom: 55px !important;}"][vc_column][vc_separator css=".vc_custom_1449134006481{margin-bottom: 0px !important;}"][/vc_column][/vc_row][vc_row][vc_column][kt_heading text="our skills" letter_spacing="0" font_container="tag:h2|font_size:36px|color:%23252525" css=".vc_custom_1449134026431{margin-bottom: 45px !important;}"][/kt_heading][vc_row_inner][vc_column_inner width="1/4" offset="vc_col-lg-offset-2 vc_col-md-offset-2 vc_col-sm-offset-2"][skill options="animated" height="3" css=".vc_custom_1449134149179{margin-bottom: 30px !important;}"][skill_item title="PHOTOSHOP" percent="88" font_container="font_size:14px|color:%23252525"][skill_item title="HTML5 &amp; CSS3" percent="80" font_container="font_size:14px|color:%23252525"][skill_item title="WORDPRESS" percent="90" font_container="font_size:14px|color:%23252525"][skill_item title="JOOMLA" percent="70" font_container="font_size:14px|color:%23252525"][/skill][/vc_column_inner][vc_column_inner width="1/4" offset="vc_col-lg-offset-2 vc_col-md-offset-2 vc_col-sm-offset-2"][skill height="3" css=".vc_custom_1449134269252{margin-bottom: 30px !important;}"][skill_item title="MagenTo" percent="88" font_container="font_size:14px|color:%23252525"][skill_item title="prestashop" percent="80" font_container="font_size:14px|color:%23252525"][skill_item title="open cart" percent="70" font_container="font_size:14px|color:%23252525"][skill_item title="drupal" percent="90" font_container="font_size:14px|color:%23252525"][/skill][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row css=".vc_custom_1449134000467{margin-bottom: 55px !important;}"][vc_column][vc_separator css=".vc_custom_1449134076674{margin-bottom: 0px !important;}"][/vc_column][/vc_row][vc_row css=".vc_custom_1449548927576{margin-bottom: 0px !important;}"][vc_column][kt_heading text="our Team" letter_spacing="0" font_container="tag:h2|font_size:36px|color:%23252525" css=".vc_custom_1448877373459{margin-bottom: 45px !important;}"][/kt_heading][vc_row_inner][vc_column_inner width="1/3"][team name="Thang Phung" image="316" agency="Director" facebook_link="#" twitter_link="#" dribbble_link="#" linkedin_link="#" css=".vc_custom_1449548866296{margin-bottom: 30px !important;}"][/vc_column_inner][vc_column_inner width="1/3"][team name="Robert Pineda" image="317" agency="Sales Executive" facebook_link="#" twitter_link="#" dribbble_link="#" css=".vc_custom_1449548873043{margin-bottom: 30px !important;}"][/vc_column_inner][vc_column_inner width="1/3"][team name="Wingmen" image="318" agency="Coder" facebook_link="#" dribbble_link="#" css=".vc_custom_1449548878489{margin-bottom: 30px !important;}"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row]]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>313</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-03 08:38:45]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-03 08:38:45]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[about-us]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
+			<wp:meta_value><![CDATA[true]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_show_breadcrumb]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header_separator]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header_bg]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_scheme]]></wp:meta_key>
+			<wp:meta_value><![CDATA[light]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wpb_shortcodes_custom_css]]></wp:meta_key>
+			<wp:meta_value><![CDATA[.vc_custom_1449133981249{margin-bottom: 55px !important;}.vc_custom_1449134000467{margin-bottom: 55px !important;}.vc_custom_1449134000467{margin-bottom: 55px !important;}.vc_custom_1449548927576{margin-bottom: 0px !important;}.vc_custom_1449133004938{margin-bottom: 65px !important;}.vc_custom_1448873832149{margin-bottom: 25px !important;}.vc_custom_1448874022800{margin-bottom: 55px !important;}.vc_custom_1449134006481{margin-bottom: 0px !important;}.vc_custom_1449134026431{margin-bottom: 45px !important;}.vc_custom_1449134149179{margin-bottom: 30px !important;}.vc_custom_1449134269252{margin-bottom: 30px !important;}.vc_custom_1449134076674{margin-bottom: 0px !important;}.vc_custom_1448877373459{margin-bottom: 45px !important;}.vc_custom_1449548866296{margin-bottom: 30px !important;}.vc_custom_1449548873043{margin-bottom: 30px !important;}.vc_custom_1449548878489{margin-bottom: 30px !important;}]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -15128,6 +15088,570 @@ I'm ordering mine next week]]></wp:comment_content>
 		</wp:comment>
 	</item>
 	<item>
+		<title>Wool Fedora Hat</title>
+		<link>http://wingman.kitethemes.com/product/wool-fedora-hat-4/</link>
+		<pubDate>Fri, 07 Jun 2013 11:02:31 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://demo2.woothemes.com/woocommerce/?post_type=product&#038;p=47</guid>
+		<description></description>
+		<content:encoded><![CDATA[Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.]]></excerpt:encoded>
+		<wp:post_id>47</wp:post_id>
+		<wp:post_date><![CDATA[2013-06-07 11:02:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2013-06-07 11:02:31]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[wool-fedora-hat-4]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[product]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="product_cat" nicename="hats"><![CDATA[Hats]]></category>
+		<category domain="product_type" nicename="simple"><![CDATA[simple]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_visibility]]></wp:meta_key>
+			<wp:meta_value><![CDATA[visible]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_stock_status]]></wp:meta_key>
+			<wp:meta_value><![CDATA[instock]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[total_sales]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_downloadable]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_virtual]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_product_image_gallery]]></wp:meta_key>
+			<wp:meta_value><![CDATA[338]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_regular_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[35]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sale_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_tax_status]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_tax_class]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_purchase_note]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_featured]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_weight]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_length]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_width]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_height]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sku]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_product_attributes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sale_price_dates_from]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sale_price_dates_to]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[35]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sold_individually]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_stock]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_backorders]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_manage_stock]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_crosssell_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;i:34;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[330]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
+			<wp:meta_value><![CDATA[woo-ninja-2]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_swatch_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_upsell_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_product_version]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2.4.10]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_show_breadcrumb]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header_separator]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header_bg]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_scheme]]></wp:meta_key>
+			<wp:meta_value><![CDATA[light]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:comment>
+			<wp:comment_id>14</wp:comment_id>
+			<wp:comment_author><![CDATA[Cobus Bester]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[bester.c@gmail.com]]></wp:comment_author_email>
+			<wp:comment_author_url></wp:comment_author_url>
+			<wp:comment_author_IP><![CDATA[196.215.9.147]]></wp:comment_author_IP>
+			<wp:comment_date><![CDATA[2013-06-07 11:57:59]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2013-06-07 11:57:59]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[This hoodie is great for those chilly winter days. I love the WooNinja!]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_error]]></wp:meta_key>
+				<wp:meta_value><![CDATA[1370606279]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370606279.836287975311279296875;s:7:"message";s:92:"Akismet was unable to check this comment (response: ), will automatically retry again later.";s:5:"event";s:11:"check-error";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_as_submitted]]></wp:meta_key>
+				<wp:meta_value><![CDATA[a:67:{s:15:"comment_post_ID";i:47;s:14:"comment_author";s:12:"Cobus Bester";s:20:"comment_author_email";s:18:"bester.c@gmail.com";s:18:"comment_author_url";N;s:15:"comment_content";s:71:"This hoodie is great for those chilly winter days. I love the WooNinja!";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:13:"196.215.9.147";s:10:"user_agent";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31";s:8:"referrer";s:59:"http://demo2.woothemes.com/woocommerce/product/woo-ninja-2/";s:4:"blog";s:38:"http://demo2.woothemes.com/woocommerce";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:59:"http://demo2.woothemes.com/woocommerce/product/woo-ninja-2/";s:21:"akismet_comment_nonce";s:6:"passed";s:11:"POST_author";s:12:"Cobus Bester";s:10:"POST_email";s:18:"bester.c@gmail.com";s:11:"POST_rating";s:1:"5";s:12:"POST_comment";s:71:"This hoodie is great for those chilly winter days. I love the WooNinja!";s:7:"POST__n";s:10:"a80bd2f042";s:21:"POST__wp_http_referer";s:33:"/woocommerce/product/woo-ninja-2/";s:11:"POST_submit";s:13:"Submit Review";s:20:"POST_comment_post_ID";s:2:"47";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"38d66a284b";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:33:"/woocommerce/wp-comments-post.php";s:15:"REDIRECT_IS_WPE";s:1:"1";s:27:"REDIRECT_WPE_CAN_WRITE_DISK";s:1:"0";s:15:"REDIRECT_STATUS";s:3:"200";s:6:"IS_WPE";s:1:"1";s:18:"WPE_CAN_WRITE_DISK";s:1:"0";s:9:"HTTP_HOST";s:19:"demo2.woothemes.com";s:13:"HTTP_X_LB_KEY";s:8:"woodemo2";s:13:"HTTP_X_IS_BOT";s:1:"0";s:15:"HTTP_USER_AGENT";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31";s:15:"HTTP_CONNECTION";s:5:"close";s:14:"CONTENT_LENGTH";s:3:"300";s:18:"HTTP_CACHE_CONTROL";s:9:"max-age=0";s:11:"HTTP_ACCEPT";s:63:"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";s:11:"HTTP_ORIGIN";s:26:"http://demo2.woothemes.com";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:12:"HTTP_REFERER";s:59:"http://demo2.woothemes.com/woocommerce/product/woo-ninja-2/";s:20:"HTTP_ACCEPT_ENCODING";s:17:"gzip,deflate,sdch";s:20:"HTTP_ACCEPT_LANGUAGE";s:14:"en-US,en;q=0.8";s:19:"HTTP_ACCEPT_CHARSET";s:30:"ISO-8859-1,utf-8;q=0.7,*;q=0.3";s:11:"HTTP_COOKIE";s:0:"";s:4:"PATH";s:28:"/usr/local/bin:/usr/bin:/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:19:"demo2.woothemes.com";s:11:"SERVER_ADDR";s:9:"127.0.0.1";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:13:"196.215.9.147";s:13:"DOCUMENT_ROOT";s:26:"/nas/wp/www/sites/woodemo2";s:12:"SERVER_ADMIN";s:18:"[no address given]";s:15:"SCRIPT_FILENAME";s:47:"/nas/wp/www/sites/woodemo2/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"58209";s:12:"REDIRECT_URL";s:33:"/woocommerce/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.0";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1370606279";s:25:"comment_post_modified_gmt";s:19:"2013-06-07 11:18:45";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[rating]]></wp:meta_key>
+				<wp:meta_value><![CDATA[5]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370607944.7811119556427001953125;s:7:"message";s:46:"wooteam changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"wooteam";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>15</wp:comment_id>
+			<wp:comment_author><![CDATA[Maria]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[maria@woothemes.com]]></wp:comment_author_email>
+			<wp:comment_author_url></wp:comment_author_url>
+			<wp:comment_author_IP><![CDATA[24.225.103.32]]></wp:comment_author_IP>
+			<wp:comment_date><![CDATA[2013-06-07 15:53:13]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2013-06-07 15:53:13]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Perfect for the lady Ninja in your life!]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_error]]></wp:meta_key>
+				<wp:meta_value><![CDATA[1370620393]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370620393.6741259098052978515625;s:7:"message";s:92:"Akismet was unable to check this comment (response: ), will automatically retry again later.";s:5:"event";s:11:"check-error";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_as_submitted]]></wp:meta_key>
+				<wp:meta_value><![CDATA[a:66:{s:15:"comment_post_ID";i:47;s:14:"comment_author";s:5:"Maria";s:20:"comment_author_email";s:19:"maria@woothemes.com";s:18:"comment_author_url";N;s:15:"comment_content";s:40:"Perfect for the lady Ninja in your life!";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:13:"24.225.103.32";s:10:"user_agent";s:120:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36";s:8:"referrer";s:59:"http://demo2.woothemes.com/woocommerce/product/woo-ninja-2/";s:4:"blog";s:38:"http://demo2.woothemes.com/woocommerce";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:59:"http://demo2.woothemes.com/woocommerce/product/woo-ninja-2/";s:21:"akismet_comment_nonce";s:6:"passed";s:11:"POST_author";s:5:"Maria";s:10:"POST_email";s:19:"maria@woothemes.com";s:11:"POST_rating";s:1:"4";s:12:"POST_comment";s:40:"Perfect for the lady Ninja in your life!";s:7:"POST__n";s:10:"2145d644a3";s:21:"POST__wp_http_referer";s:33:"/woocommerce/product/woo-ninja-2/";s:11:"POST_submit";s:13:"Submit Review";s:20:"POST_comment_post_ID";s:2:"47";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"ade950552e";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:33:"/woocommerce/wp-comments-post.php";s:15:"REDIRECT_IS_WPE";s:1:"1";s:27:"REDIRECT_WPE_CAN_WRITE_DISK";s:1:"0";s:15:"REDIRECT_STATUS";s:3:"200";s:6:"IS_WPE";s:1:"1";s:18:"WPE_CAN_WRITE_DISK";s:1:"0";s:9:"HTTP_HOST";s:19:"demo2.woothemes.com";s:13:"HTTP_X_LB_KEY";s:8:"woodemo2";s:13:"HTTP_X_IS_BOT";s:1:"0";s:15:"HTTP_USER_AGENT";s:120:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36";s:15:"HTTP_CONNECTION";s:5:"close";s:14:"CONTENT_LENGTH";s:3:"263";s:18:"HTTP_CACHE_CONTROL";s:9:"max-age=0";s:11:"HTTP_ACCEPT";s:63:"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";s:11:"HTTP_ORIGIN";s:26:"http://demo2.woothemes.com";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:12:"HTTP_REFERER";s:59:"http://demo2.woothemes.com/woocommerce/product/woo-ninja-2/";s:20:"HTTP_ACCEPT_ENCODING";s:17:"gzip,deflate,sdch";s:20:"HTTP_ACCEPT_LANGUAGE";s:14:"en-US,en;q=0.8";s:11:"HTTP_COOKIE";s:0:"";s:4:"PATH";s:28:"/usr/local/bin:/usr/bin:/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:19:"demo2.woothemes.com";s:11:"SERVER_ADDR";s:9:"127.0.0.1";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:13:"24.225.103.32";s:13:"DOCUMENT_ROOT";s:26:"/nas/wp/www/sites/woodemo2";s:12:"SERVER_ADMIN";s:18:"[no address given]";s:15:"SCRIPT_FILENAME";s:47:"/nas/wp/www/sites/woodemo2/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"26829";s:12:"REDIRECT_URL";s:33:"/woocommerce/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.0";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1370620393";s:25:"comment_post_modified_gmt";s:19:"2013-06-07 11:18:45";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[rating]]></wp:meta_key>
+				<wp:meta_value><![CDATA[4]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370620633.94254302978515625;s:7:"message";s:46:"wooteam changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"wooteam";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
+	</item>
+	<item>
+		<title>Weekend Hat</title>
+		<link>http://wingman.kitethemes.com/product/weekend-hat/</link>
+		<pubDate>Fri, 07 Jun 2013 11:03:56 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://demo2.woothemes.com/woocommerce/?post_type=product&#038;p=50</guid>
+		<description></description>
+		<content:encoded><![CDATA[Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.]]></excerpt:encoded>
+		<wp:post_id>50</wp:post_id>
+		<wp:post_date><![CDATA[2013-06-07 11:03:56]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2013-06-07 11:03:56]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[weekend-hat]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[product]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="product_cat" nicename="hats"><![CDATA[Hats]]></category>
+		<category domain="product_type" nicename="simple"><![CDATA[simple]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_visibility]]></wp:meta_key>
+			<wp:meta_value><![CDATA[visible]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_stock_status]]></wp:meta_key>
+			<wp:meta_value><![CDATA[instock]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[total_sales]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_downloadable]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_virtual]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_product_image_gallery]]></wp:meta_key>
+			<wp:meta_value><![CDATA[330]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_regular_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[35]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sale_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_tax_status]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_tax_class]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_purchase_note]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_featured]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_weight]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_length]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_width]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_height]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sku]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_product_attributes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sale_price_dates_from]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sale_price_dates_to]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[35]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sold_individually]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_stock]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_backorders]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_manage_stock]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_crosssell_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;i:53;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[340]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
+			<wp:meta_value><![CDATA[patient-ninja]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_swatch_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_upsell_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_product_version]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2.4.10]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_show_breadcrumb]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header_separator]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header_bg]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_scheme]]></wp:meta_key>
+			<wp:meta_value><![CDATA[light]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:comment>
+			<wp:comment_id>16</wp:comment_id>
+			<wp:comment_author><![CDATA[James Koster]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[james@jameskoster.co.uk]]></wp:comment_author_email>
+			<wp:comment_author_url></wp:comment_author_url>
+			<wp:comment_author_IP><![CDATA[86.146.141.82]]></wp:comment_author_IP>
+			<wp:comment_date><![CDATA[2013-06-07 11:46:52]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2013-06-07 11:46:52]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Perfect when you're sat at your computer, waiting for the next batch of Woo Goodies to be released. The Patient Ninja is Patient.]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_error]]></wp:meta_key>
+				<wp:meta_value><![CDATA[1370605612]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370605612.873900890350341796875;s:7:"message";s:92:"Akismet was unable to check this comment (response: ), will automatically retry again later.";s:5:"event";s:11:"check-error";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_as_submitted]]></wp:meta_key>
+				<wp:meta_value><![CDATA[a:66:{s:15:"comment_post_ID";i:50;s:14:"comment_author";s:12:"James Koster";s:20:"comment_author_email";s:23:"james@jameskoster.co.uk";s:18:"comment_author_url";N;s:15:"comment_content";s:103:"Perfect when you're waiting for the next batch of Woo Goodies to be released. Patient Ninja is Patient.";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:13:"86.146.141.82";s:10:"user_agent";s:120:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36";s:8:"referrer";s:61:"http://demo2.woothemes.com/woocommerce/product/patient-ninja/";s:4:"blog";s:38:"http://demo2.woothemes.com/woocommerce";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:61:"http://demo2.woothemes.com/woocommerce/product/patient-ninja/";s:21:"akismet_comment_nonce";s:6:"passed";s:11:"POST_author";s:12:"James Koster";s:10:"POST_email";s:23:"james@jameskoster.co.uk";s:11:"POST_rating";s:1:"4";s:12:"POST_comment";s:103:"Perfect when you're waiting for the next batch of Woo Goodies to be released. Patient Ninja is Patient.";s:7:"POST__n";s:10:"a80bd2f042";s:21:"POST__wp_http_referer";s:35:"/woocommerce/product/patient-ninja/";s:11:"POST_submit";s:13:"Submit Review";s:20:"POST_comment_post_ID";s:2:"50";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"ad4e7e1f00";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:33:"/woocommerce/wp-comments-post.php";s:15:"REDIRECT_IS_WPE";s:1:"1";s:27:"REDIRECT_WPE_CAN_WRITE_DISK";s:1:"0";s:15:"REDIRECT_STATUS";s:3:"200";s:6:"IS_WPE";s:1:"1";s:18:"WPE_CAN_WRITE_DISK";s:1:"0";s:9:"HTTP_HOST";s:19:"demo2.woothemes.com";s:13:"HTTP_X_LB_KEY";s:8:"woodemo2";s:13:"HTTP_X_IS_BOT";s:1:"0";s:15:"HTTP_USER_AGENT";s:120:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36";s:15:"HTTP_CONNECTION";s:5:"close";s:14:"CONTENT_LENGTH";s:3:"339";s:18:"HTTP_CACHE_CONTROL";s:9:"max-age=0";s:11:"HTTP_ACCEPT";s:63:"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";s:11:"HTTP_ORIGIN";s:26:"http://demo2.woothemes.com";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:12:"HTTP_REFERER";s:61:"http://demo2.woothemes.com/woocommerce/product/patient-ninja/";s:20:"HTTP_ACCEPT_ENCODING";s:17:"gzip,deflate,sdch";s:20:"HTTP_ACCEPT_LANGUAGE";s:14:"en-US,en;q=0.8";s:11:"HTTP_COOKIE";s:0:"";s:4:"PATH";s:28:"/usr/local/bin:/usr/bin:/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:19:"demo2.woothemes.com";s:11:"SERVER_ADDR";s:9:"127.0.0.1";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:13:"86.146.141.82";s:13:"DOCUMENT_ROOT";s:26:"/nas/wp/www/sites/woodemo2";s:12:"SERVER_ADMIN";s:18:"[no address given]";s:15:"SCRIPT_FILENAME";s:47:"/nas/wp/www/sites/woodemo2/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"49636";s:12:"REDIRECT_URL";s:33:"/woocommerce/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.0";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1370605612";s:25:"comment_post_modified_gmt";s:19:"2013-06-07 11:17:10";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[rating]]></wp:meta_key>
+				<wp:meta_value><![CDATA[4]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370605643.71494293212890625;s:7:"message";s:46:"wooteam changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"wooteam";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>17</wp:comment_id>
+			<wp:comment_author><![CDATA[Cobus Bester]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[bester.c@gmail.com]]></wp:comment_author_email>
+			<wp:comment_author_url></wp:comment_author_url>
+			<wp:comment_author_IP><![CDATA[196.215.9.147]]></wp:comment_author_IP>
+			<wp:comment_date><![CDATA[2013-06-07 11:53:13]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2013-06-07 11:53:13]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[The most comfortable hoodie I have ever owned!]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_error]]></wp:meta_key>
+				<wp:meta_value><![CDATA[1370605993]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370605993.45998096466064453125;s:7:"message";s:92:"Akismet was unable to check this comment (response: ), will automatically retry again later.";s:5:"event";s:11:"check-error";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_as_submitted]]></wp:meta_key>
+				<wp:meta_value><![CDATA[a:67:{s:15:"comment_post_ID";i:50;s:14:"comment_author";s:12:"Cobus Bester";s:20:"comment_author_email";s:18:"bester.c@gmail.com";s:18:"comment_author_url";N;s:15:"comment_content";s:46:"The most comfortable hoodie I have ever owned!";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:13:"196.215.9.147";s:10:"user_agent";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31";s:8:"referrer";s:61:"http://demo2.woothemes.com/woocommerce/product/patient-ninja/";s:4:"blog";s:38:"http://demo2.woothemes.com/woocommerce";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:61:"http://demo2.woothemes.com/woocommerce/product/patient-ninja/";s:21:"akismet_comment_nonce";s:6:"passed";s:11:"POST_author";s:12:"Cobus Bester";s:10:"POST_email";s:18:"bester.c@gmail.com";s:11:"POST_rating";s:1:"5";s:12:"POST_comment";s:46:"The most comfortable hoodie I have ever owned!";s:7:"POST__n";s:10:"a80bd2f042";s:21:"POST__wp_http_referer";s:35:"/woocommerce/product/patient-ninja/";s:11:"POST_submit";s:13:"Submit Review";s:20:"POST_comment_post_ID";s:2:"50";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"ad4e7e1f00";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:33:"/woocommerce/wp-comments-post.php";s:15:"REDIRECT_IS_WPE";s:1:"1";s:27:"REDIRECT_WPE_CAN_WRITE_DISK";s:1:"0";s:15:"REDIRECT_STATUS";s:3:"200";s:6:"IS_WPE";s:1:"1";s:18:"WPE_CAN_WRITE_DISK";s:1:"0";s:9:"HTTP_HOST";s:19:"demo2.woothemes.com";s:13:"HTTP_X_LB_KEY";s:8:"woodemo2";s:13:"HTTP_X_IS_BOT";s:1:"0";s:15:"HTTP_USER_AGENT";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31";s:15:"HTTP_CONNECTION";s:5:"close";s:14:"CONTENT_LENGTH";s:3:"277";s:18:"HTTP_CACHE_CONTROL";s:9:"max-age=0";s:11:"HTTP_ACCEPT";s:63:"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";s:11:"HTTP_ORIGIN";s:26:"http://demo2.woothemes.com";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:12:"HTTP_REFERER";s:61:"http://demo2.woothemes.com/woocommerce/product/patient-ninja/";s:20:"HTTP_ACCEPT_ENCODING";s:17:"gzip,deflate,sdch";s:20:"HTTP_ACCEPT_LANGUAGE";s:14:"en-US,en;q=0.8";s:19:"HTTP_ACCEPT_CHARSET";s:30:"ISO-8859-1,utf-8;q=0.7,*;q=0.3";s:11:"HTTP_COOKIE";s:0:"";s:4:"PATH";s:28:"/usr/local/bin:/usr/bin:/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:19:"demo2.woothemes.com";s:11:"SERVER_ADDR";s:9:"127.0.0.1";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:13:"196.215.9.147";s:13:"DOCUMENT_ROOT";s:26:"/nas/wp/www/sites/woodemo2";s:12:"SERVER_ADMIN";s:18:"[no address given]";s:15:"SCRIPT_FILENAME";s:47:"/nas/wp/www/sites/woodemo2/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"54451";s:12:"REDIRECT_URL";s:33:"/woocommerce/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.0";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1370605993";s:25:"comment_post_modified_gmt";s:19:"2013-06-07 11:17:10";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[rating]]></wp:meta_key>
+				<wp:meta_value><![CDATA[5]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370607929.392714977264404296875;s:7:"message";s:46:"wooteam changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"wooteam";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>18</wp:comment_id>
+			<wp:comment_author><![CDATA[Magnus]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[magnus@woothemes.com]]></wp:comment_author_email>
+			<wp:comment_author_url></wp:comment_author_url>
+			<wp:comment_author_IP><![CDATA[79.161.106.35]]></wp:comment_author_IP>
+			<wp:comment_date><![CDATA[2013-06-07 12:04:03]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2013-06-07 12:04:03]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[This is my favorite hoodie!
+
+If only it came in red as well!]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_error]]></wp:meta_key>
+				<wp:meta_value><![CDATA[1370606643]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370606643.435740947723388671875;s:7:"message";s:92:"Akismet was unable to check this comment (response: ), will automatically retry again later.";s:5:"event";s:11:"check-error";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_as_submitted]]></wp:meta_key>
+				<wp:meta_value><![CDATA[]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[rating]]></wp:meta_key>
+				<wp:meta_value><![CDATA[5]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370607947.308474063873291015625;s:7:"message";s:46:"wooteam changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"wooteam";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
+	</item>
+	<item>
 		<title>River Island Leather Lace Up Brogues</title>
 		<link>http://wingman.kitethemes.com/product/river-island-leather-lace-up-brogues/</link>
 		<pubDate>Fri, 07 Jun 2013 10:35:51 +0000</pubDate>
@@ -16610,173 +17134,6 @@ Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed 
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Blog zig zag</title>
-		<link>http://wingman.kitethemes.com/blog-zig-zag/</link>
-		<pubDate>Wed, 02 Dec 2015 06:19:43 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/?page_id=307</guid>
-		<description></description>
-		<content:encoded><![CDATA[[vc_row][vc_column][list_blog_posts blog_type="zigzag" readmore="link" excerpt_length="20" max_items="6" image_size="recent_posts_list"][/vc_column][/vc_row]]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>307</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-02 06:19:43]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-12-02 06:19:43]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[blog-zig-zag]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[page]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[true]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_show_breadcrumb]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header_separator]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header_bg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_scheme]]></wp:meta_key>
-			<wp:meta_value><![CDATA[light]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_body_background]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_boxed_background]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>About Us</title>
-		<link>http://wingman.kitethemes.com/about-us/</link>
-		<pubDate>Thu, 03 Dec 2015 08:38:45 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/?page_id=313</guid>
-		<description></description>
-		<content:encoded><![CDATA[[vc_row css=".vc_custom_1449133981249{margin-bottom: 55px !important;}"][vc_column][vc_single_image image="315" img_size="full" alignment="center" style="creative-hover" css=".vc_custom_1449133004938{margin-bottom: 65px !important;}"][vc_custom_heading text="Our Story" font_container="tag:h2|font_size:24px|text_align:center|color:%23252525" use_theme_fonts="yes" css=".vc_custom_1448873832149{margin-bottom: 25px !important;}"][vc_column_text css=".vc_custom_1448874022800{margin-bottom: 55px !important;}"]
-<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-<p style="text-align: center;"><a class="readmore-link" href="#">Read more</a></p>
-[/vc_column_text][socials social="facebook,twitter,pinterest,dribbble,vimeo" style="custom" align="center" space_between_item="12" custom_color="#b2b2b2"][/vc_column][/vc_row][vc_row css=".vc_custom_1449134000467{margin-bottom: 55px !important;}"][vc_column][vc_separator css=".vc_custom_1449134006481{margin-bottom: 0px !important;}"][/vc_column][/vc_row][vc_row][vc_column][kt_heading text="our skills" letter_spacing="0" font_container="tag:h2|font_size:36px|color:%23252525" css=".vc_custom_1449134026431{margin-bottom: 45px !important;}"][/kt_heading][vc_row_inner][vc_column_inner width="1/4" offset="vc_col-lg-offset-2 vc_col-md-offset-2 vc_col-sm-offset-2"][skill options="animated" height="3" css=".vc_custom_1449134149179{margin-bottom: 30px !important;}"][skill_item title="PHOTOSHOP" percent="88" font_container="font_size:14px|color:%23252525"][skill_item title="HTML5 &amp; CSS3" percent="80" font_container="font_size:14px|color:%23252525"][skill_item title="WORDPRESS" percent="90" font_container="font_size:14px|color:%23252525"][skill_item title="JOOMLA" percent="70" font_container="font_size:14px|color:%23252525"][/skill][/vc_column_inner][vc_column_inner width="1/4" offset="vc_col-lg-offset-2 vc_col-md-offset-2 vc_col-sm-offset-2"][skill height="3" css=".vc_custom_1449134269252{margin-bottom: 30px !important;}"][skill_item title="MagenTo" percent="88" font_container="font_size:14px|color:%23252525"][skill_item title="prestashop" percent="80" font_container="font_size:14px|color:%23252525"][skill_item title="open cart" percent="70" font_container="font_size:14px|color:%23252525"][skill_item title="drupal" percent="90" font_container="font_size:14px|color:%23252525"][/skill][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row css=".vc_custom_1449134000467{margin-bottom: 55px !important;}"][vc_column][vc_separator css=".vc_custom_1449134076674{margin-bottom: 0px !important;}"][/vc_column][/vc_row][vc_row css=".vc_custom_1449548927576{margin-bottom: 0px !important;}"][vc_column][kt_heading text="our Team" letter_spacing="0" font_container="tag:h2|font_size:36px|color:%23252525" css=".vc_custom_1448877373459{margin-bottom: 45px !important;}"][/kt_heading][vc_row_inner][vc_column_inner width="1/3"][team name="Thang Phung" image="316" agency="Director" facebook_link="#" twitter_link="#" dribbble_link="#" linkedin_link="#" css=".vc_custom_1449548866296{margin-bottom: 30px !important;}"][/vc_column_inner][vc_column_inner width="1/3"][team name="Robert Pineda" image="317" agency="Sales Executive" facebook_link="#" twitter_link="#" dribbble_link="#" css=".vc_custom_1449548873043{margin-bottom: 30px !important;}"][/vc_column_inner][vc_column_inner width="1/3"][team name="Wingmen" image="318" agency="Coder" facebook_link="#" dribbble_link="#" css=".vc_custom_1449548878489{margin-bottom: 30px !important;}"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row]]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>313</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-03 08:38:45]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-12-03 08:38:45]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[about-us]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[page]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[true]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_show_breadcrumb]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header_separator]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header_bg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_scheme]]></wp:meta_key>
-			<wp:meta_value><![CDATA[light]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_shortcodes_custom_css]]></wp:meta_key>
-			<wp:meta_value><![CDATA[.vc_custom_1449133981249{margin-bottom: 55px !important;}.vc_custom_1449134000467{margin-bottom: 55px !important;}.vc_custom_1449134000467{margin-bottom: 55px !important;}.vc_custom_1449548927576{margin-bottom: 0px !important;}.vc_custom_1449133004938{margin-bottom: 65px !important;}.vc_custom_1448873832149{margin-bottom: 25px !important;}.vc_custom_1448874022800{margin-bottom: 55px !important;}.vc_custom_1449134006481{margin-bottom: 0px !important;}.vc_custom_1449134026431{margin-bottom: 45px !important;}.vc_custom_1449134149179{margin-bottom: 30px !important;}.vc_custom_1449134269252{margin-bottom: 30px !important;}.vc_custom_1449134076674{margin-bottom: 0px !important;}.vc_custom_1448877373459{margin-bottom: 45px !important;}.vc_custom_1449548866296{margin-bottom: 30px !important;}.vc_custom_1449548873043{margin-bottom: 30px !important;}.vc_custom_1449548878489{margin-bottom: 30px !important;}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
 		<title>Annabella  Barber model</title>
 		<link>http://wingman.kitethemes.com/annabella-barber-model/</link>
 		<pubDate>Fri, 04 Dec 2015 06:23:17 +0000</pubDate>
@@ -17324,570 +17681,6 @@ Pellentesque mauris lacus, vulputate vel arcu sed, rhoncus consectetur enim. Pel
 			<wp:commentmeta>
 				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
 				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370607931.63070201873779296875;s:7:"message";s:46:"wooteam changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"wooteam";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
-	</item>
-	<item>
-		<title>Wool Fedora Hat</title>
-		<link>http://wingman.kitethemes.com/product/wool-fedora-hat-4/</link>
-		<pubDate>Fri, 07 Jun 2013 11:02:31 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://demo2.woothemes.com/woocommerce/?post_type=product&#038;p=47</guid>
-		<description></description>
-		<content:encoded><![CDATA[Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.]]></content:encoded>
-		<excerpt:encoded><![CDATA[Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.]]></excerpt:encoded>
-		<wp:post_id>47</wp:post_id>
-		<wp:post_date><![CDATA[2013-06-07 11:02:31]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2013-06-07 11:02:31]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[wool-fedora-hat-4]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[product]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="product_cat" nicename="hats"><![CDATA[Hats]]></category>
-		<category domain="product_type" nicename="simple"><![CDATA[simple]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_visibility]]></wp:meta_key>
-			<wp:meta_value><![CDATA[visible]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_stock_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[instock]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[total_sales]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_downloadable]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_virtual]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_product_image_gallery]]></wp:meta_key>
-			<wp:meta_value><![CDATA[338]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_regular_price]]></wp:meta_key>
-			<wp:meta_value><![CDATA[35]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sale_price]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_tax_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_tax_class]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_purchase_note]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_featured]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_weight]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_length]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_width]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_height]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sku]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_product_attributes]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sale_price_dates_from]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sale_price_dates_to]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_price]]></wp:meta_key>
-			<wp:meta_value><![CDATA[35]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sold_individually]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_stock]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_backorders]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_manage_stock]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_crosssell_ids]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;i:34;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[330]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
-			<wp:meta_value><![CDATA[woo-ninja-2]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_swatch_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_upsell_ids]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_product_version]]></wp:meta_key>
-			<wp:meta_value><![CDATA[2.4.10]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_show_breadcrumb]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header_separator]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header_bg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_scheme]]></wp:meta_key>
-			<wp:meta_value><![CDATA[light]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:comment>
-			<wp:comment_id>14</wp:comment_id>
-			<wp:comment_author><![CDATA[Cobus Bester]]></wp:comment_author>
-			<wp:comment_author_email><![CDATA[bester.c@gmail.com]]></wp:comment_author_email>
-			<wp:comment_author_url></wp:comment_author_url>
-			<wp:comment_author_IP><![CDATA[196.215.9.147]]></wp:comment_author_IP>
-			<wp:comment_date><![CDATA[2013-06-07 11:57:59]]></wp:comment_date>
-			<wp:comment_date_gmt><![CDATA[2013-06-07 11:57:59]]></wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[This hoodie is great for those chilly winter days. I love the WooNinja!]]></wp:comment_content>
-			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
-			<wp:comment_type><![CDATA[]]></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_error]]></wp:meta_key>
-				<wp:meta_value><![CDATA[1370606279]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370606279.836287975311279296875;s:7:"message";s:92:"Akismet was unable to check this comment (response: ), will automatically retry again later.";s:5:"event";s:11:"check-error";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_as_submitted]]></wp:meta_key>
-				<wp:meta_value><![CDATA[a:67:{s:15:"comment_post_ID";i:47;s:14:"comment_author";s:12:"Cobus Bester";s:20:"comment_author_email";s:18:"bester.c@gmail.com";s:18:"comment_author_url";N;s:15:"comment_content";s:71:"This hoodie is great for those chilly winter days. I love the WooNinja!";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:13:"196.215.9.147";s:10:"user_agent";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31";s:8:"referrer";s:59:"http://demo2.woothemes.com/woocommerce/product/woo-ninja-2/";s:4:"blog";s:38:"http://demo2.woothemes.com/woocommerce";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:59:"http://demo2.woothemes.com/woocommerce/product/woo-ninja-2/";s:21:"akismet_comment_nonce";s:6:"passed";s:11:"POST_author";s:12:"Cobus Bester";s:10:"POST_email";s:18:"bester.c@gmail.com";s:11:"POST_rating";s:1:"5";s:12:"POST_comment";s:71:"This hoodie is great for those chilly winter days. I love the WooNinja!";s:7:"POST__n";s:10:"a80bd2f042";s:21:"POST__wp_http_referer";s:33:"/woocommerce/product/woo-ninja-2/";s:11:"POST_submit";s:13:"Submit Review";s:20:"POST_comment_post_ID";s:2:"47";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"38d66a284b";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:33:"/woocommerce/wp-comments-post.php";s:15:"REDIRECT_IS_WPE";s:1:"1";s:27:"REDIRECT_WPE_CAN_WRITE_DISK";s:1:"0";s:15:"REDIRECT_STATUS";s:3:"200";s:6:"IS_WPE";s:1:"1";s:18:"WPE_CAN_WRITE_DISK";s:1:"0";s:9:"HTTP_HOST";s:19:"demo2.woothemes.com";s:13:"HTTP_X_LB_KEY";s:8:"woodemo2";s:13:"HTTP_X_IS_BOT";s:1:"0";s:15:"HTTP_USER_AGENT";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31";s:15:"HTTP_CONNECTION";s:5:"close";s:14:"CONTENT_LENGTH";s:3:"300";s:18:"HTTP_CACHE_CONTROL";s:9:"max-age=0";s:11:"HTTP_ACCEPT";s:63:"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";s:11:"HTTP_ORIGIN";s:26:"http://demo2.woothemes.com";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:12:"HTTP_REFERER";s:59:"http://demo2.woothemes.com/woocommerce/product/woo-ninja-2/";s:20:"HTTP_ACCEPT_ENCODING";s:17:"gzip,deflate,sdch";s:20:"HTTP_ACCEPT_LANGUAGE";s:14:"en-US,en;q=0.8";s:19:"HTTP_ACCEPT_CHARSET";s:30:"ISO-8859-1,utf-8;q=0.7,*;q=0.3";s:11:"HTTP_COOKIE";s:0:"";s:4:"PATH";s:28:"/usr/local/bin:/usr/bin:/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:19:"demo2.woothemes.com";s:11:"SERVER_ADDR";s:9:"127.0.0.1";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:13:"196.215.9.147";s:13:"DOCUMENT_ROOT";s:26:"/nas/wp/www/sites/woodemo2";s:12:"SERVER_ADMIN";s:18:"[no address given]";s:15:"SCRIPT_FILENAME";s:47:"/nas/wp/www/sites/woodemo2/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"58209";s:12:"REDIRECT_URL";s:33:"/woocommerce/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.0";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1370606279";s:25:"comment_post_modified_gmt";s:19:"2013-06-07 11:18:45";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[rating]]></wp:meta_key>
-				<wp:meta_value><![CDATA[5]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370607944.7811119556427001953125;s:7:"message";s:46:"wooteam changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"wooteam";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
-		<wp:comment>
-			<wp:comment_id>15</wp:comment_id>
-			<wp:comment_author><![CDATA[Maria]]></wp:comment_author>
-			<wp:comment_author_email><![CDATA[maria@woothemes.com]]></wp:comment_author_email>
-			<wp:comment_author_url></wp:comment_author_url>
-			<wp:comment_author_IP><![CDATA[24.225.103.32]]></wp:comment_author_IP>
-			<wp:comment_date><![CDATA[2013-06-07 15:53:13]]></wp:comment_date>
-			<wp:comment_date_gmt><![CDATA[2013-06-07 15:53:13]]></wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[Perfect for the lady Ninja in your life!]]></wp:comment_content>
-			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
-			<wp:comment_type><![CDATA[]]></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_error]]></wp:meta_key>
-				<wp:meta_value><![CDATA[1370620393]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370620393.6741259098052978515625;s:7:"message";s:92:"Akismet was unable to check this comment (response: ), will automatically retry again later.";s:5:"event";s:11:"check-error";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_as_submitted]]></wp:meta_key>
-				<wp:meta_value><![CDATA[a:66:{s:15:"comment_post_ID";i:47;s:14:"comment_author";s:5:"Maria";s:20:"comment_author_email";s:19:"maria@woothemes.com";s:18:"comment_author_url";N;s:15:"comment_content";s:40:"Perfect for the lady Ninja in your life!";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:13:"24.225.103.32";s:10:"user_agent";s:120:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36";s:8:"referrer";s:59:"http://demo2.woothemes.com/woocommerce/product/woo-ninja-2/";s:4:"blog";s:38:"http://demo2.woothemes.com/woocommerce";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:59:"http://demo2.woothemes.com/woocommerce/product/woo-ninja-2/";s:21:"akismet_comment_nonce";s:6:"passed";s:11:"POST_author";s:5:"Maria";s:10:"POST_email";s:19:"maria@woothemes.com";s:11:"POST_rating";s:1:"4";s:12:"POST_comment";s:40:"Perfect for the lady Ninja in your life!";s:7:"POST__n";s:10:"2145d644a3";s:21:"POST__wp_http_referer";s:33:"/woocommerce/product/woo-ninja-2/";s:11:"POST_submit";s:13:"Submit Review";s:20:"POST_comment_post_ID";s:2:"47";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"ade950552e";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:33:"/woocommerce/wp-comments-post.php";s:15:"REDIRECT_IS_WPE";s:1:"1";s:27:"REDIRECT_WPE_CAN_WRITE_DISK";s:1:"0";s:15:"REDIRECT_STATUS";s:3:"200";s:6:"IS_WPE";s:1:"1";s:18:"WPE_CAN_WRITE_DISK";s:1:"0";s:9:"HTTP_HOST";s:19:"demo2.woothemes.com";s:13:"HTTP_X_LB_KEY";s:8:"woodemo2";s:13:"HTTP_X_IS_BOT";s:1:"0";s:15:"HTTP_USER_AGENT";s:120:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36";s:15:"HTTP_CONNECTION";s:5:"close";s:14:"CONTENT_LENGTH";s:3:"263";s:18:"HTTP_CACHE_CONTROL";s:9:"max-age=0";s:11:"HTTP_ACCEPT";s:63:"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";s:11:"HTTP_ORIGIN";s:26:"http://demo2.woothemes.com";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:12:"HTTP_REFERER";s:59:"http://demo2.woothemes.com/woocommerce/product/woo-ninja-2/";s:20:"HTTP_ACCEPT_ENCODING";s:17:"gzip,deflate,sdch";s:20:"HTTP_ACCEPT_LANGUAGE";s:14:"en-US,en;q=0.8";s:11:"HTTP_COOKIE";s:0:"";s:4:"PATH";s:28:"/usr/local/bin:/usr/bin:/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:19:"demo2.woothemes.com";s:11:"SERVER_ADDR";s:9:"127.0.0.1";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:13:"24.225.103.32";s:13:"DOCUMENT_ROOT";s:26:"/nas/wp/www/sites/woodemo2";s:12:"SERVER_ADMIN";s:18:"[no address given]";s:15:"SCRIPT_FILENAME";s:47:"/nas/wp/www/sites/woodemo2/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"26829";s:12:"REDIRECT_URL";s:33:"/woocommerce/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.0";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1370620393";s:25:"comment_post_modified_gmt";s:19:"2013-06-07 11:18:45";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[rating]]></wp:meta_key>
-				<wp:meta_value><![CDATA[4]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370620633.94254302978515625;s:7:"message";s:46:"wooteam changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"wooteam";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
-	</item>
-	<item>
-		<title>Weekend Hat</title>
-		<link>http://wingman.kitethemes.com/product/weekend-hat/</link>
-		<pubDate>Fri, 07 Jun 2013 11:03:56 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://demo2.woothemes.com/woocommerce/?post_type=product&#038;p=50</guid>
-		<description></description>
-		<content:encoded><![CDATA[Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.]]></content:encoded>
-		<excerpt:encoded><![CDATA[Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.]]></excerpt:encoded>
-		<wp:post_id>50</wp:post_id>
-		<wp:post_date><![CDATA[2013-06-07 11:03:56]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2013-06-07 11:03:56]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[weekend-hat]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[product]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="product_cat" nicename="hats"><![CDATA[Hats]]></category>
-		<category domain="product_type" nicename="simple"><![CDATA[simple]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_visibility]]></wp:meta_key>
-			<wp:meta_value><![CDATA[visible]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_stock_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[instock]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[total_sales]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_downloadable]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_virtual]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_product_image_gallery]]></wp:meta_key>
-			<wp:meta_value><![CDATA[330]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_regular_price]]></wp:meta_key>
-			<wp:meta_value><![CDATA[35]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sale_price]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_tax_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_tax_class]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_purchase_note]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_featured]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_weight]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_length]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_width]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_height]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sku]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_product_attributes]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sale_price_dates_from]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sale_price_dates_to]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_price]]></wp:meta_key>
-			<wp:meta_value><![CDATA[35]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sold_individually]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_stock]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_backorders]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_manage_stock]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_crosssell_ids]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;i:53;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[340]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
-			<wp:meta_value><![CDATA[patient-ninja]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_swatch_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_upsell_ids]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_product_version]]></wp:meta_key>
-			<wp:meta_value><![CDATA[2.4.10]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_show_breadcrumb]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header_separator]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header_bg]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_scheme]]></wp:meta_key>
-			<wp:meta_value><![CDATA[light]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:comment>
-			<wp:comment_id>16</wp:comment_id>
-			<wp:comment_author><![CDATA[James Koster]]></wp:comment_author>
-			<wp:comment_author_email><![CDATA[james@jameskoster.co.uk]]></wp:comment_author_email>
-			<wp:comment_author_url></wp:comment_author_url>
-			<wp:comment_author_IP><![CDATA[86.146.141.82]]></wp:comment_author_IP>
-			<wp:comment_date><![CDATA[2013-06-07 11:46:52]]></wp:comment_date>
-			<wp:comment_date_gmt><![CDATA[2013-06-07 11:46:52]]></wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[Perfect when you're sat at your computer, waiting for the next batch of Woo Goodies to be released. The Patient Ninja is Patient.]]></wp:comment_content>
-			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
-			<wp:comment_type><![CDATA[]]></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_error]]></wp:meta_key>
-				<wp:meta_value><![CDATA[1370605612]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370605612.873900890350341796875;s:7:"message";s:92:"Akismet was unable to check this comment (response: ), will automatically retry again later.";s:5:"event";s:11:"check-error";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_as_submitted]]></wp:meta_key>
-				<wp:meta_value><![CDATA[a:66:{s:15:"comment_post_ID";i:50;s:14:"comment_author";s:12:"James Koster";s:20:"comment_author_email";s:23:"james@jameskoster.co.uk";s:18:"comment_author_url";N;s:15:"comment_content";s:103:"Perfect when you're waiting for the next batch of Woo Goodies to be released. Patient Ninja is Patient.";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:13:"86.146.141.82";s:10:"user_agent";s:120:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36";s:8:"referrer";s:61:"http://demo2.woothemes.com/woocommerce/product/patient-ninja/";s:4:"blog";s:38:"http://demo2.woothemes.com/woocommerce";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:61:"http://demo2.woothemes.com/woocommerce/product/patient-ninja/";s:21:"akismet_comment_nonce";s:6:"passed";s:11:"POST_author";s:12:"James Koster";s:10:"POST_email";s:23:"james@jameskoster.co.uk";s:11:"POST_rating";s:1:"4";s:12:"POST_comment";s:103:"Perfect when you're waiting for the next batch of Woo Goodies to be released. Patient Ninja is Patient.";s:7:"POST__n";s:10:"a80bd2f042";s:21:"POST__wp_http_referer";s:35:"/woocommerce/product/patient-ninja/";s:11:"POST_submit";s:13:"Submit Review";s:20:"POST_comment_post_ID";s:2:"50";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"ad4e7e1f00";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:33:"/woocommerce/wp-comments-post.php";s:15:"REDIRECT_IS_WPE";s:1:"1";s:27:"REDIRECT_WPE_CAN_WRITE_DISK";s:1:"0";s:15:"REDIRECT_STATUS";s:3:"200";s:6:"IS_WPE";s:1:"1";s:18:"WPE_CAN_WRITE_DISK";s:1:"0";s:9:"HTTP_HOST";s:19:"demo2.woothemes.com";s:13:"HTTP_X_LB_KEY";s:8:"woodemo2";s:13:"HTTP_X_IS_BOT";s:1:"0";s:15:"HTTP_USER_AGENT";s:120:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36";s:15:"HTTP_CONNECTION";s:5:"close";s:14:"CONTENT_LENGTH";s:3:"339";s:18:"HTTP_CACHE_CONTROL";s:9:"max-age=0";s:11:"HTTP_ACCEPT";s:63:"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";s:11:"HTTP_ORIGIN";s:26:"http://demo2.woothemes.com";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:12:"HTTP_REFERER";s:61:"http://demo2.woothemes.com/woocommerce/product/patient-ninja/";s:20:"HTTP_ACCEPT_ENCODING";s:17:"gzip,deflate,sdch";s:20:"HTTP_ACCEPT_LANGUAGE";s:14:"en-US,en;q=0.8";s:11:"HTTP_COOKIE";s:0:"";s:4:"PATH";s:28:"/usr/local/bin:/usr/bin:/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:19:"demo2.woothemes.com";s:11:"SERVER_ADDR";s:9:"127.0.0.1";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:13:"86.146.141.82";s:13:"DOCUMENT_ROOT";s:26:"/nas/wp/www/sites/woodemo2";s:12:"SERVER_ADMIN";s:18:"[no address given]";s:15:"SCRIPT_FILENAME";s:47:"/nas/wp/www/sites/woodemo2/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"49636";s:12:"REDIRECT_URL";s:33:"/woocommerce/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.0";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1370605612";s:25:"comment_post_modified_gmt";s:19:"2013-06-07 11:17:10";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[rating]]></wp:meta_key>
-				<wp:meta_value><![CDATA[4]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370605643.71494293212890625;s:7:"message";s:46:"wooteam changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"wooteam";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
-		<wp:comment>
-			<wp:comment_id>17</wp:comment_id>
-			<wp:comment_author><![CDATA[Cobus Bester]]></wp:comment_author>
-			<wp:comment_author_email><![CDATA[bester.c@gmail.com]]></wp:comment_author_email>
-			<wp:comment_author_url></wp:comment_author_url>
-			<wp:comment_author_IP><![CDATA[196.215.9.147]]></wp:comment_author_IP>
-			<wp:comment_date><![CDATA[2013-06-07 11:53:13]]></wp:comment_date>
-			<wp:comment_date_gmt><![CDATA[2013-06-07 11:53:13]]></wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[The most comfortable hoodie I have ever owned!]]></wp:comment_content>
-			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
-			<wp:comment_type><![CDATA[]]></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_error]]></wp:meta_key>
-				<wp:meta_value><![CDATA[1370605993]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370605993.45998096466064453125;s:7:"message";s:92:"Akismet was unable to check this comment (response: ), will automatically retry again later.";s:5:"event";s:11:"check-error";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_as_submitted]]></wp:meta_key>
-				<wp:meta_value><![CDATA[a:67:{s:15:"comment_post_ID";i:50;s:14:"comment_author";s:12:"Cobus Bester";s:20:"comment_author_email";s:18:"bester.c@gmail.com";s:18:"comment_author_url";N;s:15:"comment_content";s:46:"The most comfortable hoodie I have ever owned!";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:13:"196.215.9.147";s:10:"user_agent";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31";s:8:"referrer";s:61:"http://demo2.woothemes.com/woocommerce/product/patient-ninja/";s:4:"blog";s:38:"http://demo2.woothemes.com/woocommerce";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:61:"http://demo2.woothemes.com/woocommerce/product/patient-ninja/";s:21:"akismet_comment_nonce";s:6:"passed";s:11:"POST_author";s:12:"Cobus Bester";s:10:"POST_email";s:18:"bester.c@gmail.com";s:11:"POST_rating";s:1:"5";s:12:"POST_comment";s:46:"The most comfortable hoodie I have ever owned!";s:7:"POST__n";s:10:"a80bd2f042";s:21:"POST__wp_http_referer";s:35:"/woocommerce/product/patient-ninja/";s:11:"POST_submit";s:13:"Submit Review";s:20:"POST_comment_post_ID";s:2:"50";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"ad4e7e1f00";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:33:"/woocommerce/wp-comments-post.php";s:15:"REDIRECT_IS_WPE";s:1:"1";s:27:"REDIRECT_WPE_CAN_WRITE_DISK";s:1:"0";s:15:"REDIRECT_STATUS";s:3:"200";s:6:"IS_WPE";s:1:"1";s:18:"WPE_CAN_WRITE_DISK";s:1:"0";s:9:"HTTP_HOST";s:19:"demo2.woothemes.com";s:13:"HTTP_X_LB_KEY";s:8:"woodemo2";s:13:"HTTP_X_IS_BOT";s:1:"0";s:15:"HTTP_USER_AGENT";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.65 Safari/537.31";s:15:"HTTP_CONNECTION";s:5:"close";s:14:"CONTENT_LENGTH";s:3:"277";s:18:"HTTP_CACHE_CONTROL";s:9:"max-age=0";s:11:"HTTP_ACCEPT";s:63:"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";s:11:"HTTP_ORIGIN";s:26:"http://demo2.woothemes.com";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:12:"HTTP_REFERER";s:61:"http://demo2.woothemes.com/woocommerce/product/patient-ninja/";s:20:"HTTP_ACCEPT_ENCODING";s:17:"gzip,deflate,sdch";s:20:"HTTP_ACCEPT_LANGUAGE";s:14:"en-US,en;q=0.8";s:19:"HTTP_ACCEPT_CHARSET";s:30:"ISO-8859-1,utf-8;q=0.7,*;q=0.3";s:11:"HTTP_COOKIE";s:0:"";s:4:"PATH";s:28:"/usr/local/bin:/usr/bin:/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:19:"demo2.woothemes.com";s:11:"SERVER_ADDR";s:9:"127.0.0.1";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:13:"196.215.9.147";s:13:"DOCUMENT_ROOT";s:26:"/nas/wp/www/sites/woodemo2";s:12:"SERVER_ADMIN";s:18:"[no address given]";s:15:"SCRIPT_FILENAME";s:47:"/nas/wp/www/sites/woodemo2/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"54451";s:12:"REDIRECT_URL";s:33:"/woocommerce/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.0";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1370605993";s:25:"comment_post_modified_gmt";s:19:"2013-06-07 11:17:10";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[rating]]></wp:meta_key>
-				<wp:meta_value><![CDATA[5]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370607929.392714977264404296875;s:7:"message";s:46:"wooteam changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"wooteam";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
-		<wp:comment>
-			<wp:comment_id>18</wp:comment_id>
-			<wp:comment_author><![CDATA[Magnus]]></wp:comment_author>
-			<wp:comment_author_email><![CDATA[magnus@woothemes.com]]></wp:comment_author_email>
-			<wp:comment_author_url></wp:comment_author_url>
-			<wp:comment_author_IP><![CDATA[79.161.106.35]]></wp:comment_author_IP>
-			<wp:comment_date><![CDATA[2013-06-07 12:04:03]]></wp:comment_date>
-			<wp:comment_date_gmt><![CDATA[2013-06-07 12:04:03]]></wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[This is my favorite hoodie!
-
-If only it came in red as well!]]></wp:comment_content>
-			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
-			<wp:comment_type><![CDATA[]]></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_error]]></wp:meta_key>
-				<wp:meta_value><![CDATA[1370606643]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370606643.435740947723388671875;s:7:"message";s:92:"Akismet was unable to check this comment (response: ), will automatically retry again later.";s:5:"event";s:11:"check-error";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_as_submitted]]></wp:meta_key>
-				<wp:meta_value><![CDATA[]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[rating]]></wp:meta_key>
-				<wp:meta_value><![CDATA[5]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key><![CDATA[akismet_history]]></wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1370607947.308474063873291015625;s:7:"message";s:46:"wooteam changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"wooteam";}]]></wp:meta_value>
 			</wp:commentmeta>
 		</wp:comment>
 	</item>
@@ -23776,126 +23569,6 @@ Suspendisse potenti. Maecenas sem turpis, congue tristique pharetra eget, tempus
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Contact form 1</title>
-		<link>http://wingman.kitethemes.com/?post_type=wpcf7_contact_form&#038;p=4</link>
-		<pubDate>Fri, 23 Oct 2015 04:15:12 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/?post_type=wpcf7_contact_form&#038;p=4</guid>
-		<description></description>
-		<content:encoded><![CDATA[<div class="row"><div class="col-md-6"><p>[text* your-name placeholder "Name"]</p></div>
-<div class="col-md-6"><p>[email* your-email placeholder "Email"]</p></div></div>
-<p>[text your-subject placeholder "Subject"]</p>
-<p>[textarea your-message placeholder "Your Comment"]</p>
-<p class="wrap-submit">[submit class:btn class:btn-default "Send Message"]</p>
-[your-subject]
-[your-name] <admin@gmail.com>
-From: [your-name] <[your-email]>
-Subject: [your-subject]
-
-Message Body:
-[your-message]
-
---
-This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.com)
-admin@gmail.com
-Reply-To: [your-email]
-
-
-
-
-[your-subject]
-Wingman <admin@gmail.com>
-Message Body:
-[your-message]
-
---
-This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.com)
-[your-email]
-Reply-To: admin@gmail.com
-
-
-
-Your message was sent successfully. Thanks.
-Failed to send your message. Please try later or contact the administrator by another method.
-Validation errors occurred. Please confirm the fields and submit it again.
-Failed to send your message. Please try later or contact the administrator by another method.
-Please accept the terms to proceed.
-Please fill in the required field.
-This input is too long.
-This input is too short.
-Date format seems invalid.
-This date is too early.
-This date is too late.
-Failed to upload file.
-This file type is not allowed.
-This file is too large.
-Failed to upload file. Error occurred.
-Number format seems invalid.
-This number is too small.
-This number is too large.
-Your answer is not correct.
-Your entered code is incorrect.
-Email address seems invalid.
-URL seems invalid.
-Telephone number seems invalid.]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>4</wp:post_id>
-		<wp:post_date><![CDATA[2015-10-23 04:15:12]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-10-23 04:15:12]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[contact-form-1]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[wpcf7_contact_form]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_form]]></wp:meta_key>
-			<wp:meta_value><![CDATA[<div class="row"><div class="col-md-6"><p>[text* your-name placeholder "Name"]</p></div>
-<div class="col-md-6"><p>[email* your-email placeholder "Email"]</p></div></div>
-<p>[text your-subject placeholder "Subject"]</p>
-<p>[textarea your-message placeholder "Your Comment"]</p>
-<p class="wrap-submit">[submit class:btn class:btn-default "Send Message"]</p>]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_mail]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:8:{s:7:"subject";s:14:"[your-subject]";s:6:"sender";s:29:"[your-name] <admin@gmail.com>";s:4:"body";s:174:"From: [your-name] <[your-email]>
-Subject: [your-subject]
-
-Message Body:
-[your-message]
-
---
-This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.com)";s:9:"recipient";s:15:"admin@gmail.com";s:18:"additional_headers";s:22:"Reply-To: [your-email]";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_mail_2]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:9:{s:6:"active";b:0;s:7:"subject";s:14:"[your-subject]";s:6:"sender";s:25:"Wingman <admin@gmail.com>";s:4:"body";s:116:"Message Body:
-[your-message]
-
---
-This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.com)";s:9:"recipient";s:12:"[your-email]";s:18:"additional_headers";s:25:"Reply-To: admin@gmail.com";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_messages]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:23:{s:12:"mail_sent_ok";s:43:"Your message was sent successfully. Thanks.";s:12:"mail_sent_ng";s:93:"Failed to send your message. Please try later or contact the administrator by another method.";s:16:"validation_error";s:74:"Validation errors occurred. Please confirm the fields and submit it again.";s:4:"spam";s:93:"Failed to send your message. Please try later or contact the administrator by another method.";s:12:"accept_terms";s:35:"Please accept the terms to proceed.";s:16:"invalid_required";s:34:"Please fill in the required field.";s:16:"invalid_too_long";s:23:"This input is too long.";s:17:"invalid_too_short";s:24:"This input is too short.";s:12:"invalid_date";s:26:"Date format seems invalid.";s:14:"date_too_early";s:23:"This date is too early.";s:13:"date_too_late";s:22:"This date is too late.";s:13:"upload_failed";s:22:"Failed to upload file.";s:24:"upload_file_type_invalid";s:30:"This file type is not allowed.";s:21:"upload_file_too_large";s:23:"This file is too large.";s:23:"upload_failed_php_error";s:38:"Failed to upload file. Error occurred.";s:14:"invalid_number";s:28:"Number format seems invalid.";s:16:"number_too_small";s:25:"This number is too small.";s:16:"number_too_large";s:25:"This number is too large.";s:23:"quiz_answer_not_correct";s:27:"Your answer is not correct.";s:17:"captcha_not_match";s:31:"Your entered code is incorrect.";s:13:"invalid_email";s:28:"Email address seems invalid.";s:11:"invalid_url";s:18:"URL seems invalid.";s:11:"invalid_tel";s:31:"Telephone number seems invalid.";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_additional_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_locale]]></wp:meta_key>
-			<wp:meta_value><![CDATA[en_US]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
 		<title>Variation #464 of Paul Smith Painted Scarf</title>
 		<link>http://wingman.kitethemes.com/product_variation/product-22-variation-18/</link>
 		<pubDate>Fri, 11 Dec 2015 03:27:30 +0000</pubDate>
@@ -24105,6 +23778,126 @@ This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.c
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_variation_description]]></wp:meta_key>
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Contact form 1</title>
+		<link>http://wingman.kitethemes.com/?post_type=wpcf7_contact_form&#038;p=4</link>
+		<pubDate>Fri, 23 Oct 2015 04:15:12 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/?post_type=wpcf7_contact_form&#038;p=4</guid>
+		<description></description>
+		<content:encoded><![CDATA[<div class="row"><div class="col-md-6"><p>[text* your-name placeholder "Name"]</p></div>
+<div class="col-md-6"><p>[email* your-email placeholder "Email"]</p></div></div>
+<p>[text your-subject placeholder "Subject"]</p>
+<p>[textarea your-message placeholder "Your Comment"]</p>
+<p class="wrap-submit">[submit class:btn class:btn-default "Send Message"]</p>
+[your-subject]
+[your-name] <admin@gmail.com>
+From: [your-name] <[your-email]>
+Subject: [your-subject]
+
+Message Body:
+[your-message]
+
+--
+This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.com)
+admin@gmail.com
+Reply-To: [your-email]
+
+
+
+
+[your-subject]
+Wingman <admin@gmail.com>
+Message Body:
+[your-message]
+
+--
+This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.com)
+[your-email]
+Reply-To: admin@gmail.com
+
+
+
+Your message was sent successfully. Thanks.
+Failed to send your message. Please try later or contact the administrator by another method.
+Validation errors occurred. Please confirm the fields and submit it again.
+Failed to send your message. Please try later or contact the administrator by another method.
+Please accept the terms to proceed.
+Please fill in the required field.
+This input is too long.
+This input is too short.
+Date format seems invalid.
+This date is too early.
+This date is too late.
+Failed to upload file.
+This file type is not allowed.
+This file is too large.
+Failed to upload file. Error occurred.
+Number format seems invalid.
+This number is too small.
+This number is too large.
+Your answer is not correct.
+Your entered code is incorrect.
+Email address seems invalid.
+URL seems invalid.
+Telephone number seems invalid.]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>4</wp:post_id>
+		<wp:post_date><![CDATA[2015-10-23 04:15:12]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-10-23 04:15:12]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[contact-form-1]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[wpcf7_contact_form]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_form]]></wp:meta_key>
+			<wp:meta_value><![CDATA[<div class="row"><div class="col-md-6"><p>[text* your-name placeholder "Name"]</p></div>
+<div class="col-md-6"><p>[email* your-email placeholder "Email"]</p></div></div>
+<p>[text your-subject placeholder "Subject"]</p>
+<p>[textarea your-message placeholder "Your Comment"]</p>
+<p class="wrap-submit">[submit class:btn class:btn-default "Send Message"]</p>]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_mail]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:8:{s:7:"subject";s:14:"[your-subject]";s:6:"sender";s:29:"[your-name] <admin@gmail.com>";s:4:"body";s:174:"From: [your-name] <[your-email]>
+Subject: [your-subject]
+
+Message Body:
+[your-message]
+
+--
+This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.com)";s:9:"recipient";s:15:"admin@gmail.com";s:18:"additional_headers";s:22:"Reply-To: [your-email]";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_mail_2]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:9:{s:6:"active";b:0;s:7:"subject";s:14:"[your-subject]";s:6:"sender";s:25:"Wingman <admin@gmail.com>";s:4:"body";s:116:"Message Body:
+[your-message]
+
+--
+This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.com)";s:9:"recipient";s:12:"[your-email]";s:18:"additional_headers";s:25:"Reply-To: admin@gmail.com";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_messages]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:23:{s:12:"mail_sent_ok";s:43:"Your message was sent successfully. Thanks.";s:12:"mail_sent_ng";s:93:"Failed to send your message. Please try later or contact the administrator by another method.";s:16:"validation_error";s:74:"Validation errors occurred. Please confirm the fields and submit it again.";s:4:"spam";s:93:"Failed to send your message. Please try later or contact the administrator by another method.";s:12:"accept_terms";s:35:"Please accept the terms to proceed.";s:16:"invalid_required";s:34:"Please fill in the required field.";s:16:"invalid_too_long";s:23:"This input is too long.";s:17:"invalid_too_short";s:24:"This input is too short.";s:12:"invalid_date";s:26:"Date format seems invalid.";s:14:"date_too_early";s:23:"This date is too early.";s:13:"date_too_late";s:22:"This date is too late.";s:13:"upload_failed";s:22:"Failed to upload file.";s:24:"upload_file_type_invalid";s:30:"This file type is not allowed.";s:21:"upload_file_too_large";s:23:"This file is too large.";s:23:"upload_failed_php_error";s:38:"Failed to upload file. Error occurred.";s:14:"invalid_number";s:28:"Number format seems invalid.";s:16:"number_too_small";s:25:"This number is too small.";s:16:"number_too_large";s:25:"This number is too large.";s:23:"quiz_answer_not_correct";s:27:"Your answer is not correct.";s:17:"captcha_not_match";s:31:"Your entered code is incorrect.";s:13:"invalid_email";s:28:"Email address seems invalid.";s:11:"invalid_url";s:18:"URL seems invalid.";s:11:"invalid_tel";s:31:"Telephone number seems invalid.";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_additional_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_locale]]></wp:meta_key>
+			<wp:meta_value><![CDATA[en_US]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
