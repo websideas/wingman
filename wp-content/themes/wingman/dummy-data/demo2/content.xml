@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.4" created="2015-12-16 08:59" -->
+<!-- generator="WordPress/4.4" created="2015-12-17 09:33" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Wingman</title>
 	<link>http://wingman.kitethemes.com/demo2</link>
 	<description>Just another WordPress site</description>
-	<pubDate>Wed, 16 Dec 2015 08:59:52 +0000</pubDate>
+	<pubDate>Thu, 17 Dec 2015 09:33:54 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://wingman.kitethemes.com/demo2</wp:base_site_url>
@@ -13892,7 +13892,7 @@ To delete a comment, just log in and view the post&#039;s comments. There you wi
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_rev_slider]]></wp:meta_key>
-			<wp:meta_value><![CDATA[slider1]]></wp:meta_value>
+			<wp:meta_value><![CDATA[slider2]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_page_top_spacing]]></wp:meta_key>

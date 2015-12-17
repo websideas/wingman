@@ -447,7 +447,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'footer_copyright_text',
                         'type'     => 'editor',
                         'title'    => __( 'Footer Copyright Text', THEME_LANG ),
-                        'default'  => '<p style="margin-bottom: 38px;"><a href="'.esc_url( home_url( '/' )).'"><img src="'.THEME_IMG.'logo-light.png" alt="Wingman" /></a></p><p style="margin-bottom: 24px;"><img src="'.THEME_IMG.'payment.png" alt="payment" /></p>Copyright © 2015 - <a href="'.esc_url( home_url( '/' )).'">Wing Man</a> - All rights reserved. <br />Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a>'
+                        'default'  => '<p style="margin-bottom: 38px;"><a href="'.esc_url( home_url( '/' )).'"><img src="'.THEME_IMG.'logo-light.png" alt="Wingman" /></a></p><p style="margin-bottom: 24px;"><img src="'.THEME_IMG.'payment.png" alt="payment" /></p><p style="margin:0;">Copyright Â© 2015 - <a href="'.esc_url( home_url( '/' )).'">Wing Man</a> - All rights reserved. </p><p style="margin:0;">Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a></p>'
                     ),
                 )
             );
