@@ -225,7 +225,6 @@ vc_map( array(
             'value' => array(
                 __( 'Title before skill', 'js_composer' ) => 'before',
                 __( 'Title after skill', 'js_composer' ) => 'after',
-                __( 'Title inner skill', 'js_composer' ) => 'inner',
             ),
             'description' => __( 'Select skill background color.', 'js_composer' ),
             'admin_label' => true,
