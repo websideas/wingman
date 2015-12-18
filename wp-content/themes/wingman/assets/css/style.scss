@@ -247,6 +247,23 @@ blockquote,
       left: 0;
     }
   }
+  &.blockquote-reverse{
+    border: 1px solid $primary-color;
+    text-align: right;
+    footer,
+    small{
+      text-align: right;
+      &:before{
+        left: auto;
+        right: 0;
+      }
+    }
+    &:after{
+      bottom: 35px;
+      left: 45px;
+      right: auto;
+    }
+  }
 }
 .post-link-outer{
   &:after{
@@ -4717,6 +4734,43 @@ article.post-item.post-layout-classic {
     }
   }
 }
+
+/**
+ * 15.11. Dropcap
+ **/
+.kt_dropcap {
+  display: block;
+  float: left;
+  font-size: 45px;
+  line-height: 50px;
+  margin-right: 15px;
+  margin-top: 5px;
+  text-align: center;
+  &.dropcap-lg{
+    height: 70px;
+    line-height: 70px;
+    width: 70px;
+    font-size: 50px;
+  }
+  &.dropcap-md {
+    height: 60px;
+    line-height: 60px;
+    width: 60px;
+  }
+  &.dropcap-sm {
+    height: 50px;
+    line-height: 50px;
+    font-size: 35px;
+    width: 50px;
+  }
+  &.dropcap-xs {
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    font-size: 30px;
+  }
+}
+
 /**
  * 15.12. Contact Info
  **/
@@ -4870,6 +4924,34 @@ article.post-item.post-layout-classic {
     }
   }
 }
+
+/*
+ * 15.15. List
+ */
+ul.kt-list-fancy {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+  > li{
+    padding-left: 30px;
+    position: relative;
+    line-height: 28px;
+    > p:last-child{
+      margin: 0;
+    }
+    > .vc_icon_element-icon{
+      display: block;
+      height: 25px;
+      left: 0;
+      line-height: 25px;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 25px;
+    }
+  }
+}
+
 /* ==============================
    16. Page Content
    ============================== */

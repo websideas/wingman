@@ -603,6 +603,7 @@
                     func_cb( 'afterUpdate',   elem );
                 }
             };
+            console.log( options );
 
             objCarousel.imagesLoaded(function() {
                 objCarousel.owlCarousel(options);

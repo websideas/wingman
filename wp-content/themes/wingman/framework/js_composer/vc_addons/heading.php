@@ -12,7 +12,6 @@ class WPBakeryShortCode_KT_Heading extends WPBakeryShortCode_VC_Custom_heading {
             'text' => __( 'This is custom heading element with Google Fonts', 'js_composer' ),
             'align' => 'center',
             'layout' => '1',
-            'skin' => 'dark',
 
             'font_container' => '',
             'use_theme_fonts' => 'yes',
@@ -33,7 +32,6 @@ class WPBakeryShortCode_KT_Heading extends WPBakeryShortCode_VC_Custom_heading {
             'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' ),
             'align' => 'kt-heading-align-'.$align,
             'layout' => 'layout-'.$layout,
-            'skin' => 'kt-heading-'.$skin,
         );
 
         $output = $text = $google_fonts = $font_container = $el_class = $css = $google_fonts_data = $font_container_data = $style = '';
@@ -124,17 +122,6 @@ vc_map( array(
                 __( 'Layout 2', 'js_composer' ) => "2",
             ),
             'description' => __( 'Select your layout.', THEME_LANG )
-        ),
-        array(
-            'type' => 'dropdown',
-            'heading' => __( 'Skin', THEME_LANG ),
-            'param_name' => 'skin',
-            'value' => array(
-                __( 'Default', 'js_composer' ) => 'dark',
-                __( 'Light', 'js_composer' ) => 'light',
-            ),
-            'std' => 'dark',
-            'description' => __( 'Select your skin.', THEME_LANG )
         ),
 
         array(

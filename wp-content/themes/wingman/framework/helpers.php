@@ -651,9 +651,9 @@ function kt_render_carousel($data, $extra = '', $class = 'owl-carousel kt-owl-ca
     $autoplay = ($autoplay) ? $autoplayspeed : $autoplay;
 
     $data_carousel = array(
-        'mousedrag' => $mousedrag,
-        "autoheight" => $autoheight,
-        "autoplay" => $autoplay,
+        'mouseDrag' => $mousedrag,
+        "autoHeight" => $autoheight,
+        "autoPlay" => $autoplay,
         'navigation_icon' => $navigation_icon,
         "navigation" => $navigation,
         'navigation_pos' => $navigation_position,

@@ -232,6 +232,7 @@ function kt_setting_script() {
             .woocommerce-page div.product .cart .single_add_to_cart_button:focus,
             .woocommerce div.product .cart .single_add_to_cart_button:focus,
             
+            blockquote.blockquote-reverse, .blockquote.blockquote-reverse,
             .social-background-empty.social-style-accent a,
             .social-background-outline.social-style-accent a,
             .owl-carousel-kt.carousel-dark .owl-buttons > div:hover,

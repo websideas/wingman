@@ -8,7 +8,6 @@ class WPBakeryShortCode_Blockquote extends WPBakeryShortCode {
     protected function content($atts, $content = null) {
         $atts = shortcode_atts( array(
             'author' => '',
-            'style' => '',
             'reverse' => 'false',
             'css' => '',
             'css_animation' => '',
@@ -25,7 +24,6 @@ class WPBakeryShortCode_Blockquote extends WPBakeryShortCode {
             'css_animation' => $this->getCSSAnimation( $css_animation ),
             'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' ),
             'reverse' => ( $reverse) ? 'blockquote-reverse' : '',
-            'style' => $style
         );
 
         $elementClass = preg_replace( array( '/\s+/', '/^\s|\s$/' ), array( ' ', '' ), implode( ' ', $elementClass ) );
@@ -60,17 +58,6 @@ vc_map( array(
             'heading' => __( 'Author', 'js_composer' ),
             'param_name' => 'author',
             "admin_label" => true,
-        ),
-        array(
-            'type' => 'dropdown',
-            'heading' => __( 'Style', THEME_LANG ),
-            'param_name' => 'style',
-            'value' => array(
-                __( 'Normal', THEME_LANG ) => '',
-                __( 'Classic', THEME_LANG ) => 'classic',
-                __( 'Simple', THEME_LANG ) => 'simple',
-            ),
-            'description' => __( 'Position of content.', THEME_LANG ),
         ),
         array(
             'type' => 'kt_switch',

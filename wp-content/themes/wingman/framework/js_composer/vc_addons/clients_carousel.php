@@ -32,7 +32,7 @@ class WPBakeryShortCode_Clients_Carousel extends WPBakeryShortCode {
             'navigation_position' => 'center',
             'navigation_style' => '',
             'navigation_icon' => 'fa fa-angle-left|fa fa-angle-right',
-            'pagination' => true,
+            'pagination' => false,
 
             'css_animation' => '',
             'el_class' => '',
@@ -306,6 +306,7 @@ vc_map( array(
             "suffix" => __("milliseconds", THEME_LANG),
             'group' => __( 'Carousel', THEME_LANG )
         ),
+
         array(
             "type" => "kt_heading",
             "heading" => __("Items to Show?", THEME_LANG),
@@ -405,9 +406,6 @@ vc_map( array(
             'group' => __( 'Carousel', THEME_LANG ),
             'value' => array(
                 __( 'Normal', THEME_LANG ) => '',
-                __( 'Circle Background', THEME_LANG ) => 'circle',
-                __( 'Square Background', THEME_LANG ) => 'square',
-                __( 'Round Background', THEME_LANG ) => 'round',
                 __( 'Circle Border', THEME_LANG ) => 'circle_border',
                 __( 'Square Border', THEME_LANG ) => 'square_border',
                 __( 'Round Border', THEME_LANG ) => 'round_border',
@@ -444,22 +442,7 @@ vc_map( array(
             'type' => 'kt_switch',
             'heading' => __( 'Pagination', THEME_LANG ),
             'param_name' => 'pagination',
-            'value' => 'true',
-            "description" => __("Show pagination in carousel", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG )
-        ),
-
-        array(
-            "type" => "kt_heading",
-            "heading" => __("Pagination settings", THEME_LANG),
-            "param_name" => "pagination_settings",
-            'group' => __( 'Carousel', THEME_LANG )
-        ),
-        array(
-            'type' => 'kt_switch',
-            'heading' => __( 'Pagination', THEME_LANG ),
-            'param_name' => 'pagination',
-            'value' => 'true',
+            'value' => 'false',
             "description" => __("Show pagination in carousel", THEME_LANG),
             'group' => __( 'Carousel', THEME_LANG )
         ),

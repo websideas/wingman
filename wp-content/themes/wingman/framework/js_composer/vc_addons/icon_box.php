@@ -9,7 +9,6 @@ class WPBakeryShortCode_Icon_Box extends WPBakeryShortCode_VC_Custom_heading {
     protected function content($atts, $content = null) {
         $atts = shortcode_atts( array(
             'title' => __( 'Title', 'js_composer' ),
-            'skin' => '',
             'link' => '',
 
             'use_theme_fonts' => 'true',
@@ -49,10 +48,6 @@ class WPBakeryShortCode_Icon_Box extends WPBakeryShortCode_VC_Custom_heading {
             'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' ),
             'layout' => 'layout-'.$icon_box_layout
         );
-
-        if($skin){
-            $elementClass['skin'] = 'icon-box-skin-'.$skin;
-        }
 
         extract( $this->getAttributes( $atts ) );
         unset($font_container_data['values']['text_align']);
@@ -158,18 +153,6 @@ vc_map( array(
             'description' => __( 'Select your layout.', THEME_LANG ),
             "admin_label" => true,
         ),
-
-        array(
-            'type' => 'dropdown',
-            'heading' => __( 'Skin', THEME_LANG ),
-            'param_name' => 'skin',
-            'value' => array(
-                __( 'Defalut', THEME_LANG ) => '',
-                __( 'Light', THEME_LANG ) => 'light',
-            ),
-            'description' => __( 'Select your layout.', THEME_LANG ),
-        ),
-
 
 
         array(

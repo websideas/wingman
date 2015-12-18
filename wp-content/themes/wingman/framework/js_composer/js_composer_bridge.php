@@ -92,30 +92,19 @@ foreach($visibilities_arr as $item){
 $composer_addons = array(
     'dropcap.php',
     'blockquote.php',
-    'divider.php',
     'list.php',
     'heading.php',
-    'lightbox.php',
 
     'blog_posts.php',
-    'blog_posts_carousel.php',
-
-
-    'alert.php',
+    
     'icon_box.php',
-    'counter.php',
-    'callout.php',
     'contact_info.php',
     'clients_carousel.php',
-    'client_gird.php',
     'testimonial_carousel.php',
-    'image_banner.php',
 
-    //'button.php',
     'skill.php',
     'socials.php',
     'team.php',
-    'piechart.php',
     'coming_soon.php',
     'googlemap.php',
 

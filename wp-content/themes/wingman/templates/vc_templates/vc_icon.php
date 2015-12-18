@@ -106,6 +106,7 @@ if($icon_type == 'image'){
         if ( false !== strpos( $background_style, 'outline' ) ) {
             $style = 'border-color:' . $custom_background_color;
         } else {
+            $style = 'background-color:' . $custom_background_color;
         }
     }
     $style = $style ? ' style="' . esc_attr( $style ) . '"' : '';

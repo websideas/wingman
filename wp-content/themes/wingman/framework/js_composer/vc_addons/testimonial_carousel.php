@@ -400,6 +400,7 @@ vc_map( array(
             "suffix" => __("milliseconds", THEME_LANG),
             'group' => __( 'Carousel', THEME_LANG )
         ),
+
         array(
             "type" => "kt_heading",
             "heading" => __("Navigation settings", THEME_LANG),
@@ -429,24 +430,12 @@ vc_map( array(
             "dependency" => array("element" => "navigation","value" => array('true')),
         ),
         array(
-            'type' => 'kt_switch',
-            'heading' => __( 'Always Show Navigation', THEME_LANG ),
-            'param_name' => 'navigation_always_on',
-            'value' => 'false',
-            "description" => __("Always show the navigation.", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG ),
-            "dependency" => array("element" => "navigation_position","value" => array('center', 'center_outside')),
-        ),
-        array(
             'type' => 'dropdown',
             'heading' => __( 'Navigation style', 'js_composer' ),
             'param_name' => 'navigation_style',
             'group' => __( 'Carousel', THEME_LANG ),
             'value' => array(
                 __( 'Normal', THEME_LANG ) => '',
-                __( 'Circle Background', THEME_LANG ) => 'circle',
-                __( 'Square Background', THEME_LANG ) => 'square',
-                __( 'Round Background', THEME_LANG ) => 'round',
                 __( 'Circle Border', THEME_LANG ) => 'circle_border',
                 __( 'Square Border', THEME_LANG ) => 'square_border',
                 __( 'Round Border', THEME_LANG ) => 'round_border',

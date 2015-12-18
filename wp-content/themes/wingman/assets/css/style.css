@@ -277,6 +277,32 @@ blockquote,
       position: absolute;
       top: 0;
       left: 0; }
+  .post-link-outer.blockquote-reverse,
+  blockquote.blockquote-reverse,
+  .blockquote.blockquote-reverse {
+    border: 1px solid #82c14f;
+    text-align: right; }
+    .post-link-outer.blockquote-reverse footer,
+    .post-link-outer.blockquote-reverse small,
+    blockquote.blockquote-reverse footer,
+    blockquote.blockquote-reverse small,
+    .blockquote.blockquote-reverse footer,
+    .blockquote.blockquote-reverse small {
+      text-align: right; }
+      .post-link-outer.blockquote-reverse footer:before,
+      .post-link-outer.blockquote-reverse small:before,
+      blockquote.blockquote-reverse footer:before,
+      blockquote.blockquote-reverse small:before,
+      .blockquote.blockquote-reverse footer:before,
+      .blockquote.blockquote-reverse small:before {
+        left: auto;
+        right: 0; }
+    .post-link-outer.blockquote-reverse:after,
+    blockquote.blockquote-reverse:after,
+    .blockquote.blockquote-reverse:after {
+      bottom: 35px;
+      left: 45px;
+      right: auto; }
 
 .post-link-outer:after {
   font-family: "FontAwesome";
@@ -4960,6 +4986,37 @@ article.post-item.post-layout-classic {
     transition-delay: 0.6s; }
 
 /**
+ * 15.11. Dropcap
+ **/
+.kt_dropcap {
+  display: block;
+  float: left;
+  font-size: 45px;
+  line-height: 50px;
+  margin-right: 15px;
+  margin-top: 5px;
+  text-align: center; }
+  .kt_dropcap.dropcap-lg {
+    height: 70px;
+    line-height: 70px;
+    width: 70px;
+    font-size: 50px; }
+  .kt_dropcap.dropcap-md {
+    height: 60px;
+    line-height: 60px;
+    width: 60px; }
+  .kt_dropcap.dropcap-sm {
+    height: 50px;
+    line-height: 50px;
+    font-size: 35px;
+    width: 50px; }
+  .kt_dropcap.dropcap-xs {
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    font-size: 30px; }
+
+/**
  * 15.12. Contact Info
  **/
 .contact-info-wrapper {
@@ -5097,6 +5154,29 @@ article.post-item.post-layout-classic {
       bottom: -5px;
       left: 50%;
       margin-left: -7px; }
+
+/*
+ * 15.15. List
+ */
+ul.kt-list-fancy {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px; }
+  ul.kt-list-fancy > li {
+    padding-left: 30px;
+    position: relative;
+    line-height: 28px; }
+    ul.kt-list-fancy > li > p:last-child {
+      margin: 0; }
+    ul.kt-list-fancy > li > .vc_icon_element-icon {
+      display: block;
+      height: 25px;
+      left: 0;
+      line-height: 25px;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 25px; }
 
 /* ==============================
    16. Page Content
