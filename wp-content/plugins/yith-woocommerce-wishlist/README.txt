@@ -3,8 +3,8 @@
 Contributors: yithemes
 Tags: wishlist, woocommerce, products, themes, yit, e-commerce, shop, ecommerce wishlist, yith, woocommerce wishlist, woocommerce 2.3 ready, shop wishlist
 Requires at least: 4.0
-Tested up to: 4.3.1
-Stable tag: 2.0.12
+Tested up to: 4.4
+Stable tag: 2.0.13
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -104,6 +104,16 @@ you should ask theme developers to update custom templates and replace the old t
 4. The Wishlist settings page
 
 == Changelog ==
+
+= 2.0.13 =
+
+* Added check over adding_to_cart event data existance in js procedures
+* Added 'yith_wcwl_added_to_cart_message' filter, to customize added to cart message in wishlist page
+* Added nofollow to "Add to Wishlist" links, where missing
+* Added 'yith_wcwl_email_share_subject' filter to customize share by email subject
+* Added 'yith_wcwl_email_share_body' filter to customize share by email body
+* Added function "yith_wcwl_count_all_products"
+* Fixed plugin-fw loading
 
 = 2.0.12 =
 
@@ -340,9 +350,12 @@ Full documentation is available [here](http://yithemes.com/docs-plugins/yith-woo
 
 == Upgrade notice ==
 
-= 2.0.12 =
+= 2.0.13 =
 
-* Added: method to count all products in wishlist
-* Tweak: Added wishlist js handling on 'yith_wcwl_init' triggered on document
-* Tweak: Performance improved with new plugin core 2.0
-* Fixed: occasional fatal error for users with outdated version of plugin-fw on their theme
+* Added check over adding_to_cart event data existance in js procedures
+* Added 'yith_wcwl_added_to_cart_message' filter, to customize added to cart message in wishlist page
+* Added nofollow to "Add to Wishlist" links, where missing
+* Added 'yith_wcwl_email_share_subject' filter to customize share by email subject
+* Added 'yith_wcwl_email_share_body' filter to customize share by email body
+* Added function "yith_wcwl_count_all_products"
+* Fixed plugin-fw loading
