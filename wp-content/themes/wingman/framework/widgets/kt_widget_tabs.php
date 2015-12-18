@@ -77,7 +77,7 @@ class WP_Widget_KT_Tabs extends WP_Widget {
                 <ul class="clearfix kt-tabs-nav">
                     <?php if( $select_rand ){ ?><li><a href="#kt_tab_rand<?php echo $rand; ?>"><?php _e( 'Random', THEME_LANG ); ?></a></li><?php } ?>
                     <?php if( $select_recent ){ ?><li><a href="#kt_tab_recent<?php echo $rand; ?>"><?php _e( 'Recent', THEME_LANG ); ?></a></li><?php } ?>
-                    <?php if( $select_comments ){ ?><li><a href="#kt_tab_comments<?php echo $rand; ?>"><i class="icon_chat_alt"></i> </a></li><?php } ?>
+                    <?php if( $select_comments ){ ?><li><a href="#kt_tab_comments<?php echo $rand; ?>"><i class="fa fa-comment-o"></i></a></li><?php } ?>
                 </ul>
                 <div class="tabs-container">
                     <?php

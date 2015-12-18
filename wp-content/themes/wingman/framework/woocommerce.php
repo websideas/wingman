@@ -818,6 +818,7 @@ if (!function_exists('kt_get_woo_sidebar')) {
     {
 
 
+
         $sidebar = array('sidebar_area' => '');
         $requestCustom = false;
 
@@ -836,7 +837,6 @@ if (!function_exists('kt_get_woo_sidebar')) {
             if(!isset($sidebar['sidebar'])){
                 $sidebar['sidebar'] = rwmb_meta('_kt_sidebar', array(), $post_id);
             }
-
             if($sidebar['sidebar'] == '' || $sidebar['sidebar'] == 'default' || $requestCustom){
                 if(!$requestCustom){
                     $sidebar['sidebar'] = kt_option('product_sidebar', 'right');

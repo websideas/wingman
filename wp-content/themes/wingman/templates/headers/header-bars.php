@@ -22,6 +22,11 @@
                     <?php } ?>
                     <li><a href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>"><?php _e('My Cart', THEME_LANG) ?></a></li>
                     <li><a href="<?php echo esc_url( WC()->cart->get_checkout_url() ); ?>"><?php _e('Check out', THEME_LANG) ?></a></li>
+                    <?php if ( is_user_logged_in() ) { ?>
+                        <li><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account'); ?>"><?php _e('My Account'); ?></a></li>
+                    <?php }else{ ?>
+                        <li><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register'); ?>"><?php _e('Login / Register'); ?></a></li>
+                    <?php } ?>
                 </ul>
             </div><!-- .menu-bars-item -->
 

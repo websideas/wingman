@@ -3535,7 +3535,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'shop_single_product',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Shop Product settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Single Product settings', THEME_LANG ).'</div>',
                         'full_width' => true
                     ),
                     array(

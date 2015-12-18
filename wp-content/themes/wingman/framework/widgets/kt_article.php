@@ -144,7 +144,7 @@ class Widget_KT_Posts extends WP_Widget {
         $instance['show_comment'] = isset( $new_instance['show_comment'] ) ? (bool) $new_instance['show_comment'] : false;
         $instance['show_author'] = isset( $new_instance['show_author'] ) ? (bool) $new_instance['show_author'] : false;
 
-        $instance['category'] = isset( $new_instance['show_author'] ) ? $new_instance['category'] :  array();
+        $instance['category'] = isset( $new_instance['category'] ) ? $new_instance['category'] :  array();
 
         if ( in_array( $new_instance['orderby'], array( 'name', 'id', 'date', 'author', 'modified', 'rand', 'comment_count' ) ) ) {
             $instance['orderby'] = $new_instance['orderby'];

@@ -375,4 +375,25 @@ only screen and (min-resolution: 144dpi) {
 	    }
 	  }
 	}
+	.woocommerce-edit-address{
+	  form{
+	    p.form-row{
+	      padding:0;
+	      label{
+	        position: static;
+	      }        
+	    }
+	  }
+	}
+	#customer_details {
+	    .woocommerce-billing-fields,
+	    .woocommerce-shipping-fields {
+	    	p.form-row{
+			    padding:0;
+			    label{
+			    	position: static;
+			    }      
+	    	}
+	    }
+	}
 }

@@ -200,6 +200,18 @@
     .wrapper-comingsoon.style2 .coming-soon .wrap:nth-child(3) {
       margin-bottom: 20px; }
     .wrapper-comingsoon.style2 .coming-soon .wrap:nth-child(4) {
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+
+  .woocommerce-edit-address form p.form-row {
+    padding: 0; }
+    .woocommerce-edit-address form p.form-row label {
+      position: static; }
+
+  #customer_details .woocommerce-billing-fields p.form-row,
+  #customer_details .woocommerce-shipping-fields p.form-row {
+    padding: 0; }
+    #customer_details .woocommerce-billing-fields p.form-row label,
+    #customer_details .woocommerce-shipping-fields p.form-row label {
+      position: static; } }
 
 /*# sourceMappingURL=queries.css.map */

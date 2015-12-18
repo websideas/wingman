@@ -83,12 +83,15 @@ function kt_setting_script() {
             .team .team-attr .agency,
             .wrapper-comingsoon.style2 .coming-soon .wrap .value-time,
             .wrapper-comingsoon.style3 .coming-soon .wrap .value-time,
+            .widget_kt_twitter ul li .kt-twitter-tool,
 
             .owl-carousel-kt.carousel-dark .owl-buttons > div:hover,
             .owl-carousel-kt.carousel-light .owl-buttons > div:hover,
             .woocommerce p.stars a:hover,
             .comment-actions a:hover, 
             .comment-actions a:focus,
+            .kt-aboutwidget-title,
+            .kt-aboutwidget-socials a:hover,
             .menu-bars-outer .menu-bars-items ul li a:hover,
             .bag-products .bag-product .bag-product-title a:hover,
             .woocommerce .widget_price_filter .price_slider_amount .price_label span,
@@ -124,8 +127,14 @@ function kt_setting_script() {
             .woocommerce .star-rating span:before
 
             {
-                color: <?php echo $accent; ?>
+                color: <?php echo $accent; ?>;
             }
+            
+            .social-background-empty.social-style-accent a,
+            .social-background-outline.social-style-accent a{
+                color: <?php echo $accent; ?>!important;
+            }
+
             
             .woocommerce.compare-button a:hover, 
             .woocommerce.compare-button a.add_to_wishlist:hover, 
@@ -167,6 +176,7 @@ function kt_setting_script() {
             .widget_recent_comments ul li:hover::after, 
             .widget_recent_entries ul li:hover::after,
             
+            .kt_flickr a::after,
             .owl-carousel-kt .owl-pagination .owl-page.active, 
             .owl-carousel-kt .owl-pagination .owl-page:hover,
             #header-content-mobile .header-mobile-tools a.mobile-cart span,
@@ -183,7 +193,9 @@ function kt_setting_script() {
             .woocommerce div.product .cart .single_add_to_cart_button:hover,
             .woocommerce-page div.product .cart .single_add_to_cart_button:focus,
             .woocommerce div.product .cart .single_add_to_cart_button:focus,
-
+            
+            #calendar_wrap table tbody td#today, 
+            #calendar_wrap table thead td#today,
             .widget_nav_menu ul li a:hover::after, 
             .widget_pages ul li a:hover::after, 
             .widget_product_categories ul li a:hover::after, 
@@ -201,6 +213,10 @@ function kt_setting_script() {
             {
                 background-color: <?php echo $accent; ?>;
             }
+
+            .social-background-fill.social-style-accent a{
+                background-color: <?php echo $accent; ?>!important;
+            }
             
             .woocommerce #respond input#submit:hover, 
             .woocommerce a.button:hover, 
@@ -216,6 +232,8 @@ function kt_setting_script() {
             .woocommerce-page div.product .cart .single_add_to_cart_button:focus,
             .woocommerce div.product .cart .single_add_to_cart_button:focus,
             
+            .social-background-empty.social-style-accent a,
+            .social-background-outline.social-style-accent a,
             .owl-carousel-kt.carousel-dark .owl-buttons > div:hover,
             .owl-carousel-kt.carousel-light .owl-buttons > div:hover,
             div.swatch-wrapper.selected, div.swatch-wrapper:hover,

@@ -2375,6 +2375,31 @@ div.swatch-wrapper {
     #customer_details .woocommerce-shipping-fields #ship-to-different-address-checkbox {
       margin: 0; }
 
+.woocommerce-edit-address form .form-row-first,
+.woocommerce-edit-address form .form-row-last {
+  float: left;
+  margin-right: 0;
+  width: 100%; }
+.woocommerce-edit-address form p.form-row {
+  position: relative;
+  padding: 0 0 0 190px;
+  margin-bottom: 30px; }
+  .woocommerce-edit-address form p.form-row input {
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 0; }
+  .woocommerce-edit-address form p.form-row label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    text-transform: uppercase;
+    color: #252525;
+    font-weight: normal; }
+    .woocommerce-edit-address form p.form-row label.checkbox {
+      margin: 0;
+      line-height: normal;
+      top: 6px; }
+
 .select2-container .select2-choice {
   border: none;
   border-bottom: 1px solid #e5e5e5;
@@ -2592,6 +2617,25 @@ div.swatch-wrapper {
 .woocommerce table.my_account_orders .order-actions .button {
   text-transform: uppercase;
   letter-spacing: 0.2em; }
+
+.woocommerce-account form label {
+  color: #252525;
+  font-weight: normal;
+  text-transform: uppercase; }
+.woocommerce-account form fieldset {
+  margin: 30px 0; }
+  .woocommerce-account form fieldset legend {
+    background: #f4f6f9;
+    color: #252525;
+    font-family: "Josefin Slab", serif;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin-bottom: 25px;
+    padding: 15px 15px 10px;
+    text-align: center;
+    text-transform: uppercase; }
 
 /** =========================
     13. Woocommerce Composer

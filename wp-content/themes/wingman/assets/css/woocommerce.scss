@@ -2431,6 +2431,40 @@ div.swatch-wrapper{
       }
     }
 }
+.woocommerce-edit-address{
+  form{
+    .form-row-first,
+    .form-row-last{
+      float: left;
+        margin-right: 0;
+        width: 100%;
+    }
+    p.form-row{
+      position: relative;
+      padding:0 0 0 190px;
+      margin-bottom: 30px;
+      input{
+        border:none;
+        border-bottom:1px solid $border-color;
+        padding:10px 0;
+      }
+      label{
+        position: absolute;
+        left:0;
+        top:10px;
+        text-transform: uppercase;
+        color:$title-text;;
+        font-weight: normal;
+        &.checkbox{
+          margin: 0;
+          line-height: normal;
+          top: 6px;
+        }
+      }        
+    }
+  }
+}
+
 .select2-container{
 	.select2-choice{
 		border: none;
@@ -2720,6 +2754,32 @@ div.swatch-wrapper{
       .button{
         text-transform: uppercase;
         letter-spacing: 0.2em;
+      }
+    }
+  }
+}
+
+.woocommerce-account{
+  form{
+    label{
+      color: $title-text;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+    fieldset{
+      margin: 30px 0;
+      legend{
+        background: $qty_bg;
+        color: $title-text;
+        font-family: $heading-font;
+        border: none;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        margin-bottom: 25px;
+        padding: 15px 15px 10px;
+        text-align: center;
+        text-transform: uppercase;
       }
     }
   }

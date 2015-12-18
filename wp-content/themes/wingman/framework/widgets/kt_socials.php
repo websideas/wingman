@@ -29,7 +29,7 @@ class WP_Widget_KT_Socials extends WP_Widget {
 
 
         $space_between_item    = isset( $instance['space_between_item'] ) ? absint( $instance['space_between_item'] ) : 3;
-        $custom_color    = isset( $instance['custom_color'] ) ? $instance['custom_color'] : '#d0a852';
+        $custom_color    = isset( $instance['custom_color'] ) ? $instance['custom_color'] : '#82c14f';
         
 		echo $args['before_widget'];
         
@@ -80,7 +80,7 @@ class WP_Widget_KT_Socials extends WP_Widget {
 
 	public function form( $instance ) {
 		//Defaults
-		$instance = wp_parse_args( (array) $instance, array( 'title' => __('Socials', THEME_LANG), 'target' => '_self', 'value' => '', 'style' => 'accent', 'background_style' => '', 'size' => 'standard', 'tooltip' => '', 'align' => '', 'space_between_item' => 3, 'custom_color' => '#d0a852' ) );
+		$instance = wp_parse_args( (array) $instance, array( 'title' => __('Socials', THEME_LANG), 'target' => '_self', 'value' => '', 'style' => 'accent', 'background_style' => '', 'size' => 'standard', 'tooltip' => '', 'align' => '', 'space_between_item' => 3, 'custom_color' => '#82c14f' ) );
         $title = strip_tags($instance['title']);
         
         $value = isset( $instance['value'] ) ? $instance['value'] : '';
@@ -90,7 +90,7 @@ class WP_Widget_KT_Socials extends WP_Widget {
         $tooltip = isset( $instance['tooltip'] ) ? $instance['tooltip'] : '';
         $align = isset( $instance['align'] ) ? $instance['align'] : '';
         $space_between_item    = isset( $instance['space_between_item'] ) ? absint( $instance['space_between_item'] ) : 3;
-        $custom_color    = isset( $instance['custom_color'] ) ? $instance['custom_color'] : '#d0a852';
+        $custom_color    = isset( $instance['custom_color'] ) ? $instance['custom_color'] : '#82c14f';
 	?>
         <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
