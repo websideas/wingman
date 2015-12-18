@@ -281,7 +281,8 @@ blockquote,
   blockquote.blockquote-reverse,
   .blockquote.blockquote-reverse {
     border: 1px solid #82c14f;
-    text-align: right; }
+    text-align: right;
+    padding: 30px 30px 23px 30px; }
     .post-link-outer.blockquote-reverse footer,
     .post-link-outer.blockquote-reverse small,
     blockquote.blockquote-reverse footer,
