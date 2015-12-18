@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.4" created="2015-12-17 09:53" -->
+<!-- generator="WordPress/4.4" created="2015-12-18 09:59" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Wingman</title>
 	<link>http://wingman.kitethemes.com/demo3</link>
 	<description>Just another WordPress site</description>
-	<pubDate>Thu, 17 Dec 2015 09:53:22 +0000</pubDate>
+	<pubDate>Fri, 18 Dec 2015 09:59:07 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://wingman.kitethemes.com/demo3</wp:base_site_url>
