@@ -241,17 +241,6 @@ vc_map( array(
             'description' => '',
         ),
         array(
-            'type' => 'kt_switch',
-            'heading' => __( 'Share box', THEME_LANG ),
-            'param_name' => 'sharebox',
-            'value' => 'true',
-            "description" => __("Show or hide the share box.", THEME_LANG),
-            'dependency' => array(
-                'element' => 'blog_type',
-                'value' => array( 'classic' )
-            ),
-        ),
-        array(
             "type" => "kt_heading",
             "heading" => __("Columns to Show?", THEME_LANG),
             "edit_field_class" => "kt_sub_heading vc_column",

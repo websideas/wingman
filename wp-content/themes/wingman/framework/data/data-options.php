@@ -2408,16 +2408,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'required' => array('archive_loop_style','equals', array( 'grid', 'masonry' ) ),
                     ),
                     array(
-                        'id' => 'archive_sharebox',
-                        'type' => 'switch',
-                        'title' => __('Share box', THEME_LANG),
-                        'desc' => __('Show or hide share box.', THEME_LANG),
-                        "default" => 0,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG),
-                        'required' => array('archive_loop_style','equals', array( 'classic' ) ),
-                    ),
-                    array(
                         'type' => 'divide',
                         'id' => 'divide_fake',
                     ),

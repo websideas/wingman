@@ -158,7 +158,6 @@ function kt_archive_count_span($links) {
 $kt_widgets = array(
 	'kt_image.php',
     'kt_facebook.php',
-    'kt_googleplus.php',
     'kt_article.php',
     'kt_twitter.php',
     'kt_widget_tabs.php',

@@ -11,11 +11,6 @@
         kt_post_thumbnail('blog_post', 'img-responsive', true, false);
     }
     ?>
-    <?php
-    if($blog_atts['sharebox']){
-        kt_share_box(get_the_ID());
-    }
-    ?>
     <?php if($blog_atts['show_meta']){ ?>
         <div class="entry-meta-data">
             <?php
