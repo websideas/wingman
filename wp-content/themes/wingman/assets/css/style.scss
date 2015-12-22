@@ -2778,8 +2778,13 @@ article.post-item {
     margin-bottom: 50px;
 }
 
-.posted-on time {
+.posted-on {
+  time{
     display: none;
+    &.published{
+      display: block;
+    }
+  }
 }
 
 .posted-on {
