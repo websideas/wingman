@@ -123,7 +123,7 @@ if($icon_type == 'image'){
         <?php if ( $has_style ): echo ' vc_icon_element-have-style-inner'; endif; ?> vc_icon_element-size-<?php echo esc_attr( $size ); ?> vc_icon_element-style-<?php echo esc_attr( $background_style ); ?> vc_icon_element-background-color-<?php echo esc_attr( $background_color ); ?>"<?php echo $style ?>>
 
         <?php if($icon_type == 'image'){ ?>
-            <img src="<?php echo $icon_class; ?>" class="img-responsive vc_icon_element-image"/>
+            <img src="<?php echo $icon_class; ?>" class="img-responsive vc_icon_element-image" alt="" />
         <?php }else{ ?>
             <span class="vc_icon_element-icon <?php echo $iconClass; ?>" <?php echo( $color === 'custom' ? 'style="color:' . esc_attr( $custom_color ) . ' !important"' : '' ); ?>></span>
         <?php } ?>

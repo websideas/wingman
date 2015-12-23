@@ -617,8 +617,7 @@ function kt_render_carousel($data, $extra = '', $class = 'owl-carousel kt-owl-ca
     $navigation_always_on = apply_filters('sanitize_boolean', $navigation_always_on);
     $pagination = apply_filters('sanitize_boolean', $pagination);
 
-    $output = $custom_css = '';
-    $uniqid = 'owl-carousel-'.uniqid();
+    $output = '';
 
     $owl_carousel_class = array(
         'owl-carousel-kt',
@@ -668,13 +667,9 @@ function kt_render_carousel($data, $extra = '', $class = 'owl-carousel kt-owl-ca
     );
 
 
-    $output .= '<div id="'.esc_attr($uniqid).'" class="'.esc_attr(implode(' ', $owl_carousel_class)).'">';
+    $output .= '<div class="'.esc_attr(implode(' ', $owl_carousel_class)).'">';
     $output .= '<div class=" '.$class.'" '.render_data_carousel($data_carousel).'>%carousel_html%</div>';
     $output .= '</div>';
-
-    if($custom_css){
-        $output .= '<div class="kt_custom_css" data-css="'.$custom_css.'"></div>';
-    }
 
     return $output;
 }

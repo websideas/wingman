@@ -1,8 +1,9 @@
 <form method="get" class="woocommerce-product-search searchform" action="<?php echo esc_url( home_url( '/'  ) ); ?>">
 	<div class="wrap_product_cat">
-		<?php 
+		<?php
 			$args = array(
 				'taxonomy' => 'product_cat',
+                'id' => 'cat_'.rand(),
 				'hierarchical' => 1,
 				'show_option_all' => __('All Categories', THEME_LANG)
 			);
