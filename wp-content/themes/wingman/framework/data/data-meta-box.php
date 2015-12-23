@@ -467,19 +467,6 @@ function kt_register_meta_boxes( $meta_boxes )
             ),
 
             array(
-                'name' => __('Transparent header Color Scheme', THEME_LANG),
-                'id'   => "{$prefix}header_scheme",
-                'type' => 'select',
-                'options' => array(
-                    'light'		=> __('Light', THEME_LANG),
-                    'dark'		=> __('Dark', THEME_LANG),
-                ),
-                'std'  => 'light',
-                'tab'  => 'header',
-                'compare' => array($prefix . 'header_position','=', 'transparent' ),
-            ),
-
-            array(
                 'name' => __('Select Your Slideshow Type', THEME_LANG),
                 'id' => $prefix . 'slideshow_source',
                 'desc' => __("You can select the slideshow type using this option.", THEME_LANG),

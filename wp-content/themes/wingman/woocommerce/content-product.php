@@ -38,7 +38,7 @@ if ( ! $product || ! $product->is_visible() ) {
 $woocommerce_loop['loop']++;
 
 // Extra post classes
-$classes = array( 'product' );
+$classes = array( 'product wow fadeInUp' );
 
 // Bootstrap Column
 $bootstrapColumn = round( 12 / $woocommerce_loop['columns'] );

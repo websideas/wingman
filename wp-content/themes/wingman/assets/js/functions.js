@@ -77,8 +77,6 @@
         
         $('.widget-container .kt_widget_tabs').tabs();
 
-
-
     });
     
     $(window).resize(function(){
