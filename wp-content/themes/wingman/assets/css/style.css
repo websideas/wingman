@@ -3255,7 +3255,7 @@ article.post-item {
 .posted-on time {
   display: none; }
   .posted-on time.published {
-    display: block; }
+    display: inline-block; }
 
 .posted-on .entry-date
 .published {

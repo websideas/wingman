@@ -2782,7 +2782,7 @@ article.post-item {
   time{
     display: none;
     &.published{
-      display: block;
+      display: inline-block;
     }
   }
 }
