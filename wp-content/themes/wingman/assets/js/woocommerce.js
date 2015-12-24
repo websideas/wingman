@@ -40,7 +40,8 @@
                 $heading = $this.find('.block-heading-tabs'),
                 $count = parseInt($heading.data('count'), 10);
             $this.tabs({
-                active: Math.ceil($count/2) - 1
+                active: Math.ceil($count/2) - 1,
+                show: { effect: "fadeIn", duration: 1500 }
             });
         });
 

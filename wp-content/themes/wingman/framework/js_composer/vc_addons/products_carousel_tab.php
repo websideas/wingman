@@ -81,7 +81,7 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
 
 
         $carousel_args = apply_filters('woocommerce_carousel_args', array(
-            'autoheight' => true,
+            'autoheight' => false,
             'autoplay' => false,
             'mousedrag' => true,
             'autoplayspeed' => 5000,
