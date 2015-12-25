@@ -1343,6 +1343,7 @@ select:not([multiple]) {
       float: left;
       margin-left: 15px;
       padding: 5px 0 5px 10px;
+      font-size: 16px;
       &.mobile-cart{
         position: relative;
         span{
@@ -1352,7 +1353,7 @@ select:not([multiple]) {
           background: $primary-color;
           @include border-radius(50%);
           top: 0;
-          right: -10px;
+          right: -8px;
           font-size: 10px;
           text-align: center;
           line-height: 17px;
@@ -1991,11 +1992,11 @@ body.opened-nav-animate{
   &:before{
     display: block;
     font-family: $heading-font;
-    font-size: 18px;
+    font-size: 18px!important;
     font-weight: bold;
-    line-height: 32px;
+    line-height: 32px!important;
     margin: 8px auto;
-    width: 18px;
+    width: 18px!important;
     word-wrap: break-word;
     color: $white;
   }
