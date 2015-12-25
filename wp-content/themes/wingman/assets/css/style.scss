@@ -2781,7 +2781,7 @@ article.post-item {
   time{
     display: none;
     &.published{
-      display: block;
+      display: inline-block;
     }
   }
 }
@@ -5091,7 +5091,6 @@ form.wpcf7-form{
 
   }
 }
-
 /* ==============================
    19. Back to top
    ============================== */

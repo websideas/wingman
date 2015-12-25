@@ -13,9 +13,10 @@
 5. Styles for devices(<=991px )
 6. Styles for devices(>=768px and <= 991px)
 7. Styles for devices(<=767px )
-8. Styles for devices(>=481px and <= 767px)
-9. Styles for devices(<=480px )
-10. Styles for devices(<=320px )
+8. Styles for devices(<=600px)
+9. Styles for devices(>=481px and <= 767px)
+10. Styles for devices(<=480px )
+11. Styles for devices(<=320px )
 */
 
 @import 'mixin';
@@ -295,7 +296,13 @@ only screen and (min-resolution: 144dpi) {
 	  }
 	}
 }
-/* 9. Styles for devices(<=480px) */
+
+/* 9. Styles for devices(>=481px and <= 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+
+}
+
+/* 10. Styles for devices(<=480px) */
 @media (max-width: 480px) {
 	.comment-content{
 		padding: 0;
@@ -406,4 +413,7 @@ only screen and (min-resolution: 144dpi) {
 	    }
 	}
 }
-/* 10. Styles for devices(<=320px) */
+/* 11. Styles for devices(<=320px) */
+@media (max-width: 320px) {
+
+}

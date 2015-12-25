@@ -281,18 +281,6 @@ function kt_register_meta_boxes( $meta_boxes )
                 ),
                 'std'  => -1
             ),
-            array(
-                'type' => 'select',
-                'name' => __('Post layouts', THEME_LANG),
-                'desc' => __('Select the your post layout.', THEME_LANG),
-                'id'   => "{$prefix}blog_post_layout",
-                'options' => array(
-                    ''    => __('Default', THEME_LANG),
-                    '1' => __( 'Layout 1', THEME_LANG ),
-                    '2' => __( 'layout 2', THEME_LANG ),
-                ),
-                'std' => ''
-            ),
 
             array(
                 'type' => 'select',
