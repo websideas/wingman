@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.4" created="2015-12-25 07:16" -->
+<!-- generator="WordPress/4.4" created="2015-12-25 09:41" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,11 +29,16 @@
 	<title>Wingman</title>
 	<link>http://wingman.kitethemes.com/demo2</link>
 	<description>Just another WordPress site</description>
-	<pubDate>Fri, 25 Dec 2015 07:16:08 +0000</pubDate>
+	<pubDate>Fri, 25 Dec 2015 09:41:48 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://wingman.kitethemes.com/demo2</wp:base_site_url>
 	<wp:base_blog_url>http://wingman.kitethemes.com/demo2</wp:base_blog_url>
+
+	<wp:term><wp:term_id>34</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[customer-service]]></wp:term_slug><wp:term_name><![CDATA[Customer Service]]></wp:term_name></wp:term>
+	<wp:term><wp:term_id>33</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[information]]></wp:term_slug><wp:term_name><![CDATA[Information]]></wp:term_name></wp:term>
+	<wp:term><wp:term_id>6</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[main-menu]]></wp:term_slug><wp:term_name><![CDATA[Main Menu]]></wp:term_name></wp:term>
+	<wp:term><wp:term_id>32</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[my-account]]></wp:term_slug><wp:term_name><![CDATA[My account]]></wp:term_name></wp:term>
 
 	<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[admin]]></wp:author_login><wp:author_email><![CDATA[admin@gmail.com]]></wp:author_email><wp:author_display_name><![CDATA[admin]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 
@@ -48,10 +53,6 @@
 	<wp:tag><wp:term_id>40</wp:term_id><wp:tag_slug><![CDATA[model]]></wp:tag_slug><wp:tag_name><![CDATA[model]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>37</wp:term_id><wp:tag_slug><![CDATA[summer]]></wp:tag_slug><wp:tag_name><![CDATA[Summer]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>28</wp:term_id><wp:tag_slug><![CDATA[world]]></wp:tag_slug><wp:tag_name><![CDATA[world]]></wp:tag_name></wp:tag>
-	<wp:term><wp:term_id>33</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[imfomation]]></wp:term_slug><wp:term_name><![CDATA[IMFOMATION]]></wp:term_name></wp:term>
-	<wp:term><wp:term_id>6</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[main-menu]]></wp:term_slug><wp:term_name><![CDATA[Main Menu]]></wp:term_name></wp:term>
-	<wp:term><wp:term_id>32</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[my-account]]></wp:term_slug><wp:term_name><![CDATA[My account]]></wp:term_name></wp:term>
-	<wp:term><wp:term_id>34</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[out-support]]></wp:term_slug><wp:term_name><![CDATA[OUT SUPPORT]]></wp:term_name></wp:term>
 	<wp:term><wp:term_id><![CDATA[23]]></wp:term_id><wp:term_taxonomy><![CDATA[pa_color]]></wp:term_taxonomy><wp:term_slug><![CDATA[black]]></wp:term_slug><wp:term_parent><![CDATA[]]></wp:term_parent><wp:term_name><![CDATA[Black]]></wp:term_name></wp:term>
 	<wp:term><wp:term_id><![CDATA[5]]></wp:term_id><wp:term_taxonomy><![CDATA[product_type]]></wp:term_taxonomy><wp:term_slug><![CDATA[external]]></wp:term_slug><wp:term_parent><![CDATA[]]></wp:term_parent><wp:term_name><![CDATA[external]]></wp:term_name></wp:term>
 	<wp:term><wp:term_id><![CDATA[44]]></wp:term_id><wp:term_taxonomy><![CDATA[pa_color]]></wp:term_taxonomy><wp:term_slug><![CDATA[green]]></wp:term_slug><wp:term_parent><![CDATA[]]></wp:term_parent><wp:term_name><![CDATA[Green]]></wp:term_name></wp:term>
@@ -4818,7 +4819,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="imfomation"><![CDATA[IMFOMATION]]></category>
+		<category domain="nav_menu" nicename="information"><![CDATA[Information]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
@@ -4925,7 +4926,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="imfomation"><![CDATA[IMFOMATION]]></category>
+		<category domain="nav_menu" nicename="information"><![CDATA[Information]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
@@ -5032,7 +5033,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="imfomation"><![CDATA[IMFOMATION]]></category>
+		<category domain="nav_menu" nicename="information"><![CDATA[Information]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
@@ -5139,7 +5140,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="imfomation"><![CDATA[IMFOMATION]]></category>
+		<category domain="nav_menu" nicename="information"><![CDATA[Information]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
@@ -5246,7 +5247,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="imfomation"><![CDATA[IMFOMATION]]></category>
+		<category domain="nav_menu" nicename="information"><![CDATA[Information]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
@@ -5353,7 +5354,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="out-support"><![CDATA[OUT SUPPORT]]></category>
+		<category domain="nav_menu" nicename="customer-service"><![CDATA[Customer Service]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
@@ -5460,7 +5461,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="out-support"><![CDATA[OUT SUPPORT]]></category>
+		<category domain="nav_menu" nicename="customer-service"><![CDATA[Customer Service]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
@@ -5567,7 +5568,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="out-support"><![CDATA[OUT SUPPORT]]></category>
+		<category domain="nav_menu" nicename="customer-service"><![CDATA[Customer Service]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
@@ -5674,7 +5675,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="out-support"><![CDATA[OUT SUPPORT]]></category>
+		<category domain="nav_menu" nicename="customer-service"><![CDATA[Customer Service]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
@@ -5781,7 +5782,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="out-support"><![CDATA[OUT SUPPORT]]></category>
+		<category domain="nav_menu" nicename="customer-service"><![CDATA[Customer Service]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
@@ -13584,7 +13585,7 @@ Pellentesque mauris lacus, vulputate vel arcu sed, rhoncus consectetur enim. Pel
 		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/?page_id=159</guid>
 		<description></description>
 		<content:encoded><![CDATA[[vc_row css=".vc_custom_1448847144191{margin-bottom: 70px !important;}"][vc_column][googlemap height="520" type="roadmap" stype="8" scrollwheel="1" location="81 Gordon Rd, Mandurah WA 6210"]<img class="aligncenter size-full wp-image-524" src="http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/logo-dark.png" alt="logo-dark" width="215" height="35" />
-[socials social="facebook,twitter,pinterest,dribbble" style="custom" tooltip="" align="center" space_between_item="10" custom_color="#b2b2b2"][contact_info address="81 Gordon Rd, Mandurah WA 6210" phone="(00) 123 456 789" email="demoemail@domain.com"][/googlemap][/vc_column][/vc_row][vc_row][vc_column][kt_heading text="We will love to hear from you" layout="2" letter_spacing="0" font_container="tag:h3|font_size:18px|color:%23252525"][/kt_heading][contact-form-7 id="4" title="We will love to hear from you"][/vc_column][/vc_row]]]></content:encoded>
+[socials social="facebook,twitter,pinterest,dribbble" style="custom" tooltip="" align="center" space_between_item="10" custom_color="#b2b2b2"][contact_info address="81 Gordon Rd, Mandurah WA 6210" phone="(00) 123 456 789" email="demoemail@domain.com"][/googlemap][/vc_column][/vc_row][vc_row][vc_column][kt_heading text="We will love to hear from you" layout="2" letter_spacing="0" font_container="tag:h3|font_size:18px|color:%23252525"][/kt_heading][contact-form-7 id="528" title="We will love to hear from you"][/vc_column][/vc_row]]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>159</wp:post_id>
 		<wp:post_date><![CDATA[2015-11-24 02:29:56]]></wp:post_date>
@@ -24798,126 +24799,6 @@ Suspendisse potenti. Maecenas sem turpis, congue tristique pharetra eget, tempus
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Contact form 1</title>
-		<link>http://wingman.kitethemes.com/demo2/?post_type=wpcf7_contact_form&#038;p=4</link>
-		<pubDate>Fri, 23 Oct 2015 04:15:12 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/?post_type=wpcf7_contact_form&#038;p=4</guid>
-		<description></description>
-		<content:encoded><![CDATA[<div class="row"><div class="col-md-6"><p>[text* your-name placeholder "Name"]</p></div>
-<div class="col-md-6"><p>[email* your-email placeholder "Email"]</p></div></div>
-<p>[text your-subject placeholder "Subject"]</p>
-<p>[textarea your-message placeholder "Your Comment"]</p>
-<p class="wrap-submit">[submit class:btn class:btn-default "Send Message"]</p>
-[your-subject]
-[your-name] <admin@gmail.com>
-From: [your-name] <[your-email]>
-Subject: [your-subject]
-
-Message Body:
-[your-message]
-
---
-This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.com/demo2)
-admin@gmail.com
-Reply-To: [your-email]
-
-
-
-
-[your-subject]
-Wingman <admin@gmail.com>
-Message Body:
-[your-message]
-
---
-This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.com/demo2)
-[your-email]
-Reply-To: admin@gmail.com
-
-
-
-Your message was sent successfully. Thanks.
-Failed to send your message. Please try later or contact the administrator by another method.
-Validation errors occurred. Please confirm the fields and submit it again.
-Failed to send your message. Please try later or contact the administrator by another method.
-Please accept the terms to proceed.
-Please fill in the required field.
-This input is too long.
-This input is too short.
-Date format seems invalid.
-This date is too early.
-This date is too late.
-Failed to upload file.
-This file type is not allowed.
-This file is too large.
-Failed to upload file. Error occurred.
-Number format seems invalid.
-This number is too small.
-This number is too large.
-Your answer is not correct.
-Your entered code is incorrect.
-Email address seems invalid.
-URL seems invalid.
-Telephone number seems invalid.]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>4</wp:post_id>
-		<wp:post_date><![CDATA[2015-10-23 04:15:12]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-10-23 04:15:12]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[contact-form-1]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[wpcf7_contact_form]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_form]]></wp:meta_key>
-			<wp:meta_value><![CDATA[<div class="row"><div class="col-md-6"><p>[text* your-name placeholder "Name"]</p></div>
-<div class="col-md-6"><p>[email* your-email placeholder "Email"]</p></div></div>
-<p>[text your-subject placeholder "Subject"]</p>
-<p>[textarea your-message placeholder "Your Comment"]</p>
-<p class="wrap-submit">[submit class:btn class:btn-default "Send Message"]</p>]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_mail]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:8:{s:7:"subject";s:14:"[your-subject]";s:6:"sender";s:29:"[your-name] <admin@gmail.com>";s:4:"body";s:180:"From: [your-name] <[your-email]>
-Subject: [your-subject]
-
-Message Body:
-[your-message]
-
---
-This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.com/demo2)";s:9:"recipient";s:15:"admin@gmail.com";s:18:"additional_headers";s:22:"Reply-To: [your-email]";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_mail_2]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:9:{s:6:"active";b:0;s:7:"subject";s:14:"[your-subject]";s:6:"sender";s:25:"Wingman <admin@gmail.com>";s:4:"body";s:122:"Message Body:
-[your-message]
-
---
-This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.com/demo2)";s:9:"recipient";s:12:"[your-email]";s:18:"additional_headers";s:25:"Reply-To: admin@gmail.com";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_messages]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:23:{s:12:"mail_sent_ok";s:43:"Your message was sent successfully. Thanks.";s:12:"mail_sent_ng";s:93:"Failed to send your message. Please try later or contact the administrator by another method.";s:16:"validation_error";s:74:"Validation errors occurred. Please confirm the fields and submit it again.";s:4:"spam";s:93:"Failed to send your message. Please try later or contact the administrator by another method.";s:12:"accept_terms";s:35:"Please accept the terms to proceed.";s:16:"invalid_required";s:34:"Please fill in the required field.";s:16:"invalid_too_long";s:23:"This input is too long.";s:17:"invalid_too_short";s:24:"This input is too short.";s:12:"invalid_date";s:26:"Date format seems invalid.";s:14:"date_too_early";s:23:"This date is too early.";s:13:"date_too_late";s:22:"This date is too late.";s:13:"upload_failed";s:22:"Failed to upload file.";s:24:"upload_file_type_invalid";s:30:"This file type is not allowed.";s:21:"upload_file_too_large";s:23:"This file is too large.";s:23:"upload_failed_php_error";s:38:"Failed to upload file. Error occurred.";s:14:"invalid_number";s:28:"Number format seems invalid.";s:16:"number_too_small";s:25:"This number is too small.";s:16:"number_too_large";s:25:"This number is too large.";s:23:"quiz_answer_not_correct";s:27:"Your answer is not correct.";s:17:"captcha_not_match";s:31:"Your entered code is incorrect.";s:13:"invalid_email";s:28:"Email address seems invalid.";s:11:"invalid_url";s:18:"URL seems invalid.";s:11:"invalid_tel";s:31:"Telephone number seems invalid.";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_additional_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_locale]]></wp:meta_key>
-			<wp:meta_value><![CDATA[en_US]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
 		<title>Order &#8211; November 27, 2015 @ 09:19 AM</title>
 		<link>http://wingman.kitethemes.com/demo2/?post_type=shop_order&#038;p=247</link>
 		<pubDate>Fri, 27 Nov 2015 09:19:00 +0000</pubDate>
@@ -25623,6 +25504,126 @@ This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.c
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_variation_description]]></wp:meta_key>
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Contact Wingman</title>
+		<link>http://wingman.kitethemes.com/demo2/?post_type=wpcf7_contact_form&#038;p=528</link>
+		<pubDate>Fri, 25 Dec 2015 09:26:41 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/?post_type=wpcf7_contact_form&#038;p=528</guid>
+		<description></description>
+		<content:encoded><![CDATA[<div class="row"><div class="col-md-6"><p>[text* your-name placeholder "Name"]</p></div>
+<div class="col-md-6"><p>[email* your-email placeholder "Email"]</p></div></div>
+<p>[text your-subject placeholder "Subject"]</p>
+<p>[textarea your-message placeholder "Your Comment"]</p>
+<p class="wrap-submit">[submit class:btn class:btn-default "Send Message"]</p>
+[your-subject]
+[your-name] <wordpress@wingman.kitethemes.com>
+From: [your-name] <[your-email]>
+Subject: [your-subject]
+
+Message Body:
+[your-message]
+
+--
+This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.com/demo2)
+admin@gmail.com
+Reply-To: [your-email]
+
+
+
+
+[your-subject]
+Wingman <wordpress@wingman.kitethemes.com>
+Message Body:
+[your-message]
+
+--
+This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.com/demo2)
+[your-email]
+Reply-To: admin@gmail.com
+
+
+
+Your message was sent successfully. Thanks.
+Failed to send your message. Please try later or contact the administrator by another method.
+Validation errors occurred. Please confirm the fields and submit it again.
+Failed to send your message. Please try later or contact the administrator by another method.
+Please accept the terms to proceed.
+Please fill in the required field.
+This input is too long.
+This input is too short.
+Date format seems invalid.
+This date is too early.
+This date is too late.
+Failed to upload file.
+This file type is not allowed.
+This file is too large.
+Failed to upload file. Error occurred.
+Number format seems invalid.
+This number is too small.
+This number is too large.
+Your answer is not correct.
+Your entered code is incorrect.
+Email address seems invalid.
+URL seems invalid.
+Telephone number seems invalid.]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>528</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-25 09:26:41]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-25 09:26:41]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[contact-wingman]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[wpcf7_contact_form]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_form]]></wp:meta_key>
+			<wp:meta_value><![CDATA[<div class="row"><div class="col-md-6"><p>[text* your-name placeholder "Name"]</p></div>
+<div class="col-md-6"><p>[email* your-email placeholder "Email"]</p></div></div>
+<p>[text your-subject placeholder "Subject"]</p>
+<p>[textarea your-message placeholder "Your Comment"]</p>
+<p class="wrap-submit">[submit class:btn class:btn-default "Send Message"]</p>]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_mail]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:8:{s:7:"subject";s:14:"[your-subject]";s:6:"sender";s:46:"[your-name] <wordpress@wingman.kitethemes.com>";s:4:"body";s:180:"From: [your-name] <[your-email]>
+Subject: [your-subject]
+
+Message Body:
+[your-message]
+
+--
+This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.com/demo2)";s:9:"recipient";s:15:"admin@gmail.com";s:18:"additional_headers";s:22:"Reply-To: [your-email]";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_mail_2]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:9:{s:6:"active";b:0;s:7:"subject";s:14:"[your-subject]";s:6:"sender";s:42:"Wingman <wordpress@wingman.kitethemes.com>";s:4:"body";s:122:"Message Body:
+[your-message]
+
+--
+This e-mail was sent from a contact form on Wingman (http://wingman.kitethemes.com/demo2)";s:9:"recipient";s:12:"[your-email]";s:18:"additional_headers";s:25:"Reply-To: admin@gmail.com";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_messages]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:23:{s:12:"mail_sent_ok";s:43:"Your message was sent successfully. Thanks.";s:12:"mail_sent_ng";s:93:"Failed to send your message. Please try later or contact the administrator by another method.";s:16:"validation_error";s:74:"Validation errors occurred. Please confirm the fields and submit it again.";s:4:"spam";s:93:"Failed to send your message. Please try later or contact the administrator by another method.";s:12:"accept_terms";s:35:"Please accept the terms to proceed.";s:16:"invalid_required";s:34:"Please fill in the required field.";s:16:"invalid_too_long";s:23:"This input is too long.";s:17:"invalid_too_short";s:24:"This input is too short.";s:12:"invalid_date";s:26:"Date format seems invalid.";s:14:"date_too_early";s:23:"This date is too early.";s:13:"date_too_late";s:22:"This date is too late.";s:13:"upload_failed";s:22:"Failed to upload file.";s:24:"upload_file_type_invalid";s:30:"This file type is not allowed.";s:21:"upload_file_too_large";s:23:"This file is too large.";s:23:"upload_failed_php_error";s:38:"Failed to upload file. Error occurred.";s:14:"invalid_number";s:28:"Number format seems invalid.";s:16:"number_too_small";s:25:"This number is too small.";s:16:"number_too_large";s:25:"This number is too large.";s:23:"quiz_answer_not_correct";s:27:"Your answer is not correct.";s:17:"captcha_not_match";s:31:"Your entered code is incorrect.";s:13:"invalid_email";s:28:"Email address seems invalid.";s:11:"invalid_url";s:18:"URL seems invalid.";s:11:"invalid_tel";s:31:"Telephone number seems invalid.";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_additional_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_locale]]></wp:meta_key>
+			<wp:meta_value><![CDATA[en_US]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 </channel>

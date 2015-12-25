@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.4" created="2015-12-25 07:27" -->
+<!-- generator="WordPress/4.4" created="2015-12-25 09:17" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,11 +29,16 @@
 	<title>Wingman</title>
 	<link>http://wingman.kitethemes.com/demo3</link>
 	<description>Just another WordPress site</description>
-	<pubDate>Fri, 25 Dec 2015 07:27:21 +0000</pubDate>
+	<pubDate>Fri, 25 Dec 2015 09:17:41 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://wingman.kitethemes.com/demo3</wp:base_site_url>
 	<wp:base_blog_url>http://wingman.kitethemes.com/demo3</wp:base_blog_url>
+
+	<wp:term><wp:term_id>34</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[customer-service]]></wp:term_slug><wp:term_name><![CDATA[Customer Service]]></wp:term_name></wp:term>
+	<wp:term><wp:term_id>33</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[information]]></wp:term_slug><wp:term_name><![CDATA[Information]]></wp:term_name></wp:term>
+	<wp:term><wp:term_id>6</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[main-menu]]></wp:term_slug><wp:term_name><![CDATA[Main Menu]]></wp:term_name></wp:term>
+	<wp:term><wp:term_id>32</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[my-account]]></wp:term_slug><wp:term_name><![CDATA[My account]]></wp:term_name></wp:term>
 
 	<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[admin]]></wp:author_login><wp:author_email><![CDATA[admin@gmail.com]]></wp:author_email><wp:author_display_name><![CDATA[admin]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 
@@ -48,10 +53,6 @@
 	<wp:tag><wp:term_id>40</wp:term_id><wp:tag_slug><![CDATA[model]]></wp:tag_slug><wp:tag_name><![CDATA[model]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>37</wp:term_id><wp:tag_slug><![CDATA[summer]]></wp:tag_slug><wp:tag_name><![CDATA[Summer]]></wp:tag_name></wp:tag>
 	<wp:tag><wp:term_id>28</wp:term_id><wp:tag_slug><![CDATA[world]]></wp:tag_slug><wp:tag_name><![CDATA[world]]></wp:tag_name></wp:tag>
-	<wp:term><wp:term_id>33</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[imfomation]]></wp:term_slug><wp:term_name><![CDATA[IMFOMATION]]></wp:term_name></wp:term>
-	<wp:term><wp:term_id>6</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[main-menu]]></wp:term_slug><wp:term_name><![CDATA[Main Menu]]></wp:term_name></wp:term>
-	<wp:term><wp:term_id>32</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[my-account]]></wp:term_slug><wp:term_name><![CDATA[My account]]></wp:term_name></wp:term>
-	<wp:term><wp:term_id>34</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[out-support]]></wp:term_slug><wp:term_name><![CDATA[OUT SUPPORT]]></wp:term_name></wp:term>
 	<wp:term><wp:term_id><![CDATA[23]]></wp:term_id><wp:term_taxonomy><![CDATA[pa_color]]></wp:term_taxonomy><wp:term_slug><![CDATA[black]]></wp:term_slug><wp:term_parent><![CDATA[]]></wp:term_parent><wp:term_name><![CDATA[Black]]></wp:term_name></wp:term>
 	<wp:term><wp:term_id><![CDATA[5]]></wp:term_id><wp:term_taxonomy><![CDATA[product_type]]></wp:term_taxonomy><wp:term_slug><![CDATA[external]]></wp:term_slug><wp:term_parent><![CDATA[]]></wp:term_parent><wp:term_name><![CDATA[external]]></wp:term_name></wp:term>
 	<wp:term><wp:term_id><![CDATA[44]]></wp:term_id><wp:term_taxonomy><![CDATA[pa_color]]></wp:term_taxonomy><wp:term_slug><![CDATA[green]]></wp:term_slug><wp:term_parent><![CDATA[]]></wp:term_parent><wp:term_name><![CDATA[Green]]></wp:term_name></wp:term>
@@ -4437,7 +4438,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="imfomation"><![CDATA[IMFOMATION]]></category>
+		<category domain="nav_menu" nicename="information"><![CDATA[Information]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
@@ -4544,7 +4545,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="imfomation"><![CDATA[IMFOMATION]]></category>
+		<category domain="nav_menu" nicename="information"><![CDATA[Information]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
@@ -4651,7 +4652,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="imfomation"><![CDATA[IMFOMATION]]></category>
+		<category domain="nav_menu" nicename="information"><![CDATA[Information]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
@@ -4758,7 +4759,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="imfomation"><![CDATA[IMFOMATION]]></category>
+		<category domain="nav_menu" nicename="information"><![CDATA[Information]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
@@ -4865,7 +4866,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="imfomation"><![CDATA[IMFOMATION]]></category>
+		<category domain="nav_menu" nicename="information"><![CDATA[Information]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
@@ -4972,7 +4973,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="out-support"><![CDATA[OUT SUPPORT]]></category>
+		<category domain="nav_menu" nicename="customer-service"><![CDATA[Customer Service]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
@@ -5079,7 +5080,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="out-support"><![CDATA[OUT SUPPORT]]></category>
+		<category domain="nav_menu" nicename="customer-service"><![CDATA[Customer Service]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
@@ -5186,7 +5187,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="out-support"><![CDATA[OUT SUPPORT]]></category>
+		<category domain="nav_menu" nicename="customer-service"><![CDATA[Customer Service]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
@@ -5293,7 +5294,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="out-support"><![CDATA[OUT SUPPORT]]></category>
+		<category domain="nav_menu" nicename="customer-service"><![CDATA[Customer Service]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
@@ -5400,7 +5401,7 @@ Thanks so much for sharing.]]></content:encoded>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="out-support"><![CDATA[OUT SUPPORT]]></category>
+		<category domain="nav_menu" nicename="customer-service"><![CDATA[Customer Service]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
