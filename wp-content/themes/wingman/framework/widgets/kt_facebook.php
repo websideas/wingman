@@ -14,23 +14,6 @@ class Widget_KT_Facebook extends WP_Widget {
         $widget_ops = array('classname' => 'widget_kt_facebook', 'description' => __( "Embed facebook Like page.", THEME_LANG) );
         parent::__construct('kt_facebook', __('KT: Page Plugin facebook', THEME_LANG), $widget_ops);
         $this->alt_option_name = 'widget_kt_facebook';
-
-        add_action('wp_footer', array($this, 'footer'));
-
-    }
-
-    function footer() {
-        $appID = kt_option('facebook_app', '417674911655656');
-        ?>
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/<?php echo get_locale(); ?>/sdk.js#xfbml=1&version=v2.3&appId=<?php echo $appID; ?>";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
-        <?php
     }
 
 
@@ -59,7 +42,15 @@ class Widget_KT_Facebook extends WP_Widget {
                 }
             ?>
             <div class="fb-page" data-href="<?php echo esc_attr($href) ?>" data-height="<?php echo $height; ?>" data-small-header="<?php echo $small_header ? 'true' : 'false' ?>" data-adapt-container-width="<?php echo $adapt_container_width ? 'true' : 'false'; ?>" data-hide-cover="<?php echo $hide_cover ? 'true' : 'false'; ?>" data-show-facepile="<?php echo $show_facepile ? 'true' : 'false'; ?>" data-show-posts="<?php echo $show_posts ? 'true' : 'false'; ?>"><div class="fb-xfbml-parse-ignore"><blockquote cite="<?php echo $href ?>"><a href="<?php echo $href ?>">Facebook</a></blockquote></div></div>
-
+            <?php $appID = kt_option('facebook_app', '417674911655656'); ?>
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/<?php echo get_locale(); ?>/sdk.js#xfbml=1&version=v2.3&appId=<?php echo $appID; ?>";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
             <?php echo $args['after_widget']; ?>
         <?php
         }
