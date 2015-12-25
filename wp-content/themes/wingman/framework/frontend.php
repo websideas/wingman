@@ -90,10 +90,10 @@ endif;
 function kt_add_scripts() {
 
     wp_enqueue_style( 'mediaelement-style', get_stylesheet_uri(), array('mediaelement', 'wp-mediaelement') );
-    wp_enqueue_style( 'bootstrap-css', THEME_LIBS . 'bootstrap/css/bootstrap.css', array());
-    wp_enqueue_style( 'font-Poppins', THEME_FONTS . 'Poppins/stylesheet.css', array());
+    wp_enqueue_style( 'bootstrap-css', THEME_LIBS . 'bootstrap/css/bootstrap.min.css', array());
+    wp_enqueue_style( 'font-Poppins', THEME_FONTS . 'Poppins/stylesheet.min.css', array());
     wp_enqueue_style( 'font-awesome', THEME_FONTS . 'font-awesome/css/font-awesome.min.css', array());
-    wp_enqueue_style( 'icomoon_theme', THEME_FONTS . 'Lineicons/style.css', array());
+    wp_enqueue_style( 'icomoon_theme', THEME_FONTS . 'Lineicons/style.min.css', array());
     wp_enqueue_style( 'plugins', THEME_CSS . 'plugins.css', array());
 
 	// Load our main stylesheet.
@@ -112,7 +112,6 @@ function kt_add_scripts() {
     wp_enqueue_script( 'bootstrap-script', THEME_LIBS . 'bootstrap/js/bootstrap.min.js', array( 'jquery' ), null, true );
     wp_enqueue_script( 'plugins-script', THEME_JS . 'plugins.js', array( 'jquery' ), null, true );
     wp_enqueue_script( 'main-script', THEME_JS . 'functions.js', array( 'jquery', 'mediaelement', 'wp-mediaelement', 'jquery-ui-tabs' ), null, true );
-
 
     global $wp_query;
     wp_localize_script( 'main-script', 'ajax_frontend', array(
