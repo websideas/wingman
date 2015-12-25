@@ -3864,41 +3864,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'subsection' => true,
                 'fields'		=> array(
                     array(
-                        'id'       => 'twitter_api_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Twitter API', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id' => 'twitter_consumer_key',
-                        'type' => 'text',
-                        'title' => __('Twitter Consumer Key', THEME_LANG),
-                        'subtitle' => __('Your twitter Consumer Key', THEME_LANG),
-                        'desc' => sprintf( __( '%sClick Here%s to learn about these keys.', THEME_LANG ), '<a href="#" target="_blank">', '</a>'),
-                        'default' => 'geINSa0v1hZsHnp9Tj7Km2bgl'
-                    ),
-                    array(
-                        'id' => 'twitter_consumer_secret',
-                        'type' => 'text',
-                        'title' => __('Twitter Consumer Secret', THEME_LANG),
-                        'subtitle' => __("Your twitter Consumer Secret.", THEME_LANG),
-                        'default' => 'ms0lQ6i4nWuIWA0yvByEq97sK72wFAEJWHCdUBDOQog6Yp50cj'
-                    ),
-                    array(
-                        'id' => 'twitter_access_key',
-                        'type' => 'text',
-                        'title' => __('Twitter Access Token', THEME_LANG),
-                        'subtitle' => __("Your twitter Access Token.", THEME_LANG),
-                        'default' => '2309625042-h1NgGNpzMPYYXfLdlCCcvdBVhZPzjUeo9br7GrZ'
-                    ),
-                    array(
-                        'id' => 'twitter_access_secret',
-                        'type' => 'text',
-                        'title' => __('Twitter Access Token Secret', THEME_LANG),
-                        'subtitle' => __("Your twitter Access Token Secret.", THEME_LANG),
-                        'default' => '9jzZ2MxHnbyxuGyGs75DuBT1ZF3GtW4JU7oaFO6k91SDR'
-                    ),
-                    array(
                         'id'       => 'facebook_app_heading',
                         'type'     => 'raw',
                         'content'  => '<div class="section-heading">'.__( 'Facebook App', THEME_LANG ).'</div>',
@@ -3910,20 +3875,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title' => __('Facebook App ID', THEME_LANG),
                         'subtitle' => __("Add Facebook App ID.", THEME_LANG),
                         'default' => '417674911655656'
-                    ),
-                    array(
-                        'id'       => 'mailchimp_api_key_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Mail Chimp API', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id' => 'mailchimp_api_key',
-                        'type' => 'text',
-                        'title' => __('Mail Chimp API Key', THEME_LANG),
-                        'subtitle' => __('Your Mail Chimp API Key', THEME_LANG),
-                        'desc' => sprintf( __( '%sClick Here%s to learn about these keys.', THEME_LANG ), '<a href="#" target="_blank">', '</a>'),
-                        'default' => 'acf783f889d685580748b6c543235ef9-us5'
                     ),
                 )
             );
