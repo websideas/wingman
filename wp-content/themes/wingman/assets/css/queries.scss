@@ -6,15 +6,16 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [Table of contents]
 
-1. Styles for devices(<=1300px)
+1. Retina logo
 2. Styles for devices(>=1200px)
 3. Styles for devices(<=1199px)
-4. Styles for devices(<=991px )
-5. Styles for devices(>=768px and <= 991px)
-6. Styles for devices(<=767px )
-7. Styles for devices(>=481px and <= 767px)
-8. Styles for devices(<=480px )
-9. Styles for devices(<=320px )
+4. Styles for devices(>=992px and <= 1199px)
+5. Styles for devices(<=991px )
+6. Styles for devices(>=768px and <= 991px)
+7. Styles for devices(<=767px )
+8. Styles for devices(>=481px and <= 767px)
+9. Styles for devices(<=480px )
+10. Styles for devices(<=320px )
 */
 
 @import 'mixin';
@@ -28,7 +29,12 @@ only screen and (min-resolution: 144dpi) {
   .site-branding .site-logo.retina-logo-wrapper .retina-logo{ display: block; }
   .site-branding .site-logo.retina-logo-wrapper .default-logo { display: none; }
 }
-/* 8. Styles for devices(<=1199px) */
+/* 2. Styles for devices(>=1200px) */
+@media (min-width: 1200px) {
+
+}
+
+/* 3. Styles for devices(<=1199px) */
 @media (max-width: 1199px) {
 
   .sticky-placeholder,
@@ -51,73 +57,45 @@ only screen and (min-resolution: 144dpi) {
   }
 }
 
+/* 4. Styles for devices(>=992px and <= 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* 5. Styles for devices(<=991px) */
 @media (max-width: 991px) {
-	.woocommerce{
-		table.cart {
-			tbody{
-				td{
-					&.actions{
-						padding: 20px;
-						a,input{
-							margin: 0 2%;
-						}
-					}
-				}
-			}
-		}
-      div.product{
-        .product-detail-thumbarea{
-          &.slick-carousel{
-            padding: 0;
-            .single-product-main-thumbnails{
-              position: relative;
-              margin: 0 -14px;
-              width: auto;
-              .slick-slide{
-                margin: 0 14px;
-              }
-            }
-          }
-        }
-      }
-
-
-	}
-
   .entry-share-box{
     a{
       margin-left: 30px;
     }
   }
+  .wrapper-comingsoon {
+    &.style1{
+      .coming-soon{
+        .wrap{
+          display: inline-block;
+          width: 50%;
+          float: left;
+          &:nth-child(2n){
+            border: none;
+          }
+        }
+      }
+    }
+    &.style2{
+      .coming-soon{
+        .wrap{
+          width: 50%;
+          margin-bottom: 20px;
+          &:nth-child(3),&:nth-child(4){
+              margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
 
-	.wrapper-comingsoon {
-	  &.style1{
-	    .coming-soon{
-	      .wrap{
-	        display: inline-block;
-	        width: 50%;
-	        float: left;
-	        &:nth-child(2n){
-	          border: none;
-	        }
-	      }
-	    }
-	  }
-	  &.style2{
-	    .coming-soon{
-	      .wrap{
-	        width: 50%;
-	        margin-bottom: 20px;
-	        &:nth-child(3),&:nth-child(4){
-	        	margin-bottom: 0;
-	        }
-	      }
-	    }
-	  }
-	}
-}
 
-@media (max-width: 991px) {
   .woocommerce-products-carousel-tab{
     ul.block-heading-tabs{
       li {
@@ -155,18 +133,48 @@ only screen and (min-resolution: 144dpi) {
   }
 
   .woocommerce{
-	  .upsells-products,
-	  .related-products,
-	  .cross-sells {
-		> h3{
-			font-size: 30px;
-		}
-	  }
-	}
-
+    table.cart {
+      tbody{
+        td{
+          &.actions{
+            padding: 20px;
+            a,input{
+              margin: 0 2%;
+            }
+          }
+        }
+      }
+    }
+    div.product{
+      .product-detail-thumbarea{
+        &.slick-carousel{
+          padding: 0;
+          .single-product-main-thumbnails{
+            position: relative;
+            margin: 0 -14px;
+            width: auto;
+            .slick-slide{
+              margin: 0 14px;
+            }
+          }
+        }
+      }
+    }
+    .upsells-products,
+    .related-products,
+    .cross-sells {
+      > h3{
+        font-size: 30px;
+      }
+    }
+  }
 }
 
+/* 6. Styles for devices(>=768px and <= 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
 
+}
+/* 7. Styles for devices(<=767px) */
 @media (max-width: 767px) {
 	.main-class.col-md-12{
 
@@ -237,7 +245,7 @@ only screen and (min-resolution: 144dpi) {
 	}
 
 }
-
+/* 8. Styles for devices(<=600px) */
 @media (max-width: 600px) {
 	.woocommerce{
       ul.shop-products{
@@ -287,6 +295,7 @@ only screen and (min-resolution: 144dpi) {
 	  }
 	}
 }
+/* 9. Styles for devices(<=480px) */
 @media (max-width: 480px) {
 	.comment-content{
 		padding: 0;
@@ -397,3 +406,4 @@ only screen and (min-resolution: 144dpi) {
 	    }
 	}
 }
+/* 10. Styles for devices(<=320px) */
