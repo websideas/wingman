@@ -1,0 +1,26 @@
+/* -------------------------------------------------------------
+ * Title:   SCSS VARIABLES
+ * Author:  http://themeforest.net/user/Kite-Themes
+------------------------------------------------------------- */
+
+////[Table of contents]
+
+////1. Fonts
+////2. Color
+
+//// 1. Fonts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$font-stack: 'Poppins', sans-serif;
+$heading-font: 'Josefin Slab', serif;
+$button-text: 'Poppins', sans-serif;
+
+
+//// 2. Color codes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$primary-color: #82c14f;
+$primary-light-color: lighten($primary-color, 20%);
+
+$black: #000000;
+$white: #FFFFFF;
+
+$main-text: #707070;
+$title-text: #252525;
+$border-color: #c3c8cc;
