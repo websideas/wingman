@@ -61,7 +61,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                 // Version that appears at the top of your panel
                 'menu_type'            => 'menu',
                 //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
-                'allow_sub_menu'       => false,
+                'allow_sub_menu'       => true,
                 // Show the sections below the admin menu item or not
                 'menu_title'           => __( 'Theme Options', THEME_LANG ),
                 
@@ -135,19 +135,27 @@ if ( ! class_exists( 'KT_config' ) ) {
 
             // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
             $this->args['share_icons'][] = array(
-                'url'   => '#',
+                'url' => 'https://www.facebook.com/kitethemes/',
                 'title' => __('Like us on Facebook', THEME_LANG),
-                'icon'  => 'el-icon-facebook'
+                'icon' => 'el-icon-facebook'
             );
+
             $this->args['share_icons'][] = array(
-                'url'   => '#',
-                'title' => __('Follow us on Twitter', THEME_LANG),
-                'icon'  => 'el-icon-twitter'
+                'url' => 'http://themeforest.net/user/Kite-Themes/follow?ref=Kite-Themes',
+                'title' => __('Follow us on Themeforest', THEME_LANG),
+                'icon' => 'fa fa-wordpress'
             );
+
             $this->args['share_icons'][] = array(
-                'url'   => '#',
-                'title' => __('Find us on LinkedIn', THEME_LANG),
-                'icon'  => 'el-icon-linkedin'
+                'url' => '#',
+                'title' => __('Get Email Newsletter', THEME_LANG),
+                'icon' => 'fa fa-envelope-o'
+            );
+
+            $this->args['share_icons'][] = array(
+                'url' => 'http://themeforest.net/user/kite-themes/portfolio',
+                'title' => __('Check out our works', THEME_LANG),
+                'icon' => 'fa fa-briefcase'
             );
             
         }
@@ -543,7 +551,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                                     'dropdown_color_hover' => '#82c14f',
                                     'mega_title_color_hover' => '#82c14f',
                                     'mobile_sub_color_hover' => '#82c14f',
-                                    'mega_title_color_hover' => '#82c14f',
                                     'mega_color_hover' => '#82c14f',
                                     'mobile_title_color_hover' => '#82c14f',
                                     'styling_link' => array(
@@ -564,7 +571,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                                     'dropdown_color_hover' => '#ed727c',
                                     'mega_title_color_hover' => '#ed727c',
                                     'mobile_sub_color_hover' => '#ed727c',
-                                    'mega_title_color_hover' => '#ed727c',
                                     'mega_color_hover' => '#ed727c',
                                     'mobile_title_color_hover' => '#ed727c',
                                     'styling_link' => array(
@@ -585,7 +591,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                                     'dropdown_color_hover' => '#ec6aec',
                                     'mega_title_color_hover' => '#ec6aec',
                                     'mobile_sub_color_hover' => '#ec6aec',
-                                    'mega_title_color_hover' => '#ec6aec',
                                     'mega_color_hover' => '#ec6aec',
                                     'mobile_title_color_hover' => '#ec6aec',
                                     'styling_link' => array(
