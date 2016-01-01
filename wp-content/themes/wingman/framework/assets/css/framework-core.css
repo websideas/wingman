@@ -548,3 +548,6 @@ div#post-body .rwmb-text{
     display: block;
 }
 
+.redux-messageredux-notice{
+    display: none;
+}

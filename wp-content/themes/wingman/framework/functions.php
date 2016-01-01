@@ -74,6 +74,30 @@ if ( ! function_exists( 'kt_track_post_views' ) ){
 add_action( 'wp_head', 'kt_track_post_views');
 
 /**
+ * Add custom favicon
+ *
+ * @since 1.0
+ */
+function kt_add_site_icon(){
+    if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) {
+
+        $custom_favicon = kt_option( 'custom_favicon' );
+        $custom_favicon_iphone = kt_option( 'custom_favicon_iphone' );
+        $custom_favicon_iphone_retina = kt_option( 'custom_favicon_iphone_retina' );
+        $custom_favicon_ipad = kt_option( 'custom_favicon_ipad' );
+        $custom_favicon_ipad_retina = kt_option( 'custom_favicon_ipad_retina' );
+
+        printf( '<link rel="shortcut icon" href="%s"/>', esc_url($custom_favicon['url']) );
+        printf( '<link rel="apple-touch-icon" href="%s"/>', esc_url($custom_favicon_iphone['url']) );
+        printf( '<link rel="apple-touch-icon" sizes="72x72" href="%s"/>', esc_url($custom_favicon_ipad['url']) );
+        printf( '<link rel="apple-touch-icon" sizes="114x114" href="%s"/>', esc_url($custom_favicon_iphone_retina['url']) );
+        printf( '<link rel="apple-touch-icon" sizes="144x144" href="%s"/>', esc_url($custom_favicon_ipad_retina['url']) );
+    }
+}
+add_action( 'wp_head', 'kt_add_site_icon');
+
+
+/**
  * Add page header
  *
  * @since 1.0
@@ -177,7 +201,6 @@ function kt_page_header( ){
         echo "</div>";
         echo "</div>";
 
-
     }
 }
 
@@ -249,16 +272,16 @@ function kt_get_page_title( $title = '' ){
     global $post;
 
     if ( is_front_page() && !is_singular('page') ) {
-            $title = __( 'Blog', 'wingman' );
+            $title = esc_html__( 'Blog', 'wingman' );
     } elseif ( is_search() ) {
-        $title = __( 'Search', 'wingman' );
+        $title = esc_html__( 'Search', 'wingman' );
     } elseif( is_home() ){
         $page_for_posts = get_option('page_for_posts', true);
         if($page_for_posts){
             $title = get_the_title($page_for_posts) ;
         }
     } elseif( is_404() ) {
-        $title = __( 'Page not found', 'wingman' );
+        $title = esc_html__( 'Page not found', 'wingman' );
     } elseif ( is_archive() ){
         $title = get_the_archive_title();
         if(kt_is_wc()) {
@@ -290,7 +313,7 @@ function kt_get_page_subtitle(){
     global $post;
     $tagline = '';
     if ( is_front_page() && !is_singular('page') ) {
-        $tagline =  __('Lastest posts', 'wingman');
+        $tagline =  esc_html__('Lastest posts', 'wingman');
     }elseif( is_home() ){
         $page_for_posts = get_option('page_for_posts', true);
         $tagline = nl2br(rwmb_meta('_kt_page_header_subtitle', array(), $page_for_posts))  ;
@@ -670,12 +693,12 @@ add_filter('breadcrumb_trail_args', 'kt_breadcrumb_trail_args');
 function kt_contactmethods( $contactmethods ) {
 
     // Add Twitter, Facebook
-    $contactmethods['facebook'] = __('Facebook page/profile url', 'wingman');
-    $contactmethods['twitter'] = __('Twitter username (without @)', 'wingman');
-    $contactmethods['pinterest'] = __('Pinterest username', 'wingman');
-    $contactmethods['googleplus'] = __('Google+ page/profile URL', 'wingman');
-    $contactmethods['instagram'] = __('Instagram username', 'wingman');
-    $contactmethods['tumblr'] = __('Tumblr username', 'wingman');
+    $contactmethods['facebook'] = esc_html__('Facebook page/profile url', 'wingman');
+    $contactmethods['twitter'] = esc_html__('Twitter username (without @)', 'wingman');
+    $contactmethods['pinterest'] = esc_html__('Pinterest username', 'wingman');
+    $contactmethods['googleplus'] = esc_html__('Google+ page/profile URL', 'wingman');
+    $contactmethods['instagram'] = esc_html__('Instagram username', 'wingman');
+    $contactmethods['tumblr'] = esc_html__('Tumblr username', 'wingman');
 
     return $contactmethods;
 }
@@ -818,9 +841,11 @@ function kt_after_footer_add_popup(){
                 </div>
                 <form class="dont-show" name="dont-show">
                     <input id="dont-showagain" type="checkbox" value="" />
-                    <label for="dont-showagain"><?php _e( "Don't Show Again.", 'wingman' ); ?></label>
+                    <label for="dont-showagain"><?php esc_html__( "Don't Show Again.", 'wingman' ); ?></label>
                 </form>
             </div>
         <?php
     }
 }
+
+

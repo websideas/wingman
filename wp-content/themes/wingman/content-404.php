@@ -3,29 +3,26 @@
     <div class="page-not-found">
         <?php $image_404 = kt_option( '404_image' ); ?>
         <?php if( $image_404['url'] ){ ?>
-            <h1><img src="<?php echo $image_404['url']; ?>" alt="404" class="img-responsive" /></h1>
+            <h1><img src="<?php echo esc_url($image_404['url']); ?>" alt="404" class="img-responsive" /></h1>
         <?php } ?>
-        <h3><?php _e('OPPS! THIS PAGE COULD NOT BE FOUND!', 'wingman') ?></h3>
+
+        <h3><?php esc_html_e('Opps! This page could not be found!', 'wingman') ?></h3>
+
         <?php get_search_form(); ?>
-        <p ><?php _e('Sorry bit the page you are looking for does not exist, <br />have been removed or name changed', 'wingman' ); ?></p>
+
+        <p><?php echo wp_kses(__('Sorry bit the page you are looking for does not exist, <br />have been removed or name changed', 'wingman'), array( 'br' => array() ) ); ?></p>
+
         <div class="buttons">
-            <a title="<?php _e('Back to Home', 'wingman'); ?>" href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-default">
+            <a title="<?php esc_html_e('Back to Home', 'wingman'); ?>" href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-default">
                 <span>
-                    <?php _e('Back to Homepage', 'wingman' ); ?>
+                    <?php esc_html_e('Back to Homepage', 'wingman' ); ?>
                 </span>
             </a>
-            <a title="<?php _e('BACK TO PREVIES PAGE', 'wingman'); ?>" href="#" class="btn btn-default" onclick="goBack()">
+            <a title="<?php esc_html_e('Back to previous page', 'wingman'); ?>" href="#" class="btn btn-default" onclick="window.history.back();">
                 <span>
-                    <?php _e('BACK TO PREVIES PAGE', 'wingman' ); ?>
+                    <?php esc_html_e('Back to previous page', 'wingman' ); ?>
                 </span>
             </a>
         </div>
-        
-        
-        <script>
-            function goBack() {
-                window.history.back()
-            }
-        </script>
     </div><!-- .page-not-found -->
 </div><!-- .content-404 -->

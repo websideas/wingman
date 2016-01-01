@@ -54,13 +54,6 @@ require KT_FW_DIR . 'functions.php';
  */
 require KT_FW_DIR . 'helpers.php';
 
-
-/**
- * Add scripts for backend
- *
- */
-require KT_FW_DIR . 'scripts.php';
-
 /**
  * Breadcrumbs
  *

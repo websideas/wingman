@@ -4,7 +4,6 @@
 if ( !defined('ABSPATH')) exit;
 ?>
 <div id="header-content-mobile" class="clearfix">
-
     <div class="site-branding">
         <?php
         $logo = kt_get_logo();

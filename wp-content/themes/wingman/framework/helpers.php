@@ -93,17 +93,17 @@ if (!function_exists('kt_get_image_sizes')){
             if( isset($sizes[ $_size ]) ){
                 $option_text[] = '('.$sizes[ $_size ]['width'].' x '.$sizes[ $_size ]['height'].')';
                 if($sizes[ $_size ]['crop']){
-                    $option_text[] = __('Crop', 'wingman');
+                    $option_text[] = esc_html__('Crop', 'wingman');
                 }
                 $sizes[ $_size ] = implode(' - ', $option_text);
             }
         }
 
         if($full){
-            $sizes[ 'full' ] = __('Full', 'wingman');
+            $sizes[ 'full' ] = esc_html__('Full', 'wingman');
         }
         if($custom){
-            $sizes[ 'custom' ] = __('Custom size', 'wingman');
+            $sizes[ 'custom' ] = esc_html__('Custom size', 'wingman');
         }
 
 
@@ -356,9 +356,7 @@ if (!function_exists('kt_show_slideshow')) {
                 putRevSlider($revslider);
                 $revslider_html = ob_get_contents();
                 ob_end_clean();
-
                 $output .= $revslider_html;
-
             }
         } elseif ($slideshow == 'layerslider') {
             $layerslider = rwmb_meta('_kt_layerslider', array(), $post_id);
@@ -474,9 +472,9 @@ if (!function_exists('kt_custom_wpml')){
                     $active = ($l['active']) ? 'current' : '';
 
                     $language_html .= '<li class="'.$active.'">';
-                    $language_html .= '<a href="' . $l['url'] . '">';
+                    $language_html .= '<a href="' . esc_url($l['url']) . '">';
                     if ($l['country_flag_url']) {
-                        $language_html .= '<img src="' . $l['country_flag_url'] . '" height="12" alt="' . $l['language_code'] . '" width="18" />';
+                        $language_html .= '<img src="' . esc_url($l['country_flag_url']) . '" height="12" alt="' . esc_attr($l['language_code']) . '" width="18" />';
                     }
                     $language_html .= "<span>" . $l['native_name'] . "</span>";
                     $language_html .= '</a>';
@@ -489,7 +487,6 @@ if (!function_exists('kt_custom_wpml')){
                 }
 
                 $output .= $language_html;
-
             }
 
             echo $before.$output.$after;

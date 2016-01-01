@@ -13,9 +13,9 @@ if ( function_exists('register_sidebar')) {
     function kt_register_sidebars(){
 
         register_sidebar( array(
-            'name' => __( 'Primary Widget Area', 'wingman'),
+            'name' => esc_html__( 'Primary Widget Area', 'wingman'),
             'id' => 'primary-widget-area',
-            'description' => __( 'The primary widget area', 'wingman'),
+            'description' => esc_html__( 'The primary widget area', 'wingman'),
             'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h3 class="widget-title">',
@@ -23,9 +23,9 @@ if ( function_exists('register_sidebar')) {
         ) );
 
         register_sidebar( array(
-            'name' => __( 'Shop Widget Area', 'wingman'),
+            'name' => esc_html__( 'Shop Widget Area', 'wingman'),
             'id' => 'shop-widget-area',
-            'description' => __( 'The shop widget area', 'wingman'),
+            'description' => esc_html__( 'The shop widget area', 'wingman'),
             'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h3 class="widget-title">',
@@ -33,9 +33,9 @@ if ( function_exists('register_sidebar')) {
         ) );
 
         register_sidebar( array(
-            'name' => __( 'Blog Widget Area', 'wingman'),
+            'name' => esc_html__( 'Blog Widget Area', 'wingman'),
             'id' => 'blog-widget-area',
-            'description' => __( 'The blog widget area', 'wingman'),
+            'description' => esc_html__( 'The blog widget area', 'wingman'),
             'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h3 class="widget-title">',
@@ -46,9 +46,9 @@ if ( function_exists('register_sidebar')) {
 
         for($i=1; $i<=$count;$i++){
             register_sidebar( array(
-                'name' => sprintf(__( 'Sidebar %s', 'wingman'), $i) ,
+                'name' => sprintf(esc_html__( 'Sidebar %s', 'wingman'), $i) ,
                 'id' => 'sidebar-column-'.$i,
-                'description' => sprintf(__( 'The sidebar column %s widget area', 'wingman'), $i),
+                'description' => sprintf(esc_html__( 'The sidebar column %s widget area', 'wingman'), $i),
                 'before_widget' => '<div class="widget-container clearfix %2$s">',
                 'after_widget' => '</div>',
                 'before_title' => '<h3 class="widget-title">',
@@ -57,9 +57,9 @@ if ( function_exists('register_sidebar')) {
         }
 
         register_sidebar( array(
-            'name' => __( 'Footer top', 'wingman'),
+            'name' => esc_html__( 'Footer top', 'wingman'),
             'id' => 'footer-top',
-            'description' => __( 'The footer top widget area', 'wingman'),
+            'description' => esc_html__( 'The footer top widget area', 'wingman'),
             'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widget-title">',
@@ -70,9 +70,9 @@ if ( function_exists('register_sidebar')) {
 
         for($i=1; $i<=$count;$i++){
             register_sidebar( array(
-                'name' => sprintf(__( 'Footer column %s', 'wingman'), $i) ,
+                'name' => sprintf(esc_html__( 'Footer column %s', 'wingman'), $i) ,
                 'id' => 'footer-column-'.$i,
-                'description' => sprintf(__( 'The footer column %s widget area', 'wingman'), $i) ,
+                'description' => sprintf(esc_html__( 'The footer column %s widget area', 'wingman'), $i) ,
                 'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
                 'after_widget' => '</div>',
                 'before_title' => '<h3 class="widget-title">',
@@ -81,9 +81,9 @@ if ( function_exists('register_sidebar')) {
         }
 
         register_sidebar( array(
-            'name' => __( 'Footer bottom', 'wingman'),
+            'name' => esc_html__( 'Footer bottom', 'wingman'),
             'id' => 'footer-bottom',
-            'description' => __( 'The footer bottom widget area', 'wingman'),
+            'description' => esc_html__( 'The footer bottom widget area', 'wingman'),
             'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widget-title">',

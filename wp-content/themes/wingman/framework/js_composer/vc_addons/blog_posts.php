@@ -13,9 +13,6 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
             'sharebox' => 'true',
             'blog_type' => 'classic',
             'blog_columns' => 3,
-            'blog_columns_tablet' => 2,
-
-            
             'thumbnail_type' => 'format',
             'show_excerpt' => 'true',
             'blog_align' => 'left',
@@ -126,19 +123,15 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
             if($blog_type == 'grid' || $blog_type == 'masonry'){
                 $elementClass[] = 'blog-posts-columns-'.$blog_columns;
                 $bootstrapColumn = round( 12 / $blog_columns );
-                $bootstrapTabletColumn = round( 12 / $blog_columns_tablet );
-                $classes = 'col-xs-12 col-sm-'.$bootstrapTabletColumn.' col-md-' . $bootstrapColumn.' col-lg-' . $bootstrapColumn;
+                $classes = 'col-xs-12 col-sm-6 col-md-' . $bootstrapColumn.' col-lg-' . $bootstrapColumn;
             }
 
             if( $blog_type == 'grid' || $blog_type == 'masonry' ||  $blog_type == 'zigzag' ){
                 echo "<div class='row multi-columns-row ".$class_animation."' ".$data_animation." style='text-align: ".$blog_align.";'>";
-
                 if($blog_type == 'masonry'){
                     echo '<div class="blog-posts-sizer '.$classes.'"></div>';
                 }
-
             }
-
 
             $i = 1 ;
             $blog_atts_posts = array(
@@ -255,38 +248,16 @@ vc_map( array(
             'heading' => __( 'on Desktop', 'wingman' ),
             'param_name' => 'blog_columns',
             'value' => array(
-                __( '1 column', 'js_composer' ) => '1',
                 __( '2 columns', 'js_composer' ) => '2',
                 __( '3 columns', 'js_composer' ) => '3',
                 __( '4 columns', 'js_composer' ) => '4',
-                __( '6 columns', 'js_composer' ) => '6',
             ),
             'std' => '3',
-            "edit_field_class" => "vc_col-sm-6 vc_column",
             'dependency' => array(
                 'element' => 'blog_type',
                 'value' => array( 'grid', 'masonry' )
             ),
         ),
-        array(
-            'type' => 'dropdown',
-            'heading' => __( 'on Tablet', 'wingman' ),
-            'param_name' => 'blog_columns_tablet',
-            'value' => array(
-                __( '1 column', 'js_composer' ) => '1',
-                __( '2 columns', 'js_composer' ) => '2',
-                __( '3 columns', 'js_composer' ) => '3',
-                __( '4 columns', 'js_composer' ) => '4',
-                __( '6 columns', 'js_composer' ) => '6',
-            ),
-            'std' => '2',
-            "edit_field_class" => "vc_col-sm-6 vc_column",
-            'dependency' => array(
-                'element' => 'blog_type',
-                'value' => array( 'grid', 'masonry' )
-            ),
-        ),
-
         
         array(
             "type" => "kt_heading",

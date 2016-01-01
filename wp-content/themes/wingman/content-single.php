@@ -12,7 +12,7 @@
         }
     ?>
     <div class="post-single-inner">
-        <header class="entry-header<?php if( $title_meta_center == 1 ){ echo ' text-center'; } ?>">
+        <header class="entry-header">
             <?php if(kt_post_option(null, '_kt_meta_info', 'blog_meta', 1)){ ?>
                 <div class="entry-meta-data">
                     <?php
@@ -29,7 +29,7 @@
                         kt_entry_meta_comments();
                     }
                     if(kt_option('blog_view_number', 0)){
-                        echo kt_get_post_views( get_the_ID() );
+                        kt_get_post_views( get_the_ID());
                     }
                     if(kt_option('blog_like_post', 1)){
                         kt_like_post();
@@ -51,11 +51,11 @@
                 <?php
                 if( ! post_password_required( ) ):
                     wp_link_pages( array(
-                        'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'wingman' ) . '</span>',
+                        'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'wingman' ) . '</span>',
                         'after'       => '</div>',
                         'link_before' => '<span>',
                         'link_after'  => '</span>',
-                        'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'wingman' ) . ' </span>%',
+                        'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'wingman' ) . ' </span>%',
                         'separator'   => '<span class="screen-reader-text">, </span>',
                     ) );
                 endif;
@@ -93,20 +93,13 @@
             kt_author_box();
         }
 
-
         if(kt_post_option(null, '_kt_related_acticles', 'blog_related', 1)){
             kt_related_article(null, kt_option('blog_related_type', 'categories'));
         }
 
-        // If comments are open or we have at least one comment, load up the comment template.
-        if ( shortcode_exists( 'fbcomments' ) ) {
-            echo '<div class="kt_facebook_comment">'.do_shortcode('[fbcomments]').'</div>';
-        }else{
-            if ( comments_open() || get_comments_number() ) :
-                comments_template();
-            endif;
-        }
-
+        if ( comments_open() || get_comments_number() ) :
+            comments_template();
+        endif;
     ?>
 </div>
 

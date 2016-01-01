@@ -12,41 +12,23 @@ $sidebar = kt_get_woo_sidebar();
 
 get_header(); ?>
     <?php
-		/**
-		 * woocommerce_before_main_content hook
-		 *
-		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20 (removed)
-		 */
 		do_action( 'woocommerce_before_main_content' );
+        do_action( 'kt_before_main' );
 	?>
-    <?php
-    /**
-     * @hooked
-     */
-    do_action( 'theme_before_main' ); ?>
-        
     <div class="row">
-        <div id="main" class="<?php echo apply_filters('kt_main_class', 'main-class', $sidebar['sidebar']); ?>">
+        <?php $main_class = apply_filters('kt_main_class', 'main-class', $sidebar['sidebar']); ?>
+        <div id="main" class="<?php echo esc_attr($main_class) ; ?>">
             <?php woocommerce_content(); ?>
         </div>
         <?php if($sidebar['sidebar'] != 'full'){ ?>
-            <div class="<?php echo apply_filters('kt_sidebar_class', 'sidebar', $sidebar['sidebar']); ?>">
+            <?php $sidebar_class = apply_filters('kt_sidebar_class', 'sidebar', $sidebar['sidebar']); ?>
+            <div class="<?php echo esc_attr($sidebar_class); ?>">
                 <?php dynamic_sidebar($sidebar['sidebar_area']); ?>
             </div><!-- .sidebar -->
         <?php } ?>
     </div><!-- .row -->
     <?php
-    /**
-     * @hooked
-     */
-    do_action( 'theme_after_main' ); ?>
-    <?php
-		/**
-		 * woocommerce_after_main_content hook
-		 *
-		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-		 */
-		do_action( 'woocommerce_after_main_content' );
-	?>
+        do_action( 'kt_after_main' );
+        do_action( 'woocommerce_after_main_content' );
+    ?>
 <?php get_footer(); ?>

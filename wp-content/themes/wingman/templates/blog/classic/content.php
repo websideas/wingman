@@ -2,8 +2,6 @@
     $classes = array('post-item post-layout-classic', $blog_atts['class']);
 ?>
 <article <?php post_class($classes); ?>>
-
-
     <?php
     if($blog_atts['thumbnail_type'] == 'image'){
         kt_post_thumbnail_image('blog_post', 'img-responsive', true, false);
@@ -27,7 +25,7 @@
                 kt_entry_meta_time($blog_atts['date_format']);
             }
             if($blog_atts['show_view_number']){
-                echo kt_get_post_views( get_the_ID() );
+                kt_get_post_views( get_the_ID() );
             }
             if($blog_atts['show_like_post']){
                 kt_like_post();
@@ -37,7 +35,6 @@
     <?php } ?>
     <div class="clearfix"></div>
     <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    
     <div class="entry-main-content">
         <div class="post-info">
             <div class="entry-ci">
@@ -46,7 +43,7 @@
                     <div class="entry-excerpt">
                         <?php
                         the_content(sprintf(
-                            __('Read more %s', 'wingman'),
+                            esc_html__('Read more %s', 'wingman'),
                             the_title('<span class="screen-reader-text">', '</span>', false)
                         ));
                         ?>
@@ -59,13 +56,12 @@
                         printf( '<a href="%1$s" class="%2$s">%3$s</a>',
                             esc_url( get_permalink( get_the_ID() ) ),
                             $moreclass,
-                            sprintf( __( 'Read more %s', 'wingman' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+                            sprintf( esc_html__( 'Read more %s', 'wingman' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
                         );
                         ?>
                     </div><!-- .entry-more -->
                 <?php } ?>
             </div>
-
         </div>
     </div>
 </article>

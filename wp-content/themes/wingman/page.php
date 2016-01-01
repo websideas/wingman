@@ -14,33 +14,21 @@ $sidebar = kt_get_page_sidebar();
 
 get_header(); ?>
     <div class="container">
-        <?php
-    	/**
-    	 * @hooked 
-    	 */
-    	do_action( 'theme_before_main' );
-
-        ?>
-        <div class="row">    
-            <div id="main" class="<?php echo apply_filters('kt_main_class', 'main-class', $sidebar['sidebar']); ?>">
-                <?php /* The loop */ ?>
+        <?php do_action( 'kt_before_main' ); ?>
+        <div class="row">
+            <?php $main_class = apply_filters('kt_main_class', 'main-class', $sidebar['sidebar']); ?>
+            <div id="main" class="<?php echo esc_attr($main_class) ; ?>">
                 <?php while ( have_posts() ) : the_post(); ?>
-                    <?php
-                        // Include the page content template.
-                        get_template_part( 'content', 'page' );
-                    ?>
+                    <?php get_template_part( 'content', 'page' ); ?>
                 <?php endwhile; ?>
-            </div>
+            </div><!-- #main -->
             <?php if($sidebar['sidebar'] != 'full'){ ?>
-                <div class="<?php echo apply_filters('kt_sidebar_class', 'sidebar', $sidebar['sidebar']); ?>">
+                <?php $sidebar_class = apply_filters('kt_sidebar_class', 'sidebar', $sidebar['sidebar']); ?>
+                <div class="<?php echo esc_attr($sidebar_class); ?>">
                     <?php dynamic_sidebar($sidebar['sidebar_area']); ?>
                 </div><!-- .sidebar -->
             <?php } ?>
         </div><!-- .row -->
-        <?php
-    	/**
-    	 * @hooked 
-    	 */
-    	do_action( 'theme_after_main' ); ?>
+        <?php do_action( 'kt_after_main' ); ?>
     </div><!-- .container -->
 <?php get_footer(); ?>

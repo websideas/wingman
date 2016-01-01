@@ -31,6 +31,9 @@
                             if($blog_atts['show_date']){
                                 kt_entry_meta_time($blog_atts['date_format']);
                             }
+                            if($blog_atts['show_view_number']){
+                                kt_get_post_views( get_the_ID() );
+                            }
                             if($blog_atts['show_like_post']){
                                 kt_like_post();
                             }
@@ -41,7 +44,7 @@
                         <div class="entry-excerpt">
                             <?php
                             the_content(sprintf(
-                                __('Read more %s', 'wingman'),
+                                esc_html__('Read more %s', 'wingman'),
                                 the_title('<span class="screen-reader-text">', '</span>', false)
                             ));
                             ?>

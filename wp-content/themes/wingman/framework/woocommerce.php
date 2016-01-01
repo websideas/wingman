@@ -23,7 +23,6 @@ endif;
  *
  */
 function kt_wp_enqueue_scripts(){
-    wp_enqueue_script( 'jquery-ui-tabs' );
     wp_enqueue_style( 'kt-woocommerce', KT_THEME_CSS . 'woocommerce.css' );
     wp_enqueue_script( 'kt-woocommerce', KT_THEME_JS . 'woocommerce.js', array( 'jquery', 'jquery-ui-accordion', 'jquery-ui-tabs' ), null, true );
 }
@@ -52,11 +51,8 @@ function kt_woocommerce_set_option() {
     update_option( 'shop_thumbnail_image_size', $thumbnail ); 	// Image gallery thumbs
     update_option( 'swatches_image_size', $swatches ); 	        // Image swatches thumbs
 
-
 }
 add_action( 'after_switch_theme', 'kt_woocommerce_set_option', 1 );
-
-
 
 /**
  *
@@ -153,8 +149,8 @@ function kt_products_per_page_dropdown() {
     <select name="per_page" onchange="this.form.submit()">
         <?php foreach( $products_per_page_options as $key => $value ) : ?>
             <option value="<?php echo esc_attr( $value ); ?>" <?php selected( $value, $current_per_page); ?>><?php
-                $text = apply_filters( 'woo_products_per_page_text', __( '%s item/pages', 'wingman' ), $value );
-                esc_html( printf( $text, $value == -1 ? __( 'All', 'wingman' ) : $value ) ); // Set to 'All' when value is -1
+                $text = apply_filters( 'woo_products_per_page_text', esc_html__( '%s item/pages', 'wingman' ), $value );
+                esc_html( printf( $text, $value == -1 ? esc_html__( 'All', 'wingman' ) : $value ) ); // Set to 'All' when value is -1
                 ?></option>
         <?php endforeach; ?>
     </select>
@@ -289,7 +285,7 @@ function kt_woocommerce_get_cart( $wrapper = true ){
         $output .= '<div class="shopping-bag-wrapper ">';
         $output .= '<div class="shopping-bag-content">';
         if ( sizeof(WC()->cart->cart_contents)>0 ) {
-            $output .= '<div class="cart-title">'.__( 'Recently added item(s)','wingman' ).'</div>';
+            $output .= '<div class="cart-title">'.esc_html__( 'Recently added item(s)','wingman' ).'</div>';
             $output .= '<div class="bag-products mCustomScrollbar">';
             $output .= '<div class="bag-products-content">';
             foreach (WC()->cart->cart_contents as $cart_item_key => $cart_item) {
@@ -306,7 +302,7 @@ function kt_woocommerce_get_cart( $wrapper = true ){
                     $output .= '<div class="bag-product-price">'.$cart_item['quantity'].'x'.wc_price($bag_product->get_price()).'</div>';
 
                     $output .= '</div>';
-                    $output .= apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="#" data-itemkey="'.$cart_item_key.'" data-id="'.$cart_item['product_id'].'" class="remove" title="%s"></a>', __('Remove this item', 'woocommerce') ), $cart_item_key );
+                    $output .= apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="#" data-itemkey="'.$cart_item_key.'" data-id="'.$cart_item['product_id'].'" class="remove" title="%s"></a>', esc_html__('Remove this item', 'woocommerce') ), $cart_item_key );
 
                     $output .= '</div>';
                 }
@@ -314,15 +310,15 @@ function kt_woocommerce_get_cart( $wrapper = true ){
             $output .= '</div>';
             $output .= '</div>';
         }else{
-            $output .=  "<p class='cart_block_no_products'>".__('Your cart is currently empty.', 'wingman')."</p>";
+            $output .=  "<p class='cart_block_no_products'>".esc_html__('Your cart is currently empty.', 'wingman')."</p>";
         }
 
         if ( sizeof(WC()->cart->cart_contents)>0 ) {
-            $output .= '<div class="bag-total"><strong>'.__('Subtotal: ', 'wingman').'</strong>'.$cart_total.'</div><!-- .bag-total -->';
+            $output .= '<div class="bag-total"><strong>'.esc_html__('Subtotal: ', 'wingman').'</strong>'.$cart_total.'</div><!-- .bag-total -->';
             $output .= '<div class="bag-buttons">';
             $output .= '<div class="bag-buttons-content clearfix">';
-            $output .= '<span><a href="'.esc_url( WC()->cart->get_cart_url() ).'" class="btn btn-default btn-animation"><span>'.__('View cart', 'wingman').'<i class="fa fa-long-arrow-right"></i></span></a></span>';
-            $output .= '<span><a href="'.esc_url( WC()->cart->get_checkout_url() ).'" class="btn btn-default btn-animation"><span>'.__('Checkout', 'wingman').'<i class="fa fa-long-arrow-right"></i></span></a></span>';
+            $output .= '<span><a href="'.esc_url( WC()->cart->get_cart_url() ).'" class="btn btn-default btn-animation"><span>'.esc_html__('View cart', 'wingman').'<i class="fa fa-long-arrow-right"></i></span></a></span>';
+            $output .= '<span><a href="'.esc_url( WC()->cart->get_checkout_url() ).'" class="btn btn-default btn-animation"><span>'.esc_html__('Checkout', 'wingman').'<i class="fa fa-long-arrow-right"></i></span></a></span>';
             $output .= '</div><!-- .bag-buttons -->';
             $output .= '</div><!-- .bag-buttons -->';
         }
@@ -359,7 +355,6 @@ function kt_woocommerce_get_cart_mobile( $wrapper = true ){
     }
     return $output;
 }
-
 
 
 /**
@@ -507,7 +502,7 @@ add_action( 'woocommerce_shop_loop_item_before_image', 'woocommerce_template_loo
 add_action( 'woocommerce_shop_tool_list_before', 'woocommerce_template_loop_add_to_cart', 5);
 
 function kt_woocommerce_sale_flash($text, $post, $product){
-    $text = '<span class="onsale">' . __( 'Sale', 'wingman' ) . '</span>';
+    $text = '<span class="onsale">' . esc_html__( 'Sale', 'wingman' ) . '</span>';
     return $text;
 }
 add_filter('woocommerce_sale_flash', 'kt_woocommerce_sale_flash', 20, 3);
@@ -522,18 +517,18 @@ function kt_woocommerce_add_archive_tool(){
         $count++;
     }
     ?>
-    <div class="product-image-tool tool-<?php echo $count; ?>">
+    <div class="product-image-tool tool-<?php echo esc_attr($count); ?>">
         <?php
         if(class_exists('YITH_WCWL_UI')){
-            echo do_shortcode('<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('wishlist','wingman').'">[yith_wcwl_add_to_wishlist]</div>');
+            echo do_shortcode('<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. esc_html__('wishlist','wingman').'">[yith_wcwl_add_to_wishlist]</div>');
         }
         printf(
-            '<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('Quick View','wingman').'"><a href="#" class="product-quick-view" data-id="%s">%s</a></div>',
+            '<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. esc_html__('Quick View','wingman').'"><a href="#" class="product-quick-view" data-id="%s">%s</a></div>',
             get_the_ID(),
-            __('Quick view', 'wingman')
+            esc_html__('Quick view', 'wingman')
         );
         if(defined( 'YITH_WOOCOMPARE' )){
-            echo do_shortcode('<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('Compare','wingman').'">[yith_compare_button]</div>');
+            echo do_shortcode('<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. esc_html__('Compare','wingman').'">[yith_compare_button]</div>');
         }
         ?>
     </div>
@@ -654,7 +649,7 @@ function kt_woocommerce_show_product_loop_new_flash(){
     $post_date = strtotime( $post->post_date );
     $num_day = (int)(($now - $post_date)/(3600*24));
     if( $num_day < $time_new ){
-        echo "<span class='kt_new'>".__( 'New','wingman' )."</span>";
+        echo "<span class='kt_new'>".esc_html__( 'New','wingman' )."</span>";
     }
 }
 add_action( 'woocommerce_shop_loop_item_before_image', 'kt_woocommerce_show_product_loop_new_flash', 5 );
@@ -719,7 +714,7 @@ if( ! function_exists( 'kt_share_box_woo' ) ){
 
         if($html){
             printf(
-                '<div class="entry-share-box %s">'.__( 'Share Link: ','wingman' ).'%s</div>',
+                '<div class="entry-share-box %s">'.esc_html__( 'Share Link: ','wingman' ).'%s</div>',
                 $class,
                 $html
             );
@@ -744,22 +739,21 @@ function kt_template_single_excerpt(){
 
 
 function kt_thumbnail_page_shop(){
-
     if( is_shop() ){
         $banner = kt_option( 'shop_content_banner' );
         if( $banner ){
-            echo '<div class="shop-thumb">'.do_shortcode($banner).'</div>';
+            printf( '<div class="shop-thumb">%s</div>', do_shortcode($banner) );
         }
     }
 }
 add_action( 'woocommerce_archive_description', 'kt_thumbnail_page_shop', 10 );
 
 
+
 add_action( 'woocommerce_after_subcategory', 'kt_woocommerce_category_description', 10, 1 );
 function kt_woocommerce_category_description( $category ) {
     if ( is_product_category() ) {
-        $subtit = '<div class="description product-short-description">'.$category->description.'</div>';
-        echo $subtit;
+        printf('<div class="description product-short-description">%s</div>', $category->description);
     }
 }
 

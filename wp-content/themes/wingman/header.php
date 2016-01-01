@@ -24,47 +24,24 @@
 </head>
 <body <?php body_class( ); ?>>
     <?php
-
-    /**
-     * @hooked
-     */
     do_action( 'kt_body_top' );
-
     $position = kt_get_header();
     $header_layout = kt_get_header_layout();
-
     ?>
-
     <div id="page_outter">
         <div id="page">
             <div id="wrapper-content">
+                <?php do_action( 'kt_before_header' ); ?>
                 <?php
-            	/**
-            	 * @hooked 
-            	 */
-            	do_action( 'kt_before_header' ); ?>
-
-                <?php get_template_part( 'templates/headers/header',  'mobile'); ?>
-
-                <?php get_template_part( 'templates/headers/header',  'mobilenav'); ?>
-
+                    get_template_part( 'templates/headers/header',  'mobile');
+                    get_template_part( 'templates/headers/header',  'mobilenav');
+                ?>
                 <div class="<?php echo esc_attr(apply_filters('theme_header_class', 'header-container header-'.$header_layout.' header-'.$position, $header_layout)); ?>">
                     <header id="header" class="<?php echo apply_filters('theme_header_content_class', 'header-content', $header_layout) ?>">
                         <?php get_template_part( 'templates/headers/header',  $header_layout); ?>
                     </header><!-- #header -->
                 </div><!-- .header-container -->
                 
-                <?php
-                    /**
-                     * @hooked theme_before_content_add_title 10
-                     *
-                     */
-                    do_action( 'kt_before_content' , $position);
-                ?>
+                <?php do_action( 'kt_before_content' , $position);  ?>
                 <div id="content" class="<?php echo apply_filters('kt_content_class', 'site-content') ?>">
-
-                    <?php
-            		/**
-            		 * @hooked
-            		 */
-            		do_action( 'kt_content_top' ); ?>
+                    <?php do_action( 'kt_content_top' ); ?>

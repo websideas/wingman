@@ -13,9 +13,9 @@
         <?php } ?>
         <?php
             if($blog_atts['thumbnail_type'] == 'image'){
-                kt_post_thumbnail_image('recent_posts_list', 'img-responsive');
+                kt_post_thumbnail_image('kt_list', 'img-responsive');
             }else{
-                kt_post_thumbnail('recent_posts_list', 'img-responsive');
+                kt_post_thumbnail('kt_list', 'img-responsive');
             }
         ?>
     </div>
@@ -38,7 +38,7 @@
                                 kt_entry_meta_comments();
                             }
                             if($blog_atts['show_view_number']){
-                                echo kt_get_post_views( get_the_ID() );
+                                kt_get_post_views( get_the_ID() );
                             }
                             if($blog_atts['show_like_post']){
                                 kt_like_post();
@@ -58,7 +58,7 @@
                             printf( '<a href="%1$s" class="%2$s">%3$s</a>',
                                 esc_url( get_permalink( get_the_ID() ) ),
                                 $moreclass,
-                                sprintf( __( 'Read more %s', 'wingman' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+                                sprintf( esc_html__( 'Read more %s', 'wingman' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
                             );
                             ?>
                         </div>

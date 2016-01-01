@@ -6,22 +6,12 @@
  *
  */
 ?>
-                <?php
-                /**
-                 * @hooked
-                 *
-                 */
-                do_action( 'kt_content_bottom' ); ?>
+                <?php do_action( 'kt_content_bottom' ); ?>
             </div><!-- #content -->
         </div><!-- #wrapper-content -->
+
         <?php if(kt_option('footer', true)){ ?>
-            <?php
-        	/**
-        	 * @hooked 
-             * theme_after_footer_addscroll 10
-             * 
-        	 */
-        	do_action( 'kt_before_footer' ); ?>
+            <?php  do_action( 'kt_before_footer' ); ?>
             <div id="footer">
                 <?php if(is_active_sidebar( 'footer-top' ) && kt_option('footer_top', true)){ ?>
                     <footer id="footer-top">
@@ -30,7 +20,6 @@
                         </div><!-- .container -->
                     </footer><!-- #footer-top -->
                 <?php } ?>
-
                 <?php
                     $layouts = explode('-', kt_option('footer_widgets_layout', '4-4-4'));
                     $sidebar_widgets = true;
@@ -73,14 +62,8 @@
                     </div><!-- .container -->
                 <?php } ?>
 
-
-
             </div>
-            <?php
-        	/**
-        	 * @hooked 
-        	 */
-        	do_action( 'kt_after_footer' ); ?>
+            <?php do_action( 'kt_after_footer' ); ?>
         <?php } ?>
     </div><!-- #page -->
 </div><!-- #page_outter -->

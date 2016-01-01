@@ -1,9 +1,9 @@
 <?php $classes = array('post-item post-layout-1', $blog_atts['class']); ?>
 <?php
     if( $blog_atts['type'] == 'masonry' ){
-        $image_size = 'full';
+        $image_size = 'kt_masonry';
     }else{
-        $image_size = 'recent_posts';
+        $image_size = 'kt_gird';
     }
 ?>
 <article <?php post_class($classes); ?>>
@@ -23,7 +23,7 @@
                 kt_entry_meta_time($blog_atts['date_format']);
             }
             if($blog_atts['show_view_number']){
-                echo kt_get_post_views( get_the_ID() );
+                kt_get_post_views( get_the_ID() );
             }
             if($blog_atts['show_like_post']){
                 kt_like_post();
@@ -57,7 +57,7 @@
                             printf( '<a href="%1$s" class="%2$s">%3$s</a>',
                                 esc_url( get_permalink( get_the_ID() ) ),
                                 $moreclass,
-                                sprintf( __( 'Read more %s', 'wingman' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+                                sprintf( esc_html__( 'Read more %s', 'wingman' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
                             );
                         ?>
                     </div><!-- .entry-more -->

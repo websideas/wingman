@@ -12,9 +12,6 @@ if ( !defined('ABSPATH')) exit;
 if ( ! isset( $content_width ) )
 	$content_width = 1170;
 
-
-
-
 add_action( 'after_setup_theme', 'kt_theme_setup' );
 if ( ! function_exists( 'kt_theme_setup' ) ):
     function kt_theme_setup() {
@@ -55,11 +52,11 @@ if ( ! function_exists( 'kt_theme_setup' ) ):
 
 
         if (function_exists( 'add_image_size' ) ) {
-            add_image_size( 'kt_recent_posts', 570, 355, true);
-            add_image_size( 'kt_recent_posts_list', 570, 410, true);
+            add_image_size( 'kt_gird', 570, 410, true);
+            add_image_size( 'kt_masonry', 570 );
             add_image_size( 'kt_small', 170, 170, true );
-            add_image_size( 'kt_blog_post', 1140, 610, true );
-            add_image_size( 'kt_blog_post_sidebar', 1140 );
+            add_image_size( 'kt_list', 1140, 610, true );
+            add_image_size( 'kt_list_sidebar', 850, 455, true );
         }
 
         load_theme_textdomain( 'wingman', KT_THEME_DIR . '/languages' );
@@ -68,9 +65,8 @@ if ( ! function_exists( 'kt_theme_setup' ) ):
          * This theme uses wp_nav_menu() in one location.
          */
         register_nav_menus(array(
-            'primary' => __('Main menu', 'wingman'),
-            //'top'	  => __( 'Top Menu', 'wingman' ),
-            'bottom'	  => __( 'Bottom Menu', 'wingman' ),
+            'primary'   => esc_html__('Main menu', 'wingman'),
+            'bottom'    => esc_html__( 'Bottom Menu', 'wingman' ),
         ));
 
     }
@@ -96,11 +92,11 @@ function kt_add_scripts() {
     wp_enqueue_style( 'kt-plugins', KT_THEME_CSS . 'plugins.css', array());
 
 	// Load our main stylesheet.
-    wp_enqueue_style( 'kt-main', KT_THEME_CSS . 'style.css', array( 'mediaelement-style' ) );
-    wp_enqueue_style( 'kt-queries', KT_THEME_CSS . 'queries.css', array('kt-main') );
+    wp_enqueue_style( 'kt-style', KT_THEME_CSS . 'style.css', array( 'mediaelement-style' ) );
+    wp_enqueue_style( 'kt-queries', KT_THEME_CSS . 'queries.css', array('kt-style') );
     
 	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'kt-ie', KT_THEME_CSS . 'ie.css', array( 'kt-main' ) );
+	wp_enqueue_style( 'kt-ie', KT_THEME_CSS . 'ie.css', array( 'kt-style' ) );
 	wp_style_add_data( 'kt-ie', 'conditional', 'lt IE 9' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -118,10 +114,10 @@ function kt_add_scripts() {
         'security' => wp_create_nonce( 'ajax_frontend' ),
         'current_date' => date_i18n('Y-m-d H:i:s'),
         'query_vars' => json_encode( $wp_query->query ),
-        'days' => __('Days', 'wingman'),
-        'hours' => __('Hours', 'wingman'),
-        'minutes' => __('Minutes', 'wingman'),
-        'seconds' => __('Seconds', 'wingman'),
+        'days' => esc_html__('Days', 'wingman'),
+        'hours' => esc_html__('Hours', 'wingman'),
+        'minutes' => esc_html__('Minutes', 'wingman'),
+        'seconds' => esc_html__('Seconds', 'wingman'),
     ));
     
 }
@@ -156,15 +152,15 @@ if ( ! function_exists( 'kt_comment_nav' ) ) :
         if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
             ?>
             <nav class="navigation comment-navigation clearfix">
-                <h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'wingman' ); ?></h2>
+                <h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'wingman' ); ?></h2>
                 <div class="nav-links">
                     <?php
 
-                    if ( $prev_link = get_previous_comments_link( '<i class="fa fa-angle-double-left"></i> '.__( 'Older Comments', 'wingman' ) ) ) :
+                    if ( $prev_link = get_previous_comments_link( '<i class="fa fa-angle-double-left"></i> '.esc_html__( 'Older Comments', 'wingman' ) ) ) :
                         printf( '<div class="nav-previous">%s</div>', $prev_link );
                     endif;
 
-                    if ( $next_link = get_next_comments_link( '<i class="fa fa-angle-double-right"></i> '.__( 'Newer Comments',  'wingman' ) ) ) :
+                    if ( $next_link = get_next_comments_link( '<i class="fa fa-angle-double-right"></i> '.esc_html__( 'Newer Comments',  'wingman' ) ) ) :
                         printf( '<div class="nav-next">%s</div>', $next_link );
                     endif;
 
@@ -230,9 +226,9 @@ if ( ! function_exists( 'kt_post_thumbnail_image' ) ) :
                     $image = apply_filters( 'kt_placeholder', $size );
                     printf(
                         '<img src="%s" alt="%s" class="%s"/>',
-                        $image,
-                        __('No image', 'wingman'),
-                        $class_img.' no-image'
+                        esc_url($image),
+                        esc_html__('No image', 'wingman'),
+                        esc_attr($class_img.' no-image')
                     )
                 ?>
             <?php } ?>
@@ -242,7 +238,6 @@ if ( ! function_exists( 'kt_post_thumbnail_image' ) ) :
         if(!$echo){
             return ob_get_clean();
         }
-
     }
 endif;
 
@@ -287,7 +282,7 @@ if ( ! function_exists( 'kt_post_thumbnail' ) ) :
                 printf(
                     '<img src="%s" alt="%s" class="%s"/>',
                     $image,
-                    __('No image', 'wingman'),
+                    esc_html__('No image', 'wingman'),
                     $class_img
                 );
             ?>
@@ -424,15 +419,15 @@ function kt_comments($comment, $args, $depth) {
             <div class="comment-entry entry-content">
                 <?php comment_text() ?>
                 <?php if ($comment->comment_approved == '0') : ?>
-                    <em><?php _e('Your comment is awaiting moderation.', 'wingman') ?></em>
+                    <em><?php esc_html_e('Your comment is awaiting moderation.', 'wingman') ?></em>
                 <?php endif; ?>
             </div>
             <div class="comment-actions clear">
-                <?php edit_comment_link( '<span class="icon-pencil"></span> '.__('Edit', 'wingman'),'  ',' ') ?>
+                <?php edit_comment_link( '<span class="icon-pencil"></span> '.esc_html__('Edit', 'wingman'),'  ',' ') ?>
                 <?php comment_reply_link( array_merge( $args,
                     array('depth' => $depth,
                         'max_depth' => $args['max_depth'],
-                        'reply_text' =>'<span class="icon-action-undo"></span> '.__('Reply', 'wingman')
+                        'reply_text' =>'<span class="icon-action-undo"></span> '.esc_html__('Reply', 'wingman')
                     ))) ?>
             </div>
         </div>
@@ -469,15 +464,15 @@ if ( ! function_exists( 'kt_post_nav' ) ) :
 
                     
                     if(!get_previous_post_link('&laquo; %link', '', true)){
-                        printf('<div class="nav-previous meta-nav"><span>%s</span></div>', __( '<span>Previous Article</span>', 'wingman' ));
+                        printf('<div class="nav-previous meta-nav"><span>%s</span></div>', esc_html__( '<span>Previous Article</span>', 'wingman' ));
                     }else{
-                        previous_post_link('<div class="nav-previous meta-nav">%link</div>', __( '<span>Previous Article</span>', 'wingman' ), TRUE);
+                        previous_post_link('<div class="nav-previous meta-nav">%link</div>', esc_html__( '<span>Previous Article</span>', 'wingman' ), TRUE);
                     }
 
                     if(!get_next_post_link('&laquo; %link', '', true)){
-                        printf('<div class="nav-next meta-nav"><span>%s</span></div>', __( '<span>Next Article</span>', 'wingman' ));
+                        printf('<div class="nav-next meta-nav"><span>%s</span></div>', esc_html__( '<span>Next Article</span>', 'wingman' ));
                     }else{
-                        next_post_link('<div class="nav-next meta-nav">%link</div>', __( '<span>Next Article</span>', 'wingman' ), TRUE);
+                        next_post_link('<div class="nav-next meta-nav">%link</div>', esc_html__( '<span>Next Article</span>', 'wingman' ), TRUE);
                     }
                 ?>
             </div><!-- .nav-links -->
@@ -507,20 +502,20 @@ if ( ! function_exists( 'kt_paging_nav' ) ) :
             printf(
                 '<div class="blog-posts-loadmore"><a href="#" class="blog-loadmore-button btn btn-default">%s %s</a></div>',
                 '<span class="fa fa-refresh button-icon-left"></span>',
-                __('Load more', 'wingman')
+                esc_html__('Load more', 'wingman')
             );
         }elseif($type == 'normal'){ ?>
 
             <nav class="navigation paging-navigation clearfix">
-                <h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'wingman' ); ?></h1>
+                <h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'wingman' ); ?></h1>
                 <div class="nav-links">
 
                     <?php if ( get_next_posts_link() ) : ?>
-                        <div class="nav-previous"><?php next_posts_link( '<i class="fa fa-long-arrow-left"></i> '.__( 'Older posts', 'wingman' ) ); ?></div>
+                        <div class="nav-previous"><?php next_posts_link( '<i class="fa fa-long-arrow-left"></i> '.esc_html__( 'Older posts', 'wingman' ) ); ?></div>
                     <?php endif; ?>
 
                     <?php if ( get_previous_posts_link() ) : ?>
-                        <div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'wingman' ).' <i class="fa fa-long-arrow-right"></i>' ); ?></div>
+                        <div class="nav-next"><?php previous_posts_link( esc_html__( 'Newer posts', 'wingman' ).' <i class="fa fa-long-arrow-right"></i>' ); ?></div>
                     <?php endif; ?>
 
                 </div><!-- .nav-links -->
@@ -528,8 +523,8 @@ if ( ! function_exists( 'kt_paging_nav' ) ) :
 
         <?php }else{
             the_posts_pagination(array(
-                'prev_text' => sprintf('<span class="screen-reader-text">%s</span>%s', __('Previous', 'wingman'), '<i class="fa fa-long-arrow-left"></i>'),
-                'next_text' => sprintf('<span class="screen-reader-text">%s</span>%s', __('Next', 'wingman'), '<i class="fa fa-long-arrow-right"></i>'),
+                'prev_text' => sprintf('<span class="screen-reader-text">%s</span>%s', esc_html__('Previous', 'wingman'), '<i class="fa fa-long-arrow-left"></i>'),
+                'next_text' => sprintf('<span class="screen-reader-text">%s</span>%s', esc_html__('Next', 'wingman'), '<i class="fa fa-long-arrow-right"></i>'),
                 'before_page_number' => '',
             ));
         }
@@ -548,7 +543,7 @@ if ( ! function_exists( 'kt_entry_meta_author' ) ) :
             _x( 'Author', 'Used before post author name.', 'wingman' ),
             esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
             get_the_author(),
-            __('By:', 'wingman' )
+            esc_html__('By:', 'wingman' )
         );
     }
 endif;
@@ -565,13 +560,13 @@ if ( ! function_exists( 'kt_entry_meta_categories' ) ) :
                 if($echo){
                     printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s %3$s</span>',
                         _x( 'Categories', 'Used before category names.', 'wingman' ),
-                        __('in', 'wingman'),
+                        esc_html__('in', 'wingman'),
                         $categories_list
                     );
                 }else{
                     return sprintf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s %3$s</span>',
                         _x( 'Categories', 'Used before category names.', 'wingman' ),
-                        __('in', 'wingman'),
+                        esc_html__('in', 'wingman'),
                         $categories_list
                     );
                 }
@@ -608,12 +603,10 @@ if ( ! function_exists( 'kt_entry_meta_comments' ) ) :
      *
      */
     function kt_entry_meta_comments() {
-        if ( !shortcode_exists( 'fbcomments' ) ) {
-            if (! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-                echo '<span class="comments-link">';
-                comments_popup_link( __( 'No Comments', 'wingman' ), __( '1 Comment', 'wingman' ), __( '% Comments', 'wingman' ) );
-                echo '</span>';
-            }
+        if (! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+            echo '<span class="comments-link">';
+            comments_popup_link( esc_html__( 'No Comments', 'wingman' ), esc_html__( '1 Comment', 'wingman' ), esc_html__( '% Comments', 'wingman' ) );
+            echo '</span>';
         }
     }
 endif;
@@ -631,7 +624,7 @@ if ( ! function_exists( 'kt_entry_meta_time' ) ) :
                 $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
             }
 
-            $time_show = ($format == 'time') ? human_time_diff( get_the_time('U'), current_time('timestamp') ) . __(' ago', 'wingman') : get_the_date($format);
+            $time_show = ($format == 'time') ? human_time_diff( get_the_time('U'), current_time('timestamp') ) . esc_html__(' ago', 'wingman') : get_the_date($format);
 
             $time_string = sprintf( $time_string,
                 esc_attr( get_the_date( 'c' ) ),
@@ -669,13 +662,12 @@ if ( ! function_exists( 'kt_get_post_views' ) ){
             add_post_meta($postID, $count_key, '0');
             $count = 0;
         }
+        $text = ($count == 0 || $count == 1) ? esc_html__('View','wingman') : esc_html__('Views','wingman');
 
-        $text = ($count == 0 || $count == 1) ? __('View','wingman') : __('Views','wingman');
-
-        return '<span class="post-view"><i class="fa fa-eye"></i> '.$count.' '.$text.'</span>';
-
+        printf('<span class="post-view"><i class="fa fa-eye"></i> %s %s </span>', $count, $text);
     }
 }
+
 
 if ( ! function_exists( 'kt_like_post' ) ){
     function kt_like_post( $before = '', $after = '', $post_id = null ) {
@@ -689,18 +681,21 @@ if ( ! function_exists( 'kt_like_post' ) ){
             add_post_meta($post_id, '_like_post', $like_count, true);
         }
 
-        $text = ($like_count == 0 || $like_count == 1) ? __('like','wingman') : __('likes','wingman');
+        $text = ($like_count == 0 || $like_count == 1) ? esc_html__('like','wingman') : esc_html__('likes','wingman');
 
         $class = 'kt_likepost';
-        $title = __('Like this post', 'wingman');
-        $already =  __('You already like this!', 'wingman');
 
         if( isset($_COOKIE['like_post_'. $post_id]) ){
             $class .= ' liked';
-            $title = $already;
         }
 
-        $output = "<a data-id='".$post_id."' data-already='".esc_attr($already)."' class='".esc_attr($class)."' href='".get_the_permalink($post_id)."#".$post_id."' title='".esc_attr($title)."'>".$like_count.' '.$text."</a>";
+        $output = sprintf(
+            '<a data-id="%s" href="%s" class="%s">%s</a>',
+            $post_id,
+            get_the_permalink($post_id)."#".$post_id,
+            $class,
+            $text
+        );
 
         echo $before . $output . $after;
     }
@@ -729,7 +724,7 @@ if ( ! function_exists( 'kt_author_box' ) ) :
             <div class="author-description">
                 <h2 class="author-title">
                     <a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author" title="<?php echo esc_attr(sprintf( __( 'View all posts by %s', 'wingman' ), get_the_author() ) ); ?>">
-                        <?php printf( __( 'About %s', 'wingman' ), get_the_author() ); ?>
+                        <?php printf( esc_html__( 'About %s', 'wingman' ), get_the_author() ); ?>
                     </a>
                 </h2>
                 <?php
@@ -859,7 +854,6 @@ if ( ! function_exists( 'kt_related_article' ) ) :
         if(!$post_id) $post_id = $post->ID;
 
         $blog_columns = 3;
-        $blog_columns_tablet = 2;
         $posts_per_page = kt_option('blog_related_sidebar', 3);
 
         $args = array(
@@ -887,7 +881,7 @@ if ( ! function_exists( 'kt_related_article' ) ) :
         ?>
         <?php if($query->have_posts()){ ?>
             <div id="related-article">
-                <h3 class="title-article"><?php _e('Related Article', 'wingman'); ?></h3>
+                <h3 class="title-article"><?php esc_html_e('Related Article', 'wingman'); ?></h3>
                 <div class="row">
                     <?php
 
@@ -910,23 +904,13 @@ if ( ! function_exists( 'kt_related_article' ) ) :
 
                     $i = 1;
                     $bootstrapColumn = round( 12 / $blog_columns );
-                    $bootstrapTabletColumn = round( 12 / $blog_columns_tablet );
-                    $classes = 'col-xs-12 col-sm-'.$bootstrapTabletColumn.' col-md-' . $bootstrapColumn;
-
+                    $classes = 'col-xs-12 col-sm-6 col-md-' . $bootstrapColumn;
                     ?>
-
                     <?php while ( $query->have_posts() ) : $query->the_post(); ?>
                         <?php
                             $blog_atts = $blog_atts_posts;
-                            $classes_extra = '';
-                            if (  ( $i - 1 ) % $blog_columns == 0 || 1 == $blog_columns )
-                                $classes_extra .= ' col-clearfix-md col-clearfix-lg ';
-
-                            if ( ( $i - 1 ) % $blog_columns_tablet == 0 || 1 == $blog_columns )
-                                $classes_extra .= ' col-clearfix-sm';
-
                         ?>
-                        <div class="article-post-item <?php echo $classes." ".$classes_extra; ?>">
+                        <div class="article-post-item <?php echo $classes ?>">
                             <?php kt_get_template_part( 'templates/blog/layout/content', get_post_format(), $blog_atts); ?>
                         </div><!-- .article-post-item -->
                     <?php $i++; endwhile; ?>
@@ -936,3 +920,372 @@ if ( ! function_exists( 'kt_related_article' ) ) :
         <?php } ?>
     <?php }
 endif;
+
+
+
+if(!function_exists('kt_setting_script_footer')){
+    /**
+     * Add advanced js to footer
+     *
+     */
+    function kt_setting_script_footer() {
+        $advanced_js = kt_option('advanced_editor_js');
+        if($advanced_js){
+            printf('<script type="text/javascript">%s</script>', $advanced_js);
+        }
+    }
+    add_action('wp_footer', 'kt_setting_script_footer', 100);
+}
+
+/**
+ * Theme Custom CSS
+ *
+ * @since       1.0
+ * @return      void
+ * @access      public
+ */
+function kt_setting_script() {
+    $advanced_css = kt_option('advanced_editor_css');
+    $accent = kt_option('styling_accent', '#82c14f');
+    $styling_link = kt_option('styling_link');
+
+    ?>
+    <style id="kt-theme-custom-css" type="text/css">
+        <?php
+            echo $advanced_css;
+            if($styling_link['active']){
+                echo 'a:focus{color: '.$styling_link['active'].';}';
+            }
+        ?>
+
+        <?php if( $accent !='#82c14f' ){ ?>
+            ::-moz-selection{ background:<?php echo $accent; ?>;}
+            ::-webkit-selection{ background:<?php echo $accent; ?>;}
+            ::selection{ background:<?php echo $accent; ?>;}
+
+            .readmore-link,
+            .readmore-link:hover,
+            .testimonial-rate span:after,
+            .testimonial-carousel-skin-light .testimonial-item .testimonial-rate span::after,
+            .blog-posts .entry-title a:hover,
+            .woocommerce .woocommerce-pagination .page-numbers:hover,
+            .woocommerce .woocommerce-pagination .page-numbers:focus,
+            .woocommerce .woocommerce-pagination .page-numbers.current,
+            .pagination .page-numbers:hover,
+            .pagination .page-numbers:focus,
+            .pagination .page-numbers.current,
+            .post-single .tags-links a:hover,
+            .post-single .tags-links a:focus,
+
+            .widget_pages ul li a:hover,
+            .widget_pages ul li a:focus,
+            .widget_nav_menu ul li a:hover,
+            .widget_nav_menu ul li a:focus,
+            .widget_meta ul li a:hover,
+            .widget_meta ul li a:focus,
+            .widget_archive ul li a:hover,
+            .widget_archive ul li a:focus,
+            .widget_product_categories ul li a:hover,
+            .widget_product_categories ul li a:focus,
+            .widget_categories ul li a:hover,
+            .widget_categories ul li a:focus,
+            .yith-woocompare-widget ul li a:hover,
+            .yith-woocompare-widget ul li a:focus,
+            .woocommerce ul.product_list_widget li a:hover,
+            .widget_recent_comments ul li:hover a,
+            .widget_recent_entries ul li:hover a,
+
+            .uranus.tparrows:hover::before,
+            .uranus.tparrows:hover::after,
+            .team .team-attr .agency,
+            .wrapper-comingsoon.style2 .coming-soon .wrap .value-time,
+            .wrapper-comingsoon.style3 .coming-soon .wrap .value-time,
+            .widget_kt_twitter ul li .kt-twitter-tool,
+
+            .owl-carousel-kt.carousel-dark .owl-buttons > div:hover,
+            .owl-carousel-kt.carousel-light .owl-buttons > div:hover,
+            .woocommerce p.stars a:hover,
+            .comment-actions a:hover,
+            .comment-actions a:focus,
+            .kt-aboutwidget-title,
+            .kt-aboutwidget-socials a:hover,
+            .menu-bars-outer .menu-bars-items ul li a:hover,
+            .bag-products .bag-product .bag-product-title a:hover,
+            .woocommerce .widget_price_filter .price_slider_amount .price_label span,
+            .page-header .breadcrumbs a:hover,
+            .woocommerce table.cart tbody td.product-name a:hover,
+            .woocommerce table.cart tbody td.product-name a:focus,
+            .widget_layered_nav ul li a:hover,
+            #main-nav-tool li > a:hover,
+            .woocommerce ul.shop-products h3 a:hover,
+            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover,
+            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus,
+            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover::before,
+            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus::before,
+            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover::before,
+            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus::before,
+            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover,
+            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus,
+            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover::before,
+            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus::before,
+            .single-product-quickview .single-product-quickview-images .slick-arrow:hover::before,
+            .single-product-quickview .single-product-quickview-images .slick-arrow:focus::before,
+
+            .woocommerce .woocommerce-per-page::after,
+            .woocommerce .woocommerce-ordering::after,
+            .woocommerce .woocommerce-message .button.wc-forward:hover,
+            .woocommerce-page .woocommerce-message .button.wc-forward:hover,
+            .menu-bars-outer > a:hover,
+            .woocommerce .widget_price_filter .price_slider_amount .button:hover,
+            .woocommerce .widget_price_filter .price_slider_amount .button:focus,
+            .entry-share-box a:hover,
+            .woocommerce-page div.product .product_meta > span a:hover,
+            .woocommerce div.product .product_meta > span a:hover,
+            .woocommerce .star-rating span:before
+
+            {
+                color: <?php echo $accent; ?>;
+            }
+
+            .social-background-empty.social-style-accent a,
+            .social-background-outline.social-style-accent a{
+                color: <?php echo $accent; ?>!important;
+            }
+
+
+            .woocommerce.compare-button a:hover,
+            .woocommerce.compare-button a.add_to_wishlist:hover,
+            .woocommerce .yith-wcwl-add-button a:hover,
+            .woocommerce .yith-wcwl-add-button a.add_to_wishlist:hover,
+            .woocommerce .yith-wcwl-wishlistaddedbrowse a:hover,
+            .woocommerce .yith-wcwl-wishlistaddedbrowse a.add_to_wishlist:hover,
+            .woocommerce .yith-wcwl-wishlistexistsbrowse a:hover,
+            .woocommerce .yith-wcwl-wishlistexistsbrowse a.add_to_wishlist:hover,
+            .woocommerce .yith-wcwl-add-to-wishlist .ajax-loading,
+            .woocommerce.compare-button:hover,
+            .woocommerce .yith-wcwl-add-button:hover,
+            .woocommerce .yith-wcwl-wishlistaddedbrowse:hover,
+            .woocommerce .yith-wcwl-wishlistexistsbrowse:hover,
+            .woocommerce ul.shop-products .added_to_cart:hover,
+            .woocommerce ul.shop-products .button:hover,
+            .woocommerce ul.shop-products .product-quick-view:hover,
+            .woocommerce mark, .woocommerce .mark,
+            .btn-accent,
+            .woocommerce #respond input#submit:hover,
+            .woocommerce a.button:hover,
+            .woocommerce button.button:hover,
+            .woocommerce input.button:hover,
+            .woocommerce #respond input#submit.alt:hover,
+            .woocommerce a.button.alt:hover,
+            .woocommerce button.button.alt:hover,
+            .woocommerce input.button.alt:hover,
+            .woocommerce .woocommerce-pagination .page-numbers.current::before,
+            .woocommerce .woocommerce-pagination .page-numbers.current::after,
+            .pagination .page-numbers.current::before,
+            .pagination .page-numbers.current::after,
+            .woocommerce .widget_price_filter .ui-slider .ui-slider-range,
+            .woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
+            .woocommerce .gridlist-toggle li a:hover,
+            .woocommerce .gridlist-toggle li a.active,
+            .woocommerce span.onsale,
+            .btn-default:hover, .btn-default:focus, .btn-default:active,
+            .widget_rss ul li:hover::after,
+            .widget_recent_comments ul li:hover::after,
+            .widget_recent_entries ul li:hover::after,
+
+            .kt_flickr a::after,
+            .owl-carousel-kt .owl-pagination .owl-page.active,
+            .owl-carousel-kt .owl-pagination .owl-page:hover,
+            #header-content-mobile .header-mobile-tools a.mobile-cart span,
+            #cancel-comment-reply-link:hover,
+            body .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+            body .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+            body .mCSB_scrollTools .mCSB_dragger:focus .mCSB_dragger_bar,
+            body .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+            .woocommerce-category-products-tab ul.block-heading-tabs li a::before,
+            .woocommerce-category-products-tab ul.block-heading-tabs li a::after,
+            .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a span::after,
+            #back-to-top,
+            .woocommerce-page div.product .cart .single_add_to_cart_button:hover,
+            .woocommerce div.product .cart .single_add_to_cart_button:hover,
+            .woocommerce-page div.product .cart .single_add_to_cart_button:focus,
+            .woocommerce div.product .cart .single_add_to_cart_button:focus,
+
+            #calendar_wrap table tbody td#today,
+            #calendar_wrap table thead td#today,
+            .widget_nav_menu ul li a:hover::after,
+            .widget_pages ul li a:hover::after,
+            .widget_product_categories ul li a:hover::after,
+            .widget_categories ul li a:hover::after,
+            .widget_archive ul li a:hover::after,
+            .widget_meta ul li a:hover::after,
+            .yith-woocompare-widget ul li a:hover::after,
+            .kt-skill-wrapper .kt-skill-item-wrapper .kt-skill-bg-accent .kt-skill-bar,
+            #main-nav-tool li.mini-cart > a span,
+            #footer-area h3.widget-title:after,
+            #search-fullwidth .searchform .postform,
+            #footer-area h3.widget-title:before,
+            .readmore-link:before,
+            .readmore-link:after
+            {
+                background-color: <?php echo $accent; ?>;
+            }
+
+            .social-background-fill.social-style-accent a{
+                background-color: <?php echo $accent; ?>!important;
+            }
+
+            .woocommerce #respond input#submit:hover,
+            .woocommerce a.button:hover,
+            .woocommerce button.button:hover,
+            .woocommerce input.button:hover,
+            .woocommerce #respond input#submit.alt:hover,
+            .woocommerce a.button.alt:hover,
+            .woocommerce button.button.alt:hover,
+            .woocommerce input.button.alt:hover,
+
+            .woocommerce-page div.product .cart .single_add_to_cart_button:hover,
+            .woocommerce div.product .cart .single_add_to_cart_button:hover,
+            .woocommerce-page div.product .cart .single_add_to_cart_button:focus,
+            .woocommerce div.product .cart .single_add_to_cart_button:focus,
+
+            blockquote.blockquote-reverse, .blockquote.blockquote-reverse,
+            .social-background-empty.social-style-accent a,
+            .social-background-outline.social-style-accent a,
+            .owl-carousel-kt.carousel-dark .owl-buttons > div:hover,
+            .owl-carousel-kt.carousel-light .owl-buttons > div:hover,
+            div.swatch-wrapper.selected, div.swatch-wrapper:hover,
+            .btn-accent,
+            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-slide.slick-current,
+            .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-slide.slick-current,
+            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover,
+            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus,
+            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover,
+            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus,
+            .single-product-quickview .single-product-quickview-images .slick-arrow:hover,
+            .single-product-quickview .single-product-quickview-images .slick-arrow:focus,
+            .post-single .tags-links a:hover,
+            .post-single .tags-links a:focus,
+            blockquote, .blockquote,
+            .comment-actions a:hover,
+            .comment-actions a:focus,
+            .woocommerce .gridlist-toggle li a:hover,
+            .woocommerce .gridlist-toggle li a.active,
+            .btn-default:hover, .btn-default:focus, .btn-default:active,
+            .menu-bars-outer .menu-bars-items,
+            .mini-cart .shopping-bag-wrapper{
+                border-color: <?php echo $accent; ?>;
+            }
+
+            .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li.active span,
+            .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:hover span,
+            .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:focus span{
+                box-shadow: 0 0 0 1px <?php echo $accent; ?> inset;
+                -webkit-box-shadow: 0 0 0 1px <?php echo $accent; ?> inset;
+                -moz-box-shadow: 0 0 0 1px <?php echo $accent; ?> inset;
+                -ms-box-shadow: 0 0 0 1px <?php echo $accent; ?> inset;
+            }
+
+        <?php } ?>
+        <?php
+            $color_first_loader = kt_option('color_first_loader', $accent);
+            echo '.kt_page_loader.style-1 .page_loader_inner{border-color: '.$color_first_loader.';}';
+            echo '.kt_page_loader.style-1 .kt_spinner{background-color: '.$color_first_loader.';}';
+
+
+
+
+            $is_shop = false;
+            if(is_archive()){
+                if(kt_is_wc()){
+                    if(is_shop()){
+                        $is_shop = true;
+                    }
+                }
+            }
+
+            if(is_page() || is_singular() || $is_shop){
+
+                global $post;
+                $post_id = $post->ID;
+                if($is_shop){
+                    $post_id = get_option( 'woocommerce_shop_page_id' );
+                }
+
+                $pageh_spacing = rwmb_meta('_kt_page_top_spacing', array(), $post_id);
+                if($pageh_spacing != ''){
+                    echo '#content{padding-top: '.$pageh_spacing.';}';
+                }
+                $pageh_spacing = rwmb_meta('_kt_page_bottom_spacing', array(), $post_id);
+                if($pageh_spacing != ''){
+                    echo '#content{padding-bottom:'.$pageh_spacing.';}';
+                }
+
+                $pageh_top = rwmb_meta('_kt_page_header_top', array(), $post_id);
+                if($pageh_top != ''){
+                    echo 'div.page-header{padding-top: '.$pageh_top.';}';
+                }
+
+                $pageh_bottom = rwmb_meta('_kt_page_header_bottom', array(), $post_id);
+                if($pageh_bottom != ''){
+                    echo 'div.page-header{padding-bottom: '.$pageh_bottom.';}';
+                }
+
+                $pageh_title_color = rwmb_meta('_kt_page_header_title_color', array(), $post_id);
+                if($pageh_title_color != ''){
+                    echo 'div.page-header h1.page-header-title{color:'.$pageh_title_color.';}';
+                    echo '.page-header h1.page-header-title::before, .page-header h1.page-header-title::after{background:'.$pageh_title_color.';}';
+                }
+
+                $pageh_subtitle_color = rwmb_meta('_kt_page_header_subtitle_color', array(), $post_id);
+                if($pageh_subtitle_color != ''){
+                    echo 'div.page-header .page-header-subtitle{color:'.$pageh_subtitle_color.';}';
+                }
+
+                $pageh_breadcrumbs_color = rwmb_meta('_kt_page_header_breadcrumbs_color', array(), $post_id);
+                if($pageh_breadcrumbs_color != ''){
+                    echo 'div.page-header .breadcrumbs,div.page-header .breadcrumbs a{color:'.$pageh_breadcrumbs_color.';}';
+                }
+            }
+
+            if($navigation_space = kt_option('navigation_space', 30)){
+                echo '#main-navigation > li{margin-left: '.$navigation_space.'px;}#main-navigation > li:first-child {margin-left: 0;}#main-navigation > li:last-child {margin-right: 0;}';
+            }
+            if($navigation_color_hover = kt_option('navigation_color_hover')){
+                echo '#main-navigation > li > a:before, #main-navigation > li > a:after{background: '.$navigation_color_hover.';}';
+            }
+            if($mega_title_color = kt_option('mega_title_color')){
+                echo '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a:before, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a:after, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span:before, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span:after, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > .widget-title:before, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > .widget-title:after{background-color: '.$mega_title_color.';}';
+            }
+            if($mega_title_color_hover = kt_option('mega_title_color_hover')){
+                echo '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a:hover:before, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a:hover:after{background-color: '.$mega_title_color_hover.';}';
+            }
+
+            $navigation_height = kt_option('navigation_height');
+            if(!$navigation_height['height'] || $navigation_height['height'] == 'px'){
+                $navigation_height['height'] = 100;
+            }
+            echo '#main-navigation > li{line-height: '.intval($navigation_height['height']).'px;}';
+            echo '.header-container.is-sticky.sticky-header-down .nav-container .nav-container-inner,.header-container.header-layout2.is-sticky.sticky-header-down #header-content{top: -'.intval($navigation_height['height']).'px;}';
+
+            $header_sticky_opacity = kt_option('header_sticky_opacity', 0.8);
+            echo '.header-sticky-background{opacity:'.$header_sticky_opacity.';}';
+
+
+            $navigation_height_fixed = kt_option('navigation_height_fixed');
+
+
+            if(!$navigation_height_fixed['height'] || $navigation_height_fixed['height'] == 'px'){
+                $navigation_height_fixed['height'] = 60;
+            }
+            echo '.header-container.is-sticky #main-navigation > li{line-height: '.intval($navigation_height_fixed['height']).'px;}';
+
+
+
+        ?>
+    </style>
+    <?php
+    //wp_add_inline_style( 'kt-style', $css );
+
+}
+add_action('wp_head', 'kt_setting_script');

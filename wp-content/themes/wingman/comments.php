@@ -46,7 +46,7 @@ if ( post_password_required() ) {
     // If comments are closed and there are comments, let's leave a little note, shall we?
     if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
         ?>
-        <p class="no-comments"><?php _e( 'Comments are closed.', 'wingman' ); ?></p>
+        <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'wingman' ); ?></p>
     <?php endif; ?>
     
     <?php
@@ -57,25 +57,21 @@ if ( post_password_required() ) {
     $aria_req = ( $req ? " aria-required='true'" : '' );
     $html_req = ( $req ? " required='required'" : '' );
 
-    $required = ' '.__('(required)', 'wingman');
+    $required = ' '.esc_html__('(required)', 'wingman');
 
     $new_fields = array(
         'author' => '<p class="comment_field-column">' .
-            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"  placeholder="'.__('Name', 'wingman').'"' . $aria_req . $html_req . ' /></p>',
+            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"  placeholder="'.esc_html__('Name', 'wingman').'"' . $aria_req . $html_req . ' /></p>',
         'email'  => '<p class="comment_field-column">' .
-            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="'.__('Email', 'wingman').'"' . $aria_req . $html_req . ' /></p>',
+            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="'.esc_html__('Email', 'wingman').'"' . $aria_req . $html_req . ' /></p>',
         'url'    => '<p class="comment_field-column">' .
-            '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="'.__('Website', 'wingman').'" /></p>',
+            '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="'.esc_html__('Website', 'wingman').'" /></p>',
     );
 
-
-
     $comments_args = array(
-        'label_submit'      => __( 'send messages', 'wingman' ),
+        'label_submit'      => esc_html__( 'Send messages', 'wingman' ),
         'fields' => apply_filters( 'comment_form_default_fields', $new_fields ),
-        //'comment_form_before_fields' => '<div>',
-        //'comment_form_after_fields' => '</div>',
-        'comment_field' => '<p><textarea id="comment" name="comment" placeholder="'.__('Your Comment', 'wingman').'"  aria-required="true" rows="6"></textarea></p>',
+        'comment_field' => '<p><textarea id="comment" name="comment" placeholder="'.esc_html__('Your Comment', 'wingman').'"  aria-required="true" rows="6"></textarea></p>',
         'class_submit'      => 'btn btn-default',
     );
 

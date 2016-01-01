@@ -24,7 +24,7 @@ if ( !function_exists( 'kt_admin_enqueue_scripts' ) ) {
 
 
         wp_localize_script( 'kt-image', 'kt_image_lang', array(
-            'frameTitle' => __('Select your image', 'wingman' )
+            'frameTitle' => esc_html__('Select your image', 'wingman' )
         ));
 
         wp_register_script( 'kt-framework-core', KT_FW_JS.'framework-core.js', array('jquery', 'jquery-ui-tabs'), FW_VER, true);

@@ -16,17 +16,11 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="<?php echo THEME_JS; ?>html5shiv.min.js"></script>
-      <script src="<?php echo THEME_JS; ?>respond.min.js"></script>
+      <script src="<?php echo KT_THEME_JS; ?>html5shiv.min.js"></script>
+      <script src="<?php echo KT_THEME_JS; ?>respond.min.js"></script>
     <![endif]-->
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class( ); ?>>
-    <?php
-
-        /**
-         * @hooked
-         */
-        do_action( 'theme_body_top' );
-    ?>
+    <?php do_action( 'kt_body_top' ); ?>
     <div id="content" class="<?php echo apply_filters('kt_content_class', 'site-content') ?>">

@@ -875,7 +875,6 @@ select:not([multiple]) {
       }
 
       &.menu-bars-language{
-        padding-left: 20px;
         li{
           display: inline-block;
           margin: 0 10px 5px 0;
@@ -886,6 +885,9 @@ select:not([multiple]) {
           }
           span{
             display: none;
+          }
+          &:last-child{
+            margin-right: 0;
           }
         }
       }

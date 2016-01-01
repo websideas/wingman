@@ -65,6 +65,11 @@ only screen and (min-resolution: 144dpi) {
 
 /* 5. Styles for devices(<=991px) */
 @media (max-width: 991px) {
+
+  .sidebar{
+    margin-top: 50px;
+  }
+
   .entry-share-box{
     a{
       margin-left: 30px;

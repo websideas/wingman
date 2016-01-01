@@ -21,7 +21,7 @@ if(!function_exists('putRevSlider')){
                 $output = new RevSliderOutput();
                 $option1Name = "Include RevSlider libraries globally (all pages/posts)";
                 $option2Name = "Pages to include RevSlider libraries";
-                $output->putErrorMessage(__("If you want to use the PHP function \"putRevSlider\" in your code please make sure to check \" ", 'wingman').$option1Name.__(" \" in the backend's \"General Settings\" (top right panel). <br> <br> Or add the current page to the \"", 'wingman').$option2Name.__("\" option box.", 'wingman'));
+                $output->putErrorMessage(esc_html__("If you want to use the PHP function \"putRevSlider\" in your code please make sure to check \" ", 'wingman').$option1Name.esc_html__(" \" in the backend's \"General Settings\" (top right panel). <br> <br> Or add the current page to the \"", 'wingman').$option2Name.esc_html__("\" option box.", 'wingman'));
                 return(false);
             }
 
@@ -56,8 +56,7 @@ function kt_fronted_loadmore_archive_callback(){
     if($blog_type == 'grid' || $blog_type == 'masonry'){
         $elementClass[] = 'blog-posts-columns-'.$blog_columns;
         $bootstrapColumn = round( 12 / $blog_columns );
-        $bootstrapTabletColumn = round( 12 / $blog_columns_tablet );
-        $classes = 'col-xs-12 col-sm-'.$bootstrapTabletColumn.' col-md-' . $bootstrapColumn.' col-lg-' . $bootstrapColumn;
+        $classes = 'col-xs-12 col-sm-6 col-md-' . $bootstrapColumn.' col-lg-' . $bootstrapColumn;
     }
 
     $blog_atts_posts = array(
@@ -96,7 +95,7 @@ function kt_fronted_loadmore_archive_callback(){
         $blog_atts = $blog_atts_posts;
         $blog_atts['blog_number'] = $i;
         if($blog_type == 'grid' || $blog_type == 'masonry'){
-            echo "<div class='article-post-item ".$classes."'>";
+            echo "<div class='article-post-item ".esc_attr($classes)."'>";
         }
 
         kt_get_template_part( $path, get_post_format(), $blog_atts);
@@ -186,7 +185,7 @@ function kt_fronted_likepost_callback() {
         //The cookie will expire after 30 days
         setcookie('like_post_'. $post_id, $post_id, time() + (86400 * 30), '/');
     }
-    $text = ($like_count == 0 || $like_count == 1) ? __('like','wingman') : __('likes','wingman');
+    $text = ($like_count == 0 || $like_count == 1) ? esc_html__('like','wingman') : esc_html__('likes','wingman');
 
     $output['count'] = $like_count. ' '.$text;
     echo json_encode($output);

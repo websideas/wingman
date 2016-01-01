@@ -17,8 +17,6 @@ $position = kt_get_header();
     ?>
 
     <div class="nav-container-inner">
-
-
         <div id="header-content" class="clearfix apply-sticky">
             <div class="header-sticky-background"></div>
             <div class="site-branding">
@@ -31,15 +29,12 @@ $position = kt_get_header();
             </div>
 
             <div class="nav-container">
-
-                    <div class="container">
-                        <nav id="nav" class="nav-main">
-                            <?php get_template_part( 'templates/headers/header',  'menu'); ?>
-                        </nav><!-- #main-nav -->
-                    </div><!-- .container -->
-
-
-            </div>
+                <div class="container">
+                    <nav id="nav" class="nav-main">
+                        <?php get_template_part( 'templates/headers/header',  'menu'); ?>
+                    </nav><!-- #main-nav -->
+                </div><!-- .container -->
+            </div><!-- .nav-container -->
         </div>
         <?php
         if($position != 'below'){
@@ -49,6 +44,5 @@ $position = kt_get_header();
             do_action( 'kt_slideshows_position' );
         }
         ?>
-
     </div>
 </div>

@@ -18,7 +18,7 @@ function kt_register_meta_boxes( $meta_boxes )
     $image_sizes = kt_get_image_sizes();
     $menus = wp_get_nav_menus();
 
-    $menus_arr = array('' => __('Default', 'wingman'));
+    $menus_arr = array('' => esc_html__('Default', 'wingman'));
     foreach ( $menus as $menu ) {
         $menus_arr[$menu->term_id] = esc_html( $menu->name );
     }
@@ -29,7 +29,7 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Audio Settings','wingman'),
+        'title'  => esc_html__('Audio Settings','wingman'),
         'pages'  => array( 'post' ),
         'show'   => array(
             'post_format' => array( 'Audio'),
@@ -37,17 +37,17 @@ function kt_register_meta_boxes( $meta_boxes )
 
         'fields' => array(
             array(
-                'name' => __('Audio Type', 'wingman'),
+                'name' => esc_html__('Audio Type', 'wingman'),
                 'id' => $prefix . 'audio_type',
                 'type'     => 'select',
                 'options'  => array(
-                    '' => __('Select Option', 'wingman'),
-                    'upload' => __('Upload', 'wingman'),
-                    'soundcloud' => __('Soundcloud', 'wingman'),
+                    '' => esc_html__('Select Option', 'wingman'),
+                    'upload' => esc_html__('Upload', 'wingman'),
+                    'soundcloud' => esc_html__('Soundcloud', 'wingman'),
                 ),
             ),
             array(
-                'name'             => __( 'Upload MP3 File', 'wingman' ),
+                'name'             => esc_html__( 'Upload MP3 File', 'wingman' ),
                 'id'               => "{$prefix}audio_mp3",
                 'type'             => 'file_advanced',
                 'max_file_uploads' => 1,
@@ -55,8 +55,8 @@ function kt_register_meta_boxes( $meta_boxes )
                 'compare' => array($prefix . 'audio_type','=', 'upload' ),
             ),
             array(
-                'name' => __( 'Soundcloud', 'wingman' ),
-                'desc' => __( 'Paste embed iframe or Wordpress shortcode.', 'wingman' ),
+                'name' => esc_html__( 'Soundcloud', 'wingman' ),
+                'desc' => esc_html__( 'Paste embed iframe or Wordpress shortcode.', 'wingman' ),
                 'id'   => "{$prefix}audio_soundcloud",
                 'type' => 'textarea',
                 'cols' => 20,
@@ -72,7 +72,7 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Video Settings','wingman'),
+        'title'  => esc_html__('Video Settings','wingman'),
         'pages'  => array( 'post' ),
         'show'   => array(
             'post_format' => array( 'Video'),
@@ -80,28 +80,28 @@ function kt_register_meta_boxes( $meta_boxes )
 
         'fields' => array(
             array(
-                'name' => __('Video Type', 'wingman'),
+                'name' => esc_html__('Video Type', 'wingman'),
                 'id' => $prefix . 'video_type',
                 'type'     => 'select',
                 'options'  => array(
-                    '' => __('Select Option', 'wingman'),
-                    'external' => __('External url', 'wingman'),
+                    '' => esc_html__('Select Option', 'wingman'),
+                    'external' => esc_html__('External url', 'wingman'),
                 ),
             ),
             array(
-                'name' => __('Choose Video', 'wingman'),
+                'name' => esc_html__('Choose Video', 'wingman'),
                 'id' => $prefix . 'choose_video',
                 'type'     => 'select',
                 'options'  => array(
-                    'youtube' => __('Youtube', 'wingman'),
-                    'vimeo' => __('Vimeo', 'wingman'),
+                    'youtube' => esc_html__('Youtube', 'wingman'),
+                    'vimeo' => esc_html__('Vimeo', 'wingman'),
                 ),
                 'compare' => array($prefix . 'video_type','=', 'external' ),
             ),
             array(
-                'name' => __( 'Video id', 'wingman' ),
+                'name' => esc_html__( 'Video id', 'wingman' ),
                 'id' => $prefix . 'video_id',
-                'desc' => sprintf( __( 'Enter id of video .Example: <br />- Link video youtube: https://www.youtube.com/watch?v=nPOO1Coe2DI id of video: nPOO1Coe2DI <br /> -Link vimeo: https://vimeo.com/70296428 id video: 70296428.', 'wingman' ) ),
+                'desc' => sprintf( esc_html__( 'Enter id of video .Example: <br />- Link video youtube: https://www.youtube.com/watch?v=nPOO1Coe2DI id of video: nPOO1Coe2DI <br /> -Link vimeo: https://vimeo.com/70296428 id video: 70296428.', 'wingman' ) ),
                 'type'  => 'text',
                 'compare' => array($prefix . 'video_type','=', 'external' ),
             ),
@@ -114,7 +114,7 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Gallery Settings','wingman'),
+        'title'  => esc_html__('Gallery Settings','wingman'),
         'pages'  => array( 'post' ),
         'show'   => array(
             'post_format' => array( 'Gallery'),
@@ -122,35 +122,35 @@ function kt_register_meta_boxes( $meta_boxes )
 
         'fields' => array(
             array(
-                'name' => __('Gallery Type', 'wingman'),
+                'name' => esc_html__('Gallery Type', 'wingman'),
                 'id' => $prefix . 'gallery_type',
                 'type'     => 'select',
                 'options'  => array(
-                    '' => __('Default', 'wingman'),
-                    'rev' => __('Revolution Slider', 'wingman'),
-                    'layer' => __('Layer Slider', 'wingman')
+                    '' => esc_html__('Default', 'wingman'),
+                    'rev' => esc_html__('Revolution Slider', 'wingman'),
+                    'layer' => esc_html__('Layer Slider', 'wingman')
                 ),
             ),
 
             array(
-                'name' => __('Select Revolution Slider', 'wingman'),
+                'name' => esc_html__('Select Revolution Slider', 'wingman'),
                 'id' => $prefix . 'gallery_rev_slider',
                 'default' => true,
                 'type' => 'revSlider',
                 'compare' => array($prefix . 'gallery_type','=', 'rev' ),
             ),
             array(
-                'name' => __('Select Layer Slider', 'wingman'),
+                'name' => esc_html__('Select Layer Slider', 'wingman'),
                 'id' => $prefix . 'gallery_layerslider',
                 'default' => true,
                 'type' => 'layerslider',
                 'compare' => array($prefix . 'gallery_type','=', 'layer' ),
             ),
             array(
-                'name' => __( 'Gallery images', 'your-prefix' ),
+                'name' => esc_html__( 'Gallery images', 'your-prefix' ),
                 'id'  => "{$prefix}gallery_images",
                 'type' => 'image_advanced',
-                'desc' => __( "You can drag and drop for change order image", 'wingman' ),
+                'desc' => esc_html__( "You can drag and drop for change order image", 'wingman' ),
                 'compare' => array($prefix . 'gallery_type','=', '' ),
             ),
         ),
@@ -164,16 +164,16 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Link Settings','wingman'),
+        'title'  => esc_html__('Link Settings','wingman'),
         'pages'  => array( 'post' ),
         'show'   => array(
             'post_format' => array( 'Link'),
         ),
         'fields' => array(
             array(
-                'name' => __( 'External URL', 'wingman' ),
+                'name' => esc_html__( 'External URL', 'wingman' ),
                 'id' => $prefix . 'external_url',
-                'desc' => __( "Input your link in here", 'wingman' ),
+                'desc' => esc_html__( "Input your link in here", 'wingman' ),
                 'type'  => 'text',
             ),
 
@@ -186,24 +186,24 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Quote Settings','wingman'),
+        'title'  => esc_html__('Quote Settings','wingman'),
         'pages'  => array( 'post' ),
         'show'   => array(
             'post_format' => array( 'Quote'),
         ),
         'fields' => array(
             array(
-                'name' => __( 'Quote Content', 'wingman' ),
-                'desc' => __( 'Please type the text for your quote here.', 'wingman' ),
+                'name' => esc_html__( 'Quote Content', 'wingman' ),
+                'desc' => esc_html__( 'Please type the text for your quote here.', 'wingman' ),
                 'id'   => "{$prefix}quote_content",
                 'type' => 'textarea',
                 'cols' => 20,
                 'rows' => 3,
             ),
             array(
-                'name' => __( 'Author', 'wingman' ),
+                'name' => esc_html__( 'Author', 'wingman' ),
                 'id' => $prefix . 'quote_author',
-                'desc' => __( "Please type the text for author quote here.", 'wingman' ),
+                'desc' => esc_html__( "Please type the text for author quote here.", 'wingman' ),
                 'type'  => 'text',
             ),
 
@@ -216,32 +216,32 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Testimonial Settings','wingman'),
+        'title'  => esc_html__('Testimonial Settings','wingman'),
         'pages'  => array( 'kt_testimonial' ),
         'fields' => array(
             array(
-                'name' => __( 'Company Name / Job Title', 'wingman' ),
+                'name' => esc_html__( 'Company Name / Job Title', 'wingman' ),
                 'id' => $prefix . 'testimonial_company',
-                'desc' => __( "Please type the text for Company Name / Job Title here.", 'wingman' ),
+                'desc' => esc_html__( "Please type the text for Company Name / Job Title here.", 'wingman' ),
                 'type'  => 'text',
             ),
             array(
-                'name' => __( "URL to Author's Website", 'wingman' ),
+                'name' => esc_html__( "URL to Author's Website", 'wingman' ),
                 'id' => $prefix . 'testimonial_link',
-                'desc' => __( "Please type the text for link here.", 'wingman' ),
+                'desc' => esc_html__( "Please type the text for link here.", 'wingman' ),
                 'type'  => 'text',
             ),
             array(
-                'name' => __('Rate', 'wingman'),
+                'name' => esc_html__('Rate', 'wingman'),
                 'id'   => "{$prefix}rate",
                 'type' => 'select',
                 'options' => array(
-                    '0'    => __('Choose star', 'wingman'),
-                    '1'   => __('1', 'wingman'),
-                    '2'   => __('2', 'wingman'),
-                    '3'   => __('3', 'wingman'),
-                    '4'   => __('4', 'wingman'),
-                    '5'   => __('5', 'wingman'),
+                    '0'    => esc_html__('Choose star', 'wingman'),
+                    '1'   => esc_html__('1', 'wingman'),
+                    '2'   => esc_html__('2', 'wingman'),
+                    '3'   => esc_html__('3', 'wingman'),
+                    '4'   => esc_html__('4', 'wingman'),
+                    '5'   => esc_html__('5', 'wingman'),
                 ),
                 'std'  => '0'
             ),
@@ -260,89 +260,89 @@ function kt_register_meta_boxes( $meta_boxes )
         'priority' => 'high',
         'fields' => array(
             array(
-                'name' => __('Show Post format', 'wingman'),
+                'name' => esc_html__('Show Post format', 'wingman'),
                 'id'   => "{$prefix}post_format",
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', 'wingman'),
-                    0		=> __('Hidden', 'wingman'),
-                    1		=> __('Show', 'wingman'),
+                    -1    => esc_html__('Default', 'wingman'),
+                    0		=> esc_html__('Hidden', 'wingman'),
+                    1		=> esc_html__('Show', 'wingman'),
                 ),
                 'std'  => -1
             ),
             array(
-                'name' => __('Title and meta center', 'wingman'),
+                'name' => esc_html__('Title and meta center', 'wingman'),
                 'id'   => "{$prefix}title_and_meta_center",
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', 'wingman'),
-                    0		=> __('No', 'wingman'),
-                    1		=> __('Yes', 'wingman'),
+                    -1    => esc_html__('Default', 'wingman'),
+                    0		=> esc_html__('No', 'wingman'),
+                    1		=> esc_html__('Yes', 'wingman'),
                 ),
                 'std'  => -1
             ),
 
             array(
                 'type' => 'select',
-                'name' => __('Post image size', 'wingman'),
-                'desc' => __('Select the format position.', 'wingman'),
+                'name' => esc_html__('Post image size', 'wingman'),
+                'desc' => esc_html__('Select the format position.', 'wingman'),
                 'id'   => "{$prefix}blog_image_size",
-                'options' => array_merge(array('' => __('Default', 'wingman')), $image_sizes),
+                'options' => array_merge(array('' => esc_html__('Default', 'wingman')), $image_sizes),
                 'std' => ''
             ),
 
             array(
-                'name' => __('Meta info', 'wingman'),
+                'name' => esc_html__('Meta info', 'wingman'),
                 'id'   => "{$prefix}meta_info",
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', 'wingman'),
-                    0		=> __('Hidden', 'wingman'),
-                    1		=> __('Show', 'wingman'),
+                    -1    => esc_html__('Default', 'wingman'),
+                    0		=> esc_html__('Hidden', 'wingman'),
+                    1		=> esc_html__('Show', 'wingman'),
                 ),
                 'std'  => -1
             ),
             array(
-                'name' => __('Previous & next buttons', 'wingman'),
+                'name' => esc_html__('Previous & next buttons', 'wingman'),
                 'id'   => "{$prefix}prev_next",
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', 'wingman'),
-                    0		=> __('Hidden', 'wingman'),
-                    1		=> __('Show', 'wingman'),
+                    -1    => esc_html__('Default', 'wingman'),
+                    0		=> esc_html__('Hidden', 'wingman'),
+                    1		=> esc_html__('Show', 'wingman'),
                 ),
                 'std'  => -1
             ),
             array(
-                'name' => __('Author info', 'wingman'),
+                'name' => esc_html__('Author info', 'wingman'),
                 'id'   => "{$prefix}author_info",
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', 'wingman'),
-                    0		=> __('Hidden', 'wingman'),
-                    1		=> __('Show', 'wingman'),
+                    -1    => esc_html__('Default', 'wingman'),
+                    0		=> esc_html__('Hidden', 'wingman'),
+                    1		=> esc_html__('Show', 'wingman'),
                 ),
                 'std'  => -1
             ),
             array(
-                'name' => __('Social sharing', 'wingman'),
+                'name' => esc_html__('Social sharing', 'wingman'),
                 'id'   => "{$prefix}social_sharing",
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', 'wingman'),
-                    0		=> __('Hidden', 'wingman'),
-                    1		=> __('Show', 'wingman'),
+                    -1    => esc_html__('Default', 'wingman'),
+                    0		=> esc_html__('Hidden', 'wingman'),
+                    1		=> esc_html__('Show', 'wingman'),
                 ),
                 'std'  => -1
             ),
             array(
-                'name' => __('Related articles', 'wingman'),
+                'name' => esc_html__('Related articles', 'wingman'),
                 'id'   => "{$prefix}related_acticles",
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', 'wingman'),
-                    0		=> __('Hidden', 'wingman'),
-                    1		=> __('Show', 'wingman'),
+                    -1    => esc_html__('Default', 'wingman'),
+                    0		=> esc_html__('Hidden', 'wingman'),
+                    1		=> esc_html__('Show', 'wingman'),
                 ),
                 'std'  => -1
             ),
@@ -358,31 +358,31 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Team Settings','wingman'),
+        'title'  => esc_html__('Team Settings','wingman'),
         'pages'  => array( 'kt_team' ),
         'fields' => array(
             array(
-                'name' => __( 'Regency', 'wingman' ),
+                'name' => esc_html__( 'Regency', 'wingman' ),
                 'id' => $prefix . 'team_regency',
-                'desc' => __( "Regency.", 'wingman' ),
+                'desc' => esc_html__( "Regency.", 'wingman' ),
                 'type'  => 'text',
             ),
             array(
-                'name' => __( 'Twitter', 'wingman' ),
+                'name' => esc_html__( 'Twitter', 'wingman' ),
                 'id' => $prefix . 'team_twitter',
-                'desc' => __( "Link Twitter.", 'wingman' ),
+                'desc' => esc_html__( "Link Twitter.", 'wingman' ),
                 'type'  => 'text',
             ),
             array(
-                'name' => __( 'Facebook', 'wingman' ),
+                'name' => esc_html__( 'Facebook', 'wingman' ),
                 'id' => $prefix . 'team_facebook',
-                'desc' => __( "Link Facebook.", 'wingman' ),
+                'desc' => esc_html__( "Link Facebook.", 'wingman' ),
                 'type'  => 'text',
             ),
             array(
-                'name' => __( 'Google+', 'wingman' ),
+                'name' => esc_html__( 'Google+', 'wingman' ),
                 'id' => $prefix . 'team_googleplus',
-                'desc' => __( "Link Google+.", 'wingman' ),
+                'desc' => esc_html__( "Link Google+.", 'wingman' ),
                 'type'  => 'text',
             ),
         ),
@@ -403,9 +403,9 @@ function kt_register_meta_boxes( $meta_boxes )
         'fields' => array(
             
             array(
-                'name' => __( 'Link Client', 'wingman' ),
+                'name' => esc_html__( 'Link Client', 'wingman' ),
                 'id' => $prefix . 'link_client',
-                'desc' => __( "Link Client.", 'wingman' ),
+                'desc' => esc_html__( "Link Client.", 'wingman' ),
                 'type'  => 'text',
             ),
 
@@ -424,15 +424,15 @@ function kt_register_meta_boxes( $meta_boxes )
         'priority' => 'high',
         'tabs'      => array(
             'header'  => array(
-                'label' => __( 'Header', 'wingman' ),
+                'label' => esc_html__( 'Header', 'wingman' ),
                 'icon'  => 'fa fa-desktop',
             ),
             'page_header' => array(
-                'label' => __( 'Page Header', 'wingman' ),
+                'label' => esc_html__( 'Page Header', 'wingman' ),
                 'icon'  => 'fa fa-bars',
             ),
             'page_layout' => array(
-                'label' => __( 'Page layout', 'wingman' ),
+                'label' => esc_html__( 'Page layout', 'wingman' ),
                 'icon'  => 'fa fa-columns',
             )
         ),
@@ -441,53 +441,53 @@ function kt_register_meta_boxes( $meta_boxes )
 
             //Header
             array(
-                'name'    => __( 'Header position', 'wingman' ),
+                'name'    => esc_html__( 'Header position', 'wingman' ),
                 'type'     => 'select',
                 'id'       => $prefix.'header_position',
-                'desc'     => __( "Please choose header position", 'wingman' ),
+                'desc'     => esc_html__( "Please choose header position", 'wingman' ),
                 'options'  => array(
-                    'default' => __('Default', 'wingman'),
-                    'transparent' => __('Transparent header', 'wingman'),
-                    'below' => __('Below Slideshow', 'wingman'),
+                    'default' => esc_html__('Default', 'wingman'),
+                    'transparent' => esc_html__('Transparent header', 'wingman'),
+                    'below' => esc_html__('Below Slideshow', 'wingman'),
                 ),
                 'std'  => 'default',
                 'tab'  => 'header',
             ),
 
             array(
-                'name' => __('Select Your Slideshow Type', 'wingman'),
+                'name' => esc_html__('Select Your Slideshow Type', 'wingman'),
                 'id' => $prefix . 'slideshow_source',
-                'desc' => __("You can select the slideshow type using this option.", 'wingman'),
+                'desc' => esc_html__("You can select the slideshow type using this option.", 'wingman'),
                 'type' => 'select',
                 'options' => array(
-                    '' => __('Select Option', 'wingman'),
-                    'revslider' => __('Revolution Slider', 'wingman'),
-                    'layerslider' => __('Layer Slider', 'wingman'),
+                    '' => esc_html__('Select Option', 'wingman'),
+                    'revslider' => esc_html__('Revolution Slider', 'wingman'),
+                    'layerslider' => esc_html__('Layer Slider', 'wingman'),
                 ),
                 'tab'  => 'header',
             ),
             array(
-                'name' => __('Select Revolution Slider', 'wingman'),
+                'name' => esc_html__('Select Revolution Slider', 'wingman'),
                 'id' => $prefix . 'rev_slider',
                 'default' => true,
                 'type' => 'revSlider',
                 'tab'  => 'header',
-                'desc' => __('Select the Revolution Slider.', 'wingman'),
+                'desc' => esc_html__('Select the Revolution Slider.', 'wingman'),
                 'compare' => array($prefix . 'slideshow_source','=', 'revslider' ),
             ),
             array(
-                'name' => __('Select Layer Slider', 'wingman'),
+                'name' => esc_html__('Select Layer Slider', 'wingman'),
                 'id' => $prefix . 'layerslider',
                 'default' => true,
                 'type' => 'layerslider',
                 'tab'  => 'header',
-                'desc' => __('Select the Layer Slider.', 'wingman'),
+                'desc' => esc_html__('Select the Layer Slider.', 'wingman'),
                 'compare' => array($prefix . 'slideshow_source','=', 'layerslider' ),
             ),
 
             /*
             array(
-                'name' => __('Main Navigation Menu', 'wingman'),
+                'name' => esc_html__('Main Navigation Menu', 'wingman'),
                 'id'   => "{$prefix}header_main_menu",
                 'type' => 'select',
                 'options' => $menus_arr,
@@ -499,31 +499,31 @@ function kt_register_meta_boxes( $meta_boxes )
             // Page Header
             array(
 
-                'name' => __( 'Page Header', 'wingman' ),
+                'name' => esc_html__( 'Page Header', 'wingman' ),
                 'id' => $prefix . 'page_header',
-                'desc' => __( "Show Page Header.", 'wingman' ),
+                'desc' => esc_html__( "Show Page Header.", 'wingman' ),
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', 'wingman'),
-                    0		=> __('Hidden', 'wingman'),
-                    1		=> __('Show', 'wingman'),
+                    -1    => esc_html__('Default', 'wingman'),
+                    0		=> esc_html__('Hidden', 'wingman'),
+                    1		=> esc_html__('Show', 'wingman'),
                 ),
                 'std'  => -1,
                 'tab'  => 'page_header',
             ),
             array(
-                'name' => __( 'Page Header Custom Text', 'wingman' ),
+                'name' => esc_html__( 'Page Header Custom Text', 'wingman' ),
                 'id' => $prefix . 'page_header_custom',
-                'desc' => __( "Enter cstom Text for page header.", 'wingman' ),
+                'desc' => esc_html__( "Enter cstom Text for page header.", 'wingman' ),
                 'type'  => 'text',
                 'tab'  => 'page_header',
                 'compare' => array($prefix . 'page_header','!=', '0' ),
             ),
 
             array(
-                'name' => __( 'Page header subtitle', 'wingman' ),
+                'name' => esc_html__( 'Page header subtitle', 'wingman' ),
                 'id' => $prefix . 'page_header_subtitle',
-                'desc' => __( "Enter subtitle for page.", 'wingman' ),
+                'desc' => esc_html__( "Enter subtitle for page.", 'wingman' ),
                 'type'  => 'text',
                 'tab'  => 'page_header',
                 'compare' => array($prefix . 'page_header','!=', '0' ),
@@ -532,13 +532,13 @@ function kt_register_meta_boxes( $meta_boxes )
             array(
                 'id'       => "{$prefix}page_header_align",
                 'type'     => 'select',
-                'name'    => __( 'Page Header align', 'wingman' ),
-                'desc'     => __( 'Please select Page Header align', 'wingman' ),
+                'name'    => esc_html__( 'Page Header align', 'wingman' ),
+                'desc'     => esc_html__( 'Please select Page Header align', 'wingman' ),
                 'options'  => array(
-                    ''    => __('Default', 'wingman'),
-                    'left' => __('Left', 'wingman' ),
-                    'center' => __('Center', 'wingman'),
-                    'right' => __('Right', 'wingman')
+                    ''    => esc_html__('Default', 'wingman'),
+                    'left' => esc_html__('Left', 'wingman' ),
+                    'center' => esc_html__('Center', 'wingman'),
+                    'right' => esc_html__('Right', 'wingman')
                 ),
                 'std'  => '',
                 'tab'  => 'page_header',
@@ -546,113 +546,113 @@ function kt_register_meta_boxes( $meta_boxes )
             ),
 
             array(
-                'name' => __('Page breadcrumb', 'wingman'),
+                'name' => esc_html__('Page breadcrumb', 'wingman'),
                 'id'   => "{$prefix}show_breadcrumb",
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', 'wingman'),
-                    0		=> __('Hidden', 'wingman'),
-                    1		=> __('Show', 'wingman'),
+                    -1    => esc_html__('Default', 'wingman'),
+                    0		=> esc_html__('Hidden', 'wingman'),
+                    1		=> esc_html__('Show', 'wingman'),
                 ),
                 'std'  => -1,
-                'desc' => __( "Show page breadcrumb.", 'wingman' ),
+                'desc' => esc_html__( "Show page breadcrumb.", 'wingman' ),
                 'tab'  => 'page_header',
                 'compare' => array($prefix . 'page_header','!=', '0' ),
             ),
 
             array(
-                'name' => __('Page header top spacing', 'wingman'),
+                'name' => esc_html__('Page header top spacing', 'wingman'),
                 'id' => $prefix . 'page_header_top',
-                'desc' => __("(Example: 60px). Emtpy for use default", 'wingman' ),
+                'desc' => esc_html__("(Example: 60px). Emtpy for use default", 'wingman' ),
                 'type'  => 'text',
                 'tab'  => 'page_header',
                 'compare' => array($prefix . 'page_header','!=', '0' ),
             ),
             array(
-                'name' => __('Page header bottom spacing', 'wingman'),
+                'name' => esc_html__('Page header bottom spacing', 'wingman'),
                 'id' => $prefix . 'page_header_bottom',
-                'desc' => __("(Example: 60px). Emtpy for use default", 'wingman' ),
+                'desc' => esc_html__("(Example: 60px). Emtpy for use default", 'wingman' ),
                 'type'  => 'text',
                 'tab'  => 'page_header',
                 'compare' => array($prefix . 'page_header','!=', '0' ),
             ),
             array(
-                'name' => __( 'Typography title custom color', 'wingman' ),
+                'name' => esc_html__( 'Typography title custom color', 'wingman' ),
                 'id'   => "{$prefix}page_header_title_color",
                 'type' => 'color',
                 'tab'  => 'page_header',
-                'desc' => __( "Choose custom color for title.", 'wingman' ),
+                'desc' => esc_html__( "Choose custom color for title.", 'wingman' ),
                 'compare' => array($prefix . 'page_header','!=', '0' ),
             ),
             array(
-                'name' => __( 'Typography sub title custom color', 'wingman' ),
+                'name' => esc_html__( 'Typography sub title custom color', 'wingman' ),
                 'id'   => "{$prefix}page_header_subtitle_color",
                 'type' => 'color',
                 'tab'  => 'page_header',
-                'desc' => __( "Choose custom color for sub title.", 'wingman' ),
+                'desc' => esc_html__( "Choose custom color for sub title.", 'wingman' ),
                 'compare' => array($prefix . 'page_header','!=', '0' ),
             ),
             array(
-                'name' => __( 'Typography breadcrumbs custom color', 'wingman' ),
+                'name' => esc_html__( 'Typography breadcrumbs custom color', 'wingman' ),
                 'id'   => "{$prefix}page_header_breadcrumbs_color",
                 'type' => 'color',
                 'tab'  => 'page_header',
-                'desc' => __( "Choose custom color for breadcrumbs.", 'wingman' ),
+                'desc' => esc_html__( "Choose custom color for breadcrumbs.", 'wingman' ),
                 'compare' => array($prefix . 'page_header','!=', '0' ),
             ),
 
 
             //Page layout
             array(
-                'name' => __('Sidebar configuration', 'wingman'),
+                'name' => esc_html__('Sidebar configuration', 'wingman'),
                 'id' => $prefix . 'sidebar',
-                'desc' => __("Choose the sidebar configuration for the detail page.<br/><b>Note: Cart and checkout, My account page always use no sidebars.</b>", 'wingman'),
+                'desc' => esc_html__("Choose the sidebar configuration for the detail page.<br/><b>Note: Cart and checkout, My account page always use no sidebars.</b>", 'wingman'),
                 'type' => 'select',
                 'options' => array(
-                    'default' => __('Default', 'wingman'),
-                    'full' => __('No sidebars', 'wingman'),
-                    'left' => __('Left Sidebar', 'wingman'),
-                    'right' => __('Right Sidebar', 'wingman')
+                    'default' => esc_html__('Default', 'wingman'),
+                    'full' => esc_html__('No sidebars', 'wingman'),
+                    'left' => esc_html__('Left Sidebar', 'wingman'),
+                    'right' => esc_html__('Right Sidebar', 'wingman')
                 ),
                 'std' => 'default',
                 'tab'  => 'page_layout',
             ),
             array(
-                'name' => __('Left sidebar', 'wingman'),
+                'name' => esc_html__('Left sidebar', 'wingman'),
                 'id' => $prefix . 'left_sidebar',
                 'default' => false,
                 'type' => 'sidebars',
                 'tab'  => 'page_layout',
-                'desc' => __("Select your sidebar.", 'wingman'),
+                'desc' => esc_html__("Select your sidebar.", 'wingman'),
                 'compare' => array($prefix . 'sidebar','=', 'left' ),
             ),
             array(
-                'name' => __('Right sidebar', 'wingman'),
+                'name' => esc_html__('Right sidebar', 'wingman'),
                 'id' => $prefix . 'right_sidebar',
                 'default' => false,
                 'type' => 'sidebars',
                 'tab'  => 'page_layout',
-                'desc' => __("Select your sidebar.", 'wingman'),
+                'desc' => esc_html__("Select your sidebar.", 'wingman'),
                 'compare' => array($prefix . 'sidebar','=', 'right' ),
             ),
             array(
-                'name' => __('Page top spacing', 'wingman'),
+                'name' => esc_html__('Page top spacing', 'wingman'),
                 'id' => $prefix . 'page_top_spacing',
-                'desc' => __("Enter your page top spacing (Example: 100px).", 'wingman' ),
+                'desc' => esc_html__("Enter your page top spacing (Example: 100px).", 'wingman' ),
                 'type'  => 'text',
                 'tab'  => 'page_layout',
             ),
             array(
-                'name' => __('Page bottom spacing', 'wingman'),
+                'name' => esc_html__('Page bottom spacing', 'wingman'),
                 'id' => $prefix . 'page_bottom_spacing',
-                'desc' => __("Enter your page bottom spacing (Example: 100px).", 'wingman' ),
+                'desc' => esc_html__("Enter your page bottom spacing (Example: 100px).", 'wingman' ),
                 'type'  => 'text',
                 'tab'  => 'page_layout',
             ),
             array(
-                'name' => __('Extra page class', 'wingman'),
+                'name' => esc_html__('Extra page class', 'wingman'),
                 'id' => $prefix . 'extra_page_class',
-                'desc' => __('If you wish to add extra classes to the body class of the page (for custom css use), then please add the class(es) here.', 'wingman' ),
+                'desc' => esc_html__('If you wish to add extra classes to the body class of the page (for custom css use), then please add the class(es) here.', 'wingman' ),
                 'type'  => 'text',
                 'tab'  => 'page_layout',
             ),

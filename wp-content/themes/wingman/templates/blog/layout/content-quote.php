@@ -1,4 +1,11 @@
-<?php $classes = array('post-item post-layout-1', $blog_atts['class']); ?>
+<?php
+$classes = array('post-item post-layout-1', $blog_atts['class']);
+if( $blog_atts['type'] == 'masonry' ){
+    $image_size = 'kt_masonry';
+}else{
+    $image_size = 'kt_gird';
+}
+?>
 <?php //print_r($blog_atts); ?>
 <div <?php post_class($classes); ?>>
     <?php if($blog_atts['show_meta']){ ?>
@@ -24,14 +31,13 @@
     <?php } ?>
     <?php
         if($blog_atts['thumbnail_type'] == 'image'){
-            kt_post_thumbnail_image('recent_posts', 'img-responsive');
+            kt_post_thumbnail_image($image_size, 'img-responsive');
         }else{
-            kt_post_thumbnail('recent_posts', 'img-responsive');
+            kt_post_thumbnail($image_size, 'img-responsive');
         }
     ?>
     <?php if($blog_atts['thumbnail_type'] == 'image'){ ?>
         <div class="entry-main-content">
-
             <div class="post-info">
                 <div class="entry-ci">
                     <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -47,13 +53,12 @@
                             printf( '<a href="%1$s" class="%2$s">%3$s</a>',
                                 esc_url( get_permalink( get_the_ID() ) ),
                                 $moreclass,
-                                sprintf( __( 'Read more %s', 'wingman' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+                                sprintf( esc_html__( 'Read more %s', 'wingman' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
                             );
                             ?>
                         </div>
                     <?php } ?>
                 </div>
-
             </div>
         </div>
     <?php } ?>
