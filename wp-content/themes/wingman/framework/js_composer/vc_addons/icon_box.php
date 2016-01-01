@@ -115,10 +115,10 @@ class WPBakeryShortCode_Icon_Box extends WPBakeryShortCode_VC_Custom_heading {
 
 // Add your Visual Composer logic here
 vc_map( array(
-    "name" => __( "Icon box", KT_THEME_LANG),
+    "name" => __( "Icon box", 'wingman'),
     "base" => "icon_box",
-    "category" => __('by Theme', KT_THEME_LANG ),
-    "description" => __( "Icon box description", KT_THEME_LANG),
+    "category" => __('by Theme', 'wingman' ),
+    "description" => __( "Icon box description", 'wingman'),
     "params" => array(
         array(
             "type" => "textfield",
@@ -135,22 +135,22 @@ vc_map( array(
         ),
         array(
             "type" => "textarea_html",
-            "heading" => __("Content", KT_THEME_LANG),
+            "heading" => __("Content", 'wingman'),
             "param_name" => "content",
             "value" => '',
-            "description" => __("", KT_THEME_LANG),
+            "description" => __("", 'wingman'),
             "holder" => "div",
         ),
         //Layout settings
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Layout icon box', KT_THEME_LANG ),
+            'heading' => __( 'Layout icon box', 'wingman' ),
             'param_name' => 'icon_box_layout',
             'value' => array(
-                __( 'Icon on Top of Title', KT_THEME_LANG ) => '1',
-                __( 'Icon beside Title', KT_THEME_LANG ) => '2',
+                __( 'Icon on Top of Title', 'wingman' ) => '1',
+                __( 'Icon beside Title', 'wingman' ) => '2',
             ),
-            'description' => __( 'Select your layout.', KT_THEME_LANG ),
+            'description' => __( 'Select your layout.', 'wingman' ),
             "admin_label" => true,
         ),
 
@@ -182,23 +182,23 @@ vc_map( array(
         //Icon settings
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Icon to display', KT_THEME_LANG ),
+            'heading' => __( 'Icon to display', 'wingman' ),
             'param_name' => 'icon_type',
             'value' => array(
-                __( 'Font Icon', KT_THEME_LANG ) => 'icon',
-                __( 'Image Icon', KT_THEME_LANG ) => 'image',
+                __( 'Font Icon', 'wingman' ) => 'icon',
+                __( 'Image Icon', 'wingman' ) => 'image',
             ),
-            'description' => __( 'Select your layout.', KT_THEME_LANG ),
-            'group' => __( 'Icon', KT_THEME_LANG )
+            'description' => __( 'Select your layout.', 'wingman' ),
+            'group' => __( 'Icon', 'wingman' )
         ),
 
         array(
             'type' => 'attach_image',
-            'heading' => __( 'Image Thumbnail', KT_THEME_LANG ),
+            'heading' => __( 'Image Thumbnail', 'wingman' ),
             'param_name' => 'iconbox_image',
             'dependency' => array( 'element' => 'icon_type',  'value' => array( 'image' ) ),
             'description' => __( 'Select image from media library.', 'js_composer' ),
-            'group' => __( 'Icon', KT_THEME_LANG )
+            'group' => __( 'Icon', 'wingman' )
         ),
 
         array(
@@ -206,19 +206,19 @@ vc_map( array(
             'heading' => __( 'Choose your icon', 'js_composer' ),
             'param_name' => 'iconbox_icon',
             "value" => 'fa fa-adjust',
-            'description' => __( 'Use existing font icon or upload a custom image.', KT_THEME_LANG ),
+            'description' => __( 'Use existing font icon or upload a custom image.', 'wingman' ),
             'dependency' => array("element" => "icon_type","value" => array('icon')),
-            'group' => __( 'Icon', KT_THEME_LANG )
+            'group' => __( 'Icon', 'wingman' )
         ),
 
         array(
             'type' => 'dropdown',
             'heading' => __( 'Icon color', 'js_composer' ),
             'param_name' => 'color',
-            'value' => array_merge( array( __( 'Default', 'js_composer' ) => 'default' ),  array( __( 'Accent color', KT_THEME_LANG ) => 'accent' ), getVcShared( 'colors' ), array( __( 'Custom color', 'js_composer' ) => 'custom' ) ),
+            'value' => array_merge( array( __( 'Default', 'js_composer' ) => 'default' ),  array( __( 'Accent color', 'wingman' ) => 'accent' ), getVcShared( 'colors' ), array( __( 'Custom color', 'js_composer' ) => 'custom' ) ),
             'description' => __( 'Select icon color.', 'js_composer' ),
             'param_holder_class' => 'vc_colored-dropdown',
-            'group' => __( 'Icon', KT_THEME_LANG ),
+            'group' => __( 'Icon', 'wingman' ),
             'dependency' => array("element" => "icon_type","value" => array('icon')),
         ),
         array(
@@ -230,14 +230,14 @@ vc_map( array(
                 'element' => 'color',
                 'value' => 'custom',
             ),
-            'group' => __( 'Icon', KT_THEME_LANG )
+            'group' => __( 'Icon', 'wingman' )
         ),
         array(
             'type' => 'colorpicker',
             'heading' => __( 'Icon color on Hover', 'js_composer' ),
             'param_name' => 'color_hover',
             'description' => __( 'Select icon color on hover.', 'js_composer' ),
-            'group' => __( 'Icon', KT_THEME_LANG ),
+            'group' => __( 'Icon', 'wingman' ),
             'dependency' => array("element" => "icon_type","value" => array('icon')),
         ),
         array(
@@ -254,7 +254,7 @@ vc_map( array(
                 __( 'Outline Rounded', 'js_composer' ) => 'rounded-less-outline',
             ),
             'description' => __( 'Select background shape and style for icon.', 'js_composer' ),
-            'group' => __( 'Icon', KT_THEME_LANG ),
+            'group' => __( 'Icon', 'wingman' ),
             'dependency' => array(
                 "element" => "icon_type",
                 "value" => array('icon')
@@ -265,7 +265,7 @@ vc_map( array(
             'type' => 'dropdown',
             'heading' => __( 'Background color', 'js_composer' ),
             'param_name' => 'background_color',
-            'value' => array_merge( array( __( 'Accent color', KT_THEME_LANG ) => 'accent' ), getVcShared( 'colors' ), array( __( 'Custom color', 'js_composer' ) => 'custom' ) ),
+            'value' => array_merge( array( __( 'Accent color', 'wingman' ) => 'accent' ), getVcShared( 'colors' ), array( __( 'Custom color', 'js_composer' ) => 'custom' ) ),
             'std' => 'grey',
             'description' => __( 'Select background color for icon.', 'js_composer' ),
             'param_holder_class' => 'vc_colored-dropdown',
@@ -273,7 +273,7 @@ vc_map( array(
                 'element' => 'background_style',
                 'not_empty' => true,
             ),
-            'group' => __( 'Icon', KT_THEME_LANG )
+            'group' => __( 'Icon', 'wingman' )
         ),
         array(
             'type' => 'colorpicker',
@@ -284,7 +284,7 @@ vc_map( array(
                 'element' => 'background_color',
                 'value' => 'custom',
             ),
-            'group' => __( 'Icon', KT_THEME_LANG )
+            'group' => __( 'Icon', 'wingman' )
         ),
 
         array(
@@ -292,7 +292,7 @@ vc_map( array(
             'heading' => __( 'Background on Hover', 'js_composer' ),
             'param_name' => 'background_color_hover',
             'description' => __( 'Select Background icon color on hover.', 'js_composer' ),
-            'group' => __( 'Icon', KT_THEME_LANG ),
+            'group' => __( 'Icon', 'wingman' ),
             'dependency' => array(
                 'element' => 'background_style',
                 'not_empty' => true,
@@ -305,21 +305,21 @@ vc_map( array(
             'value' => array_merge( getVcShared( 'sizes' ), array( 'Extra Large' => 'xl' ) ),
             'std' => 'md',
             'description' => __( 'Icon size.', 'js_composer' ),
-            'group' => __( 'Icon', KT_THEME_LANG )
+            'group' => __( 'Icon', 'wingman' )
         ),
 
 
         //Typography settings
         array(
             "type" => "kt_number",
-            "heading" => __("Letter spacing", KT_THEME_LANG),
+            "heading" => __("Letter spacing", 'wingman'),
             "param_name" => "letter_spacing",
             "value" => 0,
             "min" => 0,
             "max" => 10,
             "suffix" => "px",
             "description" => "",
-            'group' => __( 'Typography', KT_THEME_LANG ),
+            'group' => __( 'Typography', 'wingman' ),
         ),
         array(
             'type' => 'font_container',
@@ -338,7 +338,7 @@ vc_map( array(
                     'color_description' => __( 'Select heading color.', 'js_composer' ),
                 ),
             ),
-            'group' => __( 'Typography', KT_THEME_LANG )
+            'group' => __( 'Typography', 'wingman' )
         ),
         array(
             'type' => 'checkbox',
@@ -359,7 +359,7 @@ vc_map( array(
                     'font_style_description' => __( 'Select font styling.', 'js_composer' )
                 )
             ),
-            'group' => __( 'Typography', KT_THEME_LANG ),
+            'group' => __( 'Typography', 'wingman' ),
             'dependency' => array(
                 'element' => 'use_theme_fonts',
                 'value_not_equal_to' => 'yes',

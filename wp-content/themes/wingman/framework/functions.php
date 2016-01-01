@@ -249,16 +249,16 @@ function kt_get_page_title( $title = '' ){
     global $post;
 
     if ( is_front_page() && !is_singular('page') ) {
-            $title = __( 'Blog', KT_THEME_LANG );
+            $title = __( 'Blog', 'wingman' );
     } elseif ( is_search() ) {
-        $title = __( 'Search', KT_THEME_LANG );
+        $title = __( 'Search', 'wingman' );
     } elseif( is_home() ){
         $page_for_posts = get_option('page_for_posts', true);
         if($page_for_posts){
             $title = get_the_title($page_for_posts) ;
         }
     } elseif( is_404() ) {
-        $title = __( 'Page not found', KT_THEME_LANG );
+        $title = __( 'Page not found', 'wingman' );
     } elseif ( is_archive() ){
         $title = get_the_archive_title();
         if(kt_is_wc()) {
@@ -290,7 +290,7 @@ function kt_get_page_subtitle(){
     global $post;
     $tagline = '';
     if ( is_front_page() && !is_singular('page') ) {
-        $tagline =  __('Lastest posts', KT_THEME_LANG);
+        $tagline =  __('Lastest posts', 'wingman');
     }elseif( is_home() ){
         $page_for_posts = get_option('page_for_posts', true);
         $tagline = nl2br(rwmb_meta('_kt_page_header_subtitle', array(), $page_for_posts))  ;
@@ -670,12 +670,12 @@ add_filter('breadcrumb_trail_args', 'kt_breadcrumb_trail_args');
 function kt_contactmethods( $contactmethods ) {
 
     // Add Twitter, Facebook
-    $contactmethods['facebook'] = __('Facebook page/profile url', KT_THEME_LANG);
-    $contactmethods['twitter'] = __('Twitter username (without @)', KT_THEME_LANG);
-    $contactmethods['pinterest'] = __('Pinterest username', KT_THEME_LANG);
-    $contactmethods['googleplus'] = __('Google+ page/profile URL', KT_THEME_LANG);
-    $contactmethods['instagram'] = __('Instagram username', KT_THEME_LANG);
-    $contactmethods['tumblr'] = __('Tumblr username', KT_THEME_LANG);
+    $contactmethods['facebook'] = __('Facebook page/profile url', 'wingman');
+    $contactmethods['twitter'] = __('Twitter username (without @)', 'wingman');
+    $contactmethods['pinterest'] = __('Pinterest username', 'wingman');
+    $contactmethods['googleplus'] = __('Google+ page/profile URL', 'wingman');
+    $contactmethods['instagram'] = __('Instagram username', 'wingman');
+    $contactmethods['tumblr'] = __('Tumblr username', 'wingman');
 
     return $contactmethods;
 }
@@ -818,7 +818,7 @@ function kt_after_footer_add_popup(){
                 </div>
                 <form class="dont-show" name="dont-show">
                     <input id="dont-showagain" type="checkbox" value="" />
-                    <label for="dont-showagain"><?php _e( "Don’t Show Again.", KT_THEME_LANG ); ?></label>
+                    <label for="dont-showagain"><?php _e( "Don't Show Again.", 'wingman' ); ?></label>
                 </form>
             </div>
         <?php

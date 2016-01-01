@@ -210,9 +210,9 @@ class WPBakeryShortCode_Skill_Item extends WPBakeryShortCode_VC_Custom_heading {
 
 
 vc_map( array(
-    "name" => __("Skill", KT_THEME_LANG),
+    "name" => __("Skill", 'wingman'),
     "base" => "skill",
-    "category" => __('by Theme', KT_THEME_LANG ),
+    "category" => __('by Theme', 'wingman' ),
     "as_parent" => array('only' => 'skill_item'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
     "content_element" => true,
     "show_settings_on_create" => false,
@@ -352,7 +352,7 @@ vc_map( array(
         ),
         array(
             "type" => "kt_heading",
-            "heading" => __("Other", KT_THEME_LANG),
+            "heading" => __("Other", 'wingman'),
             "param_name" => "other_",
         ),
         array(
@@ -375,7 +375,7 @@ vc_map( array(
 ) );
 // Add your Visual Composer logic here
 vc_map( array(
-    "name" => __( "Skill Item", KT_THEME_LANG),
+    "name" => __( "Skill Item", 'wingman'),
     "base" => "skill_item",
     "as_child" => array('only' => 'skill'),
     "content_element" => true,

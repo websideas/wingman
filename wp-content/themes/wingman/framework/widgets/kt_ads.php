@@ -12,8 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 class WP_Widget_KT_Ads extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array('classname' => 'widget_kt_ads', 'description' => __( 'Ads for widget.', KT_THEME_LANG ) );
-		parent::__construct('kt_ads', __('KT: Ads 125x125', KT_THEME_LANG ), $widget_ops);
+		$widget_ops = array('classname' => 'widget_kt_ads', 'description' => __( 'Ads for widget.', 'wingman' ) );
+		parent::__construct('kt_ads', __('KT: Ads 125x125', 'wingman' ), $widget_ops);
 	}
 
 	public function widget( $args, $instance ) {
@@ -94,7 +94,7 @@ class WP_Widget_KT_Ads extends WP_Widget {
 
 	public function form( $instance ) {
 		//Defaults
-		$instance = wp_parse_args( (array) $instance, array( 'title' => __('Advertise', KT_THEME_LANG), 'target' => '_self', 'link1' => '', 'attachment1' => '', 'link2' => '', 'attachment2' => '','link3' => '', 'attachment3' => '','link4' => '', 'attachment4' => '') );
+		$instance = wp_parse_args( (array) $instance, array( 'title' => __('Advertise', 'wingman'), 'target' => '_self', 'link1' => '', 'attachment1' => '', 'link2' => '', 'attachment2' => '','link3' => '', 'attachment3' => '','link4' => '', 'attachment4' => '') );
         $title = strip_tags($instance['title']);
         
         $preview1 = $preview2 = $preview3 = $preview4 = false;
@@ -132,12 +132,12 @@ class WP_Widget_KT_Ads extends WP_Widget {
             $img_preview4 = $file4['url'];
         }
 	?>
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'wingman' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
-        <h4><?php _e('Image 1',KT_THEME_LANG); ?></h4>
+        <h4><?php _e('Image 1','wingman'); ?></h4>
         <div class="wrapper_kt_image_upload">
             <p style="text-align: center;">
-                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr_e('Select your image 1', KT_THEME_LANG) ?>" />
+                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr_e('Select your image 1', 'wingman') ?>" />
                 <input class="widefat kt_image_attachment" id="<?php echo $this->get_field_id('attachment1'); ?>" name="<?php echo $this->get_field_name('attachment1'); ?>" type="hidden" value="<?php echo esc_attr($attachment1); ?>" />
             </p>
             <p class="kt_image_preview" style="<?php if($preview1){ echo "display: block;";} ?>">
@@ -145,14 +145,14 @@ class WP_Widget_KT_Ads extends WP_Widget {
             </p>
         </div>
         <p style="clear: both;">
-            <label for="<?php echo $this->get_field_id('link1'); ?>"><?php _e('Link Ads 1:', KT_THEME_LANG); ?></label> 
+            <label for="<?php echo $this->get_field_id('link1'); ?>"><?php _e('Link Ads 1:', 'wingman'); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id('link1'); ?>" name="<?php echo $this->get_field_name('link1'); ?>" type="text" value="<?php echo esc_attr($link1); ?>" />
         </p>
         
-        <h4><?php _e('Image 2',KT_THEME_LANG); ?></h4>
+        <h4><?php _e('Image 2','wingman'); ?></h4>
         <div class="wrapper_kt_image_upload">
             <p style="text-align: center;">
-                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr_e('Select your image 2', KT_THEME_LANG) ?>" />
+                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr_e('Select your image 2', 'wingman') ?>" />
                 <input class="widefat kt_image_attachment" id="<?php echo $this->get_field_id('attachment2'); ?>" name="<?php echo $this->get_field_name('attachment2'); ?>" type="hidden" value="<?php echo esc_attr($attachment2); ?>" />
             </p>
             <p class="kt_image_preview" style="<?php if($preview2){ echo "display: block;";} ?>">
@@ -160,14 +160,14 @@ class WP_Widget_KT_Ads extends WP_Widget {
             </p>
         </div>
         <p style="clear: both;">
-            <label for="<?php echo $this->get_field_id('link2'); ?>"><?php _e('Link Ads 2:', KT_THEME_LANG); ?></label> 
+            <label for="<?php echo $this->get_field_id('link2'); ?>"><?php _e('Link Ads 2:', 'wingman'); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id('link2'); ?>" name="<?php echo $this->get_field_name('link2'); ?>" type="text" value="<?php echo esc_attr($link2); ?>" />
         </p>
         
-        <h4><?php _e('Image 3',KT_THEME_LANG); ?></h4>
+        <h4><?php _e('Image 3','wingman'); ?></h4>
         <div class="wrapper_kt_image_upload">
             <p style="text-align: center;">
-                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr_e('Select your image 3', KT_THEME_LANG) ?>" />
+                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr_e('Select your image 3', 'wingman') ?>" />
                 <input class="widefat kt_image_attachment" id="<?php echo $this->get_field_id('attachment3'); ?>" name="<?php echo $this->get_field_name('attachment3'); ?>" type="hidden" value="<?php echo esc_attr($attachment3); ?>" />
             </p>
             <p class="kt_image_preview" style="<?php if($preview3){ echo "display: block;";} ?>">
@@ -175,14 +175,14 @@ class WP_Widget_KT_Ads extends WP_Widget {
             </p>
         </div>
         <p style="clear: both;">
-            <label for="<?php echo $this->get_field_id('link3'); ?>"><?php _e('Link Ads 3:', KT_THEME_LANG); ?></label> 
+            <label for="<?php echo $this->get_field_id('link3'); ?>"><?php _e('Link Ads 3:', 'wingman'); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id('link3'); ?>" name="<?php echo $this->get_field_name('link3'); ?>" type="text" value="<?php echo esc_attr($link3); ?>" />
         </p>
         
-        <h4><?php _e('Image 4',KT_THEME_LANG); ?></h4>
+        <h4><?php _e('Image 4','wingman'); ?></h4>
         <div class="wrapper_kt_image_upload">
             <p style="text-align: center;">
-                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr_e('Select your image 4', KT_THEME_LANG) ?>" />
+                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr_e('Select your image 4', 'wingman') ?>" />
                 <input class="widefat kt_image_attachment" id="<?php echo $this->get_field_id('attachment4'); ?>" name="<?php echo $this->get_field_name('attachment4'); ?>" type="hidden" value="<?php echo esc_attr($attachment4); ?>" />
             </p>
             <p class="kt_image_preview" style="<?php if($preview4){ echo "display: block;";} ?>">
@@ -190,15 +190,15 @@ class WP_Widget_KT_Ads extends WP_Widget {
             </p>
         </div>
         <p style="clear: both;">
-            <label for="<?php echo $this->get_field_id('link4'); ?>"><?php _e('Link Ads 4:', KT_THEME_LANG); ?></label> 
+            <label for="<?php echo $this->get_field_id('link4'); ?>"><?php _e('Link Ads 4:', 'wingman'); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id('link4'); ?>" name="<?php echo $this->get_field_name('link4'); ?>" type="text" value="<?php echo esc_attr($link4); ?>" />
         </p>
         <hr />
         <p>
-			<label for="<?php echo $this->get_field_id('target'); ?>"><?php _e( 'Target:', KT_THEME_LANG); ?></label>
+			<label for="<?php echo $this->get_field_id('target'); ?>"><?php _e( 'Target:', 'wingman'); ?></label>
 			<select name="<?php echo $this->get_field_name('target'); ?>" id="<?php echo $this->get_field_id('target'); ?>" class="widefat">
-				<option value="_self"<?php selected( $instance['target'], '_self' ); ?>><?php _e('Stay in Window', KT_THEME_LANG); ?></option>
-				<option value="_blank"<?php selected( $instance['target'], '_blank' ); ?>><?php _e('Open New Window', KT_THEME_LANG); ?></option>
+				<option value="_self"<?php selected( $instance['target'], '_self' ); ?>><?php _e('Stay in Window', 'wingman'); ?></option>
+				<option value="_blank"<?php selected( $instance['target'], '_blank' ); ?>><?php _e('Open New Window', 'wingman'); ?></option>
 			</select>
 		</p>
 <?php

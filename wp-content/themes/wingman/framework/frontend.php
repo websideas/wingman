@@ -62,15 +62,15 @@ if ( ! function_exists( 'kt_theme_setup' ) ):
             add_image_size( 'kt_blog_post_sidebar', 1140 );
         }
 
-        load_theme_textdomain( KT_THEME_LANG, KT_THEME_DIR . '/languages' );
+        load_theme_textdomain( 'wingman', KT_THEME_DIR . '/languages' );
 
         /**
          * This theme uses wp_nav_menu() in one location.
          */
         register_nav_menus(array(
-            'primary' => __('Main menu', KT_THEME_LANG),
-            //'top'	  => __( 'Top Menu', KT_THEME_LANG ),
-            'bottom'	  => __( 'Bottom Menu', KT_THEME_LANG ),
+            'primary' => __('Main menu', 'wingman'),
+            //'top'	  => __( 'Top Menu', 'wingman' ),
+            'bottom'	  => __( 'Bottom Menu', 'wingman' ),
         ));
 
     }
@@ -118,10 +118,10 @@ function kt_add_scripts() {
         'security' => wp_create_nonce( 'ajax_frontend' ),
         'current_date' => date_i18n('Y-m-d H:i:s'),
         'query_vars' => json_encode( $wp_query->query ),
-        'days' => __('Days', KT_THEME_LANG),
-        'hours' => __('Hours', KT_THEME_LANG),
-        'minutes' => __('Minutes', KT_THEME_LANG),
-        'seconds' => __('Seconds', KT_THEME_LANG),
+        'days' => __('Days', 'wingman'),
+        'hours' => __('Hours', 'wingman'),
+        'minutes' => __('Minutes', 'wingman'),
+        'seconds' => __('Seconds', 'wingman'),
     ));
     
 }
@@ -156,15 +156,15 @@ if ( ! function_exists( 'kt_comment_nav' ) ) :
         if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
             ?>
             <nav class="navigation comment-navigation clearfix">
-                <h2 class="screen-reader-text"><?php _e( 'Comment navigation', KT_THEME_LANG ); ?></h2>
+                <h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'wingman' ); ?></h2>
                 <div class="nav-links">
                     <?php
 
-                    if ( $prev_link = get_previous_comments_link( '<i class="fa fa-angle-double-left"></i> '.__( 'Older Comments', KT_THEME_LANG ) ) ) :
+                    if ( $prev_link = get_previous_comments_link( '<i class="fa fa-angle-double-left"></i> '.__( 'Older Comments', 'wingman' ) ) ) :
                         printf( '<div class="nav-previous">%s</div>', $prev_link );
                     endif;
 
-                    if ( $next_link = get_next_comments_link( '<i class="fa fa-angle-double-right"></i> '.__( 'Newer Comments',  KT_THEME_LANG ) ) ) :
+                    if ( $next_link = get_next_comments_link( '<i class="fa fa-angle-double-right"></i> '.__( 'Newer Comments',  'wingman' ) ) ) :
                         printf( '<div class="nav-next">%s</div>', $next_link );
                     endif;
 
@@ -231,7 +231,7 @@ if ( ! function_exists( 'kt_post_thumbnail_image' ) ) :
                     printf(
                         '<img src="%s" alt="%s" class="%s"/>',
                         $image,
-                        __('No image', KT_THEME_LANG),
+                        __('No image', 'wingman'),
                         $class_img.' no-image'
                     )
                 ?>
@@ -287,7 +287,7 @@ if ( ! function_exists( 'kt_post_thumbnail' ) ) :
                 printf(
                     '<img src="%s" alt="%s" class="%s"/>',
                     $image,
-                    __('No image', KT_THEME_LANG),
+                    __('No image', 'wingman'),
                     $class_img
                 );
             ?>
@@ -424,15 +424,15 @@ function kt_comments($comment, $args, $depth) {
             <div class="comment-entry entry-content">
                 <?php comment_text() ?>
                 <?php if ($comment->comment_approved == '0') : ?>
-                    <em><?php _e('Your comment is awaiting moderation.', KT_THEME_LANG) ?></em>
+                    <em><?php _e('Your comment is awaiting moderation.', 'wingman') ?></em>
                 <?php endif; ?>
             </div>
             <div class="comment-actions clear">
-                <?php edit_comment_link( '<span class="icon-pencil"></span> '.__('Edit', KT_THEME_LANG),'  ',' ') ?>
+                <?php edit_comment_link( '<span class="icon-pencil"></span> '.__('Edit', 'wingman'),'  ',' ') ?>
                 <?php comment_reply_link( array_merge( $args,
                     array('depth' => $depth,
                         'max_depth' => $args['max_depth'],
-                        'reply_text' =>'<span class="icon-action-undo"></span> '.__('Reply')
+                        'reply_text' =>'<span class="icon-action-undo"></span> '.__('Reply', 'wingman')
                     ))) ?>
             </div>
         </div>
@@ -469,15 +469,15 @@ if ( ! function_exists( 'kt_post_nav' ) ) :
 
                     
                     if(!get_previous_post_link('&laquo; %link', '', true)){
-                        printf('<div class="nav-previous meta-nav"><span>%s</span></div>', __( '<span>Previous Article</span>', KT_THEME_LANG ));
+                        printf('<div class="nav-previous meta-nav"><span>%s</span></div>', __( '<span>Previous Article</span>', 'wingman' ));
                     }else{
-                        previous_post_link('<div class="nav-previous meta-nav">%link</div>', __( '<span>Previous Article</span>', KT_THEME_LANG ), TRUE);
+                        previous_post_link('<div class="nav-previous meta-nav">%link</div>', __( '<span>Previous Article</span>', 'wingman' ), TRUE);
                     }
 
                     if(!get_next_post_link('&laquo; %link', '', true)){
-                        printf('<div class="nav-next meta-nav"><span>%s</span></div>', __( '<span>Next Article</span>', KT_THEME_LANG ));
+                        printf('<div class="nav-next meta-nav"><span>%s</span></div>', __( '<span>Next Article</span>', 'wingman' ));
                     }else{
-                        next_post_link('<div class="nav-next meta-nav">%link</div>', __( '<span>Next Article</span>', KT_THEME_LANG ), TRUE);
+                        next_post_link('<div class="nav-next meta-nav">%link</div>', __( '<span>Next Article</span>', 'wingman' ), TRUE);
                     }
                 ?>
             </div><!-- .nav-links -->
@@ -507,20 +507,20 @@ if ( ! function_exists( 'kt_paging_nav' ) ) :
             printf(
                 '<div class="blog-posts-loadmore"><a href="#" class="blog-loadmore-button btn btn-default">%s %s</a></div>',
                 '<span class="fa fa-refresh button-icon-left"></span>',
-                __('Load more', KT_THEME_LANG)
+                __('Load more', 'wingman')
             );
         }elseif($type == 'normal'){ ?>
 
             <nav class="navigation paging-navigation clearfix">
-                <h1 class="screen-reader-text"><?php _e( 'Posts navigation', KT_THEME_LANG ); ?></h1>
+                <h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'wingman' ); ?></h1>
                 <div class="nav-links">
 
                     <?php if ( get_next_posts_link() ) : ?>
-                        <div class="nav-previous"><?php next_posts_link( '<i class="fa fa-long-arrow-left"></i> '.__( 'Older posts', KT_THEME_LANG ) ); ?></div>
+                        <div class="nav-previous"><?php next_posts_link( '<i class="fa fa-long-arrow-left"></i> '.__( 'Older posts', 'wingman' ) ); ?></div>
                     <?php endif; ?>
 
                     <?php if ( get_previous_posts_link() ) : ?>
-                        <div class="nav-next"><?php previous_posts_link( __( 'Newer posts', KT_THEME_LANG ).' <i class="fa fa-long-arrow-right"></i>' ); ?></div>
+                        <div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'wingman' ).' <i class="fa fa-long-arrow-right"></i>' ); ?></div>
                     <?php endif; ?>
 
                 </div><!-- .nav-links -->
@@ -528,8 +528,8 @@ if ( ! function_exists( 'kt_paging_nav' ) ) :
 
         <?php }else{
             the_posts_pagination(array(
-                'prev_text' => sprintf('<span class="screen-reader-text">%s</span>%s', __('Previous', KT_THEME_LANG), '<i class="fa fa-long-arrow-left"></i>'),
-                'next_text' => sprintf('<span class="screen-reader-text">%s</span>%s', __('Next', KT_THEME_LANG), '<i class="fa fa-long-arrow-right"></i>'),
+                'prev_text' => sprintf('<span class="screen-reader-text">%s</span>%s', __('Previous', 'wingman'), '<i class="fa fa-long-arrow-left"></i>'),
+                'next_text' => sprintf('<span class="screen-reader-text">%s</span>%s', __('Next', 'wingman'), '<i class="fa fa-long-arrow-right"></i>'),
                 'before_page_number' => '',
             ));
         }
@@ -545,10 +545,10 @@ if ( ! function_exists( 'kt_entry_meta_author' ) ) :
      */
     function kt_entry_meta_author() {
         printf( '<span class="author vcard">%4$s <span class="screen-reader-text">%1$s </span><a class="url fn n" href="%2$s">%3$s</a></span>',
-            _x( 'Author', 'Used before post author name.', KT_THEME_LANG ),
+            _x( 'Author', 'Used before post author name.', 'wingman' ),
             esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
             get_the_author(),
-            __('By:', KT_THEME_LANG )
+            __('By:', 'wingman' )
         );
     }
 endif;
@@ -560,18 +560,18 @@ if ( ! function_exists( 'kt_entry_meta_categories' ) ) :
      */
     function kt_entry_meta_categories( $separator = ', ', $echo = true ) {
         if ( 'post' == get_post_type() ) {
-            $categories_list = get_the_category_list( _x( $separator, 'Used between list items, there is a space after the comma.', KT_THEME_LANG ) );
+            $categories_list = get_the_category_list( $separator );
             if ( $categories_list ) {
                 if($echo){
                     printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s %3$s</span>',
-                        _x( 'Categories', 'Used before category names.', KT_THEME_LANG ),
-                        __('in', KT_THEME_LANG),
+                        _x( 'Categories', 'Used before category names.', 'wingman' ),
+                        __('in', 'wingman'),
                         $categories_list
                     );
                 }else{
                     return sprintf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s %3$s</span>',
-                        _x( 'Categories', 'Used before category names.', KT_THEME_LANG ),
-                        __('in', KT_THEME_LANG),
+                        _x( 'Categories', 'Used before category names.', 'wingman' ),
+                        __('in', 'wingman'),
                         $categories_list
                     );
                 }
@@ -587,10 +587,10 @@ if ( ! function_exists( 'kt_entry_meta_tags' ) ) :
      */
     function kt_entry_meta_tags($before = '', $after = '') {
         if ( 'post' == get_post_type() ) {
-            $tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', KT_THEME_LANG ) );
+            $tags_list = get_the_tag_list( '', ', ');
             if ( $tags_list ) {
                 printf( '%3$s<span class="tags-links"><span class="tags-links-text">%1$s</span> %2$s</span>%4$s',
-                    _x( 'Tags: ', 'Used before tag names.', KT_THEME_LANG ),
+                    _x( 'Tags: ', 'Used before tag names.', 'wingman' ),
                     $tags_list,
                     $before,
                     $after
@@ -611,7 +611,7 @@ if ( ! function_exists( 'kt_entry_meta_comments' ) ) :
         if ( !shortcode_exists( 'fbcomments' ) ) {
             if (! post_password_required() && ( comments_open() || get_comments_number() ) ) {
                 echo '<span class="comments-link">';
-                comments_popup_link( __( 'No Comments', KT_THEME_LANG ), __( '1 Comment', KT_THEME_LANG ), __( '% Comments', KT_THEME_LANG ) );
+                comments_popup_link( __( 'No Comments', 'wingman' ), __( '1 Comment', 'wingman' ), __( '% Comments', 'wingman' ) );
                 echo '</span>';
             }
         }
@@ -631,7 +631,7 @@ if ( ! function_exists( 'kt_entry_meta_time' ) ) :
                 $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
             }
 
-            $time_show = ($format == 'time') ? human_time_diff( get_the_time('U'), current_time('timestamp') ) . __(' ago', KT_THEME_LANG) : get_the_date($format);
+            $time_show = ($format == 'time') ? human_time_diff( get_the_time('U'), current_time('timestamp') ) . __(' ago', 'wingman') : get_the_date($format);
 
             $time_string = sprintf( $time_string,
                 esc_attr( get_the_date( 'c' ) ),
@@ -641,12 +641,12 @@ if ( ! function_exists( 'kt_entry_meta_time' ) ) :
             );
             if($echo){
                 printf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-                    _x( 'Posted on', 'Used before publish date.', KT_THEME_LANG ),
+                    _x( 'Posted on', 'Used before publish date.', 'wingman' ),
                     $time_string
                 );
             }else{
                 return sprintf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-                    _x( 'Posted on', 'Used before publish date.', KT_THEME_LANG ),
+                    _x( 'Posted on', 'Used before publish date.', 'wingman' ),
                     $time_string
                 );
             }
@@ -670,7 +670,7 @@ if ( ! function_exists( 'kt_get_post_views' ) ){
             $count = 0;
         }
 
-        $text = ($count == 0 || $count == 1) ? __('View',KT_THEME_LANG) : __('Views',KT_THEME_LANG);
+        $text = ($count == 0 || $count == 1) ? __('View','wingman') : __('Views','wingman');
 
         return '<span class="post-view"><i class="fa fa-eye"></i> '.$count.' '.$text.'</span>';
 
@@ -689,11 +689,11 @@ if ( ! function_exists( 'kt_like_post' ) ){
             add_post_meta($post_id, '_like_post', $like_count, true);
         }
 
-        $text = ($like_count == 0 || $like_count == 1) ? __('like',KT_THEME_LANG) : __('likes',KT_THEME_LANG);
+        $text = ($like_count == 0 || $like_count == 1) ? __('like','wingman') : __('likes','wingman');
 
         $class = 'kt_likepost';
-        $title = __('Like this post', KT_THEME_LANG);
-        $already =  __('You already like this!', KT_THEME_LANG);
+        $title = __('Like this post', 'wingman');
+        $already =  __('You already like this!', 'wingman');
 
         if( isset($_COOKIE['like_post_'. $post_id]) ){
             $class .= ' liked';
@@ -728,8 +728,8 @@ if ( ! function_exists( 'kt_author_box' ) ) :
             </div><!-- .author-avatar -->
             <div class="author-description">
                 <h2 class="author-title">
-                    <a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author" title="<?php echo esc_attr(sprintf( __( 'View all posts by %s', KT_THEME_LANG ), get_the_author() ) ); ?>">
-                        <?php printf( __( 'About %s', KT_THEME_LANG ), get_the_author() ); ?>
+                    <a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author" title="<?php echo esc_attr(sprintf( __( 'View all posts by %s', 'wingman' ), get_the_author() ) ); ?>">
+                        <?php printf( __( 'About %s', 'wingman' ), get_the_author() ); ?>
                     </a>
                 </h2>
                 <?php
@@ -887,7 +887,7 @@ if ( ! function_exists( 'kt_related_article' ) ) :
         ?>
         <?php if($query->have_posts()){ ?>
             <div id="related-article">
-                <h3 class="title-article"><?php _e('Related Article', KT_THEME_LANG); ?></h3>
+                <h3 class="title-article"><?php _e('Related Article', 'wingman'); ?></h3>
                 <div class="row">
                     <?php
 

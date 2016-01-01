@@ -48,70 +48,70 @@ class WPBakeryShortCode_Googlemap extends WPBakeryShortCode {
 }
 
 vc_map( array(
-    "name" => __( "Google map", KT_THEME_LANG),
+    "name" => __( "Google map", 'wingman'),
     "base" => "googlemap",
-    "category" => __('by Theme'),
-    "description" => __( "", KT_THEME_LANG),
+    "category" => __('by Theme', 'wingman' ),
+    "description" => __( "", 'wingman'),
     "params" => array(
         array(
           "type" => "textfield",
-          "heading" => __("Height", KT_THEME_LANG),
+          "heading" => __("Height", 'wingman'),
           "param_name" => "height",
           "value" => 300,
-          "description" => __("Enter height of map,units :'px',Leave empty to use '300px'.", KT_THEME_LANG)
+          "description" => __("Enter height of map,units :'px',Leave empty to use '300px'.", 'wingman')
         ),
         array(
           "type" => "textfield",
-          "heading" => __("Location", KT_THEME_LANG),
+          "heading" => __("Location", 'wingman'),
           "param_name" => "location",
           "admin_label" => true,
-          "description" => __("Enter location", KT_THEME_LANG)
+          "description" => __("Enter location", 'wingman')
         ),
         array(
             "type" => "dropdown",
-        	"heading" => __("Map type",KT_THEME_LANG),
+        	"heading" => __("Map type",'wingman'),
         	"param_name" => "type",
             'std' => 'ROADMAP',
         	"value" => array(
-                __('Roadmap', KT_THEME_LANG) => 'roadmap',
-                __('Satellite', KT_THEME_LANG) => 'satellite',
-                __('Hybrid', KT_THEME_LANG) => 'hybrid',
-                __('Terrain', KT_THEME_LANG) => 'terrain',
+                __('Roadmap', 'wingman') => 'roadmap',
+                __('Satellite', 'wingman') => 'satellite',
+                __('Hybrid', 'wingman') => 'hybrid',
+                __('Terrain', 'wingman') => 'terrain',
         	), 
             "admin_label" => true,            
-        	"description" => __('',KT_THEME_LANG),
+        	"description" => __('','wingman'),
         ),
 
         array(
             "type" => "dropdown",
-            "heading" => __("Map stype",KT_THEME_LANG),
+            "heading" => __("Map stype",'wingman'),
             "param_name" => "stype",
             'std' => '',
             "value" => array(
-                __('None', KT_THEME_LANG) => '',
-                __('Simple & Light', KT_THEME_LANG) => '1',
-                __('Light Grey & Blue', KT_THEME_LANG) => '2',
-                __('Dark', KT_THEME_LANG) => '3',
-                __('Pinkish Gray', KT_THEME_LANG) => '4',
-                __('Elevation', KT_THEME_LANG) => '5',
-                __('Mostly Grayscale', KT_THEME_LANG) => '6',
-                __('Red Hat Antwerp', KT_THEME_LANG) => '7',
-                __('Shades of Grey', KT_THEME_LANG) => '8',
+                __('None', 'wingman') => '',
+                __('Simple & Light', 'wingman') => '1',
+                __('Light Grey & Blue', 'wingman') => '2',
+                __('Dark', 'wingman') => '3',
+                __('Pinkish Gray', 'wingman') => '4',
+                __('Elevation', 'wingman') => '5',
+                __('Mostly Grayscale', 'wingman') => '6',
+                __('Red Hat Antwerp', 'wingman') => '7',
+                __('Shades of Grey', 'wingman') => '8',
             ),
             "admin_label" => true,
-            "description" => __('',KT_THEME_LANG),
+            "description" => __('','wingman'),
         ),
 
         array(
             "type" => "checkbox",
-        	"heading" => __("",KT_THEME_LANG),
+        	"heading" => __("",'wingman'),
         	"param_name" => "scrollwheel",
-        	'value' => array( __( 'Disable map zoom on mouse wheel scroll' ) => true ),
-        	"description" => __('',KT_THEME_LANG),
+        	'value' => array( __( 'Disable map zoom on mouse wheel scroll', 'wingman' ) => true ),
+        	"description" => __('','wingman'),
         ),
         array(
             "type" => "dropdown",
-        	"heading" => __("Map zoom",KT_THEME_LANG),
+        	"heading" => __("Map zoom",'wingman'),
         	"param_name" => "zoom",
             'std' => '17',
         	"value" => array(
@@ -135,7 +135,7 @@ vc_map( array(
                 '18' => '18', 
                 '19' => '19'
         	),
-        	"description" => __("1 is the smallest zoom level, 19 the greatest",KT_THEME_LANG),
+        	"description" => __("1 is the smallest zoom level, 19 the greatest",'wingman'),
             "admin_label" => true,
         ),
         array(
@@ -146,9 +146,9 @@ vc_map( array(
         ),
         array(
             "type" => "textarea_html",
-            "heading" => __("Content", KT_THEME_LANG),
+            "heading" => __("Content", 'wingman'),
             "param_name" => "content",
-            "description" => __("", KT_THEME_LANG),
+            "description" => __("", 'wingman'),
         ),
         array(
             "type" => "textfield",

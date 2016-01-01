@@ -46,7 +46,7 @@
                     <div class="entry-excerpt">
                         <?php
                         the_content(sprintf(
-                            __('Read more %s', KT_THEME_LANG),
+                            __('Read more %s', 'wingman'),
                             the_title('<span class="screen-reader-text">', '</span>', false)
                         ));
                         ?>
@@ -59,7 +59,7 @@
                         printf( '<a href="%1$s" class="%2$s">%3$s</a>',
                             esc_url( get_permalink( get_the_ID() ) ),
                             $moreclass,
-                            sprintf( __( 'Read more %s', KT_THEME_LANG ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+                            sprintf( __( 'Read more %s', 'wingman' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
                         );
                         ?>
                     </div><!-- .entry-more -->

@@ -95,7 +95,7 @@ function kt_register_plugins() {
     );
   
     // Change this to your theme text domain, used for internationalising strings
-    $theme_text_domain = KT_THEME_LANG;
+    $theme_text_domain = 'wingman';
   
     /**
      * Array of configuration settings. Amend each line as needed.

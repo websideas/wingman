@@ -153,8 +153,8 @@ function kt_products_per_page_dropdown() {
     <select name="per_page" onchange="this.form.submit()">
         <?php foreach( $products_per_page_options as $key => $value ) : ?>
             <option value="<?php echo esc_attr( $value ); ?>" <?php selected( $value, $current_per_page); ?>><?php
-                $text = apply_filters( 'woo_products_per_page_text', __( '%s item/pages', KT_THEME_LANG ), $value );
-                esc_html( printf( $text, $value == -1 ? __( 'All', KT_THEME_LANG ) : $value ) ); // Set to 'All' when value is -1
+                $text = apply_filters( 'woo_products_per_page_text', __( '%s item/pages', 'wingman' ), $value );
+                esc_html( printf( $text, $value == -1 ? __( 'All', 'wingman' ) : $value ) ); // Set to 'All' when value is -1
                 ?></option>
         <?php endforeach; ?>
     </select>
@@ -191,12 +191,12 @@ function kt_woocommerce_gridlist_toggle(){ ?>
     <?php $gridlist = apply_filters('woocommerce_gridlist_toggle', kt_get_gridlist_toggle()) ?>
     <ul class="gridlist-toggle hidden-xs clearfix">
         <li>
-            <a class="list<?php if($gridlist == 'list'){ ?> active<?php } ?>" data-placement="top" data-toggle="tooltip" href="#" title="<?php _e('List view', KT_THEME_LANG) ?>" data-layout="list" data-remove="grid">
+            <a class="list<?php if($gridlist == 'list'){ ?> active<?php } ?>" data-placement="top" data-toggle="tooltip" href="#" title="<?php _e('List view', 'wingman') ?>" data-layout="list" data-remove="grid">
                 <span class="style-toggle"><span></span><span></span><span></span><span></span></span>
             </a>
         </li>
         <li>
-            <a class="grid<?php if($gridlist == 'grid'){ ?> active<?php } ?>" data-placement="top" data-toggle="tooltip" href="#" title="<?php _e('Grid view', KT_THEME_LANG) ?>" data-layout="grid" data-remove="list">
+            <a class="grid<?php if($gridlist == 'grid'){ ?> active<?php } ?>" data-placement="top" data-toggle="tooltip" href="#" title="<?php _e('Grid view', 'wingman') ?>" data-layout="grid" data-remove="list">
                 <span class="style-toggle"><span></span><span></span><span></span><span></span></span>
             </a>
         </li>
@@ -289,7 +289,7 @@ function kt_woocommerce_get_cart( $wrapper = true ){
         $output .= '<div class="shopping-bag-wrapper ">';
         $output .= '<div class="shopping-bag-content">';
         if ( sizeof(WC()->cart->cart_contents)>0 ) {
-            $output .= '<div class="cart-title">'.__( 'Recently added item(s)',KT_THEME_LANG ).'</div>';
+            $output .= '<div class="cart-title">'.__( 'Recently added item(s)','wingman' ).'</div>';
             $output .= '<div class="bag-products mCustomScrollbar">';
             $output .= '<div class="bag-products-content">';
             foreach (WC()->cart->cart_contents as $cart_item_key => $cart_item) {
@@ -314,15 +314,15 @@ function kt_woocommerce_get_cart( $wrapper = true ){
             $output .= '</div>';
             $output .= '</div>';
         }else{
-            $output .=  "<p class='cart_block_no_products'>".__('Your cart is currently empty.', KT_THEME_LANG)."</p>";
+            $output .=  "<p class='cart_block_no_products'>".__('Your cart is currently empty.', 'wingman')."</p>";
         }
 
         if ( sizeof(WC()->cart->cart_contents)>0 ) {
-            $output .= '<div class="bag-total"><strong>'.__('Subtotal: ', KT_THEME_LANG).'</strong>'.$cart_total.'</div><!-- .bag-total -->';
+            $output .= '<div class="bag-total"><strong>'.__('Subtotal: ', 'wingman').'</strong>'.$cart_total.'</div><!-- .bag-total -->';
             $output .= '<div class="bag-buttons">';
             $output .= '<div class="bag-buttons-content clearfix">';
-            $output .= '<span><a href="'.esc_url( WC()->cart->get_cart_url() ).'" class="btn btn-default btn-animation"><span>'.__('View cart', KT_THEME_LANG).'<i class="fa fa-long-arrow-right"></i></span></a></span>';
-            $output .= '<span><a href="'.esc_url( WC()->cart->get_checkout_url() ).'" class="btn btn-default btn-animation"><span>'.__('Checkout', KT_THEME_LANG).'<i class="fa fa-long-arrow-right"></i></span></a></span>';
+            $output .= '<span><a href="'.esc_url( WC()->cart->get_cart_url() ).'" class="btn btn-default btn-animation"><span>'.__('View cart', 'wingman').'<i class="fa fa-long-arrow-right"></i></span></a></span>';
+            $output .= '<span><a href="'.esc_url( WC()->cart->get_checkout_url() ).'" class="btn btn-default btn-animation"><span>'.__('Checkout', 'wingman').'<i class="fa fa-long-arrow-right"></i></span></a></span>';
             $output .= '</div><!-- .bag-buttons -->';
             $output .= '</div><!-- .bag-buttons -->';
         }
@@ -507,7 +507,7 @@ add_action( 'woocommerce_shop_loop_item_before_image', 'woocommerce_template_loo
 add_action( 'woocommerce_shop_tool_list_before', 'woocommerce_template_loop_add_to_cart', 5);
 
 function kt_woocommerce_sale_flash($text, $post, $product){
-    $text = '<span class="onsale">' . __( 'Sale', KT_THEME_LANG ) . '</span>';
+    $text = '<span class="onsale">' . __( 'Sale', 'wingman' ) . '</span>';
     return $text;
 }
 add_filter('woocommerce_sale_flash', 'kt_woocommerce_sale_flash', 20, 3);
@@ -525,15 +525,15 @@ function kt_woocommerce_add_archive_tool(){
     <div class="product-image-tool tool-<?php echo $count; ?>">
         <?php
         if(class_exists('YITH_WCWL_UI')){
-            echo do_shortcode('<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('wishlist',KT_THEME_LANG).'">[yith_wcwl_add_to_wishlist]</div>');
+            echo do_shortcode('<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('wishlist','wingman').'">[yith_wcwl_add_to_wishlist]</div>');
         }
         printf(
-            '<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('Quick View',KT_THEME_LANG).'"><a href="#" class="product-quick-view" data-id="%s">%s</a></div>',
+            '<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('Quick View','wingman').'"><a href="#" class="product-quick-view" data-id="%s">%s</a></div>',
             get_the_ID(),
-            __('Quick view', KT_THEME_LANG)
+            __('Quick view', 'wingman')
         );
         if(defined( 'YITH_WOOCOMPARE' )){
-            echo do_shortcode('<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('Compare',KT_THEME_LANG).'">[yith_compare_button]</div>');
+            echo do_shortcode('<div class="tool-inner" data-toggle="tooltip" data-placement="top" title="'. __('Compare','wingman').'">[yith_compare_button]</div>');
         }
         ?>
     </div>
@@ -654,7 +654,7 @@ function kt_woocommerce_show_product_loop_new_flash(){
     $post_date = strtotime( $post->post_date );
     $num_day = (int)(($now - $post_date)/(3600*24));
     if( $num_day < $time_new ){
-        echo "<span class='kt_new'>".__( 'New',KT_THEME_LANG )."</span>";
+        echo "<span class='kt_new'>".__( 'New','wingman' )."</span>";
     }
 }
 add_action( 'woocommerce_shop_loop_item_before_image', 'kt_woocommerce_show_product_loop_new_flash', 5 );
@@ -719,7 +719,7 @@ if( ! function_exists( 'kt_share_box_woo' ) ){
 
         if($html){
             printf(
-                '<div class="entry-share-box %s">'.__( 'Share Link: ',KT_THEME_LANG ).'%s</div>',
+                '<div class="entry-share-box %s">'.__( 'Share Link: ','wingman' ).'%s</div>',
                 $class,
                 $html
             );

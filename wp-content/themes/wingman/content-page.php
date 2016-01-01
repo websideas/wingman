@@ -10,15 +10,15 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', KT_THEME_LANG ) . '</span>',
+				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'wingman' ) . '</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', KT_THEME_LANG  ) . ' </span>%',
+				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'wingman'  ) . ' </span>%',
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
 		?>
-        <?php //edit_post_link( __( 'Edit', KT_THEME_LANG ), '<span class="edit-link">', '</span>' ); ?>
+        <?php //edit_post_link( __( 'Edit', 'wingman' ), '<span class="edit-link">', '</span>' ); ?>
 	</div><!-- .entry-content -->
 
     <?php

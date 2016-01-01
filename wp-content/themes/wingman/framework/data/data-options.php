@@ -63,9 +63,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                 //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
                 'allow_sub_menu'       => true,
                 // Show the sections below the admin menu item or not
-                'menu_title'           => __( 'Theme Options', KT_THEME_LANG ),
+                'menu_title'           => __( 'Theme Options', 'wingman' ),
                 
-                'page_title'           => $theme->get( 'Name' ).' '.__( 'Theme Options', KT_THEME_LANG ),
+                'page_title'           => $theme->get( 'Name' ).' '.__( 'Theme Options', 'wingman' ),
                 // You will need to generate a Google API key to use this feature.
                 // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
                 // You will need to generate a Google API key to use this feature.
@@ -136,25 +136,25 @@ if ( ! class_exists( 'KT_config' ) ) {
             // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
             $this->args['share_icons'][] = array(
                 'url' => 'https://www.facebook.com/kitethemes/',
-                'title' => __('Like us on Facebook', KT_THEME_LANG),
+                'title' => __('Like us on Facebook', 'wingman'),
                 'icon' => 'el-icon-facebook'
             );
 
             $this->args['share_icons'][] = array(
                 'url' => 'http://themeforest.net/user/Kite-Themes/follow?ref=Kite-Themes',
-                'title' => __('Follow us on Themeforest', KT_THEME_LANG),
+                'title' => __('Follow us on Themeforest', 'wingman'),
                 'icon' => 'fa fa-wordpress'
             );
 
             $this->args['share_icons'][] = array(
                 'url' => '#',
-                'title' => __('Get Email Newsletter', KT_THEME_LANG),
+                'title' => __('Get Email Newsletter', 'wingman'),
                 'icon' => 'fa fa-envelope-o'
             );
 
             $this->args['share_icons'][] = array(
                 'url' => 'http://themeforest.net/user/kite-themes/portfolio',
-                'title' => __('Check out our works', KT_THEME_LANG),
+                'title' => __('Check out our works', 'wingman'),
                 'icon' => 'fa fa-briefcase'
             );
             
@@ -167,14 +167,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 
             $this->sections[] = array(
                 'id' 	=> 'general',
-                'title'  => __( 'General', KT_THEME_LANG ),
-                'desc'   => __( '', KT_THEME_LANG ),
+                'title'  => __( 'General', 'wingman' ),
+                'desc'   => __( '', 'wingman' ),
                 'icon'	=> 'icon-Settings-Window'
             );
             $this->sections[] = array(
                 'id' 	=> 'general_layout',
-                'title'  => __( 'General', KT_THEME_LANG ),
-                'desc'   => __( '', KT_THEME_LANG ),
+                'title'  => __( 'General', 'wingman' ),
+                'desc'   => __( '', 'wingman' ),
                 'subsection' => true,
                 'fields' => array(
                     array(
@@ -182,18 +182,18 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'media',
                         'url'      => true,
                         'compiler' => true,
-                        'title'    => __( 'Placeholder', KT_THEME_LANG ),
-                        'subtitle'     => __( "Placeholder for none image", KT_THEME_LANG ),
+                        'title'    => __( 'Placeholder', 'wingman' ),
+                        'subtitle'     => __( "Placeholder for none image", 'wingman' ),
                     ),
 
                     array(
                         'id' => 'page_animation',
                         'type' => 'switch',
-                        'title' => __('Page Animation', KT_THEME_LANG),
-                        'desc' => __('Enable Animation switcher in the page.', KT_THEME_LANG),
+                        'title' => __('Page Animation', 'wingman'),
+                        'desc' => __('Enable Animation switcher in the page.', 'wingman'),
                         "default" => 0,
-                        'on'		=> __( 'Enabled', KT_THEME_LANG ),
-                        'off'		=> __( 'Disabled', KT_THEME_LANG ),
+                        'on'		=> __( 'Enabled', 'wingman' ),
+                        'off'		=> __( 'Disabled', 'wingman' ),
                     ),
 
                 )
@@ -204,14 +204,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'logos_favicon',
-				'title'			=> __( 'Logos', KT_THEME_LANG ),
+				'title'			=> __( 'Logos', 'wingman' ),
 				'desc'			=> '',
 				'subsection' => true,
 				'fields'		=> array(
                     array(
                         'id'       => 'logos_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Logos settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Logos settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
@@ -219,15 +219,15 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'media',
                         'url'      => true,
                         'compiler' => true,
-                        'title'    => __( 'Logo', KT_THEME_LANG ),
+                        'title'    => __( 'Logo', 'wingman' ),
                     ),
                     array(
                         'id'       => 'logo_retina',
                         'type'     => 'media',
                         'url'      => true,
                         'compiler' => true,
-                        'title'    => __( 'Logo (Retina Version @2x)', KT_THEME_LANG ),
-                        'desc'     => __('Select an image file for the retina version of the logo. It should be exactly 2x the size of main logo.', KT_THEME_LANG)
+                        'title'    => __( 'Logo (Retina Version @2x)', 'wingman' ),
+                        'desc'     => __('Select an image file for the retina version of the logo. It should be exactly 2x the size of main logo.', 'wingman')
                     ),
                 )
             );
@@ -238,7 +238,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'Header',
-				'title'			=> __( 'Header', KT_THEME_LANG ),
+				'title'			=> __( 'Header', 'wingman' ),
 				'desc'			=> '',
 				'subsection' => true,
 				'fields'		=> array(
@@ -248,11 +248,11 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'image_select',
                         'compiler' => true,
                         'presets'  => true,
-                        'title'    => __( 'Header layout', KT_THEME_LANG ),
-                        'subtitle' => __( 'Please choose header layout', KT_THEME_LANG ),
+                        'title'    => __( 'Header layout', 'wingman' ),
+                        'subtitle' => __( 'Please choose header layout', 'wingman' ),
                         'options'  => array(
                             'layout1' => array( 
-                                'alt' => __( 'Layout 1', KT_THEME_LANG ), 
+                                'alt' => __( 'Layout 1', 'wingman' ), 
                                 'img' => KT_FW_IMG . 'header/header-v1.png',
                                 'presets'   => array(
                                     'logo_margin_spacing' => array( 'margin-top' => '40px','margin-bottom' => '40px' ),
@@ -262,7 +262,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                                 )
                             ),
                             'layout2' => array( 
-                                'alt' => __( 'Layout 2', KT_THEME_LANG ), 
+                                'alt' => __( 'Layout 2', 'wingman' ), 
                                 'img' => KT_FW_IMG . 'header/header-v2.png',
                                 'presets'   => array(
                                     'logo_margin_spacing' => array( 'margin-top' => '0px','margin-bottom' => '0px' ),
@@ -282,11 +282,11 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'header_search',
                         'type' => 'switch',
-                        'title' => __('Search Icon', KT_THEME_LANG),
-                        'desc' => __('Enable the search Icon in the header.', KT_THEME_LANG),
+                        'title' => __('Search Icon', 'wingman'),
+                        'desc' => __('Enable the search Icon in the header.', 'wingman'),
                         "default" => 1,
-                        'on'		=> __( 'Enabled', KT_THEME_LANG ),
-                        'off'		=> __( 'Disabled', KT_THEME_LANG ),
+                        'on'		=> __( 'Enabled', 'wingman' ),
+                        'off'		=> __( 'Disabled', 'wingman' ),
                     ),
 
                 )
@@ -298,7 +298,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'footer',
-				'title'			=> __( 'Footer', KT_THEME_LANG ),
+				'title'			=> __( 'Footer', 'wingman' ),
 				'desc'			=> '',
 				'subsection' => true,
 				'fields'		=> array(
@@ -307,75 +307,75 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'backtotop',
                         'type'     => 'switch',
-                        'title'    => __( 'Back to top', KT_THEME_LANG ),
+                        'title'    => __( 'Back to top', 'wingman' ),
                         'default'  => true,
-                        'on'		=> __( 'Enabled', KT_THEME_LANG ),
-                        'off'		=> __( 'Disabled', KT_THEME_LANG ),
+                        'on'		=> __( 'Enabled', 'wingman' ),
+                        'off'		=> __( 'Disabled', 'wingman' ),
                     ),
 
                     array(
                         'id'       => 'footer_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Footer settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer',
                         'type'     => 'switch',
-                        'title'    => __( 'Footer enable', KT_THEME_LANG ),
+                        'title'    => __( 'Footer enable', 'wingman' ),
                         'default'  => true,
-                        'on'		=> __( 'Enabled', KT_THEME_LANG ),
-                        'off'		=> __( 'Disabled', KT_THEME_LANG ),
+                        'on'		=> __( 'Enabled', 'wingman' ),
+                        'off'		=> __( 'Disabled', 'wingman' ),
                     ),
 
                     // Footer Top settings
                     array(
                         'id'       => 'footer_top_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer top settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Footer top settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer_top',
                         'type'     => 'switch',
-                        'title'    => __( 'Footer top enable', KT_THEME_LANG ),
+                        'title'    => __( 'Footer top enable', 'wingman' ),
                         'default'  => true,
-                        'on'		=> __( 'Enabled', KT_THEME_LANG ),
-                        'off'		=> __( 'Disabled', KT_THEME_LANG ),
+                        'on'		=> __( 'Enabled', 'wingman' ),
+                        'off'		=> __( 'Disabled', 'wingman' ),
                     ),
 
                     // Footer widgets settings
                     array(
                         'id'       => 'footer_widgets_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer widgets settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Footer widgets settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer_widgets',
                         'type'     => 'switch',
-                        'title'    => __( 'Footer widgets enable', KT_THEME_LANG ),
+                        'title'    => __( 'Footer widgets enable', 'wingman' ),
                         'default'  => true,
-                        'on'		=> __( 'Enabled', KT_THEME_LANG ),
-                        'off'		=> __( 'Disabled', KT_THEME_LANG ),
+                        'on'		=> __( 'Enabled', 'wingman' ),
+                        'off'		=> __( 'Disabled', 'wingman' ),
                     ),
 
                     array(
                         'id'       => 'footer_widgets_layout',
                         'type'     => 'image_select',
                         'compiler' => true,
-                        'title'    => __( 'Footer widgets layout', KT_THEME_LANG ),
-                        'subtitle' => __( 'Select your footer widgets layout', KT_THEME_LANG ),
+                        'title'    => __( 'Footer widgets layout', 'wingman' ),
+                        'subtitle' => __( 'Select your footer widgets layout', 'wingman' ),
                         'options'  => array(
-                            '3-3-3-3' => array( 'alt' => __( 'Layout 1', KT_THEME_LANG ), 'img' => KT_FW_IMG . 'footer/footer-1.png' ),
-                            '6-3-3' => array( 'alt' => __( 'Layout 2', KT_THEME_LANG ), 'img' => KT_FW_IMG . 'footer/footer-2.png' ),
-                            '3-3-6' => array( 'alt' => __( 'Layout 3', KT_THEME_LANG ), 'img' => KT_FW_IMG . 'footer/footer-3.png' ),
-                            '6-6' => array( 'alt' => __( 'Layout 4', KT_THEME_LANG ), 'img' => KT_FW_IMG . 'footer/footer-4.png' ),
-                            '4-4-4' => array( 'alt' => __( 'Layout 5', KT_THEME_LANG ), 'img' => KT_FW_IMG . 'footer/footer-5.png' ),
-                            '8-4' => array( 'alt' => __( 'Layout 6', KT_THEME_LANG ), 'img' => KT_FW_IMG . 'footer/footer-6.png' ),
-                            '4-8' => array( 'alt' => __( 'Layout 7', KT_THEME_LANG ), 'img' => KT_FW_IMG . 'footer/footer-7.png' ),
-                            '3-6-3' => array( 'alt' => __( 'Layout 8', KT_THEME_LANG ), 'img' => KT_FW_IMG . 'footer/footer-8.png' ),
-                            '12' => array( 'alt' => __( 'Layout 9', KT_THEME_LANG ), 'img' => KT_FW_IMG . 'footer/footer-9.png' ),
+                            '3-3-3-3' => array( 'alt' => __( 'Layout 1', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-1.png' ),
+                            '6-3-3' => array( 'alt' => __( 'Layout 2', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-2.png' ),
+                            '3-3-6' => array( 'alt' => __( 'Layout 3', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-3.png' ),
+                            '6-6' => array( 'alt' => __( 'Layout 4', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-4.png' ),
+                            '4-4-4' => array( 'alt' => __( 'Layout 5', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-5.png' ),
+                            '8-4' => array( 'alt' => __( 'Layout 6', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-6.png' ),
+                            '4-8' => array( 'alt' => __( 'Layout 7', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-7.png' ),
+                            '3-6-3' => array( 'alt' => __( 'Layout 8', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-8.png' ),
+                            '12' => array( 'alt' => __( 'Layout 9', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-9.png' ),
                         ),
                         'default'  => '3-3-3-3'
                     ),
@@ -384,40 +384,40 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_bottom_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer bottom settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Footer bottom settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer_bottom',
                         'type'     => 'switch',
-                        'title'    => __( 'Footer bottom enable', KT_THEME_LANG ),
+                        'title'    => __( 'Footer bottom enable', 'wingman' ),
                         'default'  => false,
-                        'on'		=> __( 'Enabled', KT_THEME_LANG ),
-                        'off'		=> __( 'Disabled', KT_THEME_LANG ),
+                        'on'		=> __( 'Enabled', 'wingman' ),
+                        'off'		=> __( 'Disabled', 'wingman' ),
                     ),
                     /* Footer copyright */
                     array(
                         'id'       => 'footer_copyright_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer copyright settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Footer copyright settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer_copyright',
                         'type'     => 'switch',
-                        'title'    => __( 'Footer copyright enable', KT_THEME_LANG ),
+                        'title'    => __( 'Footer copyright enable', 'wingman' ),
                         'default'  => true,
-                        'on'		=> __( 'Enabled', KT_THEME_LANG ),
-                        'off'		=> __( 'Disabled', KT_THEME_LANG ),
+                        'on'		=> __( 'Enabled', 'wingman' ),
+                        'off'		=> __( 'Disabled', 'wingman' ),
                     ),
                     array(
                         'id'       => 'footer_copyright_layout',
                         'type'     => 'select',
-                        'title'    => __( 'Footer copyright layout', KT_THEME_LANG ),
-                        'subtitle'     => __( 'Select your preferred footer layout.', KT_THEME_LANG ),
+                        'title'    => __( 'Footer copyright layout', 'wingman' ),
+                        'subtitle'     => __( 'Select your preferred footer layout.', 'wingman' ),
                         'options'  => array(
-                            'centered' => __('Centered', KT_THEME_LANG),
-                            'sides' => __('Sides', KT_THEME_LANG )
+                            'centered' => __('Centered', 'wingman'),
+                            'sides' => __('Sides', 'wingman' )
                         ),
                         'default'  => 'centered',
                         'clear' => false
@@ -425,37 +425,37 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_copyright_left',
                         'type'     => 'select',
-                        'title'    => __( 'Footer copyright left', KT_THEME_LANG ),
+                        'title'    => __( 'Footer copyright left', 'wingman' ),
                         'options'  => array(
-                            '' => __('Empty', KT_THEME_LANG ),
-                            'navigation' => __('Navigation', KT_THEME_LANG ),
-                            'socials' => __('Socials', KT_THEME_LANG ),
-                            'copyright' => __('Copyright', KT_THEME_LANG ),
+                            '' => __('Empty', 'wingman' ),
+                            'navigation' => __('Navigation', 'wingman' ),
+                            'socials' => __('Socials', 'wingman' ),
+                            'copyright' => __('Copyright', 'wingman' ),
                         ),
                         'default'  => ''
                     ),
                     array(
                         'id'       => 'footer_copyright_right',
                         'type'     => 'select',
-                        'title'    => __( 'Footer copyright right', KT_THEME_LANG ),
+                        'title'    => __( 'Footer copyright right', 'wingman' ),
                         'options'  => array(
-                            '' => __('Empty', KT_THEME_LANG ),
-                            'navigation' => __('Navigation', KT_THEME_LANG ),
-                            'socials' => __('Socials', KT_THEME_LANG ),
-                            'copyright' => __('Copyright', KT_THEME_LANG ),
+                            '' => __('Empty', 'wingman' ),
+                            'navigation' => __('Navigation', 'wingman' ),
+                            'socials' => __('Socials', 'wingman' ),
+                            'copyright' => __('Copyright', 'wingman' ),
                         ),
                         'default'  => 'copyright'
                     ),
                     array(
                          'id'   => 'footer_socials',
                          'type' => 'kt_socials',
-                         'title'    => __( 'Select your socials', KT_THEME_LANG ),
+                         'title'    => __( 'Select your socials', 'wingman' ),
                     ),
                     array(
                         'id'       => 'footer_copyright_text',
                         'type'     => 'editor',
-                        'title'    => __( 'Footer Copyright Text', KT_THEME_LANG ),
-                        'default'  => '<p style="margin-bottom: 38px;"><a href="'.esc_url( home_url( '/' )).'"><img src="'.KT_THEME_IMG.'logo-light.png" alt="Wingman" /></a></p><p style="margin-bottom: 24px;"><img src="'.KT_THEME_IMG.'payment.png" alt="payment" /></p><p style="margin:0;">Copyright © 2015 - <a href="'.esc_url( home_url( '/' )).'">Wing Man</a> - All rights reserved. </p><p style="margin:0;">Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a></p>'
+                        'title'    => __( 'Footer Copyright Text', 'wingman' ),
+                        'default'  => '<p style="margin-bottom: 38px;"><a href="'.esc_url( home_url( '/' )).'"><img src="'.KT_THEME_IMG.'logo-light.png" alt="Wingman" /></a></p><p style="margin-bottom: 24px;"><img src="'.KT_THEME_IMG.'payment.png" alt="payment" /></p><p style="margin:0;">Copyright &copy; 2015 - <a href="'.esc_url( home_url( '/' )).'">Wing Man</a> - All rights reserved. </p><p style="margin:0;">Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a></p>'
                     ),
                 )
             );
@@ -465,36 +465,36 @@ if ( ! class_exists( 'KT_config' ) ) {
              *
              */
             $this->sections[] = array(
-                'title' => __('Page Loader', KT_THEME_LANG),
-                'desc' => __('Page Loader Options', KT_THEME_LANG),
+                'title' => __('Page Loader', 'wingman'),
+                'desc' => __('Page Loader Options', 'wingman'),
                 'subsection' => true,
                 'fields' => array(
                     array(
                         'id' => 'use_page_loader',
                         'type' => 'switch',
-                        'title' => __('Use Page Loader?', KT_THEME_LANG),
-                        'desc' => __('', KT_THEME_LANG),
+                        'title' => __('Use Page Loader?', 'wingman'),
+                        'desc' => __('', 'wingman'),
                         'default' => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                     array(
                         'id'       => 'layout_loader',
                         'type'     => 'image_select',
                         'compiler' => true,
-                        'title'    => __( 'Loader layout', KT_THEME_LANG ),
-                        'subtitle' => __( 'Please choose loader layout', KT_THEME_LANG ),
+                        'title'    => __( 'Loader layout', 'wingman' ),
+                        'subtitle' => __( 'Please choose loader layout', 'wingman' ),
                         'options'  => array(
-                            'style-1' => array( 'alt' => __( 'Style 1', KT_THEME_LANG ), 'img' => KT_FW_IMG . 'loader/loader_v1.png' ),
-                            'style-2' => array( 'alt' => __( 'Style 2', KT_THEME_LANG ), 'img' => KT_FW_IMG . 'loader/loader_v2.png' ),
-                            'style-3' => array( 'alt' => __( 'Style 2', KT_THEME_LANG ), 'img' => KT_FW_IMG . 'loader/loader_v3.png' ),
+                            'style-1' => array( 'alt' => __( 'Style 1', 'wingman' ), 'img' => KT_FW_IMG . 'loader/loader_v1.png' ),
+                            'style-2' => array( 'alt' => __( 'Style 2', 'wingman' ), 'img' => KT_FW_IMG . 'loader/loader_v2.png' ),
+                            'style-3' => array( 'alt' => __( 'Style 2', 'wingman' ), 'img' => KT_FW_IMG . 'loader/loader_v3.png' ),
                         ),
                         'default'  => 'style-1',
                     ),
                     array(
                         'id'       => 'background_page_loader',
                         'type'     => 'background',
-                        'title'    => __( 'Background Color Page Loader', KT_THEME_LANG ),
+                        'title'    => __( 'Background Color Page Loader', 'wingman' ),
                         'background-repeat'     => false,
                         'background-attachment' => false,
                         'background-position'   => false,
@@ -511,7 +511,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'color_first_loader',
                         'type'     => 'color',
-                        'title'    => __( 'Color Loader', KT_THEME_LANG ),
+                        'title'    => __( 'Color Loader', 'wingman' ),
                         'default'  => '#82c14f',
                         'transparent' => false,
                         'required' => array( 'use_page_loader', 'equals', array( 1 ) ),
@@ -519,7 +519,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'color_second_loader',
                         'type'     => 'color',
-                        'title'    => __( 'Color Second Loader', KT_THEME_LANG ),
+                        'title'    => __( 'Color Second Loader', 'wingman' ),
                         'default'  => '#cccccc',
                         'transparent' => false,
                         'required' => array( 'use_page_loader', 'equals', array( 1 ) ),
@@ -530,14 +530,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 
             $this->sections[] = array(
                 'icon'      => 'el-icon-cog',
-                'title'     => __('Color Preset', KT_THEME_LANG),
+                'title'     => __('Color Preset', 'wingman'),
                 'fields'    => array(
                     array(
                         'id'       => 'kt-presets',
                         'type'     => 'image_select', 
                         'presets'  => true,
-                        'title'    => __('Color Preset', KT_THEME_LANG),
-                        'subtitle' => __('Select the color you want to use for the theme.', KT_THEME_LANG),
+                        'title'    => __('Color Preset', 'wingman'),
+                        'subtitle' => __('Select the color you want to use for the theme.', 'wingman'),
                         'default'  => 0,
                         'options'  => array(
                             'color_default'      => array(
@@ -612,7 +612,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'styling',
-				'title'			=> __( 'Styling', KT_THEME_LANG ),
+				'title'			=> __( 'Styling', 'wingman' ),
 				'desc'			=> '',
 				'icon'	=> 'icon-Palette',
             );
@@ -621,13 +621,13 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
             $this->sections[] = array(
 				'id'			=> 'styling_general',
-				'title'			=> __( 'General', KT_THEME_LANG ),
+				'title'			=> __( 'General', 'wingman' ),
 				'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'styling_accent',
                         'type'     => 'color',
-                        'title'    => __( 'Main Color', KT_THEME_LANG ),
+                        'title'    => __( 'Main Color', 'wingman' ),
                         'default'  => '#82c14f',
                         'transparent' => false,
                     ),
@@ -635,7 +635,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'styling_link',
                         'type'     => 'link_color',
-                        'title'    => __( 'Links Color', KT_THEME_LANG ),
+                        'title'    => __( 'Links Color', 'wingman' ),
                         'output'   => array( 'a' ),
                         'default'  => array(
                             'regular' => '#82c14f',
@@ -653,7 +653,7 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'styling-logo',
-                'title'			=> __( 'Logo', KT_THEME_LANG ),
+                'title'			=> __( 'Logo', 'wingman' ),
                 'subsection' => true,
                 'fields'		=> array(
 
@@ -662,7 +662,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'           => 'dimensions',
                         'units'          => array( 'px'),
                         'units_extended' => 'true',
-                        'title'          => __( 'Logo width', KT_THEME_LANG ),
+                        'title'          => __( 'Logo width', 'wingman' ),
                         'height'         => false,
                         'default'        => array( 'width'  => 215, 'unit'   => 'px' ),
                         'output'   => array( '.site-branding .site-logo img' ),
@@ -675,7 +675,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array( '.site-branding' ),
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
-                        'title'    => __( 'Logo margin spacing Option', KT_THEME_LANG ),
+                        'title'    => __( 'Logo margin spacing Option', 'wingman' ),
                         'default'  => array(
                             'margin-top'    => '40px',
                             'margin-right'  => '0',
@@ -693,7 +693,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'           => 'dimensions',
                         'units'          => array( 'px'),
                         'units_extended' => 'true',
-                        'title'          => __( 'Logo mobile width', KT_THEME_LANG ),
+                        'title'          => __( 'Logo mobile width', 'wingman' ),
                         'height'         => false,
                         'default'        => array(
                             'width'  => 190,
@@ -707,7 +707,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'mode'     => 'margin',
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
-                        'title'    => __( 'Logo mobile margin spacing Option', KT_THEME_LANG ),
+                        'title'    => __( 'Logo mobile margin spacing Option', 'wingman' ),
                         'default'  => array(
                             'margin-top'    => '16px',
                             'margin-right'  => '0px',
@@ -725,7 +725,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
             $this->sections[] = array(
 				'id'			=> 'styling_header',
-				'title'			=> __( 'Header', KT_THEME_LANG ),
+				'title'			=> __( 'Header', 'wingman' ),
 				'subsection' => true,
                 'fields'		=> array(
 
@@ -743,15 +743,15 @@ if ( ! class_exists( 'KT_config' ) ) {
                         array(
                             'id'       => 'header_background',
                             'type'     => 'background',
-                            'title'    => __( 'Header background', KT_THEME_LANG ),
-                            'subtitle' => __( 'Header with image, color, etc.', KT_THEME_LANG ),
+                            'title'    => __( 'Header background', 'wingman' ),
+                            'subtitle' => __( 'Header with image, color, etc.', 'wingman' ),
                             'default'   => '',
                             'output'      => array( '.header-background' ),
                         ),
                         array(
                             'id'            => 'header_opacity',
                             'type'          => 'slider',
-                            'title'         => __( 'Background opacity', KT_THEME_LANG ),
+                            'title'         => __( 'Background opacity', 'wingman' ),
                             'default'       => 1,
                             'min'           => 0,
                             'step'          => .1,
@@ -767,27 +767,27 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'styling_sticky',
-                'title'			=> __( 'Sticky', KT_THEME_LANG ),
+                'title'			=> __( 'Sticky', 'wingman' ),
                 'subsection' => true,
                 'fields'		=> array(
 
                     array(
                         'id'       => 'fixed_header',
                         'type'     => 'button_set',
-                        'title'    => __( 'Sticky header', KT_THEME_LANG ),
+                        'title'    => __( 'Sticky header', 'wingman' ),
                         'options'  => array(
-                            '1' => __('Disabled', KT_THEME_LANG),
-                            '2' => __('Fixed Sticky', KT_THEME_LANG),
-                            '3' => __('Slide Down', KT_THEME_LANG),
+                            '1' => __('Disabled', 'wingman'),
+                            '2' => __('Fixed Sticky', 'wingman'),
+                            '3' => __('Slide Down', 'wingman'),
                         ),
                         'default'  => '3',
-                        'desc' => __('Choose your sticky effect.', KT_THEME_LANG)
+                        'desc' => __('Choose your sticky effect.', 'wingman')
                     ),
                     array(
                         'id'             => 'logo_sticky_width',
                         'type'           => 'dimensions',
                         'units'          => array( 'px'),
-                        'title'          => __( 'Logo width', KT_THEME_LANG ),
+                        'title'          => __( 'Logo width', 'wingman' ),
                         'height'         => false,
                         'default'        => array(
                             'width'  => '100',
@@ -802,7 +802,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'mode'     => 'margin',
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
-                        'title'    => __( 'Logo sticky margin spacing Option', KT_THEME_LANG ),
+                        'title'    => __( 'Logo sticky margin spacing Option', 'wingman' ),
                         'default'  => array(
                             'margin-top'    => '0',
                             'margin-right'  => '0',
@@ -817,8 +817,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'           => 'dimensions',
                         'units'          => array('px'),
                         'units_extended' => 'true',
-                        'title'          => __( 'Main Navigation Sticky Height', KT_THEME_LANG ),
-                        'subtitle'          => __( 'Change height of main navigation sticky', KT_THEME_LANG ),
+                        'title'          => __( 'Main Navigation Sticky Height', 'wingman' ),
+                        'subtitle'          => __( 'Change height of main navigation sticky', 'wingman' ),
                         'width'         => false,
                         'default'        => array(
                             'height'  => '60',
@@ -833,8 +833,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'header_sticky_background',
                         'type'     => 'background',
-                        'title'    => __( 'Header sticky background', KT_THEME_LANG ),
-                        'subtitle' => __( 'Header sticky with image, color, etc.', KT_THEME_LANG ),
+                        'title'    => __( 'Header sticky background', 'wingman' ),
+                        'subtitle' => __( 'Header sticky with image, color, etc.', 'wingman' ),
                         'background-repeat'     => false,
                         'background-attachment' => false,
                         'background-position'   => false,
@@ -851,7 +851,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'            => 'header_sticky_opacity',
                         'type'          => 'slider',
-                        'title'         => __( 'Sticky Background opacity', KT_THEME_LANG ),
+                        'title'         => __( 'Sticky Background opacity', 'wingman' ),
                         'default'       => .8,
                         'min'           => 0,
                         'step'          => .1,
@@ -869,20 +869,20 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'styling_footer',
-                'title'			=> __( 'Footer', KT_THEME_LANG ),
+                'title'			=> __( 'Footer', 'wingman' ),
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'footer_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Footer settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer_background',
                         'type'     => 'background',
-                        'title'    => __( 'Footer Background', KT_THEME_LANG ),
-                        'subtitle' => __( 'Footer Background with image, color, etc.', KT_THEME_LANG ),
+                        'title'    => __( 'Footer Background', 'wingman' ),
+                        'subtitle' => __( 'Footer Background with image, color, etc.', 'wingman' ),
                         'default'   => array( 'background-color' => '#1e1e1e' ),
                         'output'      => array( '#footer' ),
                     ),
@@ -896,14 +896,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array( '#footer' ),
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
-                        'title'    => __( 'Footer padding', KT_THEME_LANG ),
+                        'title'    => __( 'Footer padding', 'wingman' ),
                         'default'  => array( )
                     ),
 
                     array(
                         'id'       => 'footer_border',
                         'type'     => 'border',
-                        'title'    => __( 'Footer Border', KT_THEME_LANG ),
+                        'title'    => __( 'Footer Border', 'wingman' ),
                         'output'   => array( '#footer' ),
                         'all'      => false,
                         'left'     => false,
@@ -916,14 +916,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_top_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer top settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Footer top settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer_top_background',
                         'type'     => 'background',
-                        'title'    => __( 'Footer top Background', KT_THEME_LANG ),
-                        'subtitle' => __( 'Footer top Background with image, color, etc.', KT_THEME_LANG ),
+                        'title'    => __( 'Footer top Background', 'wingman' ),
+                        'subtitle' => __( 'Footer top Background with image, color, etc.', 'wingman' ),
                         'default'   => array( ),
                         'output'      => array( '#footer-top' ),
                     ),
@@ -936,13 +936,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array( '#footer-top' ),
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
-                        'title'    => __( 'Footer top padding', KT_THEME_LANG ),
+                        'title'    => __( 'Footer top padding', 'wingman' ),
                         'default'  => array( )
                     ),
                     array(
                         'id'       => 'footer_top_border',
                         'type'     => 'border',
-                        'title'    => __( 'Footer top Border', KT_THEME_LANG ),
+                        'title'    => __( 'Footer top Border', 'wingman' ),
                         'output'   => array( '#footer-top' ),
                         'all'      => false,
                         'left'     => false,
@@ -956,14 +956,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_widgets_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer widgets settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Footer widgets settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer_widgets_background',
                         'type'     => 'background',
-                        'title'    => __( 'Footer widgets Background', KT_THEME_LANG ),
-                        'subtitle' => __( 'Footer widgets Background with image, color, etc.', KT_THEME_LANG ),
+                        'title'    => __( 'Footer widgets Background', 'wingman' ),
+                        'subtitle' => __( 'Footer widgets Background with image, color, etc.', 'wingman' ),
                         'default'   => array(  ),
                         'output'      => array( '#footer-area' ),
                     ),
@@ -976,7 +976,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array( '#footer-area' ),
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
-                        'title'    => __( 'Footer widgets padding', KT_THEME_LANG ),
+                        'title'    => __( 'Footer widgets padding', 'wingman' ),
                         'default'  => array( )
                     ),
 
@@ -984,14 +984,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_bottom_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer bottom settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Footer bottom settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer_bottom_background',
                         'type'     => 'background',
-                        'title'    => __( 'Footer Background', KT_THEME_LANG ),
-                        'subtitle' => __( 'Footer Background with image, color, etc.', KT_THEME_LANG ),
+                        'title'    => __( 'Footer Background', 'wingman' ),
+                        'subtitle' => __( 'Footer Background with image, color, etc.', 'wingman' ),
                         'default'   => array( ),
                         'output'      => array( '#footer-bottom' ),
                     ),
@@ -1004,7 +1004,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'right'    => false,
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
-                        'title'    => __( 'Footer bottom padding', KT_THEME_LANG ),
+                        'title'    => __( 'Footer bottom padding', 'wingman' ),
                         'default'  => array( ),
                         'subtitle' => 'Disable if you use instagram background',
                     ),
@@ -1013,14 +1013,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_copyright_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer copyright settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Footer copyright settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
 
                     array(
                         'id'       => 'footer_copyright_border',
                         'type'     => 'border',
-                        'title'    => __( 'Footer Copyright Border', KT_THEME_LANG ),
+                        'title'    => __( 'Footer Copyright Border', 'wingman' ),
                         'output'   => array( '#footer-copyright' ),
                         'all'      => false,
                         'left'     => false,
@@ -1032,8 +1032,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_copyright_background',
                         'type'     => 'background',
-                        'title'    => __( 'Footer Background', KT_THEME_LANG ),
-                        'subtitle' => __( 'Footer Background with image, color, etc.', KT_THEME_LANG ),
+                        'title'    => __( 'Footer Background', 'wingman' ),
+                        'subtitle' => __( 'Footer Background with image, color, etc.', 'wingman' ),
                         'default'   => array( ),
                         'output'      => array( '#footer-copyright' ),
                     ),
@@ -1046,7 +1046,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array( '#footer-copyright' ),
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
-                        'title'    => __( 'Footer copyright padding', KT_THEME_LANG ),
+                        'title'    => __( 'Footer copyright padding', 'wingman' ),
                         'default'  => array( )
                     ),
                     array(
@@ -1056,20 +1056,20 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_socials_style',
                         'type'     => 'select',
-                        'title'    => __( 'Footer socials style', KT_THEME_LANG ),
+                        'title'    => __( 'Footer socials style', 'wingman' ),
                         'options'  => array(
-                            'accent' => __('Accent', KT_THEME_LANG ),
-                            'dark'   => __('Dark', KT_THEME_LANG ),
-                            'light'  => __('Light', KT_THEME_LANG ),
-                            'color'  => __('Color', KT_THEME_LANG ),
-                            'custom'  => __('Custom Color', KT_THEME_LANG ),
+                            'accent' => __('Accent', 'wingman' ),
+                            'dark'   => __('Dark', 'wingman' ),
+                            'light'  => __('Light', 'wingman' ),
+                            'color'  => __('Color', 'wingman' ),
+                            'custom'  => __('Custom Color', 'wingman' ),
                         ),
                         'default'  => 'custom'
                     ),
                     array(
                         'id'       => 'custom_color_social',
                         'type'     => 'color',
-                        'title'    => __( 'Footer socials Color', KT_THEME_LANG ),
+                        'title'    => __( 'Footer socials Color', 'wingman' ),
                         'default'  => '#707070',
                         'transparent' => false,
                         'required' => array('footer_socials_style','equals', array( 'custom' ) ),
@@ -1077,35 +1077,35 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_socials_background',
                         'type'     => 'select',
-                        'title'    => __( 'Footer socials background', KT_THEME_LANG ),
+                        'title'    => __( 'Footer socials background', 'wingman' ),
                         'options'  => array(
-                            'empty'       => __('None', KT_THEME_LANG ),
-                            'rounded'   => __('Circle', KT_THEME_LANG ),
-                            'boxed'  => __('Square', KT_THEME_LANG ),
-                            'rounded-less'  => __('Rounded', KT_THEME_LANG ),
-                            'diamond-square'  => __('Diamond Square', KT_THEME_LANG ),
-                            'rounded-outline'  => __('Outline Circle', KT_THEME_LANG ),
-                            'boxed-outline'  => __('Outline Square', KT_THEME_LANG ),
-                            'rounded-less-outline'  => __('Outline Rounded', KT_THEME_LANG ),
-                            'diamond-square-outline'  => __('Outline Diamond Square', KT_THEME_LANG ),
+                            'empty'       => __('None', 'wingman' ),
+                            'rounded'   => __('Circle', 'wingman' ),
+                            'boxed'  => __('Square', 'wingman' ),
+                            'rounded-less'  => __('Rounded', 'wingman' ),
+                            'diamond-square'  => __('Diamond Square', 'wingman' ),
+                            'rounded-outline'  => __('Outline Circle', 'wingman' ),
+                            'boxed-outline'  => __('Outline Square', 'wingman' ),
+                            'rounded-less-outline'  => __('Outline Rounded', 'wingman' ),
+                            'diamond-square-outline'  => __('Outline Diamond Square', 'wingman' ),
                         ),
-                        'subtitle'     => __( 'Select background shape and style for social.', KT_THEME_LANG ),
+                        'subtitle'     => __( 'Select background shape and style for social.', 'wingman' ),
                         'default'  => 'empty'
                     ),
                     array(
                         'id'       => 'footer_socials_size',
                         'type'     => 'select',
-                        'title'    => __( 'Footer socials size', KT_THEME_LANG ),
+                        'title'    => __( 'Footer socials size', 'wingman' ),
                         'options'  => array(
-                            'small'       => __('Small', KT_THEME_LANG ),
-                            'standard'   => __('Standard', KT_THEME_LANG ),
+                            'small'       => __('Small', 'wingman' ),
+                            'standard'   => __('Standard', 'wingman' ),
                         ),
                         'default'  => 'small'
                     ),
                     array(
                         'id'       => 'footer_socials_space_between_item',
                         'type'     => 'text',
-                        'title'    => __( 'Footer socials space between item', KT_THEME_LANG ),
+                        'title'    => __( 'Footer socials space between item', 'wingman' ),
                         'default'  => '10'
                     ),
                 )
@@ -1116,14 +1116,14 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'styling_navigation',
-                'title'			=> __( 'Main Navigation', KT_THEME_LANG ),
+                'title'			=> __( 'Main Navigation', 'wingman' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'styling_navigation_general',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'General', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'General', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
@@ -1131,8 +1131,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'           => 'dimensions',
                         'units'          => array('px'),
                         'units_extended' => 'true',
-                        'title'          => __( 'Main Navigation Height', KT_THEME_LANG ),
-                        'subtitle'          => __( 'Change height of main navigation', KT_THEME_LANG ),
+                        'title'          => __( 'Main Navigation Height', 'wingman' ),
+                        'subtitle'          => __( 'Change height of main navigation', 'wingman' ),
                         'width'         => false,
                         'default'        => array(
                             'height'  => '60',
@@ -1146,7 +1146,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'navigation_border',
                         'type'     => 'border',
-                        'title'    => __( 'Main Navigation Border', KT_THEME_LANG ),
+                        'title'    => __( 'Main Navigation Border', 'wingman' ),
                         'output'   => array( '.nav-container' ),
                         'all'      => false,
                         'left'     => false,
@@ -1159,8 +1159,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'navigation_background',
                         'type'     => 'background',
-                        'title'    => __( 'Background', KT_THEME_LANG ),
-                        'subtitle' => __( 'Main Navigation with image, color, etc.', KT_THEME_LANG ),
+                        'title'    => __( 'Background', 'wingman' ),
+                        'subtitle' => __( 'Main Navigation with image, color, etc.', 'wingman' ),
                         'default'   => array(
                             'background-color'      => '#1e1e1e',
                         ),
@@ -1169,7 +1169,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'navigation_box_border',
                         'type'     => 'border',
-                        'title'    => __( 'MegaMenu & Dropdown Box Border', KT_THEME_LANG ),
+                        'title'    => __( 'MegaMenu & Dropdown Box Border', 'wingman' ),
                         'output'   => array(
                             '#main-navigation > li ul.sub-menu-dropdown',
                             '#main-navigation > li > .kt-megamenu-wrapper'
@@ -1185,7 +1185,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'navigation_box_background',
                         'type'     => 'background',
-                        'title'    => __( 'MegaMenu & Dropdown Box background', KT_THEME_LANG ),
+                        'title'    => __( 'MegaMenu & Dropdown Box background', 'wingman' ),
                         'default'   => array(
                             'background-color'      => '#FFFFFF',
                         ),
@@ -1198,21 +1198,21 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'styling_navigation_general',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Top Level', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Top Level', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
 
                     array(
                         'id'            => 'navigation_space',
                         'type'          => 'slider',
-                        'title'         => __( 'Top Level space', KT_THEME_LANG ),
+                        'title'         => __( 'Top Level space', 'wingman' ),
                         'default'       => 30,
                         'min'           => 0,
                         'step'          => 1,
                         'max'           => 50,
                         'resolution'    => 1,
                         'display_value' => 'text',
-                        'subtitle' => __( 'Margin left between top level.', KT_THEME_LANG ),
+                        'subtitle' => __( 'Margin left between top level.', 'wingman' ),
                     ),
 
                     array(
@@ -1221,7 +1221,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array(
                             '#main-navigation > li > a'
                         ),
-                        'title'    => __( 'Top Level Color', KT_THEME_LANG ),
+                        'title'    => __( 'Top Level Color', 'wingman' ),
                         'default'  => '#FFFFFF',
                         'transparent' => false
                     ),
@@ -1235,7 +1235,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li.current-menu-parent > a',
                             '#main-navigation > li.hovered > a',
                         ),
-                        'title'    => __( 'Top Level hover Color', KT_THEME_LANG ),
+                        'title'    => __( 'Top Level hover Color', 'wingman' ),
                         'default'  => '#82c14f',
                         'transparent' => false
                     ),
@@ -1244,7 +1244,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'styling_navigation_dropdown',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Drop down', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Drop down', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
@@ -1252,8 +1252,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'           => 'dimensions',
                         'units'          => array('px'),
                         'units_extended' => 'true',
-                        'title'          => __( 'Dropdown width', KT_THEME_LANG ),
-                        'subtitle'          => __( 'Change width of Dropdown', KT_THEME_LANG ),
+                        'title'          => __( 'Dropdown width', 'wingman' ),
+                        'subtitle'          => __( 'Change width of Dropdown', 'wingman' ),
                         'height'         => false,
                         'default'        => array( 'width'  => 300, 'height' => 100 ),
                         'output'   => array( '#main-navigation > li ul.sub-menu-dropdown'),
@@ -1261,7 +1261,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'dropdown_background',
                         'type'     => 'background',
-                        'title'    => __( 'Dropdown Background Color', KT_THEME_LANG ),
+                        'title'    => __( 'Dropdown Background Color', 'wingman' ),
                         'default'  => array(
                             'background-color'      => '',
                         ),
@@ -1280,7 +1280,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'dropdown_background_hover',
                         'type'     => 'background',
-                        'title'    => __( 'Dropdown Background Hover Color', KT_THEME_LANG ),
+                        'title'    => __( 'Dropdown Background Hover Color', 'wingman' ),
                         'default'  => array(
                             'background-color'      => '',
                         ),
@@ -1305,7 +1305,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-nav-tool .kt-wpml-languages ul li > a',
                             '#main-navigation > li ul.sub-menu-dropdown > li > a',
                         ),
-                        'title'    => __( 'Dropdown Text Color', KT_THEME_LANG ),
+                        'title'    => __( 'Dropdown Text Color', 'wingman' ),
                         'default'  => '#707070',
                         'transparent' => false
                     ),
@@ -1320,7 +1320,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li ul.sub-menu-dropdown > li:hover > a',
                             '#main-navigation > li ul.sub-menu-dropdown > li > a:hover',
                         ),
-                        'title'    => __( 'Dropdown Text Hover Color', KT_THEME_LANG ),
+                        'title'    => __( 'Dropdown Text Hover Color', 'wingman' ),
                         'default'  => '#82c14f',
                         'transparent' => false
                     ),
@@ -1328,7 +1328,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'styling_navigation_mega',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Mega', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Mega', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
 
@@ -1340,7 +1340,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span',
                             '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li .widget-title',
                         ),
-                        'title'    => __( 'MegaMenu Title color', KT_THEME_LANG ),
+                        'title'    => __( 'MegaMenu Title color', 'wingman' ),
                         'default'  => '#252525',
                         'transparent' => false
                     ),
@@ -1350,7 +1350,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array(
                             '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a:hover',
                         ),
-                        'title'    => __( 'MegaMenu Title Hover Color', KT_THEME_LANG ),
+                        'title'    => __( 'MegaMenu Title Hover Color', 'wingman' ),
                         'default'  => '#82c14f',
                         'transparent' => false
                     ),
@@ -1360,7 +1360,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array(
                             '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu a'
                         ),
-                        'title'    => __( 'MegaMenu Text color', KT_THEME_LANG ),
+                        'title'    => __( 'MegaMenu Text color', 'wingman' ),
                         'default'  => '#707070',
                         'transparent' => false
                     ),
@@ -1372,7 +1372,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu  > li.current-menu-item a:hover',
                             '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu a:hover',
                         ),
-                        'title'    => __( 'MegaMenu Text Hover color', KT_THEME_LANG ),
+                        'title'    => __( 'MegaMenu Text Hover color', 'wingman' ),
                         'default'  => '#82c14f',
                         'transparent' => false
                     ),
@@ -1391,14 +1391,14 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'styling_mobile_menu',
-                'title'			=> __( 'Mobile Menu', KT_THEME_LANG ),
+                'title'			=> __( 'Mobile Menu', 'wingman' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'mobile_menu_background',
                         'type'     => 'background',
-                        'title'    => __( 'Background', KT_THEME_LANG ),
+                        'title'    => __( 'Background', 'wingman' ),
                         'default'   => array(
                             'background-color'      => '#FFFFFF',
                         ),
@@ -1416,7 +1416,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array(
                             'ul.navigation-mobile > li > a'
                         ),
-                        'title'    => __( 'Top Level Color', KT_THEME_LANG ),
+                        'title'    => __( 'Top Level Color', 'wingman' ),
                         'default'  => '#282828',
                         'transparent' => false
                     ),
@@ -1427,14 +1427,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'ul.navigation-mobile > li:hover > a',
                             'ul.navigation-mobile > li > a:hover'
                         ),
-                        'title'    => __( 'Top Level hover Color', KT_THEME_LANG ),
+                        'title'    => __( 'Top Level hover Color', 'wingman' ),
                         'default'  => '#282828',
                         'transparent' => false
                     ),
                     array(
                         'id'       => 'mobile_menu_background',
                         'type'     => 'background',
-                        'title'    => __( 'Top Level Background Color', KT_THEME_LANG ),
+                        'title'    => __( 'Top Level Background Color', 'wingman' ),
                         'default'  => array(
                             'background-color'      => '#FFFFFF',
                         ),
@@ -1453,7 +1453,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'mobile_menu_background_hover',
                         'type'     => 'background',
-                        'title'    => __( 'Top Level Hover Color', KT_THEME_LANG ),
+                        'title'    => __( 'Top Level Hover Color', 'wingman' ),
                         'default'  => array(
                             'background-color'      => '#F5F5F5',
                         ),
@@ -1482,7 +1482,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'ul.navigation-mobile > li .sub-menu-dropdown > li > a',
                             'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > .sub-menu-megamenu > li > a',
                         ),
-                        'title'    => __( 'Text color', KT_THEME_LANG ),
+                        'title'    => __( 'Text color', 'wingman' ),
                         'default'  => '#282828',
                         'transparent' => false
                     ),
@@ -1494,7 +1494,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'ul.navigation-mobile > li .sub-menu-dropdown > li > a:hover',
                             'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > .sub-menu-megamenu > li > a:hover',
                         ),
-                        'title'    => __( 'Text Hover color', KT_THEME_LANG ),
+                        'title'    => __( 'Text Hover color', 'wingman' ),
                         'default'  => '#82c14f',
                         'transparent' => false
                     ),
@@ -1510,7 +1510,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > span',
                             'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li .widget-title',
                         ),
-                        'title'    => __( 'MegaMenu Title color', KT_THEME_LANG ),
+                        'title'    => __( 'MegaMenu Title color', 'wingman' ),
                         'default'  => '#282828',
                         'transparent' => false
                     ),
@@ -1520,7 +1520,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array(
                             'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a:hover',
                         ),
-                        'title'    => __( 'MegaMenu Title Hover Color', KT_THEME_LANG ),
+                        'title'    => __( 'MegaMenu Title Hover Color', 'wingman' ),
                         'default'  => '#82c14f',
                         'transparent' => false
                     ),
@@ -1538,7 +1538,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'typography',
-				'title'			=> __( 'Typography', KT_THEME_LANG ),
+				'title'			=> __( 'Typography', 'wingman' ),
 				'desc'			=> '',
 				'icon'	=> 'icon-Font-Name',
             );
@@ -1548,14 +1548,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'typography_general',
-				'title'			=> __( 'General', KT_THEME_LANG ),
+				'title'			=> __( 'General', 'wingman' ),
 				'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'typography_body',
                         'type'     => 'typography',
-                        'title'    => __( 'Body Font', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the body font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Body Font', 'wingman' ),
+                        'subtitle' => __( 'Specify the body font properties.', 'wingman' ),
                         'text-align' => false,
                         'letter-spacing'  => true,
                         'output'      => array(
@@ -1572,8 +1572,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_pragraph',
                         'type'     => 'typography',
-                        'title'    => __( 'Pragraph', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the pragraph font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Pragraph', 'wingman' ),
+                        'subtitle' => __( 'Specify the pragraph font properties.', 'wingman' ),
                         'output'   => array( 'p' ),
                         'default'  => array( ),
                         'color'    => false,
@@ -1583,8 +1583,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_blockquote',
                         'type'     => 'typography',
-                        'title'    => __( 'Blockquote', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the blockquote font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Blockquote', 'wingman' ),
+                        'subtitle' => __( 'Specify the blockquote font properties.', 'wingman' ),
                         'output'   => array( 'blockquote' ),
                         'default'  => array( ),
                         'color'    => false,
@@ -1594,8 +1594,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_button',
                         'type'     => 'typography',
-                        'title'    => __( 'Button', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the button font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Button', 'wingman' ),
+                        'subtitle' => __( 'Specify the button font properties.', 'wingman' ),
                         'output'   => array(
                             '.button',
                             '.wpcf7-submit',
@@ -1629,14 +1629,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Typography Heading settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Typography Heading settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'typography_heading1',
                         'type'     => 'typography',
-                        'title'    => __( 'Heading 1', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 1 font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Heading 1', 'wingman' ),
+                        'subtitle' => __( 'Specify the heading 1 font properties.', 'wingman' ),
                         'letter-spacing'  => true,
                         'text-transform' => true,
                         'text-align' => false,
@@ -1650,8 +1650,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_heading2',
                         'type'     => 'typography',
-                        'title'    => __( 'Heading 2', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 2 font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Heading 2', 'wingman' ),
+                        'subtitle' => __( 'Specify the heading 2 font properties.', 'wingman' ),
                         'letter-spacing'  => true,
                         'output'      => array( 'h2', '.h2' ),
                         'text-transform' => true,
@@ -1664,8 +1664,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_heading3',
                         'type'     => 'typography',
-                        'title'    => __( 'Heading 3', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 3 font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Heading 3', 'wingman' ),
+                        'subtitle' => __( 'Specify the heading 3 font properties.', 'wingman' ),
                         'letter-spacing'  => true,
                         'output'      => array( 'h3', '.h3' ),
                         'text-transform' => true,
@@ -1678,8 +1678,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_heading4',
                         'type'     => 'typography',
-                        'title'    => __( 'Heading 4', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 4 font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Heading 4', 'wingman' ),
+                        'subtitle' => __( 'Specify the heading 4 font properties.', 'wingman' ),
                         'letter-spacing'  => true,
                         'output'      => array( 'h4', '.h4' ),
                         'text-transform' => true,
@@ -1692,8 +1692,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_heading5',
                         'type'     => 'typography',
-                        'title'    => __( 'Heading 5', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 5 font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Heading 5', 'wingman' ),
+                        'subtitle' => __( 'Specify the heading 5 font properties.', 'wingman' ),
                         'letter-spacing'  => true,
                         'output'      => array( 'h5', '.h5' ),
                         'text-transform' => true,
@@ -1706,8 +1706,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_heading6',
                         'type'     => 'typography',
-                        'title'    => __( 'Heading 6', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 6 font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Heading 6', 'wingman' ),
+                        'subtitle' => __( 'Specify the heading 6 font properties.', 'wingman' ),
                         'letter-spacing'  => true,
                         'output'      => array( 'h6', '.h6' ),
                         'text-transform' => true,
@@ -1724,15 +1724,15 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'typography_header',
-				'title'			=> __( 'Header', KT_THEME_LANG ),
+				'title'			=> __( 'Header', 'wingman' ),
 				'desc'			=> '',
                 'subsection' => true,
 				'fields'		=> array(
                     array(
                         'id'       => 'typography_header_content',
                         'type'     => 'typography',
-                        'title'    => __( 'Header', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the header title font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Header', 'wingman' ),
+                        'subtitle' => __( 'Specify the header title font properties.', 'wingman' ),
                         'google'   => true,
                         'text-align' => false,
                         'output'      => array( '#header' )
@@ -1745,21 +1745,21 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'typography_footer',
-				'title'			=> __( 'Footer', KT_THEME_LANG ),
+				'title'			=> __( 'Footer', 'wingman' ),
 				'desc'			=> '',
                 'subsection' => true,
 				'fields'		=> array(
                     array(
                         'id'       => 'typography_footer_top_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Typography Footer top settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Typography Footer top settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'typography_footer_top',
                         'type'     => 'typography',
-                        'title'    => __( 'Footer top', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the footer top font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Footer top', 'wingman' ),
+                        'subtitle' => __( 'Specify the footer top font properties.', 'wingman' ),
                         'google'   => true,
                         'text-align'      => false,
                         'output'      => array( '#footer-top' ),
@@ -1773,14 +1773,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_footer_widgets_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Typography Footer widgets settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Typography Footer widgets settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'typography_footer_widgets',
                         'type'     => 'typography',
-                        'title'    => __( 'Footer widgets', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the footer widgets font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Footer widgets', 'wingman' ),
+                        'subtitle' => __( 'Specify the footer widgets font properties.', 'wingman' ),
                         'google'   => true,
                         'text-align'      => false,
                         'output'      => array( '#footer-area' ),
@@ -1794,8 +1794,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_footer_widgets_title',
                         'type'     => 'typography',
-                        'title'    => __( 'Footer widgets title', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the footer widgets title font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Footer widgets title', 'wingman' ),
+                        'subtitle' => __( 'Specify the footer widgets title font properties.', 'wingman' ),
                         'letter-spacing'  => true,
                         'text-align'      => true,
                         'text-transform' => true,
@@ -1805,7 +1805,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_footer_widgets_link',
                         'type'     => 'link_color',
-                        'title'    => __( 'Footer widgets Links Color', KT_THEME_LANG ),
+                        'title'    => __( 'Footer widgets Links Color', 'wingman' ),
                         'output'      => array( '#footer-area a' ),
                         'default'  => array(
                             'regular' => '#707070',
@@ -1817,13 +1817,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_footer_copyright_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Typography Footer copyright settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Typography Footer copyright settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'typography_footer_copyright_link',
                         'type'     => 'link_color',
-                        'title'    => __( 'Footer Copyright Links Color', KT_THEME_LANG ),
+                        'title'    => __( 'Footer Copyright Links Color', 'wingman' ),
                         'output'      => array( '#footer-copyright a' ),
                         'default'  => array(
                             'regular' => '#707070',
@@ -1834,8 +1834,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_footer_copyright',
                         'type'     => 'typography',
-                        'title'    => __( 'Footer copyright', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the footer font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Footer copyright', 'wingman' ),
+                        'subtitle' => __( 'Specify the footer font properties.', 'wingman' ),
                         'text-align'      => false,
                         'output'      => array( '#footer-copyright' ),
                         'default'  => array(
@@ -1853,15 +1853,15 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'typography_sidebar',
-				'title'			=> __( 'Sidebar', KT_THEME_LANG ),
+				'title'			=> __( 'Sidebar', 'wingman' ),
 				'desc'			=> '',
                 'subsection' => true,
 				'fields'		=> array(
                     array(
                         'id'       => 'typography_sidebar',
                         'type'     => 'typography',
-                        'title'    => __( 'Sidebar title', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the sidebar title font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Sidebar title', 'wingman' ),
+                        'subtitle' => __( 'Specify the sidebar title font properties.', 'wingman' ),
                         'letter-spacing'  => true,
                         'text-transform' => true,
                         'output'      => array(
@@ -1875,8 +1875,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_sidebar_content',
                         'type'     => 'typography',
-                        'title'    => __( 'Sidebar text', KT_THEME_LANG ),
-                        'subtitle' => __( 'Specify the sidebar title font properties.', KT_THEME_LANG ),
+                        'title'    => __( 'Sidebar text', 'wingman' ),
+                        'subtitle' => __( 'Specify the sidebar title font properties.', 'wingman' ),
                         'text-algin' => true,
                         'output'      => array( '.sidebar', '.wpb_widgetised_column' ),
                         'default'  => array(
@@ -1892,14 +1892,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 			$this->sections[] = array(
 				'id'			=> 'typography_navigation',
-				'title'			=> __( 'Main Navigation', KT_THEME_LANG ),
+				'title'			=> __( 'Main Navigation', 'wingman' ),
 				'desc'			=> '',
                 'subsection' => true,
 				'fields'		=> array(
                     array(
                         'id'       => 'typography-navigation_top',
                         'type'     => 'typography',
-                        'title'    => __( 'Top Menu Level', KT_THEME_LANG ),
+                        'title'    => __( 'Top Menu Level', 'wingman' ),
                         'letter-spacing'  => true,
                         'text-align'      => false,
                         'color'           => false,
@@ -1918,13 +1918,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_navigation_dropdown',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Dropdown menu', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Dropdown menu', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'typography_navigation_second',
                         'type'     => 'typography',
-                        'title'    => __( 'Second Menu Level', KT_THEME_LANG ),
+                        'title'    => __( 'Second Menu Level', 'wingman' ),
                         'letter-spacing'  => true,
                         'text-align'      => false,
                         'color'           => false,
@@ -1940,13 +1940,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_navigation_mega',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Mega menu', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Mega menu', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'typography_navigation_heading',
                         'type'     => 'typography',
-                        'title'    => __( 'Heading title', KT_THEME_LANG ),
+                        'title'    => __( 'Heading title', 'wingman' ),
                         'letter-spacing'  => true,
                         'text-align'      => false,
                         'color'           => false,
@@ -1966,7 +1966,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_navigation_mega_link',
                         'type'     => 'typography',
-                        'title'    => __( 'Mega menu', KT_THEME_LANG ),
+                        'title'    => __( 'Mega menu', 'wingman' ),
                         'google'   => true,
                         'text-align'      => false,
                         'color'           => false,
@@ -1988,14 +1988,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 
             $this->sections[] = array(
                 'id'			=> 'typography_mobile_navigation',
-                'title'			=> __( 'Mobile Navigation', KT_THEME_LANG ),
+                'title'			=> __( 'Mobile Navigation', 'wingman' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'typography_mobile_navigation_top',
                         'type'     => 'typography',
-                        'title'    => __( 'Top Menu Level', KT_THEME_LANG ),
+                        'title'    => __( 'Top Menu Level', 'wingman' ),
                         'letter-spacing'  => true,
                         'text-align'      => false,
                         'color'           => false,
@@ -2013,7 +2013,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_mobile_navigation_second',
                         'type'     => 'typography',
-                        'title'    => __( 'Sub Menu Level', KT_THEME_LANG ),
+                        'title'    => __( 'Sub Menu Level', 'wingman' ),
                         'letter-spacing'  => true,
                         'text-align'      => false,
                         'color'           => false,
@@ -2027,7 +2027,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_mobile_navigation_heading',
                         'type'     => 'typography',
-                        'title'    => __( 'Heading title', KT_THEME_LANG ),
+                        'title'    => __( 'Heading title', 'wingman' ),
                         'letter-spacing'  => true,
                         'text-align'      => false,
                         'color'           => false,
@@ -2053,7 +2053,7 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'sidebar_section',
-                'title'			=> __( 'Sidebar Widgets', KT_THEME_LANG ),
+                'title'			=> __( 'Sidebar Widgets', 'wingman' ),
                 'desc'			=> '',
                 'icon'          => 'icon-Sidebar-Window',
                 'fields'		=> array(
@@ -2061,8 +2061,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'          => 'custom_sidebars',
                         'type'        => 'slides',
-                        'title'       => __('Slides Options', KT_THEME_LANG ),
-                        'subtitle'    => __('Unlimited sidebar with drag and drop sortings.', KT_THEME_LANG ),
+                        'title'       => __('Slides Options', 'wingman' ),
+                        'subtitle'    => __('Unlimited sidebar with drag and drop sortings.', 'wingman' ),
                         'desc'        => '',
                         'class'       => 'slider-no-image-preview',
                         'content_title' =>'Sidebar',
@@ -2072,8 +2072,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'url' => false,
                         ),
                         'placeholder' => array(
-                            'title'           => __('Sidebar title', KT_THEME_LANG ),
-                            'description'     => __('Sidebar Description', KT_THEME_LANG ),
+                            'title'           => __('Sidebar title', 'wingman' ),
+                            'description'     => __('Sidebar Description', 'wingman' ),
                         ),
                     ),
                 )
@@ -2084,7 +2084,7 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'page_header_section',
-                'title'			=> __( 'Page header', KT_THEME_LANG ),
+                'title'			=> __( 'Page header', 'wingman' ),
                 'desc'			=> '',
                 'icon'          => 'icon-Add-SpaceBeforeParagraph',
                 'fields'		=> array(
@@ -2092,18 +2092,18 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'title_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Page header settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Page header settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
 
                     array(
                         'id'       => 'title_layout',
                         'type'     => 'select',
-                        'title'    => __( 'Page header layout', KT_THEME_LANG ),
-                        'subtitle'     => __( 'Select your preferred Page header layout.', KT_THEME_LANG ),
+                        'title'    => __( 'Page header layout', 'wingman' ),
+                        'subtitle'     => __( 'Select your preferred Page header layout.', 'wingman' ),
                         'options'  => array(
-                            'sides' => __('Sides', KT_THEME_LANG),
-                            'centered' => __('Centered', KT_THEME_LANG ),
+                            'sides' => __('Sides', 'wingman'),
+                            'centered' => __('Centered', 'wingman' ),
                         ),
                         'default'  => 'centered',
                         'clear' => false
@@ -2112,45 +2112,45 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'title_align',
                         'type'     => 'select',
-                        'title'    => __( 'Page header align', KT_THEME_LANG ),
-                        'subtitle'     => __( 'Please select page header align', KT_THEME_LANG ),
+                        'title'    => __( 'Page header align', 'wingman' ),
+                        'subtitle'     => __( 'Please select page header align', 'wingman' ),
                         'options'  => array(
-                            'left' => __('Left', KT_THEME_LANG ),
-                            'center' => __('Center', KT_THEME_LANG),
-                            'right' => __('Right', KT_THEME_LANG)
+                            'left' => __('Left', 'wingman' ),
+                            'center' => __('Center', 'wingman'),
+                            'right' => __('Right', 'wingman')
                         ),
                         'default'  => 'center',
                         'clear' => false,
-                        'desc' => __('Align don\'t support for layout Sides', KT_THEME_LANG)
+                        'desc' => __('Align don\'t support for layout Sides', 'wingman')
                     ),
                     array(
                         'id'       => 'title_breadcrumbs',
                         'type'     => 'switch',
-                        'title'    => __( 'Show breadcrumbs', KT_THEME_LANG ),
+                        'title'    => __( 'Show breadcrumbs', 'wingman' ),
                         'default'  => true,
-                        'on'		=> __( 'Enabled', KT_THEME_LANG ),
-                        'off'		=> __( 'Disabled', KT_THEME_LANG ),
+                        'on'		=> __( 'Enabled', 'wingman' ),
+                        'off'		=> __( 'Disabled', 'wingman' ),
                     ),
                     array(
                         'id'       => 'title_breadcrumbs_mobile',
                         'type'     => 'switch',
-                        'title'    => __( 'Breadcrumbs on Mobile Devices', KT_THEME_LANG ),
+                        'title'    => __( 'Breadcrumbs on Mobile Devices', 'wingman' ),
                         'default'  => false,
-                        'on'		=> __( 'Enabled', KT_THEME_LANG ),
-                        'off'		=> __( 'Disabled', KT_THEME_LANG ),
+                        'on'		=> __( 'Enabled', 'wingman' ),
+                        'off'		=> __( 'Disabled', 'wingman' ),
                     ),
                     array(
                         'id'       => 'title_separator',
                         'type'     => 'switch',
-                        'title'    => __( 'Separator bettwen title and subtitle', KT_THEME_LANG ),
+                        'title'    => __( 'Separator bettwen title and subtitle', 'wingman' ),
                         'default'  => true,
-                        'on'		=> __( 'Enabled', KT_THEME_LANG ),
-                        'off'		=> __( 'Disabled', KT_THEME_LANG ),
+                        'on'		=> __( 'Enabled', 'wingman' ),
+                        'off'		=> __( 'Disabled', 'wingman' ),
                     ),
                     array(
                         'id'       => 'title_separator_color',
                         'type'     => 'background',
-                        'title'    => __( 'Separator Color', KT_THEME_LANG ),
+                        'title'    => __( 'Separator Color', 'wingman' ),
                         'default'  => '',
                         'transparent' => false,
                         'background-repeat'     => false,
@@ -2172,14 +2172,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array( '.page-header' ),
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
-                        'title'    => __( 'Title padding', KT_THEME_LANG ),
+                        'title'    => __( 'Title padding', 'wingman' ),
                         'default'  => array( )
                     ),
                     array(
                         'id'       => 'title_background',
                         'type'     => 'background',
-                        'title'    => __( 'Background', KT_THEME_LANG ),
-                        'subtitle' => __( 'Page header with image, color, etc.', KT_THEME_LANG ),
+                        'title'    => __( 'Background', 'wingman' ),
+                        'subtitle' => __( 'Page header with image, color, etc.', 'wingman' ),
                         'output'      => array( '.page-header' )
                     ),
 
@@ -2191,7 +2191,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'title_typography',
                         'type'     => 'typography',
-                        'title'    => __( 'Typography title', KT_THEME_LANG ),
+                        'title'    => __( 'Typography title', 'wingman' ),
                         'google'   => true,
                         'text-align'      => false,
                         'line-height'     => false,
@@ -2207,7 +2207,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'title_typography_subtitle',
                         'type'     => 'typography',
-                        'title'    => __( 'Typography sub title', KT_THEME_LANG ),
+                        'title'    => __( 'Typography sub title', 'wingman' ),
                         'google'   => true,
                         'text-align'      => false,
                         'line-height'     => false,
@@ -2217,7 +2217,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'title_typography_breadcrumbs',
                         'type'     => 'typography',
-                        'title'    => __( 'Typography breadcrumbs', KT_THEME_LANG ),
+                        'title'    => __( 'Typography breadcrumbs', 'wingman' ),
                         'google'   => true,
                         'text-align'      => false,
                         'line-height'     => false,
@@ -2232,29 +2232,29 @@ if ( ! class_exists( 'KT_config' ) ) {
              *
              */
             $this->sections[] = array(
-                'title' => __('Page', KT_THEME_LANG),
-                'desc' => __('General Page Options', KT_THEME_LANG),
+                'title' => __('Page', 'wingman'),
+                'desc' => __('General Page Options', 'wingman'),
                 'icon' => 'icon-Code-Window',
                 'fields' => array(
                     array(
                         'id' => 'show_page_header',
                         'type' => 'switch',
-                        'title' => __('Show Page header', KT_THEME_LANG),
-                        'desc' => __('Show page header or?.', KT_THEME_LANG),
+                        'title' => __('Show Page header', 'wingman'),
+                        'desc' => __('Show page header or?.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
 
                     array(
                         'id'       => 'sidebar',
                         'type'     => 'select',
-                        'title'    => __( 'Sidebar configuration', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose page layout", KT_THEME_LANG ),
+                        'title'    => __( 'Sidebar configuration', 'wingman' ),
+                        'subtitle'     => __( "Please choose page layout", 'wingman' ),
                         'options'  => array(
-                            'full' => __('No sidebars', KT_THEME_LANG),
-                            'left' => __('Left Sidebar', KT_THEME_LANG),
-                            'right' => __('Right Layout', KT_THEME_LANG)
+                            'full' => __('No sidebars', 'wingman'),
+                            'left' => __('Left Sidebar', 'wingman'),
+                            'right' => __('Right Layout', 'wingman')
                         ),
                         'default'  => 'full',
                         'clear' => false,
@@ -2263,8 +2263,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'sidebar_left',
                         'type' => 'select',
-                        'title'    => __( 'Sidebar left area', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose default layout", KT_THEME_LANG ),
+                        'title'    => __( 'Sidebar left area', 'wingman' ),
+                        'subtitle'     => __( "Please choose default layout", 'wingman' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('sidebar','equals','left')
@@ -2274,8 +2274,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'sidebar_right',
                         'type'     => 'select',
-                        'title'    => __( 'Sidebar right area', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose page layout", KT_THEME_LANG ),
+                        'title'    => __( 'Sidebar right area', 'wingman' ),
+                        'subtitle'     => __( "Please choose page layout", 'wingman' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('sidebar','equals','right')
@@ -2284,11 +2284,11 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'show_page_comment',
                         'type' => 'switch',
-                        'title' => __('Show comments on page ?', KT_THEME_LANG),
-                        'desc' => __('Show or hide the readmore button.', KT_THEME_LANG),
+                        'title' => __('Show comments on page ?', 'wingman'),
+                        'desc' => __('Show or hide the readmore button.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                 )
             );
@@ -2299,9 +2299,9 @@ if ( ! class_exists( 'KT_config' ) ) {
              *
              */
             $this->sections[] = array(
-                'title' => __('Blog', KT_THEME_LANG),
+                'title' => __('Blog', 'wingman'),
                 'icon' => 'icon-Pen-2',
-                'desc' => __('General Blog Options', KT_THEME_LANG)
+                'desc' => __('General Blog Options', 'wingman')
             );
 
 
@@ -2310,34 +2310,34 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'            => 'archive_section',
-                'title'         => __( 'Archive', KT_THEME_LANG ),
+                'title'         => __( 'Archive', 'wingman' ),
                 'desc'          => 'Archive post settings',
                 'subsection' => true,
                 'fields'        => array(
                     array(
                         'id'       => 'archive_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Archive post general', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Archive post general', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'archive_page_header',
                         'type' => 'switch',
-                        'title' => __('Show Page header', KT_THEME_LANG),
-                        'desc' => __('Show page header or?.', KT_THEME_LANG),
+                        'title' => __('Show Page header', 'wingman'),
+                        'desc' => __('Show page header or?.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                     array(
                         'id'       => 'archive_sidebar',
                         'type'     => 'select',
-                        'title'    => __( 'Sidebar configuration', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose archive page ", KT_THEME_LANG ),
+                        'title'    => __( 'Sidebar configuration', 'wingman' ),
+                        'subtitle'     => __( "Please choose archive page ", 'wingman' ),
                         'options'  => array(
-                            'full' => __('No sidebars', KT_THEME_LANG),
-                            'left' => __('Left Sidebar', KT_THEME_LANG),
-                            'right' => __('Right Layout', KT_THEME_LANG)
+                            'full' => __('No sidebars', 'wingman'),
+                            'left' => __('Left Sidebar', 'wingman'),
+                            'right' => __('Right Layout', 'wingman')
                         ),
                         'default'  => 'right',
                         'clear' => false
@@ -2345,8 +2345,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'archive_sidebar_left',
                         'type' => 'select',
-                        'title'    => __( 'Sidebar left area', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", KT_THEME_LANG ),
+                        'title'    => __( 'Sidebar left area', 'wingman' ),
+                        'subtitle'     => __( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('archive_sidebar','equals','left'),
@@ -2355,8 +2355,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'archive_sidebar_right',
                         'type'     => 'select',
-                        'title'    => __( 'Sidebar right area', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", KT_THEME_LANG ),
+                        'title'    => __( 'Sidebar right area', 'wingman' ),
+                        'subtitle'     => __( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('archive_sidebar','equals','right'),
@@ -2369,7 +2369,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'archive_loop_style',
                         'type' => 'select',
-                        'title' => __('Loop Style', KT_THEME_LANG),
+                        'title' => __('Loop Style', 'wingman'),
                         'desc' => '',
                         'options' => array(
                             'classic' => __( 'Standard', 'js_composer' ),
@@ -2383,7 +2383,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'archive_columns',
                         'type' => 'select',
-                        'title' => __('Columns on desktop', KT_THEME_LANG),
+                        'title' => __('Columns on desktop', 'wingman'),
                         'desc' => '',
                         'options' => array(
                             '1' => __( '1 column', 'js_composer' ) ,
@@ -2398,7 +2398,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'archive_columns_tablet',
                         'type' => 'select',
-                        'title' => __('Columns on Tablet', KT_THEME_LANG),
+                        'title' => __('Columns on Tablet', 'wingman'),
                         'desc' => '',
                         'options' => array(
                             '1' => __( '1 column', 'js_composer' ) ,
@@ -2417,22 +2417,22 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'archive_align',
                         'type' => 'select',
-                        'title' => __('Text align', KT_THEME_LANG),
-                        'desc' => __('Not working for archive style Standard', KT_THEME_LANG),
+                        'title' => __('Text align', 'wingman'),
+                        'desc' => __('Not working for archive style Standard', 'wingman'),
                         'options' => array(
-                            'left' => __( 'Left', KT_THEME_LANG ) ,
-                            'center' => __( 'Center', KT_THEME_LANG ) ,
+                            'left' => __( 'Left', 'wingman' ) ,
+                            'center' => __( 'Center', 'wingman' ) ,
                         ),
                         'default' => 'left'
                     ),
                     array(
                         'id' => 'archive_readmore',
                         'type' => 'select',
-                        'title' => __('Readmore button ', KT_THEME_LANG),
-                        'desc' => __('Select button style.', KT_THEME_LANG),
+                        'title' => __('Readmore button ', 'wingman'),
+                        'desc' => __('Select button style.', 'wingman'),
                         "default" => 'link',
                         'options' => array(
-                            '' => __('None', KT_THEME_LANG),
+                            '' => __('None', 'wingman'),
                             'link' => __( 'Link', 'js_composer' ),
                         ),
                     ),
@@ -2440,39 +2440,39 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'archive_thumbnail_type',
                         'type' => 'select',
-                        'title' => __('Thumbnail type', KT_THEME_LANG),
+                        'title' => __('Thumbnail type', 'wingman'),
                         'desc' => '',
                         'options' => array(
-                            'format' => __( 'Post format', KT_THEME_LANG ) ,
-                            'image' => __( 'Featured Image', KT_THEME_LANG ) ,
+                            'format' => __( 'Post format', 'wingman' ) ,
+                            'image' => __( 'Featured Image', 'wingman' ) ,
                         ),
                         'default' => 'image'
                     ),
                     array(
                         'id' => 'archive_excerpt',
                         'type' => 'switch',
-                        'title' => __('Show Excerpt? ', KT_THEME_LANG),
-                        'desc' => __('Show or hide the excerpt.', KT_THEME_LANG),
+                        'title' => __('Show Excerpt? ', 'wingman'),
+                        'desc' => __('Show or hide the excerpt.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                     array(
                         'id' => 'archive_excerpt_length',
                         'type' => 'text',
-                        'title' => __('Excerpt Length', KT_THEME_LANG),
-                        'desc' => __("Insert the number of words you want to show in the post excerpts.", KT_THEME_LANG),
+                        'title' => __('Excerpt Length', 'wingman'),
+                        'desc' => __("Insert the number of words you want to show in the post excerpts.", 'wingman'),
                         'default' => '30',
                     ),
                     array(
                         'id' => 'archive_pagination',
                         'type' => 'select',
-                        'title' => __('Pagination Type', KT_THEME_LANG),
-                        'desc' => __('Select the pagination type.', KT_THEME_LANG),
+                        'title' => __('Pagination Type', 'wingman'),
+                        'desc' => __('Select the pagination type.', 'wingman'),
                         'options' => array(
-                            'classic' => __( 'Standard pagination', KT_THEME_LANG ),
-                            'loadmore' => __( 'Load More button', KT_THEME_LANG ),
-                            'normal' => __( 'Normal pagination', KT_THEME_LANG ),
+                            'classic' => __( 'Standard pagination', 'wingman' ),
+                            'loadmore' => __( 'Load More button', 'wingman' ),
+                            'normal' => __( 'Normal pagination', 'wingman' ),
                         ),
                         'default' => 'classic'
                     ),
@@ -2483,59 +2483,59 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'archive_meta',
                         'type' => 'switch',
-                        'title' => __('Show Meta? ', KT_THEME_LANG),
-                        'desc' => __('Show or hide the meta.', KT_THEME_LANG),
+                        'title' => __('Show Meta? ', 'wingman'),
+                        'desc' => __('Show or hide the meta.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
 
                     array(
                         'id' => 'archive_meta_author',
                         'type' => 'switch',
-                        'title' => __('Post Meta Author', KT_THEME_LANG),
-                        'desc' => __('Show meta author in blog posts.', KT_THEME_LANG),
+                        'title' => __('Post Meta Author', 'wingman'),
+                        'desc' => __('Show meta author in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('archive_meta','equals', array( 1 ) ),
                     ),
                     array(
                         'id' => 'archive_meta_comments',
                         'type' => 'switch',
-                        'title' => __('Post Meta Comments', KT_THEME_LANG),
-                        'desc' => __('Show post meta comments in blog posts.', KT_THEME_LANG),
+                        'title' => __('Post Meta Comments', 'wingman'),
+                        'desc' => __('Show post meta comments in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('archive_meta','equals', array( 1 ) ),
                     ),
                     array(
                         'id' => 'archive_meta_categories',
                         'type' => 'switch',
-                        'title' => __('Post Meta Categories', KT_THEME_LANG),
-                        'desc' => __('Show post meta categories in blog posts.', KT_THEME_LANG),
+                        'title' => __('Post Meta Categories', 'wingman'),
+                        'desc' => __('Show post meta categories in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('archive_meta','equals', array( 1 ) ),
                     ),
 
                     array(
                         'id' => 'archive_meta_date',
                         'type' => 'switch',
-                        'title' => __('Post Meta Date', KT_THEME_LANG),
-                        'desc' => __('Show meta date in blog posts.', KT_THEME_LANG),
+                        'title' => __('Post Meta Date', 'wingman'),
+                        'desc' => __('Show meta date in blog posts.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('archive_meta','equals', array( 1 ) ),
                     ),
                     array(
                         'id' => 'archive_date_format',
                         'type' => 'select',
-                        'title' => __('Date format', KT_THEME_LANG),
-                        'desc' => __('Select the date formart.', KT_THEME_LANG),
+                        'title' => __('Date format', 'wingman'),
+                        'desc' => __('Select the date formart.', 'wingman'),
                         'options' => array(
                             'd F Y' => __( '05 December 2014', 'js_composer' ) ,
                             'F jS Y' => __( 'December 13th 2014', 'js_composer' ) ,
@@ -2551,21 +2551,21 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'archive_like_post',
                         'type' => 'switch',
-                        'title' => __('Like Post', KT_THEME_LANG),
-                        'desc' => __('Show like post in blog posts.', KT_THEME_LANG),
+                        'title' => __('Like Post', 'wingman'),
+                        'desc' => __('Show like post in blog posts.', 'wingman'),
                         'default' => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('archive_meta','equals', array( 1 ) ),
                     ),
                     array(
                         'id' => 'archive_view_number',
                         'type' => 'switch',
-                        'title' => __('Show View Number', KT_THEME_LANG),
-                        'desc' => __('Show view number in blog posts.', KT_THEME_LANG),
+                        'title' => __('Show View Number', 'wingman'),
+                        'desc' => __('Show view number in blog posts.', 'wingman'),
                         'default' => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('archive_meta','equals', array( 1 ) ),
                     ),
                 )
@@ -2577,34 +2577,34 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'            => 'author_section',
-                'title'         => __( 'Author', KT_THEME_LANG ),
+                'title'         => __( 'Author', 'wingman' ),
                 'desc'          => 'Author post settings',
                 'subsection' => true,
                 'fields'        => array(
                     array(
                         'id'       => 'author_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Author post general', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Author post general', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'author_page_header',
                         'type' => 'switch',
-                        'title' => __('Show Page header', KT_THEME_LANG),
-                        'desc' => __('Show page header or?.', KT_THEME_LANG),
+                        'title' => __('Show Page header', 'wingman'),
+                        'desc' => __('Show page header or?.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                     array(
                         'id'       => 'author_sidebar',
                         'type'     => 'select',
-                        'title'    => __( 'Sidebar configuration', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose archive page ", KT_THEME_LANG ),
+                        'title'    => __( 'Sidebar configuration', 'wingman' ),
+                        'subtitle'     => __( "Please choose archive page ", 'wingman' ),
                         'options'  => array(
-                            'full' => __('No sidebars', KT_THEME_LANG),
-                            'left' => __('Left Sidebar', KT_THEME_LANG),
-                            'right' => __('Right Layout', KT_THEME_LANG)
+                            'full' => __('No sidebars', 'wingman'),
+                            'left' => __('Left Sidebar', 'wingman'),
+                            'right' => __('Right Layout', 'wingman')
                         ),
                         'default'  => 'right',
                         'clear' => false
@@ -2612,8 +2612,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'author_sidebar_left',
                         'type' => 'select',
-                        'title'    => __( 'Sidebar left area', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", KT_THEME_LANG ),
+                        'title'    => __( 'Sidebar left area', 'wingman' ),
+                        'subtitle'     => __( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
                         'default'  => 'blog-widget-area',
                         'required' => array('author_sidebar','equals','left'),
@@ -2622,8 +2622,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'author_sidebar_right',
                         'type'     => 'select',
-                        'title'    => __( 'Sidebar right area', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", KT_THEME_LANG ),
+                        'title'    => __( 'Sidebar right area', 'wingman' ),
+                        'subtitle'     => __( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
                         'default'  => 'blog-widget-area',
                         'required' => array('author_sidebar','equals','right'),
@@ -2636,7 +2636,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'author_loop_style',
                         'type' => 'select',
-                        'title' => __('Loop Style', KT_THEME_LANG),
+                        'title' => __('Loop Style', 'wingman'),
                         'desc' => '',
                         'options' => array(
                             'classic' => __( 'Standard', 'js_composer' ),
@@ -2650,7 +2650,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'author_columns',
                         'type' => 'select',
-                        'title' => __('Columns on desktop', KT_THEME_LANG),
+                        'title' => __('Columns on desktop', 'wingman'),
                         'desc' => '',
                         'options' => array(
                             '1' => __( '1 column', 'js_composer' ) ,
@@ -2665,7 +2665,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'author_columns_tablet',
                         'type' => 'select',
-                        'title' => __('Columns on Tablet', KT_THEME_LANG),
+                        'title' => __('Columns on Tablet', 'wingman'),
                         'desc' => '',
                         'options' => array(
                             '1' => __( '1 column', 'js_composer' ) ,
@@ -2680,11 +2680,11 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'author_sharebox',
                         'type' => 'switch',
-                        'title' => __('Share box', KT_THEME_LANG),
-                        'desc' => __('Show or hide share box.', KT_THEME_LANG),
+                        'title' => __('Share box', 'wingman'),
+                        'desc' => __('Show or hide share box.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('author_loop_style','equals', array( 'classic' ) ),
                     ),
                     array(
@@ -2694,22 +2694,22 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'author_align',
                         'type' => 'select',
-                        'title' => __('Text align', KT_THEME_LANG),
-                        'desc' => __('Not working for archive style Standard', KT_THEME_LANG),
+                        'title' => __('Text align', 'wingman'),
+                        'desc' => __('Not working for archive style Standard', 'wingman'),
                         'options' => array(
-                            'left' => __( 'Left', KT_THEME_LANG ) ,
-                            'center' => __( 'Center', KT_THEME_LANG ) ,
+                            'left' => __( 'Left', 'wingman' ) ,
+                            'center' => __( 'Center', 'wingman' ) ,
                         ),
                         'default' => 'left'
                     ),
                     array(
                         'id' => 'author_readmore',
                         'type' => 'select',
-                        'title' => __('Readmore button ', KT_THEME_LANG),
-                        'desc' => __('Select button style.', KT_THEME_LANG),
+                        'title' => __('Readmore button ', 'wingman'),
+                        'desc' => __('Select button style.', 'wingman'),
                         "default" => 'link',
                         'options' => array(
-                            '' => __('None', KT_THEME_LANG),
+                            '' => __('None', 'wingman'),
                             'link' => __( 'Link', 'js_composer' ),
                         ),
                     ),
@@ -2717,39 +2717,39 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'author_thumbnail_type',
                         'type' => 'select',
-                        'title' => __('Thumbnail type', KT_THEME_LANG),
+                        'title' => __('Thumbnail type', 'wingman'),
                         'desc' => '',
                         'options' => array(
-                            'format' => __( 'Post format', KT_THEME_LANG ) ,
-                            'image' => __( 'Featured Image', KT_THEME_LANG ) ,
+                            'format' => __( 'Post format', 'wingman' ) ,
+                            'image' => __( 'Featured Image', 'wingman' ) ,
                         ),
                         'default' => 'image'
                     ),
                     array(
                         'id' => 'author_excerpt',
                         'type' => 'switch',
-                        'title' => __('Show Excerpt? ', KT_THEME_LANG),
-                        'desc' => __('Show or hide the excerpt.', KT_THEME_LANG),
+                        'title' => __('Show Excerpt? ', 'wingman'),
+                        'desc' => __('Show or hide the excerpt.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                     array(
                         'id' => 'author_excerpt_length',
                         'type' => 'text',
-                        'title' => __('Excerpt Length', KT_THEME_LANG),
-                        'desc' => __("Insert the number of words you want to show in the post excerpts.", KT_THEME_LANG),
+                        'title' => __('Excerpt Length', 'wingman'),
+                        'desc' => __("Insert the number of words you want to show in the post excerpts.", 'wingman'),
                         'default' => '30',
                     ),
                     array(
                         'id' => 'author_pagination',
                         'type' => 'select',
-                        'title' => __('Pagination Type', KT_THEME_LANG),
-                        'desc' => __('Select the pagination type.', KT_THEME_LANG),
+                        'title' => __('Pagination Type', 'wingman'),
+                        'desc' => __('Select the pagination type.', 'wingman'),
                         'options' => array(
-                            'classic' => __( 'Standard pagination', KT_THEME_LANG ),
-                            'loadmore' => __( 'Load More button', KT_THEME_LANG ),
-                            'normal' => __( 'Normal pagination', KT_THEME_LANG ),
+                            'classic' => __( 'Standard pagination', 'wingman' ),
+                            'loadmore' => __( 'Load More button', 'wingman' ),
+                            'normal' => __( 'Normal pagination', 'wingman' ),
                         ),
                         'default' => 'classic'
                     ),
@@ -2760,59 +2760,59 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'author_meta',
                         'type' => 'switch',
-                        'title' => __('Show Meta? ', KT_THEME_LANG),
-                        'desc' => __('Show or hide the meta.', KT_THEME_LANG),
+                        'title' => __('Show Meta? ', 'wingman'),
+                        'desc' => __('Show or hide the meta.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
 
                     array(
                         'id' => 'author_meta_author',
                         'type' => 'switch',
-                        'title' => __('Post Meta Author', KT_THEME_LANG),
-                        'desc' => __('Show meta author in blog posts.', KT_THEME_LANG),
+                        'title' => __('Post Meta Author', 'wingman'),
+                        'desc' => __('Show meta author in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('author_meta','equals', array( 1 ) ),
                     ),
                     array(
                         'id' => 'author_meta_comments',
                         'type' => 'switch',
-                        'title' => __('Post Meta Comments', KT_THEME_LANG),
-                        'desc' => __('Show post meta comments in blog posts.', KT_THEME_LANG),
+                        'title' => __('Post Meta Comments', 'wingman'),
+                        'desc' => __('Show post meta comments in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('author_meta','equals', array( 1 ) ),
                     ),
                     array(
                         'id' => 'author_meta_categories',
                         'type' => 'switch',
-                        'title' => __('Post Meta Categories', KT_THEME_LANG),
-                        'desc' => __('Show post meta categories in blog posts.', KT_THEME_LANG),
+                        'title' => __('Post Meta Categories', 'wingman'),
+                        'desc' => __('Show post meta categories in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('author_meta','equals', array( 1 ) ),
                     ),
 
                     array(
                         'id' => 'author_meta_date',
                         'type' => 'switch',
-                        'title' => __('Post Meta Date', KT_THEME_LANG),
-                        'desc' => __('Show meta date in blog posts.', KT_THEME_LANG),
+                        'title' => __('Post Meta Date', 'wingman'),
+                        'desc' => __('Show meta date in blog posts.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('author_meta','equals', array( 1 ) ),
                     ),
                     array(
                         'id' => 'author_date_format',
                         'type' => 'select',
-                        'title' => __('Date format', KT_THEME_LANG),
-                        'desc' => __('Select the date formart.', KT_THEME_LANG),
+                        'title' => __('Date format', 'wingman'),
+                        'desc' => __('Select the date formart.', 'wingman'),
                         'options' => array(
                             'd F Y' => __( '05 December 2014', 'js_composer' ) ,
                             'F jS Y' => __( 'December 13th 2014', 'js_composer' ) ,
@@ -2828,21 +2828,21 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'author_like_post',
                         'type' => 'switch',
-                        'title' => __('Like Post', KT_THEME_LANG),
-                        'desc' => __('Show like post in blog posts.', KT_THEME_LANG),
+                        'title' => __('Like Post', 'wingman'),
+                        'desc' => __('Show like post in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('author_meta','equals', array( 1 ) ),
                     ),
                     array(
                         'id' => 'author_view_number',
                         'type' => 'switch',
-                        'title' => __('Show View Number', KT_THEME_LANG),
-                        'desc' => __('Show view number in blog posts.', KT_THEME_LANG),
+                        'title' => __('Show View Number', 'wingman'),
+                        'desc' => __('Show view number in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('author_meta','equals', array( 1 ) ),
                     ),
                 )
@@ -2853,34 +2853,34 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'post_single_section',
-                'title'			=> __( 'Single Post', KT_THEME_LANG ),
+                'title'			=> __( 'Single Post', 'wingman' ),
                 'desc'			=> 'Single post settings',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'blog_single_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Single post general', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Single post general', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'single_page_header',
                         'type' => 'switch',
-                        'title' => __('Show Page header', KT_THEME_LANG),
-                        'desc' => __('Show page header or?.', KT_THEME_LANG),
+                        'title' => __('Show Page header', 'wingman'),
+                        'desc' => __('Show page header or?.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                     array(
                         'id'       => 'blog_sidebar',
                         'type'     => 'select',
-                        'title'    => __( 'Sidebar configuration', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose sidebar for single post", KT_THEME_LANG ),
+                        'title'    => __( 'Sidebar configuration', 'wingman' ),
+                        'subtitle'     => __( "Please choose sidebar for single post", 'wingman' ),
                         'options'  => array(
-                            'full' => __('No sidebars', KT_THEME_LANG),
-                            'left' => __('Left Sidebar', KT_THEME_LANG),
-                            'right' => __('Right Layout', KT_THEME_LANG)
+                            'full' => __('No sidebars', 'wingman'),
+                            'left' => __('Left Sidebar', 'wingman'),
+                            'right' => __('Right Layout', 'wingman')
                         ),
                         'default'  => 'right',
                         'clear' => false
@@ -2888,8 +2888,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'blog_sidebar_left',
                         'type' => 'select',
-                        'title'    => __( 'Single post: Sidebar left area', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", KT_THEME_LANG ),
+                        'title'    => __( 'Single post: Sidebar left area', 'wingman' ),
+                        'subtitle'     => __( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('blog_sidebar','equals','left'),
@@ -2898,8 +2898,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'blog_sidebar_right',
                         'type'     => 'select',
-                        'title'    => __( 'Single post: Sidebar right area', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", KT_THEME_LANG ),
+                        'title'    => __( 'Single post: Sidebar right area', 'wingman' ),
+                        'subtitle'     => __( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('blog_sidebar','equals','right'),
@@ -2913,28 +2913,28 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'title_meta_center',
                         'type' => 'switch',
-                        'title' => __('Title and meta center ', KT_THEME_LANG),
-                        'desc' => __('', KT_THEME_LANG),
+                        'title' => __('Title and meta center ', 'wingman'),
+                        'desc' => __('', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                     array(
                         'id' => 'blog_post_format',
                         'type' => 'switch',
-                        'title' => __('Show Post format ', KT_THEME_LANG),
-                        'desc' => __('', KT_THEME_LANG),
+                        'title' => __('Show Post format ', 'wingman'),
+                        'desc' => __('', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
 
                     array(
                         'id'   => 'blog_image_size',
                         'type' => 'select',
                         'options' => $image_sizes,
-                        'title'    => __( 'Image size', KT_THEME_LANG ),
-                        'desc' => __("Select image size.", KT_THEME_LANG),
+                        'title'    => __( 'Image size', 'wingman' ),
+                        'desc' => __("Select image size.", 'wingman'),
                         'default' => 'blog_post'
                     ),
                     array(
@@ -2944,38 +2944,38 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'blog_share_box',
                         'type' => 'switch',
-                        'title' => __('Share box in posts', KT_THEME_LANG),
-                        'desc' => __('Show share box in blog posts.', KT_THEME_LANG),
+                        'title' => __('Share box in posts', 'wingman'),
+                        'desc' => __('Show share box in blog posts.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                     array(
                         'id' => 'blog_next_prev',
                         'type' => 'switch',
-                        'title' => __('Previous & next buttons', KT_THEME_LANG),
-                        'desc' => __('Show Previous & next buttons in blog posts.', KT_THEME_LANG),
+                        'title' => __('Previous & next buttons', 'wingman'),
+                        'desc' => __('Show Previous & next buttons in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                     array(
                         'id' => 'blog_author',
                         'type' => 'switch',
-                        'title' => __('Author info in posts', KT_THEME_LANG),
-                        'desc' => __('Show author info in blog posts.', KT_THEME_LANG),
+                        'title' => __('Author info in posts', 'wingman'),
+                        'desc' => __('Show author info in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                     array(
                         'id' => 'blog_related',
                         'type' => 'switch',
-                        'title' => __('Related posts', KT_THEME_LANG),
-                        'desc' => __('Show related posts in blog posts.', KT_THEME_LANG),
+                        'title' => __('Related posts', 'wingman'),
+                        'desc' => __('Show related posts in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                     array(
                         'type' => 'divide',
@@ -2984,12 +2984,12 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'blog_related_type',
                         'type'     => 'select',
-                        'title'    => __( 'Related Query Type', KT_THEME_LANG ),
-                        'subtitle'     => __( "", KT_THEME_LANG ),
+                        'title'    => __( 'Related Query Type', 'wingman' ),
+                        'subtitle'     => __( "", 'wingman' ),
                         'options'  => array(
-                            'categories' => __('Categories', KT_THEME_LANG),
-                            'tags' => __('Tags', KT_THEME_LANG),
-                            'author' => __('Author', KT_THEME_LANG)
+                            'categories' => __('Categories', 'wingman'),
+                            'tags' => __('Tags', 'wingman'),
+                            'author' => __('Author', 'wingman')
                         ),
                         'default'  => 'categories',
                         'clear' => false,
@@ -3002,59 +3002,59 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'blog_meta',
                         'type' => 'switch',
-                        'title' => __('Meta information', KT_THEME_LANG),
-                        'desc' => __('Show Meta information in blog posts.', KT_THEME_LANG),
+                        'title' => __('Meta information', 'wingman'),
+                        'desc' => __('Show Meta information in blog posts.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                     array(
                         'id' => 'blog_meta_author',
                         'type' => 'switch',
-                        'title' => __('Post Meta Author', KT_THEME_LANG),
-                        'desc' => __('Show meta author in blog posts.', KT_THEME_LANG),
+                        'title' => __('Post Meta Author', 'wingman'),
+                        'desc' => __('Show meta author in blog posts.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required'  => array('blog_meta', "=", 1),
                     ),
 
                     array(
                         'id' => 'blog_meta_comments',
                         'type' => 'switch',
-                        'title' => __('Post Meta Comments', KT_THEME_LANG),
-                        'desc' => __('Show post meta comments in blog posts.', KT_THEME_LANG),
+                        'title' => __('Post Meta Comments', 'wingman'),
+                        'desc' => __('Show post meta comments in blog posts.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required'  => array('blog_meta', "=", 1),
                     ),
                     array(
                         'id' => 'blog_meta_categories',
                         'type' => 'switch',
-                        'title' => __('Post Meta Categories', KT_THEME_LANG),
-                        'desc' => __('Show post meta categories in blog posts.', KT_THEME_LANG),
+                        'title' => __('Post Meta Categories', 'wingman'),
+                        'desc' => __('Show post meta categories in blog posts.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required'  => array('blog_meta', "=", 1),
                     ),
 
                     array(
                         'id' => 'blog_meta_date',
                         'type' => 'switch',
-                        'title' => __('Post Meta Date', KT_THEME_LANG),
-                        'desc' => __('Show meta date in blog posts.', KT_THEME_LANG),
+                        'title' => __('Post Meta Date', 'wingman'),
+                        'desc' => __('Show meta date in blog posts.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required'  => array('blog_meta', "=", 1),
                     ),
                     array(
                         'id' => 'blog_date_format',
                         'type' => 'select',
-                        'title' => __('Date format', KT_THEME_LANG),
-                        'desc' => __('Select the date format.', KT_THEME_LANG),
+                        'title' => __('Date format', 'wingman'),
+                        'desc' => __('Select the date format.', 'wingman'),
                         'options' => array(
                             'd F Y' => __( '05 December 2014', 'js_composer' ) ,
                             'F jS Y' => __( 'December 13th 2014', 'js_composer' ) ,
@@ -3070,21 +3070,21 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'blog_like_post',
                         'type' => 'switch',
-                        'title' => __('Like Post', KT_THEME_LANG),
-                        'desc' => __('Show like post in blog posts.', KT_THEME_LANG),
+                        'title' => __('Like Post', 'wingman'),
+                        'desc' => __('Show like post in blog posts.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required'  => array('blog_meta', "=", 1),
                     ),
                     array(
                         'id' => 'blog_view_number',
                         'type' => 'switch',
-                        'title' => __('View Number', KT_THEME_LANG),
-                        'desc' => __('Show view number in blog posts.', KT_THEME_LANG),
+                        'title' => __('View Number', 'wingman'),
+                        'desc' => __('Show view number in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required'  => array('blog_meta', "=", 1),
                     ),
                 )
@@ -3095,34 +3095,34 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'            => 'search_section',
-                'title'         => __( 'Search', KT_THEME_LANG ),
+                'title'         => __( 'Search', 'wingman' ),
                 'desc'          => 'Search settings',
                 'icon'          => 'icon-Data-Search',
                 'fields'        => array(
                     array(
                         'id'       => 'search_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Search post general', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Search post general', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'search_page_header',
                         'type' => 'switch',
-                        'title' => __('Show Page header', KT_THEME_LANG),
-                        'desc' => __('Show page header or?.', KT_THEME_LANG),
+                        'title' => __('Show Page header', 'wingman'),
+                        'desc' => __('Show page header or?.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                     array(
                         'id'       => 'search_sidebar',
                         'type'     => 'select',
-                        'title'    => __( 'Sidebar configuration', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose archive page ", KT_THEME_LANG ),
+                        'title'    => __( 'Sidebar configuration', 'wingman' ),
+                        'subtitle'     => __( "Please choose archive page ", 'wingman' ),
                         'options'  => array(
-                            'full' => __('No sidebars', KT_THEME_LANG),
-                            'left' => __('Left Sidebar', KT_THEME_LANG),
-                            'right' => __('Right Layout', KT_THEME_LANG)
+                            'full' => __('No sidebars', 'wingman'),
+                            'left' => __('Left Sidebar', 'wingman'),
+                            'right' => __('Right Layout', 'wingman')
                         ),
                         'default'  => 'right',
                         'clear' => false
@@ -3130,8 +3130,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'search_sidebar_left',
                         'type' => 'select',
-                        'title'    => __( 'Sidebar left area', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", KT_THEME_LANG ),
+                        'title'    => __( 'Sidebar left area', 'wingman' ),
+                        'subtitle'     => __( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('search_sidebar','equals','left'),
@@ -3140,8 +3140,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'search_sidebar_right',
                         'type'     => 'select',
-                        'title'    => __( 'Search: Sidebar right area', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", KT_THEME_LANG ),
+                        'title'    => __( 'Search: Sidebar right area', 'wingman' ),
+                        'subtitle'     => __( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('search_sidebar','equals','right'),
@@ -3154,7 +3154,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'search_loop_style',
                         'type' => 'select',
-                        'title' => __('Search Loop Style', KT_THEME_LANG),
+                        'title' => __('Search Loop Style', 'wingman'),
                         'desc' => '',
                         'options' => array(
                             'grid' => __( 'Grid', 'js_composer' ),
@@ -3167,17 +3167,17 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'search_sharebox',
                         'type' => 'switch',
-                        'title' => __('Share box', KT_THEME_LANG),
-                        'desc' => __('Show or hide share box.', KT_THEME_LANG),
+                        'title' => __('Share box', 'wingman'),
+                        'desc' => __('Show or hide share box.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('search_loop_style','equals', array( 'classic' ) ),
                     ),
                     array(
                         'id' => 'search_columns',
                         'type' => 'select',
-                        'title' => __('Columns on desktop', KT_THEME_LANG),
+                        'title' => __('Columns on desktop', 'wingman'),
                         'desc' => '',
                         'options' => array(
                             '1' => __( '1 column', 'js_composer' ) ,
@@ -3192,7 +3192,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'search_columns_tablet',
                         'type' => 'select',
-                        'title' => __('Columns on Tablet', KT_THEME_LANG),
+                        'title' => __('Columns on Tablet', 'wingman'),
                         'desc' => '',
                         'options' => array(
                             '1' => __( '1 column', 'js_composer' ) ,
@@ -3211,51 +3211,51 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'search_align',
                         'type' => 'select',
-                        'title' => __('Text align', KT_THEME_LANG),
-                        'desc' => __('Not working for search style classic', KT_THEME_LANG),
+                        'title' => __('Text align', 'wingman'),
+                        'desc' => __('Not working for search style classic', 'wingman'),
                         'options' => array(
-                            'left' => __( 'Left', KT_THEME_LANG ) ,
-                            'center' => __( 'Center', KT_THEME_LANG ) ,
+                            'left' => __( 'Left', 'wingman' ) ,
+                            'center' => __( 'Center', 'wingman' ) ,
                         ),
                         'default' => 'left'
                     ),
                     array(
                         'id' => 'search_readmore',
                         'type' => 'select',
-                        'title' => __('Readmore button ', KT_THEME_LANG),
-                        'desc' => __('Select button style.', KT_THEME_LANG),
+                        'title' => __('Readmore button ', 'wingman'),
+                        'desc' => __('Select button style.', 'wingman'),
                         "default" => 'link',
                         'options' => array(
-                            '' => __('None', KT_THEME_LANG),
+                            '' => __('None', 'wingman'),
                             'link' => __( 'Link', 'js_composer' ),
                         ),
                     ),
                     array(
                         'id' => 'search_pagination',
                         'type' => 'select',
-                        'title' => __('Pagination Type', KT_THEME_LANG),
-                        'desc' => __('Select the pagination type.', KT_THEME_LANG),
+                        'title' => __('Pagination Type', 'wingman'),
+                        'desc' => __('Select the pagination type.', 'wingman'),
                         'options' => array(
-                            'classic' => __( 'Classic pagination', KT_THEME_LANG ),
-                            'loadmore' => __( 'Load More button', KT_THEME_LANG ),
-                            'normal' => __( 'Normal pagination', KT_THEME_LANG ),
+                            'classic' => __( 'Classic pagination', 'wingman' ),
+                            'loadmore' => __( 'Load More button', 'wingman' ),
+                            'normal' => __( 'Normal pagination', 'wingman' ),
                         ),
                         'default' => 'classic'
                     ),
                     array(
                         'id' => 'search_excerpt',
                         'type' => 'switch',
-                        'title' => __('Show Excerpt? ', KT_THEME_LANG),
-                        'desc' => __('Show or hide the excerpt.', KT_THEME_LANG),
+                        'title' => __('Show Excerpt? ', 'wingman'),
+                        'desc' => __('Show or hide the excerpt.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                     array(
                         'id' => 'search_excerpt_length',
                         'type' => 'text',
-                        'title' => __('Excerpt Length', KT_THEME_LANG),
-                        'desc' => __("Insert the number of words you want to show in the post excerpts.", KT_THEME_LANG),
+                        'title' => __('Excerpt Length', 'wingman'),
+                        'desc' => __("Insert the number of words you want to show in the post excerpts.", 'wingman'),
                         'default' => '30',
                     ),
 
@@ -3266,59 +3266,59 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'search_meta',
                         'type' => 'switch',
-                        'title' => __('Show Meta? ', KT_THEME_LANG),
-                        'desc' => __('Show or hide the meta.', KT_THEME_LANG),
+                        'title' => __('Show Meta? ', 'wingman'),
+                        'desc' => __('Show or hide the meta.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
 
                     array(
                         'id' => 'search_meta_author',
                         'type' => 'switch',
-                        'title' => __('Post Meta Author', KT_THEME_LANG),
-                        'desc' => __('Show meta author in blog posts.', KT_THEME_LANG),
+                        'title' => __('Post Meta Author', 'wingman'),
+                        'desc' => __('Show meta author in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('search_meta','equals', array( 1 ) ),
                     ),
                     array(
                         'id' => 'search_meta_comments',
                         'type' => 'switch',
-                        'title' => __('Post Meta Comments', KT_THEME_LANG),
-                        'desc' => __('Show post meta comments in blog posts.', KT_THEME_LANG),
+                        'title' => __('Post Meta Comments', 'wingman'),
+                        'desc' => __('Show post meta comments in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('search_meta','equals', array( 1 ) ),
                     ),
                     array(
                         'id' => 'search_meta_categories',
                         'type' => 'switch',
-                        'title' => __('Post Meta Categories', KT_THEME_LANG),
-                        'desc' => __('Show post meta categories in blog posts.', KT_THEME_LANG),
+                        'title' => __('Post Meta Categories', 'wingman'),
+                        'desc' => __('Show post meta categories in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('search_meta','equals', array( 1 ) ),
                     ),
 
                     array(
                         'id' => 'search_meta_date',
                         'type' => 'switch',
-                        'title' => __('Post Meta Date', KT_THEME_LANG),
-                        'desc' => __('Show meta date in blog posts.', KT_THEME_LANG),
+                        'title' => __('Post Meta Date', 'wingman'),
+                        'desc' => __('Show meta date in blog posts.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('search_meta','equals', array( 1 ) ),
                     ),
                     array(
                         'id' => 'search_date_format',
                         'type' => 'select',
-                        'title' => __('Date format', KT_THEME_LANG),
-                        'desc' => __('Select the date format.', KT_THEME_LANG),
+                        'title' => __('Date format', 'wingman'),
+                        'desc' => __('Select the date format.', 'wingman'),
                         'options' => array(
                             'd F Y' => __( '05 December 2014', 'js_composer' ) ,
                             'F jS Y' => __( 'December 13th 2014', 'js_composer' ) ,
@@ -3334,21 +3334,21 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'search_like_post',
                         'type' => 'switch',
-                        'title' => __('Like Post', KT_THEME_LANG),
-                        'desc' => __('Show like post in blog posts.', KT_THEME_LANG),
+                        'title' => __('Like Post', 'wingman'),
+                        'desc' => __('Show like post in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('search_meta','equals', array( 1 ) ),
                     ),
                     array(
                         'id' => 'search_view_number',
                         'type' => 'switch',
-                        'title' => __('Show View Number', KT_THEME_LANG),
-                        'desc' => __('Show view number in blog posts.', KT_THEME_LANG),
+                        'title' => __('Show View Number', 'wingman'),
+                        'desc' => __('Show view number in blog posts.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG),
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman'),
                         'required' => array('search_meta','equals', array( 1 ) ),
                     ),
                 )
@@ -3359,24 +3359,24 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> '404_section',
-                'title'			=> __( '404 Page', KT_THEME_LANG ),
+                'title'			=> __( '404 Page', 'wingman' ),
                 'desc'			=> '404 Page settings',
                 'icon'          => 'icon-Error-404Window',
                 'fields'		=> array(
                     array(
                         'id'       => 'notfound_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( '404 Page general', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( '404 Page general', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'notfound_page_header',
                         'type' => 'switch',
-                        'title' => __('Show Page header', KT_THEME_LANG),
-                        'desc' => __('Show page header or?.', KT_THEME_LANG),
+                        'title' => __('Show Page header', 'wingman'),
+                        'desc' => __('Show page header or?.', 'wingman'),
                         "default" => 0,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
 
                     array(
@@ -3384,7 +3384,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'media',
                         'url'      => true,
                         'compiler' => true,
-                        'title'    => __( '404 Image', KT_THEME_LANG ),
+                        'title'    => __( '404 Image', 'wingman' ),
                         'default'  => array(
                             'url' => KT_THEME_IMG.'404.png'
                         )
@@ -3393,12 +3393,12 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'notfound_page_type',
                         'type' => 'select',
-                        'title' => __('404 Page', KT_THEME_LANG),
+                        'title' => __('404 Page', 'wingman'),
                         'desc' => '',
                         'options' => array(
-                            'default' => __( 'Default', KT_THEME_LANG ) ,
-                            'page' => __( 'From Page', KT_THEME_LANG ) ,
-                            'home' => __( 'Redirect Home', KT_THEME_LANG ) ,
+                            'default' => __( 'Default', 'wingman' ) ,
+                            'page' => __( 'From Page', 'wingman' ) ,
+                            'home' => __( 'Redirect Home', 'wingman' ) ,
                         ),
                         'default' => 'default',
                     ),
@@ -3408,8 +3408,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'notfound_page_id',
                         'type'     => 'select',
                         'data'     => 'pages',
-                        'title'    => __( 'Pages Select Option', KT_THEME_LANG ),
-                        'desc'     => __( 'Select your page 404 you want use', KT_THEME_LANG ),
+                        'title'    => __( 'Pages Select Option', 'wingman' ),
+                        'desc'     => __( 'Select your page 404 you want use', 'wingman' ),
                         'required' => array( 'notfound_page_type', '=', 'page' ),
                     ),
 
@@ -3421,42 +3421,42 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'woocommerce',
-				'title'			=> __( 'Woocommerce', KT_THEME_LANG ),
+				'title'			=> __( 'Woocommerce', 'wingman' ),
 				'desc'			=> '',
 				'icon'	=> 'icon-Full-Cart',
 				'fields'		=> array(
                     array(
                         'id'       => 'shop_products_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Shop Products settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Shop Products settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
 
                     array(
                         'id'       => 'shop_content_banner',
                         'type'     => 'editor',
-                        'title'    => __( 'Shop banner', KT_THEME_LANG ),
+                        'title'    => __( 'Shop banner', 'wingman' ),
                         'default'  => ''
                     ),
 
                     array(
                         'id' => 'shop_page_header',
                         'type' => 'switch',
-                        'title' => __('Show Page header', KT_THEME_LANG),
-                        'desc' => __('Show page header or?.', KT_THEME_LANG),
+                        'title' => __('Show Page header', 'wingman'),
+                        'desc' => __('Show page header or?.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                     array(
                         'id'       => 'shop_sidebar',
                         'type'     => 'select',
-                        'title'    => __( 'Shop: Sidebar configuration', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose sidebar for shop post", KT_THEME_LANG ),
+                        'title'    => __( 'Shop: Sidebar configuration', 'wingman' ),
+                        'subtitle'     => __( "Please choose sidebar for shop post", 'wingman' ),
                         'options'  => array(
-                            'full' => __('No sidebars', KT_THEME_LANG),
-                            'left' => __('Left Sidebar', KT_THEME_LANG),
-                            'right' => __('Right Layout', KT_THEME_LANG)
+                            'full' => __('No sidebars', 'wingman'),
+                            'left' => __('Left Sidebar', 'wingman'),
+                            'right' => __('Right Layout', 'wingman')
                         ),
                         'default'  => 'right',
                         'clear' => false
@@ -3464,8 +3464,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'shop_sidebar_left',
                         'type' => 'select',
-                        'title'    => __( 'Shop: Sidebar left area', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", KT_THEME_LANG ),
+                        'title'    => __( 'Shop: Sidebar left area', 'wingman' ),
+                        'subtitle'     => __( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
                         'default'  => 'shop-widget-area',
                         'required' => array('shop_sidebar','equals','left'),
@@ -3474,8 +3474,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'shop_sidebar_right',
                         'type'     => 'select',
-                        'title'    => __( 'Shop: Sidebar right area', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", KT_THEME_LANG ),
+                        'title'    => __( 'Shop: Sidebar right area', 'wingman' ),
+                        'subtitle'     => __( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
                         'default'  => 'shop-widget-area',
                         'required' => array('shop_sidebar','equals','right'),
@@ -3485,17 +3485,17 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'shop_products_layout',
                         'type'     => 'select',
-                        'title'    => __( 'Shop: Products default Layout', KT_THEME_LANG ),
+                        'title'    => __( 'Shop: Products default Layout', 'wingman' ),
                         'options'  => array(
-                            'grid' => __('Grid', KT_THEME_LANG ),
-                            'lists' => __('Lists', KT_THEME_LANG )
+                            'grid' => __('Grid', 'wingman' ),
+                            'lists' => __('Lists', 'wingman' )
                         ),
                         'default'  => 'grid'
                     ),
                     array(
                         'id'       => 'shop_gird_cols',
                         'type'     => 'select',
-                        'title'    => __( 'Number column to display width gird mod', KT_THEME_LANG ),
+                        'title'    => __( 'Number column to display width gird mod', 'wingman' ),
                         'options'  => array(
                             '2' => 2,
                             '3' => 3,
@@ -3506,17 +3506,17 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'shop_products_effect',
                         'type'     => 'select',
-                        'title'    => __( 'Shop product effect', KT_THEME_LANG ),
+                        'title'    => __( 'Shop product effect', 'wingman' ),
                         'options'  => array(
-                            'center' => __('Center', KT_THEME_LANG ),
-                            'bottom' => __('Bottom', KT_THEME_LANG )
+                            'center' => __('Center', 'wingman' ),
+                            'bottom' => __('Bottom', 'wingman' )
                         ),
                         'default'  => 'center'
                     ),
                     array(
                         'id'       => 'loop_shop_per_page',
                         'type'     => 'text',
-                        'title'    => __( 'Number of products displayed per page', KT_THEME_LANG ),
+                        'title'    => __( 'Number of products displayed per page', 'wingman' ),
                         'default'  => '12'
                     ),
 
@@ -3528,27 +3528,27 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'shop_single_product',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Single Product settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Single Product settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'product_page_header',
                         'type' => 'switch',
-                        'title' => __('Show Page header', KT_THEME_LANG),
-                        'desc' => __('Show page header or?.', KT_THEME_LANG),
+                        'title' => __('Show Page header', 'wingman'),
+                        'desc' => __('Show page header or?.', 'wingman'),
                         "default" => 1,
-                        'on' => __('Enabled', KT_THEME_LANG),
-                        'off' =>__('Disabled', KT_THEME_LANG)
+                        'on' => __('Enabled', 'wingman'),
+                        'off' =>__('Disabled', 'wingman')
                     ),
                     array(
                         'id'       => 'product_sidebar',
                         'type'     => 'select',
-                        'title'    => __( 'Product: Sidebar configuration', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose single product page ", KT_THEME_LANG ),
+                        'title'    => __( 'Product: Sidebar configuration', 'wingman' ),
+                        'subtitle'     => __( "Please choose single product page ", 'wingman' ),
                         'options'  => array(
-                            'full' => __('No sidebars', KT_THEME_LANG),
-                            'left' => __('Left Sidebar', KT_THEME_LANG),
-                            'right' => __('Right Layout', KT_THEME_LANG)
+                            'full' => __('No sidebars', 'wingman'),
+                            'left' => __('Left Sidebar', 'wingman'),
+                            'right' => __('Right Layout', 'wingman')
                         ),
                         'default'  => 'right',
                         'clear' => false
@@ -3556,8 +3556,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'product_sidebar_left',
                         'type' => 'select',
-                        'title'    => __( 'Product: Sidebar left area', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", KT_THEME_LANG ),
+                        'title'    => __( 'Product: Sidebar left area', 'wingman' ),
+                        'subtitle'     => __( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
                         'default'  => 'shop-widget-area',
                         'required' => array('product_sidebar','equals','left'),
@@ -3566,8 +3566,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'product_sidebar_right',
                         'type'     => 'select',
-                        'title'    => __( 'Product: Sidebar right area', KT_THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", KT_THEME_LANG ),
+                        'title'    => __( 'Product: Sidebar right area', 'wingman' ),
+                        'subtitle'     => __( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
                         'default'  => 'shop-widget-area',
                         'required' => array('product_sidebar','equals','right'),
@@ -3587,107 +3587,107 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'shop_single_product',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Shop Product settings', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Shop Product settings', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'time_product_new',
                         'type'     => 'text',
-                        'title'    => __( 'Time Product New', KT_THEME_LANG ),
+                        'title'    => __( 'Time Product New', 'wingman' ),
                         'default'  => '30',
-                        'desc' => __('Time Product New ( unit: days ).', KT_THEME_LANG),
+                        'desc' => __('Time Product New ( unit: days ).', 'wingman'),
                     ),
                 )
             );
             $this->sections[] = array(
 				'id'			=> 'social',
-				'title'			=> __( 'Socials', KT_THEME_LANG ),
-				'desc'			=> __('Social and share settings', KT_THEME_LANG),
+				'title'			=> __( 'Socials', 'wingman' ),
+				'desc'			=> __('Social and share settings', 'wingman'),
 				'icon'	=> 'icon-Facebook-2',
 				'fields'		=> array(
 
                     array(
 						'id' => 'twitter',
 						'type' => 'text',
-						'title' => __('Twitter', KT_THEME_LANG),
-						'subtitle' => __("Your Twitter username (no @).", KT_THEME_LANG),
+						'title' => __('Twitter', 'wingman'),
+						'subtitle' => __("Your Twitter username (no @).", 'wingman'),
 						'default' => '#'
                     ),
                     array(
 						'id' => 'facebook',
 						'type' => 'text',
-						'title' => __('Facebook', KT_THEME_LANG),
-						'subtitle' => __("Your Facebook page/profile url", KT_THEME_LANG),
+						'title' => __('Facebook', 'wingman'),
+						'subtitle' => __("Your Facebook page/profile url", 'wingman'),
 						'default' => '#'
                     ),
                     array(
 						'id' => 'pinterest',
 						'type' => 'text',
-						'title' => __('Pinterest', KT_THEME_LANG),
-						'subtitle' => __("Your Pinterest username", KT_THEME_LANG),
+						'title' => __('Pinterest', 'wingman'),
+						'subtitle' => __("Your Pinterest username", 'wingman'),
 						'default' => '#'
                     ),
                     array(
 						'id' => 'dribbble',
 						'type' => 'text',
-						'title' => __('Dribbble', KT_THEME_LANG),
-						'subtitle' => __("Your Dribbble username", KT_THEME_LANG),
+						'title' => __('Dribbble', 'wingman'),
+						'subtitle' => __("Your Dribbble username", 'wingman'),
 						'desc' => '',
 						'default' => ''
 				    ),
                     array(
 						'id' => 'vimeo',
 						'type' => 'text',
-						'title' => __('Vimeo', KT_THEME_LANG),
-						'subtitle' => __("Your Vimeo username", KT_THEME_LANG),
+						'title' => __('Vimeo', 'wingman'),
+						'subtitle' => __("Your Vimeo username", 'wingman'),
 						'desc' => '',
 						'default' => '#'
                     ),
                     array(
 						'id' => 'tumblr',
 						'type' => 'text',
-						'title' => __('Tumblr', KT_THEME_LANG),
-						'subtitle' => __("Your Tumblr username", KT_THEME_LANG),
+						'title' => __('Tumblr', 'wingman'),
+						'subtitle' => __("Your Tumblr username", 'wingman'),
 						'desc' => '',
 						'default' => '#'
 				    ),
                     array(
 						'id' => 'skype',
 						'type' => 'text',
-						'title' => __('Skype', KT_THEME_LANG),
-						'subtitle' => __("Your Skype username", KT_THEME_LANG),
+						'title' => __('Skype', 'wingman'),
+						'subtitle' => __("Your Skype username", 'wingman'),
 						'desc' => '',
 						'default' => ''
 					),
                     array(
 						'id' => 'linkedin',
 						'type' => 'text',
-						'title' => __('LinkedIn', KT_THEME_LANG),
-						'subtitle' => __("Your LinkedIn page/profile url", KT_THEME_LANG),
+						'title' => __('LinkedIn', 'wingman'),
+						'subtitle' => __("Your LinkedIn page/profile url", 'wingman'),
 						'desc' => '',
 						'default' => ''
 					),
 					array(
 						'id' => 'googleplus',
 						'type' => 'text',
-						'title' => __('Google+', KT_THEME_LANG),
-						'subtitle' => __("Your Google+ page/profile URL", KT_THEME_LANG),
+						'title' => __('Google+', 'wingman'),
+						'subtitle' => __("Your Google+ page/profile URL", 'wingman'),
 						'desc' => '',
 						'default' => '#'
 					),
 					array(
 						'id' => 'youtube',
 						'type' => 'text',
-						'title' => __('YouTube', KT_THEME_LANG),
-						'subtitle' => __("Your YouTube username", KT_THEME_LANG),
+						'title' => __('YouTube', 'wingman'),
+						'subtitle' => __("Your YouTube username", 'wingman'),
 						'desc' => '',
 						'default' => ''
 					),
 					array(
 						'id' => 'instagram',
 						'type' => 'text',
-						'title' => __('Instagram', KT_THEME_LANG),
-						'subtitle' => __("Your Instagram username", KT_THEME_LANG),
+						'title' => __('Instagram', 'wingman'),
+						'subtitle' => __("Your Instagram username", 'wingman'),
 						'desc' => '',
 						'default' => ''
 					)
@@ -3699,43 +3699,43 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'popup',
-				'title'			=> __( 'Popup', KT_THEME_LANG ),
+				'title'			=> __( 'Popup', 'wingman' ),
 				'desc'			=> '',
 				'icon'	=> 'icon-Studio-Flash',
 				'fields'		=> array(
                     array(
 						'id'		=> 'enable_popup',
 						'type'		=> 'switch',
-						'title'		=> __( 'Enable Popup', KT_THEME_LANG ),
-						'subtitle'	=> __( '', KT_THEME_LANG),
+						'title'		=> __( 'Enable Popup', 'wingman' ),
+						'subtitle'	=> __( '', 'wingman'),
 						"default"	=> true,
-						'on'		=> __( 'On', KT_THEME_LANG ),
-						'off'		=> __( 'Off', KT_THEME_LANG ),
+						'on'		=> __( 'On', 'wingman' ),
+						'off'		=> __( 'Off', 'wingman' ),
 					),
                     array(
 						'id'		=> 'disable_popup_mobile',
 						'type'		=> 'switch',
-						'title'		=> __( 'Disable Popup on Mobile', KT_THEME_LANG ),
-						'subtitle'	=> __( '', KT_THEME_LANG),
+						'title'		=> __( 'Disable Popup on Mobile', 'wingman' ),
+						'subtitle'	=> __( '', 'wingman'),
 						"default"	=> false,
-						'on'		=> __( 'On', KT_THEME_LANG ),
-						'off'		=> __( 'Off', KT_THEME_LANG ),
+						'on'		=> __( 'On', 'wingman' ),
+						'off'		=> __( 'Off', 'wingman' ),
                         'required' => array('enable_popup','equals', 1)
 					),
                     array(
                         'id' => 'time_show',
                         'type' => 'text',
-                        'title' => __('Time to show', KT_THEME_LANG), 
-                        'desc' => __('Unit: s', KT_THEME_LANG),
-                        'default' => __('0', KT_THEME_LANG),
+                        'title' => __('Time to show', 'wingman'), 
+                        'desc' => __('Unit: s', 'wingman'),
+                        'default' => __('0', 'wingman'),
                         'required' => array('enable_popup','equals', 1)
                     ),
 
                     array(
                         'id' => 'title_popup',
                         'type' => 'text',
-                        'title' => __('Title Popup', KT_THEME_LANG), 
-                        'default' => __('Advanced Popup Module', KT_THEME_LANG),
+                        'title' => __('Title Popup', 'wingman'), 
+                        'default' => __('Advanced Popup Module', 'wingman'),
                     ),
 
                     array(
@@ -3743,7 +3743,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'media',
                         'url'      => true,
                         'compiler' => true,
-                        'title'    => __( 'Popup Image', KT_THEME_LANG ),
+                        'title'    => __( 'Popup Image', 'wingman' ),
                         'default'  => array(
                             'url' => KT_THEME_IMG.'popup_image.png'
                         )
@@ -3752,10 +3752,10 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'content_popup',
                         'type'     => 'editor',
-                        'title'    => __( 'Content Popup', KT_THEME_LANG ),
-                        'subtitle' => __( '', KT_THEME_LANG ),
+                        'title'    => __( 'Content Popup', 'wingman' ),
+                        'subtitle' => __( '', 'wingman' ),
                         'required' => array('enable_popup','equals', 1),
-                        'default'  => __('<h4 class="newletter-title">Sign up for out newsletter<br /> to receive special offers.</h4>[kt_mailchimp list="9306fec7e3" disable_names="yes"]', KT_THEME_LANG),
+                        'default'  => __('<h4 class="newletter-title">Sign up for out newsletter<br /> to receive special offers.</h4>[kt_mailchimp list="9306fec7e3" disable_names="yes"]', 'wingman'),
                     ),
                 )
             );
@@ -3788,7 +3788,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     'type'  => 'info',
                     'style' => 'critical',
                     'icon'  => 'el el-info-circle',
-                    'title' => __( 'Server Requirements (Please resolve these issues before installing template.)', KT_THEME_LANG ),
+                    'title' => __( 'Server Requirements (Please resolve these issues before installing template.)', 'wingman' ),
                     'desc'  => '<ul>'.implode('', $importer_errors).'</ul>'
                 );
             }
@@ -3802,8 +3802,8 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
             $this->sections[] = array(
                  'id' => 'wbc_importer_section',
-                 'title'  => esc_html__( 'Demo Content', KT_THEME_LANG ),
-                 'desc'   => esc_html__( 'Chose a demo to import', KT_THEME_LANG ),
+                 'title'  => esc_html__( 'Demo Content', 'wingman' ),
+                 'desc'   => esc_html__( 'Chose a demo to import', 'wingman' ),
                  'icon'   => 'icon-Blackboard',
                  'fields' => $importer
             );
@@ -3813,7 +3813,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'advanced',
-				'title'			=> __( 'Advanced', KT_THEME_LANG ),
+				'title'			=> __( 'Advanced', 'wingman' ),
 				'desc'			=> '',
                 'icon'	=> 'icon-Settings-Window',
             );
@@ -3824,7 +3824,7 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'share_section',
-                'title'			=> __( 'Social Share', KT_THEME_LANG ),
+                'title'			=> __( 'Social Share', 'wingman' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
@@ -3832,16 +3832,16 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'social_share',
                         'type'     => 'sortable',
                         'mode'     => 'checkbox', // checkbox or text
-                        'title'    => __( 'Social Share', KT_THEME_LANG ),
-                        'desc'     => __( 'Reorder and Enable/Disable Social Share Buttons.', KT_THEME_LANG ),
+                        'title'    => __( 'Social Share', 'wingman' ),
+                        'desc'     => __( 'Reorder and Enable/Disable Social Share Buttons.', 'wingman' ),
                         'options'  => array(
-                            'facebook' => __('Facebook', KT_THEME_LANG),
-                            'twitter' => __('Twitter', KT_THEME_LANG),
-                            'google_plus' => __('Google+', KT_THEME_LANG),
-                            'pinterest' => __('Pinterest', KT_THEME_LANG),
-                            'linkedin' => __('Linkedin', KT_THEME_LANG),
-                            'tumblr' => __('Tumblr', KT_THEME_LANG),
-                            'mail' => __('Mail', KT_THEME_LANG),
+                            'facebook' => __('Facebook', 'wingman'),
+                            'twitter' => __('Twitter', 'wingman'),
+                            'google_plus' => __('Google+', 'wingman'),
+                            'pinterest' => __('Pinterest', 'wingman'),
+                            'linkedin' => __('Linkedin', 'wingman'),
+                            'tumblr' => __('Tumblr', 'wingman'),
+                            'mail' => __('Mail', 'wingman'),
                         ),
                         'default'  => array(
                             'facebook' => true,
@@ -3862,21 +3862,21 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'socials_api_section',
-                'title'			=> __( 'Socials API', KT_THEME_LANG ),
+                'title'			=> __( 'Socials API', 'wingman' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'facebook_app_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Facebook App', KT_THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.__( 'Facebook App', 'wingman' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'facebook_app',
                         'type' => 'text',
-                        'title' => __('Facebook App ID', KT_THEME_LANG),
-                        'subtitle' => __("Add Facebook App ID.", KT_THEME_LANG),
+                        'title' => __('Facebook App ID', 'wingman'),
+                        'subtitle' => __("Add Facebook App ID.", 'wingman'),
                         'default' => '417674911655656'
                     ),
                 )
@@ -3892,15 +3892,15 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'advanced_css',
-				'title'			=> __( 'Custom CSS', KT_THEME_LANG ),
+				'title'			=> __( 'Custom CSS', 'wingman' ),
 				'desc'			=> '',
                 'subsection' => true,
 				'fields'		=> array(
                     array(
                         'id'       => 'advanced_editor_css',
                         'type'     => 'ace_editor',
-                        'title'    => __( 'CSS Code', KT_THEME_LANG ),
-                        'subtitle' => __( 'Paste your CSS code here.', KT_THEME_LANG ),
+                        'title'    => __( 'CSS Code', 'wingman' ),
+                        'subtitle' => __( 'Paste your CSS code here.', 'wingman' ),
                         'mode'     => 'css',
                         'theme'    => 'chrome',
                         'full_width' => true
@@ -3912,15 +3912,15 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'advanced_js',
-				'title'			=> __( 'Custom JS', KT_THEME_LANG ),
+				'title'			=> __( 'Custom JS', 'wingman' ),
 				'desc'			=> '',
                 'subsection' => true,
 				'fields'		=> array(
                     array(
                         'id'       => 'advanced_editor_js',
                         'type'     => 'ace_editor',
-                        'title'    => __( 'JS Code', KT_THEME_LANG ),
-                        'subtitle' => __( 'Paste your JS code here.', KT_THEME_LANG ),
+                        'title'    => __( 'JS Code', 'wingman' ),
+                        'subtitle' => __( 'Paste your JS code here.', 'wingman' ),
                         'mode'     => 'javascript',
                         'theme'    => 'chrome',
                         'default'  => "jQuery(document).ready(function(){\n\n});",
@@ -3933,15 +3933,15 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'advanced_tracking',
-				'title'			=> __( 'Tracking Code', KT_THEME_LANG ),
+				'title'			=> __( 'Tracking Code', 'wingman' ),
 				'desc'			=> '',
                 'subsection' => true,
 				'fields'		=> array(
                     array(
                         'id'       => 'advanced_tracking_code',
                         'type'     => 'textarea',
-                        'title'    => __( 'Tracking Code', KT_THEME_LANG ),
-                        'desc'     => __( 'Paste your Google Analytics (or other) tracking code here. This will be added into the header template of your theme. Please put code inside script tags.', KT_THEME_LANG ),
+                        'title'    => __( 'Tracking Code', 'wingman' ),
+                        'desc'     => __( 'Paste your Google Analytics (or other) tracking code here. This will be added into the header template of your theme. Please put code inside script tags.', 'wingman' ),
                     )
                 )
             );
@@ -3949,10 +3949,10 @@ if ( ! class_exists( 'KT_config' ) ) {
             $info_arr = array();
             $theme = wp_get_theme();
             
-            $info_arr[] = "<li><span>".__('Theme Name:', KT_THEME_LANG)." </span>". $theme->get('Name').'</li>';
-            $info_arr[] = "<li><span>".__('Theme Version:', KT_THEME_LANG)." </span>". $theme->get('Version').'</li>';
-            $info_arr[] = "<li><span>".__('Theme URI:', KT_THEME_LANG)." </span>". $theme->get('ThemeURI').'</li>';
-            $info_arr[] = "<li><span>".__('Author:', KT_THEME_LANG)." </span>". $theme->get('Author').'</li>';
+            $info_arr[] = "<li><span>".__('Theme Name:', 'wingman')." </span>". $theme->get('Name').'</li>';
+            $info_arr[] = "<li><span>".__('Theme Version:', 'wingman')." </span>". $theme->get('Version').'</li>';
+            $info_arr[] = "<li><span>".__('Theme URI:', 'wingman')." </span>". $theme->get('ThemeURI').'</li>';
+            $info_arr[] = "<li><span>".__('Author:', 'wingman')." </span>". $theme->get('Author').'</li>';
             
             $system_info = sprintf("<div class='troubleshooting'><ul>%s</ul></div>", implode('', $info_arr));
             
@@ -3962,7 +3962,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'advanced_troubleshooting',
-				'title'			=> __( 'Troubleshooting', KT_THEME_LANG ),
+				'title'			=> __( 'Troubleshooting', 'wingman' ),
 				'desc'			=> '',
                 'subsection' => true,
 				'fields'		=> array(

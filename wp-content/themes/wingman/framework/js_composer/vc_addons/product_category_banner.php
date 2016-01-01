@@ -41,7 +41,7 @@ class WPBakeryShortCode_Product_Category_Banner extends WPBakeryShortCode {
                 $output .= '<div class="banner-content"><div class="content_banner"><a class="btn btn-light btn-block btn-animation" href="'.esc_attr( $link ).'"><span>'.$term->name.'('.$term->count.') <i class="fa fa-long-arrow-right"></i></span></a></div></div>';
             $output .= '</div>';
         }else{
-            $output .= '<p>'.__( 'No product category',KT_THEME_LANG ).'</p>';
+            $output .= '<p>'.__( 'No product category','wingman' ).'</p>';
         }
     	return $output;
     }
@@ -49,23 +49,23 @@ class WPBakeryShortCode_Product_Category_Banner extends WPBakeryShortCode {
 }
 
 vc_map( array(
-    "name" => __( "Product Category Banner", KT_THEME_LANG),
+    "name" => __( "Product Category Banner", 'wingman'),
     "base" => "product_category_banner",
-    "category" => __('by Theme', KT_THEME_LANG ),
+    "category" => __('by Theme', 'wingman' ),
     "wrapper_class" => "clearfix",
     "params" => array(
         array(
             "type" => "kt_taxonomy",
             'taxonomy' => 'product_cat',
-            'heading' => __( 'Product Category', KT_THEME_LANG ),
+            'heading' => __( 'Product Category', 'wingman' ),
             'param_name' => 'product_category',
-            'placeholder' => __( 'Select your Product Category', KT_THEME_LANG ),
+            'placeholder' => __( 'Select your Product Category', 'wingman' ),
             'multiple' => false,
             "admin_label" => true,
         ),
         array(
             "type" => "kt_image_sizes",
-            "heading" => __( "Select image sizes", KT_THEME_LANG ),
+            "heading" => __( "Select image sizes", 'wingman' ),
             "param_name" => "image_size",
             "std" => 'full',
             "admin_label" => true,
@@ -73,15 +73,15 @@ vc_map( array(
         
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Content Position', KT_THEME_LANG ),
+            'heading' => __( 'Content Position', 'wingman' ),
             'param_name' => 'position',
             'value' => array(
-                __( 'Top', KT_THEME_LANG ) => 'position-top',
-                __( 'Center', KT_THEME_LANG ) => 'position-center',
-                __( 'Bottom', KT_THEME_LANG ) => 'position-bottom',
+                __( 'Top', 'wingman' ) => 'position-top',
+                __( 'Center', 'wingman' ) => 'position-center',
+                __( 'Bottom', 'wingman' ) => 'position-bottom',
             ),
             'std' => 'position-center',
-            'description' => __( 'Position of content.', KT_THEME_LANG ),
+            'description' => __( 'Position of content.', 'wingman' ),
             "admin_label" => true,
         ),
 

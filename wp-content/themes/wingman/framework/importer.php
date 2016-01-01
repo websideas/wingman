@@ -46,7 +46,7 @@ if ( !function_exists( 'kt_extended_imported' ) ) {
          * Setting Menus
          *************************************************************************/
 
-        $main_menu = get_term_by( 'name', __('Main menu', KT_THEME_LANG), 'nav_menu' );
+        $main_menu = get_term_by( 'name', __('Main menu', 'wingman'), 'nav_menu' );
         set_theme_mod( 'nav_menu_locations', array(
                 'primary' => $main_menu->term_id
             )

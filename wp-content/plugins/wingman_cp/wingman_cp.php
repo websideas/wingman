@@ -12,8 +12,8 @@ All rights reserved.
 */
 
 
-add_action( 'init', 'register_kt_client_init' );
-function register_kt_client_init(){
+add_action( 'init', 'kt_register_client_init' );
+function kt_register_client_init(){
     $labels = array( 
         'name' => __( 'Client', 'wingman_cp'),
         'singular_name' => __( 'Client', 'wingman_cp'),
@@ -55,8 +55,8 @@ function register_kt_client_init(){
 }
 
 
-add_action( 'init', 'register_kt_testimonial_init' );
-function register_kt_testimonial_init(){
+add_action( 'init', 'kt_register_testimonial_init' );
+function kt_register_testimonial_init(){
     $labels = array(
         'name' => __( 'Testimonial', 'wingman_cp'),
         'singular_name' => __( 'Testimonial', 'wingman_cp'),
@@ -96,3 +96,36 @@ function register_kt_testimonial_init(){
         'show_admin_column'             => true
     ));
 }
+
+
+
+
+/* TOOLTIP SHORTCODE
+================================================= */
+function kt_tooltip_shortcode($atts, $content = null) {
+    extract(shortcode_atts(array(
+        'title' => '',
+        'tag' => 'a',
+        'link' => '#',
+        'direction' => 'top'
+    ), $atts));
+
+    if( $tag == 'a' ){ $href = 'href="'.$link.'"'; }else{ $href = ''; }
+
+    $output = '<'.$tag.' '.$href.' data-toggle="tooltip" title="'.$title.'" data-placement="'.$direction.'">'.do_shortcode($content).'</'.$tag.'>';
+
+    return $output;
+}
+
+add_shortcode('kt_tooltip', 'kt_tooltip_shortcode');
+
+/* HIGHTLIGHT SHORTCODE
+================================================= */
+function kt_highlight_shortcode($atts, $content = null) {
+    extract(shortcode_atts(array(
+        'background' => '#ecb848',
+        'color' => '#fff',
+    ), $atts));
+    return '<span class="highlight" style="background:'.$background.';color:'.$color.'">'. do_shortcode($content) .'</span>';
+}
+add_shortcode("kt_highlight", "kt_highlight_shortcode");

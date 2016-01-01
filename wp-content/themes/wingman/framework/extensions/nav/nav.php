@@ -120,6 +120,6 @@ if( ! class_exists( 'KT_MEGAMENU' ) ) {
 }
 
 
-include_once ( KT_FW_EXT_DIR .'nav/nav_menu_custom_fields.php' );
-include_once ( KT_FW_EXT_DIR .'nav/nav_edit_custom_walker.php' );
+require KT_FW_EXT_DIR .'nav/nav_menu_custom_fields.php';
+require KT_FW_EXT_DIR .'nav/nav_edit_custom_walker.php';
 

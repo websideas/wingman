@@ -61,7 +61,7 @@ class WPBakeryShortCode_List_Item extends WPBakeryShortCode {
 			'icon_entypo' => '',
 			'icon_linecons' => '',
 			'icon_color' => '',
-            'content_here' => __("Put your content here", KT_THEME_LANG),
+            'content_here' => __("Put your content here", 'wingman'),
 			'el_class' => '',
 		), $atts ) );
 		$icon_li = '';
@@ -89,9 +89,9 @@ class WPBakeryShortCode_List_Item extends WPBakeryShortCode {
 
 //Register "container" content element. It will hold all your inner (child) content elements
 vc_map( array(
-    "name" => __("List", KT_THEME_LANG),
+    "name" => __("List", 'wingman'),
     "base" => "list",
-    "category" => __('by Theme', KT_THEME_LANG ),
+    "category" => __('by Theme', 'wingman' ),
     "as_parent" => array('only' => 'list_item'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
     "content_element" => true,
     "show_settings_on_create" => false,
@@ -193,16 +193,20 @@ vc_map( array(
             'description' => __( 'Select backgound color for your testimonial', 'js_composer' ),
         ),
         array(
-            'type' => 'kt_animate',
-            'heading' => __( 'Css Animation', 'js_composer' ),
+            'type' => 'dropdown',
+            'heading' => __( 'CSS Animation', 'js_composer' ),
             'param_name' => 'css_animation',
-            'value' => '',
-            'description' => __( 'Animation.', 'js_composer' ),
+            'admin_label' => true,
+            'value' => array(
+                __( 'No', 'js_composer' ) => '',
+                __( 'Top to bottom', 'js_composer' ) => 'top-to-bottom',
+                __( 'Bottom to top', 'js_composer' ) => 'bottom-to-top',
+                __( 'Left to right', 'js_composer' ) => 'left-to-right',
+                __( 'Right to left', 'js_composer' ) => 'right-to-left',
+                __( 'Appear from center', 'js_composer' ) => "appear"
+            ),
+            'description' => __( 'Select type of animation if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.', 'js_composer' )
         ),
-
-
-
-
         array(
             "type" => "textfield",
             "heading" => __("Extra class name", "js_composer"),
@@ -218,7 +222,7 @@ vc_map( array(
         ),
     ),
     "js_view" => 'VcColumnView',
-	'default_content' => '[list_item]'.__("Put your content here", KT_THEME_LANG).'[/list_item][list_item]'.__("Put your content here", KT_THEME_LANG).'[/list_item][list_item]'.__("Put your content here", KT_THEME_LANG).'[/list_item]',
+	'default_content' => '[list_item]'.__("Put your content here", 'wingman').'[/list_item][list_item]'.__("Put your content here", 'wingman').'[/list_item][list_item]'.__("Put your content here", 'wingman').'[/list_item]',
 ) );
 
 
@@ -231,19 +235,19 @@ vc_map( array(
     "params" => array(
         array(
           "type" => "textarea",
-          "heading" => __("Content", KT_THEME_LANG),
+          "heading" => __("Content", 'wingman'),
           "param_name" => "content",
-          "value" => __("Put your content here", KT_THEME_LANG),
-          "description" => __("", KT_THEME_LANG),
+          "value" => __("Put your content here", 'wingman'),
+          "description" => __("", 'wingman'),
           "holder" => "div",
         ),
 
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Custom icon', KT_THEME_LANG ),
+            'heading' => __( 'Custom icon', 'wingman' ),
             'param_name' => 'custom_icon',
             'value' => 'false',
-            "description" => __("Close button in alert", KT_THEME_LANG),
+            "description" => __("Close button in alert", 'wingman'),
         ),
 
         array(

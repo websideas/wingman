@@ -297,45 +297,6 @@ function vc_kt_image_sizes_settings_field($settings, $value){
 vc_add_shortcode_param('kt_image_sizes', 'vc_kt_image_sizes_settings_field');
 
 
-
-
-
-function vc_kt_animate_settings($settings, $value){
-    
-    $dependency = '';
-    $param_name = isset($settings['param_name']) ? $settings['param_name'] : '';
-    $type = isset($settings['type']) ? $settings['type'] : '';
-    $class = isset($settings['class']) ? $settings['class'] : '';
-    
-    $string = file_get_contents(KT_FW_URL.'js_composer/animate-config.json');
-    $json_a = json_decode($string,true);
-    
-    $posts_fields = array();
-    $posts_fields[] = "<option value=''>".__('No Animation', KT_THEME_LANG)."</option>";
-    
-    foreach($json_a as $jkey => $jvalue){
-        $posts_fields[] = "<optgroup label='".ucwords(str_replace('_',' ',$jkey))."'>";
-            foreach( $jvalue as $k=>$v ){
-                $selected = ($value == $k) ? ' selected="selected"' : '';
-                $posts_fields[] .= "<option value='{$k}' {$selected}>".$k."</option>";
-            }
-        $posts_fields[] .= "</optgroup>";
-    }
-    
-    $output = '<div class="wrap-kt-animate">';
-        $output .= '<div class="animationSandbox"><h1>'.__('Animate', KT_THEME_LANG).'</h1></div>';
-        $output .= '<select class="wpb_vc_param_value ' . $param_name . ' ' . $type . ' ' . $class . '" name="' . $param_name . '" '.$dependency.'>'
-            .implode( $posts_fields )
-            .'</select>';
-    $output .= '</div>';
-    return $output;
-}
-vc_add_shortcode_param('kt_animate', 'vc_kt_animate_settings',  KT_FW_JS.'kt_animate.js');
-
-
-
-
-
 function vc_kt_icons_settings($settings, $value){
 
     $dependency = '';
@@ -345,7 +306,7 @@ function vc_kt_icons_settings($settings, $value){
     $output = '<input type="hidden" class="wpb_vc_param_value ' . $param_name . ' ' . $type . ' ' . $class . '" name="' . $param_name . '" value="'.esc_attr($value).'" '.$dependency.' />';
 
 
-    $placeholder = isset($settings['placeholder']) ? $settings['placeholder'] : __('Search icon ...', KT_THEME_LANG);
+    $placeholder = isset($settings['placeholder']) ? $settings['placeholder'] : __('Search icon ...', 'wingman');
 
 
     $output .= '<div class="param-icon-header clearfix">';
@@ -359,7 +320,7 @@ function vc_kt_icons_settings($settings, $value){
     if(is_array($lists)){
         $icons = '';
         $output .= '<p><select name="param-icon-categories" class="param-icon-categories">';
-        $output .= '<option value="">'.__('From all categories', KT_THEME_LANG).'</option>';
+        $output .= '<option value="">'.__('From all categories', 'wingman').'</option>';
         foreach($lists as $k => $v){
             $text = ucwords(str_replace('_', ' ', $k));
             $output .= '<option value="'.$k.'">'.$text.'</option>';

@@ -24,17 +24,17 @@ class WPBakeryShortCode_Socials extends WPBakeryShortCode {
         $output = $social_icons = '';
 
         $socials_arr = array(
-            'facebook' => array('title' => __('Facebook', KT_THEME_LANG), 'icon' => 'fa fa-facebook', 'link' => '%s'),
-            'twitter' => array('title' => __('Twitter', KT_THEME_LANG), 'icon' => 'fa fa-twitter', 'link' => 'http://www.twitter.com/%s'),
-            'dribbble' => array('title' => __('Dribbble', KT_THEME_LANG), 'icon' => 'fa fa-dribbble', 'link' => 'http://www.dribbble.com/%s'),
-            'vimeo' => array('title' => __('Vimeo', KT_THEME_LANG), 'icon' => 'fa fa-vimeo-square', 'link' => 'http://www.vimeo.com/%s'),
-            'tumblr' => array('title' => __('Tumblr', KT_THEME_LANG), 'icon' => 'fa fa-tumblr', 'link' => 'http://%s.tumblr.com/'),
-            'skype' => array('title' => __('Skype', KT_THEME_LANG), 'icon' => 'fa fa-skype', 'link' => 'skype:%s'),
-            'linkedin' => array('title' => __('LinkedIn', KT_THEME_LANG), 'icon' => 'fa fa-linkedin', 'link' => '%s'),
-            'googleplus' => array('title' => __('Google Plus', KT_THEME_LANG), 'icon' => 'fa fa-google-plus', 'link' => '%s'),
-            'youtube' => array('title' => __('Youtube', KT_THEME_LANG), 'icon' => 'fa fa-youtube', 'link' => 'http://www.youtube.com/user/%s'),
-            'pinterest' => array('title' => __('Pinterest', KT_THEME_LANG), 'icon' => 'fa fa-pinterest', 'link' => 'http://www.pinterest.com/%s'),
-            'instagram' => array('title' => __('Instagram', KT_THEME_LANG), 'icon' => 'fa fa-instagram', 'link' => 'http://instagram.com/%s'),
+            'facebook' => array('title' => __('Facebook', 'wingman'), 'icon' => 'fa fa-facebook', 'link' => '%s'),
+            'twitter' => array('title' => __('Twitter', 'wingman'), 'icon' => 'fa fa-twitter', 'link' => 'http://www.twitter.com/%s'),
+            'dribbble' => array('title' => __('Dribbble', 'wingman'), 'icon' => 'fa fa-dribbble', 'link' => 'http://www.dribbble.com/%s'),
+            'vimeo' => array('title' => __('Vimeo', 'wingman'), 'icon' => 'fa fa-vimeo-square', 'link' => 'http://www.vimeo.com/%s'),
+            'tumblr' => array('title' => __('Tumblr', 'wingman'), 'icon' => 'fa fa-tumblr', 'link' => 'http://%s.tumblr.com/'),
+            'skype' => array('title' => __('Skype', 'wingman'), 'icon' => 'fa fa-skype', 'link' => 'skype:%s'),
+            'linkedin' => array('title' => __('LinkedIn', 'wingman'), 'icon' => 'fa fa-linkedin', 'link' => '%s'),
+            'googleplus' => array('title' => __('Google Plus', 'wingman'), 'icon' => 'fa fa-google-plus', 'link' => '%s'),
+            'youtube' => array('title' => __('Youtube', 'wingman'), 'icon' => 'fa fa-youtube', 'link' => 'http://www.youtube.com/user/%s'),
+            'pinterest' => array('title' => __('Pinterest', 'wingman'), 'icon' => 'fa fa-pinterest', 'link' => 'http://www.pinterest.com/%s'),
+            'instagram' => array('title' => __('Instagram', 'wingman'), 'icon' => 'fa fa-instagram', 'link' => 'http://instagram.com/%s'),
         );
 
         foreach($socials_arr as $k => &$v){
@@ -121,34 +121,34 @@ class WPBakeryShortCode_Socials extends WPBakeryShortCode {
 
 // Add your Visual Composer logic here
 vc_map( array(
-    "name" => __( "Social", KT_THEME_LANG),
+    "name" => __( "Social", 'wingman'),
     "base" => "socials",
-    "category" => __('by Theme', KT_THEME_LANG ),
-    "description" => __( "Social", KT_THEME_LANG),
+    "category" => __('by Theme', 'wingman' ),
+    "description" => __( "Social", 'wingman'),
     "wrapper_class" => "clearfix",
     "params" => array(
         array(
             "type" => "kt_socials",
             "class" => "",
-            "heading" => __("Choose social", KT_THEME_LANG),
+            "heading" => __("Choose social", 'wingman'),
             "param_name" => "social",
             "value" => '',
-            "description" => __("Empty for select all, Drop and sortable social", KT_THEME_LANG),
+            "description" => __("Empty for select all, Drop and sortable social", 'wingman'),
             "admin_label" => true,
         ),
         array(
 			"type" => "dropdown",
 			"class" => "",
-			"heading" => __("Style",KT_THEME_LANG),
+			"heading" => __("Style",'wingman'),
 			"param_name" => "style",
 			"value" => array(
-                __('Accent', KT_THEME_LANG) => 'accent',
-                __('Dark', KT_THEME_LANG) => 'dark',
-                __('Light', KT_THEME_LANG) => 'light',
-                __('Color', KT_THEME_LANG) => 'color',
-                __('Custom Color', KT_THEME_LANG) => 'custom',
+                __('Accent', 'wingman') => 'accent',
+                __('Dark', 'wingman') => 'dark',
+                __('Light', 'wingman') => 'light',
+                __('Color', 'wingman') => 'color',
+                __('Custom Color', 'wingman') => 'custom',
 			),
-			"description" => __("",KT_THEME_LANG),
+			"description" => __("",'wingman'),
             "admin_label" => true,
 		),
         array(
@@ -176,56 +176,56 @@ vc_map( array(
                 __( 'Outline Rounded', 'js_composer' ) => 'rounded-less-outline',
                 __( 'Outline Diamond Square', 'js_composer' ) => 'diamond-square-outline',
             ),
-            'description' => __( 'Select background shape and style for social.', KT_THEME_LANG ),
+            'description' => __( 'Select background shape and style for social.', 'wingman' ),
             "admin_label" => true,
         ),
 
         array(
 			"type" => "dropdown",
 			"class" => "",
-			"heading" => __("Size",KT_THEME_LANG),
+			"heading" => __("Size",'wingman'),
 			"param_name" => "size",
 			"value" => array(
-                __('Standard', KT_THEME_LANG) => 'standard',
-                __('Small', KT_THEME_LANG) => 'small',
+                __('Standard', 'wingman') => 'standard',
+                __('Small', 'wingman') => 'small',
 			),
-			"description" => __("",KT_THEME_LANG),
+			"description" => __("",'wingman'),
             "admin_label" => true,
 		),
         array(
             "type" => "dropdown",
             "class" => "",
-            "heading" => __("Tooltip",KT_THEME_LANG),
+            "heading" => __("Tooltip",'wingman'),
             "param_name" => "tooltip",
             "value" => array(
-                __('None', KT_THEME_LANG) => '',
-                __('Top', KT_THEME_LANG) => 'top',
-                __('Right', KT_THEME_LANG) => 'right',
-                __('Bottom', KT_THEME_LANG) => 'bottom',
-                __('Left', KT_THEME_LANG) => 'left',
+                __('None', 'wingman') => '',
+                __('Top', 'wingman') => 'top',
+                __('Right', 'wingman') => 'right',
+                __('Bottom', 'wingman') => 'bottom',
+                __('Left', 'wingman') => 'left',
             ),
             'std' => 'top',
-            "description" => __("Select the tooltip position",KT_THEME_LANG),
+            "description" => __("Select the tooltip position",'wingman'),
             "admin_label" => true,
         ),
 
         array(
             "type" => "dropdown",
             "class" => "",
-            "heading" => __("Align",KT_THEME_LANG),
+            "heading" => __("Align",'wingman'),
             "param_name" => "align",
             "value" => array(
-                __('None', KT_THEME_LANG) => '',
-                __('Center', KT_THEME_LANG) => 'center',
-                __('Left', KT_THEME_LANG) => 'left',
-                __('Right', KT_THEME_LANG) => 'right'
+                __('None', 'wingman') => '',
+                __('Center', 'wingman') => 'center',
+                __('Left', 'wingman') => 'left',
+                __('Right', 'wingman') => 'right'
             ),
-            "description" => __("",KT_THEME_LANG)
+            "description" => __("",'wingman')
         ),
         
         array(
             "type" => "kt_number",
-            "heading" => __("Space Between item", KT_THEME_LANG),
+            "heading" => __("Space Between item", 'wingman'),
             "param_name" => "space_between_item",
             "value" => 3,
             "min" => 0,

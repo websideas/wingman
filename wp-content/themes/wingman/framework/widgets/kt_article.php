@@ -11,35 +11,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Widget_KT_Posts extends WP_Widget {
 
     public function __construct() {
-        $widget_ops = array('classname' => 'widget_kt_posts', 'description' => __( "Show posts of categories.") );
-        parent::__construct('kt_posts', __('KT: Posts', KT_THEME_LANG), $widget_ops);
+        $widget_ops = array('classname' => 'widget_kt_posts', 'description' => __( "Show posts of categories.", 'wingman') );
+        parent::__construct('kt_posts', __('KT: Posts', 'wingman'), $widget_ops);
         $this->alt_option_name = 'widget_kt_posts';
-
-        add_action( 'save_post', array($this, 'flush_widget_cache') );
-        add_action( 'deleted_post', array($this, 'flush_widget_cache') );
-        add_action( 'switch_theme', array($this, 'flush_widget_cache') );
     }
 
     public function widget($args, $instance) {
-        $cache = array();
-        if ( ! $this->is_preview() ) {
-            $cache = wp_cache_get( 'widget_kt_posts', 'widget' );
-        }
-
-        if ( ! is_array( $cache ) ) {
-            $cache = array();
-        }
 
         if ( ! isset( $args['widget_id'] ) ) {
             $args['widget_id'] = $this->id;
         }
-
-        if ( isset( $cache[ $args['widget_id'] ] ) ) {
-            echo $cache[ $args['widget_id'] ];
-            return;
-        }
-
-        ob_start();
 
         $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
@@ -59,8 +40,6 @@ class Widget_KT_Posts extends WP_Widget {
         if(is_array($instance['category'])){
             $args_article['category__in'] = $instance['category'];
         }
-
-        //print_r($args_article);
 
         /**
          * Filter the arguments for the KT Posts widget.
@@ -125,12 +104,6 @@ class Widget_KT_Posts extends WP_Widget {
 
         endif;
 
-        if ( ! $this->is_preview() ) {
-            $cache[ $args['widget_id'] ] = ob_get_flush();
-            wp_cache_set( 'widget_kt_posts', $cache, 'widget' );
-        } else {
-            ob_end_flush();
-        }
     }
 
     public function update( $new_instance, $old_instance ) {
@@ -158,21 +131,11 @@ class Widget_KT_Posts extends WP_Widget {
             $instance['order'] = 'DESC';
         }
 
-        $this->flush_widget_cache();
-
-        $alloptions = wp_cache_get( 'alloptions', 'options' );
-        if ( isset($alloptions['widget_kt_posts']) )
-            delete_option('widget_kt_posts');
-
         return $instance;
     }
 
-    public function flush_widget_cache() {
-        wp_cache_delete('widget_kt_posts', 'widget');
-    }
-
     public function form( $instance ) {
-        $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : __( 'Recent Posts' , KT_THEME_LANG);
+        $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : __( 'Recent Posts' , 'wingman');
         $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
         $show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : true;
         $show_category = isset( $instance['show_category'] ) ? (bool) $instance['show_category'] : true;
@@ -189,13 +152,13 @@ class Widget_KT_Posts extends WP_Widget {
         $categories = get_terms( 'category', array('hide_empty' => false));
 
         ?>
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'wingman' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-        <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:', 'wingman' ); ?></label>
             <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" class="widefat" /></p>
 
-        <div><label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Categories:',KT_THEME_LANG); ?> </label>
+        <div><label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Categories:','wingman'); ?> </label>
             <select class="widefat categories-chosen" id="<?php echo $this->get_field_id('category'); ?>" name="<?php echo $this->get_field_name('category'); ?>[]" multiple="multiple">
                 <?php foreach($categories as $item){ ?>
                     <option <?php if (in_array($item->term_id, $category)){ echo 'selected="selected"';} ?> value="<?php echo $item->term_id ?>"><?php echo $item->name; ?></option>
@@ -203,45 +166,45 @@ class Widget_KT_Posts extends WP_Widget {
             </select>
         </div>
 
-        <p><label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('Order by:', KT_THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('Order by:', 'wingman'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('orderby'); ?>" name="<?php echo $this->get_field_name('orderby'); ?>">
-                <option <?php selected( $orderby, 'name' ); ?> value="name"><?php _e('Name',KT_THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'id' ); ?> value="id"><?php _e('ID',KT_THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'date' ); ?> value="date"><?php _e('Date',KT_THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'author' ); ?> value="author"><?php _e('Author',KT_THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'modified' ); ?> value="modified"><?php _e('Modified',KT_THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'rand' ); ?> value="rand"><?php _e('Rand',KT_THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'comment_count' ); ?> value="comment_count "><?php _e('Comment count',KT_THEME_LANG); ?></option>
+                <option <?php selected( $orderby, 'name' ); ?> value="name"><?php _e('Name','wingman'); ?></option>
+                <option <?php selected( $orderby, 'id' ); ?> value="id"><?php _e('ID','wingman'); ?></option>
+                <option <?php selected( $orderby, 'date' ); ?> value="date"><?php _e('Date','wingman'); ?></option>
+                <option <?php selected( $orderby, 'author' ); ?> value="author"><?php _e('Author','wingman'); ?></option>
+                <option <?php selected( $orderby, 'modified' ); ?> value="modified"><?php _e('Modified','wingman'); ?></option>
+                <option <?php selected( $orderby, 'rand' ); ?> value="rand"><?php _e('Rand','wingman'); ?></option>
+                <option <?php selected( $orderby, 'comment_count' ); ?> value="comment_count "><?php _e('Comment count','wingman'); ?></option>
             </select>
         </p>
 
-        <p><label for="<?php echo $this->get_field_id('order'); ?>"><?php _e('Order:',KT_THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('order'); ?>"><?php _e('Order:','wingman'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('order'); ?>" name="<?php echo $this->get_field_name('order'); ?>">
-                <option <?php selected( $order, 'DESC' ); ?> value="DESC"><?php _e('Desc',KT_THEME_LANG); ?></option>
-                <option <?php selected( $order, 'ASC' ); ?> value="ASC"><?php _e('ASC',KT_THEME_LANG); ?></option>
+                <option <?php selected( $order, 'DESC' ); ?> value="DESC"><?php _e('Desc','wingman'); ?></option>
+                <option <?php selected( $order, 'ASC' ); ?> value="ASC"><?php _e('ASC','wingman'); ?></option>
             </select>
         </p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $show_date ); ?> id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?' ); ?></label></p>
+            <label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?', 'wingman' ); ?></label></p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $show_category ); ?> id="<?php echo $this->get_field_id( 'show_category' ); ?>" name="<?php echo $this->get_field_name( 'show_category' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'show_category' ); ?>"><?php _e( 'Display post category?', KT_THEME_LANG ); ?></label></p>
+            <label for="<?php echo $this->get_field_id( 'show_category' ); ?>"><?php _e( 'Display post category?', 'wingman' ); ?></label></p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $show_image ); ?> id="<?php echo $this->get_field_id( 'show_image' ); ?>" name="<?php echo $this->get_field_name( 'show_image' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'show_image' ); ?>"><?php _e( 'Display post image?', KT_THEME_LANG ); ?></label></p>
+            <label for="<?php echo $this->get_field_id( 'show_image' ); ?>"><?php _e( 'Display post image?', 'wingman' ); ?></label></p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $show_comment ); ?> id="<?php echo $this->get_field_id( 'show_comment' ); ?>" name="<?php echo $this->get_field_name( 'show_comment' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'show_comment' ); ?>"><?php _e( 'Display post comment?', KT_THEME_LANG ); ?></label></p>
+            <label for="<?php echo $this->get_field_id( 'show_comment' ); ?>"><?php _e( 'Display post comment?', 'wingman' ); ?></label></p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $show_author ); ?> id="<?php echo $this->get_field_id( 'show_author' ); ?>" name="<?php echo $this->get_field_name( 'show_author' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'show_author' ); ?>"><?php _e( 'Display post author?', KT_THEME_LANG ); ?></label></p>
+            <label for="<?php echo $this->get_field_id( 'show_author' ); ?>"><?php _e( 'Display post author?', 'wingman' ); ?></label></p>
 
 
-        <p><label for="<?php echo $this->get_field_id('layout'); ?>"><?php _e('Layout:',KT_THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('layout'); ?>"><?php _e('Layout:','wingman'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('layout'); ?>" name="<?php echo $this->get_field_name('layout'); ?>">
-                <option <?php selected( $layout, '1' ); ?> value="1"><?php _e('Layout 1',KT_THEME_LANG); ?></option>
-                <option <?php selected( $layout, '2' ); ?> value="2"><?php _e('Layout 2',KT_THEME_LANG); ?></option>
+                <option <?php selected( $layout, '1' ); ?> value="1"><?php _e('Layout 1','wingman'); ?></option>
+                <option <?php selected( $layout, '2' ); ?> value="2"><?php _e('Layout 2','wingman'); ?></option>
             </select>
         </p>
 
@@ -256,9 +219,6 @@ class Widget_KT_Posts extends WP_Widget {
     <?php
     }
 }
-
-
-
 
 /**
  * Register KT_Posts widget

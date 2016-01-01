@@ -21,7 +21,7 @@ if(!function_exists('putRevSlider')){
                 $output = new RevSliderOutput();
                 $option1Name = "Include RevSlider libraries globally (all pages/posts)";
                 $option2Name = "Pages to include RevSlider libraries";
-                $output->putErrorMessage(__("If you want to use the PHP function \"putRevSlider\" in your code please make sure to check \" ",REVSLIDER_TEXTDOMAIN).$option1Name.__(" \" in the backend's \"General Settings\" (top right panel). <br> <br> Or add the current page to the \"",REVSLIDER_TEXTDOMAIN).$option2Name.__("\" option box."));
+                $output->putErrorMessage(__("If you want to use the PHP function \"putRevSlider\" in your code please make sure to check \" ", 'wingman').$option1Name.__(" \" in the backend's \"General Settings\" (top right panel). <br> <br> Or add the current page to the \"", 'wingman').$option2Name.__("\" option box.", 'wingman'));
                 return(false);
             }
 
@@ -186,7 +186,7 @@ function kt_fronted_likepost_callback() {
         //The cookie will expire after 30 days
         setcookie('like_post_'. $post_id, $post_id, time() + (86400 * 30), '/');
     }
-    $text = ($like_count == 0 || $like_count == 1) ? __('like',KT_THEME_LANG) : __('likes',KT_THEME_LANG);
+    $text = ($like_count == 0 || $like_count == 1) ? __('like','wingman') : __('likes','wingman');
 
     $output['count'] = $like_count. ' '.$text;
     echo json_encode($output);

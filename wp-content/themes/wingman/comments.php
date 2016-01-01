@@ -22,7 +22,7 @@ if ( post_password_required() ) {
     <?php if ( have_comments() ) : ?>
         <h2 class="comments-title">
             <?php
-            printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'twentyfifteen' ),
+            printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'wingman' ),
                 number_format_i18n( get_comments_number() ), get_the_title() );
             ?>
         </h2>
@@ -46,7 +46,7 @@ if ( post_password_required() ) {
     // If comments are closed and there are comments, let's leave a little note, shall we?
     if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
         ?>
-        <p class="no-comments"><?php _e( 'Comments are closed.', 'twentyfifteen' ); ?></p>
+        <p class="no-comments"><?php _e( 'Comments are closed.', 'wingman' ); ?></p>
     <?php endif; ?>
     
     <?php
@@ -57,25 +57,25 @@ if ( post_password_required() ) {
     $aria_req = ( $req ? " aria-required='true'" : '' );
     $html_req = ( $req ? " required='required'" : '' );
 
-    $required = ' '.__('(required)', KT_THEME_LANG);
+    $required = ' '.__('(required)', 'wingman');
 
     $new_fields = array(
         'author' => '<p class="comment_field-column">' .
-            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"  placeholder="'.__('Name', KT_THEME_LANG).'"' . $aria_req . $html_req . ' /></p>',
+            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"  placeholder="'.__('Name', 'wingman').'"' . $aria_req . $html_req . ' /></p>',
         'email'  => '<p class="comment_field-column">' .
-            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="'.__('Email', KT_THEME_LANG).'"' . $aria_req . $html_req . ' /></p>',
+            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="'.__('Email', 'wingman').'"' . $aria_req . $html_req . ' /></p>',
         'url'    => '<p class="comment_field-column">' .
-            '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="'.__('Website', KT_THEME_LANG).'" /></p>',
+            '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="'.__('Website', 'wingman').'" /></p>',
     );
 
 
 
     $comments_args = array(
-        'label_submit'      => __( 'send messages' ),
+        'label_submit'      => __( 'send messages', 'wingman' ),
         'fields' => apply_filters( 'comment_form_default_fields', $new_fields ),
         //'comment_form_before_fields' => '<div>',
         //'comment_form_after_fields' => '</div>',
-        'comment_field' => '<p><textarea id="comment" name="comment" placeholder="'.__('Your Comment', KT_THEME_LANG).'"  aria-required="true" rows="6"></textarea></p>',
+        'comment_field' => '<p><textarea id="comment" name="comment" placeholder="'.__('Your Comment', 'wingman').'"  aria-required="true" rows="6"></textarea></p>',
         'class_submit'      => 'btn btn-default',
     );
 

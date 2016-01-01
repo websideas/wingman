@@ -216,20 +216,20 @@ class WPBakeryShortCode_List_Blog_Posts extends WPBakeryShortCode {
 
 // Add your Visual Composer logic here
 vc_map( array(
-    "name" => __( "Blog Posts", KT_THEME_LANG),
+    "name" => __( "Blog Posts", 'wingman'),
     "base" => "list_blog_posts",
-    "category" => __('by Theme', KT_THEME_LANG ),
-    "description" => __( "Display blog posts", KT_THEME_LANG),
+    "category" => __('by Theme', 'wingman' ),
+    "description" => __( "Display blog posts", 'wingman'),
     "params" => array(
         // Layout setting
         array(
             "type" => "kt_heading",
-            "heading" => __("Layout setting", KT_THEME_LANG),
+            "heading" => __("Layout setting", 'wingman'),
             "param_name" => "layout_settings",
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Loop Style', KT_THEME_LANG ),
+            'heading' => __( 'Loop Style', 'wingman' ),
             'param_name' => 'blog_type',
             'value' => array(
                 __( 'Standard', 'js_composer' ) => 'classic',
@@ -242,7 +242,7 @@ vc_map( array(
         ),
         array(
             "type" => "kt_heading",
-            "heading" => __("Columns to Show?", KT_THEME_LANG),
+            "heading" => __("Columns to Show?", 'wingman'),
             "edit_field_class" => "kt_sub_heading vc_column",
             "param_name" => "items_show",
             'dependency' => array(
@@ -252,7 +252,7 @@ vc_map( array(
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'on Desktop', KT_THEME_LANG ),
+            'heading' => __( 'on Desktop', 'wingman' ),
             'param_name' => 'blog_columns',
             'value' => array(
                 __( '1 column', 'js_composer' ) => '1',
@@ -270,7 +270,7 @@ vc_map( array(
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'on Tablet', KT_THEME_LANG ),
+            'heading' => __( 'on Tablet', 'wingman' ),
             'param_name' => 'blog_columns_tablet',
             'value' => array(
                 __( '1 column', 'js_composer' ) => '1',
@@ -290,7 +290,7 @@ vc_map( array(
         
         array(
             "type" => "kt_heading",
-            "heading" => __("Extra setting", KT_THEME_LANG),
+            "heading" => __("Extra setting", 'wingman'),
             "param_name" => "extra_settings",
         ),
         array(
@@ -298,8 +298,8 @@ vc_map( array(
             'heading' => __( 'Text align', 'js_composer' ),
             'param_name' => 'blog_align',
             'value' => array(
-                __( 'Left', KT_THEME_LANG ) => 'left',
-                __( 'Center', KT_THEME_LANG ) => 'center'
+                __( 'Left', 'wingman' ) => 'left',
+                __( 'Center', 'wingman' ) => 'center'
             ),
             'description' => __( 'Not working for archive style classic', 'js_composer' ),
             'dependency' => array(
@@ -309,30 +309,30 @@ vc_map( array(
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Readmore button', KT_THEME_LANG ),
+            'heading' => __( 'Readmore button', 'wingman' ),
             'param_name' => 'readmore',
             'value' => array(
-                __('None', KT_THEME_LANG) => '',
+                __('None', 'wingman') => '',
                 __( 'Link', 'js_composer' ) => 'link',
             ),
-            "description" => __("Show or hide the readmore button.", KT_THEME_LANG),
+            "description" => __("Show or hide the readmore button.", 'wingman'),
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Thumbnail type', KT_THEME_LANG ),
+            'heading' => __( 'Thumbnail type', 'wingman' ),
             'param_name' => 'thumbnail_type',
             'value' => array(
                 __( 'Post format', 'js_composer' ) => 'format',
                 __( 'Featured Image', 'js_composer' ) => 'image',
             ),
-            'description' => __( 'Select thumbnail type for article.', KT_THEME_LANG )
+            'description' => __( 'Select thumbnail type for article.', 'wingman' )
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Show Excerpt?', KT_THEME_LANG ),
+            'heading' => __( 'Show Excerpt?', 'wingman' ),
             'param_name' => 'show_excerpt',
             'value' => 'true',
-            "description" => __("Show or hide the Excerpt.", KT_THEME_LANG),
+            "description" => __("Show or hide the Excerpt.", 'wingman'),
         ),
 
         array(
@@ -353,10 +353,10 @@ vc_map( array(
             'param_name' => 'blog_pagination',
             'admin_label' => true,
             'value' => array(
-                __( 'Classic pagination', KT_THEME_LANG ) => 'classic',
-                __( 'Load More button', KT_THEME_LANG ) => 'loadmore',
-                __( 'Normal pagination', KT_THEME_LANG ) => 'normal',
-                __( 'None', KT_THEME_LANG ) => 'none',
+                __( 'Classic pagination', 'wingman' ) => 'classic',
+                __( 'Load More button', 'wingman' ) => 'loadmore',
+                __( 'Normal pagination', 'wingman' ) => 'normal',
+                __( 'None', 'wingman' ) => 'none',
             ),
             'description' => __( 'Select the navigation type', 'js_composer' )
         ),
@@ -386,25 +386,25 @@ vc_map( array(
         // Data settings
         array(
             "type" => "dropdown",
-            "heading" => __("Data source", KT_THEME_LANG),
+            "heading" => __("Data source", 'wingman'),
             "param_name" => "source",
             "value" => array(
-                __('All', KT_THEME_LANG) => '',
-                __('Specific Categories', KT_THEME_LANG) => 'categories',
-                __('Specific Posts', KT_THEME_LANG) => 'posts',
-                __('Specific Authors', KT_THEME_LANG) => 'authors'
+                __('All', 'wingman') => '',
+                __('Specific Categories', 'wingman') => 'categories',
+                __('Specific Posts', 'wingman') => 'posts',
+                __('Specific Authors', 'wingman') => 'authors'
             ),
             "admin_label" => true,
             'std' => '',
-            "description" => __("Select content type for your posts.", KT_THEME_LANG),
+            "description" => __("Select content type for your posts.", 'wingman'),
             'group' => __( 'Data settings', 'js_composer' ),
         ),
         array(
             "type" => "kt_taxonomy",
             'taxonomy' => 'category',
-            'heading' => __( 'Categories', KT_THEME_LANG ),
+            'heading' => __( 'Categories', 'wingman' ),
             'param_name' => 'categories',
-            'placeholder' => __( 'Select your categories', KT_THEME_LANG ),
+            'placeholder' => __( 'Select your categories', 'wingman' ),
             "dependency" => array("element" => "source","value" => array('categories')),
             'multiple' => true,
             'group' => __( 'Data settings', 'js_composer' ),
@@ -499,45 +499,45 @@ vc_map( array(
         // Meta setting
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Show Meta', KT_THEME_LANG ),
+            'heading' => __( 'Show Meta', 'wingman' ),
             'param_name' => 'show_meta',
             'value' => 'true',
-            "description" => __("Show or hide the meta.", KT_THEME_LANG),
+            "description" => __("Show or hide the meta.", 'wingman'),
             'group' => __( 'Meta', 'js_composer' ),
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Show Author', KT_THEME_LANG ),
+            'heading' => __( 'Show Author', 'wingman' ),
             'param_name' => 'show_author',
             'value' => 'false',
-            "description" => __("Show or hide the post author.", KT_THEME_LANG),
+            "description" => __("Show or hide the post author.", 'wingman'),
             'group' => __( 'Meta', 'js_composer' ),
             "dependency" => array("element" => "show_meta","value" => array('true')),
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Show Category', KT_THEME_LANG ),
+            'heading' => __( 'Show Category', 'wingman' ),
             'param_name' => 'show_category',
             'value' => 'false',
-            "description" => __("Show or hide the post category.", KT_THEME_LANG),
+            "description" => __("Show or hide the post category.", 'wingman'),
             'group' => __( 'Meta', 'js_composer' ),
             "dependency" => array("element" => "show_meta","value" => array('true')),
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Show Comment', KT_THEME_LANG ),
+            'heading' => __( 'Show Comment', 'wingman' ),
             'param_name' => 'show_comment',
             'value' => 'false',
-            "description" => __("Show or hide the post comment.", KT_THEME_LANG),
+            "description" => __("Show or hide the post comment.", 'wingman'),
             'group' => __( 'Meta', 'js_composer' ),
             "dependency" => array("element" => "show_meta","value" => array('true')),
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Show Date', KT_THEME_LANG ),
+            'heading' => __( 'Show Date', 'wingman' ),
             'param_name' => 'show_date',
             'value' => 'true',
-            "description" => __("Show or hide the post date.", KT_THEME_LANG),
+            "description" => __("Show or hide the post date.", 'wingman'),
             'group' => __( 'Meta', 'js_composer' ),
             "dependency" => array("element" => "show_meta","value" => array('true')),
         ),
@@ -546,14 +546,14 @@ vc_map( array(
             'heading' => __( 'Date format', 'js_composer' ),
             'param_name' => 'date_format',
             'value' => array(
-                __( '05 December 2014', KT_THEME_LANG ) => 'd F Y',
-                __( 'December 13th 2014', KT_THEME_LANG ) => 'F jS Y',
-                __( '13th December 2014', KT_THEME_LANG ) => 'jS F Y',
-                __( '05 Dec 2014', KT_THEME_LANG ) => 'd M Y',
-                __( 'Dec 05 2014', KT_THEME_LANG ) => 'M d Y',
-                __( 'Time ago', KT_THEME_LANG ) => 'time',
+                __( '05 December 2014', 'wingman' ) => 'd F Y',
+                __( 'December 13th 2014', 'wingman' ) => 'F jS Y',
+                __( '13th December 2014', 'wingman' ) => 'jS F Y',
+                __( '05 Dec 2014', 'wingman' ) => 'd M Y',
+                __( 'Dec 05 2014', 'wingman' ) => 'M d Y',
+                __( 'Time ago', 'wingman' ) => 'time',
             ),
-            'description' => __( 'Select your date format', KT_THEME_LANG ),
+            'description' => __( 'Select your date format', 'wingman' ),
             'group' => __( 'Meta', 'js_composer' ),
             'dependency' => array(
                 'element' => 'show_date',
@@ -562,18 +562,18 @@ vc_map( array(
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Show Like Post', KT_THEME_LANG ),
+            'heading' => __( 'Show Like Post', 'wingman' ),
             'param_name' => 'show_like_post',
             'value' => 'false',
-            "description" => __("Show or hide the like post.", KT_THEME_LANG),
+            "description" => __("Show or hide the like post.", 'wingman'),
             'group' => __( 'Meta', 'js_composer' ),
             "dependency" => array("element" => "show_meta","value" => array('true')),
         ),
         array(
             'param_name' => 'show_view_number',
             'type' => 'kt_switch',
-            'heading' => __('Show View Number', KT_THEME_LANG),
-            'description' => __('Show view number in blog posts.', KT_THEME_LANG),
+            'heading' => __('Show View Number', 'wingman'),
+            'description' => __('Show view number in blog posts.', 'wingman'),
             'value' => 'false',
             'group' => __( 'Meta', 'js_composer' ),
             "dependency" => array("element" => "show_meta","value" => array('true')),

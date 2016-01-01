@@ -55,7 +55,7 @@
                             printf( '<a href="%1$s" class="%2$s">%3$s</a>',
                                 esc_url( get_permalink( get_the_ID() ) ),
                                 $moreclass,
-                                sprintf( __( 'Read more %s', KT_THEME_LANG ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+                                sprintf( __( 'Read more %s', 'wingman' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
                             );
                             ?>
                         </div>

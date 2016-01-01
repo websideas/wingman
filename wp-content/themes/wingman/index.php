@@ -14,10 +14,10 @@
 
 if( is_singular() ){
     if( is_page( ) ){
-        include_once(get_template_directory().'/page.php' ) ;
+        require get_template_directory().'/page.php';
     }else{
-        include_once (get_template_directory().'/single.php');
+        require get_template_directory().'/single.php';
     }
 }else{
-    include get_template_directory().'/archive.php';
+    require get_template_directory().'/archive.php';
 }

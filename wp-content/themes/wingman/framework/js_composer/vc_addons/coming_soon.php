@@ -107,10 +107,10 @@ class WPBakeryShortCode_Comingsoon extends WPBakeryShortCode_VC_Custom_heading {
 
 // Add your Visual Composer logic here
 vc_map( array(
-    "name" => __( "Coming soon", KT_THEME_LANG),
+    "name" => __( "Coming soon", 'wingman'),
     "base" => "comingsoon",
-    "category" => __('by Theme', KT_THEME_LANG ),
-    "description" => __( "", KT_THEME_LANG),
+    "category" => __('by Theme', 'wingman' ),
+    "description" => __( "", 'wingman'),
     "params" => array(
         array(
             'type' => 'textfield',
@@ -128,7 +128,7 @@ vc_map( array(
 
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Style', KT_THEME_LANG ),
+            'heading' => __( 'Style', 'wingman' ),
             'param_name' => 'style_coming',
             'value' => array(
                 __( 'Style 1', 'js_composer' ) => 'style1',
@@ -140,9 +140,9 @@ vc_map( array(
         //Typography settings
         array(
             "type" => "kt_heading",
-            "heading" => __("Title typography", KT_THEME_LANG),
+            "heading" => __("Title typography", 'wingman'),
             "param_name" => "title_typography",
-            'group' => __( 'Typography', KT_THEME_LANG )
+            'group' => __( 'Typography', 'wingman' )
         ),
         array(
             'type' => 'font_container',
@@ -161,7 +161,7 @@ vc_map( array(
                     'color_description' => __( 'Select heading color.', 'js_composer' ),
                 ),
             ),
-            'group' => __( 'Typography', KT_THEME_LANG )
+            'group' => __( 'Typography', 'wingman' )
         ),
         array(
             'type' => 'checkbox',
@@ -169,7 +169,7 @@ vc_map( array(
             'param_name' => 'use_theme_fonts',
             'value' => array( __( 'Yes', 'js_composer' ) => 'yes' ),
             'description' => __( 'Use font family from the theme.', 'js_composer' ),
-            'group' => __( 'Typography', KT_THEME_LANG ),
+            'group' => __( 'Typography', 'wingman' ),
             'std' => 'yes'
         ),
         array(
@@ -181,7 +181,7 @@ vc_map( array(
                     'font_style_description' => __( 'Select font styling.', 'js_composer' )
                 )
             ),
-            'group' => __( 'Typography', KT_THEME_LANG ),
+            'group' => __( 'Typography', 'wingman' ),
             'dependency' => array(
                 'element' => 'use_theme_fonts',
                 'value_not_equal_to' => 'yes',
@@ -190,9 +190,9 @@ vc_map( array(
         ),
         array(
             "type" => "kt_heading",
-            "heading" => __('Value Typography', KT_THEME_LANG),
+            "heading" => __('Value Typography', 'wingman'),
             "param_name" => "value_typography",
-            'group' => __( 'Typography', KT_THEME_LANG )
+            'group' => __( 'Typography', 'wingman' )
         ),
         array(
             'type' => 'font_container',
@@ -212,7 +212,7 @@ vc_map( array(
                 ),
             ),
             'description' => __( '', 'js_composer' ),
-            'group' => __( 'Typography', KT_THEME_LANG )
+            'group' => __( 'Typography', 'wingman' )
         ),
         array(
             'type' => 'checkbox',
@@ -220,7 +220,7 @@ vc_map( array(
             'param_name' => 'use_theme_fonts_value',
             'value' => array( __( 'Yes', 'js_composer' ) => 'yes' ),
             'description' => __( 'Use font family from the theme.', 'js_composer' ),
-            'group' => __( 'Typography', KT_THEME_LANG ),
+            'group' => __( 'Typography', 'wingman' ),
             'std' => 'yes'
         ),
         array(
@@ -232,7 +232,7 @@ vc_map( array(
                     'font_style_description' => __( 'Select font styling.', 'js_composer' )
                 )
             ),
-            'group' => __( 'Typography', KT_THEME_LANG ),
+            'group' => __( 'Typography', 'wingman' ),
             'dependency' => array(
                 'element' => 'use_theme_fonts_value',
                 'value_not_equal_to' => 'yes',
@@ -241,10 +241,18 @@ vc_map( array(
         ),
 
         array(
-            'type' => 'kt_animate',
+            'type' => 'dropdown',
             'heading' => __( 'CSS Animation', 'js_composer' ),
             'param_name' => 'css_animation',
-            'value' => '',
+            'admin_label' => true,
+            'value' => array(
+                __( 'No', 'js_composer' ) => '',
+                __( 'Top to bottom', 'js_composer' ) => 'top-to-bottom',
+                __( 'Bottom to top', 'js_composer' ) => 'bottom-to-top',
+                __( 'Left to right', 'js_composer' ) => 'left-to-right',
+                __( 'Right to left', 'js_composer' ) => 'right-to-left',
+                __( 'Appear from center', 'js_composer' ) => "appear"
+            ),
             'description' => __( 'Select type of animation if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.', 'js_composer' )
         ),
         array(

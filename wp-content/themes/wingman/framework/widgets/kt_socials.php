@@ -12,8 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 class WP_Widget_KT_Socials extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array('classname' => 'widget_kt_socials', 'description' => __( 'Socials for widget.', KT_THEME_LANG ) );
-		parent::__construct('kt_socials', __('KT: Socials', KT_THEME_LANG ), $widget_ops);
+		$widget_ops = array('classname' => 'widget_kt_socials', 'description' => __( 'Socials for widget.', 'wingman' ) );
+		parent::__construct('kt_socials', __('KT: Socials', 'wingman' ), $widget_ops);
 	}
 
 	public function widget( $args, $instance ) {
@@ -80,7 +80,7 @@ class WP_Widget_KT_Socials extends WP_Widget {
 
 	public function form( $instance ) {
 		//Defaults
-		$instance = wp_parse_args( (array) $instance, array( 'title' => __('Socials', KT_THEME_LANG), 'target' => '_self', 'value' => '', 'style' => 'accent', 'background_style' => '', 'size' => 'standard', 'tooltip' => '', 'align' => '', 'space_between_item' => 3, 'custom_color' => '#82c14f' ) );
+		$instance = wp_parse_args( (array) $instance, array( 'title' => __('Socials', 'wingman'), 'target' => '_self', 'value' => '', 'style' => 'accent', 'background_style' => '', 'size' => 'standard', 'tooltip' => '', 'align' => '', 'space_between_item' => 3, 'custom_color' => '#82c14f' ) );
         $title = strip_tags($instance['title']);
         
         $value = isset( $instance['value'] ) ? $instance['value'] : '';
@@ -92,7 +92,7 @@ class WP_Widget_KT_Socials extends WP_Widget {
         $space_between_item    = isset( $instance['space_between_item'] ) ? absint( $instance['space_between_item'] ) : 3;
         $custom_color    = isset( $instance['custom_color'] ) ? $instance['custom_color'] : '#82c14f';
 	?>
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' , 'wingman'); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
         
         <?php
@@ -131,59 +131,59 @@ class WP_Widget_KT_Socials extends WP_Widget {
             </ul><!-- .kt-socials-profiles -->
             <input id="<?php echo $this->get_field_id( 'value' ); ?>" type="hidden" class="wpb_vc_param_value kt-socials-value" name="<?php echo $this->get_field_name( 'value' ); ?>" value="<?php echo esc_attr($value); ?>" />
         </div><!-- .kt-socials-options -->
-        <small><?php _e( 'Empty for select all, Drop and sortable social',KT_THEME_LANG ); ?></small>
+        <small><?php _e( 'Empty for select all, Drop and sortable social','wingman' ); ?></small>
         <?php wp_enqueue_script( 'cosials_js', KT_FW_JS.'kt_socials.js', array('jquery'), FW_VER, true); ?>
         
-        <p><label for="<?php echo $this->get_field_id('style'); ?>"><?php _e('Style:', KT_THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('style'); ?>"><?php _e('Style:', 'wingman'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('style'); ?>" name="<?php echo $this->get_field_name('style'); ?>">
-                <option <?php selected( $style, 'accent' ); ?> value="accent"><?php _e('Accent',KT_THEME_LANG); ?></option>
-                <option <?php selected( $style, 'dark' ); ?> value="dark"><?php _e('Dark',KT_THEME_LANG); ?></option>
-                <option <?php selected( $style, 'light' ); ?> value="light"><?php _e('Light',KT_THEME_LANG); ?></option>
-                <option <?php selected( $style, 'color' ); ?> value="color"><?php _e('Color',KT_THEME_LANG); ?></option>
-                <option <?php selected( $style, 'custom' ); ?> value="custom"><?php _e('Custom Color',KT_THEME_LANG); ?></option>
+                <option <?php selected( $style, 'accent' ); ?> value="accent"><?php _e('Accent','wingman'); ?></option>
+                <option <?php selected( $style, 'dark' ); ?> value="dark"><?php _e('Dark','wingman'); ?></option>
+                <option <?php selected( $style, 'light' ); ?> value="light"><?php _e('Light','wingman'); ?></option>
+                <option <?php selected( $style, 'color' ); ?> value="color"><?php _e('Color','wingman'); ?></option>
+                <option <?php selected( $style, 'custom' ); ?> value="custom"><?php _e('Custom Color','wingman'); ?></option>
             </select>
         </p>
-        <p><label for="<?php echo $this->get_field_id( 'custom_color' ); ?>"><?php _e( 'Custom Color:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'custom_color' ); ?>"><?php _e( 'Custom Color:', 'wingman' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'custom_color' ); ?>" name="<?php echo $this->get_field_name( 'custom_color' ); ?>" type="text" value="<?php echo $custom_color; ?>" /></p>
-        <p><label for="<?php echo $this->get_field_id('background_style'); ?>"><?php _e('Background Style:', KT_THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('background_style'); ?>"><?php _e('Background Style:', 'wingman'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('background_style'); ?>" name="<?php echo $this->get_field_name('background_style'); ?>">
-                <option <?php selected( $background_style, 'empty' ); ?> value=""><?php _e('None',KT_THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'rounded' ); ?> value="rounded"><?php _e('Circle',KT_THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'boxed' ); ?> value="boxed"><?php _e('Square',KT_THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'rounded-less' ); ?> value="rounded-less"><?php _e('Rounded',KT_THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'diamond-square' ); ?> value="diamond-square"><?php _e('Diamond Square',KT_THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'rounded-outline' ); ?> value="rounded-outline"><?php _e('Outline Circle',KT_THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'boxed-outline' ); ?> value="boxed-outline"><?php _e('Outline Square',KT_THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'rounded-less-outline' ); ?> value="rounded-less-outline"><?php _e('Outline Rounded',KT_THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'diamond-square-outline' ); ?> value="diamond-square-outline"><?php _e('Outline Diamond Square',KT_THEME_LANG); ?></option>
+                <option <?php selected( $background_style, 'empty' ); ?> value=""><?php _e('None','wingman'); ?></option>
+                <option <?php selected( $background_style, 'rounded' ); ?> value="rounded"><?php _e('Circle','wingman'); ?></option>
+                <option <?php selected( $background_style, 'boxed' ); ?> value="boxed"><?php _e('Square','wingman'); ?></option>
+                <option <?php selected( $background_style, 'rounded-less' ); ?> value="rounded-less"><?php _e('Rounded','wingman'); ?></option>
+                <option <?php selected( $background_style, 'diamond-square' ); ?> value="diamond-square"><?php _e('Diamond Square','wingman'); ?></option>
+                <option <?php selected( $background_style, 'rounded-outline' ); ?> value="rounded-outline"><?php _e('Outline Circle','wingman'); ?></option>
+                <option <?php selected( $background_style, 'boxed-outline' ); ?> value="boxed-outline"><?php _e('Outline Square','wingman'); ?></option>
+                <option <?php selected( $background_style, 'rounded-less-outline' ); ?> value="rounded-less-outline"><?php _e('Outline Rounded','wingman'); ?></option>
+                <option <?php selected( $background_style, 'diamond-square-outline' ); ?> value="diamond-square-outline"><?php _e('Outline Diamond Square','wingman'); ?></option>
             </select>
-            <small><?php _e('Select background shape and style for social.',KT_THEME_LANG); ?></small>
+            <small><?php _e('Select background shape and style for social.','wingman'); ?></small>
         </p>
-        <p><label for="<?php echo $this->get_field_id('size'); ?>"><?php _e('Size:', KT_THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('size'); ?>"><?php _e('Size:', 'wingman'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('size'); ?>" name="<?php echo $this->get_field_name('size'); ?>">
-                <option <?php selected( $size, 'standard' ); ?> value="standard"><?php _e('Standard',KT_THEME_LANG); ?></option>
-                <option <?php selected( $size, 'small' ); ?> value="small"><?php _e('Small',KT_THEME_LANG); ?></option>
+                <option <?php selected( $size, 'standard' ); ?> value="standard"><?php _e('Standard','wingman'); ?></option>
+                <option <?php selected( $size, 'small' ); ?> value="small"><?php _e('Small','wingman'); ?></option>
             </select>
         </p>
-        <p><label for="<?php echo $this->get_field_id('tooltip'); ?>"><?php _e('Tooltip:', KT_THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('tooltip'); ?>"><?php _e('Tooltip:', 'wingman'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('tooltip'); ?>" name="<?php echo $this->get_field_name('tooltip'); ?>">
-                <option <?php selected( $tooltip, '' ); ?> value=""><?php _e('None',KT_THEME_LANG); ?></option>
-                <option <?php selected( $tooltip, 'top' ); ?> value="top"><?php _e('Top',KT_THEME_LANG); ?></option>
-                <option <?php selected( $tooltip, 'right' ); ?> value="right"><?php _e('Right',KT_THEME_LANG); ?></option>
-                <option <?php selected( $tooltip, 'bottom' ); ?> value="bottom"><?php _e('Bottom',KT_THEME_LANG); ?></option>
-                <option <?php selected( $tooltip, 'left' ); ?> value="left"><?php _e('Left',KT_THEME_LANG); ?></option>
+                <option <?php selected( $tooltip, '' ); ?> value=""><?php _e('None','wingman'); ?></option>
+                <option <?php selected( $tooltip, 'top' ); ?> value="top"><?php _e('Top','wingman'); ?></option>
+                <option <?php selected( $tooltip, 'right' ); ?> value="right"><?php _e('Right','wingman'); ?></option>
+                <option <?php selected( $tooltip, 'bottom' ); ?> value="bottom"><?php _e('Bottom','wingman'); ?></option>
+                <option <?php selected( $tooltip, 'left' ); ?> value="left"><?php _e('Left','wingman'); ?></option>
             </select>
-            <small><?php _e('Select the tooltip position',KT_THEME_LANG); ?></small>
+            <small><?php _e('Select the tooltip position','wingman'); ?></small>
         </p>
-        <p><label for="<?php echo $this->get_field_id('align'); ?>"><?php _e('Align:', KT_THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('align'); ?>"><?php _e('Align:', 'wingman'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('align'); ?>" name="<?php echo $this->get_field_name('align'); ?>">
-                <option <?php selected( $align, '' ); ?> value=""><?php _e('None',KT_THEME_LANG); ?></option>
-                <option <?php selected( $align, 'center' ); ?> value="center"><?php _e('Center',KT_THEME_LANG); ?></option>
-                <option <?php selected( $align, 'left' ); ?> value="left"><?php _e('Left',KT_THEME_LANG); ?></option>
-                <option <?php selected( $align, 'right' ); ?> value="right"><?php _e('Right',KT_THEME_LANG); ?></option>
+                <option <?php selected( $align, '' ); ?> value=""><?php _e('None','wingman'); ?></option>
+                <option <?php selected( $align, 'center' ); ?> value="center"><?php _e('Center','wingman'); ?></option>
+                <option <?php selected( $align, 'left' ); ?> value="left"><?php _e('Left','wingman'); ?></option>
+                <option <?php selected( $align, 'right' ); ?> value="right"><?php _e('Right','wingman'); ?></option>
             </select>
         </p>
-        <p><label for="<?php echo $this->get_field_id( 'space_between_item' ); ?>"><?php _e( 'Space Between item:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'space_between_item' ); ?>"><?php _e( 'Space Between item:', 'wingman' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'space_between_item' ); ?>" name="<?php echo $this->get_field_name( 'space_between_item' ); ?>" type="text" value="<?php echo $space_between_item; ?>" /></p>
         <script type="text/javascript">
             (function($){

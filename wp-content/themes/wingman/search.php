@@ -22,7 +22,7 @@ get_header(); ?>
             <div id="main" class="<?php echo apply_filters('kt_main_class', 'main-class', $sidebar['sidebar']); ?>">
                 <?php if( have_posts()){ ?>
                     <div class="list-blog-posts">
-                       <h3 class="search-heading"><?php printf( __( "Search Results for: <span class='search-keyword'>'%s'</span>", KT_THEME_LANG ), get_search_query() ); ?></h3>
+                       <h3 class="search-heading"><?php printf( __( "Search Results for: <span class='search-keyword'>'%s'</span>", 'wingman' ), get_search_query() ); ?></h3>
 
                         <?php global $wp_query; ?>
                         <?php
@@ -111,10 +111,10 @@ get_header(); ?>
                     </div>
                 <?php }else { ?>
                     <div class="search-content-error">
-                        <h1><?php _e('Nothing Found', KT_THEME_LANG) ?></h1>
+                        <h1><?php _e('Nothing Found', 'wingman') ?></h1>
                         <p>
-                            <?php printf( __( "Sorry ! but nothing was found by <span class='search-keyword'>'%s'</span>.", KT_THEME_LANG ), get_search_query() ); ?>
-                            <?php _e('Please try again with some different keywords.', KT_THEME_LANG); ?>
+                            <?php printf( __( "Sorry ! but nothing was found by <span class='search-keyword'>'%s'</span>.", 'wingman' ), get_search_query() ); ?>
+                            <?php _e('Please try again with some different keywords.', 'wingman'); ?>
                         </p>
                         <?php get_search_form(); ?>
                     </div>

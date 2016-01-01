@@ -43,7 +43,7 @@ $classes = array('post-item post-layout-classic', $blog_atts['class']);
                         <div class="entry-excerpt">
                             <?php
                             the_content(sprintf(
-                                __('Read more %s', KT_THEME_LANG),
+                                __('Read more %s', 'wingman'),
                                 the_title('<span class="screen-reader-text">', '</span>', false)
                             ));
                             ?>

@@ -15,17 +15,17 @@
                         global $yith_wcwl;
                         $count = YITH_WCWL()->count_products();
                         ?>
-                        <li><a href="<?php echo esc_url($yith_wcwl->get_wishlist_url('')); ?>"><?php _e('My Wishlist', KT_THEME_LANG) ?></a></li>
+                        <li><a href="<?php echo esc_url($yith_wcwl->get_wishlist_url('')); ?>"><?php _e('My Wishlist', 'wingman') ?></a></li>
                     <?php } ?>
                     <?php if(defined( 'YITH_WOOCOMPARE' )){ ?>
-                        <li><a href="#" class="yith-woocompare-open"><?php _e('Compare', KT_THEME_LANG) ?></a></li>
+                        <li><a href="#" class="yith-woocompare-open"><?php _e('Compare', 'wingman') ?></a></li>
                     <?php } ?>
-                    <li><a href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>"><?php _e('My Cart', KT_THEME_LANG) ?></a></li>
-                    <li><a href="<?php echo esc_url( WC()->cart->get_checkout_url() ); ?>"><?php _e('Check out', KT_THEME_LANG) ?></a></li>
+                    <li><a href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>"><?php _e('My Cart', 'wingman') ?></a></li>
+                    <li><a href="<?php echo esc_url( WC()->cart->get_checkout_url() ); ?>"><?php _e('Check out', 'wingman') ?></a></li>
                     <?php if ( is_user_logged_in() ) { ?>
-                        <li><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account'); ?>"><?php _e('My Account'); ?></a></li>
+                        <li><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account', 'wingman'); ?>"><?php _e('My Account', 'wingman'); ?></a></li>
                     <?php }else{ ?>
-                        <li><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register'); ?>"><?php _e('Login / Register'); ?></a></li>
+                        <li><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register', 'wingman'); ?>"><?php _e('Login / Register', 'wingman'); ?></a></li>
                     <?php } ?>
                 </ul>
             </div><!-- .menu-bars-item -->
@@ -55,7 +55,7 @@
         <?php } ?>
 
         <?php
-            kt_custom_wpml('<div class="menu-bars-item menu-bars-language">', '</div>', __('Language', KT_THEME_LANG));
+            kt_custom_wpml('<div class="menu-bars-item menu-bars-language">', '</div>', __('Language', 'wingman'));
         ?>
 
         <?php

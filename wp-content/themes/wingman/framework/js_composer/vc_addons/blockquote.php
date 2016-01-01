@@ -40,17 +40,17 @@ class WPBakeryShortCode_Blockquote extends WPBakeryShortCode {
 }
 
 vc_map( array(
-    "name" => __( "Blockquote", KT_THEME_LANG),
+    "name" => __( "Blockquote", 'wingman'),
     "base" => "blockquote",
-    "category" => __('by Theme', KT_THEME_LANG ),
+    "category" => __('by Theme', 'wingman' ),
     "wrapper_class" => "clearfix",
     "params" => array(
 
         array(
             "type" => "textarea_html",
-            "heading" => __("Content", KT_THEME_LANG),
+            "heading" => __("Content", 'wingman'),
             "param_name" => "content",
-            "description" => __("", KT_THEME_LANG),
+            "description" => __("", 'wingman'),
             'holder' => 'div',
         ),
         array(
@@ -61,10 +61,10 @@ vc_map( array(
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Reverse Blockquote', KT_THEME_LANG ),
+            'heading' => __( 'Reverse Blockquote', 'wingman' ),
             'param_name' => 'reverse',
             'value' => 'false',
-            "description" => __("", KT_THEME_LANG),
+            "description" => __("", 'wingman'),
         ),
         
         array(
