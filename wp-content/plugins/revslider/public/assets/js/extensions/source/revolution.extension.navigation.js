@@ -1,10 +1,9 @@
 /********************************************
- * REVOLUTION 5.0 EXTENSION - NAVIGATION
- * @version: 1.0.4 (10.11.2015)
+ * REVOLUTION 5.1.5 EXTENSION - NAVIGATION
+ * @version: 1.0.6 (15.12.2015)
  * @requires jquery.themepunch.revolution.js
  * @author ThemePunch
 *********************************************/
-
 (function($) {
 
 var _R = jQuery.fn.revolution,
@@ -33,26 +32,66 @@ jQuery.extend(true,_R, {
 		
 	},
 
-	resizeThumbsTabs : function(opt) {	
+	resizeThumbsTabs : function(opt,force) {	
 		
 		
 		if ((opt.navigation && opt.navigation.tabs.enable) || (opt.navigation && opt.navigation.thumbnails.enable)) {
 			var f = (jQuery(window).width()-480) / 500,
 				tws = new punchgs.TimelineLite(),
 				otab = opt.navigation.tabs,
-				othu = opt.navigation.thumbnails;
+				othu = opt.navigation.thumbnails,
+				otbu = opt.navigation.bullets;
 
 			tws.pause();
 			f = f>1 ? 1 : f<0 ? 0 : f;
 			
-			if (ckNO(otab) && otab.width>otab.min_width) rtt(f,tws,opt.c,otab,opt.slideamount,'tab');	
-			if (ckNO(othu) && othu.width>othu.min_width) rtt(f,tws,opt.c,othu,opt.slideamount,'thumb');
+			if (ckNO(otab) && (force || otab.width>otab.min_width)) rtt(f,tws,opt.c,otab,opt.slideamount,'tab');	
+			if (ckNO(othu) && (force || othu.width>othu.min_width)) rtt(f,tws,opt.c,othu,opt.slideamount,'thumb');
+			if (ckNO(otbu) && force) {
+				// SET BULLET SPACES AND POSITION
+				var bw = opt.c.find('.tp-bullets');
+
+				bw.find('.tp-bullet').each(function(i){
+					var b = jQuery(this),			
+						am = i+1,
+						w = b.outerWidth()+parseInt((otbu.space===undefined? 0:otbu.space),0),
+						h = b.outerHeight()+parseInt((otbu.space===undefined? 0:otbu.space),0);					
+					
+				if (otbu.direction==="vertical") {
+					b.css({top:((am-1)*h)+"px", left:"0px"});
+					bw.css({height:(((am-1)*h) + b.outerHeight()),width:b.outerWidth()});
+				}
+				else {
+					b.css({left:((am-1)*w)+"px", top:"0px"});
+					bw.css({width:(((am-1)*w) + b.outerWidth()),height:b.outerHeight()});			
+				}
+				});
+				
+			}
 
 			tws.play();	
 			
 			setONHeights(opt);
 		}
 		return true;
+	},
+
+	updateNavIndexes : function(opt) {
+		var _ = opt.c;
+		
+		function setNavIndex(a) {
+			if (_.find(a).lenght>0) {
+				_.find(a).each(function(i) {				
+					jQuery(this).data('liindex',i);
+				})
+			}
+		}
+		
+		setNavIndex('.tp-tab');
+		setNavIndex('.tp-bullet');
+		setNavIndex('.tp-thumb');		
+		_R.resizeThumbsTabs(opt,true);
+		_R.manageNavigation(opt);
 	},
 
 
@@ -166,7 +205,7 @@ jQuery.extend(true,_R, {
 			var pi = ai>0 ? ai-1 : opt.slideamount-1,
 				ni = (ai+1)==opt.slideamount ? 0 : ai+1;
 				
-		
+			
 			if (_a.enable === true) {
 				var inst = _a.tmp;
 				jQuery.each(opt.thumbs[pi].params,function(i,obj) {
@@ -453,7 +492,10 @@ var swipeAction = function(container,opt,vertical) {
 
 	SwipeOn.swipetp({			
 		allowPageScroll:pagescroll,			
-		triggerOnTouchLeave:true,					
+		triggerOnTouchLeave:true,
+		treshold:opt.navigation.touch.swipe_treshold,
+		fingers:opt.navigation.touch.swipe_min_touches,
+						
 		excludeElements:jQuery.fn.swipetp.defaults.excludedElements,	
 			
 		swipeStatus:function(event,phase,direction,distance,duration,fingerCount,fingerData) {			

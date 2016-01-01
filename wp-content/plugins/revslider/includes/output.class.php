@@ -259,38 +259,49 @@ class RevSliderOutput {
 			$previewSlide->initByID($previewSlideID);
 			$slides = array($previewSlide);
 		}else{
-			$slides = $this->slider->getSlidesForOutput($publishedOnly,$this->sliderLang);
+			$slides = $this->slider->getSlidesForOutput($publishedOnly,$this->sliderLang,$gal_ids);
 			
 			if(!empty($gal_ids)){ //add slides from the images
-				if(count($gal_ids) !== count($slides)){ //set slides to the same amount as
-					if(count($gal_ids) < count($slides)){
-						$slides = array_slice($slides, 0, count($gal_ids));
-					}else{ // >
-						while(count($slides) < count($gal_ids)){
-							foreach($slides as $slide){
-								$new_slide = clone $slide;
-								array_push($slides, $new_slide);
-								if(count($slides) >= count($gal_ids)) break;
-							}
-						}
+				if(count($slides) > 0){ //check if we have at least one slide. If not, then it may result in errors here
+					if(count($gal_ids) !== count($slides)){ //set slides to the same amount as
 						if(count($gal_ids) < count($slides)){
 							$slides = array_slice($slides, 0, count($gal_ids));
+						}else{ // >
+							while(count($slides) < count($gal_ids)){
+								foreach($slides as $slide){
+									$new_slide = clone $slide;
+									array_push($slides, $new_slide);
+									if(count($slides) >= count($gal_ids)) break;
+								}
+							}
+							if(count($gal_ids) < count($slides)){
+								$slides = array_slice($slides, 0, count($gal_ids));
+							}
 						}
 					}
-				}
-				
-				$sliderSize = $this->slider->getParam('def-image_source_type', 'full');
-				
-				$gi = 0;
-				foreach($slides as $skey => $slide){ //add gallery images into slides
-					$ret = $slide->setImageByID($gal_ids[$gi], $sliderSize);
-					if($ret === true){ //set slide type to image instead of for example external or transparent
-						$slide->setBackgroundType('image');
-					}else{
-						unset($slides[$skey]);
-					}
 					
-					$gi++;
+					$sliderSize = $this->slider->getParam('def-image_source_type', 'full');
+					
+					$isSlidesFromPosts = $this->slider->isSlidesFromPosts();
+					
+					$gi = 0;
+					foreach($slides as $skey => $slide){ //add gallery images into slides
+						//set post id to imageid
+						
+						//check if slider is Post Based, if yes use $slide->getID(); else use $gal_ids[$gi]
+						if($isSlidesFromPosts){
+							$ret = $slide->setImageByID($slide->getID(), $sliderSize);
+						}else{
+							$ret = $slide->setImageByID($gal_ids[$gi], $sliderSize);
+						}
+						if($ret === true){ //set slide type to image instead of for example external or transparent
+							$slide->setBackgroundType('image');
+						}else{
+							unset($slides[$skey]);
+						}
+						
+						$gi++;
+					}
 				}
 			}elseif(!empty($order)){
 				$tempSlides = $slides;
@@ -338,7 +349,6 @@ class RevSliderOutput {
 
 		//set that we are originally template slider
 		$post_based_slider = false;
-		$postData = array();
 		if($this->slider->isSlidesFromPosts()){
 			$post_based_slider = true;
 		}
@@ -412,9 +422,6 @@ class RevSliderOutput {
 
 			$navigation_arrow_stlye = $this->slider->getParam('navigation_arrow_style', 'round');
 			$navigation_bullets_style = $this->slider->getParam('navigation_bullets_style', 'round');
-			
-			if($post_based_slider)
-				$postData = $slide->getPostData();
 
 			//check if date is set
 			$date_from = $slide->getParam('date_from', '');
@@ -868,9 +875,13 @@ class RevSliderOutput {
 				$parallax_attr = ' data-bgparallax="'.$slide_level.'"';
 			}
 			
+			$hideslideafter = $slide->getParam("hideslideafter",0);
+			
 			//Html rev-main-
 			echo '	<!-- SLIDE  -->'."\n";
-			echo '	<li data-index="rs-'.$slide_id.'" data-transition="'.$transition.'" data-slotamount="'. $slotAmount.'" '.$add_rand.$htmlParams.$slide_title.$add_params.$slide_description .'>'."\n";
+			echo '	<li data-index="rs-'.$slide_id.'" data-transition="'.$transition.'" data-slotamount="'. $slotAmount.'" data-hideafterloop="'.$hideslideafter.'" '.$add_rand.$htmlParams.$slide_title.$add_params.$slide_description .'>'."\n";
+			
+
 			echo '		<!-- MAIN IMAGE -->'."\n";
 			echo '		<img src="'. $urlSlideImage .'" '. $styleImage.' alt="'. $alt . '" '. $imageAddParams. $kb_pz . $parallax_attr .' class="rev-slidebg" data-no-retina>'."\n";
 			echo '		<!-- LAYERS -->'."\n";
@@ -1200,6 +1211,8 @@ class RevSliderOutput {
 		$slider_type = $this->slider->getParam('slider-type');
 		$icon_sets = RevSliderBase::set_icon_sets(array());
 		
+		$ignore_styles = array('font-family', 'color', 'font-weight', 'font-style', 'text-decoration');
+		
 		$customAnimations = RevSliderOperations::getCustomAnimations('customin'); //get all custom animations
 		$customEndAnimations = RevSliderOperations::getCustomAnimations('customout'); //get all custom animations
 		
@@ -1222,6 +1235,7 @@ class RevSliderOutput {
 		$enabled_sizes = array('desktop' => 'on', 'notebook' => $enable_custom_size_notebook, 'tablet' => $enable_custom_size_tablet, 'mobile' => $enable_custom_size_iphone);
 		$adv_resp_sizes = ($enable_custom_size_notebook == 'on' || $enable_custom_size_tablet == 'on' || $enable_custom_size_iphone == 'on') ? true : false;
 		
+		$slider_selectable = $this->slider->getParam('def-layer_selection', 'off');
 		
 		$image_source_type = $this->slider->getParam('def-image_source_type', 'full');
 		
@@ -1357,10 +1371,21 @@ class RevSliderOutput {
 			$layer_2d_rotation = intval(RevSliderFunctions::getVal($layer, '2d_rotation', '0'));
 			
 			$internal_class = RevSliderFunctions::getVal($layer, 'internal_class', '');
+
+			$layer_selectable = RevSliderFunctions::getVal($layer, 'layer-selectable', 'default');
 			
 			$outputClass = 'tp-caption '. trim($class);
-
+			
 			$outputClass = trim($outputClass) . ' ' . $internal_class . ' ';
+			if ($layer_selectable !== "default"){
+				if($layer_selectable == 'on'){
+					$outputClass = trim($outputClass) . ' tp-layer-selectable ';
+				}
+			}else{
+				if($slider_selectable == 'on'){
+					$outputClass = trim($outputClass) . ' tp-layer-selectable ';
+				}
+			}
 			
 			//if($type == 'button') $outputClass .= ' ';
 			
@@ -2643,6 +2668,9 @@ class RevSliderOutput {
 			}
 			
 			foreach($st_idle as $key => $value){
+				if($type == 'image' || $type == 'video'){ //do not print unneeded styles
+					if(in_array($key, $ignore_styles)) continue;
+				}
 				if(trim($value[0]) == '' || $value[0] == $value[1]) continue;
 				if(str_replace('px', '', $value[0]) == str_replace('px', '', $value[1])) continue;
 				$style_string .= $key.':'.$value[0].';';

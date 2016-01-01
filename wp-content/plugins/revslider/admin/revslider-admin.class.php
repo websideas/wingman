@@ -332,7 +332,8 @@ class RevSliderAdmin extends RevSliderBaseAdmin{
 			'active_video' => __('Video in Active Slide', 'revslider'),
 			'empty_data_retrieved_for_slider' => __('Data could not be fetched for selected Slider', 'revslider'),
 			'import_selected_layer' => __('Import Selected Layer?', 'revslider'),
-			'import_all_layer_from_actions' => __('Layer Imported! The Layer has actions which include other Layers. Import all connected layers?', 'revslider')
+			'import_all_layer_from_actions' => __('Layer Imported! The Layer has actions which include other Layers. Import all connected layers?', 'revslider'),
+            'not_available_in_demo' => __('Not available in Demo Mode', 'revslider')
 		);
 
 		return $lang;
@@ -571,7 +572,7 @@ class RevSliderAdmin extends RevSliderBaseAdmin{
 
 		$slider = new RevSlider();
 		$response = $slider->importSliderFromPost($updateAnim, $updateStatic, false, false, false, $updateNavigation);
-		$sliderID = $response["sliderID"];
+		$sliderID = intval($response["sliderID"]);
 
 		if(empty($viewBack)){
 			$viewBack = self::getViewUrl(self::VIEW_SLIDER,"id=".$sliderID);
@@ -763,7 +764,9 @@ class RevSliderAdmin extends RevSliderBaseAdmin{
 	 * onAjax action handler
 	 */
 	public static function onAjaxAction(){
-
+		
+		$role = self::getMenuRole(); //add additional security check and allow for example import only for admin
+		
 		$slider = new RevSlider();
 		$slide = new RevSlide();
 		$operations = new RevSliderOperations();
@@ -773,9 +776,43 @@ class RevSliderAdmin extends RevSliderBaseAdmin{
 		$nonce = self::getPostGetVar("nonce");
 		if(empty($nonce))
 			$nonce = self::getPostGetVar("rs-nonce");
-
+		
 		try{
-
+			
+			if(RS_DEMO){
+				switch($action){
+					case 'import_slider_online_template_slidersview':
+					case 'duplicate_slider':
+					case 'preview_slider':
+					case 'get_static_css':
+					case 'get_dynamic_css':
+					case 'preview_slide':
+						//these are all okay in demo mode
+					break;
+					default:
+						RevSliderFunctions::throwError(__('Function Not Available in Demo Mode', 'revslider'));
+						exit;
+					break;
+				}
+			}
+			
+			if(!RevSliderFunctionsWP::isAdminUser() && apply_filters('revslider_restrict_role', true)){
+				switch($action){
+					case 'change_specific_navigation':
+					case 'change_navigations':
+					case 'update_static_css':
+					case 'add_new_preset':
+					case 'update_preset':
+					case 'import_slider':
+					case 'import_slider_slidersview':
+					case 'import_slider_template_slidersview':
+					case 'import_slide_template_slidersview':
+						RevSliderFunctions::throwError(__('Function Only Available for Adminstrators', 'revslider'));
+						exit;
+					break;
+				}
+			}
+			
 			//verify the nonce
 			$isVerified = wp_verify_nonce($nonce, "revslider_actions");
 
@@ -884,9 +921,7 @@ class RevSliderAdmin extends RevSliderBaseAdmin{
 				break;
 				case "create_slider":
 					$data = $operations->modifyCustomSliderParams($data);
-
 					$newSliderID = $slider->createSliderFromOptions($data);
-
 					self::ajaxResponseSuccessRedirect(__("Slider created",'revslider'), self::getViewUrl(self::VIEW_SLIDE, 'id=new&slider='.esc_attr($newSliderID))); //redirect to slide now
 
 				break;
@@ -1466,7 +1501,7 @@ class RevSliderAdmin extends RevSliderBaseAdmin{
 					self::ajaxResponseData(array("data"=>$response));
 				break;
 				default:
-					self::ajaxResponseError("wrong ajax action: $action");
+					self::ajaxResponseError("wrong ajax action: ".esc_attr($action));
 				break;
 			}
 

@@ -73,7 +73,7 @@ var UniteLayersRev = new function(){
 
 		initText = "Caption Text",
 		layout = 'desktop', //can be also tablet and mobil
-		transSettings = [], //can be also tablet and mobil
+		transSettings = [],
 
 		t = this,
 		u = tpLayerTimelinesRev,
@@ -950,6 +950,7 @@ var UniteLayersRev = new function(){
 		});
 
 		jQuery('#layer_animation, #layer_endanimation').change(function(){
+			
 			//set values from elements if existing
 			var set_anim = (jQuery(this).attr('id') == 'layer_animation') ? 'in' : 'out';
 			var anim_handle = jQuery(this).val();
@@ -995,8 +996,6 @@ var UniteLayersRev = new function(){
 					}
 				}
 			}
-			
-			
 			
 			t.updateLayerFromFields();
 		});
@@ -3695,7 +3694,7 @@ var UniteLayersRev = new function(){
 				t.updateInitLayerAnim(response.customfull);
 				updateLayerAnimsInput(response.customin, 'customin');
 				updateLayerAnimsInput(response.customout, 'customout');
-
+                
 				selectLayerAnim(handle);
 			});
 		}
@@ -3706,13 +3705,14 @@ var UniteLayersRev = new function(){
 	 */
 	var selectLayerAnim = function(handle){
 		
-		var animSelect = (currentAnimationType == 'customin') ? jQuery('#layer_animation option') : jQuery('#layer_endanimation option');
-		animSelect.each(function(){
+		var animSelectOption = (currentAnimationType == 'customin') ? jQuery('#layer_animation option') : jQuery('#layer_endanimation option');
+		animSelectOption.each(function(){
 			if(jQuery(this).text() == handle || jQuery(this).val() == handle)
 				jQuery(this).prop('selected', true);
 			else
 				jQuery(this).prop('selected', false);
 		});
+		var animSelect = (currentAnimationType == 'customin') ? jQuery('#layer_animation option:selected') : jQuery('#layer_endanimation option:selected');
 		animSelect.change();		
 	}
 
@@ -5898,6 +5898,8 @@ var UniteLayersRev = new function(){
 		
 		
 
+		objUpdate['layer-selectable'] = jQuery('#css_layer_selectable option:selected').val();
+		
 		//objUpdate = updateSubStyleParameters(objUpdate);
 		objUpdate['deformation']['color-transparency'] = jQuery('#css_font-transparency').val();
 		objUpdate['deformation']['font-style'] = (jQuery('#css_font-style')[0].checked) ? 'italic' : 'normal';
@@ -6261,15 +6263,24 @@ var UniteLayersRev = new function(){
 		RevSliderSettings.onoffStatus(jQuery('#toggle_use_hover'));
 		
 		
+		jQuery('#css_layer_selectable option[value="'+objLayer['layer-selectable']+'"]').attr('selected', true);
+		
 		if(objLayer.deformation != undefined){
 			jQuery('#css_font-family').val(objLayer['deformation']['font-family']);
 			jQuery('input[name="css_padding[]"]').each(function(i){ jQuery(this).val(objLayer['deformation']['padding'][i]);});
 			if(objLayer['deformation']['font-style'] == 'italic')
 				jQuery('#css_font-style').attr('checked', true); // checkbox
 			else
-				jQuery('#css_font-style').attr('checked', false); // checkbox
-			
+				jQuery('#css_font-style').attr('checked', false); // checkbox						
 			RevSliderSettings.onoffStatus(jQuery('#css_font-style'));
+			
+			
+			
+			/*if(objLayer['layer-selectable'] == 'on')
+				jQuery('#css_layer_selectable').attr('checked', true); // checkbox
+			else
+				jQuery('#css_layer_selectable').attr('checked', false); // checkbox
+			RevSliderSettings.onoffStatus(jQuery('#css_layer_selectable'));*/
 			
 			jQuery('#css_font-transparency').val(objLayer['deformation']['color-transparency']);
 			jQuery('#css_text-decoration option[value="'+objLayer['deformation']['text-decoration']+'"]').attr('selected', true);
@@ -6687,7 +6698,13 @@ var UniteLayersRev = new function(){
 
 		jQuery("#layer_pers_start").val(objLayer.pers_start);
 		jQuery("#layer_pers_end").val(objLayer.pers_end);
-				
+		
+		if(typeof(objLayer['layer-selectable']) !== 'undefined'){
+			jQuery('#css_layer_selectable option[value="'+objLayer['layer-selectable']+'"]').attr('selected', true);
+		}else{
+			jQuery('#css_layer_selectable option[value="default"]').attr('selected', true);
+		}
+		
 		if(typeof(objLayer.x_start_reverse) !== 'undefined' && (objLayer.x_start_reverse == "true" || objLayer.x_start_reverse == true)) { jQuery('#layer_anim_xstart_reverse').attr('checked',true); }else{ jQuery('#layer_anim_xstart_reverse').removeAttr('checked'); }
 		if(typeof(objLayer.y_start_reverse) !== 'undefined' && (objLayer.y_start_reverse == "true" || objLayer.y_start_reverse == true)) { jQuery('#layer_anim_ystart_reverse').attr('checked',true); }else{ jQuery('#layer_anim_ystart_reverse').removeAttr('checked'); }
 		if(typeof(objLayer.x_end_reverse) !== 'undefined' && (objLayer.x_end_reverse == "true" || objLayer.x_end_reverse == true)) { jQuery('#layer_anim_xend_reverse').attr('checked',true); }else{ jQuery('#layer_anim_xend_reverse').removeAttr('checked'); }

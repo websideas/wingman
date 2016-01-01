@@ -1,6 +1,6 @@
 /**************************************************************************
  * jquery.themepunch.revolution.js - jQuery Plugin for Revolution Slider
- * @version: 5.1.4 (25.11.2015)
+ * @version: 5.1.5 (14.12.2015)
  * @requires jQuery v1.7 or later (tested on 1.9)
  * @author ThemePunch
 **************************************************************************/
@@ -237,6 +237,43 @@
 
 				waitForScripts(c,options.scriptsneeded);
 			})
+		},
+
+		// Remove a Slide from the Slider
+		revremoveslide : function(sindex) {
+
+			return this.each(function() {	
+				
+				var container=jQuery(this);
+				if (container!=undefined && container.length>0 && jQuery('body').find('#'+container.attr('id')).length>0) {
+					var bt = container.parent().find('.tp-bannertimer'),
+						opt = bt.data('opt');
+					if (opt && opt.li.length>0) {
+						if (sindex>0 || sindex<=opt.li.length) {
+							
+							var li = jQuery(opt.li[sindex]),
+								ref = li.data("index"),
+								nextslideafter = false;
+										
+							opt.slideamount = opt.slideamount-1;										
+							removeNavWithLiref('.tp-bullet',ref,opt);
+							removeNavWithLiref('.tp-tab',ref,opt);
+							removeNavWithLiref('.tp-thumb',ref,opt);	
+							if (li.hasClass('active-revslide')) 
+								nextslideafter = true;													
+							li.remove();
+							opt.li = removeArray(opt.li,sindex);	
+							if (opt.carousel && opt.carousel.slides)
+								opt.carousel.slides = removeArray(opt.carousel.slides,sindex)
+							opt.thumbs = removeArray(opt.thumbs,sindex);	
+							if (_R.updateNavIndexes) _R.updateNavIndexes(opt); 
+							if (nextslideafter) container.revnext();
+								
+						}
+					}
+				}
+			});
+			
 		},
 
 		// Add a New Call Back to some Module
@@ -769,6 +806,23 @@ var	_ISM = _R.is_mobile();
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+var removeArray = function(arr,i) {
+				var newarr = [];
+				jQuery.each(arr,function(a,b) {
+					if (a!=i) newarr.push(b);
+				})
+				return newarr;
+			}
+
+var removeNavWithLiref = function(a,ref,opt) {
+	opt.c.find(a).each(function() {
+		var a = jQuery(this);
+		if (a.data('liref')===ref)
+			a.remove();
+	})
+}
+
+
 var lAjax = function(s,o) {
 	if (jQuery('body').data(s)) return false;
 	if (o.filesystem) {
@@ -1725,12 +1779,11 @@ var prepareSlides = function(container,opt) {
 		img.addClass('defaultimg');				
 						
 		// TURN OF KEN BURNS IF WE ARE ON MOBILE AND IT IS WISHED SO
-		if (opt.panZoomDisableOnMobile == "on"  && _ISM) {
+		if (opt.fallbacks.panZoomDisableOnMobile == "on"  && _ISM) {
 			img.data('kenburns',"off");
 			img.data('bgfit',"cover");
 		}
 
-	
 		img.wrap('<div class="slotholder" style="width:100%;height:100%;"></div>');
 		bgvid.appendTo(img.closest('li').find('.slotholder'));
 		var dts = img.data();
@@ -2018,7 +2071,8 @@ var swapSlide = function(container,opt) {
 		return false;
 	}
 	nextli.removeClass("next-revslide").addClass("processing-revslide");
-			
+		
+	nextli.data('slide_on_focus_amount',(nextli.data('slide_on_focus_amount')+1) || 1);
 	// CHECK IF WE ARE ALREADY AT LAST ITEM TO PLAY IN REAL LOOP SESSION
 	if (opt.stopLoop=="on" && nextli.index()==opt.lastslidetoshow-1) {
 		container.find('.tp-bannertimer').css({'visibility':'hidden'});
@@ -2032,7 +2086,7 @@ var swapSlide = function(container,opt) {
 		if (opt.looptogo<=0)
 				opt.stopLoop="on";
 	}	
-	
+
 	opt.tonpause = true;
 	container.trigger('stoptimer');
 	opt.cd=0;
@@ -2214,18 +2268,25 @@ var swapSlideProgress = function(opt,defimg,container) {
 		mtl.pause();
 	}
 
+	if (_R.scrollHandling) {
+		_R.scrollHandling(opt, true);
+		mtl.eventCallback("onUpdate",function() {
+			_R.scrollHandling(opt, true);
+		});
+	}
+	
 	// START PARALLAX IF NEEDED		
 	if (opt.parallax.type!="off" && opt.parallax.firstgo==undefined && _R.scrollHandling) {
 		opt.parallax.firstgo = true;
 		opt.lastscrolltop = -999;
-		_R.scrollHandling(opt);
+		_R.scrollHandling(opt,true);
 		setTimeout(function() {
 			opt.lastscrolltop = -999;
-			_R.scrollHandling(opt);
+			_R.scrollHandling(opt,true);
 		},210);
 		setTimeout(function() {
 			opt.lastscrolltop = -999;
-			_R.scrollHandling(opt);
+			_R.scrollHandling(opt,true);
 		},420);
 	}
 	
@@ -2323,9 +2384,18 @@ var letItFree = function(container,opt,nextsh,actsh,nextli,actli,mtl) {
 	container.trigger('revolution.slide.onafterswap',data);	
 
 	opt.duringslidechange = false;
+
+	var lastSlideLoop = actli.data('slide_on_focus_amount'),
+		lastSlideMaxLoop = actli.data('hideafterloop');	
+	if (lastSlideMaxLoop!=0 && lastSlideMaxLoop<=lastSlideLoop) {
+		opt.c.revremoveslide(actli.index());
+	}
 	//if (_R.callStaticDDDParallax) _R.callStaticDDDParallax(container,opt,nextli);		
 	
 }
+
+
+
 
 
 ///////////////////////////
