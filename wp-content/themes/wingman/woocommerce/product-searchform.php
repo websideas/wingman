@@ -5,7 +5,7 @@
 				'taxonomy' => 'product_cat',
                 'id' => 'cat_'.rand(),
 				'hierarchical' => 1,
-				'show_option_all' => __('All Categories', THEME_LANG)
+				'show_option_all' => __('All Categories', KT_THEME_LANG)
 			);
 			$args = apply_filters( 'kt_categories_product', $args );
 			wp_dropdown_categories($args); 

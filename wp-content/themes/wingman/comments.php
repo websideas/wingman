@@ -57,15 +57,15 @@ if ( post_password_required() ) {
     $aria_req = ( $req ? " aria-required='true'" : '' );
     $html_req = ( $req ? " required='required'" : '' );
 
-    $required = ' '.__('(required)', THEME_LANG);
+    $required = ' '.__('(required)', KT_THEME_LANG);
 
     $new_fields = array(
         'author' => '<p class="comment_field-column">' .
-            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"  placeholder="'.__('Name', THEME_LANG).'"' . $aria_req . $html_req . ' /></p>',
+            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"  placeholder="'.__('Name', KT_THEME_LANG).'"' . $aria_req . $html_req . ' /></p>',
         'email'  => '<p class="comment_field-column">' .
-            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="'.__('Email', THEME_LANG).'"' . $aria_req . $html_req . ' /></p>',
+            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="'.__('Email', KT_THEME_LANG).'"' . $aria_req . $html_req . ' /></p>',
         'url'    => '<p class="comment_field-column">' .
-            '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="'.__('Website', THEME_LANG).'" /></p>',
+            '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="'.__('Website', KT_THEME_LANG).'" /></p>',
     );
 
 
@@ -75,7 +75,7 @@ if ( post_password_required() ) {
         'fields' => apply_filters( 'comment_form_default_fields', $new_fields ),
         //'comment_form_before_fields' => '<div>',
         //'comment_form_after_fields' => '</div>',
-        'comment_field' => '<p><textarea id="comment" name="comment" placeholder="'.__('Your Comment', THEME_LANG).'"  aria-required="true" rows="6"></textarea></p>',
+        'comment_field' => '<p><textarea id="comment" name="comment" placeholder="'.__('Your Comment', KT_THEME_LANG).'"  aria-required="true" rows="6"></textarea></p>',
         'class_submit'      => 'btn btn-default',
     );
 

@@ -41,7 +41,7 @@
                         <div class="entry-excerpt">
                             <?php
                             the_content(sprintf(
-                                __('Read more %s', THEME_LANG),
+                                __('Read more %s', KT_THEME_LANG),
                                 the_title('<span class="screen-reader-text">', '</span>', false)
                             ));
                             ?>

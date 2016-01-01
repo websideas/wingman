@@ -48,70 +48,70 @@ class WPBakeryShortCode_Googlemap extends WPBakeryShortCode {
 }
 
 vc_map( array(
-    "name" => __( "Google map", THEME_LANG),
+    "name" => __( "Google map", KT_THEME_LANG),
     "base" => "googlemap",
     "category" => __('by Theme'),
-    "description" => __( "", THEME_LANG),
+    "description" => __( "", KT_THEME_LANG),
     "params" => array(
         array(
           "type" => "textfield",
-          "heading" => __("Height", THEME_LANG),
+          "heading" => __("Height", KT_THEME_LANG),
           "param_name" => "height",
           "value" => 300,
-          "description" => __("Enter height of map,units :'px',Leave empty to use '300px'.", THEME_LANG)
+          "description" => __("Enter height of map,units :'px',Leave empty to use '300px'.", KT_THEME_LANG)
         ),
         array(
           "type" => "textfield",
-          "heading" => __("Location", THEME_LANG),
+          "heading" => __("Location", KT_THEME_LANG),
           "param_name" => "location",
           "admin_label" => true,
-          "description" => __("Enter location", THEME_LANG)
+          "description" => __("Enter location", KT_THEME_LANG)
         ),
         array(
             "type" => "dropdown",
-        	"heading" => __("Map type",THEME_LANG),
+        	"heading" => __("Map type",KT_THEME_LANG),
         	"param_name" => "type",
             'std' => 'ROADMAP',
         	"value" => array(
-                __('Roadmap', THEME_LANG) => 'roadmap',
-                __('Satellite', THEME_LANG) => 'satellite',
-                __('Hybrid', THEME_LANG) => 'hybrid',
-                __('Terrain', THEME_LANG) => 'terrain',
+                __('Roadmap', KT_THEME_LANG) => 'roadmap',
+                __('Satellite', KT_THEME_LANG) => 'satellite',
+                __('Hybrid', KT_THEME_LANG) => 'hybrid',
+                __('Terrain', KT_THEME_LANG) => 'terrain',
         	), 
             "admin_label" => true,            
-        	"description" => __('',THEME_LANG),
+        	"description" => __('',KT_THEME_LANG),
         ),
 
         array(
             "type" => "dropdown",
-            "heading" => __("Map stype",THEME_LANG),
+            "heading" => __("Map stype",KT_THEME_LANG),
             "param_name" => "stype",
             'std' => '',
             "value" => array(
-                __('None', THEME_LANG) => '',
-                __('Simple & Light', THEME_LANG) => '1',
-                __('Light Grey & Blue', THEME_LANG) => '2',
-                __('Dark', THEME_LANG) => '3',
-                __('Pinkish Gray', THEME_LANG) => '4',
-                __('Elevation', THEME_LANG) => '5',
-                __('Mostly Grayscale', THEME_LANG) => '6',
-                __('Red Hat Antwerp', THEME_LANG) => '7',
-                __('Shades of Grey', THEME_LANG) => '8',
+                __('None', KT_THEME_LANG) => '',
+                __('Simple & Light', KT_THEME_LANG) => '1',
+                __('Light Grey & Blue', KT_THEME_LANG) => '2',
+                __('Dark', KT_THEME_LANG) => '3',
+                __('Pinkish Gray', KT_THEME_LANG) => '4',
+                __('Elevation', KT_THEME_LANG) => '5',
+                __('Mostly Grayscale', KT_THEME_LANG) => '6',
+                __('Red Hat Antwerp', KT_THEME_LANG) => '7',
+                __('Shades of Grey', KT_THEME_LANG) => '8',
             ),
             "admin_label" => true,
-            "description" => __('',THEME_LANG),
+            "description" => __('',KT_THEME_LANG),
         ),
 
         array(
             "type" => "checkbox",
-        	"heading" => __("",THEME_LANG),
+        	"heading" => __("",KT_THEME_LANG),
         	"param_name" => "scrollwheel",
         	'value' => array( __( 'Disable map zoom on mouse wheel scroll' ) => true ),
-        	"description" => __('',THEME_LANG),
+        	"description" => __('',KT_THEME_LANG),
         ),
         array(
             "type" => "dropdown",
-        	"heading" => __("Map zoom",THEME_LANG),
+        	"heading" => __("Map zoom",KT_THEME_LANG),
         	"param_name" => "zoom",
             'std' => '17',
         	"value" => array(
@@ -135,7 +135,7 @@ vc_map( array(
                 '18' => '18', 
                 '19' => '19'
         	),
-        	"description" => __("1 is the smallest zoom level, 19 the greatest",THEME_LANG),
+        	"description" => __("1 is the smallest zoom level, 19 the greatest",KT_THEME_LANG),
             "admin_label" => true,
         ),
         array(
@@ -146,9 +146,9 @@ vc_map( array(
         ),
         array(
             "type" => "textarea_html",
-            "heading" => __("Content", THEME_LANG),
+            "heading" => __("Content", KT_THEME_LANG),
             "param_name" => "content",
-            "description" => __("", THEME_LANG),
+            "description" => __("", KT_THEME_LANG),
         ),
         array(
             "type" => "textfield",

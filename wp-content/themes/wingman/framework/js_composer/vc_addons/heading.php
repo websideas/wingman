@@ -77,9 +77,9 @@ class WPBakeryShortCode_KT_Heading extends WPBakeryShortCode_VC_Custom_heading {
 /* Custom Heading element
 ----------------------------------------------------------- */
 vc_map( array(
-    'name' => __( 'KT Heading', THEME_LANG ),
+    'name' => __( 'KT Heading', KT_THEME_LANG ),
     'base' => 'kt_heading',
-    "category" => __('by Theme', THEME_LANG ),
+    "category" => __('by Theme', KT_THEME_LANG ),
     'params' => array(
         array(
             'type' => 'textarea',
@@ -96,10 +96,10 @@ vc_map( array(
         ),
         array(
             "type" => "textarea_html",
-            "heading" => __("Content", THEME_LANG),
+            "heading" => __("Content", KT_THEME_LANG),
             "param_name" => "content",
             "value" => '',
-            "description" => __("", THEME_LANG),
+            "description" => __("", KT_THEME_LANG),
             'holder' => 'div'
         ),
         array(
@@ -121,7 +121,7 @@ vc_map( array(
                 __( 'Layout 1', 'js_composer' ) => "1",
                 __( 'Layout 2', 'js_composer' ) => "2",
             ),
-            'description' => __( 'Select your layout.', THEME_LANG )
+            'description' => __( 'Select your layout.', KT_THEME_LANG )
         ),
 
         array(
@@ -147,14 +147,14 @@ vc_map( array(
         ),
         array(
             "type" => "kt_number",
-            "heading" => __("Letter spacing", THEME_LANG),
+            "heading" => __("Letter spacing", KT_THEME_LANG),
             "param_name" => "letter_spacing",
             "value" => 0,
             "min" => 0,
             "max" => 10,
             "suffix" => "px",
             "description" => "",
-            'group' => __( 'Typography', THEME_LANG ),
+            'group' => __( 'Typography', KT_THEME_LANG ),
         ),
         array(
             'type' => 'font_container',
@@ -173,7 +173,7 @@ vc_map( array(
                     'color_description' => __( 'Select heading color.', 'js_composer' ),
                 ),
             ),
-            'group' => __( 'Typography', THEME_LANG ),
+            'group' => __( 'Typography', KT_THEME_LANG ),
         ),
         array(
             'type' => 'checkbox',
@@ -181,7 +181,7 @@ vc_map( array(
             'param_name' => 'use_theme_fonts',
             'value' => array( __( 'Yes', 'js_composer' ) => 'yes' ),
             'description' => __( 'Use font family from the theme.', 'js_composer' ),
-            'group' => __( 'Typography', THEME_LANG ),
+            'group' => __( 'Typography', KT_THEME_LANG ),
             'std' => 'yes'
         ),
         array(
@@ -194,7 +194,7 @@ vc_map( array(
                     'font_style_description' => __( 'Select font styling.', 'js_composer' )
                 )
             ),
-            'group' => __( 'Typography', THEME_LANG ),
+            'group' => __( 'Typography', KT_THEME_LANG ),
             'dependency' => array(
                 'element' => 'use_theme_fonts',
                 'value_not_equal_to' => 'yes',

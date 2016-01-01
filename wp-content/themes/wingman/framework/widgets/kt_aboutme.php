@@ -12,8 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 class WP_Widget_KT_AboutMe extends WP_Widget {
 
     public function __construct() {
-        $widget_ops = array('classname' => 'widget_kt_aboutme', 'description' => __( 'About Me widget.', THEME_LANG ) );
-        parent::__construct('kt_aboutme', __('KT: About me', THEME_LANG ), $widget_ops);
+        $widget_ops = array('classname' => 'widget_kt_aboutme', 'description' => __( 'About Me widget.', KT_THEME_LANG ) );
+        parent::__construct('kt_aboutme', __('KT: About me', KT_THEME_LANG ), $widget_ops);
     }
 
     public function widget( $args, $instance ) {
@@ -35,17 +35,17 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
             echo "<img src='".$attachment['url']."' alt='".esc_attr($attachment['alt'])."' class='img-responsive' title='".esc_attr($attachment['title'])."'/>";
             
             $socials_arr = array(
-                'facebook' => array('title' => __('Facebook', THEME_LANG), 'icon' => 'fa fa-facebook', 'link' => '%s'),
-                'twitter' => array('title' => __('Twitter', THEME_LANG), 'icon' => 'fa fa-twitter', 'link' => 'http://www.twitter.com/%s'),
-                'dribbble' => array('title' => __('Dribbble', THEME_LANG), 'icon' => 'fa fa-dribbble', 'link' => 'http://www.dribbble.com/%s'),
-                'vimeo' => array('title' => __('Vimeo', THEME_LANG), 'icon' => 'fa fa-vimeo-square', 'link' => 'http://www.vimeo.com/%s'),
-                'tumblr' => array('title' => __('Tumblr', THEME_LANG), 'icon' => 'fa fa-tumblr', 'link' => 'http://%s.tumblr.com/'),
-                'skype' => array('title' => __('Skype', THEME_LANG), 'icon' => 'fa fa-skype', 'link' => 'skype:%s'),
-                'linkedin' => array('title' => __('LinkedIn', THEME_LANG), 'icon' => 'fa fa-linkedin', 'link' => '%s'),
-                'googleplus' => array('title' => __('Google Plus', THEME_LANG), 'icon' => 'fa fa-google-plus', 'link' => '%s'),
-                'youtube' => array('title' => __('Youtube', THEME_LANG), 'icon' => 'fa fa-youtube', 'link' => 'http://www.youtube.com/user/%s'),
-                'pinterest' => array('title' => __('Pinterest', THEME_LANG), 'icon' => 'fa fa-pinterest', 'link' => 'http://www.pinterest.com/%s'),
-                'instagram' => array('title' => __('Instagram', THEME_LANG), 'icon' => 'fa fa-instagram', 'link' => 'http://instagram.com/%s'),
+                'facebook' => array('title' => __('Facebook', KT_THEME_LANG), 'icon' => 'fa fa-facebook', 'link' => '%s'),
+                'twitter' => array('title' => __('Twitter', KT_THEME_LANG), 'icon' => 'fa fa-twitter', 'link' => 'http://www.twitter.com/%s'),
+                'dribbble' => array('title' => __('Dribbble', KT_THEME_LANG), 'icon' => 'fa fa-dribbble', 'link' => 'http://www.dribbble.com/%s'),
+                'vimeo' => array('title' => __('Vimeo', KT_THEME_LANG), 'icon' => 'fa fa-vimeo-square', 'link' => 'http://www.vimeo.com/%s'),
+                'tumblr' => array('title' => __('Tumblr', KT_THEME_LANG), 'icon' => 'fa fa-tumblr', 'link' => 'http://%s.tumblr.com/'),
+                'skype' => array('title' => __('Skype', KT_THEME_LANG), 'icon' => 'fa fa-skype', 'link' => 'skype:%s'),
+                'linkedin' => array('title' => __('LinkedIn', KT_THEME_LANG), 'icon' => 'fa fa-linkedin', 'link' => '%s'),
+                'googleplus' => array('title' => __('Google Plus', KT_THEME_LANG), 'icon' => 'fa fa-google-plus', 'link' => '%s'),
+                'youtube' => array('title' => __('Youtube', KT_THEME_LANG), 'icon' => 'fa fa-youtube', 'link' => 'http://www.youtube.com/user/%s'),
+                'pinterest' => array('title' => __('Pinterest', KT_THEME_LANG), 'icon' => 'fa fa-pinterest', 'link' => 'http://www.pinterest.com/%s'),
+                'instagram' => array('title' => __('Instagram', KT_THEME_LANG), 'icon' => 'fa fa-instagram', 'link' => 'http://instagram.com/%s'),
             );
     
             foreach($socials_arr as $k => &$v){
@@ -98,7 +98,7 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
 
     public function form( $instance ) {
         //Defaults
-        $instance = wp_parse_args( (array) $instance, array( 'title' => __('About me', THEME_LANG), 'target' => '_self', 'attachment' => '', 'size' => 'recent_posts', 'name' => '', 'description' => '') );
+        $instance = wp_parse_args( (array) $instance, array( 'title' => __('About me', KT_THEME_LANG), 'target' => '_self', 'attachment' => '', 'size' => 'recent_posts', 'name' => '', 'description' => '') );
         $title = strip_tags($instance['title']);
         $name = strip_tags($instance['name']);
 
@@ -117,7 +117,7 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
         <div class="wrapper_kt_image_upload">
             <p style="text-align: center;">
-                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr_e('Select your image', THEME_LANG) ?>" />
+                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr_e('Select your image', KT_THEME_LANG) ?>" />
                 <input class="widefat kt_image_attachment" id="<?php echo $this->get_field_id('attachment'); ?>" name="<?php echo $this->get_field_name('attachment'); ?>" type="hidden" value="<?php echo esc_attr($attachment); ?>" />
             </p>
             <p class="kt_image_preview" style="<?php if($preview){ echo "display: block;";} ?>">
@@ -129,7 +129,7 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
             $sizes = kt_get_image_sizes();
             $sizes['full'] = array();
             ?>
-            <label for="<?php echo $this->get_field_id('size'); ?>"><?php _e( 'Image size:', THEME_LANG ); ?></label>
+            <label for="<?php echo $this->get_field_id('size'); ?>"><?php _e( 'Image size:', KT_THEME_LANG ); ?></label>
             <select name="<?php echo $this->get_field_name('size'); ?>" id="<?php echo $this->get_field_id('size'); ?>" class="widefat">
                 <?php foreach($sizes as $key => $size){ ?>
                     <?php
@@ -139,7 +139,7 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
                         $option_text[] = '('.$size['width'].' x '.$size['height'].')';
                     }
                     if(isset($size['crop']) && $size['crop']){
-                        $option_text[] = __('Crop', THEME_LANG);
+                        $option_text[] = __('Crop', KT_THEME_LANG);
                     }
                     ?>
                     <option value="<?php echo $key; ?>"<?php selected( $instance['size'], $key ); ?>>
@@ -153,7 +153,7 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
             <input class="widefat" id="<?php echo $this->get_field_id( 'name' ); ?>" name="<?php echo $this->get_field_name( 'name' ); ?>" type="text" value="<?php echo $name; ?>" /></p>
 
         <p>
-            <label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php _e( 'Description:', THEME_LANG ); ?></label>
+            <label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php _e( 'Description:', KT_THEME_LANG ); ?></label>
             <textarea class="widefat" rows="5" cols="20" id="<?php echo $this->get_field_id('description'); ?>" name="<?php echo $this->get_field_name('description'); ?>"><?php echo $instance['description'] ?></textarea></p>
 
         <?php
@@ -192,7 +192,7 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
             </ul><!-- .kt-socials-profiles -->
             <input id="<?php echo $this->get_field_id( 'value' ); ?>" type="hidden" class="wpb_vc_param_value kt-socials-value" name="<?php echo $this->get_field_name( 'value' ); ?>" value="<?php echo esc_attr($value); ?>" />
         </div><!-- .kt-socials-options -->
-        <?php wp_enqueue_script( 'cosials_js', FW_JS.'kt_socials.js', array('jquery'), FW_VER, true); ?>
+        <?php wp_enqueue_script( 'cosials_js', KT_FW_JS.'kt_socials.js', array('jquery'), FW_VER, true); ?>
         
         <script type="text/javascript">
             (function($){

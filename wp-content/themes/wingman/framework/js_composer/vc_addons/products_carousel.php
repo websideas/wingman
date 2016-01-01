@@ -106,9 +106,9 @@ class WPBakeryShortCode_Products_Carousel extends WPBakeryShortCode {
 
 
 vc_map( array(
-    "name" => __( "Products Carousel", THEME_LANG),
+    "name" => __( "Products Carousel", KT_THEME_LANG),
     "base" => "products_carousel",
-    "category" => __('by Theme', THEME_LANG ),
+    "category" => __('by Theme', KT_THEME_LANG ),
     "params" => array(
         array(
 			'type' => 'textfield',
@@ -121,7 +121,7 @@ vc_map( array(
         
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Show', THEME_LANG ),
+            'heading' => __( 'Show', KT_THEME_LANG ),
             'param_name' => 'show',
             'value' => array(
                 __( 'All Product', 'woocommerce' ) => 'all',
@@ -204,97 +204,97 @@ vc_map( array(
         // Carousel
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Auto Height', THEME_LANG ),
+            'heading' => __( 'Auto Height', KT_THEME_LANG ),
             'param_name' => 'autoheight',
             'value' => 'true',
             "edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
-            "description" => __("Enable auto height.", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG )
+            "description" => __("Enable auto height.", KT_THEME_LANG),
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Mouse Drag', THEME_LANG ),
+            'heading' => __( 'Mouse Drag', KT_THEME_LANG ),
             'param_name' => 'mousedrag',
             'value' => 'true',
             "edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
-            "description" => __("Mouse drag enabled.", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG )
+            "description" => __("Mouse drag enabled.", KT_THEME_LANG),
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'AutoPlay', THEME_LANG ),
+            'heading' => __( 'AutoPlay', KT_THEME_LANG ),
             'param_name' => 'autoplay',
             'value' => 'false',
-            "description" => __("Enable auto play.", THEME_LANG),
+            "description" => __("Enable auto play.", KT_THEME_LANG),
             "edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
-            'group' => __( 'Carousel', THEME_LANG )
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
         array(
             "type" => "kt_number",
-            "heading" => __("AutoPlay Speed", THEME_LANG),
+            "heading" => __("AutoPlay Speed", KT_THEME_LANG),
             "param_name" => "autoplayspeed",
             "value" => "5000",
-            "suffix" => __("milliseconds", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG ),
+            "suffix" => __("milliseconds", KT_THEME_LANG),
+            'group' => __( 'Carousel', KT_THEME_LANG ),
             "dependency" => array("element" => "autoplay","value" => array('true')),
         ),
         array(
             "type" => "kt_number",
-            "heading" => __("Slide Speed", THEME_LANG),
+            "heading" => __("Slide Speed", KT_THEME_LANG),
             "param_name" => "slidespeed",
             "value" => "200",
-            "suffix" => __("milliseconds", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG )
+            "suffix" => __("milliseconds", KT_THEME_LANG),
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
         array(
             "type" => "kt_heading",
-            "heading" => __("Navigation settings", THEME_LANG),
+            "heading" => __("Navigation settings", KT_THEME_LANG),
             "param_name" => "navigation_settings",
-            'group' => __( 'Carousel', THEME_LANG )
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Navigation', THEME_LANG ),
+            'heading' => __( 'Navigation', KT_THEME_LANG ),
             'param_name' => 'navigation',
             'value' => 'true',
-            "description" => __("Show navigation in carousel", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG )
+            "description" => __("Show navigation in carousel", KT_THEME_LANG),
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Navigation position', THEME_LANG ),
+            'heading' => __( 'Navigation position', KT_THEME_LANG ),
             'param_name' => 'navigation_position',
-            'group' => __( 'Carousel', THEME_LANG ),
+            'group' => __( 'Carousel', KT_THEME_LANG ),
             'value' => array(
-                __( 'Center outside', THEME_LANG) => 'center_outside',
-                __( 'Center inside', THEME_LANG) => 'center',
-                __( 'Top', THEME_LANG) => 'top',
-                __( 'Bottom', THEME_LANG) => 'bottom',
+                __( 'Center outside', KT_THEME_LANG) => 'center_outside',
+                __( 'Center inside', KT_THEME_LANG) => 'center',
+                __( 'Top', KT_THEME_LANG) => 'top',
+                __( 'Bottom', KT_THEME_LANG) => 'bottom',
             ),
             "dependency" => array("element" => "navigation","value" => array('true')),
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Always Show Navigation', THEME_LANG ),
+            'heading' => __( 'Always Show Navigation', KT_THEME_LANG ),
             'param_name' => 'navigation_always_on',
             'value' => 'false',
-            "description" => __("Always show the navigation.", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG ),
+            "description" => __("Always show the navigation.", KT_THEME_LANG),
+            'group' => __( 'Carousel', KT_THEME_LANG ),
             "dependency" => array("element" => "navigation_position","value" => array('center', 'center_outside')),
         ),
         array(
             'type' => 'dropdown',
             'heading' => __( 'Navigation style', 'js_composer' ),
             'param_name' => 'navigation_style',
-            'group' => __( 'Carousel', THEME_LANG ),
+            'group' => __( 'Carousel', KT_THEME_LANG ),
             'value' => array(
-                __( 'Normal', THEME_LANG ) => '',
-                __( 'Circle Background', THEME_LANG ) => 'circle_background',
-                __( 'Square Background', THEME_LANG ) => 'square_background',
-                __( 'Round Background', THEME_LANG ) => 'round_background',
-                __( 'Circle Border', THEME_LANG ) => 'circle_border',
-                __( 'Square Border', THEME_LANG ) => 'square_border',
-                __( 'Round Border', THEME_LANG ) => 'round_border',
+                __( 'Normal', KT_THEME_LANG ) => '',
+                __( 'Circle Background', KT_THEME_LANG ) => 'circle_background',
+                __( 'Square Background', KT_THEME_LANG ) => 'square_background',
+                __( 'Round Background', KT_THEME_LANG ) => 'round_background',
+                __( 'Circle Border', KT_THEME_LANG ) => 'circle_border',
+                __( 'Square Border', KT_THEME_LANG ) => 'square_border',
+                __( 'Round Border', KT_THEME_LANG ) => 'round_border',
             ),
             'std' => 'square_border',
             "dependency" => array("element" => "navigation","value" => array('true')),
@@ -313,20 +313,20 @@ vc_map( array(
                 '<span><i class="fa fa-chevron-circle-left"></i><i class="fa fa-chevron-circle-right"></i></span>' =>'fa fa-chevron-circle-left|fa fa-chevron-circle-right',
                 '<span><i class="fa fa-arrow-circle-o-left"></i><i class="fa fa-arrow-circle-o-right"></i></span>' => 'fa fa-arrow-circle-o-left|fa fa-arrow-circle-o-right',
             ),
-            'description' => __( 'Select your style for navigation.', THEME_LANG ),
+            'description' => __( 'Select your style for navigation.', KT_THEME_LANG ),
             "dependency" => array("element" => "navigation","value" => array('true')),
-            'group' => __( 'Carousel', THEME_LANG )
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
 
         array(
             'type' => 'dropdown',
             'heading' => __( 'Carousel Skin', 'js_composer' ),
             'param_name' => 'carousel_skin',
-            'group' => __( 'Carousel', THEME_LANG ),
+            'group' => __( 'Carousel', KT_THEME_LANG ),
             'value' => array(
-                __( 'Black', THEME_LANG ) => 'black',
-                __( 'White', THEME_LANG ) => 'white',
-                __( 'Accent', THEME_LANG ) => 'accent'
+                __( 'Black', KT_THEME_LANG ) => 'black',
+                __( 'White', KT_THEME_LANG ) => 'white',
+                __( 'Accent', KT_THEME_LANG ) => 'accent'
             ),
             'std' => 'black',
         ),

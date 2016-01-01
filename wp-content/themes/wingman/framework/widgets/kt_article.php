@@ -12,7 +12,7 @@ class Widget_KT_Posts extends WP_Widget {
 
     public function __construct() {
         $widget_ops = array('classname' => 'widget_kt_posts', 'description' => __( "Show posts of categories.") );
-        parent::__construct('kt_posts', __('KT: Posts', THEME_LANG), $widget_ops);
+        parent::__construct('kt_posts', __('KT: Posts', KT_THEME_LANG), $widget_ops);
         $this->alt_option_name = 'widget_kt_posts';
 
         add_action( 'save_post', array($this, 'flush_widget_cache') );
@@ -172,7 +172,7 @@ class Widget_KT_Posts extends WP_Widget {
     }
 
     public function form( $instance ) {
-        $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : __( 'Recent Posts' , THEME_LANG);
+        $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : __( 'Recent Posts' , KT_THEME_LANG);
         $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
         $show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : true;
         $show_category = isset( $instance['show_category'] ) ? (bool) $instance['show_category'] : true;
@@ -195,7 +195,7 @@ class Widget_KT_Posts extends WP_Widget {
         <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
             <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" class="widefat" /></p>
 
-        <div><label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Categories:',THEME_LANG); ?> </label>
+        <div><label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Categories:',KT_THEME_LANG); ?> </label>
             <select class="widefat categories-chosen" id="<?php echo $this->get_field_id('category'); ?>" name="<?php echo $this->get_field_name('category'); ?>[]" multiple="multiple">
                 <?php foreach($categories as $item){ ?>
                     <option <?php if (in_array($item->term_id, $category)){ echo 'selected="selected"';} ?> value="<?php echo $item->term_id ?>"><?php echo $item->name; ?></option>
@@ -203,22 +203,22 @@ class Widget_KT_Posts extends WP_Widget {
             </select>
         </div>
 
-        <p><label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('Order by:', THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('Order by:', KT_THEME_LANG); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('orderby'); ?>" name="<?php echo $this->get_field_name('orderby'); ?>">
-                <option <?php selected( $orderby, 'name' ); ?> value="name"><?php _e('Name',THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'id' ); ?> value="id"><?php _e('ID',THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'date' ); ?> value="date"><?php _e('Date',THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'author' ); ?> value="author"><?php _e('Author',THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'modified' ); ?> value="modified"><?php _e('Modified',THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'rand' ); ?> value="rand"><?php _e('Rand',THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'comment_count' ); ?> value="comment_count "><?php _e('Comment count',THEME_LANG); ?></option>
+                <option <?php selected( $orderby, 'name' ); ?> value="name"><?php _e('Name',KT_THEME_LANG); ?></option>
+                <option <?php selected( $orderby, 'id' ); ?> value="id"><?php _e('ID',KT_THEME_LANG); ?></option>
+                <option <?php selected( $orderby, 'date' ); ?> value="date"><?php _e('Date',KT_THEME_LANG); ?></option>
+                <option <?php selected( $orderby, 'author' ); ?> value="author"><?php _e('Author',KT_THEME_LANG); ?></option>
+                <option <?php selected( $orderby, 'modified' ); ?> value="modified"><?php _e('Modified',KT_THEME_LANG); ?></option>
+                <option <?php selected( $orderby, 'rand' ); ?> value="rand"><?php _e('Rand',KT_THEME_LANG); ?></option>
+                <option <?php selected( $orderby, 'comment_count' ); ?> value="comment_count "><?php _e('Comment count',KT_THEME_LANG); ?></option>
             </select>
         </p>
 
-        <p><label for="<?php echo $this->get_field_id('order'); ?>"><?php _e('Order:',THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('order'); ?>"><?php _e('Order:',KT_THEME_LANG); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('order'); ?>" name="<?php echo $this->get_field_name('order'); ?>">
-                <option <?php selected( $order, 'DESC' ); ?> value="DESC"><?php _e('Desc',THEME_LANG); ?></option>
-                <option <?php selected( $order, 'ASC' ); ?> value="ASC"><?php _e('ASC',THEME_LANG); ?></option>
+                <option <?php selected( $order, 'DESC' ); ?> value="DESC"><?php _e('Desc',KT_THEME_LANG); ?></option>
+                <option <?php selected( $order, 'ASC' ); ?> value="ASC"><?php _e('ASC',KT_THEME_LANG); ?></option>
             </select>
         </p>
 
@@ -226,22 +226,22 @@ class Widget_KT_Posts extends WP_Widget {
             <label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?' ); ?></label></p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $show_category ); ?> id="<?php echo $this->get_field_id( 'show_category' ); ?>" name="<?php echo $this->get_field_name( 'show_category' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'show_category' ); ?>"><?php _e( 'Display post category?', THEME_LANG ); ?></label></p>
+            <label for="<?php echo $this->get_field_id( 'show_category' ); ?>"><?php _e( 'Display post category?', KT_THEME_LANG ); ?></label></p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $show_image ); ?> id="<?php echo $this->get_field_id( 'show_image' ); ?>" name="<?php echo $this->get_field_name( 'show_image' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'show_image' ); ?>"><?php _e( 'Display post image?', THEME_LANG ); ?></label></p>
+            <label for="<?php echo $this->get_field_id( 'show_image' ); ?>"><?php _e( 'Display post image?', KT_THEME_LANG ); ?></label></p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $show_comment ); ?> id="<?php echo $this->get_field_id( 'show_comment' ); ?>" name="<?php echo $this->get_field_name( 'show_comment' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'show_comment' ); ?>"><?php _e( 'Display post comment?', THEME_LANG ); ?></label></p>
+            <label for="<?php echo $this->get_field_id( 'show_comment' ); ?>"><?php _e( 'Display post comment?', KT_THEME_LANG ); ?></label></p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $show_author ); ?> id="<?php echo $this->get_field_id( 'show_author' ); ?>" name="<?php echo $this->get_field_name( 'show_author' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'show_author' ); ?>"><?php _e( 'Display post author?', THEME_LANG ); ?></label></p>
+            <label for="<?php echo $this->get_field_id( 'show_author' ); ?>"><?php _e( 'Display post author?', KT_THEME_LANG ); ?></label></p>
 
 
-        <p><label for="<?php echo $this->get_field_id('layout'); ?>"><?php _e('Layout:',THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('layout'); ?>"><?php _e('Layout:',KT_THEME_LANG); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('layout'); ?>" name="<?php echo $this->get_field_name('layout'); ?>">
-                <option <?php selected( $layout, '1' ); ?> value="1"><?php _e('Layout 1',THEME_LANG); ?></option>
-                <option <?php selected( $layout, '2' ); ?> value="2"><?php _e('Layout 2',THEME_LANG); ?></option>
+                <option <?php selected( $layout, '1' ); ?> value="1"><?php _e('Layout 1',KT_THEME_LANG); ?></option>
+                <option <?php selected( $layout, '2' ); ?> value="2"><?php _e('Layout 2',KT_THEME_LANG); ?></option>
             </select>
         </p>
 

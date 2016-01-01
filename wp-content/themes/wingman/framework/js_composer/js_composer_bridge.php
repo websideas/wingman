@@ -18,7 +18,7 @@ vc_add_params("vc_icon", array(
 vc_add_params("vc_custom_heading", array(
     array(
         "type" => "kt_number",
-        "heading" => __("Letter spacing", THEME_LANG),
+        "heading" => __("Letter spacing", KT_THEME_LANG),
         "param_name" => "letter_spacing",
         "min" => 0,
         "suffix" => "px",
@@ -34,7 +34,7 @@ vc_add_params("vc_btn", array(
         'heading' => __( 'Choose your icon', 'js_composer' ),
         'param_name' => 'button_icon',
         "value" => '',
-        'description' => __( 'Use existing font icon or upload a custom image.', THEME_LANG ),
+        'description' => __( 'Use existing font icon or upload a custom image.', KT_THEME_LANG ),
         'dependency' => array( 'element' => 'add_icon',  'not_empty' => true ),
     ),
     vc_map_add_css_animation( true ),
@@ -46,14 +46,14 @@ vc_add_params("vc_btn", array(
     ),
     array(
         "type" => "kt_number",
-        "heading" => __("Letter spacing", THEME_LANG),
+        "heading" => __("Letter spacing", KT_THEME_LANG),
         "param_name" => "letter_spacing",
         "value" => 0,
         "min" => 0,
         "max" => 10,
         "suffix" => "px",
         "description" => "",
-        'group' => __( 'Typography', THEME_LANG ),
+        'group' => __( 'Typography', KT_THEME_LANG ),
     ),
 
 ));
@@ -68,21 +68,21 @@ $visibilities_arr = array('vc_empty_space');
 foreach($visibilities_arr as $item){
     vc_add_param($item, array(
         "type" => "dropdown",
-        "heading" => __("Visibility",THEME_LANG),
+        "heading" => __("Visibility",KT_THEME_LANG),
         "param_name" => "visibility",
         "value" => array(
-            __('Always Visible', THEME_LANG) => '',
-            __('Visible on Phones', THEME_LANG) => 'visible-xs-block',
-            __('Visible on Tablets', THEME_LANG) => 'visible-sm-block',
-            __('Visible on Desktops', THEME_LANG) => 'visible-md-block',
-            __('Visible on Desktops Large', THEME_LANG) => 'visible-lg-block',
+            __('Always Visible', KT_THEME_LANG) => '',
+            __('Visible on Phones', KT_THEME_LANG) => 'visible-xs-block',
+            __('Visible on Tablets', KT_THEME_LANG) => 'visible-sm-block',
+            __('Visible on Desktops', KT_THEME_LANG) => 'visible-md-block',
+            __('Visible on Desktops Large', KT_THEME_LANG) => 'visible-lg-block',
 
-            __('Hidden on Phones', THEME_LANG) => 'hidden-xs',
-            __('Hidden on Tablets', THEME_LANG) => 'hidden-sm',
-            __('Hidden on Desktops', THEME_LANG) => 'hidden-md',
-            __('Hidden on Desktops Large', THEME_LANG) => 'hidden-lg',
+            __('Hidden on Phones', KT_THEME_LANG) => 'hidden-xs',
+            __('Hidden on Tablets', KT_THEME_LANG) => 'hidden-sm',
+            __('Hidden on Desktops', KT_THEME_LANG) => 'hidden-md',
+            __('Hidden on Desktops Large', KT_THEME_LANG) => 'hidden-lg',
         ),
-        "description" => __("",THEME_LANG),
+        "description" => __("",KT_THEME_LANG),
         "admin_label" => true,
     ));
 }
@@ -122,5 +122,5 @@ if(kt_is_wc()){
 }
 
 foreach ( $composer_addons as $addon ) {
-	require_once( FW_DIR . 'js_composer/vc_addons/' . $addon );
+	require_once( KT_FW_DIR . 'js_composer/vc_addons/' . $addon );
 }

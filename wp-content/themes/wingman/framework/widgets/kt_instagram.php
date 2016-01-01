@@ -16,8 +16,8 @@ class Widget_KT_Instagram extends WP_Widget {
     private $userid;
     
     public function __construct() {
-        $widget_ops = array('classname' => 'widget_kt_instagram', 'description' => __( "Lasted images in instagram.", THEME_LANG) );
-        parent::__construct('kt_instagram', __('KT: Instagram', THEME_LANG), $widget_ops);
+        $widget_ops = array('classname' => 'widget_kt_instagram', 'description' => __( "Lasted images in instagram.", KT_THEME_LANG) );
+        parent::__construct('kt_instagram', __('KT: Instagram', KT_THEME_LANG), $widget_ops);
         $this->alt_option_name = 'widget_kt_instagram';
         
         $this->client_id = get_option( 'kt_instagram_client_id' );
@@ -40,7 +40,7 @@ class Widget_KT_Instagram extends WP_Widget {
                 if ( ! $number )
                     $number = 9;
             
-            require_once ( FW_CLASS . 'instagram-api.php' );
+            require_once ( KT_FW_CLASS . 'instagram-api.php' );
             
             $kt_instagram = new KT_Instagram();
             $data = $kt_instagram->getUserMedia( array('count' => $number ));
@@ -55,7 +55,7 @@ class Widget_KT_Instagram extends WP_Widget {
                 if($show_follow){
                     printf(
                         '<p>%s <a target="_blank" href="%s">@%s</a></p>',
-                        __('Follow Us', THEME_LANG),
+                        __('Follow Us', KT_THEME_LANG),
                         'https://instagram.com/'.$this->username,
                         $this->username
                     );
@@ -63,7 +63,7 @@ class Widget_KT_Instagram extends WP_Widget {
             }else{
                 printf(
                     '<strong>%s</strong>',
-                    __('Empty username or access token', THEME_LANG) 
+                    __('Empty username or access token', KT_THEME_LANG) 
                 );
             }
 
@@ -71,7 +71,7 @@ class Widget_KT_Instagram extends WP_Widget {
         }else{
             printf(
                 '<strong>%s</strong>',
-                __('Please fill all widget settings!', THEME_LANG) 
+                __('Please fill all widget settings!', KT_THEME_LANG) 
             );
         }
         
@@ -99,7 +99,7 @@ class Widget_KT_Instagram extends WP_Widget {
 
     public function form( $instance ) {
 
-        $defaults = array( 'title' => __( 'Instagram' , THEME_LANG), 'number' => 9, 'columns' => 3, 'show_follow' => true);
+        $defaults = array( 'title' => __( 'Instagram' , KT_THEME_LANG), 'number' => 9, 'columns' => 3, 'show_follow' => true);
         $instance = wp_parse_args( (array) $instance, $defaults );
 
         $title = strip_tags($instance['title']);
@@ -109,18 +109,18 @@ class Widget_KT_Instagram extends WP_Widget {
         <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
         <?php if($this->access_token && $this->username ){ ?>
-            <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of image to show:', THEME_LANG ); ?></label>
+            <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of image to show:', KT_THEME_LANG ); ?></label>
                 <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $instance['number']; ?>" class="widefat" /></p>
     
-            <p><label for="<?php echo $this->get_field_id( 'columns' ); ?>"><?php _e( 'Columns:', THEME_LANG ); ?></label>
+            <p><label for="<?php echo $this->get_field_id( 'columns' ); ?>"><?php _e( 'Columns:', KT_THEME_LANG ); ?></label>
                 <select class="widefat" id="<?php echo $this->get_field_id('columns'); ?>" name="<?php echo $this->get_field_name('columns'); ?>">
-                    <option <?php selected( $instance['columns'], '2' ); ?> value="2"><?php _e('2',THEME_LANG); ?></option>
-                    <option <?php selected( $instance['columns'], '3' ); ?> value="3"><?php _e('3',THEME_LANG); ?></option>
-                    <option <?php selected( $instance['columns'], '4' ); ?> value="4"><?php _e('4',THEME_LANG); ?></option>
+                    <option <?php selected( $instance['columns'], '2' ); ?> value="2"><?php _e('2',KT_THEME_LANG); ?></option>
+                    <option <?php selected( $instance['columns'], '3' ); ?> value="3"><?php _e('3',KT_THEME_LANG); ?></option>
+                    <option <?php selected( $instance['columns'], '4' ); ?> value="4"><?php _e('4',KT_THEME_LANG); ?></option>
                 </select></p>
 
             <p><input class="checkbox" type="checkbox" <?php checked( $instance['show_follow'] ); ?> id="<?php echo $this->get_field_id( 'show_follow' ); ?>" name="<?php echo $this->get_field_name( 'show_follow' ); ?>" />
-                <label for="<?php echo $this->get_field_id( 'show_follow' ); ?>"><?php _e( 'Follow link', THEME_LANG ); ?></label></p>
+                <label for="<?php echo $this->get_field_id( 'show_follow' ); ?>"><?php _e( 'Follow link', KT_THEME_LANG ); ?></label></p>
 
         <?php }else{ 
             printf(

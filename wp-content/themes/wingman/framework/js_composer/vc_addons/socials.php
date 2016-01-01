@@ -24,17 +24,17 @@ class WPBakeryShortCode_Socials extends WPBakeryShortCode {
         $output = $social_icons = '';
 
         $socials_arr = array(
-            'facebook' => array('title' => __('Facebook', THEME_LANG), 'icon' => 'fa fa-facebook', 'link' => '%s'),
-            'twitter' => array('title' => __('Twitter', THEME_LANG), 'icon' => 'fa fa-twitter', 'link' => 'http://www.twitter.com/%s'),
-            'dribbble' => array('title' => __('Dribbble', THEME_LANG), 'icon' => 'fa fa-dribbble', 'link' => 'http://www.dribbble.com/%s'),
-            'vimeo' => array('title' => __('Vimeo', THEME_LANG), 'icon' => 'fa fa-vimeo-square', 'link' => 'http://www.vimeo.com/%s'),
-            'tumblr' => array('title' => __('Tumblr', THEME_LANG), 'icon' => 'fa fa-tumblr', 'link' => 'http://%s.tumblr.com/'),
-            'skype' => array('title' => __('Skype', THEME_LANG), 'icon' => 'fa fa-skype', 'link' => 'skype:%s'),
-            'linkedin' => array('title' => __('LinkedIn', THEME_LANG), 'icon' => 'fa fa-linkedin', 'link' => '%s'),
-            'googleplus' => array('title' => __('Google Plus', THEME_LANG), 'icon' => 'fa fa-google-plus', 'link' => '%s'),
-            'youtube' => array('title' => __('Youtube', THEME_LANG), 'icon' => 'fa fa-youtube', 'link' => 'http://www.youtube.com/user/%s'),
-            'pinterest' => array('title' => __('Pinterest', THEME_LANG), 'icon' => 'fa fa-pinterest', 'link' => 'http://www.pinterest.com/%s'),
-            'instagram' => array('title' => __('Instagram', THEME_LANG), 'icon' => 'fa fa-instagram', 'link' => 'http://instagram.com/%s'),
+            'facebook' => array('title' => __('Facebook', KT_THEME_LANG), 'icon' => 'fa fa-facebook', 'link' => '%s'),
+            'twitter' => array('title' => __('Twitter', KT_THEME_LANG), 'icon' => 'fa fa-twitter', 'link' => 'http://www.twitter.com/%s'),
+            'dribbble' => array('title' => __('Dribbble', KT_THEME_LANG), 'icon' => 'fa fa-dribbble', 'link' => 'http://www.dribbble.com/%s'),
+            'vimeo' => array('title' => __('Vimeo', KT_THEME_LANG), 'icon' => 'fa fa-vimeo-square', 'link' => 'http://www.vimeo.com/%s'),
+            'tumblr' => array('title' => __('Tumblr', KT_THEME_LANG), 'icon' => 'fa fa-tumblr', 'link' => 'http://%s.tumblr.com/'),
+            'skype' => array('title' => __('Skype', KT_THEME_LANG), 'icon' => 'fa fa-skype', 'link' => 'skype:%s'),
+            'linkedin' => array('title' => __('LinkedIn', KT_THEME_LANG), 'icon' => 'fa fa-linkedin', 'link' => '%s'),
+            'googleplus' => array('title' => __('Google Plus', KT_THEME_LANG), 'icon' => 'fa fa-google-plus', 'link' => '%s'),
+            'youtube' => array('title' => __('Youtube', KT_THEME_LANG), 'icon' => 'fa fa-youtube', 'link' => 'http://www.youtube.com/user/%s'),
+            'pinterest' => array('title' => __('Pinterest', KT_THEME_LANG), 'icon' => 'fa fa-pinterest', 'link' => 'http://www.pinterest.com/%s'),
+            'instagram' => array('title' => __('Instagram', KT_THEME_LANG), 'icon' => 'fa fa-instagram', 'link' => 'http://instagram.com/%s'),
         );
 
         foreach($socials_arr as $k => &$v){
@@ -121,34 +121,34 @@ class WPBakeryShortCode_Socials extends WPBakeryShortCode {
 
 // Add your Visual Composer logic here
 vc_map( array(
-    "name" => __( "Social", THEME_LANG),
+    "name" => __( "Social", KT_THEME_LANG),
     "base" => "socials",
-    "category" => __('by Theme', THEME_LANG ),
-    "description" => __( "Social", THEME_LANG),
+    "category" => __('by Theme', KT_THEME_LANG ),
+    "description" => __( "Social", KT_THEME_LANG),
     "wrapper_class" => "clearfix",
     "params" => array(
         array(
             "type" => "kt_socials",
             "class" => "",
-            "heading" => __("Choose social", THEME_LANG),
+            "heading" => __("Choose social", KT_THEME_LANG),
             "param_name" => "social",
             "value" => '',
-            "description" => __("Empty for select all, Drop and sortable social", THEME_LANG),
+            "description" => __("Empty for select all, Drop and sortable social", KT_THEME_LANG),
             "admin_label" => true,
         ),
         array(
 			"type" => "dropdown",
 			"class" => "",
-			"heading" => __("Style",THEME_LANG),
+			"heading" => __("Style",KT_THEME_LANG),
 			"param_name" => "style",
 			"value" => array(
-                __('Accent', THEME_LANG) => 'accent',
-                __('Dark', THEME_LANG) => 'dark',
-                __('Light', THEME_LANG) => 'light',
-                __('Color', THEME_LANG) => 'color',
-                __('Custom Color', THEME_LANG) => 'custom',
+                __('Accent', KT_THEME_LANG) => 'accent',
+                __('Dark', KT_THEME_LANG) => 'dark',
+                __('Light', KT_THEME_LANG) => 'light',
+                __('Color', KT_THEME_LANG) => 'color',
+                __('Custom Color', KT_THEME_LANG) => 'custom',
 			),
-			"description" => __("",THEME_LANG),
+			"description" => __("",KT_THEME_LANG),
             "admin_label" => true,
 		),
         array(
@@ -176,56 +176,56 @@ vc_map( array(
                 __( 'Outline Rounded', 'js_composer' ) => 'rounded-less-outline',
                 __( 'Outline Diamond Square', 'js_composer' ) => 'diamond-square-outline',
             ),
-            'description' => __( 'Select background shape and style for social.', THEME_LANG ),
+            'description' => __( 'Select background shape and style for social.', KT_THEME_LANG ),
             "admin_label" => true,
         ),
 
         array(
 			"type" => "dropdown",
 			"class" => "",
-			"heading" => __("Size",THEME_LANG),
+			"heading" => __("Size",KT_THEME_LANG),
 			"param_name" => "size",
 			"value" => array(
-                __('Standard', THEME_LANG) => 'standard',
-                __('Small', THEME_LANG) => 'small',
+                __('Standard', KT_THEME_LANG) => 'standard',
+                __('Small', KT_THEME_LANG) => 'small',
 			),
-			"description" => __("",THEME_LANG),
+			"description" => __("",KT_THEME_LANG),
             "admin_label" => true,
 		),
         array(
             "type" => "dropdown",
             "class" => "",
-            "heading" => __("Tooltip",THEME_LANG),
+            "heading" => __("Tooltip",KT_THEME_LANG),
             "param_name" => "tooltip",
             "value" => array(
-                __('None', THEME_LANG) => '',
-                __('Top', THEME_LANG) => 'top',
-                __('Right', THEME_LANG) => 'right',
-                __('Bottom', THEME_LANG) => 'bottom',
-                __('Left', THEME_LANG) => 'left',
+                __('None', KT_THEME_LANG) => '',
+                __('Top', KT_THEME_LANG) => 'top',
+                __('Right', KT_THEME_LANG) => 'right',
+                __('Bottom', KT_THEME_LANG) => 'bottom',
+                __('Left', KT_THEME_LANG) => 'left',
             ),
             'std' => 'top',
-            "description" => __("Select the tooltip position",THEME_LANG),
+            "description" => __("Select the tooltip position",KT_THEME_LANG),
             "admin_label" => true,
         ),
 
         array(
             "type" => "dropdown",
             "class" => "",
-            "heading" => __("Align",THEME_LANG),
+            "heading" => __("Align",KT_THEME_LANG),
             "param_name" => "align",
             "value" => array(
-                __('None', THEME_LANG) => '',
-                __('Center', THEME_LANG) => 'center',
-                __('Left', THEME_LANG) => 'left',
-                __('Right', THEME_LANG) => 'right'
+                __('None', KT_THEME_LANG) => '',
+                __('Center', KT_THEME_LANG) => 'center',
+                __('Left', KT_THEME_LANG) => 'left',
+                __('Right', KT_THEME_LANG) => 'right'
             ),
-            "description" => __("",THEME_LANG)
+            "description" => __("",KT_THEME_LANG)
         ),
         
         array(
             "type" => "kt_number",
-            "heading" => __("Space Between item", THEME_LANG),
+            "heading" => __("Space Between item", KT_THEME_LANG),
             "param_name" => "space_between_item",
             "value" => 3,
             "min" => 0,

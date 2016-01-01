@@ -16,7 +16,7 @@ class RWMB_Group_Field extends RWMB_Field
 	 */
 	static function admin_enqueue_scripts()
 	{
-		wp_enqueue_style( 'rwmb-group', FW_EXT_URL.'meta-box-group/group.css' );
+		wp_enqueue_style( 'rwmb-group', KT_FW_EXT_URL.'meta-box-group/group.css' );
 	}
 
 	/**

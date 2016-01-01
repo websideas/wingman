@@ -107,10 +107,10 @@ class WPBakeryShortCode_Comingsoon extends WPBakeryShortCode_VC_Custom_heading {
 
 // Add your Visual Composer logic here
 vc_map( array(
-    "name" => __( "Coming soon", THEME_LANG),
+    "name" => __( "Coming soon", KT_THEME_LANG),
     "base" => "comingsoon",
-    "category" => __('by Theme', THEME_LANG ),
-    "description" => __( "", THEME_LANG),
+    "category" => __('by Theme', KT_THEME_LANG ),
+    "description" => __( "", KT_THEME_LANG),
     "params" => array(
         array(
             'type' => 'textfield',
@@ -128,7 +128,7 @@ vc_map( array(
 
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Style', THEME_LANG ),
+            'heading' => __( 'Style', KT_THEME_LANG ),
             'param_name' => 'style_coming',
             'value' => array(
                 __( 'Style 1', 'js_composer' ) => 'style1',
@@ -140,9 +140,9 @@ vc_map( array(
         //Typography settings
         array(
             "type" => "kt_heading",
-            "heading" => __("Title typography", THEME_LANG),
+            "heading" => __("Title typography", KT_THEME_LANG),
             "param_name" => "title_typography",
-            'group' => __( 'Typography', THEME_LANG )
+            'group' => __( 'Typography', KT_THEME_LANG )
         ),
         array(
             'type' => 'font_container',
@@ -161,7 +161,7 @@ vc_map( array(
                     'color_description' => __( 'Select heading color.', 'js_composer' ),
                 ),
             ),
-            'group' => __( 'Typography', THEME_LANG )
+            'group' => __( 'Typography', KT_THEME_LANG )
         ),
         array(
             'type' => 'checkbox',
@@ -169,7 +169,7 @@ vc_map( array(
             'param_name' => 'use_theme_fonts',
             'value' => array( __( 'Yes', 'js_composer' ) => 'yes' ),
             'description' => __( 'Use font family from the theme.', 'js_composer' ),
-            'group' => __( 'Typography', THEME_LANG ),
+            'group' => __( 'Typography', KT_THEME_LANG ),
             'std' => 'yes'
         ),
         array(
@@ -181,7 +181,7 @@ vc_map( array(
                     'font_style_description' => __( 'Select font styling.', 'js_composer' )
                 )
             ),
-            'group' => __( 'Typography', THEME_LANG ),
+            'group' => __( 'Typography', KT_THEME_LANG ),
             'dependency' => array(
                 'element' => 'use_theme_fonts',
                 'value_not_equal_to' => 'yes',
@@ -190,9 +190,9 @@ vc_map( array(
         ),
         array(
             "type" => "kt_heading",
-            "heading" => __('Value Typography', THEME_LANG),
+            "heading" => __('Value Typography', KT_THEME_LANG),
             "param_name" => "value_typography",
-            'group' => __( 'Typography', THEME_LANG )
+            'group' => __( 'Typography', KT_THEME_LANG )
         ),
         array(
             'type' => 'font_container',
@@ -212,7 +212,7 @@ vc_map( array(
                 ),
             ),
             'description' => __( '', 'js_composer' ),
-            'group' => __( 'Typography', THEME_LANG )
+            'group' => __( 'Typography', KT_THEME_LANG )
         ),
         array(
             'type' => 'checkbox',
@@ -220,7 +220,7 @@ vc_map( array(
             'param_name' => 'use_theme_fonts_value',
             'value' => array( __( 'Yes', 'js_composer' ) => 'yes' ),
             'description' => __( 'Use font family from the theme.', 'js_composer' ),
-            'group' => __( 'Typography', THEME_LANG ),
+            'group' => __( 'Typography', KT_THEME_LANG ),
             'std' => 'yes'
         ),
         array(
@@ -232,7 +232,7 @@ vc_map( array(
                     'font_style_description' => __( 'Select font styling.', 'js_composer' )
                 )
             ),
-            'group' => __( 'Typography', THEME_LANG ),
+            'group' => __( 'Typography', KT_THEME_LANG ),
             'dependency' => array(
                 'element' => 'use_theme_fonts_value',
                 'value_not_equal_to' => 'yes',

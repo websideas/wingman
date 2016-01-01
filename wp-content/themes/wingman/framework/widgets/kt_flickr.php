@@ -11,8 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Widget_KT_Flickr extends WP_Widget {
     
     public function __construct() {
-        $widget_ops = array('classname' => 'widget_kt_flickr', 'description' => __( "Lasted images in flickr.", THEME_LANG) );
-        parent::__construct('kt_flickr', __('KT: Flickr', THEME_LANG), $widget_ops);
+        $widget_ops = array('classname' => 'widget_kt_flickr', 'description' => __( "Lasted images in flickr.", KT_THEME_LANG) );
+        parent::__construct('kt_flickr', __('KT: Flickr', KT_THEME_LANG), $widget_ops);
     }
 
     public function widget($args, $instance) {
@@ -93,7 +93,7 @@ class Widget_KT_Flickr extends WP_Widget {
 
     public function form( $instance ) {
 
-        $defaults = array( 'title' => __( 'Flickr' , THEME_LANG), 'type' => '', 'user_id' => '', 'number' => 9, 'ordering' => '', 'column' => 3, 'api' => '6346cf3fc74387e93b84f0d22c78939a' );
+        $defaults = array( 'title' => __( 'Flickr' , KT_THEME_LANG), 'type' => '', 'user_id' => '', 'number' => 9, 'ordering' => '', 'column' => 3, 'api' => '6346cf3fc74387e93b84f0d22c78939a' );
         $instance = wp_parse_args( (array) $instance, $defaults );
 
         $title = strip_tags($instance['title']);
@@ -105,21 +105,21 @@ class Widget_KT_Flickr extends WP_Widget {
         
         <p><label for="<?php echo $this->get_field_id( 'user_id' ); ?>"><?php _e( 'Flickr ID:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'user_id' ); ?>" name="<?php echo $this->get_field_name( 'user_id' ); ?>" type="text" value="<?php echo $instance['user_id']; ?>" />
-            <small><?php _e('To find your flickID visit',THEME_LANG); ?> <a target="_blank" href="http://idgettr.com/"><?php _e('idGettr.',THEME_LANG); ?></a></small>
+            <small><?php _e('To find your flickID visit',KT_THEME_LANG); ?> <a target="_blank" href="http://idgettr.com/"><?php _e('idGettr.',KT_THEME_LANG); ?></a></small>
         </p>
         
-        <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of image to show:', THEME_LANG ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of image to show:', KT_THEME_LANG ); ?></label>
             <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $instance['number']; ?>" class="widefat" />
-            <small><?php _e('Select number of photos to display.',THEME_LANG); ?></small>
+            <small><?php _e('Select number of photos to display.',KT_THEME_LANG); ?></small>
         </p>
         
-        <p><label for="<?php echo $this->get_field_id( 'column' ); ?>"><?php _e( 'Column of images:', THEME_LANG ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'column' ); ?>"><?php _e( 'Column of images:', KT_THEME_LANG ); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('column'); ?>" name="<?php echo $this->get_field_name('column'); ?>">
-                <option <?php selected( $instance['column'], '2' ); ?> value="2"><?php _e('2',THEME_LANG); ?></option>
-                <option <?php selected( $instance['column'], '3' ); ?> value="3"><?php _e('3',THEME_LANG); ?></option>
-                <option <?php selected( $instance['column'], '4' ); ?> value="4"><?php _e('4',THEME_LANG); ?></option>
+                <option <?php selected( $instance['column'], '2' ); ?> value="2"><?php _e('2',KT_THEME_LANG); ?></option>
+                <option <?php selected( $instance['column'], '3' ); ?> value="3"><?php _e('3',KT_THEME_LANG); ?></option>
+                <option <?php selected( $instance['column'], '4' ); ?> value="4"><?php _e('4',KT_THEME_LANG); ?></option>
             </select>
-            <small><?php _e('Select column of image.',THEME_LANG); ?></small>
+            <small><?php _e('Select column of image.',KT_THEME_LANG); ?></small>
         </p>
         
         <p>

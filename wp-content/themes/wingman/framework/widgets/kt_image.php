@@ -12,8 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 class WP_Widget_KT_Image extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array('classname' => 'widget_kt_image', 'description' => __( 'Image for widget.', THEME_LANG ) );
-		parent::__construct('kt_image', __('KT: image', THEME_LANG ), $widget_ops);
+		$widget_ops = array('classname' => 'widget_kt_image', 'description' => __( 'Image for widget.', KT_THEME_LANG ) );
+		parent::__construct('kt_image', __('KT: image', KT_THEME_LANG ), $widget_ops);
 	}
 
 	public function widget( $args, $instance ) {
@@ -63,7 +63,7 @@ class WP_Widget_KT_Image extends WP_Widget {
 
 	public function form( $instance ) {
 		//Defaults
-		$instance = wp_parse_args( (array) $instance, array( 'title' => __('Image', THEME_LANG), 'target' => '_self', 'link' => '', 'attachment' => '', 'size' => '', 'animation' => '', 'align' => 'center') );
+		$instance = wp_parse_args( (array) $instance, array( 'title' => __('Image', KT_THEME_LANG), 'target' => '_self', 'link' => '', 'attachment' => '', 'size' => '', 'animation' => '', 'align' => 'center') );
         $title = strip_tags($instance['title']);
 
 		$link = esc_attr( $instance['link'] );
@@ -82,7 +82,7 @@ class WP_Widget_KT_Image extends WP_Widget {
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
         <div class="wrapper_kt_image_upload">
             <p style="text-align: center;">
-                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr_e('Select your image', THEME_LANG) ?>" />
+                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr_e('Select your image', KT_THEME_LANG) ?>" />
                 <input class="widefat kt_image_attachment" id="<?php echo $this->get_field_id('attachment'); ?>" name="<?php echo $this->get_field_name('attachment'); ?>" type="hidden" value="<?php echo esc_attr($attachment); ?>" />
             </p>
             <p class="kt_image_preview" style="<?php if($preview){ echo "display: block;";} ?>">
@@ -90,14 +90,14 @@ class WP_Widget_KT_Image extends WP_Widget {
             </p>
         </div>
         <p style="clear: both;">
-            <label for="<?php echo $this->get_field_id('link'); ?>"><?php _e('Link:', THEME_LANG); ?></label> 
+            <label for="<?php echo $this->get_field_id('link'); ?>"><?php _e('Link:', KT_THEME_LANG); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id('link'); ?>" name="<?php echo $this->get_field_name('link'); ?>" type="text" value="<?php echo esc_attr($link); ?>" />
         </p>
         <p>
-			<label for="<?php echo $this->get_field_id('target'); ?>"><?php _e( 'Target:', THEME_LANG); ?></label>
+			<label for="<?php echo $this->get_field_id('target'); ?>"><?php _e( 'Target:', KT_THEME_LANG); ?></label>
 			<select name="<?php echo $this->get_field_name('target'); ?>" id="<?php echo $this->get_field_id('target'); ?>" class="widefat">
-				<option value="_self"<?php selected( $instance['target'], '_self' ); ?>><?php _e('Stay in Window', THEME_LANG); ?></option>
-				<option value="_blank"<?php selected( $instance['target'], '_blank' ); ?>><?php _e('Open New Window', THEME_LANG); ?></option>
+				<option value="_self"<?php selected( $instance['target'], '_self' ); ?>><?php _e('Stay in Window', KT_THEME_LANG); ?></option>
+				<option value="_blank"<?php selected( $instance['target'], '_blank' ); ?>><?php _e('Open New Window', KT_THEME_LANG); ?></option>
 			</select>
 		</p>
         <p>
@@ -105,7 +105,7 @@ class WP_Widget_KT_Image extends WP_Widget {
                 $sizes = kt_get_image_sizes();
                 $sizes['full'] = array(); 
             ?>
-			<label for="<?php echo $this->get_field_id('size'); ?>"><?php _e( 'Image size:', THEME_LANG ); ?></label>
+			<label for="<?php echo $this->get_field_id('size'); ?>"><?php _e( 'Image size:', KT_THEME_LANG ); ?></label>
 			<select name="<?php echo $this->get_field_name('size'); ?>" id="<?php echo $this->get_field_id('size'); ?>" class="widefat">
                 <?php foreach($sizes as $key => $size){ ?>
                     <?php
@@ -115,7 +115,7 @@ class WP_Widget_KT_Image extends WP_Widget {
                             $option_text[] = '('.$size['width'].' x '.$size['height'].')';
                         }
                         if(isset($size['crop']) && $size['crop']){
-                            $option_text[] = __('Crop', THEME_LANG);
+                            $option_text[] = __('Crop', KT_THEME_LANG);
                         }
                     ?>
     				<option value="<?php echo $key; ?>"<?php selected( $instance['size'], $key ); ?>>
@@ -125,13 +125,13 @@ class WP_Widget_KT_Image extends WP_Widget {
 			</select>
 		</p>
         <p>
-            <label for="<?php echo $this->get_field_id('animation'); ?>"><?php _e( 'CSS Animation:', THEME_LANG ); ?></label>
+            <label for="<?php echo $this->get_field_id('animation'); ?>"><?php _e( 'CSS Animation:', KT_THEME_LANG ); ?></label>
             <?php
-                $string = file_get_contents(FW_URL.'js_composer/animate-config.json');
+                $string = file_get_contents(KT_FW_URL.'js_composer/animate-config.json');
                 $json_a = json_decode($string,true);
 
                 $posts_fields = array();
-                $posts_fields[] = "<option value=''>".__('No Animation', THEME_LANG)."</option>";
+                $posts_fields[] = "<option value=''>".__('No Animation', KT_THEME_LANG)."</option>";
 
                 foreach($json_a as $key => $value){
                     $posts_fields[] = "<optgroup label='".ucwords(str_replace('_',' ',$key))."'>";
@@ -147,11 +147,11 @@ class WP_Widget_KT_Image extends WP_Widget {
             </select>
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id('align'); ?>"><?php _e( 'Align:', THEME_LANG); ?></label>
+            <label for="<?php echo $this->get_field_id('align'); ?>"><?php _e( 'Align:', KT_THEME_LANG); ?></label>
             <select name="<?php echo $this->get_field_name('align'); ?>" id="<?php echo $this->get_field_id('align'); ?>" class="widefat">
-                <option value="center"<?php selected( $instance['align'], 'center' ); ?>><?php _e('Center', THEME_LANG); ?></option>
-                <option value="left"<?php selected( $instance['align'], 'left' ); ?>><?php _e('Left', THEME_LANG); ?></option>
-                <option value="right"<?php selected( $instance['align'], 'right' ); ?>><?php _e('Right', THEME_LANG); ?></option>
+                <option value="center"<?php selected( $instance['align'], 'center' ); ?>><?php _e('Center', KT_THEME_LANG); ?></option>
+                <option value="left"<?php selected( $instance['align'], 'left' ); ?>><?php _e('Left', KT_THEME_LANG); ?></option>
+                <option value="right"<?php selected( $instance['align'], 'right' ); ?>><?php _e('Right', KT_THEME_LANG); ?></option>
             </select>
         </p>
 <?php

@@ -11,7 +11,7 @@
                  * @hooked
                  *
                  */
-                do_action( 'theme_content_bottom' ); ?>
+                do_action( 'kt_content_bottom' ); ?>
             </div><!-- #content -->
         </div><!-- #wrapper-content -->
         <?php if(kt_option('footer', true)){ ?>
@@ -21,7 +21,7 @@
              * theme_after_footer_addscroll 10
              * 
         	 */
-        	do_action( 'theme_before_footer' ); ?>
+        	do_action( 'kt_before_footer' ); ?>
             <div id="footer">
                 <?php if(is_active_sidebar( 'footer-top' ) && kt_option('footer_top', true)){ ?>
                     <footer id="footer-top">
@@ -80,7 +80,7 @@
         	/**
         	 * @hooked 
         	 */
-        	do_action( 'theme_after_footer' ); ?>
+        	do_action( 'kt_after_footer' ); ?>
         <?php } ?>
     </div><!-- #page -->
 </div><!-- #page_outter -->

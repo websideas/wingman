@@ -17,8 +17,8 @@ class Widget_KT_Twitter extends WP_Widget {
     private $username;
     
     public function __construct() {
-        $widget_ops = array('classname' => 'widget_kt_twitter', 'description' => __( "Display recent tweets.", THEME_LANG) );
-        parent::__construct('kt_twitter', __('KT: Twitter', THEME_LANG), $widget_ops);
+        $widget_ops = array('classname' => 'widget_kt_twitter', 'description' => __( "Display recent tweets.", KT_THEME_LANG) );
+        parent::__construct('kt_twitter', __('KT: Twitter', KT_THEME_LANG), $widget_ops);
         $this->alt_option_name = 'widget_kt_twitter';
         
         $this->consumer_key = kt_option( 'twitter_consumer_key' );
@@ -40,7 +40,7 @@ class Widget_KT_Twitter extends WP_Widget {
         
         if($this->consumer_key && $this->consumer_secret && $this->access_key && $this->access_secret && $this->username){
             if(!class_exists('TwitterOAuth')){
-                require_once ( FW_CLASS . 'twitteroauth.php' );
+                require_once ( KT_FW_CLASS . 'twitteroauth.php' );
             }
             
             $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 5;
@@ -70,11 +70,11 @@ class Widget_KT_Twitter extends WP_Widget {
                             </div>
                             <div class="kt-twitter-tool">
                                 <span><a target="_blank" href="https://twitter.com/intent/tweet?in_reply_to=<?php echo $tweet->id; ?>">
-                                    <?php _e('Reply', THEME_LANG); ?></a></span>
+                                    <?php _e('Reply', KT_THEME_LANG); ?></a></span>
                                 <span><a target="_blank" href="https://twitter.com/intent/retweet?tweet_id=<?php echo $tweet->id; ?>">
-                                    <?php _e('Retweet', THEME_LANG); ?></a></span>
+                                    <?php _e('Retweet', KT_THEME_LANG); ?></a></span>
                                 <span><a target="_blank" href="https://twitter.com/intent/favorite?tweet_id=<?php echo $tweet->id; ?>">
-                                    <?php _e('Favorite', THEME_LANG); ?></a></span>
+                                    <?php _e('Favorite', KT_THEME_LANG); ?></a></span>
                             </div>
                         </<?php echo $tag ?>>
                         <?php
@@ -94,7 +94,7 @@ class Widget_KT_Twitter extends WP_Widget {
         }else{
             printf(
                 '<strong>%s</strong>',
-                __('Please config twitter settings in theme option', THEME_LANG) 
+                __('Please config twitter settings in theme option', KT_THEME_LANG) 
             );
         }
         
@@ -133,7 +133,7 @@ class Widget_KT_Twitter extends WP_Widget {
 
     public function form( $instance ) {
 
-        $defaults = array( 'title' => __( 'Tweets' , THEME_LANG), 'number' => 5, 'layout' => 'list');
+        $defaults = array( 'title' => __( 'Tweets' , KT_THEME_LANG), 'number' => 5, 'layout' => 'list');
         $instance = wp_parse_args( (array) $instance, $defaults );
 
         $title = strip_tags($instance['title']);
@@ -144,13 +144,13 @@ class Widget_KT_Twitter extends WP_Widget {
         <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
         <?php if($this->consumer_key && $this->consumer_secret && $this->access_key && $this->access_secret){ ?>
-            <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of tweets to show:', THEME_LANG ); ?></label>
+            <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of tweets to show:', KT_THEME_LANG ); ?></label>
                 <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $instance['number']; ?>" class="widefat" /></p>
             
-            <p><label for="<?php echo $this->get_field_id('layout'); ?>"><?php _e('Layout:',THEME_LANG); ?></label>
+            <p><label for="<?php echo $this->get_field_id('layout'); ?>"><?php _e('Layout:',KT_THEME_LANG); ?></label>
                 <select class="widefat" id="<?php echo $this->get_field_id('layout'); ?>" name="<?php echo $this->get_field_name('layout'); ?>">
-                    <option <?php selected( $instance['layout'], 'list' ); ?> value="list"><?php _e('List',THEME_LANG); ?></option>
-                    <option <?php selected( $instance['layout'], 'carousel' ); ?> value="carousel"><?php _e('Carousel',THEME_LANG); ?></option>
+                    <option <?php selected( $instance['layout'], 'list' ); ?> value="list"><?php _e('List',KT_THEME_LANG); ?></option>
+                    <option <?php selected( $instance['layout'], 'carousel' ); ?> value="carousel"><?php _e('Carousel',KT_THEME_LANG); ?></option>
                 </select>
             </p>
             

@@ -15,66 +15,65 @@ if ( ! isset( $content_width ) )
 
 
 
-add_action( 'after_setup_theme', 'theme_setup' );
-if ( ! function_exists( 'theme_setup' ) ):
+add_action( 'after_setup_theme', 'kt_theme_setup' );
+if ( ! function_exists( 'kt_theme_setup' ) ):
+    function kt_theme_setup() {
+        /**
+         * Editor style.
+         */
+        add_editor_style();
 
-function theme_setup() {
-    /**
-     * Editor style.
-     */
-    add_editor_style();
-    
-    /**
-	 * Add default posts and comments RSS feed links to head
-	 */
-	add_theme_support( 'automatic-feed-links' );
-    
-    /**
-	 * Enable support for Post Formats
-	 */
-	add_theme_support( 'post-formats', array('gallery', 'link', 'image', 'quote', 'video', 'audio') );
+        /**
+         * Add default posts and comments RSS feed links to head
+         */
+        add_theme_support( 'automatic-feed-links' );
 
-    /*
-    * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-    * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
-    
-    /**
-	 * Allow shortcodes in widgets.
-	 *
-	 */
-	add_filter( 'widget_text', 'do_shortcode' );
-    
-    
-    /**
-	 * Enable support for Post Thumbnails
-	 */
-	add_theme_support( 'post-thumbnails' );
-    
-    
-    if (function_exists( 'add_image_size' ) ) {
-        add_image_size( 'recent_posts', 570, 355, true);
-        add_image_size( 'recent_posts_list', 570, 410, true);
-        add_image_size( 'small', 170, 170, true );
-        add_image_size( 'blog_post', 1140, 610, true );
-        add_image_size( 'blog_post_sidebar', 1140 );
+        /**
+         * Enable support for Post Formats
+         */
+        add_theme_support( 'post-formats', array('gallery', 'link', 'image', 'quote', 'video', 'audio') );
+
+        /*
+        * Let WordPress manage the document title.
+         * By adding theme support, we declare that this theme does not use a
+         * hard-coded <title> tag in the document head, and expect WordPress to
+        * provide it for us.
+         */
+        add_theme_support( 'title-tag' );
+
+        /**
+         * Allow shortcodes in widgets.
+         *
+         */
+        add_filter( 'widget_text', 'do_shortcode' );
+
+
+        /**
+         * Enable support for Post Thumbnails
+         */
+        add_theme_support( 'post-thumbnails' );
+
+
+        if (function_exists( 'add_image_size' ) ) {
+            add_image_size( 'kt_recent_posts', 570, 355, true);
+            add_image_size( 'kt_recent_posts_list', 570, 410, true);
+            add_image_size( 'kt_small', 170, 170, true );
+            add_image_size( 'kt_blog_post', 1140, 610, true );
+            add_image_size( 'kt_blog_post_sidebar', 1140 );
+        }
+
+        load_theme_textdomain( KT_THEME_LANG, KT_THEME_DIR . '/languages' );
+
+        /**
+         * This theme uses wp_nav_menu() in one location.
+         */
+        register_nav_menus(array(
+            'primary' => __('Main menu', KT_THEME_LANG),
+            //'top'	  => __( 'Top Menu', KT_THEME_LANG ),
+            'bottom'	  => __( 'Bottom Menu', KT_THEME_LANG ),
+        ));
+
     }
-    
-    load_theme_textdomain( THEME_LANG, THEME_DIR . '/languages' );
-    
-    /**
-	 * This theme uses wp_nav_menu() in one location.
-	 */
-	register_nav_menus(array(
-        'primary' => __('Main menu', THEME_LANG),
-        //'top'	  => __( 'Top Menu', THEME_LANG ),
-        'bottom'	  => __( 'Bottom Menu', THEME_LANG ),
-    ));
-
-}
 endif;
 
 
@@ -90,39 +89,39 @@ endif;
 function kt_add_scripts() {
 
     wp_enqueue_style( 'mediaelement-style', get_stylesheet_uri(), array('mediaelement', 'wp-mediaelement') );
-    wp_enqueue_style( 'bootstrap-css', THEME_LIBS . 'bootstrap/css/bootstrap.min.css', array());
-    wp_enqueue_style( 'font-Poppins', THEME_FONTS . 'Poppins/stylesheet.min.css', array());
-    wp_enqueue_style( 'font-awesome', THEME_FONTS . 'font-awesome/css/font-awesome.min.css', array());
-    wp_enqueue_style( 'icomoon_theme', THEME_FONTS . 'Lineicons/style.min.css', array());
-    wp_enqueue_style( 'plugins', THEME_CSS . 'plugins.css', array());
+    wp_enqueue_style( 'bootstrap', KT_THEME_LIBS . 'bootstrap/css/bootstrap.min.css', array());
+    wp_enqueue_style( 'kt-font-poppins', KT_THEME_FONTS . 'Poppins/stylesheet.min.css', array());
+    wp_enqueue_style( 'font-awesome', KT_THEME_FONTS . 'font-awesome/css/font-awesome.min.css', array());
+    wp_enqueue_style( 'kt-font-icomoon', KT_THEME_FONTS . 'Lineicons/style.min.css', array());
+    wp_enqueue_style( 'kt-plugins', KT_THEME_CSS . 'plugins.css', array());
 
 	// Load our main stylesheet.
-    wp_enqueue_style( 'kitetheme-main', THEME_CSS . 'style.css', array( 'mediaelement-style' ) );
-    wp_enqueue_style( 'queries', THEME_CSS . 'queries.css', array('kitetheme-main') );
+    wp_enqueue_style( 'kt-main', KT_THEME_CSS . 'style.css', array( 'mediaelement-style' ) );
+    wp_enqueue_style( 'kt-queries', KT_THEME_CSS . 'queries.css', array('kt-main') );
     
 	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'kitetheme-ie', THEME_CSS . 'ie.css', array( 'kitetheme-main' ) );
-	wp_style_add_data( 'kitetheme-ie', 'conditional', 'lt IE 9' );
+	wp_enqueue_style( 'kt-ie', KT_THEME_CSS . 'ie.css', array( 'kt-main' ) );
+	wp_style_add_data( 'kt-ie', 'conditional', 'lt IE 9' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
     wp_register_script('google-maps-api','http://maps.googleapis.com/maps/api/js?sensor=false', array( 'jquery' ), null, false);
-    wp_enqueue_script( 'bootstrap-script', THEME_LIBS . 'bootstrap/js/bootstrap.min.js', array( 'jquery' ), null, true );
-    wp_enqueue_script( 'plugins-script', THEME_JS . 'plugins.js', array( 'jquery' ), null, true );
-    wp_enqueue_script( 'main-script', THEME_JS . 'functions.js', array( 'jquery', 'mediaelement', 'wp-mediaelement', 'jquery-ui-tabs' ), null, true );
+    wp_enqueue_script( 'bootstrap', KT_THEME_LIBS . 'bootstrap/js/bootstrap.min.js', array( 'jquery' ), null, true );
+    wp_enqueue_script( 'kt-plugins', KT_THEME_JS . 'plugins.js', array( 'jquery' ), null, true );
+    wp_enqueue_script( 'kt-main', KT_THEME_JS . 'functions.js', array( 'jquery', 'mediaelement', 'wp-mediaelement', 'jquery-ui-tabs' ), null, true );
 
     global $wp_query;
-    wp_localize_script( 'main-script', 'ajax_frontend', array(
+    wp_localize_script( 'kt-main', 'ajax_frontend', array(
         'ajaxurl' => admin_url( 'admin-ajax.php' ),
         'security' => wp_create_nonce( 'ajax_frontend' ),
         'current_date' => date_i18n('Y-m-d H:i:s'),
         'query_vars' => json_encode( $wp_query->query ),
-        'days' => __('Days', THEME_LANG),
-        'hours' => __('Hours', THEME_LANG),
-        'minutes' => __('Minutes', THEME_LANG),
-        'seconds' => __('Seconds', THEME_LANG),
+        'days' => __('Days', KT_THEME_LANG),
+        'hours' => __('Hours', KT_THEME_LANG),
+        'minutes' => __('Minutes', KT_THEME_LANG),
+        'seconds' => __('Seconds', KT_THEME_LANG),
     ));
     
 }
@@ -157,15 +156,15 @@ if ( ! function_exists( 'kt_comment_nav' ) ) :
         if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
             ?>
             <nav class="navigation comment-navigation clearfix">
-                <h2 class="screen-reader-text"><?php _e( 'Comment navigation', THEME_LANG ); ?></h2>
+                <h2 class="screen-reader-text"><?php _e( 'Comment navigation', KT_THEME_LANG ); ?></h2>
                 <div class="nav-links">
                     <?php
 
-                    if ( $prev_link = get_previous_comments_link( '<i class="fa fa-angle-double-left"></i> '.__( 'Older Comments', THEME_LANG ) ) ) :
+                    if ( $prev_link = get_previous_comments_link( '<i class="fa fa-angle-double-left"></i> '.__( 'Older Comments', KT_THEME_LANG ) ) ) :
                         printf( '<div class="nav-previous">%s</div>', $prev_link );
                     endif;
 
-                    if ( $next_link = get_next_comments_link( '<i class="fa fa-angle-double-right"></i> '.__( 'Newer Comments',  THEME_LANG ) ) ) :
+                    if ( $next_link = get_next_comments_link( '<i class="fa fa-angle-double-right"></i> '.__( 'Newer Comments',  KT_THEME_LANG ) ) ) :
                         printf( '<div class="nav-next">%s</div>', $next_link );
                     endif;
 
@@ -232,7 +231,7 @@ if ( ! function_exists( 'kt_post_thumbnail_image' ) ) :
                     printf(
                         '<img src="%s" alt="%s" class="%s"/>',
                         $image,
-                        __('No image', THEME_LANG),
+                        __('No image', KT_THEME_LANG),
                         $class_img.' no-image'
                     )
                 ?>
@@ -288,7 +287,7 @@ if ( ! function_exists( 'kt_post_thumbnail' ) ) :
                 printf(
                     '<img src="%s" alt="%s" class="%s"/>',
                     $image,
-                    __('No image', THEME_LANG),
+                    __('No image', KT_THEME_LANG),
                     $class_img
                 );
             ?>
@@ -398,24 +397,6 @@ if ( ! function_exists( 'kt_post_thumbnail' ) ) :
     }
 endif;
 
-
-
-/**
- * Filter function, converts fixed width to '100%' width
- */
-function responsive_wp_video_shortcode( $html, $atts, $video, $post_id, $library ) {
-    //$html = str_replace('width: ' . $atts['width'] . 'px', 'width: 100%', $html);
-
-    print_r($video);
-    $html = str_replace('width="' . $atts['width'] . '"', 'width="100%"', $html);
-    $html = str_replace('height="' . $atts['height'] . '"', 'height="100%"', $html);
-    return $html;
-}
-
-add_filter( 'wp_video_shortcode', 'responsive_wp_video_shortcode', 10, 5 );
-
-
-
 /**
  *
  * Custom call back function for default post type
@@ -425,12 +406,7 @@ add_filter( 'wp_video_shortcode', 'responsive_wp_video_shortcode', 10, 5 );
  * @param $depth
  */
 function kt_comments($comment, $args, $depth) {
-    $GLOBALS['comment'] = $comment;
-    global $post;
-
-    $is_author_comment  = $post->post_author == $comment->user_id;
-
-    ?>
+?>
 
 <li <?php comment_class('comment'); ?> id="li-comment-<?php comment_ID() ?>">
     <div  id="comment-<?php comment_ID(); ?>" class="comment-item clearfix">
@@ -443,19 +419,16 @@ function kt_comments($comment, $args, $depth) {
                 <span class="comment-date"><?php printf( '%1$s' , get_comment_date( 'M d, Y ')); ?></span>
                 <h5 class="author_name">
                     <?php comment_author_link(); ?>
-                    <?php if($is_author_comment){ ?>
-                        <span class="icon-user"></span>
-                    <?php } ?>
                 </h5>
             </div>
             <div class="comment-entry entry-content">
                 <?php comment_text() ?>
                 <?php if ($comment->comment_approved == '0') : ?>
-                    <em><?php _e('Your comment is awaiting moderation.', THEME_LANG) ?></em>
+                    <em><?php _e('Your comment is awaiting moderation.', KT_THEME_LANG) ?></em>
                 <?php endif; ?>
             </div>
             <div class="comment-actions clear">
-                <?php edit_comment_link( '<span class="icon-pencil"></span> '.__('Edit', THEME_LANG),'  ',' ') ?>
+                <?php edit_comment_link( '<span class="icon-pencil"></span> '.__('Edit', KT_THEME_LANG),'  ',' ') ?>
                 <?php comment_reply_link( array_merge( $args,
                     array('depth' => $depth,
                         'max_depth' => $args['max_depth'],
@@ -496,15 +469,15 @@ if ( ! function_exists( 'kt_post_nav' ) ) :
 
                     
                     if(!get_previous_post_link('&laquo; %link', '', true)){
-                        printf('<div class="nav-previous meta-nav"><span>%s</span></div>', __( '<span>Previous Article</span>', THEME_LANG ));
+                        printf('<div class="nav-previous meta-nav"><span>%s</span></div>', __( '<span>Previous Article</span>', KT_THEME_LANG ));
                     }else{
-                        previous_post_link('<div class="nav-previous meta-nav">%link</div>', __( '<span>Previous Article</span>', THEME_LANG ), TRUE);
+                        previous_post_link('<div class="nav-previous meta-nav">%link</div>', __( '<span>Previous Article</span>', KT_THEME_LANG ), TRUE);
                     }
 
                     if(!get_next_post_link('&laquo; %link', '', true)){
-                        printf('<div class="nav-next meta-nav"><span>%s</span></div>', __( '<span>Next Article</span>', THEME_LANG ));
+                        printf('<div class="nav-next meta-nav"><span>%s</span></div>', __( '<span>Next Article</span>', KT_THEME_LANG ));
                     }else{
-                        next_post_link('<div class="nav-next meta-nav">%link</div>', __( '<span>Next Article</span>', THEME_LANG ), TRUE);
+                        next_post_link('<div class="nav-next meta-nav">%link</div>', __( '<span>Next Article</span>', KT_THEME_LANG ), TRUE);
                     }
                 ?>
             </div><!-- .nav-links -->
@@ -534,20 +507,20 @@ if ( ! function_exists( 'kt_paging_nav' ) ) :
             printf(
                 '<div class="blog-posts-loadmore"><a href="#" class="blog-loadmore-button btn btn-default">%s %s</a></div>',
                 '<span class="fa fa-refresh button-icon-left"></span>',
-                __('Load more', THEME_LANG)
+                __('Load more', KT_THEME_LANG)
             );
         }elseif($type == 'normal'){ ?>
 
             <nav class="navigation paging-navigation clearfix">
-                <h1 class="screen-reader-text"><?php _e( 'Posts navigation', THEME_LANG ); ?></h1>
+                <h1 class="screen-reader-text"><?php _e( 'Posts navigation', KT_THEME_LANG ); ?></h1>
                 <div class="nav-links">
 
                     <?php if ( get_next_posts_link() ) : ?>
-                        <div class="nav-previous"><?php next_posts_link( '<i class="fa fa-long-arrow-left"></i> '.__( 'Older posts', THEME_LANG ) ); ?></div>
+                        <div class="nav-previous"><?php next_posts_link( '<i class="fa fa-long-arrow-left"></i> '.__( 'Older posts', KT_THEME_LANG ) ); ?></div>
                     <?php endif; ?>
 
                     <?php if ( get_previous_posts_link() ) : ?>
-                        <div class="nav-next"><?php previous_posts_link( __( 'Newer posts', THEME_LANG ).' <i class="fa fa-long-arrow-right"></i>' ); ?></div>
+                        <div class="nav-next"><?php previous_posts_link( __( 'Newer posts', KT_THEME_LANG ).' <i class="fa fa-long-arrow-right"></i>' ); ?></div>
                     <?php endif; ?>
 
                 </div><!-- .nav-links -->
@@ -555,8 +528,8 @@ if ( ! function_exists( 'kt_paging_nav' ) ) :
 
         <?php }else{
             the_posts_pagination(array(
-                'prev_text' => sprintf('<span class="screen-reader-text">%s</span>%s', __('Previous', THEME_LANG), '<i class="fa fa-long-arrow-left"></i>'),
-                'next_text' => sprintf('<span class="screen-reader-text">%s</span>%s', __('Next', THEME_LANG), '<i class="fa fa-long-arrow-right"></i>'),
+                'prev_text' => sprintf('<span class="screen-reader-text">%s</span>%s', __('Previous', KT_THEME_LANG), '<i class="fa fa-long-arrow-left"></i>'),
+                'next_text' => sprintf('<span class="screen-reader-text">%s</span>%s', __('Next', KT_THEME_LANG), '<i class="fa fa-long-arrow-right"></i>'),
                 'before_page_number' => '',
             ));
         }
@@ -572,10 +545,10 @@ if ( ! function_exists( 'kt_entry_meta_author' ) ) :
      */
     function kt_entry_meta_author() {
         printf( '<span class="author vcard">%4$s <span class="screen-reader-text">%1$s </span><a class="url fn n" href="%2$s">%3$s</a></span>',
-            _x( 'Author', 'Used before post author name.', THEME_LANG ),
+            _x( 'Author', 'Used before post author name.', KT_THEME_LANG ),
             esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
             get_the_author(),
-            __('By:', THEME_LANG )
+            __('By:', KT_THEME_LANG )
         );
     }
 endif;
@@ -587,18 +560,18 @@ if ( ! function_exists( 'kt_entry_meta_categories' ) ) :
      */
     function kt_entry_meta_categories( $separator = ', ', $echo = true ) {
         if ( 'post' == get_post_type() ) {
-            $categories_list = get_the_category_list( _x( $separator, 'Used between list items, there is a space after the comma.', THEME_LANG ) );
+            $categories_list = get_the_category_list( _x( $separator, 'Used between list items, there is a space after the comma.', KT_THEME_LANG ) );
             if ( $categories_list ) {
                 if($echo){
                     printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s %3$s</span>',
-                        _x( 'Categories', 'Used before category names.', THEME_LANG ),
-                        __('in', THEME_LANG),
+                        _x( 'Categories', 'Used before category names.', KT_THEME_LANG ),
+                        __('in', KT_THEME_LANG),
                         $categories_list
                     );
                 }else{
                     return sprintf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s %3$s</span>',
-                        _x( 'Categories', 'Used before category names.', THEME_LANG ),
-                        __('in', THEME_LANG),
+                        _x( 'Categories', 'Used before category names.', KT_THEME_LANG ),
+                        __('in', KT_THEME_LANG),
                         $categories_list
                     );
                 }
@@ -614,10 +587,10 @@ if ( ! function_exists( 'kt_entry_meta_tags' ) ) :
      */
     function kt_entry_meta_tags($before = '', $after = '') {
         if ( 'post' == get_post_type() ) {
-            $tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', THEME_LANG ) );
+            $tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', KT_THEME_LANG ) );
             if ( $tags_list ) {
                 printf( '%3$s<span class="tags-links"><span class="tags-links-text">%1$s</span> %2$s</span>%4$s',
-                    _x( 'Tags: ', 'Used before tag names.', THEME_LANG ),
+                    _x( 'Tags: ', 'Used before tag names.', KT_THEME_LANG ),
                     $tags_list,
                     $before,
                     $after
@@ -638,7 +611,7 @@ if ( ! function_exists( 'kt_entry_meta_comments' ) ) :
         if ( !shortcode_exists( 'fbcomments' ) ) {
             if (! post_password_required() && ( comments_open() || get_comments_number() ) ) {
                 echo '<span class="comments-link">';
-                comments_popup_link( __( 'No Comments', THEME_LANG ), __( '1 Comment', THEME_LANG ), __( '% Comments', THEME_LANG ) );
+                comments_popup_link( __( 'No Comments', KT_THEME_LANG ), __( '1 Comment', KT_THEME_LANG ), __( '% Comments', KT_THEME_LANG ) );
                 echo '</span>';
             }
         }
@@ -658,7 +631,7 @@ if ( ! function_exists( 'kt_entry_meta_time' ) ) :
                 $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
             }
 
-            $time_show = ($format == 'time') ? human_time_diff( get_the_time('U'), current_time('timestamp') ) . __(' ago', THEME_LANG) : get_the_date($format);
+            $time_show = ($format == 'time') ? human_time_diff( get_the_time('U'), current_time('timestamp') ) . __(' ago', KT_THEME_LANG) : get_the_date($format);
 
             $time_string = sprintf( $time_string,
                 esc_attr( get_the_date( 'c' ) ),
@@ -668,12 +641,12 @@ if ( ! function_exists( 'kt_entry_meta_time' ) ) :
             );
             if($echo){
                 printf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-                    _x( 'Posted on', 'Used before publish date.', THEME_LANG ),
+                    _x( 'Posted on', 'Used before publish date.', KT_THEME_LANG ),
                     $time_string
                 );
             }else{
                 return sprintf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-                    _x( 'Posted on', 'Used before publish date.', THEME_LANG ),
+                    _x( 'Posted on', 'Used before publish date.', KT_THEME_LANG ),
                     $time_string
                 );
             }
@@ -686,8 +659,6 @@ endif;
  * Posts Views Number
  * --------------------------------------------------------------------------- */
 
-
-
 if ( ! function_exists( 'kt_get_post_views' ) ){
     function kt_get_post_views($postID){
         $count_key = 'kt_post_views_count';
@@ -699,7 +670,7 @@ if ( ! function_exists( 'kt_get_post_views' ) ){
             $count = 0;
         }
 
-        $text = ($count == 0 || $count == 1) ? __('View',THEME_LANG) : __('Views',THEME_LANG);
+        $text = ($count == 0 || $count == 1) ? __('View',KT_THEME_LANG) : __('Views',KT_THEME_LANG);
 
         return '<span class="post-view"><i class="fa fa-eye"></i> '.$count.' '.$text.'</span>';
 
@@ -718,11 +689,11 @@ if ( ! function_exists( 'kt_like_post' ) ){
             add_post_meta($post_id, '_like_post', $like_count, true);
         }
 
-        $text = ($like_count == 0 || $like_count == 1) ? __('like',THEME_LANG) : __('likes',THEME_LANG);
+        $text = ($like_count == 0 || $like_count == 1) ? __('like',KT_THEME_LANG) : __('likes',KT_THEME_LANG);
 
         $class = 'kt_likepost';
-        $title = __('Like this post', THEME_LANG);
-        $already =  __('You already like this!', THEME_LANG);
+        $title = __('Like this post', KT_THEME_LANG);
+        $already =  __('You already like this!', KT_THEME_LANG);
 
         if( isset($_COOKIE['like_post_'. $post_id]) ){
             $class .= ' liked';
@@ -757,8 +728,8 @@ if ( ! function_exists( 'kt_author_box' ) ) :
             </div><!-- .author-avatar -->
             <div class="author-description">
                 <h2 class="author-title">
-                    <a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author" title="<?php echo esc_attr(sprintf( __( 'View all posts by %s', THEME_LANG ), get_the_author() ) ); ?>">
-                        <?php printf( __( 'About %s', THEME_LANG ), get_the_author() ); ?>
+                    <a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author" title="<?php echo esc_attr(sprintf( __( 'View all posts by %s', KT_THEME_LANG ), get_the_author() ) ); ?>">
+                        <?php printf( __( 'About %s', KT_THEME_LANG ), get_the_author() ); ?>
                     </a>
                 </h2>
                 <?php
@@ -916,7 +887,7 @@ if ( ! function_exists( 'kt_related_article' ) ) :
         ?>
         <?php if($query->have_posts()){ ?>
             <div id="related-article">
-                <h3 class="title-article"><?php _e('Related Article', THEME_LANG); ?></h3>
+                <h3 class="title-article"><?php _e('Related Article', KT_THEME_LANG); ?></h3>
                 <div class="row">
                     <?php
 

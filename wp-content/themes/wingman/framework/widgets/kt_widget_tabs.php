@@ -14,7 +14,7 @@ class WP_Widget_KT_Tabs extends WP_Widget {
 	public function __construct() {
 
         $widget_ops = array('classname' => 'widget_kt_post_tabs', 'description' => __( "Display popular posts, recent posts and comments in tabbed format.") );
-        parent::__construct('kt_post_tabs', __('KT: Post Tabs', THEME_LANG), $widget_ops);
+        parent::__construct('kt_post_tabs', __('KT: Post Tabs', KT_THEME_LANG), $widget_ops);
         $this->alt_option_name = 'widget_kt_post_tabs';
 
         add_action( 'save_post', array($this, 'flush_widget_cache') );
@@ -75,8 +75,8 @@ class WP_Widget_KT_Tabs extends WP_Widget {
             ?>
             <div class="kt_widget_tabs">
                 <ul class="clearfix kt-tabs-nav">
-                    <?php if( $select_rand ){ ?><li><a href="#kt_tab_rand<?php echo $rand; ?>"><?php _e( 'Random', THEME_LANG ); ?></a></li><?php } ?>
-                    <?php if( $select_recent ){ ?><li><a href="#kt_tab_recent<?php echo $rand; ?>"><?php _e( 'Recent', THEME_LANG ); ?></a></li><?php } ?>
+                    <?php if( $select_rand ){ ?><li><a href="#kt_tab_rand<?php echo $rand; ?>"><?php _e( 'Random', KT_THEME_LANG ); ?></a></li><?php } ?>
+                    <?php if( $select_recent ){ ?><li><a href="#kt_tab_recent<?php echo $rand; ?>"><?php _e( 'Recent', KT_THEME_LANG ); ?></a></li><?php } ?>
                     <?php if( $select_comments ){ ?><li><a href="#kt_tab_comments<?php echo $rand; ?>"><i class="fa fa-comment-o"></i></a></li><?php } ?>
                 </ul>
                 <div class="tabs-container">
@@ -168,7 +168,7 @@ class WP_Widget_KT_Tabs extends WP_Widget {
                             <?php }else{
                                 printf(
                                     '<strong>%s</strong>',
-                                    __('No comments found.', THEME_LANG)
+                                    __('No comments found.', KT_THEME_LANG)
                                 );
                             } ?>
                         </div>
@@ -215,7 +215,7 @@ class WP_Widget_KT_Tabs extends WP_Widget {
     }
 
 	public function form( $instance ) {
-		$title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : __( 'Widget Tabs' , THEME_LANG);
+		$title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : __( 'Widget Tabs' , KT_THEME_LANG);
         
         $select_rand = isset( $instance['select_rand'] ) ? (bool) $instance['select_rand'] : true;
         $select_recent = isset( $instance['select_recent'] ) ? (bool) $instance['select_recent'] : true;
@@ -228,21 +228,21 @@ class WP_Widget_KT_Tabs extends WP_Widget {
     <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
     
-    <h4><?php _e('Select Tabs', THEME_LANG); ?></h4>
+    <h4><?php _e('Select Tabs', KT_THEME_LANG); ?></h4>
     <p>
         <input class="checkbox" type="checkbox" <?php checked( $select_rand ); ?> id="<?php echo $this->get_field_id( 'select_rand' ); ?>" name="<?php echo $this->get_field_name( 'select_rand' ); ?>" />
-        <label for="<?php echo $this->get_field_id( 'select_rand' ); ?>"><?php _e( 'Display Random Posts',THEME_LANG ); ?></label>
+        <label for="<?php echo $this->get_field_id( 'select_rand' ); ?>"><?php _e( 'Display Random Posts',KT_THEME_LANG ); ?></label>
     </p>
     <p>
         <input class="checkbox" type="checkbox" <?php checked( $select_recent ); ?> id="<?php echo $this->get_field_id( 'select_recent' ); ?>" name="<?php echo $this->get_field_name( 'select_recent' ); ?>" />
-        <label for="<?php echo $this->get_field_id( 'select_recent' ); ?>"><?php _e( 'Display Recent Posts',THEME_LANG ); ?></label>
+        <label for="<?php echo $this->get_field_id( 'select_recent' ); ?>"><?php _e( 'Display Recent Posts',KT_THEME_LANG ); ?></label>
     </p>
     <p>
         <input class="checkbox" type="checkbox" <?php checked( $select_comments ); ?> id="<?php echo $this->get_field_id( 'select_comments' ); ?>" name="<?php echo $this->get_field_name( 'select_comments' ); ?>" />
-        <label for="<?php echo $this->get_field_id( 'select_comments' ); ?>"><?php _e( 'Display Comments',THEME_LANG ); ?></label>
+        <label for="<?php echo $this->get_field_id( 'select_comments' ); ?>"><?php _e( 'Display Comments',KT_THEME_LANG ); ?></label>
     </p>
     
-    <h4><?php _e('Options Tabs', THEME_LANG); ?></h4>
+    <h4><?php _e('Options Tabs', KT_THEME_LANG); ?></h4>
     
     <p>
         <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
@@ -250,7 +250,7 @@ class WP_Widget_KT_Tabs extends WP_Widget {
     </p>
     <p>
         <input class="checkbox" type="checkbox" <?php checked( $show_thumbnail ); ?> id="<?php echo $this->get_field_id( 'show_thumbnail' ); ?>" name="<?php echo $this->get_field_name( 'show_thumbnail' ); ?>" />
-        <label for="<?php echo $this->get_field_id( 'show_thumbnail' ); ?>"><?php _e( 'Show Thumbnail (Avatar Comments)',THEME_LANG ); ?></label>
+        <label for="<?php echo $this->get_field_id( 'show_thumbnail' ); ?>"><?php _e( 'Show Thumbnail (Avatar Comments)',KT_THEME_LANG ); ?></label>
     </p>
 <?php
 	}

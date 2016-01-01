@@ -53,17 +53,17 @@ function breadcrumb_trail( $args = array() ) {
         /* Labels for text used (see Breadcrumb_Trail::default_labels). */
         'labels' => array(
             'browse'              => '',
-            'home'                => __( 'Home',                                THEME_LANG ),
-            'error_404'           => __( '404 Not Found',                       THEME_LANG  ),
-            'archives'            => __( 'Archives',                            THEME_LANG ),
+            'home'                => __( 'Home',                                KT_THEME_LANG ),
+            'error_404'           => __( '404 Not Found',                       KT_THEME_LANG  ),
+            'archives'            => __( 'Archives',                            KT_THEME_LANG ),
             /* Translators: %s is the search query. The HTML entities are opening and closing curly quotes. */
-            'search'              => __( 'Search results for &#8220;%s&#8221;', THEME_LANG ),
+            'search'              => __( 'Search results for &#8220;%s&#8221;', KT_THEME_LANG ),
             /* Translators: %s is the page number. */
-            'paged'               => __( 'Page %s',                             THEME_LANG ),
+            'paged'               => __( 'Page %s',                             KT_THEME_LANG ),
             /* Translators: Minute archive title. %s is the minute time format. */
-            'archive_minute'      => __( 'Minute %s',                           THEME_LANG ),
+            'archive_minute'      => __( 'Minute %s',                           KT_THEME_LANG ),
             /* Translators: Weekly archive title. %s is the week date format. */
-            'archive_week'        => __( 'Week %s',                            THEME_LANG ),
+            'archive_week'        => __( 'Week %s',                            KT_THEME_LANG ),
 
             /* "%s" is replaced with the translated date/time format. */
             'archive_minute_hour' => '%s',

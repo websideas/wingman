@@ -14,7 +14,7 @@ class WP_Widget_KT_Popular extends WP_Widget {
 	public function __construct() {
 
         $widget_ops = array('classname' => 'widget_kt_post_popular', 'description' => __( "Display popular posts of week, month and year in tabbed format.") );
-        parent::__construct('kt_post_popular', __('KT: Post Popular', THEME_LANG), $widget_ops);
+        parent::__construct('kt_post_popular', __('KT: Post Popular', KT_THEME_LANG), $widget_ops);
         $this->alt_option_name = 'widget_kt_post_popular';
 
         add_action( 'save_post', array($this, 'flush_widget_cache') );
@@ -77,9 +77,9 @@ class WP_Widget_KT_Popular extends WP_Widget {
             ?>
             <div class="kt_widget_tabs">
                 <ul class="clearfix kt-tabs-nav">
-                    <?php if( $select_week ){ ?><li><a href="#kt_tab_week<?php echo $rand; ?>"><?php _e( '1 Week', THEME_LANG ); ?></a></li><?php } ?>
-                    <?php if( $select_month ){ ?><li><a href="#kt_tab_month<?php echo $rand; ?>"><?php _e( '1 Month', THEME_LANG ); ?></a></li><?php } ?>
-                    <?php if( $select_year ){ ?><li><a href="#kt_tab_year<?php echo $rand; ?>"><?php _e( '1 year', THEME_LANG ); ?></a></li><?php } ?>
+                    <?php if( $select_week ){ ?><li><a href="#kt_tab_week<?php echo $rand; ?>"><?php _e( '1 Week', KT_THEME_LANG ); ?></a></li><?php } ?>
+                    <?php if( $select_month ){ ?><li><a href="#kt_tab_month<?php echo $rand; ?>"><?php _e( '1 Month', KT_THEME_LANG ); ?></a></li><?php } ?>
+                    <?php if( $select_year ){ ?><li><a href="#kt_tab_year<?php echo $rand; ?>"><?php _e( '1 year', KT_THEME_LANG ); ?></a></li><?php } ?>
                 </ul>
                 <div class="tabs-container">
                     <?php
@@ -202,7 +202,7 @@ class WP_Widget_KT_Popular extends WP_Widget {
     }
 
 	public function form( $instance ) {
-		$title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : __( 'Widget Tabs' , THEME_LANG);
+		$title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : __( 'Widget Tabs' , KT_THEME_LANG);
         
         $select_week = isset( $instance['select_week'] ) ? (bool) $instance['select_week'] : true;
         $select_month = isset( $instance['select_month'] ) ? (bool) $instance['select_month'] : true;
@@ -215,21 +215,21 @@ class WP_Widget_KT_Popular extends WP_Widget {
     <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
     
-    <h4><?php _e('Select Tabs', THEME_LANG); ?></h4>
+    <h4><?php _e('Select Tabs', KT_THEME_LANG); ?></h4>
     <p>
         <input class="checkbox" type="checkbox" <?php checked( $select_week ); ?> id="<?php echo $this->get_field_id( 'select_week' ); ?>" name="<?php echo $this->get_field_name( 'select_week' ); ?>" />
-        <label for="<?php echo $this->get_field_id( 'select_week' ); ?>"><?php _e( 'Display Popular Posts of week',THEME_LANG ); ?></label>
+        <label for="<?php echo $this->get_field_id( 'select_week' ); ?>"><?php _e( 'Display Popular Posts of week',KT_THEME_LANG ); ?></label>
     </p>
     <p>
         <input class="checkbox" type="checkbox" <?php checked( $select_month ); ?> id="<?php echo $this->get_field_id( 'select_month' ); ?>" name="<?php echo $this->get_field_name( 'select_month' ); ?>" />
-        <label for="<?php echo $this->get_field_id( 'select_month' ); ?>"><?php _e( 'Display Popular Posts of Month',THEME_LANG ); ?></label>
+        <label for="<?php echo $this->get_field_id( 'select_month' ); ?>"><?php _e( 'Display Popular Posts of Month',KT_THEME_LANG ); ?></label>
     </p>
     <p>
         <input class="checkbox" type="checkbox" <?php checked( $select_year ); ?> id="<?php echo $this->get_field_id( 'select_year' ); ?>" name="<?php echo $this->get_field_name( 'select_year' ); ?>" />
-        <label for="<?php echo $this->get_field_id( 'select_year' ); ?>"><?php _e( 'Display Popular Posts of Year',THEME_LANG ); ?></label>
+        <label for="<?php echo $this->get_field_id( 'select_year' ); ?>"><?php _e( 'Display Popular Posts of Year',KT_THEME_LANG ); ?></label>
     </p>
     
-    <h4><?php _e('Options Tabs', THEME_LANG); ?></h4>
+    <h4><?php _e('Options Tabs', KT_THEME_LANG); ?></h4>
     
     <p> 
         <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
@@ -237,7 +237,7 @@ class WP_Widget_KT_Popular extends WP_Widget {
     </p>
     <p>
         <input class="checkbox" type="checkbox" <?php checked( $show_thumbnail ); ?> id="<?php echo $this->get_field_id( 'show_thumbnail' ); ?>" name="<?php echo $this->get_field_name( 'show_thumbnail' ); ?>" />
-        <label for="<?php echo $this->get_field_id( 'show_thumbnail' ); ?>"><?php _e( 'Show Thumbnail (Avatar Comments)',THEME_LANG ); ?></label>
+        <label for="<?php echo $this->get_field_id( 'show_thumbnail' ); ?>"><?php _e( 'Show Thumbnail (Avatar Comments)',KT_THEME_LANG ); ?></label>
     </p>
 <?php
 	}

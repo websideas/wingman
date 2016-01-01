@@ -108,9 +108,9 @@ class WPBakeryShortCode_Category_Products_Tab extends WPBakeryShortCode {
 
 
 vc_map( array(
-    "name" => __( "Category Products Tab", THEME_LANG),
+    "name" => __( "Category Products Tab", KT_THEME_LANG),
     "base" => "category_products_tab",
-    "category" => __('by Theme', THEME_LANG ),
+    "category" => __('by Theme', KT_THEME_LANG ),
     "params" => array(
         array(
 			"type" => "kt_taxonomy",
@@ -129,13 +129,13 @@ vc_map( array(
 		),
         array(
             "type" => "kt_heading",
-            "heading" => __("Columns to Show?", THEME_LANG),
+            "heading" => __("Columns to Show?", KT_THEME_LANG),
             "edit_field_class" => "kt_sub_heading vc_column",
             "param_name" => "items_show",
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'on Desktop', THEME_LANG ),
+            'heading' => __( 'on Desktop', KT_THEME_LANG ),
             'param_name' => 'product_columns',
             'value' => array(
                 __( '1 column', 'js_composer' ) => '1',
@@ -149,7 +149,7 @@ vc_map( array(
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'on Tablets Landscape', THEME_LANG ),
+            'heading' => __( 'on Tablets Landscape', KT_THEME_LANG ),
             'param_name' => 'product_columns_desktop',
             'value' => array(
                 __( '1 column', 'js_composer' ) => '1',
@@ -163,7 +163,7 @@ vc_map( array(
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'on Tablet', THEME_LANG ),
+            'heading' => __( 'on Tablet', KT_THEME_LANG ),
             'param_name' => 'product_columns_tablet',
             'value' => array(
                 __( '1 column', 'js_composer' ) => '1',
@@ -178,7 +178,7 @@ vc_map( array(
         
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Show', THEME_LANG ),
+            'heading' => __( 'Show', KT_THEME_LANG ),
             'param_name' => 'show',
             'value' => array(
                 __( 'All Product', 'woocommerce' ) => 'all',

@@ -3,9 +3,40 @@
 // Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
 
+/**
+ *  putRevSlider in Ajax
+ *
+ * @since 1.0
+ */
+if(!function_exists('putRevSlider')){
+    function putRevSlider($data,$putIn = ""){
+        if(class_exists( 'RevSlider' )){
+            $operations = new RevOperations();
+            $arrValues = $operations->getGeneralSettingsValues();
+            $includesGlobally = UniteFunctionsRev::getVal($arrValues, "includes_globally","on");
+            $strPutIn = UniteFunctionsRev::getVal($arrValues, "pages_for_includes");
+            $isPutIn = RevSliderOutput::isPutIn($strPutIn,true);
 
+            if($isPutIn == false && $includesGlobally == "off"){
+                $output = new RevSliderOutput();
+                $option1Name = "Include RevSlider libraries globally (all pages/posts)";
+                $option2Name = "Pages to include RevSlider libraries";
+                $output->putErrorMessage(__("If you want to use the PHP function \"putRevSlider\" in your code please make sure to check \" ",REVSLIDER_TEXTDOMAIN).$option1Name.__(" \" in the backend's \"General Settings\" (top right panel). <br> <br> Or add the current page to the \"",REVSLIDER_TEXTDOMAIN).$option2Name.__("\" option box."));
+                return(false);
+            }
 
-function wp_ajax_fronted_loadmore_archive_callback(){
+            RevSliderOutput::putSlider($data,$putIn);
+        }
+    }
+}
+
+/**
+ * Load archive
+ *
+ * @since 1.0
+ */
+
+function kt_fronted_loadmore_archive_callback(){
     check_ajax_referer( 'ajax_frontend', 'security' );
 
     $settings = $_POST['settings'];
@@ -87,42 +118,17 @@ function wp_ajax_fronted_loadmore_archive_callback(){
 
 }
 
-
-
-
-add_action( 'wp_ajax_fronted_loadmore_archive', 'wp_ajax_fronted_loadmore_archive_callback' );
-add_action( 'wp_ajax_nopriv_fronted_loadmore_archive', 'wp_ajax_fronted_loadmore_archive_callback' );
-
-if(!function_exists('putRevSlider')){
-    function putRevSlider($data,$putIn = ""){
-        if(class_exists( 'RevSlider' )){
-            $operations = new RevOperations();
-            $arrValues = $operations->getGeneralSettingsValues();
-            $includesGlobally = UniteFunctionsRev::getVal($arrValues, "includes_globally","on");
-            $strPutIn = UniteFunctionsRev::getVal($arrValues, "pages_for_includes");
-            $isPutIn = RevSliderOutput::isPutIn($strPutIn,true);
-
-            if($isPutIn == false && $includesGlobally == "off"){
-                $output = new RevSliderOutput();
-                $option1Name = "Include RevSlider libraries globally (all pages/posts)";
-                $option2Name = "Pages to include RevSlider libraries";
-                $output->putErrorMessage(__("If you want to use the PHP function \"putRevSlider\" in your code please make sure to check \" ",REVSLIDER_TEXTDOMAIN).$option1Name.__(" \" in the backend's \"General Settings\" (top right panel). <br> <br> Or add the current page to the \"",REVSLIDER_TEXTDOMAIN).$option2Name.__("\" option box."));
-                return(false);
-            }
-
-            RevSliderOutput::putSlider($data,$putIn);
-        }
-    }
-}
+add_action( 'wp_ajax_fronted_loadmore_archive', 'kt_fronted_loadmore_archive_callback' );
+add_action( 'wp_ajax_nopriv_fronted_loadmore_archive', 'kt_fronted_loadmore_archive_callback' );
 
 /**
  * Product Quick View callback AJAX request 
  *
  * @since 1.0
- * @return json
+ * @return void
  */
 
-function wp_ajax_frontend_product_quick_view_callback() {
+function kt_frontend_product_quick_view_callback() {
     check_ajax_referer( 'ajax_frontend', 'security' );
     global $product, $post;
 	$product_id = intval($_POST["product_id"]);
@@ -132,13 +138,16 @@ function wp_ajax_frontend_product_quick_view_callback() {
     die();
     
 }
-add_action( 'wp_ajax_frontend_product_quick_view', 'wp_ajax_frontend_product_quick_view_callback' );
-add_action( 'wp_ajax_nopriv_frontend_product_quick_view', 'wp_ajax_frontend_product_quick_view_callback' );
+add_action( 'wp_ajax_frontend_product_quick_view', 'kt_frontend_product_quick_view_callback' );
+add_action( 'wp_ajax_nopriv_frontend_product_quick_view', 'kt_frontend_product_quick_view_callback' );
 
 
+/**
+ * Remove product in mini cart
+ *
+ */
 
-
-function wp_ajax_fronted_remove_product_callback(){
+function kt_fronted_remove_product_callback(){
     check_ajax_referer( 'ajax_frontend', 'security' );
     $item_key = $_POST['item_key'];
     $output = array();
@@ -151,27 +160,23 @@ function wp_ajax_fronted_remove_product_callback(){
     echo json_encode($output);
     die();
 }
-add_action( 'wp_ajax_fronted_remove_product', 'wp_ajax_fronted_remove_product_callback' );
-add_action( 'wp_ajax_nopriv_fronted_remove_product', 'wp_ajax_fronted_remove_product_callback' );
+add_action( 'wp_ajax_fronted_remove_product', 'kt_fronted_remove_product_callback' );
+add_action( 'wp_ajax_nopriv_fronted_remove_product', 'kt_fronted_remove_product_callback' );
 
-/**==============================
-***  Like Post
-===============================**/
+/**
+ * Like Post
+ *
+ */
 
-
-add_action( 'wp_ajax_fronted_likepost', 'wp_ajax_fronted_likepost_callback' );
-add_action( 'wp_ajax_nopriv_fronted_likepost', 'wp_ajax_fronted_likepost_callback' );
-
-
-function wp_ajax_fronted_likepost_callback() {
+function kt_fronted_likepost_callback() {
     check_ajax_referer( 'ajax_frontend', 'security' );
-    
+
     if(!isset($_POST['post_id']) || !is_numeric($_POST['post_id'])) return;
-     
+
     $post_id = $_POST['post_id'];
-     
-    $output = array();    
-    
+
+    $output = array();
+
     $like_count = get_post_meta($post_id, '_like_post', true);
 
     if( !isset($_COOKIE['like_post_'. $post_id]) ){
@@ -181,25 +186,32 @@ function wp_ajax_fronted_likepost_callback() {
         //The cookie will expire after 30 days
         setcookie('like_post_'. $post_id, $post_id, time() + (86400 * 30), '/');
     }
-    $text = ($like_count == 0 || $like_count == 1) ? __('like',THEME_LANG) : __('likes',THEME_LANG);
+    $text = ($like_count == 0 || $like_count == 1) ? __('like',KT_THEME_LANG) : __('likes',KT_THEME_LANG);
 
     $output['count'] = $like_count. ' '.$text;
     echo json_encode($output);
     die();
 }
 
+add_action( 'wp_ajax_fronted_likepost', 'kt_fronted_likepost_callback' );
+add_action( 'wp_ajax_nopriv_fronted_likepost', 'kt_fronted_likepost_callback' );
 
-add_action( 'wp_ajax_fronted_popup', 'wp_ajax_fronted_popup_callback' );
-add_action( 'wp_ajax_nopriv_fronted_popup', 'wp_ajax_fronted_popup_callback' );
 
-function wp_ajax_fronted_popup_callback() {
+/**
+ * Disable popup
+ *
+ */
+
+function kt_fronted_popup_callback() {
     check_ajax_referer( 'ajax_frontend', 'security' );
-    
+
     $dont_show = $_POST['val_input'];
 
     if( $dont_show == true ){
         setcookie('kt_popup', 1, time() + (60*60*24), '/');
     }
-    
+
     die();
 }
+add_action( 'wp_ajax_fronted_popup', 'kt_fronted_popup_callback' );
+add_action( 'wp_ajax_nopriv_fronted_popup', 'kt_fronted_popup_callback' );

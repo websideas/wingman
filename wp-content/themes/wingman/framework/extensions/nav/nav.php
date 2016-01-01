@@ -104,11 +104,11 @@ if( ! class_exists( 'KT_MEGAMENU' ) ) {
 		function register_scripts($hook) {
             if ( 'nav-menus.php' != $hook ) return;
             //stylesheets
-            wp_enqueue_style( 'admin-megamenu', FW_CSS . 'megamenu.css', false, FW_VER );
+            wp_enqueue_style( 'admin-megamenu', KT_FW_CSS . 'megamenu.css', false, FW_VER );
           
 			// scripts
 			wp_enqueue_media();
-			wp_register_script( 'admin-megamenu', FW_JS . 'megamenu.js', array( 'jquery' ), FW_VER, true );
+			wp_register_script( 'admin-megamenu', KT_FW_JS . 'megamenu.js', array( 'jquery' ), FW_VER, true );
 			wp_enqueue_script( 'admin-megamenu' );
 		}
     
@@ -120,6 +120,6 @@ if( ! class_exists( 'KT_MEGAMENU' ) ) {
 }
 
 
-include_once ( FW_EXT_DIR .'nav/nav_menu_custom_fields.php' );
-include_once ( FW_EXT_DIR .'nav/nav_edit_custom_walker.php' );
+include_once ( KT_FW_EXT_DIR .'nav/nav_menu_custom_fields.php' );
+include_once ( KT_FW_EXT_DIR .'nav/nav_edit_custom_walker.php' );
 

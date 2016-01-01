@@ -4,28 +4,22 @@
 if ( !defined('ABSPATH')) exit;
 
 // Script version, used to add version for scripts and styles
-define( 'THEME_VER', '1.0' );
+define( 'KT_THEME_VER', '1.0' );
 
-define( 'THEME_OPTIONS', 'valorous_option' );
-define( 'THEME_LANG', 'valorous');
+define( 'KT_THEME_OPTIONS', 'wingman_option' );
+define( 'KT_THEME_LANG', 'wingman');
 
-define( 'THEME_DIR', trailingslashit(get_template_directory()));
-define( 'THEME_URL', trailingslashit(get_template_directory_uri()));
-define( 'THEME_INC', trailingslashit(THEME_DIR.'inc'));
-define( 'THEME_TEMP', trailingslashit(THEME_DIR.'templates'));
+define( 'KT_THEME_DIR', trailingslashit(get_template_directory()));
+define( 'KT_THEME_URL', trailingslashit(get_template_directory_uri()));
+define( 'KT_THEME_INC', trailingslashit(KT_THEME_DIR.'inc'));
+define( 'KT_THEME_TEMP', trailingslashit(KT_THEME_DIR.'templates'));
 
-define( 'THEME_ASSETS', trailingslashit( THEME_URL . 'assets' ) );
-define( 'THEME_FONTS', trailingslashit( THEME_ASSETS . 'fonts' ) );
-define( 'THEME_LIBS', trailingslashit( THEME_ASSETS . 'libs' ) );
-define( 'THEME_JS', trailingslashit( THEME_ASSETS . 'js' ) );
-define( 'THEME_CSS', trailingslashit( THEME_ASSETS . 'css' ) );
-define( 'THEME_IMG', trailingslashit( THEME_ASSETS . 'images' ) );
+define( 'KT_THEME_ASSETS', trailingslashit( KT_THEME_URL . 'assets' ) );
+define( 'KT_THEME_FONTS', trailingslashit( KT_THEME_ASSETS . 'fonts' ) );
+define( 'KT_THEME_LIBS', trailingslashit( KT_THEME_ASSETS . 'libs' ) );
+define( 'KT_THEME_JS', trailingslashit( KT_THEME_ASSETS . 'js' ) );
+define( 'KT_THEME_CSS', trailingslashit( KT_THEME_ASSETS . 'css' ) );
+define( 'KT_THEME_IMG', trailingslashit( KT_THEME_ASSETS . 'images' ) );
 
 //Include framework
-require_once ( THEME_DIR .'framework/core.php');
-
-
-// Get All meta box for all post type.
-if ( class_exists( 'KT_Meta_Box' ) ) {
-	require_once (THEME_FW_DATA . 'data-metaboxes.php');
-}
+require_once ( KT_THEME_DIR .'framework/core.php');

@@ -32,35 +32,35 @@ class WPBakeryShortCode_Contact_Info extends WPBakeryShortCode {
 }
 
 vc_map( array(
-    "name" => __( "Contact info", THEME_LANG),
+    "name" => __( "Contact info", KT_THEME_LANG),
     "base" => "contact_info",
-    "category" => __('by Theme', THEME_LANG ),
-    "description" => __( "Contact info", THEME_LANG),
+    "category" => __('by Theme', KT_THEME_LANG ),
+    "description" => __( "Contact info", KT_THEME_LANG),
     "params" => array(
         array(
             "type" => "textfield",
-            "heading" => __( "Title", THEME_LANG ),
+            "heading" => __( "Title", KT_THEME_LANG ),
             "param_name" => "title",
             "description" => '',
             "admin_label" => true,
         ),
         array(
             "type" => "textfield",
-            "heading" => __( "Address", THEME_LANG ),
+            "heading" => __( "Address", KT_THEME_LANG ),
             "param_name" => "address",
             "description" => "",
             "admin_label" => true,
         ),
         array(
             "type" => "textfield",
-            "heading" => __( "Phone", THEME_LANG ),
+            "heading" => __( "Phone", KT_THEME_LANG ),
             "param_name" => "phone",
             "description" => "",
             "admin_label" => true,
         ),
         array(
             "type" => "textfield",
-            "heading" => __( "Email", THEME_LANG ),
+            "heading" => __( "Email", KT_THEME_LANG ),
             "param_name" => "email",
             "description" => "",
             "admin_label" => true,

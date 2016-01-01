@@ -94,7 +94,7 @@ if ( !class_exists( 'ReduxFramework_kt_socials' ) ) {
         function enqueue() {
             wp_enqueue_script(
                 'redux-field-socials-js',
-                FW_JS.'kt_socials.js',
+                KT_FW_JS.'kt_socials.js',
                 time(),
                 true
             );

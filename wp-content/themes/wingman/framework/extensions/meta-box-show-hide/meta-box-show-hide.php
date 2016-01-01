@@ -61,7 +61,7 @@ if ( ! class_exists( 'RWMB_Show_Hide' ) )
 		 */
 		static public function enqueue_scripts()
 		{
-			wp_enqueue_script( 'rwmb-show-hide', FW_EXT_URL.'meta-box-show-hide/show-hide.js', array( 'jquery' ), '0.1.0', true );
+			wp_enqueue_script( 'rwmb-show-hide', KT_FW_EXT_URL.'meta-box-show-hide/show-hide.js', array( 'jquery' ), '0.1.0', true );
 		}
 	}
 

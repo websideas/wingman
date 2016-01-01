@@ -8,7 +8,7 @@ require_once vc_path_dir( 'SHORTCODES_DIR', 'vc-custom-heading.php' );
 class WPBakeryShortCode_Dropcap extends WPBakeryShortCode_VC_Custom_heading {
     protected function content($atts, $content = null) {
         $atts = shortcode_atts( array(
-            'title' => __( 'D', THEME_LANG ),
+            'title' => __( 'D', KT_THEME_LANG ),
             'size' => 'md',
             'font_container' => '',
             'border_radius' => '0',
@@ -69,16 +69,16 @@ class WPBakeryShortCode_Dropcap extends WPBakeryShortCode_VC_Custom_heading {
 
 // Add your Visual Composer logic here
 vc_map( array(
-    "name" => __( "Dropcap", THEME_LANG),
+    "name" => __( "Dropcap", KT_THEME_LANG),
     "base" => "dropcap",
-    "category" => __('by Theme', THEME_LANG ),
-    "description" => __( "", THEME_LANG),
+    "category" => __('by Theme', KT_THEME_LANG ),
+    "description" => __( "", KT_THEME_LANG),
     "params" => array(
         array(
             "type" => "textfield",
             'heading' => __( 'First Letter', 'js_composer' ),
             'param_name' => 'title',
-            'value' => __( 'D', THEME_LANG ),
+            'value' => __( 'D', KT_THEME_LANG ),
             "admin_label" => true,
         ),
         array(
@@ -92,7 +92,7 @@ vc_map( array(
             'param_name' => 'size',
             'value' => getVcShared( 'sizes' ),
             'std' => 'md',
-            'description' => __( 'Dropcap size.', THEME_LANG ),
+            'description' => __( 'Dropcap size.', KT_THEME_LANG ),
             "admin_label" => true,
         ),
         
@@ -114,32 +114,32 @@ vc_map( array(
                     'color_description' => __( 'Select heading color.', 'js_composer' ),
                 ),
             ),
-            'group' => __( 'Typography', THEME_LANG )
+            'group' => __( 'Typography', KT_THEME_LANG )
         ),
         array(
             "type" => "kt_number",
-            "heading" => __("Border Radius", THEME_LANG),
+            "heading" => __("Border Radius", KT_THEME_LANG),
             "param_name" => "border_radius",
             "value" => 0,
             "min" => 0,
             "max" => 10,
             "suffix" => "px",
             "description" => "",
-            'group' => __( 'Typography', THEME_LANG ),
+            'group' => __( 'Typography', KT_THEME_LANG ),
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Use Accent Background Color', THEME_LANG ),
+            'heading' => __( 'Use Accent Background Color', KT_THEME_LANG ),
             'param_name' => 'accent_background',
             'value' => 'true',
-            'group' => __( 'Typography', THEME_LANG ),
+            'group' => __( 'Typography', KT_THEME_LANG ),
         ),
         array(
             'type' => 'colorpicker',
             'heading' => __( 'Custom Background', 'js_composer' ),
             'param_name' => 'custom_background',
             'description' => __( 'Select Background color.', 'js_composer' ),
-            'group' => __( 'Typography', THEME_LANG ),
+            'group' => __( 'Typography', KT_THEME_LANG ),
             'dependency' => array(
                 'element' => 'accent_background',
                 'value_not_equal_to' => array( 'true' )
@@ -151,7 +151,7 @@ vc_map( array(
             'param_name' => 'use_theme_fonts',
             'value' => array( __( 'Yes', 'js_composer' ) => 'yes' ),
             'description' => __( 'Use font family from the theme.', 'js_composer' ),
-            'group' => __( 'Typography', THEME_LANG ),
+            'group' => __( 'Typography', KT_THEME_LANG ),
             'std' => 'yes'
         ),
         array(
@@ -164,7 +164,7 @@ vc_map( array(
                     'font_style_description' => __( 'Select font styling.', 'js_composer' )
                 )
             ),
-            'group' => __( 'Typography', THEME_LANG ),
+            'group' => __( 'Typography', KT_THEME_LANG ),
             'dependency' => array(
                 'element' => 'use_theme_fonts',
                 'value_not_equal_to' => 'yes',

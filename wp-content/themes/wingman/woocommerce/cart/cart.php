@@ -118,7 +118,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                     <tr>
                         <td colspan="6" class="actions">
 
-                            <a href="#" class="btn btn-default pull-left"><?php _e( 'Continue shopping', THEME_LANG ); ?></a>
+                            <a href="#" class="btn btn-default pull-left"><?php _e( 'Continue shopping', KT_THEME_LANG ); ?></a>
                             <input type="submit" class="btn btn-default update_cart pull-right" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" />
 
                             <?php do_action( 'woocommerce_cart_actions' ); ?>
@@ -144,7 +144,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                 <form method="post" action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>">
                     <div class="coupon">
                         <h3><?php _e( 'DIscount codes', 'woocommerce' ); ?></h3>
-                        <p><?php _e( 'Enter your coupin if you have one',THEME_LANG ); ?></p>
+                        <p><?php _e( 'Enter your coupin if you have one',KT_THEME_LANG ); ?></p>
                         <div class="form-coupon">
                             <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php _e( 'Coupon code', 'woocommerce' ); ?>" />
                             <input type="submit" class="btn btn-default btn-block" name="apply_coupon" value="<?php _e( 'Apply', 'woocommerce' ); ?>" />

@@ -78,8 +78,8 @@ add_action( 'wp_head', 'kt_track_post_views');
  *
  * @since 1.0
  */
-add_action( 'theme_before_content', 'get_page_header', 20 );
-function get_page_header( ){
+add_action( 'kt_before_content', 'kt_page_header', 20 );
+function kt_page_header( ){
     global $post;
     $show_title = true;
 
@@ -132,8 +132,6 @@ function get_page_header( ){
     $show_title = apply_filters( 'kt_show_title', $show_title );
 
     if($show_title){
-
-
         $title = kt_get_page_title();
         $subtitle = kt_get_page_subtitle();
         $breadcrumb = kt_get_breadcrumb();
@@ -153,7 +151,6 @@ function get_page_header( ){
         if($page_header_layout != 'sides'){
             $classes[] = 'page-header-sides';
         }
-
 
         if($breadcrumb == '' || $page_header_layout == 'centered'){
             $layout = '%3$s%1$s%2$s';
@@ -252,16 +249,16 @@ function kt_get_page_title( $title = '' ){
     global $post;
 
     if ( is_front_page() && !is_singular('page') ) {
-            $title = __( 'Blog', THEME_LANG );
+            $title = __( 'Blog', KT_THEME_LANG );
     } elseif ( is_search() ) {
-        $title = __( 'Search', THEME_LANG );
+        $title = __( 'Search', KT_THEME_LANG );
     } elseif( is_home() ){
         $page_for_posts = get_option('page_for_posts', true);
         if($page_for_posts){
             $title = get_the_title($page_for_posts) ;
         }
     } elseif( is_404() ) {
-        $title = __( 'Page not found', THEME_LANG );
+        $title = __( 'Page not found', KT_THEME_LANG );
     } elseif ( is_archive() ){
         $title = get_the_archive_title();
         if(kt_is_wc()) {
@@ -293,7 +290,7 @@ function kt_get_page_subtitle(){
     global $post;
     $tagline = '';
     if ( is_front_page() && !is_singular('page') ) {
-        $tagline =  __('Lastest posts', THEME_LANG);
+        $tagline =  __('Lastest posts', KT_THEME_LANG);
     }elseif( is_home() ){
         $page_for_posts = get_option('page_for_posts', true);
         $tagline = nl2br(rwmb_meta('_kt_page_header_subtitle', array(), $page_for_posts))  ;
@@ -334,8 +331,6 @@ function kt_get_the_archive_title($title) {
     } elseif ( is_post_type_archive() ) {
         $title = post_type_archive_title( '', false );
     } elseif ( is_tax() ) {
-        $tax = get_taxonomy( get_queried_object()->taxonomy );
-        /* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
         $title =  single_term_title( '', false );
     }
 
@@ -502,7 +497,7 @@ function kt_get_settings_search(){
  * @param array $classes A list of existing body class values.
  * @return array The filtered body class list.
  */
-function theme_body_classes( $classes ) {
+function kt_body_classes( $classes ) {
     global $post;
     
     if ( is_multi_author() ) {
@@ -535,7 +530,7 @@ function theme_body_classes( $classes ) {
 
     return $classes;
 }
-add_filter( 'body_class', 'theme_body_classes' );
+add_filter( 'body_class', 'kt_body_classes' );
 
 
 
@@ -589,7 +584,7 @@ add_filter('kt_sidebar_class', 'kt_sidebar_class_callback', 10, 2);
 /**
  * Add class sticky to header
  */
-function theme_header_class_callback($classes, $layout){
+function kt_header_class_callback($classes, $layout){
     $fixed_header = kt_option('fixed_header', 2);
     if($fixed_header == 2 || $fixed_header == 3 ){
         $classes .= ' sticky-header';
@@ -610,23 +605,22 @@ function theme_header_class_callback($classes, $layout){
     return $classes;
 }
 
-add_filter('theme_header_class', 'theme_header_class_callback', 10, 2);
+add_filter('kt_header_class', 'kt_header_class_callback', 10, 2);
 
 
 /**
  * Add class sticky to header
  */
-function theme_header_content_class_callback( $classes, $layout ){
+function kt_header_content_class_callback( $classes, $layout ){
 
     if(kt_option('header_full', 1)){
         $classes .= ' header-fullwidth';
     }
 
-
     return $classes;
 }
 
-add_filter('theme_header_content_class', 'theme_header_content_class_callback', 10, 2);
+add_filter('kt_header_content_class', 'kt_header_content_class_callback', 10, 2);
 
 /**
  * Add slideshow header
@@ -644,6 +638,7 @@ function kt_slideshows_position_callback(){
         }
     }
 }
+
 
 add_action( 'comment_form_before_fields', 'kt_comment_form_before_fields', 1 );
 function kt_comment_form_before_fields(){
@@ -675,13 +670,12 @@ add_filter('breadcrumb_trail_args', 'kt_breadcrumb_trail_args');
 function kt_contactmethods( $contactmethods ) {
 
     // Add Twitter, Facebook
-    $contactmethods['facebook'] = __('Facebook page/profile url', THEME_LANG);
-    $contactmethods['twitter'] = __('Twitter username (without @)', THEME_LANG);
-    $contactmethods['pinterest'] = __('Pinterest username', THEME_LANG);
-    $contactmethods['googleplus'] = __('Google+ page/profile URL', THEME_LANG);
-    $contactmethods['instagram'] = __('Instagram username', THEME_LANG);
-    $contactmethods['tumblr'] = __('Tumblr username', THEME_LANG);
-
+    $contactmethods['facebook'] = __('Facebook page/profile url', KT_THEME_LANG);
+    $contactmethods['twitter'] = __('Twitter username (without @)', KT_THEME_LANG);
+    $contactmethods['pinterest'] = __('Pinterest username', KT_THEME_LANG);
+    $contactmethods['googleplus'] = __('Google+ page/profile URL', KT_THEME_LANG);
+    $contactmethods['instagram'] = __('Instagram username', KT_THEME_LANG);
+    $contactmethods['tumblr'] = __('Tumblr username', KT_THEME_LANG);
 
     return $contactmethods;
 }
@@ -702,9 +696,9 @@ if(!function_exists('kt_placeholder_callback')) {
             $obj = get_thumbnail_attachment($placeholder['id'], $size);
             $imgage = $obj['url'];
         }elseif($size == 'blog_post' || $size == 'blog_post_sidebar'){
-            $imgage = THEME_IMG . 'placeholder-blogpost.png';
+            $imgage = KT_THEME_IMG . 'placeholder-blogpost.png';
         }else{
-            $imgage = THEME_IMG . 'placeholder-post.png';
+            $imgage = KT_THEME_IMG . 'placeholder-post.png';
         }
 
         return $imgage;
@@ -750,12 +744,12 @@ if ( ! function_exists( 'kt_page_loader' ) ) :
             </div>
         <?php }
     }
-    add_action( 'theme_body_top', 'kt_page_loader');
+    add_action( 'kt_body_top', 'kt_page_loader');
 endif;
 
 
 
-function add_search_full(){
+function kt_add_search_full(){
     if(kt_option('header_search', 1)){
 
         if(kt_is_wc()){
@@ -772,23 +766,7 @@ function add_search_full(){
         );
     }
 }
-add_action('theme_body_top', 'add_search_full');
-
-
-
-if ( ! function_exists( 'kt_login_body_class' ) ) :
-    /**
-     * Add class regsiter to body
-     *
-     */
-    function kt_login_body_class($classes, $action){
-        if ( get_option( 'users_can_register' ) ) {
-            $classes[] = 'register-allow';
-        }
-        return $classes;
-    }
-    add_filter( 'login_body_class', 'kt_login_body_class', 10, 2);
-endif;
+add_action('kt_body_top', 'kt_add_search_full');
 
 
 
@@ -798,8 +776,7 @@ remove_filter ('the_content', 'fbcommentbox', 100);
 /**
  * Add Category by Search form 
  **/
-function advanced_search_query($query) {
-
+function kt_advanced_search_query($query) {
     if($query->is_search()) {
         if (isset($_GET['product_cat']) && !empty($_GET['product_cat'])) {
             $query->set('tax_query', array(array(
@@ -811,34 +788,15 @@ function advanced_search_query($query) {
         return $query;
     }
 }
-add_action('pre_get_posts', 'advanced_search_query', 1000);
-
-/**
- * Add Category by Search form Product
- **/
-/*
-function kt_get_categories_product(){
-    global $post;
-    $categories = get_terms( 'product_cat' );
-
-    
-    if( count($categories) > 0 ){
-        echo '<div class="wrap_product_cat"><select id="product_cat" class="postform" name="product_cat">';
-            echo '<option value="">'.__('All Categories', THEME_LANG).'</option>';print_r($categories);
-            foreach ($categories as $key => $value) {
-                echo '<option value="'.$value->slug.'">'.$value->name.'</option>';
-            }
-        echo '</select></div>';
-    }
-}*/
+add_action('pre_get_posts', 'kt_advanced_search_query', 1000);
 
 /**
  * Add popup 
  *
  * @since 1.0
  */
-add_action( 'theme_after_footer', 'theme_after_footer_add_popup', 20 );
-function theme_after_footer_add_popup(){
+add_action( 'kt_after_footer', 'kt_after_footer_add_popup', 20 );
+function kt_after_footer_add_popup(){
     $enable_popup = kt_option( 'enable_popup' );
     $disable_popup_mobile = kt_option( 'disable_popup_mobile' );
     $content_popup = kt_option( 'content_popup' );
@@ -860,7 +818,7 @@ function theme_after_footer_add_popup(){
                 </div>
                 <form class="dont-show" name="dont-show">
                     <input id="dont-showagain" type="checkbox" value="" />
-                    <label for="dont-showagain"><?php _e( "Don’t Show Again.", THEME_LANG ); ?></label>
+                    <label for="dont-showagain"><?php _e( "Don’t Show Again.", KT_THEME_LANG ); ?></label>
                 </form>
             </div>
         <?php

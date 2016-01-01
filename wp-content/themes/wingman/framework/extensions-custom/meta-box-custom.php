@@ -13,7 +13,7 @@ if ( !defined('ABSPATH')) exit;
 add_filter('rwmb_image_advanced_select_string', 'kt_rwmb_image_advanced_select_string', 10, 2);
 function kt_rwmb_image_advanced_select_string($string, $field){
 	if($field['max_file_uploads'] == 1){
-		$string = __('Select your image', THEME_LANG);
+		$string = __('Select your image', KT_THEME_LANG);
 	}
 	return $string;
 }
@@ -126,7 +126,7 @@ if ( ! class_exists( 'RWMB_Sidebars_Field' )){
 		{
 			$options = array();
             if($field['default']){
-                $options['default'] = __('Default area', THEME_LANG);  
+                $options['default'] = __('Default area', KT_THEME_LANG);  
             }
             
             foreach($GLOBALS['wp_registered_sidebars'] as $sidebar){
@@ -168,7 +168,7 @@ if ( ! class_exists( 'RWMB_RevSlider_Field' )){
 		static function get_options( $field )
 		{
 			$options = array();
-            $options[''] = __('Select Option', THEME_LANG);
+            $options[''] = __('Select Option', KT_THEME_LANG);
             
             if ( class_exists( 'RevSlider' ) ) {
                 $revSlider = new RevSlider();
@@ -216,7 +216,7 @@ if ( ! class_exists( 'RWMB_Layerslider_Field' )){
 		static function get_options( $field )
 		{
 			$options = array();
-            $options[''] = __('Select Option', THEME_LANG);
+            $options[''] = __('Select Option', KT_THEME_LANG);
             
             if ( is_plugin_active( 'LayerSlider/layerslider.php' ) ) {
             global $wpdb;
@@ -284,7 +284,7 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 					'repeat-y'  => 'Repeat Vertically',
 					'inherit'   => 'Inherit',
 				),
-				'placeholder' => __('Background Repeat', THEME_LANG)
+				'placeholder' => __('Background Repeat', KT_THEME_LANG)
 			);
 
 			$ouput .= self::select_html($meta['repeat'], $bg_repeat);
@@ -298,7 +298,7 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 					'cover'   => 'Cover',
 					'contain' => 'Contain',
 				),
-				'placeholder' => __('Background Size', THEME_LANG)
+				'placeholder' => __('Background Size', KT_THEME_LANG)
 			);
 
 			$ouput .= self::select_html($meta['size'], $bg_size);
@@ -312,7 +312,7 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 					'scroll'  => 'Scroll',
 					'inherit' => 'Inherit',
 				),
-				'placeholder' => __('Background Attachment', THEME_LANG)
+				'placeholder' => __('Background Attachment', KT_THEME_LANG)
 			);
 
 			$ouput .= self::select_html($meta['attachment'], $bg_attachment);
@@ -333,7 +333,7 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 					'right center'  => 'Right center',
 					'right bottom'  => 'Right Bottom',
 				),
-				'placeholder' => __('Background Position', THEME_LANG)
+				'placeholder' => __('Background Position', KT_THEME_LANG)
 			);
 
 			$ouput .= self::select_html($meta['position'], $bg_position);
@@ -344,16 +344,16 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 				'<div class="rwmb-field"><input type="text" readonly="" class="kt_image_url" name="%s" value="%s" placeholder="%s"/></div>',
 				$field['field_name'].'[url]',
 				$meta['url'],
-				__( 'No media selected', THEME_LANG )
+				__( 'No media selected', KT_THEME_LANG )
 			);
 
 			$remove_style = ($meta['media'] != '') ? 'inline-block' : 'none';
 
 			$ouput .= sprintf(
 				'<div class="upload_button_div"><span class="button kt_image_upload">%s</span> <span class="button kt_image_remove" style="display : %s">%s</span></div>',
-				__('Upload', THEME_LANG),
+				__('Upload', KT_THEME_LANG),
 				$remove_style,
-				__('Remove', THEME_LANG)
+				__('Remove', KT_THEME_LANG)
 			);
 
 
@@ -441,9 +441,9 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 			// Make sure scripts for new media uploader in WordPress 3.5 is enqueued
 			wp_enqueue_media();
 
-			wp_enqueue_script( 'kt_image', FW_JS . 'kt_image.js', array( 'jquery', 'underscore' ), RWMB_VER, true );
+			wp_enqueue_script( 'kt_image', KT_FW_JS . 'kt_image.js', array( 'jquery', 'underscore' ), RWMB_VER, true );
 			wp_localize_script( 'rwmb-file-background', 'kt_image_lange', array(
-				'frameTitle' => __( 'Select Image', THEME_LANG ),
+				'frameTitle' => __( 'Select Image', KT_THEME_LANG ),
 			) );
 		}
 

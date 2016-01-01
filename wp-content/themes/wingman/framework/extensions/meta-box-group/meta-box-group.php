@@ -49,7 +49,7 @@ class RWMB_Group
 	function load_files()
 	{
 		if ( class_exists( 'RWMB_Field' ) && ! class_exists( 'RWMB_Group_Field' ) )
-			require_once FW_EXT_DIR. 'meta-box-group/class-rwmb-group-field.php';
+			require_once KT_FW_EXT_DIR. 'meta-box-group/class-rwmb-group-field.php';
 	}
 
 	/**

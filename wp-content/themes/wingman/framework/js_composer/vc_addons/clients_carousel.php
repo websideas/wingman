@@ -122,59 +122,59 @@ class WPBakeryShortCode_Clients_Carousel extends WPBakeryShortCode {
 }
 
 vc_map( array(
-    "name" => __( "Clients Carousel", THEME_LANG),
+    "name" => __( "Clients Carousel", KT_THEME_LANG),
     "base" => "clients_carousel",
-    "category" => __('by Theme', THEME_LANG ),
-    "description" => __( "Recent Posts Carousel", THEME_LANG),
+    "category" => __('by Theme', KT_THEME_LANG ),
+    "description" => __( "Recent Posts Carousel", KT_THEME_LANG),
     "wrapper_class" => "clearfix",
     "params" => array(
         array(
             "type" => "textfield",
-            "heading" => __( "Title", THEME_LANG ),
+            "heading" => __( "Title", KT_THEME_LANG ),
             "param_name" => "title",
-            "description" => __( "title", THEME_LANG ),
+            "description" => __( "title", KT_THEME_LANG ),
             "admin_label" => true,
         ),
         array(
             "type" => "kt_image_sizes",
-            "heading" => __( "Select image sizes", THEME_LANG ),
+            "heading" => __( "Select image sizes", KT_THEME_LANG ),
             "param_name" => "img_size",
-            'description' => __( 'Select size of image', THEME_LANG)
+            'description' => __( 'Select size of image', KT_THEME_LANG)
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Target Link', THEME_LANG ),
+            'heading' => __( 'Target Link', KT_THEME_LANG ),
             'param_name' => 'target_link',
             'value' => array(
-                __( 'Self', THEME_LANG ) => '_self',
-                __( 'Blank', THEME_LANG ) => '_blank',
-                __( 'Parent', THEME_LANG ) => '_parent',
-                __( 'Top', THEME_LANG ) => '_top',
+                __( 'Self', KT_THEME_LANG ) => '_self',
+                __( 'Blank', KT_THEME_LANG ) => '_blank',
+                __( 'Parent', KT_THEME_LANG ) => '_parent',
+                __( 'Top', KT_THEME_LANG ) => '_top',
             ),
-            'description' => __( 'Select target link.', THEME_LANG ),
+            'description' => __( 'Select target link.', KT_THEME_LANG ),
         ),
 
         // Data settings
         array(
             "type" => "dropdown",
-            "heading" => __("Data source", THEME_LANG),
+            "heading" => __("Data source", KT_THEME_LANG),
             "param_name" => "source",
             "value" => array(
-                __('All', THEME_LANG) => '',
-                __('Specific Categories', THEME_LANG) => 'categories',
-                __('Specific Client', THEME_LANG) => 'posts',
+                __('All', KT_THEME_LANG) => '',
+                __('Specific Categories', KT_THEME_LANG) => 'categories',
+                __('Specific Client', KT_THEME_LANG) => 'posts',
             ),
             "admin_label" => true,
             'std' => 'all',
-            "description" => __("Select content type for your posts.", THEME_LANG),
+            "description" => __("Select content type for your posts.", KT_THEME_LANG),
             'group' => __( 'Data settings', 'js_composer' ),
         ),
         array(
             "type" => "kt_taxonomy",
             'taxonomy' => 'client-category',
-            'heading' => __( 'Categories', THEME_LANG ),
+            'heading' => __( 'Categories', KT_THEME_LANG ),
             'param_name' => 'categories',
-            'placeholder' => __( 'Select your categories', THEME_LANG ),
+            'placeholder' => __( 'Select your categories', KT_THEME_LANG ),
             "dependency" => array("element" => "source","value" => array('categories')),
             'multiple' => true,
             'group' => __( 'Data settings', 'js_composer' ),
@@ -264,71 +264,71 @@ vc_map( array(
         // Carousel
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Auto Height', THEME_LANG ),
+            'heading' => __( 'Auto Height', KT_THEME_LANG ),
             'param_name' => 'autoheight',
             'value' => 'true',
             "edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
-            "description" => __("Enable auto height.", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG )
+            "description" => __("Enable auto height.", KT_THEME_LANG),
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Mouse Drag', THEME_LANG ),
+            'heading' => __( 'Mouse Drag', KT_THEME_LANG ),
             'param_name' => 'mousedrag',
             'value' => 'true',
             "edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
-            "description" => __("Mouse drag enabled.", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG )
+            "description" => __("Mouse drag enabled.", KT_THEME_LANG),
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'AutoPlay', THEME_LANG ),
+            'heading' => __( 'AutoPlay', KT_THEME_LANG ),
             'param_name' => 'autoplay',
             'value' => 'false',
-            "description" => __("Enable auto play.", THEME_LANG),
+            "description" => __("Enable auto play.", KT_THEME_LANG),
             "edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
-            'group' => __( 'Carousel', THEME_LANG )
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
         array(
             "type" => "kt_number",
-            "heading" => __("AutoPlay Speed", THEME_LANG),
+            "heading" => __("AutoPlay Speed", KT_THEME_LANG),
             "param_name" => "autoplayspeed",
             "value" => "5000",
-            "suffix" => __("milliseconds", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG ),
+            "suffix" => __("milliseconds", KT_THEME_LANG),
+            'group' => __( 'Carousel', KT_THEME_LANG ),
             "dependency" => array("element" => "autoplay","value" => array('true')),
         ),
         array(
             "type" => "kt_number",
-            "heading" => __("Slide Speed", THEME_LANG),
+            "heading" => __("Slide Speed", KT_THEME_LANG),
             "param_name" => "slidespeed",
             "value" => "200",
-            "suffix" => __("milliseconds", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG )
+            "suffix" => __("milliseconds", KT_THEME_LANG),
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
 
         array(
             "type" => "kt_heading",
-            "heading" => __("Items to Show?", THEME_LANG),
+            "heading" => __("Items to Show?", KT_THEME_LANG),
             "param_name" => "items_show",
-            'group' => __( 'Carousel', THEME_LANG )
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
         array(
             "type" => "kt_number",
             "class" => "",
             "edit_field_class" => "vc_col-sm-6 kt_margin_bottom",
-            "heading" => __("On Desktop", THEME_LANG),
+            "heading" => __("On Desktop", KT_THEME_LANG),
             "param_name" => "desktop",
             "value" => "5",
             "min" => "1",
             "max" => "25",
             "step" => "1",
-            'group' => __( 'Carousel', THEME_LANG )
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
 
         array(
             'type' => 'kt_number',
-            'heading' => __( 'on Tablets Landscape', THEME_LANG ),
+            'heading' => __( 'on Tablets Landscape', KT_THEME_LANG ),
             'param_name' => 'desktopsmall',
             "value" => "5",
             "min" => "1",
@@ -336,79 +336,79 @@ vc_map( array(
             "step" => "1",
             'std' => '4',
             "edit_field_class" => "vc_col-sm-6 kt_margin_bottom",
-            'group' => __( 'Carousel', THEME_LANG )
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
         array(
             "type" => "kt_number",
             "class" => "",
             "edit_field_class" => "vc_col-sm-6 kt_margin_bottom",
-            "heading" => __("On Tablet", THEME_LANG),
+            "heading" => __("On Tablet", KT_THEME_LANG),
             "param_name" => "tablet",
             "value" => "3",
             "min" => "1",
             "max" => "25",
             "step" => "1",
-            'group' => __( 'Carousel', THEME_LANG )
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
         array(
             "type" => "kt_number",
             "class" => "",
             "edit_field_class" => "vc_col-sm-6 kt_margin_bottom",
-            "heading" => __("On Mobile", THEME_LANG),
+            "heading" => __("On Mobile", KT_THEME_LANG),
             "param_name" => "mobile",
             "value" => "1",
             "min" => "1",
             "max" => "25",
             "step" => "1",
-            'group' => __( 'Carousel', THEME_LANG )
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
         array(
             "type" => "kt_heading",
-            "heading" => __("Navigation settings", THEME_LANG),
+            "heading" => __("Navigation settings", KT_THEME_LANG),
             "param_name" => "navigation_settings",
-            'group' => __( 'Carousel', THEME_LANG )
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Navigation', THEME_LANG ),
+            'heading' => __( 'Navigation', KT_THEME_LANG ),
             'param_name' => 'navigation',
             'value' => 'true',
-            "description" => __("Show navigation in carousel", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG )
+            "description" => __("Show navigation in carousel", KT_THEME_LANG),
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Navigation position', THEME_LANG ),
+            'heading' => __( 'Navigation position', KT_THEME_LANG ),
             'param_name' => 'navigation_position',
-            'group' => __( 'Carousel', THEME_LANG ),
+            'group' => __( 'Carousel', KT_THEME_LANG ),
             'value' => array(
-                __( 'Center outside', THEME_LANG) => 'center_outside',
-                __( 'Center inside', THEME_LANG) => 'center',
-                __( 'Top', THEME_LANG) => 'top',
-                __( 'Bottom', THEME_LANG) => 'bottom',
+                __( 'Center outside', KT_THEME_LANG) => 'center_outside',
+                __( 'Center inside', KT_THEME_LANG) => 'center',
+                __( 'Top', KT_THEME_LANG) => 'top',
+                __( 'Bottom', KT_THEME_LANG) => 'bottom',
             ),
             'std' => 'center',
             "dependency" => array("element" => "navigation","value" => array('true')),
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Always Show Navigation', THEME_LANG ),
+            'heading' => __( 'Always Show Navigation', KT_THEME_LANG ),
             'param_name' => 'navigation_always_on',
             'value' => 'false',
-            "description" => __("Always show the navigation.", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG ),
+            "description" => __("Always show the navigation.", KT_THEME_LANG),
+            'group' => __( 'Carousel', KT_THEME_LANG ),
             "dependency" => array("element" => "navigation_position","value" => array('center', 'center_outside')),
         ),
         array(
             'type' => 'dropdown',
             'heading' => __( 'Navigation style', 'js_composer' ),
             'param_name' => 'navigation_style',
-            'group' => __( 'Carousel', THEME_LANG ),
+            'group' => __( 'Carousel', KT_THEME_LANG ),
             'value' => array(
-                __( 'Normal', THEME_LANG ) => '',
-                __( 'Circle Border', THEME_LANG ) => 'circle_border',
-                __( 'Square Border', THEME_LANG ) => 'square_border',
-                __( 'Round Border', THEME_LANG ) => 'round_border',
+                __( 'Normal', KT_THEME_LANG ) => '',
+                __( 'Circle Border', KT_THEME_LANG ) => 'circle_border',
+                __( 'Square Border', KT_THEME_LANG ) => 'square_border',
+                __( 'Round Border', KT_THEME_LANG ) => 'round_border',
             ),
             'std' => '',
             "dependency" => array("element" => "navigation","value" => array('true')),
@@ -427,24 +427,24 @@ vc_map( array(
                 '<span><i class="fa fa-chevron-circle-left"></i><i class="fa fa-chevron-circle-right"></i></span>' =>'fa fa-chevron-circle-left|fa fa-chevron-circle-right',
                 '<span><i class="fa fa-arrow-circle-o-left"></i><i class="fa fa-arrow-circle-o-right"></i></span>' => 'fa fa-arrow-circle-o-left|fa fa-arrow-circle-o-right',
             ),
-            'description' => __( 'Select your style for navigation.', THEME_LANG ),
+            'description' => __( 'Select your style for navigation.', KT_THEME_LANG ),
             "dependency" => array("element" => "navigation","value" => array('true')),
-            'group' => __( 'Carousel', THEME_LANG )
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
 
         array(
             "type" => "kt_heading",
-            "heading" => __("Pagination settings", THEME_LANG),
+            "heading" => __("Pagination settings", KT_THEME_LANG),
             "param_name" => "pagination_settings",
-            'group' => __( 'Carousel', THEME_LANG )
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Pagination', THEME_LANG ),
+            'heading' => __( 'Pagination', KT_THEME_LANG ),
             'param_name' => 'pagination',
             'value' => 'false',
-            "description" => __("Show pagination in carousel", THEME_LANG),
-            'group' => __( 'Carousel', THEME_LANG )
+            "description" => __("Show pagination in carousel", KT_THEME_LANG),
+            'group' => __( 'Carousel', KT_THEME_LANG )
         ),
 
         array(

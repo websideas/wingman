@@ -16,8 +16,8 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="<?php echo THEME_JS; ?>html5shiv.min.js"></script>
-      <script src="<?php echo THEME_JS; ?>respond.min.js"></script>
+      <script src="<?php echo KT_THEME_JS; ?>html5shiv.min.js"></script>
+      <script src="<?php echo KT_THEME_JS; ?>respond.min.js"></script>
     <![endif]-->
 
 	<?php wp_head(); ?>
@@ -28,7 +28,7 @@
     /**
      * @hooked
      */
-    do_action( 'theme_body_top' );
+    do_action( 'kt_body_top' );
 
     $position = kt_get_header();
     $header_layout = kt_get_header_layout();
@@ -42,7 +42,7 @@
             	/**
             	 * @hooked 
             	 */
-            	do_action( 'theme_before_header' ); ?>
+            	do_action( 'kt_before_header' ); ?>
 
                 <?php get_template_part( 'templates/headers/header',  'mobile'); ?>
 
@@ -59,7 +59,7 @@
                      * @hooked theme_before_content_add_title 10
                      *
                      */
-                    do_action( 'theme_before_content' , $position);
+                    do_action( 'kt_before_content' , $position);
                 ?>
                 <div id="content" class="<?php echo apply_filters('kt_content_class', 'site-content') ?>">
 
@@ -67,4 +67,4 @@
             		/**
             		 * @hooked
             		 */
-            		do_action( 'theme_content_top' ); ?>
+            		do_action( 'kt_content_top' ); ?>

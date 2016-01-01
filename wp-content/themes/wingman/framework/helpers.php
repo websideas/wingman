@@ -93,17 +93,17 @@ if (!function_exists('kt_get_image_sizes')){
             if( isset($sizes[ $_size ]) ){
                 $option_text[] = '('.$sizes[ $_size ]['width'].' x '.$sizes[ $_size ]['height'].')';
                 if($sizes[ $_size ]['crop']){
-                    $option_text[] = __('Crop', THEME_LANG);
+                    $option_text[] = __('Crop', KT_THEME_LANG);
                 }
                 $sizes[ $_size ] = implode(' - ', $option_text);
             }
         }
 
         if($full){
-            $sizes[ 'full' ] = __('Full', THEME_LANG);
+            $sizes[ 'full' ] = __('Full', KT_THEME_LANG);
         }
         if($custom){
-            $sizes[ 'custom' ] = __('Custom size', THEME_LANG);
+            $sizes[ 'custom' ] = __('Custom size', KT_THEME_LANG);
         }
 
 
@@ -266,11 +266,11 @@ if (!function_exists('kt_option')){
         if($option === FALSE){
             return FALSE;
         }
-        $kt_options = wp_cache_get( THEME_OPTIONS );
+        $kt_options = wp_cache_get( KT_THEME_OPTIONS );
         if(  !$kt_options ){
-            $kt_options = get_option( THEME_OPTIONS );
-            wp_cache_delete( THEME_OPTIONS );
-            wp_cache_add( THEME_OPTIONS, $kt_options );
+            $kt_options = get_option( KT_THEME_OPTIONS );
+            wp_cache_delete( KT_THEME_OPTIONS );
+            wp_cache_add( KT_THEME_OPTIONS, $kt_options );
         }
 
         if(isset($kt_options[$option]) && $kt_options[$option] !== ''){
@@ -304,8 +304,8 @@ if (!function_exists('kt_get_logo')){
         }
 
         if(!$logo['default']){
-            $logo['default'] = THEME_IMG.'logo.png';
-            $logo['retina'] = THEME_IMG.'logo-2x.png';
+            $logo['default'] = KT_THEME_IMG.'logo.png';
+            $logo['retina'] = KT_THEME_IMG.'logo-2x.png';
         }
 
         return $logo;

@@ -61,7 +61,7 @@ class WPBakeryShortCode_List_Item extends WPBakeryShortCode {
 			'icon_entypo' => '',
 			'icon_linecons' => '',
 			'icon_color' => '',
-            'content_here' => __("Put your content here", THEME_LANG),
+            'content_here' => __("Put your content here", KT_THEME_LANG),
 			'el_class' => '',
 		), $atts ) );
 		$icon_li = '';
@@ -89,9 +89,9 @@ class WPBakeryShortCode_List_Item extends WPBakeryShortCode {
 
 //Register "container" content element. It will hold all your inner (child) content elements
 vc_map( array(
-    "name" => __("List", THEME_LANG),
+    "name" => __("List", KT_THEME_LANG),
     "base" => "list",
-    "category" => __('by Theme', THEME_LANG ),
+    "category" => __('by Theme', KT_THEME_LANG ),
     "as_parent" => array('only' => 'list_item'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
     "content_element" => true,
     "show_settings_on_create" => false,
@@ -218,7 +218,7 @@ vc_map( array(
         ),
     ),
     "js_view" => 'VcColumnView',
-	'default_content' => '[list_item]'.__("Put your content here", THEME_LANG).'[/list_item][list_item]'.__("Put your content here", THEME_LANG).'[/list_item][list_item]'.__("Put your content here", THEME_LANG).'[/list_item]',
+	'default_content' => '[list_item]'.__("Put your content here", KT_THEME_LANG).'[/list_item][list_item]'.__("Put your content here", KT_THEME_LANG).'[/list_item][list_item]'.__("Put your content here", KT_THEME_LANG).'[/list_item]',
 ) );
 
 
@@ -231,19 +231,19 @@ vc_map( array(
     "params" => array(
         array(
           "type" => "textarea",
-          "heading" => __("Content", THEME_LANG),
+          "heading" => __("Content", KT_THEME_LANG),
           "param_name" => "content",
-          "value" => __("Put your content here", THEME_LANG),
-          "description" => __("", THEME_LANG),
+          "value" => __("Put your content here", KT_THEME_LANG),
+          "description" => __("", KT_THEME_LANG),
           "holder" => "div",
         ),
 
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Custom icon', THEME_LANG ),
+            'heading' => __( 'Custom icon', KT_THEME_LANG ),
             'param_name' => 'custom_icon',
             'value' => 'false',
-            "description" => __("Close button in alert", THEME_LANG),
+            "description" => __("Close button in alert", KT_THEME_LANG),
         ),
 
         array(

@@ -18,7 +18,7 @@ function kt_register_meta_boxes( $meta_boxes )
     $image_sizes = kt_get_image_sizes();
     $menus = wp_get_nav_menus();
 
-    $menus_arr = array('' => __('Default', THEME_LANG));
+    $menus_arr = array('' => __('Default', KT_THEME_LANG));
     foreach ( $menus as $menu ) {
         $menus_arr[$menu->term_id] = esc_html( $menu->name );
     }
@@ -29,7 +29,7 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Audio Settings',THEME_LANG),
+        'title'  => __('Audio Settings',KT_THEME_LANG),
         'pages'  => array( 'post' ),
         'show'   => array(
             'post_format' => array( 'Audio'),
@@ -37,17 +37,17 @@ function kt_register_meta_boxes( $meta_boxes )
 
         'fields' => array(
             array(
-                'name' => __('Audio Type', THEME_LANG),
+                'name' => __('Audio Type', KT_THEME_LANG),
                 'id' => $prefix . 'audio_type',
                 'type'     => 'select',
                 'options'  => array(
-                    '' => __('Select Option', THEME_LANG),
-                    'upload' => __('Upload', THEME_LANG),
-                    'soundcloud' => __('Soundcloud', THEME_LANG),
+                    '' => __('Select Option', KT_THEME_LANG),
+                    'upload' => __('Upload', KT_THEME_LANG),
+                    'soundcloud' => __('Soundcloud', KT_THEME_LANG),
                 ),
             ),
             array(
-                'name'             => __( 'Upload MP3 File', THEME_LANG ),
+                'name'             => __( 'Upload MP3 File', KT_THEME_LANG ),
                 'id'               => "{$prefix}audio_mp3",
                 'type'             => 'file_advanced',
                 'max_file_uploads' => 1,
@@ -55,8 +55,8 @@ function kt_register_meta_boxes( $meta_boxes )
                 'compare' => array($prefix . 'audio_type','=', 'upload' ),
             ),
             array(
-                'name' => __( 'Soundcloud', THEME_LANG ),
-                'desc' => __( 'Paste embed iframe or Wordpress shortcode.', THEME_LANG ),
+                'name' => __( 'Soundcloud', KT_THEME_LANG ),
+                'desc' => __( 'Paste embed iframe or Wordpress shortcode.', KT_THEME_LANG ),
                 'id'   => "{$prefix}audio_soundcloud",
                 'type' => 'textarea',
                 'cols' => 20,
@@ -72,7 +72,7 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Video Settings',THEME_LANG),
+        'title'  => __('Video Settings',KT_THEME_LANG),
         'pages'  => array( 'post' ),
         'show'   => array(
             'post_format' => array( 'Video'),
@@ -80,28 +80,28 @@ function kt_register_meta_boxes( $meta_boxes )
 
         'fields' => array(
             array(
-                'name' => __('Video Type', THEME_LANG),
+                'name' => __('Video Type', KT_THEME_LANG),
                 'id' => $prefix . 'video_type',
                 'type'     => 'select',
                 'options'  => array(
-                    '' => __('Select Option', THEME_LANG),
-                    'external' => __('External url', THEME_LANG),
+                    '' => __('Select Option', KT_THEME_LANG),
+                    'external' => __('External url', KT_THEME_LANG),
                 ),
             ),
             array(
-                'name' => __('Choose Video', THEME_LANG),
+                'name' => __('Choose Video', KT_THEME_LANG),
                 'id' => $prefix . 'choose_video',
                 'type'     => 'select',
                 'options'  => array(
-                    'youtube' => __('Youtube', THEME_LANG),
-                    'vimeo' => __('Vimeo', THEME_LANG),
+                    'youtube' => __('Youtube', KT_THEME_LANG),
+                    'vimeo' => __('Vimeo', KT_THEME_LANG),
                 ),
                 'compare' => array($prefix . 'video_type','=', 'external' ),
             ),
             array(
-                'name' => __( 'Video id', THEME_LANG ),
+                'name' => __( 'Video id', KT_THEME_LANG ),
                 'id' => $prefix . 'video_id',
-                'desc' => sprintf( __( 'Enter id of video .Example: <br />- Link video youtube: https://www.youtube.com/watch?v=nPOO1Coe2DI id of video: nPOO1Coe2DI <br /> -Link vimeo: https://vimeo.com/70296428 id video: 70296428.', THEME_LANG ) ),
+                'desc' => sprintf( __( 'Enter id of video .Example: <br />- Link video youtube: https://www.youtube.com/watch?v=nPOO1Coe2DI id of video: nPOO1Coe2DI <br /> -Link vimeo: https://vimeo.com/70296428 id video: 70296428.', KT_THEME_LANG ) ),
                 'type'  => 'text',
                 'compare' => array($prefix . 'video_type','=', 'external' ),
             ),
@@ -114,7 +114,7 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Gallery Settings',THEME_LANG),
+        'title'  => __('Gallery Settings',KT_THEME_LANG),
         'pages'  => array( 'post' ),
         'show'   => array(
             'post_format' => array( 'Gallery'),
@@ -122,25 +122,25 @@ function kt_register_meta_boxes( $meta_boxes )
 
         'fields' => array(
             array(
-                'name' => __('Gallery Type', THEME_LANG),
+                'name' => __('Gallery Type', KT_THEME_LANG),
                 'id' => $prefix . 'gallery_type',
                 'type'     => 'select',
                 'options'  => array(
-                    '' => __('Default', THEME_LANG),
-                    'rev' => __('Revolution Slider', THEME_LANG),
-                    'layer' => __('Layer Slider', THEME_LANG)
+                    '' => __('Default', KT_THEME_LANG),
+                    'rev' => __('Revolution Slider', KT_THEME_LANG),
+                    'layer' => __('Layer Slider', KT_THEME_LANG)
                 ),
             ),
 
             array(
-                'name' => __('Select Revolution Slider', THEME_LANG),
+                'name' => __('Select Revolution Slider', KT_THEME_LANG),
                 'id' => $prefix . 'gallery_rev_slider',
                 'default' => true,
                 'type' => 'revSlider',
                 'compare' => array($prefix . 'gallery_type','=', 'rev' ),
             ),
             array(
-                'name' => __('Select Layer Slider', THEME_LANG),
+                'name' => __('Select Layer Slider', KT_THEME_LANG),
                 'id' => $prefix . 'gallery_layerslider',
                 'default' => true,
                 'type' => 'layerslider',
@@ -150,7 +150,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'name' => __( 'Gallery images', 'your-prefix' ),
                 'id'  => "{$prefix}gallery_images",
                 'type' => 'image_advanced',
-                'desc' => __( "You can drag and drop for change order image", THEME_LANG ),
+                'desc' => __( "You can drag and drop for change order image", KT_THEME_LANG ),
                 'compare' => array($prefix . 'gallery_type','=', '' ),
             ),
         ),
@@ -164,16 +164,16 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Link Settings',THEME_LANG),
+        'title'  => __('Link Settings',KT_THEME_LANG),
         'pages'  => array( 'post' ),
         'show'   => array(
             'post_format' => array( 'Link'),
         ),
         'fields' => array(
             array(
-                'name' => __( 'External URL', THEME_LANG ),
+                'name' => __( 'External URL', KT_THEME_LANG ),
                 'id' => $prefix . 'external_url',
-                'desc' => __( "Input your link in here", THEME_LANG ),
+                'desc' => __( "Input your link in here", KT_THEME_LANG ),
                 'type'  => 'text',
             ),
 
@@ -186,24 +186,24 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Quote Settings',THEME_LANG),
+        'title'  => __('Quote Settings',KT_THEME_LANG),
         'pages'  => array( 'post' ),
         'show'   => array(
             'post_format' => array( 'Quote'),
         ),
         'fields' => array(
             array(
-                'name' => __( 'Quote Content', THEME_LANG ),
-                'desc' => __( 'Please type the text for your quote here.', THEME_LANG ),
+                'name' => __( 'Quote Content', KT_THEME_LANG ),
+                'desc' => __( 'Please type the text for your quote here.', KT_THEME_LANG ),
                 'id'   => "{$prefix}quote_content",
                 'type' => 'textarea',
                 'cols' => 20,
                 'rows' => 3,
             ),
             array(
-                'name' => __( 'Author', THEME_LANG ),
+                'name' => __( 'Author', KT_THEME_LANG ),
                 'id' => $prefix . 'quote_author',
-                'desc' => __( "Please type the text for author quote here.", THEME_LANG ),
+                'desc' => __( "Please type the text for author quote here.", KT_THEME_LANG ),
                 'type'  => 'text',
             ),
 
@@ -216,32 +216,32 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Testimonial Settings',THEME_LANG),
+        'title'  => __('Testimonial Settings',KT_THEME_LANG),
         'pages'  => array( 'kt_testimonial' ),
         'fields' => array(
             array(
-                'name' => __( 'Company Name / Job Title', THEME_LANG ),
+                'name' => __( 'Company Name / Job Title', KT_THEME_LANG ),
                 'id' => $prefix . 'testimonial_company',
-                'desc' => __( "Please type the text for Company Name / Job Title here.", THEME_LANG ),
+                'desc' => __( "Please type the text for Company Name / Job Title here.", KT_THEME_LANG ),
                 'type'  => 'text',
             ),
             array(
-                'name' => __( "URL to Author's Website", THEME_LANG ),
+                'name' => __( "URL to Author's Website", KT_THEME_LANG ),
                 'id' => $prefix . 'testimonial_link',
-                'desc' => __( "Please type the text for link here.", THEME_LANG ),
+                'desc' => __( "Please type the text for link here.", KT_THEME_LANG ),
                 'type'  => 'text',
             ),
             array(
-                'name' => __('Rate', THEME_LANG),
+                'name' => __('Rate', KT_THEME_LANG),
                 'id'   => "{$prefix}rate",
                 'type' => 'select',
                 'options' => array(
-                    '0'    => __('Choose star', THEME_LANG),
-                    '1'   => __('1', THEME_LANG),
-                    '2'   => __('2', THEME_LANG),
-                    '3'   => __('3', THEME_LANG),
-                    '4'   => __('4', THEME_LANG),
-                    '5'   => __('5', THEME_LANG),
+                    '0'    => __('Choose star', KT_THEME_LANG),
+                    '1'   => __('1', KT_THEME_LANG),
+                    '2'   => __('2', KT_THEME_LANG),
+                    '3'   => __('3', KT_THEME_LANG),
+                    '4'   => __('4', KT_THEME_LANG),
+                    '5'   => __('5', KT_THEME_LANG),
                 ),
                 'std'  => '0'
             ),
@@ -260,89 +260,89 @@ function kt_register_meta_boxes( $meta_boxes )
         'priority' => 'high',
         'fields' => array(
             array(
-                'name' => __('Show Post format', THEME_LANG),
+                'name' => __('Show Post format', KT_THEME_LANG),
                 'id'   => "{$prefix}post_format",
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', THEME_LANG),
-                    0		=> __('Hidden', THEME_LANG),
-                    1		=> __('Show', THEME_LANG),
+                    -1    => __('Default', KT_THEME_LANG),
+                    0		=> __('Hidden', KT_THEME_LANG),
+                    1		=> __('Show', KT_THEME_LANG),
                 ),
                 'std'  => -1
             ),
             array(
-                'name' => __('Title and meta center', THEME_LANG),
+                'name' => __('Title and meta center', KT_THEME_LANG),
                 'id'   => "{$prefix}title_and_meta_center",
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', THEME_LANG),
-                    0		=> __('No', THEME_LANG),
-                    1		=> __('Yes', THEME_LANG),
+                    -1    => __('Default', KT_THEME_LANG),
+                    0		=> __('No', KT_THEME_LANG),
+                    1		=> __('Yes', KT_THEME_LANG),
                 ),
                 'std'  => -1
             ),
 
             array(
                 'type' => 'select',
-                'name' => __('Post image size', THEME_LANG),
-                'desc' => __('Select the format position.', THEME_LANG),
+                'name' => __('Post image size', KT_THEME_LANG),
+                'desc' => __('Select the format position.', KT_THEME_LANG),
                 'id'   => "{$prefix}blog_image_size",
-                'options' => array_merge(array('' => __('Default', THEME_LANG)), $image_sizes),
+                'options' => array_merge(array('' => __('Default', KT_THEME_LANG)), $image_sizes),
                 'std' => ''
             ),
 
             array(
-                'name' => __('Meta info', THEME_LANG),
+                'name' => __('Meta info', KT_THEME_LANG),
                 'id'   => "{$prefix}meta_info",
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', THEME_LANG),
-                    0		=> __('Hidden', THEME_LANG),
-                    1		=> __('Show', THEME_LANG),
+                    -1    => __('Default', KT_THEME_LANG),
+                    0		=> __('Hidden', KT_THEME_LANG),
+                    1		=> __('Show', KT_THEME_LANG),
                 ),
                 'std'  => -1
             ),
             array(
-                'name' => __('Previous & next buttons', THEME_LANG),
+                'name' => __('Previous & next buttons', KT_THEME_LANG),
                 'id'   => "{$prefix}prev_next",
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', THEME_LANG),
-                    0		=> __('Hidden', THEME_LANG),
-                    1		=> __('Show', THEME_LANG),
+                    -1    => __('Default', KT_THEME_LANG),
+                    0		=> __('Hidden', KT_THEME_LANG),
+                    1		=> __('Show', KT_THEME_LANG),
                 ),
                 'std'  => -1
             ),
             array(
-                'name' => __('Author info', THEME_LANG),
+                'name' => __('Author info', KT_THEME_LANG),
                 'id'   => "{$prefix}author_info",
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', THEME_LANG),
-                    0		=> __('Hidden', THEME_LANG),
-                    1		=> __('Show', THEME_LANG),
+                    -1    => __('Default', KT_THEME_LANG),
+                    0		=> __('Hidden', KT_THEME_LANG),
+                    1		=> __('Show', KT_THEME_LANG),
                 ),
                 'std'  => -1
             ),
             array(
-                'name' => __('Social sharing', THEME_LANG),
+                'name' => __('Social sharing', KT_THEME_LANG),
                 'id'   => "{$prefix}social_sharing",
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', THEME_LANG),
-                    0		=> __('Hidden', THEME_LANG),
-                    1		=> __('Show', THEME_LANG),
+                    -1    => __('Default', KT_THEME_LANG),
+                    0		=> __('Hidden', KT_THEME_LANG),
+                    1		=> __('Show', KT_THEME_LANG),
                 ),
                 'std'  => -1
             ),
             array(
-                'name' => __('Related articles', THEME_LANG),
+                'name' => __('Related articles', KT_THEME_LANG),
                 'id'   => "{$prefix}related_acticles",
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', THEME_LANG),
-                    0		=> __('Hidden', THEME_LANG),
-                    1		=> __('Show', THEME_LANG),
+                    -1    => __('Default', KT_THEME_LANG),
+                    0		=> __('Hidden', KT_THEME_LANG),
+                    1		=> __('Show', KT_THEME_LANG),
                 ),
                 'std'  => -1
             ),
@@ -358,31 +358,31 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Team Settings',THEME_LANG),
+        'title'  => __('Team Settings',KT_THEME_LANG),
         'pages'  => array( 'kt_team' ),
         'fields' => array(
             array(
-                'name' => __( 'Regency', THEME_LANG ),
+                'name' => __( 'Regency', KT_THEME_LANG ),
                 'id' => $prefix . 'team_regency',
-                'desc' => __( "Regency.", THEME_LANG ),
+                'desc' => __( "Regency.", KT_THEME_LANG ),
                 'type'  => 'text',
             ),
             array(
-                'name' => __( 'Twitter', THEME_LANG ),
+                'name' => __( 'Twitter', KT_THEME_LANG ),
                 'id' => $prefix . 'team_twitter',
-                'desc' => __( "Link Twitter.", THEME_LANG ),
+                'desc' => __( "Link Twitter.", KT_THEME_LANG ),
                 'type'  => 'text',
             ),
             array(
-                'name' => __( 'Facebook', THEME_LANG ),
+                'name' => __( 'Facebook', KT_THEME_LANG ),
                 'id' => $prefix . 'team_facebook',
-                'desc' => __( "Link Facebook.", THEME_LANG ),
+                'desc' => __( "Link Facebook.", KT_THEME_LANG ),
                 'type'  => 'text',
             ),
             array(
-                'name' => __( 'Google+', THEME_LANG ),
+                'name' => __( 'Google+', KT_THEME_LANG ),
                 'id' => $prefix . 'team_googleplus',
-                'desc' => __( "Link Google+.", THEME_LANG ),
+                'desc' => __( "Link Google+.", KT_THEME_LANG ),
                 'type'  => 'text',
             ),
         ),
@@ -403,9 +403,9 @@ function kt_register_meta_boxes( $meta_boxes )
         'fields' => array(
             
             array(
-                'name' => __( 'Link Client', THEME_LANG ),
+                'name' => __( 'Link Client', KT_THEME_LANG ),
                 'id' => $prefix . 'link_client',
-                'desc' => __( "Link Client.", THEME_LANG ),
+                'desc' => __( "Link Client.", KT_THEME_LANG ),
                 'type'  => 'text',
             ),
 
@@ -424,15 +424,15 @@ function kt_register_meta_boxes( $meta_boxes )
         'priority' => 'high',
         'tabs'      => array(
             'header'  => array(
-                'label' => __( 'Header', THEME_LANG ),
+                'label' => __( 'Header', KT_THEME_LANG ),
                 'icon'  => 'fa fa-desktop',
             ),
             'page_header' => array(
-                'label' => __( 'Page Header', THEME_LANG ),
+                'label' => __( 'Page Header', KT_THEME_LANG ),
                 'icon'  => 'fa fa-bars',
             ),
             'page_layout' => array(
-                'label' => __( 'Page layout', THEME_LANG ),
+                'label' => __( 'Page layout', KT_THEME_LANG ),
                 'icon'  => 'fa fa-columns',
             )
         ),
@@ -441,53 +441,53 @@ function kt_register_meta_boxes( $meta_boxes )
 
             //Header
             array(
-                'name'    => __( 'Header position', THEME_LANG ),
+                'name'    => __( 'Header position', KT_THEME_LANG ),
                 'type'     => 'select',
                 'id'       => $prefix.'header_position',
-                'desc'     => __( "Please choose header position", THEME_LANG ),
+                'desc'     => __( "Please choose header position", KT_THEME_LANG ),
                 'options'  => array(
-                    'default' => __('Default', THEME_LANG),
-                    'transparent' => __('Transparent header', THEME_LANG),
-                    'below' => __('Below Slideshow', THEME_LANG),
+                    'default' => __('Default', KT_THEME_LANG),
+                    'transparent' => __('Transparent header', KT_THEME_LANG),
+                    'below' => __('Below Slideshow', KT_THEME_LANG),
                 ),
                 'std'  => 'default',
                 'tab'  => 'header',
             ),
 
             array(
-                'name' => __('Select Your Slideshow Type', THEME_LANG),
+                'name' => __('Select Your Slideshow Type', KT_THEME_LANG),
                 'id' => $prefix . 'slideshow_source',
-                'desc' => __("You can select the slideshow type using this option.", THEME_LANG),
+                'desc' => __("You can select the slideshow type using this option.", KT_THEME_LANG),
                 'type' => 'select',
                 'options' => array(
-                    '' => __('Select Option', THEME_LANG),
-                    'revslider' => __('Revolution Slider', THEME_LANG),
-                    'layerslider' => __('Layer Slider', THEME_LANG),
+                    '' => __('Select Option', KT_THEME_LANG),
+                    'revslider' => __('Revolution Slider', KT_THEME_LANG),
+                    'layerslider' => __('Layer Slider', KT_THEME_LANG),
                 ),
                 'tab'  => 'header',
             ),
             array(
-                'name' => __('Select Revolution Slider', THEME_LANG),
+                'name' => __('Select Revolution Slider', KT_THEME_LANG),
                 'id' => $prefix . 'rev_slider',
                 'default' => true,
                 'type' => 'revSlider',
                 'tab'  => 'header',
-                'desc' => __('Select the Revolution Slider.', THEME_LANG),
+                'desc' => __('Select the Revolution Slider.', KT_THEME_LANG),
                 'compare' => array($prefix . 'slideshow_source','=', 'revslider' ),
             ),
             array(
-                'name' => __('Select Layer Slider', THEME_LANG),
+                'name' => __('Select Layer Slider', KT_THEME_LANG),
                 'id' => $prefix . 'layerslider',
                 'default' => true,
                 'type' => 'layerslider',
                 'tab'  => 'header',
-                'desc' => __('Select the Layer Slider.', THEME_LANG),
+                'desc' => __('Select the Layer Slider.', KT_THEME_LANG),
                 'compare' => array($prefix . 'slideshow_source','=', 'layerslider' ),
             ),
 
             /*
             array(
-                'name' => __('Main Navigation Menu', THEME_LANG),
+                'name' => __('Main Navigation Menu', KT_THEME_LANG),
                 'id'   => "{$prefix}header_main_menu",
                 'type' => 'select',
                 'options' => $menus_arr,
@@ -499,31 +499,31 @@ function kt_register_meta_boxes( $meta_boxes )
             // Page Header
             array(
 
-                'name' => __( 'Page Header', THEME_LANG ),
+                'name' => __( 'Page Header', KT_THEME_LANG ),
                 'id' => $prefix . 'page_header',
-                'desc' => __( "Show Page Header.", THEME_LANG ),
+                'desc' => __( "Show Page Header.", KT_THEME_LANG ),
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', THEME_LANG),
-                    0		=> __('Hidden', THEME_LANG),
-                    1		=> __('Show', THEME_LANG),
+                    -1    => __('Default', KT_THEME_LANG),
+                    0		=> __('Hidden', KT_THEME_LANG),
+                    1		=> __('Show', KT_THEME_LANG),
                 ),
                 'std'  => -1,
                 'tab'  => 'page_header',
             ),
             array(
-                'name' => __( 'Page Header Custom Text', THEME_LANG ),
+                'name' => __( 'Page Header Custom Text', KT_THEME_LANG ),
                 'id' => $prefix . 'page_header_custom',
-                'desc' => __( "Enter cstom Text for page header.", THEME_LANG ),
+                'desc' => __( "Enter cstom Text for page header.", KT_THEME_LANG ),
                 'type'  => 'text',
                 'tab'  => 'page_header',
                 'compare' => array($prefix . 'page_header','!=', '0' ),
             ),
 
             array(
-                'name' => __( 'Page header subtitle', THEME_LANG ),
+                'name' => __( 'Page header subtitle', KT_THEME_LANG ),
                 'id' => $prefix . 'page_header_subtitle',
-                'desc' => __( "Enter subtitle for page.", THEME_LANG ),
+                'desc' => __( "Enter subtitle for page.", KT_THEME_LANG ),
                 'type'  => 'text',
                 'tab'  => 'page_header',
                 'compare' => array($prefix . 'page_header','!=', '0' ),
@@ -532,13 +532,13 @@ function kt_register_meta_boxes( $meta_boxes )
             array(
                 'id'       => "{$prefix}page_header_align",
                 'type'     => 'select',
-                'name'    => __( 'Page Header align', THEME_LANG ),
-                'desc'     => __( 'Please select Page Header align', THEME_LANG ),
+                'name'    => __( 'Page Header align', KT_THEME_LANG ),
+                'desc'     => __( 'Please select Page Header align', KT_THEME_LANG ),
                 'options'  => array(
-                    ''    => __('Default', THEME_LANG),
-                    'left' => __('Left', THEME_LANG ),
-                    'center' => __('Center', THEME_LANG),
-                    'right' => __('Right', THEME_LANG)
+                    ''    => __('Default', KT_THEME_LANG),
+                    'left' => __('Left', KT_THEME_LANG ),
+                    'center' => __('Center', KT_THEME_LANG),
+                    'right' => __('Right', KT_THEME_LANG)
                 ),
                 'std'  => '',
                 'tab'  => 'page_header',
@@ -546,113 +546,113 @@ function kt_register_meta_boxes( $meta_boxes )
             ),
 
             array(
-                'name' => __('Page breadcrumb', THEME_LANG),
+                'name' => __('Page breadcrumb', KT_THEME_LANG),
                 'id'   => "{$prefix}show_breadcrumb",
                 'type' => 'select',
                 'options' => array(
-                    -1    => __('Default', THEME_LANG),
-                    0		=> __('Hidden', THEME_LANG),
-                    1		=> __('Show', THEME_LANG),
+                    -1    => __('Default', KT_THEME_LANG),
+                    0		=> __('Hidden', KT_THEME_LANG),
+                    1		=> __('Show', KT_THEME_LANG),
                 ),
                 'std'  => -1,
-                'desc' => __( "Show page breadcrumb.", THEME_LANG ),
+                'desc' => __( "Show page breadcrumb.", KT_THEME_LANG ),
                 'tab'  => 'page_header',
                 'compare' => array($prefix . 'page_header','!=', '0' ),
             ),
 
             array(
-                'name' => __('Page header top spacing', THEME_LANG),
+                'name' => __('Page header top spacing', KT_THEME_LANG),
                 'id' => $prefix . 'page_header_top',
-                'desc' => __("(Example: 60px). Emtpy for use default", THEME_LANG ),
+                'desc' => __("(Example: 60px). Emtpy for use default", KT_THEME_LANG ),
                 'type'  => 'text',
                 'tab'  => 'page_header',
                 'compare' => array($prefix . 'page_header','!=', '0' ),
             ),
             array(
-                'name' => __('Page header bottom spacing', THEME_LANG),
+                'name' => __('Page header bottom spacing', KT_THEME_LANG),
                 'id' => $prefix . 'page_header_bottom',
-                'desc' => __("(Example: 60px). Emtpy for use default", THEME_LANG ),
+                'desc' => __("(Example: 60px). Emtpy for use default", KT_THEME_LANG ),
                 'type'  => 'text',
                 'tab'  => 'page_header',
                 'compare' => array($prefix . 'page_header','!=', '0' ),
             ),
             array(
-                'name' => __( 'Typography title custom color', THEME_LANG ),
+                'name' => __( 'Typography title custom color', KT_THEME_LANG ),
                 'id'   => "{$prefix}page_header_title_color",
                 'type' => 'color',
                 'tab'  => 'page_header',
-                'desc' => __( "Choose custom color for title.", THEME_LANG ),
+                'desc' => __( "Choose custom color for title.", KT_THEME_LANG ),
                 'compare' => array($prefix . 'page_header','!=', '0' ),
             ),
             array(
-                'name' => __( 'Typography sub title custom color', THEME_LANG ),
+                'name' => __( 'Typography sub title custom color', KT_THEME_LANG ),
                 'id'   => "{$prefix}page_header_subtitle_color",
                 'type' => 'color',
                 'tab'  => 'page_header',
-                'desc' => __( "Choose custom color for sub title.", THEME_LANG ),
+                'desc' => __( "Choose custom color for sub title.", KT_THEME_LANG ),
                 'compare' => array($prefix . 'page_header','!=', '0' ),
             ),
             array(
-                'name' => __( 'Typography breadcrumbs custom color', THEME_LANG ),
+                'name' => __( 'Typography breadcrumbs custom color', KT_THEME_LANG ),
                 'id'   => "{$prefix}page_header_breadcrumbs_color",
                 'type' => 'color',
                 'tab'  => 'page_header',
-                'desc' => __( "Choose custom color for breadcrumbs.", THEME_LANG ),
+                'desc' => __( "Choose custom color for breadcrumbs.", KT_THEME_LANG ),
                 'compare' => array($prefix . 'page_header','!=', '0' ),
             ),
 
 
             //Page layout
             array(
-                'name' => __('Sidebar configuration', THEME_LANG),
+                'name' => __('Sidebar configuration', KT_THEME_LANG),
                 'id' => $prefix . 'sidebar',
-                'desc' => __("Choose the sidebar configuration for the detail page.<br/><b>Note: Cart and checkout, My account page always use no sidebars.</b>", THEME_LANG),
+                'desc' => __("Choose the sidebar configuration for the detail page.<br/><b>Note: Cart and checkout, My account page always use no sidebars.</b>", KT_THEME_LANG),
                 'type' => 'select',
                 'options' => array(
-                    'default' => __('Default', THEME_LANG),
-                    'full' => __('No sidebars', THEME_LANG),
-                    'left' => __('Left Sidebar', THEME_LANG),
-                    'right' => __('Right Sidebar', THEME_LANG)
+                    'default' => __('Default', KT_THEME_LANG),
+                    'full' => __('No sidebars', KT_THEME_LANG),
+                    'left' => __('Left Sidebar', KT_THEME_LANG),
+                    'right' => __('Right Sidebar', KT_THEME_LANG)
                 ),
                 'std' => 'default',
                 'tab'  => 'page_layout',
             ),
             array(
-                'name' => __('Left sidebar', THEME_LANG),
+                'name' => __('Left sidebar', KT_THEME_LANG),
                 'id' => $prefix . 'left_sidebar',
                 'default' => false,
                 'type' => 'sidebars',
                 'tab'  => 'page_layout',
-                'desc' => __("Select your sidebar.", THEME_LANG),
+                'desc' => __("Select your sidebar.", KT_THEME_LANG),
                 'compare' => array($prefix . 'sidebar','=', 'left' ),
             ),
             array(
-                'name' => __('Right sidebar', THEME_LANG),
+                'name' => __('Right sidebar', KT_THEME_LANG),
                 'id' => $prefix . 'right_sidebar',
                 'default' => false,
                 'type' => 'sidebars',
                 'tab'  => 'page_layout',
-                'desc' => __("Select your sidebar.", THEME_LANG),
+                'desc' => __("Select your sidebar.", KT_THEME_LANG),
                 'compare' => array($prefix . 'sidebar','=', 'right' ),
             ),
             array(
-                'name' => __('Page top spacing', THEME_LANG),
+                'name' => __('Page top spacing', KT_THEME_LANG),
                 'id' => $prefix . 'page_top_spacing',
-                'desc' => __("Enter your page top spacing (Example: 100px).", THEME_LANG ),
+                'desc' => __("Enter your page top spacing (Example: 100px).", KT_THEME_LANG ),
                 'type'  => 'text',
                 'tab'  => 'page_layout',
             ),
             array(
-                'name' => __('Page bottom spacing', THEME_LANG),
+                'name' => __('Page bottom spacing', KT_THEME_LANG),
                 'id' => $prefix . 'page_bottom_spacing',
-                'desc' => __("Enter your page bottom spacing (Example: 100px).", THEME_LANG ),
+                'desc' => __("Enter your page bottom spacing (Example: 100px).", KT_THEME_LANG ),
                 'type'  => 'text',
                 'tab'  => 'page_layout',
             ),
             array(
-                'name' => __('Extra page class', THEME_LANG),
+                'name' => __('Extra page class', KT_THEME_LANG),
                 'id' => $prefix . 'extra_page_class',
-                'desc' => __('If you wish to add extra classes to the body class of the page (for custom css use), then please add the class(es) here.', THEME_LANG ),
+                'desc' => __('If you wish to add extra classes to the body class of the page (for custom css use), then please add the class(es) here.', KT_THEME_LANG ),
                 'type'  => 'text',
                 'tab'  => 'page_layout',
             ),

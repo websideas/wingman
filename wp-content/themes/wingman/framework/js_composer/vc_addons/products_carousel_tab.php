@@ -67,11 +67,11 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
                 $output .= "<li><a href='#tab-".$tab.'-'.$uniqeID."'>".$term->name."</a></li>";
             }else{
                 if($tab == 'featured'){
-                    $text = __('Hot Products', THEME_LANG);
+                    $text = __('Hot Products', KT_THEME_LANG);
                 }elseif($tab == 'new'){
-                    $text = __('New Arrivals', THEME_LANG);
+                    $text = __('New Arrivals', KT_THEME_LANG);
                 }elseif($tab == 'bestselling'){
-                    $text = __('Best Sellers', THEME_LANG);
+                    $text = __('Best Sellers', KT_THEME_LANG);
                 }
                 $output .= "<li><a href='#tab-".$tab.'-'.$uniqeID."'>".$text."</a></li>";
             }
@@ -159,22 +159,22 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
 
 
 vc_map( array(
-    "name" => __( "Products Carousel Tab", THEME_LANG),
+    "name" => __( "Products Carousel Tab", KT_THEME_LANG),
     "base" => "products_carousel_tab",
-    "category" => __('by Theme', THEME_LANG ),
+    "category" => __('by Theme', KT_THEME_LANG ),
     "params" => array(
 
         array(
             "type" => "dropdown",
-            "heading" => __("Data source", THEME_LANG),
+            "heading" => __("Data source", KT_THEME_LANG),
             "param_name" => "source",
             "value" => array(
-                __('Widgets', THEME_LANG) => 'widgets',
-                __('Specific Categories', THEME_LANG) => 'categories',
+                __('Widgets', KT_THEME_LANG) => 'widgets',
+                __('Specific Categories', KT_THEME_LANG) => 'categories',
             ),
             'std' => 'widgets',
             "admin_label" => true,
-            "description" => __("Select content type for your posts.", THEME_LANG),
+            "description" => __("Select content type for your posts.", KT_THEME_LANG),
         ),
 
         array(
@@ -230,13 +230,13 @@ vc_map( array(
 
         array(
             "type" => "kt_heading",
-            "heading" => __("Columns to Show?", THEME_LANG),
+            "heading" => __("Columns to Show?", KT_THEME_LANG),
             "edit_field_class" => "kt_sub_heading vc_column",
             "param_name" => "items_show",
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'on Desktop', THEME_LANG ),
+            'heading' => __( 'on Desktop', KT_THEME_LANG ),
             'param_name' => 'product_columns',
             'value' => array(
                 __( '1 column', 'js_composer' ) => '1',
@@ -250,7 +250,7 @@ vc_map( array(
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'on Tablets Landscape', THEME_LANG ),
+            'heading' => __( 'on Tablets Landscape', KT_THEME_LANG ),
             'param_name' => 'product_columns_desktop',
             'value' => array(
                 __( '1 column', 'js_composer' ) => '1',
@@ -264,7 +264,7 @@ vc_map( array(
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'on Tablet', THEME_LANG ),
+            'heading' => __( 'on Tablet', KT_THEME_LANG ),
             'param_name' => 'product_columns_tablet',
             'value' => array(
                 __( '1 column', 'js_composer' ) => '1',
@@ -279,14 +279,14 @@ vc_map( array(
 
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Skin', THEME_LANG ),
+            'heading' => __( 'Skin', KT_THEME_LANG ),
             'param_name' => 'skin',
             'value' => array(
                 __( 'Default', 'js_composer' ) => 'dark',
                 __( 'Light', 'js_composer' ) => 'light',
             ),
             'std' => 'dark',
-            'description' => __( 'Select your skin.', THEME_LANG )
+            'description' => __( 'Select your skin.', KT_THEME_LANG )
         ),
 
         array(

@@ -13,9 +13,9 @@ if ( function_exists('register_sidebar')) {
     function kt_register_sidebars(){
 
         register_sidebar( array(
-            'name' => __( 'Primary Widget Area', THEME_LANG),
+            'name' => __( 'Primary Widget Area', KT_THEME_LANG),
             'id' => 'primary-widget-area',
-            'description' => __( 'The primary widget area', THEME_LANG),
+            'description' => __( 'The primary widget area', KT_THEME_LANG),
             'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h3 class="widget-title">',
@@ -23,9 +23,9 @@ if ( function_exists('register_sidebar')) {
         ) );
 
         register_sidebar( array(
-            'name' => __( 'Shop Widget Area', THEME_LANG),
+            'name' => __( 'Shop Widget Area', KT_THEME_LANG),
             'id' => 'shop-widget-area',
-            'description' => __( 'The shop widget area', THEME_LANG),
+            'description' => __( 'The shop widget area', KT_THEME_LANG),
             'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h3 class="widget-title">',
@@ -33,9 +33,9 @@ if ( function_exists('register_sidebar')) {
         ) );
 
         register_sidebar( array(
-            'name' => __( 'Blog Widget Area', THEME_LANG),
+            'name' => __( 'Blog Widget Area', KT_THEME_LANG),
             'id' => 'blog-widget-area',
-            'description' => __( 'The blog widget area', THEME_LANG),
+            'description' => __( 'The blog widget area', KT_THEME_LANG),
             'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h3 class="widget-title">',
@@ -46,9 +46,9 @@ if ( function_exists('register_sidebar')) {
 
         for($i=1; $i<=$count;$i++){
             register_sidebar( array(
-                'name' => __( 'Sidebar '.$i, THEME_LANG),
+                'name' => __( 'Sidebar '.$i, KT_THEME_LANG),
                 'id' => 'sidebar-column-'.$i,
-                'description' => __( 'The sidebar column '.$i.' widget area', THEME_LANG),
+                'description' => __( 'The sidebar column '.$i.' widget area', KT_THEME_LANG),
                 'before_widget' => '<div class="widget-container clearfix %2$s">',
                 'after_widget' => '</div>',
                 'before_title' => '<h3 class="widget-title">',
@@ -57,9 +57,9 @@ if ( function_exists('register_sidebar')) {
         }
 
         register_sidebar( array(
-            'name' => __( 'Footer top', THEME_LANG),
+            'name' => __( 'Footer top', KT_THEME_LANG),
             'id' => 'footer-top',
-            'description' => __( 'The footer top widget area', THEME_LANG),
+            'description' => __( 'The footer top widget area', KT_THEME_LANG),
             'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widget-title">',
@@ -70,9 +70,9 @@ if ( function_exists('register_sidebar')) {
 
         for($i=1; $i<=$count;$i++){
             register_sidebar( array(
-                'name' => __( 'Footer column '.$i, THEME_LANG),
+                'name' => __( 'Footer column '.$i, KT_THEME_LANG),
                 'id' => 'footer-column-'.$i,
-                'description' => __( 'The footer column '.$i.' widget area', THEME_LANG),
+                'description' => __( 'The footer column '.$i.' widget area', KT_THEME_LANG),
                 'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
                 'after_widget' => '</div>',
                 'before_title' => '<h3 class="widget-title">',
@@ -81,9 +81,9 @@ if ( function_exists('register_sidebar')) {
         }
 
         register_sidebar( array(
-            'name' => __( 'Footer bottom', THEME_LANG),
+            'name' => __( 'Footer bottom', KT_THEME_LANG),
             'id' => 'footer-bottom',
-            'description' => __( 'The footer bottom widget area', THEME_LANG),
+            'description' => __( 'The footer bottom widget area', KT_THEME_LANG),
             'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widget-title">',
@@ -168,7 +168,7 @@ $kt_widgets = array(
 );
 
 foreach ( $kt_widgets as $widget ) {
-	require_once( FW_WIDGETS . $widget );
+	require_once( KT_FW_WIDGETS . $widget );
 
 }
 
