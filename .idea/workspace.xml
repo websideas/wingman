@@ -2,91 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c7cfb02-0be5-4605-a0ec-58a67682dd43" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/admin.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/ajax.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/ajax.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/blockquote.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/blockquote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/blog_posts.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/blog_posts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/breadcrumbs.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/breadcrumbs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/cart/cart.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/cart/cart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/category_products_tab.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/category_products_tab.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box-group/class-rwmb-group-field.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box-group/class-rwmb-group-field.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/clients_carousel.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/clients_carousel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/coming_soon.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/coming_soon.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/comments.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/comments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/contact_info.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/contact_info.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/content-404.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/content-404.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content-link.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/layout/content-link.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/layout/content-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/list/content-link.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/list/content-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/zigzag/content-link.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/zigzag/content-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/content-none.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/content-none.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/content-page.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/content-page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content-quote.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/layout/content-quote.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/layout/content-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/list/content-quote.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/list/content-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/zigzag/content-quote.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/zigzag/content-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/content-single.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/content-single.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/layout/content.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/layout/content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/list/content.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/list/content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/zigzag/content.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/zigzag/content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/core.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/core.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-icons.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-icons.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-meta-box.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-meta-box.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-plugins.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-plugins.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/dropcap.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/dropcap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/kt_socials/kt_socials/field_kt_socials.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/kt_socials/kt_socials/field_kt_socials.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/footer.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/frontend.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/frontend.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/googlemap.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/googlemap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-bars.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-bars.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-menu.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/heading.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/heading.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/helpers.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/helpers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/icon_box.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/icon_box.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/importer.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/importer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_bridge.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_bridge.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_parrams.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_parrams.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_update.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_aboutme.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_aboutme.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_ads.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_ads.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_article.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_article.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_contactinfo.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_contactinfo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_facebook.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_facebook.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_flickr.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_flickr.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/assets/js/kt_image.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/assets/js/kt_image.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_image.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_instagram.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_instagram.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_popular.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_popular.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_socials.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_socials.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_twitter.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_twitter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_widget_tabs.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets/kt_widget_tabs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/list.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions-custom/meta-box-custom.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions-custom/meta-box-custom.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box-group/meta-box-group.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box-group/meta-box-group.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box-show-hide/meta-box-show-hide.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box-show-hide/meta-box-show-hide.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box-tabs/meta-box-tabs.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/meta-box-tabs/meta-box-tabs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/nav/nav.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/nav/nav.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/nav/nav_menu_custom_fields.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/nav/nav_menu_custom_fields.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/product-searchform.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/product-searchform.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/product_category_banner.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/product_category_banner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/products_carousel.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/products_carousel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/products_carousel_tab.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/products_carousel_tab.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/global/quantity-input.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/global/quantity-input.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/search.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/searchform.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/searchform.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/cart/shipping-calculator.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/cart/shipping-calculator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/skill.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/skill.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/socials.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/socials.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/team.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/team.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/testimonial_carousel.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/testimonial_carousel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/woocommerce.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/woocommerce.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wingman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -156,7 +72,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/assets/js/kt_image.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/admin.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/core.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-plugins.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/ajax.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/header.php" />
@@ -166,6 +81,7 @@
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/frontend.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/helpers.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/importer.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php" />
       </list>
     </option>
   </component>
@@ -303,6 +219,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wingman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wingman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wingman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -695,7 +641,7 @@
         <state vertical-scroll-proportion="0.23890784">
           <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -705,25 +651,6 @@
         <state vertical-scroll-proportion="0.84210527">
           <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.25">
-          <caret line="456" column="83" selection-start-line="456" selection-start-column="83" selection-end-line="456" selection-end-column="83" />
-          <folding>
-            <marker date="1451619850000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451619850000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451619850000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451619850000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451619850000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451619850000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451619850000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451619850000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451619850000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451619850000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -812,9 +739,9 @@
         <state vertical-scroll-proportion="-3.0877192">
           <caret line="93" column="35" selection-start-line="93" selection-start-column="35" selection-end-line="93" selection-end-column="35" />
           <folding>
-            <marker date="1451621595000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451621595000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451621595000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451621975000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451621975000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451621975000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -840,6 +767,25 @@
         <state vertical-scroll-proportion="1.3333334">
           <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6666667">
+          <caret line="3975" column="14" selection-start-line="3975" selection-start-column="14" selection-end-line="3975" selection-end-column="14" />
+          <folding>
+            <marker date="1451622028000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451622028000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451622028000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451622028000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451622028000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451622028000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451622028000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451622028000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451622028000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451622028000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

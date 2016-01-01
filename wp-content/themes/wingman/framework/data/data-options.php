@@ -2281,17 +2281,15 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'required' => array('sidebar','equals','right')
                         //'clear' => false
                     ),
-
                     array(
                         'id' => 'show_page_comment',
                         'type' => 'switch',
                         'title' => __('Show comments on page ?', KT_THEME_LANG),
                         'desc' => __('Show or hide the readmore button.', KT_THEME_LANG),
-                        "default" => 0,
+                        "default" => 1,
                         'on' => __('Enabled', KT_THEME_LANG),
                         'off' =>__('Disabled', KT_THEME_LANG)
                     ),
-
                 )
             );
 
@@ -3976,8 +3974,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                     ),
                 )
             );
-            
-            
             
         }
         
