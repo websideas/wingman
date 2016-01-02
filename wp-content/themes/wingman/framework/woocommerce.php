@@ -17,6 +17,11 @@ if ( ! function_exists( 'kt_woocommerce_theme_setup' ) ):
     }
 endif;
 
+function kt_disable_woocommerce_enable_setup_wizard(){
+    return false;
+}
+add_filter('woocommerce_enable_setup_wizard', 'kt_disable_woocommerce_enable_setup_wizard');
+
 
 /**
  * Add custom style to woocommerce

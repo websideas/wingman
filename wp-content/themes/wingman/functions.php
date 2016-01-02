@@ -10,7 +10,8 @@ define( 'KT_THEME_OPTIONS', 'wingman_option' );
 
 define( 'KT_THEME_DIR', trailingslashit(get_template_directory()));
 define( 'KT_THEME_URL', trailingslashit(get_template_directory_uri()));
-define( 'KT_THEME_INC', trailingslashit(KT_THEME_DIR.'inc'));
+define( 'KT_THEME_DATA', trailingslashit(KT_THEME_URL.'dummy-data'));
+define( 'KT_THEME_DATA_DIR', trailingslashit(KT_THEME_DIR.'dummy-data'));
 define( 'KT_THEME_TEMP', trailingslashit(KT_THEME_DIR.'templates'));
 
 define( 'KT_THEME_ASSETS', trailingslashit( KT_THEME_URL . 'assets' ) );

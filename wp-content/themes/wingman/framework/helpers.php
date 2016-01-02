@@ -178,9 +178,9 @@ if (!function_exists('kt_get_single_sidebar')) {
         if($sidebar['sidebar'] == '' || $sidebar['sidebar'] == 'default' ){
             $sidebar['sidebar'] = kt_option('blog_sidebar', 'right');
             if($sidebar['sidebar'] == 'left' ){
-                $sidebar['sidebar_area'] = kt_option('blog_sidebar_left', 'blog-widget-area');
+                $sidebar['sidebar_area'] = kt_option('blog_sidebar_left', 'primary-widget-area');
             }elseif($sidebar['sidebar'] == 'right'){
-                $sidebar['sidebar_area'] = kt_option('blog_sidebar_right', 'blog-widget-area');
+                $sidebar['sidebar_area'] = kt_option('blog_sidebar_right', 'primary-widget-area');
             }
         }elseif($sidebar['sidebar'] == 'left'){
             $sidebar['sidebar_area'] = rwmb_meta('_kt_left_sidebar', array(), $post_id);
@@ -244,9 +244,9 @@ if (!function_exists('kt_get_search_sidebar')) {
             'sidebar_area' => '',
         );
         if($sidebar['sidebar'] == 'left' ){
-            $sidebar['sidebar_area'] = kt_option('search_sidebar_left', 'blog-widget-area');
+            $sidebar['sidebar_area'] = kt_option('search_sidebar_left', 'primary-widget-area');
         }elseif($sidebar['sidebar'] == 'right'){
-            $sidebar['sidebar_area'] = kt_option('search_sidebar_right', 'blog-widget-area');
+            $sidebar['sidebar_area'] = kt_option('search_sidebar_right', 'primary-widget-area');
         }
         return apply_filters('search_sidebar', $sidebar);
     }

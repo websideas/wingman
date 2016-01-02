@@ -151,6 +151,7 @@ if (is_admin() ) {
 	 */ 
  	require KT_FW_DATA . 'data-plugins.php';
 
+
     /**
      * Get Navigation nav
      *

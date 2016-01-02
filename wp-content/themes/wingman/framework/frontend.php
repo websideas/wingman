@@ -945,6 +945,7 @@ if(!function_exists('kt_setting_script_footer')){
  * @access      public
  */
 function kt_setting_script() {
+
     $advanced_css = kt_option('advanced_editor_css');
     $accent = kt_option('styling_accent', '#82c14f');
     $styling_link = kt_option('styling_link');
@@ -1263,7 +1264,7 @@ function kt_setting_script() {
 
             $navigation_height = kt_option('navigation_height');
             if(!$navigation_height['height'] || $navigation_height['height'] == 'px'){
-                $navigation_height['height'] = 100;
+                $navigation_height['height'] = 60;
             }
             echo '#main-navigation > li{line-height: '.intval($navigation_height['height']).'px;}';
             echo '.header-container.is-sticky.sticky-header-down .nav-container .nav-container-inner,.header-container.header-layout2.is-sticky.sticky-header-down #header-content{top: -'.intval($navigation_height['height']).'px;}';

@@ -4,21 +4,53 @@
 if ( !defined('ABSPATH')) exit;
 
 
-/************************************************************************
-* Extended Example:
-* Way to set menu, import revolution slider, and set home page.
-*************************************************************************/
+
+add_filter( 'kt_import_demo', 'kt_import_demo_wingman' );
+function kt_import_demo_wingman( $demos ){
+    $demos['demo1'] = array(
+        'title' => 'Classic',
+        'previewlink' => 'http://wingman.kitethemes.com/',
+        'xml_count' => 2,
+        'status' => sprintf(
+            '<span class="%s">%s</span>',
+            'demo-main',
+            __('Main', 'wingman')
+        )
+    );
+
+    $demos['demo2'] = array(
+        'title' => 'Fashion',
+        'previewlink' => 'http://wingman.kitethemes.com/demo2/',
+        'xml_count' => 2,
+        'status' => sprintf(
+            '<span class="%s">%s</span>',
+            'demo-hot',
+            __('Hot', 'wingman')
+        )
+    );
+
+    $demos['demo3'] = array(
+        'title' => 'Cosmetic',
+        'previewlink' => 'http://wingman.kitethemes.com/demo3/',
+        'xml_count' => 2,
+    );
+
+    $demos['demo4'] = array(
+        'title' => 'Coming soon',
+        'previewlink' => '#',
+        'coming' => true
+    );
+
+
+    return $demos;
+}
+
 
 if ( !function_exists( 'kt_extended_imported' ) ) {
-    /**
-     *
-     *
-     * @param $demo_active_import
-     * @param $demo_directory_path
-     */
-    function kt_extended_imported( $demo_active_import , $demo_directory_path ) {
-        reset( $demo_active_import );
-        $current_key = key( $demo_active_import );
+
+
+    function kt_extended_imported( $demoid ) {
+
         /************************************************************************
         * Import slider(s) for the current demo being imported
         *************************************************************************/
@@ -30,10 +62,11 @@ if ( !function_exists( 'kt_extended_imported' ) ) {
                 'demo2' => 'slider2.zip',
                 'demo3' => 'slider3.zip',
             );
-            if ( isset( $demo_active_import[$current_key]['directory'] ) && !empty( $demo_active_import[$current_key]['directory'] ) && array_key_exists( $demo_active_import[$current_key]['directory'], $wbc_sliders_array ) ) {
-                $wbc_slider_import = $wbc_sliders_array[$demo_active_import[$current_key]['directory']];
+            if ( isset( $wbc_sliders_array[$demoid]  ) ) {
+                $wbc_slider_import = $wbc_sliders_array[$demoid];
 
                 $slider_import = KT_THEME_DIR.'dummy-data/revslider/'.$wbc_slider_import;
+
                 if ( file_exists( $slider_import ) ) {
                     $slider = new RevSlider();
                     $slider->importSliderFromPost( true, true, $slider_import );
@@ -63,8 +96,8 @@ if ( !function_exists( 'kt_extended_imported' ) ) {
             'demo3' => 'Home',
         );
 
-        if ( isset( $demo_active_import[$current_key]['directory'] ) && !empty( $demo_active_import[$current_key]['directory'] ) && array_key_exists( $demo_active_import[$current_key]['directory'], $wbc_home_pages ) ) {
-            $page = get_page_by_title( $wbc_home_pages[$demo_active_import[$current_key]['directory']] );
+        if ( isset( $wbc_sliders_array[$demoid]  ) ) {
+            $page = get_page_by_title( $wbc_home_pages[$demoid] );
             if ( isset( $page->ID ) ) {
                 update_option( 'page_on_front', $page->ID );
                 update_option( 'show_on_front', 'page' );
@@ -72,24 +105,29 @@ if ( !function_exists( 'kt_extended_imported' ) ) {
         }
 
     }
-    add_action( 'wbc_importer_after_content_import', 'kt_extended_imported', 10, 2 );
+    add_action( 'kt_importer_after_content_import', 'kt_extended_imported');
 }
 
 
 
 
-if(!function_exists('kt_change_demo_directory_path')){
-    /**
-     * Change the path to the directory that contains demo data folders.
-     *
-     * @param [string] $demo_directory_path
-     *
-     * @return [string]
-     */
-
-    function kt_change_demo_directory_path( ) {
-        $demo_directory_path = KT_THEME_DIR.'dummy-data/';
-        return $demo_directory_path;
-    }
-    add_filter('wbc_importer_dir_path', 'kt_change_demo_directory_path' );
+function kt_importer_dir_wingman( ) {
+    return KT_THEME_DATA_DIR;
 }
+add_filter('kt_importer_dir', 'kt_importer_dir_wingman' );
+
+function kt_importer_url_wingman( ) {
+
+    return KT_THEME_DATA;
+}
+add_filter('kt_importer_url', 'kt_importer_url_wingman' );
+
+function kt_importer_opt_name_wingman(  ) {
+    return KT_THEME_OPTIONS;
+}
+add_filter('kt_importer_opt_name', 'kt_importer_opt_name_wingman' );
+
+
+
+
+

@@ -2,363 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c7cfb02-0be5-4605-a0ec-58a67682dd43" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/assets/css/login-admin.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/scripts.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/carousel/content-2.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/carousel/content.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-1024x650.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-1024x650.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-1140x724.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-1140x724.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-300x191.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-300x191.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-570x355.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-570x355.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-800x724.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog1-800x724.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-1024x683.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-1024x683.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-300x200.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-300x200.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-800x760.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog2-800x760.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-225x300.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-225x300.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-769x1024.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog3-769x1024.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-1024x576.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-1024x576.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-300x169.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-300x169.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-800x641.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog4-800x641.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-1024x1024.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-1024x1024.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-300x300.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-300x300.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog5-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-1024x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-1024x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-1140x457.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-1140x457.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-300x120.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-300x120.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-500x457.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-500x457.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-800x457.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog6-800x457.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-1024x684.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-1024x684.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-300x200.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-300x200.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-800x761.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog7-800x761.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-1024x737.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-1024x737.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-233x300.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-233x300.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-300x216.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-300x216.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-794x1024.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog8-794x1024.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-800x820.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/blog8-800x820.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-1024x616.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-1024x616.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-300x181.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-300x181.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-800x686.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/blog9-800x686.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-1024x553.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-1024x553.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-300x162.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-300x162.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept4-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-1024x576.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-1024x576.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-300x169.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-300x169.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/concept_bg2-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-1024x576.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-1024x576.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-300x169.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-300x169.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/fitness-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-1024x576.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-1024x576.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-300x169.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-300x169.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym1-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-1024x576.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-1024x576.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-300x169.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-300x169.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/gym/gym2-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/logo-light-150x24.png" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/logo-light-150x24.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/logo-light-170x24.png" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/logo-light-170x24.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/logo-light-200x24.png" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/logo-light-200x24.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-229x300.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-229x300.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-780x1024.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-780x1024.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-800x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product1-800x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-229x300.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-229x300.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-780x1024.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-780x1024.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-800x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product10-800x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-229x300.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-229x300.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-780x1024.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-780x1024.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-800x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product11-800x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-229x300.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-229x300.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-780x1024.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-780x1024.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-800x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product12-800x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-229x300.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-229x300.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-780x1024.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-780x1024.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-800x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product2-800x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-229x300.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-229x300.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-780x1024.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-780x1024.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-800x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product4-800x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-229x300.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-229x300.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-780x1024.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-780x1024.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-800x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product5-800x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-229x300.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-229x300.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-780x1024.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-780x1024.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-800x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product6-800x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-229x300.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-229x300.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-780x1024.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-780x1024.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-800x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product7-800x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-229x300.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-229x300.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-780x1024.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-780x1024.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-800x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product8-800x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-229x300.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-229x300.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-780x1024.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-780x1024.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-800x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2013/06/product9-800x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/sale1-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/sale1-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/sale1-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/sale1-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/sale1-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/sale1-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/sale1-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/sale1-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/sale1-221x300.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/sale1-221x300.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/sale1-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/sale1-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/sale1-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/sale1-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/sale1-650x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/sale1-650x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-1024x366.png" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-1024x366.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-1140x407.png" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-1140x407.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-150x150.png" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-150x150.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-170x170.png" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-170x170.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-200x250.png" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-200x250.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-220x154.png" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-220x154.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-300x107.png" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-300x107.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-500x407.png" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-500x407.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-570x407.png" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-570x407.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-800x407.png" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/12/shop-banner-800x407.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-1024x640.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-1024x640.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-300x188.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-300x188.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider1-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-1024x678.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-1024x678.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-300x199.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-300x199.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider2-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-1024x608.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-1024x608.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-300x178.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-300x178.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2015/11/slider3-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-1024x576.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-1024x576.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-1140x610.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-1140x610.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-170x170.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-170x170.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-200x250.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-200x250.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-220x154.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-220x154.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-300x169.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-300x169.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-500x555.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-500x555.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-570x410.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/revslider/concept/traincover-570x410.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/admin.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/ajax.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/ajax.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/archive.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/archive.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/blog_posts.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/blog_posts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/comments.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/comments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/content-404.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/content-404.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content-link.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/layout/content-link.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/layout/content-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/list/content-link.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/list/content-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/zigzag/content-link.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/zigzag/content-link.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/content-none.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/content-none.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/content-page.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/content-page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content-quote.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/layout/content-quote.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/layout/content-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/list/content-quote.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/list/content-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/zigzag/content-quote.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/zigzag/content-quote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/content-single.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/content-single.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/layout/content.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/layout/content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/list/content.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/list/content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/zigzag/content.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/zigzag/content.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo2/content.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo3/content.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/revslider/slider1/dynamic-captions.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/revslider/slider1/images/uploads/2015/11/slider1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/revslider/slider1/images/uploads/2015/11/slider3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/revslider/slider1/slider_export.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/extension_wbc_importer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/inc/importer/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/inc/importer/parsers.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/inc/importer/radium-importer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/inc/importer/wordpress-importer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/inc/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/inc/init-installer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/inc/licence.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/wbc_importer/field_wbc_importer.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/wbc_importer/field_wbc_importer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/wbc_importer/field_wbc_importer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/wbc_importer/field_wbc_importer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/wbc_importer/index.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/wingman.zip" afterPath="$PROJECT_DIR$/main/wingman.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_1.xml" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/core.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/core.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-icons.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-icons.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-meta-box.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-meta-box.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/footer-blank.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/footer-blank.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/footers/footer-copyright.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/footers/footer-copyright.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/footer.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/assets/css/framework-core.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/assets/css/framework-core.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/frontend.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/frontend.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-bars.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-bars.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/header-blank.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/header-blank.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-contact.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-contact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-layout2.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-layout2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-menu.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-mobile.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-mobile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-mobilenav.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-mobilenav.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/helpers.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/helpers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/page.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.css.map" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.scss" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/searchform.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/searchform.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/single.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/single.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-plugins.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-plugins.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/js/functions.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/js/functions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/importer.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/importer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css.map" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/woocommerce.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/woocommerce.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-config.php" afterPath="$PROJECT_DIR$/wp-config.php" />
     </list>
     <ignored path="wingman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -379,7 +57,38 @@
     <favorites_list name="wingman" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="content_2.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_2.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.62963">
+              <caret line="4398" column="62" selection-start-line="4398" selection-start-column="62" selection-end-line="4398" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content_3.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_3.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2639.0">
+              <caret line="95" column="44" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content_4.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_4.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4213615">
+              <caret line="1164" column="31" selection-start-line="1164" selection-start-column="31" selection-end-line="1164" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -387,22 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/cart/cart-totals.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/header.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/header-blank.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/footer.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/footer-blank.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/single.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/searchform.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/comments.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/content-404.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/content-none.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/content-page.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/content-single.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/page.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content-link.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content-quote.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/footers/footer-copyright.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/footers/footer-socials.php" />
@@ -431,13 +124,29 @@
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/layout/content-quote.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/woocommerce.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/scripts.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/core.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/assets/css/framework-core.css" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/queries.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/frontend.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-demo.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt-importer/assets/css/style.scss" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt-importer/assets/css/kt-importer.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/wordpress-importer/wordpress-importer.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/atelier-importer/atelier-importer.php" />
+        <option value="$PROJECT_DIR$/wp-config.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-demos.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt-importer/assets/js/kt-importer.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/core.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt-importer/kt-importer.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_importer/kt_importer.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_importer/assets/css/kt-importer.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/importer.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-plugins.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/js/functions.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_3.xml" />
       </list>
     </option>
   </component>
@@ -480,8 +189,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -602,11 +311,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extensions-custom" />
+              <option name="myItemId" value="dummy-data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -632,259 +337,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
+              <option name="myItemId" value="dummy-data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="extensions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ReduxCoreExt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wbc_importer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extensions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ReduxCoreExt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wbc_importer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wbc_importer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extensions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ReduxCoreExt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wbc_importer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extensions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ReduxCoreExt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wbc_importer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="importer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extensions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ReduxCoreExt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extensions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="intro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="desc" />
+              <option name="myItemId" value="demo1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -910,13 +367,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/plugins/kt-importer/includes" />
+      <recent name="$PROJECT_DIR$/wp-content/plugins" />
+      <recent name="$PROJECT_DIR$/wp-content/plugins/kt-importer/assets" />
+      <recent name="$PROJECT_DIR$/wp-content/plugins/kt-importer" />
       <recent name="$PROJECT_DIR$/intro/assets" />
-      <recent name="$PROJECT_DIR$/intro/assets/js" />
-      <recent name="$PROJECT_DIR$/intro/assets/images" />
-      <recent name="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce/cart" />
-      <recent name="$PROJECT_DIR$/wp-content/plugins/kt_mailchimp/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions" />
       <recent name="$PROJECT_DIR$/intro/assets/js" />
       <recent name="$PROJECT_DIR$/intro/assets/css" />
       <recent name="$PROJECT_DIR$/wp-content/jsbackup" />
@@ -966,7 +424,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1002" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -980,13 +438,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23263507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1006,279 +464,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/footers/footer-copyright.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10526316">
-          <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/footers/footer-navigation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/footers/footer-sides.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22807017">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/footers/footer-socials.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21052632">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-bars.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32608697">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-branding.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21052632">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-contact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2982456">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-layout1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03508772">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-layout2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7894737">
-          <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31578946">
-          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-mobile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40350878">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-mobilenav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03508772">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-tool.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15789473">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/breadcrumbs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3508772">
-          <caret line="232" column="25" selection-start-line="232" selection-start-column="25" selection-end-line="232" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-includes/l10n.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34269005">
-          <caret line="202" column="9" selection-start-line="202" selection-start-column="9" selection-end-line="202" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-icons.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-44.894737">
-          <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-meta-box.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35438597">
-          <caret line="638" column="42" selection-start-line="638" selection-start-column="42" selection-end-line="638" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-plugins.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36842105">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49122807">
-          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/vc_addons/blog_posts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5869565">
-          <caret line="254" column="25" selection-start-line="254" selection-start-column="25" selection-end-line="254" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/zigzag/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/zigzag/content-link.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/zigzag/content-quote.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/list/content-quote.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.05263158">
-          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/list/content-link.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.375">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/list/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/layout/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/layout/content-link.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/layout/content-quote.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80701756">
-          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/archive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.01754386">
-          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/woocommerce.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="383" column="8" selection-start-line="383" selection-start-column="4" selection-end-line="383" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.245614">
-          <caret line="921" column="7" selection-start-line="921" selection-start-column="7" selection-end-line="921" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/importer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47368422">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-includes/functions.wp-styles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36023393">
-          <caret line="83" column="41" selection-start-line="83" selection-start-column="41" selection-end-line="83" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/core.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1231884">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/twentyfifteen/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="298" column="4" selection-start-line="298" selection-start-column="4" selection-end-line="298" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.0">
           <caret line="218" column="23" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -1303,20 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/frontend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3478261">
-          <caret line="1260" column="64" selection-start-line="1260" selection-start-column="64" selection-end-line="1260" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44210526">
-          <caret line="881" column="14" selection-start-line="881" selection-start-column="14" selection-end-line="881" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/woocommerce.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.25">
@@ -1331,50 +506,313 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/js_composer/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_importer/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-icons.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0877193">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_parrams.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45652175">
+          <caret line="318" column="4" selection-start-line="318" selection-start-column="4" selection-end-line="318" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_mailchimp/mailchimp_settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="19" column="64" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/assets/js/framework-core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.221843">
+          <caret line="13" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.5">
+          <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-branding.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.125">
+          <caret line="13" column="54" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/atelier-importer/assets/sf_importer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/atelier-importer/wp-updates-plugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68421054">
+          <caret line="103" column="41" selection-start-line="103" selection-start-column="41" selection-end-line="103" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/atelier-importer/assets/images/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/atelier-importer/assets/images/demos-switcher-imgs.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/atelier-importer/class-widget-data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14492753">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-admin/includes/import.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34269005">
+          <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45289856">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/atelier-importer/includes/parsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="789.375">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wordpress-importer/tmp-wordpress-importer-readme.pot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.443686">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/atelier-importer/includes/class.wordpress-importer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.298246">
+          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wordpress-importer/wordpress-importer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8947368">
+          <caret line="1120" column="0" selection-start-line="1120" selection-start-column="0" selection-end-line="1132" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_importer/includes/parsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35438597">
+          <caret line="395" column="22" selection-start-line="395" selection-start-column="22" selection-end-line="395" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5964912">
+          <caret line="72" column="36" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_importer/assets/js/kt-importer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_importer/includes/wordpress-importer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49122807">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/atelier-importer/atelier-importer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.11345029">
+          <caret line="513" column="52" selection-start-line="513" selection-start-column="23" selection-end-line="513" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0">
+          <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-admin/includes/plugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="1042" column="116" selection-start-line="1042" selection-start-column="107" selection-end-line="1042" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_importer/assets/css/kt-importer.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.0">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_importer/kt_importer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.375">
+          <caret line="461" column="38" selection-start-line="461" selection-start-column="38" selection-end-line="461" selection-end-column="38" />
+          <folding>
+            <element signature="e#6#312#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/importer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5263158">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.4117646">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/frontend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3017544">
+          <caret line="1123" column="31" selection-start-line="1123" selection-start-column="31" selection-end-line="1123" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.231579">
-          <caret line="1079" column="22" selection-start-line="1079" selection-start-column="22" selection-end-line="1079" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.23157895">
+          <caret line="1828" column="26" selection-start-line="1828" selection-start-column="26" selection-end-line="1828" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/inc/importer/wordpress-importer.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding>
-            <marker date="1431482878000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.6175439">
+          <caret line="740" column="16" selection-start-line="740" selection-start-column="16" selection-end-line="740" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/inc/importer/radium-importer.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-plugins.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding>
-            <element signature="e#7#373#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-23.75">
+          <caret line="99" column="6" selection-start-line="99" selection-start-column="6" selection-end-line="99" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/inc/init-installer.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="39.375">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="e#6#346#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.43458477">
+          <caret line="608" column="0" selection-start-line="608" selection-start-column="0" selection-end-line="608" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/ReduxCoreExt/wbc_importer/inc/importer/parsers.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_1.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.98245615">
-          <caret line="646" column="16" selection-start-line="646" selection-start-column="16" selection-end-line="646" selection-end-column="16" />
-          <folding>
-            <element signature="e#6#116#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-30.65493">
+          <caret line="753" column="83" selection-start-line="753" selection-start-column="34" selection-end-line="753" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_5.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8737202">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_6.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.443686">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.62963">
+          <caret line="4398" column="62" selection-start-line="4398" selection-start-column="62" selection-end-line="4398" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_3.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2639.0">
+          <caret line="95" column="44" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_4.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4213615">
+          <caret line="1164" column="31" selection-start-line="1164" selection-start-column="31" selection-end-line="1164" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,3 +1,8 @@
+<?php
+    if(!kt_is_wc() && !kt_is_wpml()){
+        return;
+    }
+?>
 <div class="menu-bars-outer">
 
     <a data-side="left" class="menu-bars-link" href="#">
@@ -54,9 +59,7 @@
 
         <?php } ?>
 
-        <?php
-            kt_custom_wpml('<div class="menu-bars-item menu-bars-language">', '</div>', esc_html__('Language', 'wingman'));
-        ?>
+        <?php kt_custom_wpml('<div class="menu-bars-item menu-bars-language">', '</div>', esc_html__('Language', 'wingman')); ?>
 
         <?php
         /**

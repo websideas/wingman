@@ -722,10 +722,10 @@ select:not([multiple]) {
   position: relative;
   z-index: 200;
 }
-
 .site-branding{
   text-align: center;
   height: auto;
+  margin: 25px 0;
   .site-logo{
     margin: 0;
     padding: 0;
@@ -1185,7 +1185,7 @@ select:not([multiple]) {
   .nav-main{
     position: relative;
   }
-  &.header-layout1{
+  .header-layout1 &{
     background: #1e1e1e;
   }
 }
@@ -1594,6 +1594,14 @@ body.opened-nav-animate{
 #footer-area {
   padding: 75px 0 20px 0;
   background: $nav-bg;
+
+  a{
+    color: $main-text;
+    &:hover{
+      color: $white;
+    }
+  }
+
   .footer-area-one{
     text-align: center;
   }
@@ -1663,6 +1671,7 @@ body.opened-nav-animate{
     color: $main-text;
     letter-spacing: 0.2em;
     line-height: 24px;
+    border-top: 1px solid $border-dark-color;
     a{
       color: $main-text;
     }
