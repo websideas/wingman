@@ -3,6 +3,28 @@
 // Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
 
+/**
+ * Add custom favicon
+ *
+ * @since 1.0
+ */
+function kt_add_site_icon(){
+    if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) {
+        $custom_favicon = kt_option( 'custom_favicon' );
+        $custom_favicon_iphone = kt_option( 'custom_favicon_iphone' );
+        $custom_favicon_iphone_retina = kt_option( 'custom_favicon_iphone_retina' );
+        $custom_favicon_ipad = kt_option( 'custom_favicon_ipad' );
+        $custom_favicon_ipad_retina = kt_option( 'custom_favicon_ipad_retina' );
+
+        printf( '<link rel="shortcut icon" href="%s"/>', esc_url($custom_favicon['url']) );
+        printf( '<link rel="apple-touch-icon" href="%s"/>', esc_url($custom_favicon_iphone['url']) );
+        printf( '<link rel="apple-touch-icon" sizes="72x72" href="%s"/>', esc_url($custom_favicon_ipad['url']) );
+        printf( '<link rel="apple-touch-icon" sizes="114x114" href="%s"/>', esc_url($custom_favicon_iphone_retina['url']) );
+        printf( '<link rel="apple-touch-icon" sizes="144x144" href="%s"/>', esc_url($custom_favicon_ipad_retina['url']) );
+    }
+}
+add_action( 'wp_head', 'kt_add_site_icon');
+
 
 /**
  * Flag boolean.
@@ -72,30 +94,6 @@ if ( ! function_exists( 'kt_track_post_views' ) ){
     }
 }
 add_action( 'wp_head', 'kt_track_post_views');
-
-/**
- * Add custom favicon
- *
- * @since 1.0
- */
-function kt_add_site_icon(){
-    if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) {
-
-        $custom_favicon = kt_option( 'custom_favicon' );
-        $custom_favicon_iphone = kt_option( 'custom_favicon_iphone' );
-        $custom_favicon_iphone_retina = kt_option( 'custom_favicon_iphone_retina' );
-        $custom_favicon_ipad = kt_option( 'custom_favicon_ipad' );
-        $custom_favicon_ipad_retina = kt_option( 'custom_favicon_ipad_retina' );
-
-        printf( '<link rel="shortcut icon" href="%s"/>', esc_url($custom_favicon['url']) );
-        printf( '<link rel="apple-touch-icon" href="%s"/>', esc_url($custom_favicon_iphone['url']) );
-        printf( '<link rel="apple-touch-icon" sizes="72x72" href="%s"/>', esc_url($custom_favicon_ipad['url']) );
-        printf( '<link rel="apple-touch-icon" sizes="114x114" href="%s"/>', esc_url($custom_favicon_iphone_retina['url']) );
-        printf( '<link rel="apple-touch-icon" sizes="144x144" href="%s"/>', esc_url($custom_favicon_ipad_retina['url']) );
-    }
-}
-add_action( 'wp_head', 'kt_add_site_icon');
-
 
 /**
  * Add page header
@@ -189,18 +187,20 @@ function kt_page_header( ){
                 $layout = '%1$s%2$s%3$s%4$s';
             }
         }
-        echo '<div class="'.implode(' ', $classes).'">';
-        echo '<div class="container">';
-            printf(
-                $layout,
-                $title,
-                $subtitle,
-                $breadcrumb,
-                $breadcrumb_class
-            );
-        echo "</div>";
-        echo "</div>";
 
+        $output = sprintf(
+            $layout,
+            $title,
+            $subtitle,
+            $breadcrumb,
+            $breadcrumb_class
+        );
+
+        printf(
+            '<div class="%s"><div class="container">%s</div></div>',
+            esc_attr(implode(' ', $classes)),
+            $output
+        );
     }
 }
 
@@ -225,7 +225,6 @@ function kt_get_page_layout(){
             }
         }
     }
-
 
     if($page_header_layout == ''){
         $page_header_layout = kt_option('title_layout', 'centered');
@@ -255,8 +254,6 @@ function kt_get_page_align(){
             }
         }
     }
-
-
     if($page_header_align == ''){
         $page_header_align = kt_option('title_align', 'center');
     }
@@ -411,17 +408,21 @@ function kt_get_breadcrumb($breadcrumb = ''){
                     ) );
                 $breadcrumb = ob_get_clean();
             }else{
-                if(function_exists('breadcrumb_trail')) {
-                    $breadcrumb = breadcrumb_trail(array( 'echo' => false));
+                if(function_exists('bcn_display')) {
+                    $breadcrumb = sprintf(
+                        '<div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">%s</div>',
+                        bcn_display(true)
+                    );
                 }
             }
         }else{
-            if(function_exists('breadcrumb_trail')) {
-                $breadcrumb = breadcrumb_trail(array( 'echo' => false));
+            if(function_exists('bcn_display')) {
+                $breadcrumb = sprintf(
+                    '<div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">%s</div>',
+                    bcn_display(true)
+                );
             }
         }
-
-
     }
     return apply_filters( 'kt_breadcrumb', $breadcrumb );
 }
@@ -833,9 +834,9 @@ function kt_after_footer_add_popup(){
         ?>
             <div id="popup-wrap" class="mfp-hide" data-mobile="<?php echo esc_attr( $disable_popup_mobile ); ?>" data-timeshow="<?php echo esc_attr($time_show); ?>">     
                 <div class="white-popup-block">
-                    <h3 class="title-top"><?php echo $title_popup; ?></h3>
+                    <h3 class="title-top"><?php echo esc_html($title_popup); ?></h3>
                     <?php if( $image_popup['url'] ){ ?>
-                        <img src="<?php echo $image_popup['url']; ?>" alt="" class="img-responsive">
+                        <img src="<?php echo esc_attr($image_popup['url']); ?>" alt="" class="img-responsive">
                     <?php } ?>
                     <div class="content-popup">
                         <?php echo do_shortcode($content_popup); ?>
@@ -849,5 +850,3 @@ function kt_after_footer_add_popup(){
         <?php
     }
 }
-
-

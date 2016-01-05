@@ -107,42 +107,42 @@ class WPBakeryShortCode_Comingsoon extends WPBakeryShortCode_VC_Custom_heading {
 
 // Add your Visual Composer logic here
 vc_map( array(
-    "name" => __( "Coming soon", 'wingman'),
+    "name" => esc_html__( "Coming soon", 'wingman'),
     "base" => "comingsoon",
-    "category" => __('by Theme', 'wingman' ),
-    "description" => __( "", 'wingman'),
+    "category" => esc_html__('by Theme', 'wingman' ),
+    "description" => esc_html__( "", 'wingman'),
     "params" => array(
         array(
             'type' => 'textfield',
-            'heading' => __( 'Date coming', 'js_composer' ),
+            'heading' => esc_html__( 'Date coming', 'js_composer' ),
             'param_name' => 'date_coming',
             'value' => '2016/5/19',
             'admin_label' => true,
-            'description' => __( 'Example: 2016/5/19', 'js_composer' ),
+            'description' => esc_html__( 'Example: 2016/5/19', 'js_composer' ),
         ),
         array(
             'type' => 'hidden',
-            'heading' => __( 'URL (Link)', 'js_composer' ),
+            'heading' => esc_html__( 'URL (Link)', 'js_composer' ),
             'param_name' => 'link',
         ),
 
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Style', 'wingman' ),
+            'heading' => esc_html__( 'Style', 'wingman' ),
             'param_name' => 'style_coming',
             'value' => array(
-                __( 'Style 1', 'js_composer' ) => 'style1',
-                __( 'Style 2', 'js_composer' ) => 'style2',
-                __( 'Style 3', 'js_composer' ) => 'style3',
+                esc_html__( 'Style 1', 'js_composer' ) => 'style1',
+                esc_html__( 'Style 2', 'js_composer' ) => 'style2',
+                esc_html__( 'Style 3', 'js_composer' ) => 'style3',
             ),
             'std' => 'style1',
         ),
         //Typography settings
         array(
             "type" => "kt_heading",
-            "heading" => __("Title typography", 'wingman'),
+            "heading" => esc_html__("Title typography", 'wingman'),
             "param_name" => "title_typography",
-            'group' => __( 'Typography', 'wingman' )
+            'group' => esc_html__( 'Typography', 'wingman' )
         ),
         array(
             'type' => 'font_container',
@@ -154,22 +154,22 @@ vc_map( array(
                     'font_size',
                     'line_height',
                     'color',
-                    'tag_description' => __( 'Select element tag.', 'js_composer' ),
-                    'text_align_description' => __( 'Select text alignment.', 'js_composer' ),
-                    'font_size_description' => __( 'Enter font size.', 'js_composer' ),
-                    'line_height_description' => __( 'Enter line height.', 'js_composer' ),
-                    'color_description' => __( 'Select heading color.', 'js_composer' ),
+                    'tag_description' => esc_html__( 'Select element tag.', 'js_composer' ),
+                    'text_align_description' => esc_html__( 'Select text alignment.', 'js_composer' ),
+                    'font_size_description' => esc_html__( 'Enter font size.', 'js_composer' ),
+                    'line_height_description' => esc_html__( 'Enter line height.', 'js_composer' ),
+                    'color_description' => esc_html__( 'Select heading color.', 'js_composer' ),
                 ),
             ),
-            'group' => __( 'Typography', 'wingman' )
+            'group' => esc_html__( 'Typography', 'wingman' )
         ),
         array(
             'type' => 'checkbox',
-            'heading' => __( 'Use theme default font family?', 'js_composer' ),
+            'heading' => esc_html__( 'Use theme default font family?', 'js_composer' ),
             'param_name' => 'use_theme_fonts',
-            'value' => array( __( 'Yes', 'js_composer' ) => 'yes' ),
-            'description' => __( 'Use font family from the theme.', 'js_composer' ),
-            'group' => __( 'Typography', 'wingman' ),
+            'value' => array( esc_html__( 'Yes', 'js_composer' ) => 'yes' ),
+            'description' => esc_html__( 'Use font family from the theme.', 'js_composer' ),
+            'group' => esc_html__( 'Typography', 'wingman' ),
             'std' => 'yes'
         ),
         array(
@@ -177,22 +177,22 @@ vc_map( array(
             'param_name' => 'google_fonts',
             'settings' => array(
                 'fields' => array(
-                    'font_family_description' => __( 'Select font family.', 'js_composer' ),
-                    'font_style_description' => __( 'Select font styling.', 'js_composer' )
+                    'font_family_description' => esc_html__( 'Select font family.', 'js_composer' ),
+                    'font_style_description' => esc_html__( 'Select font styling.', 'js_composer' )
                 )
             ),
-            'group' => __( 'Typography', 'wingman' ),
+            'group' => esc_html__( 'Typography', 'wingman' ),
             'dependency' => array(
                 'element' => 'use_theme_fonts',
                 'value_not_equal_to' => 'yes',
             ),
-            'description' => __( '', 'js_composer' ),
+            'description' => esc_html__( '', 'js_composer' ),
         ),
         array(
             "type" => "kt_heading",
-            "heading" => __('Value Typography', 'wingman'),
+            "heading" => esc_html__('Value Typography', 'wingman'),
             "param_name" => "value_typography",
-            'group' => __( 'Typography', 'wingman' )
+            'group' => esc_html__( 'Typography', 'wingman' )
         ),
         array(
             'type' => 'font_container',
@@ -204,23 +204,23 @@ vc_map( array(
                     'line_height',
                     'color',
 
-                    'tag_description' => __( 'Select element tag.', 'js_composer' ),
-                    'text_align_description' => __( 'Select text alignment.', 'js_composer' ),
-                    'font_size_description' => __( 'Enter font size.', 'js_composer' ),
-                    'line_height_description' => __( 'Enter line height.', 'js_composer' ),
-                    'color_description' => __( 'Select heading color.', 'js_composer' ),
+                    'tag_description' => esc_html__( 'Select element tag.', 'js_composer' ),
+                    'text_align_description' => esc_html__( 'Select text alignment.', 'js_composer' ),
+                    'font_size_description' => esc_html__( 'Enter font size.', 'js_composer' ),
+                    'line_height_description' => esc_html__( 'Enter line height.', 'js_composer' ),
+                    'color_description' => esc_html__( 'Select heading color.', 'js_composer' ),
                 ),
             ),
-            'description' => __( '', 'js_composer' ),
-            'group' => __( 'Typography', 'wingman' )
+            'description' => esc_html__( '', 'js_composer' ),
+            'group' => esc_html__( 'Typography', 'wingman' )
         ),
         array(
             'type' => 'checkbox',
-            'heading' => __( 'Use theme default font family?', 'js_composer' ),
+            'heading' => esc_html__( 'Use theme default font family?', 'js_composer' ),
             'param_name' => 'use_theme_fonts_value',
-            'value' => array( __( 'Yes', 'js_composer' ) => 'yes' ),
-            'description' => __( 'Use font family from the theme.', 'js_composer' ),
-            'group' => __( 'Typography', 'wingman' ),
+            'value' => array( esc_html__( 'Yes', 'js_composer' ) => 'yes' ),
+            'description' => esc_html__( 'Use font family from the theme.', 'js_composer' ),
+            'group' => esc_html__( 'Typography', 'wingman' ),
             'std' => 'yes'
         ),
         array(
@@ -228,46 +228,46 @@ vc_map( array(
             'param_name' => 'google_fonts_value',
             'settings' => array(
                 'fields' => array(
-                    'font_family_description' => __( 'Select font family.', 'js_composer' ),
-                    'font_style_description' => __( 'Select font styling.', 'js_composer' )
+                    'font_family_description' => esc_html__( 'Select font family.', 'js_composer' ),
+                    'font_style_description' => esc_html__( 'Select font styling.', 'js_composer' )
                 )
             ),
-            'group' => __( 'Typography', 'wingman' ),
+            'group' => esc_html__( 'Typography', 'wingman' ),
             'dependency' => array(
                 'element' => 'use_theme_fonts_value',
                 'value_not_equal_to' => 'yes',
             ),
-            'description' => __( '', 'js_composer' ),
+            'description' => esc_html__( '', 'js_composer' ),
         ),
 
         array(
             'type' => 'dropdown',
-            'heading' => __( 'CSS Animation', 'js_composer' ),
+            'heading' => esc_html__( 'CSS Animation', 'js_composer' ),
             'param_name' => 'css_animation',
             'admin_label' => true,
             'value' => array(
-                __( 'No', 'js_composer' ) => '',
-                __( 'Top to bottom', 'js_composer' ) => 'top-to-bottom',
-                __( 'Bottom to top', 'js_composer' ) => 'bottom-to-top',
-                __( 'Left to right', 'js_composer' ) => 'left-to-right',
-                __( 'Right to left', 'js_composer' ) => 'right-to-left',
-                __( 'Appear from center', 'js_composer' ) => "appear"
+                esc_html__( 'No', 'js_composer' ) => '',
+                esc_html__( 'Top to bottom', 'js_composer' ) => 'top-to-bottom',
+                esc_html__( 'Bottom to top', 'js_composer' ) => 'bottom-to-top',
+                esc_html__( 'Left to right', 'js_composer' ) => 'left-to-right',
+                esc_html__( 'Right to left', 'js_composer' ) => 'right-to-left',
+                esc_html__( 'Appear from center', 'js_composer' ) => "appear"
             ),
-            'description' => __( 'Select type of animation if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.', 'js_composer' )
+            'description' => esc_html__( 'Select type of animation if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.', 'js_composer' )
         ),
         array(
             "type" => "textfield",
-            "heading" => __( "Extra class name", "js_composer" ),
+            "heading" => esc_html__( "Extra class name", "js_composer" ),
             "param_name" => "el_class",
-            "description" => __( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
+            "description" => esc_html__( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
         ),
         //Design options
         array(
             'type' => 'css_editor',
-            'heading' => __( 'Css', 'js_composer' ),
+            'heading' => esc_html__( 'Css', 'js_composer' ),
             'param_name' => 'css',
-            // 'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
-            'group' => __( 'Design options', 'js_composer' )
+            // 'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
+            'group' => esc_html__( 'Design options', 'js_composer' )
         ),
 
     ),

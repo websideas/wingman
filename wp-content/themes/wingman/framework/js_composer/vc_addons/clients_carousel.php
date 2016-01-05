@@ -106,14 +106,11 @@ class WPBakeryShortCode_Clients_Carousel extends WPBakeryShortCode {
         $output = '';
         $output .= '<div class="'.esc_attr( $elementClass ).'">';
         if($title){
-            $output .= '<div class="block-heading">';
-            $output .= '<h3>'.$title.'</h3>';
-            $output .= '</div>';
+            $output .= sprintf('<div class="block-heading"><h3>%s</h3></div>', $title );
         }
 
         $carousel_ouput = kt_render_carousel(apply_filters( 'kt_render_args', $atts));
         $output .= str_replace('%carousel_html%', $client_carousel_html, $carousel_ouput);
-
 
         $output .= '</div>';
 
@@ -122,101 +119,101 @@ class WPBakeryShortCode_Clients_Carousel extends WPBakeryShortCode {
 }
 
 vc_map( array(
-    "name" => __( "Clients Carousel", 'wingman'),
+    "name" => esc_html__( "Clients Carousel", 'wingman'),
     "base" => "clients_carousel",
-    "category" => __('by Theme', 'wingman' ),
-    "description" => __( "Recent Posts Carousel", 'wingman'),
+    "category" => esc_html__('by Theme', 'wingman' ),
+    "description" => esc_html__( "Recent Posts Carousel", 'wingman'),
     "wrapper_class" => "clearfix",
     "params" => array(
         array(
             "type" => "textfield",
-            "heading" => __( "Title", 'wingman' ),
+            "heading" => esc_html__( "Title", 'wingman' ),
             "param_name" => "title",
-            "description" => __( "title", 'wingman' ),
+            "description" => esc_html__( "title", 'wingman' ),
             "admin_label" => true,
         ),
         array(
             "type" => "kt_image_sizes",
-            "heading" => __( "Select image sizes", 'wingman' ),
+            "heading" => esc_html__( "Select image sizes", 'wingman' ),
             "param_name" => "img_size",
-            'description' => __( 'Select size of image', 'wingman')
+            'description' => esc_html__( 'Select size of image', 'wingman')
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Target Link', 'wingman' ),
+            'heading' => esc_html__( 'Target Link', 'wingman' ),
             'param_name' => 'target_link',
             'value' => array(
-                __( 'Self', 'wingman' ) => '_self',
-                __( 'Blank', 'wingman' ) => '_blank',
-                __( 'Parent', 'wingman' ) => '_parent',
-                __( 'Top', 'wingman' ) => '_top',
+                esc_html__( 'Self', 'wingman' ) => '_self',
+                esc_html__( 'Blank', 'wingman' ) => '_blank',
+                esc_html__( 'Parent', 'wingman' ) => '_parent',
+                esc_html__( 'Top', 'wingman' ) => '_top',
             ),
-            'description' => __( 'Select target link.', 'wingman' ),
+            'description' => esc_html__( 'Select target link.', 'wingman' ),
         ),
 
         // Data settings
         array(
             "type" => "dropdown",
-            "heading" => __("Data source", 'wingman'),
+            "heading" => esc_html__("Data source", 'wingman'),
             "param_name" => "source",
             "value" => array(
-                __('All', 'wingman') => '',
-                __('Specific Categories', 'wingman') => 'categories',
-                __('Specific Client', 'wingman') => 'posts',
+                esc_html__('All', 'wingman') => '',
+                esc_html__('Specific Categories', 'wingman') => 'categories',
+                esc_html__('Specific Client', 'wingman') => 'posts',
             ),
             "admin_label" => true,
             'std' => 'all',
-            "description" => __("Select content type for your posts.", 'wingman'),
-            'group' => __( 'Data settings', 'js_composer' ),
+            "description" => esc_html__("Select content type for your posts.", 'wingman'),
+            'group' => esc_html__( 'Data settings', 'js_composer' ),
         ),
         array(
             "type" => "kt_taxonomy",
             'taxonomy' => 'client-category',
-            'heading' => __( 'Categories', 'wingman' ),
+            'heading' => esc_html__( 'Categories', 'wingman' ),
             'param_name' => 'categories',
-            'placeholder' => __( 'Select your categories', 'wingman' ),
+            'placeholder' => esc_html__( 'Select your categories', 'wingman' ),
             "dependency" => array("element" => "source","value" => array('categories')),
             'multiple' => true,
-            'group' => __( 'Data settings', 'js_composer' ),
+            'group' => esc_html__( 'Data settings', 'js_composer' ),
         ),
         array(
             "type" => "kt_posts",
             'args' => array('post_type' => 'kt_client', 'posts_per_page' => -1),
-            'heading' => __( 'Specific Client', 'js_composer' ),
+            'heading' => esc_html__( 'Specific Client', 'js_composer' ),
             'param_name' => 'posts',
-            'placeholder' => __( 'Select your posts', 'js_composer' ),
+            'placeholder' => esc_html__( 'Select your posts', 'js_composer' ),
             "dependency" => array("element" => "source","value" => array('posts')),
             'multiple' => true,
-            'group' => __( 'Data settings', 'js_composer' ),
+            'group' => esc_html__( 'Data settings', 'js_composer' ),
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Order by', 'js_composer' ),
+            'heading' => esc_html__( 'Order by', 'js_composer' ),
             'param_name' => 'orderby',
             'value' => array(
-                __( 'Date', 'js_composer' ) => 'date',
-                __( 'Order by post ID', 'js_composer' ) => 'ID',
-                __( 'Author', 'js_composer' ) => 'author',
-                __( 'Title', 'js_composer' ) => 'title',
-                __( 'Last modified date', 'js_composer' ) => 'modified',
-                __( 'Post/page parent ID', 'js_composer' ) => 'parent',
-                __( 'Number of comments', 'js_composer' ) => 'comment_count',
-                __( 'Menu order/Page Order', 'js_composer' ) => 'menu_order',
-                __( 'Meta value', 'js_composer' ) => 'meta_value',
-                __( 'Meta value number', 'js_composer' ) => 'meta_value_num',
-                __( 'Random order', 'js_composer' ) => 'rand',
+                esc_html__( 'Date', 'js_composer' ) => 'date',
+                esc_html__( 'Order by post ID', 'js_composer' ) => 'ID',
+                esc_html__( 'Author', 'js_composer' ) => 'author',
+                esc_html__( 'Title', 'js_composer' ) => 'title',
+                esc_html__( 'Last modified date', 'js_composer' ) => 'modified',
+                esc_html__( 'Post/page parent ID', 'js_composer' ) => 'parent',
+                esc_html__( 'Number of comments', 'js_composer' ) => 'comment_count',
+                esc_html__( 'Menu order/Page Order', 'js_composer' ) => 'menu_order',
+                esc_html__( 'Meta value', 'js_composer' ) => 'meta_value',
+                esc_html__( 'Meta value number', 'js_composer' ) => 'meta_value_num',
+                esc_html__( 'Random order', 'js_composer' ) => 'rand',
             ),
-            'description' => __( 'Select order type. If "Meta value" or "Meta value Number" is chosen then meta key is required.', 'js_composer' ),
-            'group' => __( 'Data settings', 'js_composer' ),
+            'description' => esc_html__( 'Select order type. If "Meta value" or "Meta value Number" is chosen then meta key is required.', 'js_composer' ),
+            'group' => esc_html__( 'Data settings', 'js_composer' ),
             'param_holder_class' => 'vc_grid-data-type-not-ids',
             "admin_label" => true,
         ),
         array(
             'type' => 'textfield',
-            'heading' => __( 'Meta key', 'js_composer' ),
+            'heading' => esc_html__( 'Meta key', 'js_composer' ),
             'param_name' => 'meta_key',
-            'description' => __( 'Input meta key for grid ordering.', 'js_composer' ),
-            'group' => __( 'Data settings', 'js_composer' ),
+            'description' => esc_html__( 'Input meta key for grid ordering.', 'js_composer' ),
+            'group' => esc_html__( 'Data settings', 'js_composer' ),
             'param_holder_class' => 'vc_grid-data-type-not-ids',
             'dependency' => array(
                 'element' => 'orderby',
@@ -226,107 +223,107 @@ vc_map( array(
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Sorting', 'js_composer' ),
+            'heading' => esc_html__( 'Sorting', 'js_composer' ),
             'param_name' => 'order',
-            'group' => __( 'Data settings', 'js_composer' ),
+            'group' => esc_html__( 'Data settings', 'js_composer' ),
             'value' => array(
-                __( 'Descending', 'js_composer' ) => 'DESC',
-                __( 'Ascending', 'js_composer' ) => 'ASC',
+                esc_html__( 'Descending', 'js_composer' ) => 'DESC',
+                esc_html__( 'Ascending', 'js_composer' ) => 'ASC',
             ),
             'param_holder_class' => 'vc_grid-data-type-not-ids',
-            'description' => __( 'Select sorting order.', 'js_composer' ),
+            'description' => esc_html__( 'Select sorting order.', 'js_composer' ),
             "admin_label" => true,
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'CSS Animation', 'js_composer' ),
+            'heading' => esc_html__( 'CSS Animation', 'js_composer' ),
             'param_name' => 'css_animation',
             'admin_label' => true,
             'value' => array(
-                __( 'No', 'js_composer' ) => '',
-                __( 'Top to bottom', 'js_composer' ) => 'top-to-bottom',
-                __( 'Bottom to top', 'js_composer' ) => 'bottom-to-top',
-                __( 'Left to right', 'js_composer' ) => 'left-to-right',
-                __( 'Right to left', 'js_composer' ) => 'right-to-left',
-                __( 'Appear from center', 'js_composer' ) => "appear"
+                esc_html__( 'No', 'js_composer' ) => '',
+                esc_html__( 'Top to bottom', 'js_composer' ) => 'top-to-bottom',
+                esc_html__( 'Bottom to top', 'js_composer' ) => 'bottom-to-top',
+                esc_html__( 'Left to right', 'js_composer' ) => 'left-to-right',
+                esc_html__( 'Right to left', 'js_composer' ) => 'right-to-left',
+                esc_html__( 'Appear from center', 'js_composer' ) => "appear"
             ),
-            'description' => __( 'Select type of animation if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.', 'js_composer' )
+            'description' => esc_html__( 'Select type of animation if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.', 'js_composer' )
         ),
         array(
             "type" => "textfield",
-            "heading" => __( "Extra class name", "js_composer"),
+            "heading" => esc_html__( "Extra class name", "js_composer"),
             "param_name" => "el_class",
-            "description" => __( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
+            "description" => esc_html__( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
         ),
 
         // Carousel
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Auto Height', 'wingman' ),
+            'heading' => esc_html__( 'Auto Height', 'wingman' ),
             'param_name' => 'autoheight',
             'value' => 'true',
             "edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
-            "description" => __("Enable auto height.", 'wingman'),
-            'group' => __( 'Carousel', 'wingman' )
+            "description" => esc_html__("Enable auto height.", 'wingman'),
+            'group' => esc_html__( 'Carousel', 'wingman' )
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Mouse Drag', 'wingman' ),
+            'heading' => esc_html__( 'Mouse Drag', 'wingman' ),
             'param_name' => 'mousedrag',
             'value' => 'true',
             "edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
-            "description" => __("Mouse drag enabled.", 'wingman'),
-            'group' => __( 'Carousel', 'wingman' )
+            "description" => esc_html__("Mouse drag enabled.", 'wingman'),
+            'group' => esc_html__( 'Carousel', 'wingman' )
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'AutoPlay', 'wingman' ),
+            'heading' => esc_html__( 'AutoPlay', 'wingman' ),
             'param_name' => 'autoplay',
             'value' => 'false',
-            "description" => __("Enable auto play.", 'wingman'),
+            "description" => esc_html__("Enable auto play.", 'wingman'),
             "edit_field_class" => "vc_col-sm-4 kt_margin_bottom",
-            'group' => __( 'Carousel', 'wingman' )
+            'group' => esc_html__( 'Carousel', 'wingman' )
         ),
         array(
             "type" => "kt_number",
-            "heading" => __("AutoPlay Speed", 'wingman'),
+            "heading" => esc_html__("AutoPlay Speed", 'wingman'),
             "param_name" => "autoplayspeed",
             "value" => "5000",
-            "suffix" => __("milliseconds", 'wingman'),
-            'group' => __( 'Carousel', 'wingman' ),
+            "suffix" => esc_html__("milliseconds", 'wingman'),
+            'group' => esc_html__( 'Carousel', 'wingman' ),
             "dependency" => array("element" => "autoplay","value" => array('true')),
         ),
         array(
             "type" => "kt_number",
-            "heading" => __("Slide Speed", 'wingman'),
+            "heading" => esc_html__("Slide Speed", 'wingman'),
             "param_name" => "slidespeed",
             "value" => "200",
-            "suffix" => __("milliseconds", 'wingman'),
-            'group' => __( 'Carousel', 'wingman' )
+            "suffix" => esc_html__("milliseconds", 'wingman'),
+            'group' => esc_html__( 'Carousel', 'wingman' )
         ),
 
         array(
             "type" => "kt_heading",
-            "heading" => __("Items to Show?", 'wingman'),
+            "heading" => esc_html__("Items to Show?", 'wingman'),
             "param_name" => "items_show",
-            'group' => __( 'Carousel', 'wingman' )
+            'group' => esc_html__( 'Carousel', 'wingman' )
         ),
         array(
             "type" => "kt_number",
             "class" => "",
             "edit_field_class" => "vc_col-sm-6 kt_margin_bottom",
-            "heading" => __("On Desktop", 'wingman'),
+            "heading" => esc_html__("On Desktop", 'wingman'),
             "param_name" => "desktop",
             "value" => "5",
             "min" => "1",
             "max" => "25",
             "step" => "1",
-            'group' => __( 'Carousel', 'wingman' )
+            'group' => esc_html__( 'Carousel', 'wingman' )
         ),
 
         array(
             'type' => 'kt_number',
-            'heading' => __( 'on Tablets Landscape', 'wingman' ),
+            'heading' => esc_html__( 'on Tablets Landscape', 'wingman' ),
             'param_name' => 'desktopsmall',
             "value" => "5",
             "min" => "1",
@@ -334,79 +331,79 @@ vc_map( array(
             "step" => "1",
             'std' => '4',
             "edit_field_class" => "vc_col-sm-6 kt_margin_bottom",
-            'group' => __( 'Carousel', 'wingman' )
+            'group' => esc_html__( 'Carousel', 'wingman' )
         ),
         array(
             "type" => "kt_number",
             "class" => "",
             "edit_field_class" => "vc_col-sm-6 kt_margin_bottom",
-            "heading" => __("On Tablet", 'wingman'),
+            "heading" => esc_html__("On Tablet", 'wingman'),
             "param_name" => "tablet",
             "value" => "3",
             "min" => "1",
             "max" => "25",
             "step" => "1",
-            'group' => __( 'Carousel', 'wingman' )
+            'group' => esc_html__( 'Carousel', 'wingman' )
         ),
         array(
             "type" => "kt_number",
             "class" => "",
             "edit_field_class" => "vc_col-sm-6 kt_margin_bottom",
-            "heading" => __("On Mobile", 'wingman'),
+            "heading" => esc_html__("On Mobile", 'wingman'),
             "param_name" => "mobile",
             "value" => "1",
             "min" => "1",
             "max" => "25",
             "step" => "1",
-            'group' => __( 'Carousel', 'wingman' )
+            'group' => esc_html__( 'Carousel', 'wingman' )
         ),
         array(
             "type" => "kt_heading",
-            "heading" => __("Navigation settings", 'wingman'),
+            "heading" => esc_html__("Navigation settings", 'wingman'),
             "param_name" => "navigation_settings",
-            'group' => __( 'Carousel', 'wingman' )
+            'group' => esc_html__( 'Carousel', 'wingman' )
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Navigation', 'wingman' ),
+            'heading' => esc_html__( 'Navigation', 'wingman' ),
             'param_name' => 'navigation',
             'value' => 'true',
-            "description" => __("Show navigation in carousel", 'wingman'),
-            'group' => __( 'Carousel', 'wingman' )
+            "description" => esc_html__("Show navigation in carousel", 'wingman'),
+            'group' => esc_html__( 'Carousel', 'wingman' )
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Navigation position', 'wingman' ),
+            'heading' => esc_html__( 'Navigation position', 'wingman' ),
             'param_name' => 'navigation_position',
-            'group' => __( 'Carousel', 'wingman' ),
+            'group' => esc_html__( 'Carousel', 'wingman' ),
             'value' => array(
-                __( 'Center outside', 'wingman') => 'center_outside',
-                __( 'Center inside', 'wingman') => 'center',
-                __( 'Top', 'wingman') => 'top',
-                __( 'Bottom', 'wingman') => 'bottom',
+                esc_html__( 'Center outside', 'wingman') => 'center_outside',
+                esc_html__( 'Center inside', 'wingman') => 'center',
+                esc_html__( 'Top', 'wingman') => 'top',
+                esc_html__( 'Bottom', 'wingman') => 'bottom',
             ),
             'std' => 'center',
             "dependency" => array("element" => "navigation","value" => array('true')),
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Always Show Navigation', 'wingman' ),
+            'heading' => esc_html__( 'Always Show Navigation', 'wingman' ),
             'param_name' => 'navigation_always_on',
             'value' => 'false',
-            "description" => __("Always show the navigation.", 'wingman'),
-            'group' => __( 'Carousel', 'wingman' ),
+            "description" => esc_html__("Always show the navigation.", 'wingman'),
+            'group' => esc_html__( 'Carousel', 'wingman' ),
             "dependency" => array("element" => "navigation_position","value" => array('center', 'center_outside')),
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Navigation style', 'js_composer' ),
+            'heading' => esc_html__( 'Navigation style', 'js_composer' ),
             'param_name' => 'navigation_style',
-            'group' => __( 'Carousel', 'wingman' ),
+            'group' => esc_html__( 'Carousel', 'wingman' ),
             'value' => array(
-                __( 'Normal', 'wingman' ) => '',
-                __( 'Circle Border', 'wingman' ) => 'circle_border',
-                __( 'Square Border', 'wingman' ) => 'square_border',
-                __( 'Round Border', 'wingman' ) => 'round_border',
+                esc_html__( 'Normal', 'wingman' ) => '',
+                esc_html__( 'Circle Border', 'wingman' ) => 'circle_border',
+                esc_html__( 'Square Border', 'wingman' ) => 'square_border',
+                esc_html__( 'Round Border', 'wingman' ) => 'round_border',
             ),
             'std' => '',
             "dependency" => array("element" => "navigation","value" => array('true')),
@@ -414,7 +411,7 @@ vc_map( array(
 
         array(
             'type' => 'kt_radio',
-            'heading' => __( 'Navigation Icon', 'js_composer' ),
+            'heading' => esc_html__( 'Navigation Icon', 'js_composer' ),
             'param_name' => 'navigation_icon',
             'class_input' => "radio-wrapper-group",
             'value' => array(
@@ -425,32 +422,32 @@ vc_map( array(
                 '<span><i class="fa fa-chevron-circle-left"></i><i class="fa fa-chevron-circle-right"></i></span>' =>'fa fa-chevron-circle-left|fa fa-chevron-circle-right',
                 '<span><i class="fa fa-arrow-circle-o-left"></i><i class="fa fa-arrow-circle-o-right"></i></span>' => 'fa fa-arrow-circle-o-left|fa fa-arrow-circle-o-right',
             ),
-            'description' => __( 'Select your style for navigation.', 'wingman' ),
+            'description' => esc_html__( 'Select your style for navigation.', 'wingman' ),
             "dependency" => array("element" => "navigation","value" => array('true')),
-            'group' => __( 'Carousel', 'wingman' )
+            'group' => esc_html__( 'Carousel', 'wingman' )
         ),
 
         array(
             "type" => "kt_heading",
-            "heading" => __("Pagination settings", 'wingman'),
+            "heading" => esc_html__("Pagination settings", 'wingman'),
             "param_name" => "pagination_settings",
-            'group' => __( 'Carousel', 'wingman' )
+            'group' => esc_html__( 'Carousel', 'wingman' )
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Pagination', 'wingman' ),
+            'heading' => esc_html__( 'Pagination', 'wingman' ),
             'param_name' => 'pagination',
             'value' => 'false',
-            "description" => __("Show pagination in carousel", 'wingman'),
-            'group' => __( 'Carousel', 'wingman' )
+            "description" => esc_html__("Show pagination in carousel", 'wingman'),
+            'group' => esc_html__( 'Carousel', 'wingman' )
         ),
 
         array(
             'type' => 'css_editor',
-            'heading' => __( 'Css', 'js_composer' ),
+            'heading' => esc_html__( 'Css', 'js_composer' ),
             'param_name' => 'css',
-            // 'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
-            'group' => __( 'Design options', 'js_composer' )
+            // 'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
+            'group' => esc_html__( 'Design options', 'js_composer' )
         ),
     ),
 ));

@@ -1,6 +1,6 @@
 <?php
 $classes = array('post-item post-layout-1 clearfix', $blog_atts['class']);
-$image_size = 'kt_list';
+$image_size = 'kt_gird';
 ?>
 <?php //print_r($blog_atts); ?>
 <article <?php post_class($classes); ?>>

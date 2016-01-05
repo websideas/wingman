@@ -69,30 +69,30 @@ class WPBakeryShortCode_Dropcap extends WPBakeryShortCode_VC_Custom_heading {
 
 // Add your Visual Composer logic here
 vc_map( array(
-    "name" => __( "Dropcap", 'wingman'),
+    "name" => esc_html__( "Dropcap", 'wingman'),
     "base" => "dropcap",
-    "category" => __('by Theme', 'wingman' ),
-    "description" => __( "", 'wingman'),
+    "category" => esc_html__('by Theme', 'wingman' ),
+    "description" => esc_html__( "", 'wingman'),
     "params" => array(
         array(
             "type" => "textfield",
-            'heading' => __( 'First Letter', 'js_composer' ),
+            'heading' => esc_html__( 'First Letter', 'js_composer' ),
             'param_name' => 'title',
-            'value' => __( 'D', 'wingman' ),
+            'value' => esc_html__( 'D', 'wingman' ),
             "admin_label" => true,
         ),
         array(
             'type' => 'hidden',
-            'heading' => __( 'URL (Link)', 'js_composer' ),
+            'heading' => esc_html__( 'URL (Link)', 'js_composer' ),
             'param_name' => 'link',
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Size', 'js_composer' ),
+            'heading' => esc_html__( 'Size', 'js_composer' ),
             'param_name' => 'size',
             'value' => getVcShared( 'sizes' ),
             'std' => 'md',
-            'description' => __( 'Dropcap size.', 'wingman' ),
+            'description' => esc_html__( 'Dropcap size.', 'wingman' ),
             "admin_label" => true,
         ),
         
@@ -107,39 +107,39 @@ vc_map( array(
                     'font_size',
                     //'line_height',
                     'color',
-                    'tag_description' => __( 'Select element tag.', 'js_composer' ),
-                    'text_align_description' => __( 'Select text alignment.', 'js_composer' ),
-                    'font_size_description' => __( 'Enter font size.', 'js_composer' ),
-                    'line_height_description' => __( 'Enter line height.', 'js_composer' ),
-                    'color_description' => __( 'Select heading color.', 'js_composer' ),
+                    'tag_description' => esc_html__( 'Select element tag.', 'js_composer' ),
+                    'text_align_description' => esc_html__( 'Select text alignment.', 'js_composer' ),
+                    'font_size_description' => esc_html__( 'Enter font size.', 'js_composer' ),
+                    'line_height_description' => esc_html__( 'Enter line height.', 'js_composer' ),
+                    'color_description' => esc_html__( 'Select heading color.', 'js_composer' ),
                 ),
             ),
-            'group' => __( 'Typography', 'wingman' )
+            'group' => esc_html__( 'Typography', 'wingman' )
         ),
         array(
             "type" => "kt_number",
-            "heading" => __("Border Radius", 'wingman'),
+            "heading" => esc_html__("Border Radius", 'wingman'),
             "param_name" => "border_radius",
             "value" => 0,
             "min" => 0,
             "max" => 10,
             "suffix" => "px",
             "description" => "",
-            'group' => __( 'Typography', 'wingman' ),
+            'group' => esc_html__( 'Typography', 'wingman' ),
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Use Accent Background Color', 'wingman' ),
+            'heading' => esc_html__( 'Use Accent Background Color', 'wingman' ),
             'param_name' => 'accent_background',
             'value' => 'true',
-            'group' => __( 'Typography', 'wingman' ),
+            'group' => esc_html__( 'Typography', 'wingman' ),
         ),
         array(
             'type' => 'colorpicker',
-            'heading' => __( 'Custom Background', 'js_composer' ),
+            'heading' => esc_html__( 'Custom Background', 'js_composer' ),
             'param_name' => 'custom_background',
-            'description' => __( 'Select Background color.', 'js_composer' ),
-            'group' => __( 'Typography', 'wingman' ),
+            'description' => esc_html__( 'Select Background color.', 'js_composer' ),
+            'group' => esc_html__( 'Typography', 'wingman' ),
             'dependency' => array(
                 'element' => 'accent_background',
                 'value_not_equal_to' => array( 'true' )
@@ -147,44 +147,44 @@ vc_map( array(
         ),
         array(
             'type' => 'checkbox',
-            'heading' => __( 'Use theme default font family?', 'js_composer' ),
+            'heading' => esc_html__( 'Use theme default font family?', 'js_composer' ),
             'param_name' => 'use_theme_fonts',
-            'value' => array( __( 'Yes', 'js_composer' ) => 'yes' ),
-            'description' => __( 'Use font family from the theme.', 'js_composer' ),
-            'group' => __( 'Typography', 'wingman' ),
+            'value' => array( esc_html__( 'Yes', 'js_composer' ) => 'yes' ),
+            'description' => esc_html__( 'Use font family from the theme.', 'js_composer' ),
+            'group' => esc_html__( 'Typography', 'wingman' ),
             'std' => 'yes'
         ),
         array(
             'type' => 'google_fonts',
             'param_name' => 'google_fonts',
-            'value' => 'font_family:Montserrat|font_style:400%20regular%3A400%3Anormal',
+            'value' => '',
             'settings' => array(
                 'fields' => array(
-                    'font_family_description' => __( 'Select font family.', 'js_composer' ),
-                    'font_style_description' => __( 'Select font styling.', 'js_composer' )
+                    'font_family_description' => esc_html__( 'Select font family.', 'js_composer' ),
+                    'font_style_description' => esc_html__( 'Select font styling.', 'js_composer' )
                 )
             ),
-            'group' => __( 'Typography', 'wingman' ),
+            'group' => esc_html__( 'Typography', 'wingman' ),
             'dependency' => array(
                 'element' => 'use_theme_fonts',
                 'value_not_equal_to' => 'yes',
             ),
-            'description' => __( '', 'js_composer' ),
+            'description' => esc_html__( '', 'js_composer' ),
         ),
             
         array(
             "type" => "textfield",
-            "heading" => __( "Extra class name", "js_composer" ),
+            "heading" => esc_html__( "Extra class name", "js_composer" ),
             "param_name" => "el_class",
-            "description" => __( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
+            "description" => esc_html__( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
         ),
         //Design options
         array(
             'type' => 'css_editor',
-            'heading' => __( 'Css', 'js_composer' ),
+            'heading' => esc_html__( 'Css', 'js_composer' ),
             'param_name' => 'css',
-            // 'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
-            'group' => __( 'Design options', 'js_composer' )
+            // 'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
+            'group' => esc_html__( 'Design options', 'js_composer' )
         ),
 
     ),

@@ -330,10 +330,10 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
             // Load class strings.
             $this->strings = array(
-                'page_title'                      => __( 'Install Required Plugins', 'tgmpa' ),
-                'menu_title'                      => __( 'Install Plugins', 'tgmpa' ),
-                'installing'                      => __( 'Installing Plugin: %s', 'tgmpa' ),
-                'oops'                            => __( 'Something went wrong with the plugin API.', 'tgmpa' ),
+                'page_title'                      => esc_html__(  'Install Required Plugins', 'tgmpa' ),
+                'menu_title'                      => esc_html__(  'Install Plugins', 'tgmpa' ),
+                'installing'                      => esc_html__(  'Installing Plugin: %s', 'tgmpa' ),
+                'oops'                            => esc_html__(  'Something went wrong with the plugin API.', 'tgmpa' ),
                 'notice_can_install_required'     => _n_noop(
                     'This theme requires the following plugin: %1$s.',
                     'This theme requires the following plugins: %1$s.',
@@ -394,15 +394,15 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
                     'Begin activating plugins',
                     'tgmpa'
                 ),
-                'return'                          => __( 'Return to Required Plugins Installer', 'tgmpa' ),
-                'dashboard'                       => __( 'Return to the dashboard', 'tgmpa' ),
-                'plugin_activated'                => __( 'Plugin activated successfully.', 'tgmpa' ),
-                'activated_successfully'          => __( 'The following plugin was activated successfully:', 'tgmpa' ),
-                'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'tgmpa' ),
-                'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'tgmpa' ),
-                'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'tgmpa' ),
-                'dismiss'                         => __( 'Dismiss this notice', 'tgmpa' ),
-                'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'tgmpa' ),
+                'return'                          => esc_html__(  'Return to Required Plugins Installer', 'tgmpa' ),
+                'dashboard'                       => esc_html__(  'Return to the dashboard', 'tgmpa' ),
+                'plugin_activated'                => esc_html__(  'Plugin activated successfully.', 'tgmpa' ),
+                'activated_successfully'          => esc_html__(  'The following plugin was activated successfully:', 'tgmpa' ),
+                'plugin_already_active'           => esc_html__(  'No action taken. Plugin %1$s was already active.', 'tgmpa' ),
+                'plugin_needs_higher_version'     => esc_html__(  'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'tgmpa' ),
+                'complete'                        => esc_html__(  'All plugins installed and activated successfully. %1$s', 'tgmpa' ),
+                'dismiss'                         => esc_html__(  'Dismiss this notice', 'tgmpa' ),
+                'contact_admin'                   => esc_html__(  'Please contact the administrator of this site for help.', 'tgmpa' ),
             );
 
             do_action( 'tgmpa_register' );

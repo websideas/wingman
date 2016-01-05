@@ -115,66 +115,66 @@ class WPBakeryShortCode_Icon_Box extends WPBakeryShortCode_VC_Custom_heading {
 
 // Add your Visual Composer logic here
 vc_map( array(
-    "name" => __( "Icon box", 'wingman'),
+    "name" => esc_html__( "Icon box", 'wingman'),
     "base" => "icon_box",
-    "category" => __('by Theme', 'wingman' ),
-    "description" => __( "Icon box description", 'wingman'),
+    "category" => esc_html__('by Theme', 'wingman' ),
+    "description" => esc_html__( "Icon box description", 'wingman'),
     "params" => array(
         array(
             "type" => "textfield",
-            'heading' => __( 'Title', 'js_composer' ),
+            'heading' => esc_html__( 'Title', 'js_composer' ),
             'param_name' => 'title',
-            'value' => __( 'Title', 'js_composer' ),
+            'value' => esc_html__( 'Title', 'js_composer' ),
             "admin_label" => true,
         ),
 
         array(
             'type' => 'vc_link',
-            'heading' => __( 'Link Url', 'js_composer' ),
+            'heading' => esc_html__( 'Link Url', 'js_composer' ),
             'param_name' => 'link',
         ),
         array(
             "type" => "textarea_html",
-            "heading" => __("Content", 'wingman'),
+            "heading" => esc_html__("Content", 'wingman'),
             "param_name" => "content",
             "value" => '',
-            "description" => __("", 'wingman'),
+            "description" => esc_html__("", 'wingman'),
             "holder" => "div",
         ),
         //Layout settings
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Layout icon box', 'wingman' ),
+            'heading' => esc_html__( 'Layout icon box', 'wingman' ),
             'param_name' => 'icon_box_layout',
             'value' => array(
-                __( 'Icon on Top of Title', 'wingman' ) => '1',
-                __( 'Icon beside Title', 'wingman' ) => '2',
+                esc_html__( 'Icon on Top of Title', 'wingman' ) => '1',
+                esc_html__( 'Icon beside Title', 'wingman' ) => '2',
             ),
-            'description' => __( 'Select your layout.', 'wingman' ),
+            'description' => esc_html__( 'Select your layout.', 'wingman' ),
             "admin_label" => true,
         ),
 
 
         array(
             'type' => 'dropdown',
-            'heading' => __( 'CSS Animation', 'js_composer' ),
+            'heading' => esc_html__( 'CSS Animation', 'js_composer' ),
             'param_name' => 'css_animation',
             'admin_label' => true,
             'value' => array(
-                __( 'No', 'js_composer' ) => '',
-                __( 'Top to bottom', 'js_composer' ) => 'top-to-bottom',
-                __( 'Bottom to top', 'js_composer' ) => 'bottom-to-top',
-                __( 'Left to right', 'js_composer' ) => 'left-to-right',
-                __( 'Right to left', 'js_composer' ) => 'right-to-left',
-                __( 'Appear from center', 'js_composer' ) => "appear"
+                esc_html__( 'No', 'js_composer' ) => '',
+                esc_html__( 'Top to bottom', 'js_composer' ) => 'top-to-bottom',
+                esc_html__( 'Bottom to top', 'js_composer' ) => 'bottom-to-top',
+                esc_html__( 'Left to right', 'js_composer' ) => 'left-to-right',
+                esc_html__( 'Right to left', 'js_composer' ) => 'right-to-left',
+                esc_html__( 'Appear from center', 'js_composer' ) => "appear"
             ),
-            'description' => __( 'Select type of animation if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.', 'js_composer' )
+            'description' => esc_html__( 'Select type of animation if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.', 'js_composer' )
         ),
         array(
             "type" => "textfield",
-            "heading" => __( "Extra class name", "js_composer" ),
+            "heading" => esc_html__( "Extra class name", "js_composer" ),
             "param_name" => "el_class",
-            "description" => __( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
+            "description" => esc_html__( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
         ),
 
 
@@ -182,79 +182,79 @@ vc_map( array(
         //Icon settings
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Icon to display', 'wingman' ),
+            'heading' => esc_html__( 'Icon to display', 'wingman' ),
             'param_name' => 'icon_type',
             'value' => array(
-                __( 'Font Icon', 'wingman' ) => 'icon',
-                __( 'Image Icon', 'wingman' ) => 'image',
+                esc_html__( 'Font Icon', 'wingman' ) => 'icon',
+                esc_html__( 'Image Icon', 'wingman' ) => 'image',
             ),
-            'description' => __( 'Select your layout.', 'wingman' ),
-            'group' => __( 'Icon', 'wingman' )
+            'description' => esc_html__( 'Select your layout.', 'wingman' ),
+            'group' => esc_html__( 'Icon', 'wingman' )
         ),
 
         array(
             'type' => 'attach_image',
-            'heading' => __( 'Image Thumbnail', 'wingman' ),
+            'heading' => esc_html__( 'Image Thumbnail', 'wingman' ),
             'param_name' => 'iconbox_image',
             'dependency' => array( 'element' => 'icon_type',  'value' => array( 'image' ) ),
-            'description' => __( 'Select image from media library.', 'js_composer' ),
-            'group' => __( 'Icon', 'wingman' )
+            'description' => esc_html__( 'Select image from media library.', 'js_composer' ),
+            'group' => esc_html__( 'Icon', 'wingman' )
         ),
 
         array(
             "type" => "kt_icons",
-            'heading' => __( 'Choose your icon', 'js_composer' ),
+            'heading' => esc_html__( 'Choose your icon', 'js_composer' ),
             'param_name' => 'iconbox_icon',
             "value" => 'fa fa-adjust',
-            'description' => __( 'Use existing font icon or upload a custom image.', 'wingman' ),
+            'description' => esc_html__( 'Use existing font icon or upload a custom image.', 'wingman' ),
             'dependency' => array("element" => "icon_type","value" => array('icon')),
-            'group' => __( 'Icon', 'wingman' )
+            'group' => esc_html__( 'Icon', 'wingman' )
         ),
 
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Icon color', 'js_composer' ),
+            'heading' => esc_html__( 'Icon color', 'js_composer' ),
             'param_name' => 'color',
-            'value' => array_merge( array( __( 'Default', 'js_composer' ) => 'default' ),  array( __( 'Accent color', 'wingman' ) => 'accent' ), getVcShared( 'colors' ), array( __( 'Custom color', 'js_composer' ) => 'custom' ) ),
-            'description' => __( 'Select icon color.', 'js_composer' ),
+            'value' => array_merge( array( esc_html__( 'Default', 'js_composer' ) => 'default' ),  array( esc_html__( 'Accent color', 'wingman' ) => 'accent' ), getVcShared( 'colors' ), array( esc_html__( 'Custom color', 'js_composer' ) => 'custom' ) ),
+            'description' => esc_html__( 'Select icon color.', 'js_composer' ),
             'param_holder_class' => 'vc_colored-dropdown',
-            'group' => __( 'Icon', 'wingman' ),
+            'group' => esc_html__( 'Icon', 'wingman' ),
             'dependency' => array("element" => "icon_type","value" => array('icon')),
         ),
         array(
             'type' => 'colorpicker',
-            'heading' => __( 'Custom Icon Color', 'js_composer' ),
+            'heading' => esc_html__( 'Custom Icon Color', 'js_composer' ),
             'param_name' => 'custom_color',
-            'description' => __( 'Select custom icon color.', 'js_composer' ),
+            'description' => esc_html__( 'Select custom icon color.', 'js_composer' ),
             'dependency' => array(
                 'element' => 'color',
                 'value' => 'custom',
             ),
-            'group' => __( 'Icon', 'wingman' )
+            'group' => esc_html__( 'Icon', 'wingman' )
         ),
         array(
             'type' => 'colorpicker',
-            'heading' => __( 'Icon color on Hover', 'js_composer' ),
+            'heading' => esc_html__( 'Icon color on Hover', 'js_composer' ),
             'param_name' => 'color_hover',
-            'description' => __( 'Select icon color on hover.', 'js_composer' ),
-            'group' => __( 'Icon', 'wingman' ),
+            'description' => esc_html__( 'Select icon color on hover.', 'js_composer' ),
+            'group' => esc_html__( 'Icon', 'wingman' ),
             'dependency' => array("element" => "icon_type","value" => array('icon')),
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Background shape', 'js_composer' ),
+            'heading' => esc_html__( 'Background shape', 'js_composer' ),
             'param_name' => 'background_style',
             'value' => array(
-                __( 'None', 'js_composer' ) => '',
-                __( 'Circle', 'js_composer' ) => 'rounded',
-                __( 'Square', 'js_composer' ) => 'boxed',
-                __( 'Rounded', 'js_composer' ) => 'rounded-less',
-                __( 'Outline Circle', 'js_composer' ) => 'rounded-outline',
-                __( 'Outline Square', 'js_composer' ) => 'boxed-outline',
-                __( 'Outline Rounded', 'js_composer' ) => 'rounded-less-outline',
+                esc_html__( 'None', 'js_composer' ) => '',
+                esc_html__( 'Circle', 'js_composer' ) => 'rounded',
+                esc_html__( 'Square', 'js_composer' ) => 'boxed',
+                esc_html__( 'Rounded', 'js_composer' ) => 'rounded-less',
+                esc_html__( 'Outline Circle', 'js_composer' ) => 'rounded-outline',
+                esc_html__( 'Outline Square', 'js_composer' ) => 'boxed-outline',
+                esc_html__( 'Outline Rounded', 'js_composer' ) => 'rounded-less-outline',
             ),
-            'description' => __( 'Select background shape and style for icon.', 'js_composer' ),
-            'group' => __( 'Icon', 'wingman' ),
+            'description' => esc_html__( 'Select background shape and style for icon.', 'js_composer' ),
+            'group' => esc_html__( 'Icon', 'wingman' ),
             'dependency' => array(
                 "element" => "icon_type",
                 "value" => array('icon')
@@ -263,36 +263,36 @@ vc_map( array(
 
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Background color', 'js_composer' ),
+            'heading' => esc_html__( 'Background color', 'js_composer' ),
             'param_name' => 'background_color',
-            'value' => array_merge( array( __( 'Accent color', 'wingman' ) => 'accent' ), getVcShared( 'colors' ), array( __( 'Custom color', 'js_composer' ) => 'custom' ) ),
+            'value' => array_merge( array( esc_html__( 'Accent color', 'wingman' ) => 'accent' ), getVcShared( 'colors' ), array( esc_html__( 'Custom color', 'js_composer' ) => 'custom' ) ),
             'std' => 'grey',
-            'description' => __( 'Select background color for icon.', 'js_composer' ),
+            'description' => esc_html__( 'Select background color for icon.', 'js_composer' ),
             'param_holder_class' => 'vc_colored-dropdown',
             'dependency' => array(
                 'element' => 'background_style',
                 'not_empty' => true,
             ),
-            'group' => __( 'Icon', 'wingman' )
+            'group' => esc_html__( 'Icon', 'wingman' )
         ),
         array(
             'type' => 'colorpicker',
-            'heading' => __( 'Custom background color', 'js_composer' ),
+            'heading' => esc_html__( 'Custom background color', 'js_composer' ),
             'param_name' => 'custom_background_color',
-            'description' => __( 'Select custom icon background color.', 'js_composer' ),
+            'description' => esc_html__( 'Select custom icon background color.', 'js_composer' ),
             'dependency' => array(
                 'element' => 'background_color',
                 'value' => 'custom',
             ),
-            'group' => __( 'Icon', 'wingman' )
+            'group' => esc_html__( 'Icon', 'wingman' )
         ),
 
         array(
             'type' => 'colorpicker',
-            'heading' => __( 'Background on Hover', 'js_composer' ),
+            'heading' => esc_html__( 'Background on Hover', 'js_composer' ),
             'param_name' => 'background_color_hover',
-            'description' => __( 'Select Background icon color on hover.', 'js_composer' ),
-            'group' => __( 'Icon', 'wingman' ),
+            'description' => esc_html__( 'Select Background icon color on hover.', 'js_composer' ),
+            'group' => esc_html__( 'Icon', 'wingman' ),
             'dependency' => array(
                 'element' => 'background_style',
                 'not_empty' => true,
@@ -300,26 +300,26 @@ vc_map( array(
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Size', 'js_composer' ),
+            'heading' => esc_html__( 'Size', 'js_composer' ),
             'param_name' => 'size',
             'value' => array_merge( getVcShared( 'sizes' ), array( 'Extra Large' => 'xl' ) ),
             'std' => 'md',
-            'description' => __( 'Icon size.', 'js_composer' ),
-            'group' => __( 'Icon', 'wingman' )
+            'description' => esc_html__( 'Icon size.', 'js_composer' ),
+            'group' => esc_html__( 'Icon', 'wingman' )
         ),
 
 
         //Typography settings
         array(
             "type" => "kt_number",
-            "heading" => __("Letter spacing", 'wingman'),
+            "heading" => esc_html__("Letter spacing", 'wingman'),
             "param_name" => "letter_spacing",
             "value" => 0,
             "min" => 0,
             "max" => 10,
             "suffix" => "px",
             "description" => "",
-            'group' => __( 'Typography', 'wingman' ),
+            'group' => esc_html__( 'Typography', 'wingman' ),
         ),
         array(
             'type' => 'font_container',
@@ -331,50 +331,50 @@ vc_map( array(
                     'font_size',
                     'line_height',
                     'color',
-                    'tag_description' => __( 'Select element tag.', 'js_composer' ),
-                    'text_align_description' => __( 'Select text alignment.', 'js_composer' ),
-                    'font_size_description' => __( 'Enter font size.', 'js_composer' ),
-                    'line_height_description' => __( 'Enter line height.', 'js_composer' ),
-                    'color_description' => __( 'Select heading color.', 'js_composer' ),
+                    'tag_description' => esc_html__( 'Select element tag.', 'js_composer' ),
+                    'text_align_description' => esc_html__( 'Select text alignment.', 'js_composer' ),
+                    'font_size_description' => esc_html__( 'Enter font size.', 'js_composer' ),
+                    'line_height_description' => esc_html__( 'Enter line height.', 'js_composer' ),
+                    'color_description' => esc_html__( 'Select heading color.', 'js_composer' ),
                 ),
             ),
-            'group' => __( 'Typography', 'wingman' )
+            'group' => esc_html__( 'Typography', 'wingman' )
         ),
         array(
             'type' => 'checkbox',
-            'heading' => __( 'Use theme default font family?', 'js_composer' ),
+            'heading' => esc_html__( 'Use theme default font family?', 'js_composer' ),
             'param_name' => 'use_theme_fonts',
-            'value' => array( __( 'Yes', 'js_composer' ) => 'yes' ),
-            'description' => __( 'Use font family from the theme.', 'js_composer' ),
-            'group' => __( 'Typography', 'js_composer' ),
+            'value' => array( esc_html__( 'Yes', 'js_composer' ) => 'yes' ),
+            'description' => esc_html__( 'Use font family from the theme.', 'js_composer' ),
+            'group' => esc_html__( 'Typography', 'js_composer' ),
             'std' => 'yes'
         ),
         array(
             'type' => 'google_fonts',
             'param_name' => 'google_fonts',
-            'value' => 'font_family:Quicksand|font_style:400%20regular%3A400%3Anormal',
+            'value' => '',
             'settings' => array(
                 'fields' => array(
-                    'font_family_description' => __( 'Select font family.', 'js_composer' ),
-                    'font_style_description' => __( 'Select font styling.', 'js_composer' )
+                    'font_family_description' => esc_html__( 'Select font family.', 'js_composer' ),
+                    'font_style_description' => esc_html__( 'Select font styling.', 'js_composer' )
                 )
             ),
-            'group' => __( 'Typography', 'wingman' ),
+            'group' => esc_html__( 'Typography', 'wingman' ),
             'dependency' => array(
                 'element' => 'use_theme_fonts',
                 'value_not_equal_to' => 'yes',
             ),
-            'description' => __( '', 'js_composer' ),
+            'description' => esc_html__( '', 'js_composer' ),
         ),
 
 
         //Design options
         array(
             'type' => 'css_editor',
-            'heading' => __( 'Css', 'js_composer' ),
+            'heading' => esc_html__( 'Css', 'js_composer' ),
             'param_name' => 'css',
-            // 'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
-            'group' => __( 'Design options', 'js_composer' )
+            // 'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
+            'group' => esc_html__( 'Design options', 'js_composer' )
         ),
 
 

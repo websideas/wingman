@@ -279,6 +279,13 @@ blockquote,
   .post-link-url{
     position: relative;
     z-index: 2;
+    a{
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+    }
   }
 }
 .post-link-wrapper{
@@ -2948,6 +2955,7 @@ article.post-item {
     text-indent: -999px;
     top: 0;
     width: 100%;
+    z-index: 1;
   }
 }
 
@@ -3052,6 +3060,19 @@ article.post-item {
       .entry-main-content{
         margin-left: 500px;
         padding-top: 52px;
+      }
+    }
+  }
+
+  &.blog-posts-format{
+    &.blog-posts-list {
+      .post-item {
+        &.format-quote,
+        &.format-link{
+          .list-media-wrapper{
+            width: 100%;
+          }
+        }
       }
     }
   }

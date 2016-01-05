@@ -125,6 +125,348 @@ add_action( 'wp_enqueue_scripts', 'kt_add_scripts' , 69 );
 
 
 /**
+ * Theme Custom CSS
+ *
+ * @since       1.0
+ * @return      void
+ * @access      public
+ */
+function kt_setting_script() {
+
+    $css = '';
+    $advanced_css = kt_option('advanced_editor_css');
+    $accent = kt_option('styling_accent', '#82c14f');
+    $styling_link = kt_option('styling_link');
+
+    $css .= $advanced_css;
+    if($styling_link['active']){
+        $css .= 'a:focus{color: '.$styling_link['active'].';}';
+    }
+
+    if( $accent !='#82c14f' ){
+        $selections = array('::-moz-selection', '::-webkit-selection', '::selection' );
+        $css .= implode($selections, ',').'{background: '.$accent.';}';
+
+        $selections_color = array(
+            '.readmore-link',
+            '.readmore-link:hover',
+            '.testimonial-rate span:after',
+            '.testimonial-carousel-skin-light .testimonial-item .testimonial-rate span::after',
+            '.blog-posts .entry-title a:hover',
+            '.woocommerce .woocommerce-pagination .page-numbers:hover',
+            '.woocommerce .woocommerce-pagination .page-numbers:focus',
+            '.woocommerce .woocommerce-pagination .page-numbers.current',
+            '.pagination .page-numbers:hover',
+            '.pagination .page-numbers:focus',
+            '.pagination .page-numbers.current',
+            '.post-single .tags-links a:hover',
+            '.post-single .tags-links a:focus',
+
+            '.widget_pages ul li a:hover',
+            '.widget_pages ul li a:focus',
+            '.widget_nav_menu ul li a:hover',
+            '.widget_nav_menu ul li a:focus',
+            '.widget_meta ul li a:hover',
+            '.widget_meta ul li a:focus',
+            '.widget_archive ul li a:hover',
+            '.widget_archive ul li a:focus',
+            '.widget_product_categories ul li a:hover',
+            '.widget_product_categories ul li a:focus',
+            '.widget_categories ul li a:hover',
+            '.widget_categories ul li a:focus',
+            '.yith-woocompare-widget ul li a:hover',
+            '.yith-woocompare-widget ul li a:focus',
+            '.woocommerce ul.product_list_widget li a:hover',
+            '.widget_recent_comments ul li:hover a',
+            '.widget_recent_entries ul li:hover a',
+
+            '.uranus.tparrows:hover:before',
+            '.uranus.tparrows:hover:after',
+            '.team .team-attr .agency',
+            '.wrapper-comingsoon.style2 .coming-soon .wrap .value-time',
+            '.wrapper-comingsoon.style3 .coming-soon .wrap .value-time',
+            '.widget_kt_twitter ul li .kt-twitter-tool',
+
+            '.owl-carousel-kt.carousel-dark .owl-buttons > div:hover',
+            '.owl-carousel-kt.carousel-light .owl-buttons > div:hover',
+            '.woocommerce p.stars a:hover',
+            '.comment-actions a:hover',
+            '.comment-actions a:focus',
+            '.kt-aboutwidget-title',
+            '.kt-aboutwidget-socials a:hover',
+            '.menu-bars-outer .menu-bars-items ul li a:hover',
+            '.bag-products .bag-product .bag-product-title a:hover',
+            '.woocommerce .widget_price_filter .price_slider_amount .price_label span',
+            '.page-header .breadcrumbs a:hover',
+            '.woocommerce table.cart tbody td.product-name a:hover',
+            '.woocommerce table.cart tbody td.product-name a:focus',
+            '.widget_layered_nav ul li a:hover',
+            '#main-nav-tool li > a:hover',
+            '.woocommerce ul.shop-products h3 a:hover',
+            '.woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover',
+            '.woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus',
+            '.woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover:before',
+            '.woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus:before',
+            '.woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover:before',
+            '.woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus:before',
+            '.woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover',
+            '.woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus',
+            '.woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover:before',
+            '.woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus:before',
+            '.single-product-quickview .single-product-quickview-images .slick-arrow:hover:before',
+            '.single-product-quickview .single-product-quickview-images .slick-arrow:focus:before',
+
+            '.woocommerce .woocommerce-per-page:after',
+            '.woocommerce .woocommerce-ordering:after',
+            '.woocommerce .woocommerce-message .button.wc-forward:hover',
+            '.woocommerce-page .woocommerce-message .button.wc-forward:hover',
+            '.menu-bars-outer > a:hover',
+            '.woocommerce .widget_price_filter .price_slider_amount .button:hover',
+            '.woocommerce .widget_price_filter .price_slider_amount .button:focus',
+            '.entry-share-box a:hover',
+            '.woocommerce-page div.product .product_meta > span a:hover',
+            '.woocommerce div.product .product_meta > span a:hover',
+            '.woocommerce .star-rating span:before'
+        );
+        $css .= implode($selections_color, ',').'{color: '.$accent.';}';
+
+
+        $selections_colors_important = array('.social-background-empty.social-style-accent a', '.social-background-outline.social-style-accent a');
+        $css .= implode($selections_colors_important, ',').'{color: '.$accent.'!important;}';
+
+        $selections_bg = array(
+            '.woocommerce.compare-button a:hover',
+            '.woocommerce.compare-button a.add_to_wishlist:hover',
+            '.woocommerce .yith-wcwl-add-button a:hover',
+            '.woocommerce .yith-wcwl-add-button a.add_to_wishlist:hover',
+            '.woocommerce .yith-wcwl-wishlistaddedbrowse a:hover',
+            '.woocommerce .yith-wcwl-wishlistaddedbrowse a.add_to_wishlist:hover',
+            '.woocommerce .yith-wcwl-wishlistexistsbrowse a:hover',
+            '.woocommerce .yith-wcwl-wishlistexistsbrowse a.add_to_wishlist:hover',
+            '.woocommerce .yith-wcwl-add-to-wishlist .ajax-loading',
+            '.woocommerce.compare-button:hover',
+            '.woocommerce .yith-wcwl-add-button:hover',
+            '.woocommerce .yith-wcwl-wishlistaddedbrowse:hover',
+            '.woocommerce .yith-wcwl-wishlistexistsbrowse:hover',
+            '.woocommerce ul.shop-products .added_to_cart:hover',
+            '.woocommerce ul.shop-products .button:hover',
+            '.woocommerce ul.shop-products .product-quick-view:hover',
+            '.woocommerce mark, .woocommerce .mark',
+            '.btn-accent',
+            '.woocommerce #respond input#submit:hover',
+            '.woocommerce a.button:hover',
+            '.woocommerce button.button:hover',
+            '.woocommerce input.button:hover',
+            '.woocommerce #respond input#submit.alt:hover',
+            '.woocommerce a.button.alt:hover',
+            '.woocommerce button.button.alt:hover',
+            '.woocommerce input.button.alt:hover',
+            '.woocommerce .woocommerce-pagination .page-numbers.current:before',
+            '.woocommerce .woocommerce-pagination .page-numbers.current:after',
+            '.pagination .page-numbers.current:before',
+            '.pagination .page-numbers.current:after',
+            '.woocommerce .widget_price_filter .ui-slider .ui-slider-range',
+            '.woocommerce .widget_price_filter .ui-slider .ui-slider-handle',
+            '.woocommerce .gridlist-toggle li a:hover',
+            '.woocommerce .gridlist-toggle li a.active',
+            '.woocommerce span.onsale',
+            '.btn-default:hover, .btn-default:focus, .btn-default:active',
+            '.widget_rss ul li:hover:after',
+            '.widget_recent_comments ul li:hover:after',
+            '.widget_recent_entries ul li:hover:after',
+
+            '.kt_flickr a:after',
+            '.owl-carousel-kt .owl-pagination .owl-page.active',
+            '.owl-carousel-kt .owl-pagination .owl-page:hover',
+            '#header-content-mobile .header-mobile-tools a.mobile-cart span',
+            '#cancel-comment-reply-link:hover',
+            'body .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar',
+            'body .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar',
+            'body .mCSB_scrollTools .mCSB_dragger:focus .mCSB_dragger_bar',
+            'body .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar',
+            '.woocommerce-category-products-tab ul.block-heading-tabs li a:before',
+            '.woocommerce-category-products-tab ul.block-heading-tabs li a:after',
+            '.menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a span:after',
+            '#back-to-top',
+            '.woocommerce-page div.product .cart .single_add_to_cart_button:hover',
+            '.woocommerce div.product .cart .single_add_to_cart_button:hover',
+            '.woocommerce-page div.product .cart .single_add_to_cart_button:focus',
+            '.woocommerce div.product .cart .single_add_to_cart_button:focus',
+
+            '#calendar_wrap table tbody td#today',
+            '#calendar_wrap table thead td#today',
+            '.widget_nav_menu ul li a:hover:after',
+            '.widget_pages ul li a:hover:after',
+            '.widget_product_categories ul li a:hover:after',
+            '.widget_categories ul li a:hover:after',
+            '.widget_archive ul li a:hover:after',
+            '.widget_meta ul li a:hover::after',
+            '.yith-woocompare-widget ul li a:hover:after',
+            '.kt-skill-wrapper .kt-skill-item-wrapper .kt-skill-bg-accent .kt-skill-bar',
+            '#main-nav-tool li.mini-cart > a span',
+            '#footer-area h3.widget-title:after',
+            '#search-fullwidth .searchform .postform',
+            '#footer-area h3.widget-title:before',
+            '.readmore-link:before',
+            '.readmore-link:after'
+        );
+        $css .= implode($selections_bg, ',').'{background: '.$accent.';}';
+
+        $selections_bg_important = array('.social-background-fill.social-style-accent a');
+        $css .= implode($selections_bg_important, ',').'{background: '.$accent.'!important;}';
+
+
+        $selections_border = array(
+            '.woocommerce #respond input#submit:hover',
+            '.woocommerce a.button:hover',
+            '.woocommerce button.button:hover',
+            '.woocommerce input.button:hover',
+            '.woocommerce #respond input#submit.alt:hover',
+            '.woocommerce a.button.alt:hover',
+            '.woocommerce button.button.alt:hover',
+            '.woocommerce input.button.alt:hover',
+
+            '.woocommerce-page div.product .cart .single_add_to_cart_button:hover',
+            '.woocommerce div.product .cart .single_add_to_cart_button:hover',
+            '.woocommerce-page div.product .cart .single_add_to_cart_button:focus',
+            '.woocommerce div.product .cart .single_add_to_cart_button:focus',
+
+            'blockquote.blockquote-reverse, .blockquote.blockquote-reverse',
+            '.social-background-empty.social-style-accent a',
+            '.social-background-outline.social-style-accent a',
+            '.owl-carousel-kt.carousel-dark .owl-buttons > div:hover',
+            '.owl-carousel-kt.carousel-light .owl-buttons > div:hover',
+            'div.swatch-wrapper.selected, div.swatch-wrapper:hover',
+            '.btn-accent',
+            '.woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-slide.slick-current',
+            '.woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-slide.slick-current',
+            '.woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover',
+            '.woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus',
+            '.woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover',
+            '.woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus',
+            '.single-product-quickview .single-product-quickview-images .slick-arrow:hover',
+            '.single-product-quickview .single-product-quickview-images .slick-arrow:focus',
+            '.post-single .tags-links a:hover',
+            '.post-single .tags-links a:focus',
+            'blockquote, .blockquote',
+            '.comment-actions a:hover',
+            '.comment-actions a:focus',
+            '.woocommerce .gridlist-toggle li a:hover',
+            '.woocommerce .gridlist-toggle li a.active',
+            '.btn-default:hover, .btn-default:focus, .btn-default:active',
+            '.menu-bars-outer .menu-bars-items',
+            '.mini-cart .shopping-bag-wrapper'
+        );
+        $css .= implode($selections_border, ',').'{border-color: '.$accent.';}';
+
+
+        $selections_shadow = array(
+            '.menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li.active span',
+            '.menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:hover span',
+            '.menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:focus span'
+        );
+        $css .= sprintf(
+            '%1$s{box-shadow: 0 0 0 1px %2$s inset;-webkit-box-shadow: 0 0 0 1px %2$s inset;-moz-box-shadow: 0 0 0 1px %2$s inset; }',
+            implode($selections_shadow, ','),
+            $accent
+        );
+    }
+
+    $color_first_loader = kt_option('color_first_loader', $accent);
+    $css .= '.kt_page_loader.style-1 .page_loader_inner{border-color: '.$color_first_loader.';}';
+    $css .= '.kt_page_loader.style-1 .kt_spinner{background-color: '.$color_first_loader.';}';
+
+    $is_shop = false;
+    if(is_archive()){
+        if(kt_is_wc()){
+            if(is_shop()){
+                $is_shop = true;
+            }
+        }
+    }
+
+    if(is_page() || is_singular() || $is_shop){
+
+        global $post;
+        $post_id = $post->ID;
+        if($is_shop){
+            $post_id = get_option( 'woocommerce_shop_page_id' );
+        }
+
+        $pageh_spacing = rwmb_meta('_kt_page_top_spacing', array(), $post_id);
+        if($pageh_spacing != ''){
+            $css .=  '#content{padding-top: '.$pageh_spacing.';}';
+        }
+        $pageh_spacing = rwmb_meta('_kt_page_bottom_spacing', array(), $post_id);
+        if($pageh_spacing != ''){
+            $css .= '#content{padding-bottom:'.$pageh_spacing.';}';
+        }
+
+        $pageh_top = rwmb_meta('_kt_page_header_top', array(), $post_id);
+        if($pageh_top != ''){
+            $css .=  'div.page-header{padding-top: '.$pageh_top.';}';
+        }
+
+        $pageh_bottom = rwmb_meta('_kt_page_header_bottom', array(), $post_id);
+        if($pageh_bottom != ''){
+            $css .=  'div.page-header{padding-bottom: '.$pageh_bottom.';}';
+        }
+
+        $pageh_title_color = rwmb_meta('_kt_page_header_title_color', array(), $post_id);
+        if($pageh_title_color != ''){
+            $css .= 'div.page-header h1.page-header-title{color:'.$pageh_title_color.';}';
+            $css .= '.page-header h1.page-header-title::before, .page-header h1.page-header-title::after{background:'.$pageh_title_color.';}';
+        }
+
+        $pageh_subtitle_color = rwmb_meta('_kt_page_header_subtitle_color', array(), $post_id);
+        if($pageh_subtitle_color != ''){
+            $css .= 'div.page-header .page-header-subtitle{color:'.$pageh_subtitle_color.';}';
+        }
+
+        $pageh_breadcrumbs_color = rwmb_meta('_kt_page_header_breadcrumbs_color', array(), $post_id);
+        if($pageh_breadcrumbs_color != ''){
+            $css .= 'div.page-header .breadcrumbs,div.page-header .breadcrumbs a{color:'.$pageh_breadcrumbs_color.';}';
+        }
+    }
+
+
+    if($navigation_space = kt_option('navigation_space', 30)){
+        $css .= '#main-navigation > li{margin-left: '.$navigation_space.'px;}#main-navigation > li:first-child {margin-left: 0;}#main-navigation > li:last-child {margin-right: 0;}';
+    }
+    if($navigation_color_hover = kt_option('navigation_color_hover')){
+        $css .= '#main-navigation > li > a:before, #main-navigation > li > a:after{background: '.$navigation_color_hover.';}';
+    }
+    if($mega_title_color = kt_option('mega_title_color')){
+        $css .= '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a:before, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a:after, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span:before, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span:after, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > .widget-title:before, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > .widget-title:after{background-color: '.$mega_title_color.';}';
+    }
+    if($mega_title_color_hover = kt_option('mega_title_color_hover')){
+        $css .= '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a:hover:before, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a:hover:after{background-color: '.$mega_title_color_hover.';}';
+    }
+
+    $navigation_height = kt_option('navigation_height');
+    if(!$navigation_height['height'] || $navigation_height['height'] == 'px'){
+        $navigation_height['height'] = 60;
+    }
+    $css .= '#main-navigation > li{line-height: '.intval($navigation_height['height']).'px;}';
+    $css .= '.header-container.is-sticky.sticky-header-down .nav-container .nav-container-inner,.header-container.header-layout2.is-sticky.sticky-header-down #header-content{top: -'.intval($navigation_height['height']).'px;}';
+
+    $header_sticky_opacity = kt_option('header_sticky_opacity', 0.8);
+    $css .= '.header-sticky-background{opacity:'.$header_sticky_opacity.';}';
+
+    $navigation_height_fixed = kt_option('navigation_height_fixed');
+
+    if(!$navigation_height_fixed['height'] || $navigation_height_fixed['height'] == 'px'){
+        $navigation_height_fixed['height'] = 60;
+    }
+    $css .= '.header-container.is-sticky #main-navigation > li{line-height: '.intval($navigation_height_fixed['height']).'px;}';
+
+    wp_add_inline_style( 'kt-style', $css );
+
+}
+add_action('wp_enqueue_scripts', 'kt_setting_script');
+
+
+/**
  * Add scroll to top
  *
  */
@@ -202,13 +544,7 @@ if ( ! function_exists( 'kt_post_thumbnail_image' ) ) :
             return;
         }
         $class = 'entry-thumb';
-        $attrs = '';
-        if( $link ){
-            $tag = 'a';
-            $attrs .= 'href="'.get_the_permalink().'"';
-        } else{
-            $tag = 'div';
-        }
+
         if(!has_post_thumbnail() && $placeholder){
             $class .= ' no-image';
         }
@@ -217,8 +553,19 @@ if ( ! function_exists( 'kt_post_thumbnail_image' ) ) :
             ob_start();
         }
 
+        $attrs = array(
+            'class' =>  'class="'.esc_attr($class).'"'
+        );
+
+        if( $link ){
+            $tag = 'a';
+            $attrs['href'] = 'href="'.get_the_permalink().'"';
+        } else{
+            $tag = 'div';
+        }
+
         if(has_post_thumbnail() || $placeholder){ ?>
-            <<?php echo $tag ?> <?php echo $attrs ?> class="<?php echo $class; ?>">
+            <<?php echo esc_attr($tag) ?> <?php echo implode($attrs, ' ') ?>>
             <?php if(has_post_thumbnail()){ ?>
                 <?php the_post_thumbnail( $size, array( 'alt' => get_the_title(), 'class' => $class_img ) ); ?>
             <?php }elseif($placeholder){ ?>
@@ -232,7 +579,7 @@ if ( ! function_exists( 'kt_post_thumbnail_image' ) ) :
                     )
                 ?>
             <?php } ?>
-            </<?php echo $tag ?>><!-- .entry-thumb -->
+            </<?php echo esc_attr($tag) ?>><!-- .entry-thumb -->
         <?php }
 
         if(!$echo){
@@ -440,39 +787,27 @@ if ( ! function_exists( 'kt_post_nav' ) ) :
     /**
      * Display navigation to next/previous set of posts when applicable.
      */
-    function kt_post_nav($post_id = null) {
+    function kt_post_nav( ) {
         // Don't print empty markup if there's nowhere to navigate.
         $previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
         $next     = get_adjacent_post( false, '', false );
 
         if ( ! $next && ! $previous ) return;
-
         ?>
         <nav class="navigation post-navigation clearfix">
             <div class="nav-links">
                 <?php
-                    if( get_option( 'page_for_posts' ) ){
-                        $link_blog = get_permalink( get_option( 'page_for_posts' ) );
-                    }else{
-                        $link_blog = get_site_url();
-                    }
-                    echo '<div class="nav-blog meta-nav"><a href="'.$link_blog.'"><span>
-							<i class="b1 c1"></i><i class="b1 c2"></i><i class="b1 c3"></i>
-							<i class="b2 c1"></i><i class="b2 c2"></i><i class="b2 c3"></i>
-							<i class="b3 c1"></i><i class="b3 c2"></i><i class="b3 c3"></i>
-						</span></a></div>';
 
-                    
                     if(!get_previous_post_link('&laquo; %link', '', true)){
-                        printf('<div class="nav-previous meta-nav"><span>%s</span></div>', esc_html__( '<span>Previous Article</span>', 'wingman' ));
+                        printf('<div class="nav-previous meta-nav"><span>%s</span></div>', sprintf('<span>%s</span>', esc_html__( 'Previous Article', 'wingman' ) ) );
                     }else{
-                        previous_post_link('<div class="nav-previous meta-nav">%link</div>', esc_html__( '<span>Previous Article</span>', 'wingman' ), TRUE);
+                        previous_post_link('<div class="nav-previous meta-nav">%link</div>', sprintf('<span>%s</span>', esc_html__( 'Previous Article', 'wingman' ) ), TRUE);
                     }
 
                     if(!get_next_post_link('&laquo; %link', '', true)){
-                        printf('<div class="nav-next meta-nav"><span>%s</span></div>', esc_html__( '<span>Next Article</span>', 'wingman' ));
+                        printf('<div class="nav-next meta-nav"><span>%s</span></div>', sprintf('<span>%s</span>', esc_html__( 'Next Article', 'wingman' ) ) );
                     }else{
-                        next_post_link('<div class="nav-next meta-nav">%link</div>', esc_html__( '<span>Next Article</span>', 'wingman' ), TRUE);
+                        next_post_link('<div class="nav-next meta-nav">%link</div>', sprintf('<span>%s</span>', esc_html__( 'Next Article', 'wingman' )), TRUE);
                     }
                 ?>
             </div><!-- .nav-links -->
@@ -689,15 +1024,15 @@ if ( ! function_exists( 'kt_like_post' ) ){
             $class .= ' liked';
         }
 
-        $output = sprintf(
-            '<a data-id="%s" href="%s" class="%s">%s</a>',
+        printf(
+            '%s<a data-id="%s" href="%s" class="%s">%s</a>%s',
+            $before,
             $post_id,
             get_the_permalink($post_id)."#".$post_id,
             $class,
-            $text
+            $text,
+            $after
         );
-
-        echo $before . $output . $after;
     }
 }
 
@@ -739,34 +1074,35 @@ if ( ! function_exists( 'kt_author_box' ) ) :
                 <?php if($facebook || $twitter || $pinterest || $googleplus || $instagram || $tumblr || $url){ ?>
                 <p class="author-social">
                     <?php if($facebook){ ?>
-                        <a href="<?php echo $facebook; ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="<?php echo esc_url($facebook); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
                     <?php } ?>
                     <?php if($twitter){ ?>
-                        <a href="http://www.twitter.com/<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="http://www.twitter.com/<?php echo esc_attr($twitter); ?>" target="_blank"><i class="fa fa-twitter"></i></a>
                     <?php } ?>
                     <?php if($pinterest){ ?>
-                        <a href="http://www.pinterest.com/<?php echo $pinterest; ?>" target="_blank"><i class="fa fa-pinterest"></i></a>
+                        <a href="http://www.pinterest.com/<?php echo esc_attr($pinterest); ?>" target="_blank"><i class="fa fa-pinterest"></i></a>
                     <?php } ?>
                     <?php if($googleplus){ ?>
-                        <a href="<?php echo $googleplus; ?>" target="_blank"><i class="fa fa-google-plus"></i></a>
+                        <a href="<?php echo esc_url($googleplus); ?>" target="_blank"><i class="fa fa-google-plus"></i></a>
                     <?php } ?>
                     <?php if($instagram){ ?>
-                        <a href="http://instagram.com/<?php echo $instagram; ?>" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="http://instagram.com/<?php echo esc_attr($instagram); ?>" target="_blank"><i class="fa fa-instagram"></i></a>
                     <?php } ?>
                     <?php if($tumblr){ ?>
-                        <a href="http://<?php echo $instagram; ?>.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a>
+                        <a href="http://<?php echo esc_attr($instagram); ?>.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a>
                     <?php } ?>
                     <?php if($url){ ?>
-                        <a href="<?php echo $url; ?>" target="_blank"><i class="fa fa-globe"></i></a>
+                        <a href="<?php echo esc_url($url); ?>" target="_blank"><i class="fa fa-globe"></i></a>
                     <?php } ?>
                 </p>
                 <?php } ?>
                 <div class="author-bio">
-                    <?php if($description = get_the_author_meta('description')){ ?>
-                        <p class="author-description-content"><?php echo $description; ?></p>
-                    <?php } ?>
+                    <?php
+                    if($description = get_the_author_meta('description')){
+                        printf('<p class="author-description-content">%s</p>', $description);
+                    }
+                    ?>
                 </div>
-
             </div><!-- .author-description -->
         </div><!-- .author-info -->
 
@@ -797,43 +1133,42 @@ if( ! function_exists( 'kt_share_box' ) ){
             if($val){
                 if($key == 'facebook'){
                     // Facebook
-                    $html .= '<a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.facebook.com/sharer.php?s=100&amp;p[title]=' . $title . '&amp;p[url]=' . $link.'\', \'sharer\', \'toolbar=0,status=0,width=620,height=280\');popUp.focus();return false;">';
+                    $html .= '<a class="'.esc_attr($style).'" href="#" onclick="popUp=window.open(\'http://www.facebook.com/sharer.php?s=100&amp;p[title]=' . $title . '&amp;p[url]=' . $link.'\', \'sharer\', \'toolbar=0,status=0,width=620,height=280\');popUp.focus();return false;">';
                     $html .= '<i class="fa fa-facebook"></i>';
                     $html .= '</a>';
                 }elseif($key == 'twitter'){
                     // Twitter
-                    $html .= '<a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://twitter.com/home?status=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false;">';
+                    $html .= '<a class="'.esc_attr($style).'" href="#" onclick="popUp=window.open(\'http://twitter.com/home?status=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false;">';
                     $html .= '<i class="fa fa-twitter"></i>';
                     $html .= '</a>';
                 }elseif($key == 'google_plus'){
                     // Google plus
-                    $html .= '<a class="'.$style.'" href="#" onclick="popUp=window.open(\'https://plus.google.com/share?url=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                    $html .= '<a class="'.esc_attr($style).'" href="#" onclick="popUp=window.open(\'https://plus.google.com/share?url=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
                     $html .= '<i class="fa fa-google-plus"></i>';
                     $html .= "</a>";
                 }elseif($key == 'pinterest'){
                     // Pinterest
-                    $html .= '<a class="share_link" href="#" onclick="popUp=window.open(\'http://pinterest.com/pin/create/button/?url=' . $link . '&amp;description=' . $title . '&amp;media=' . urlencode($image[0]) . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                    $html .= '<a class="'.esc_attr($style).'" href="#" onclick="popUp=window.open(\'http://pinterest.com/pin/create/button/?url=' . $link . '&amp;description=' . $title . '&amp;media=' . urlencode($image[0]) . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
                     $html .= '<i class="fa fa-pinterest"></i>';
                     $html .= "</a>";
                 }elseif($key == 'linkedin'){
                     // linkedin
-                    $html .= '<a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://linkedin.com/shareArticle?mini=true&amp;url=' . $link . '&amp;title=' . $title. '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                    $html .= '<a class="'.esc_attr($style).'" href="#" onclick="popUp=window.open(\'http://linkedin.com/shareArticle?mini=true&amp;url=' . $link . '&amp;title=' . $title. '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
                     $html .= '<i class="fa fa-linkedin"></i>';
                     $html .= "</a>";
                 }elseif($key == 'tumblr'){
                     // Tumblr
-                    $html .= '<a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.tumblr.com/share/link?url=' . $link . '&amp;name=' . $title . '&amp;description=' . $excerpt . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                    $html .= '<a class="'.esc_attr($style).'" href="#" onclick="popUp=window.open(\'http://www.tumblr.com/share/link?url=' . $link . '&amp;name=' . $title . '&amp;description=' . $excerpt . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
                     $html .= '<i class="fa fa-tumblr"></i>';
                     $html .= "</a>";
                 }elseif($key == 'email'){
                     // Email
-                    $html .= '<a class="'.$style.'" href="mailto:?subject='.$title.'&amp;body='.$link.'">';
+                    $html .= '<a class="'.esc_attr($style).'" href="mailto:?subject='.$title.'&amp;body='.$link.'">';
                     $html .= '<i class="fa fa-envelope-o"></i>';
                     $html .= "</a>";
                 }
             }
         }
-
         if($html){
             printf(
                 '<div class="entry-share-box %s">%s</div>',
@@ -910,7 +1245,7 @@ if ( ! function_exists( 'kt_related_article' ) ) :
                         <?php
                             $blog_atts = $blog_atts_posts;
                         ?>
-                        <div class="article-post-item <?php echo $classes ?>">
+                        <div class="article-post-item <?php echo esc_attr($classes) ?>">
                             <?php kt_get_template_part( 'templates/blog/layout/content', get_post_format(), $blog_atts); ?>
                         </div><!-- .article-post-item -->
                     <?php $i++; endwhile; ?>
@@ -937,356 +1272,3 @@ if(!function_exists('kt_setting_script_footer')){
     add_action('wp_footer', 'kt_setting_script_footer', 100);
 }
 
-/**
- * Theme Custom CSS
- *
- * @since       1.0
- * @return      void
- * @access      public
- */
-function kt_setting_script() {
-
-    $advanced_css = kt_option('advanced_editor_css');
-    $accent = kt_option('styling_accent', '#82c14f');
-    $styling_link = kt_option('styling_link');
-
-    ?>
-    <style id="kt-theme-custom-css" type="text/css">
-        <?php
-            echo $advanced_css;
-            if($styling_link['active']){
-                echo 'a:focus{color: '.$styling_link['active'].';}';
-            }
-        ?>
-
-        <?php if( $accent !='#82c14f' ){ ?>
-            ::-moz-selection{ background:<?php echo $accent; ?>;}
-            ::-webkit-selection{ background:<?php echo $accent; ?>;}
-            ::selection{ background:<?php echo $accent; ?>;}
-
-            .readmore-link,
-            .readmore-link:hover,
-            .testimonial-rate span:after,
-            .testimonial-carousel-skin-light .testimonial-item .testimonial-rate span::after,
-            .blog-posts .entry-title a:hover,
-            .woocommerce .woocommerce-pagination .page-numbers:hover,
-            .woocommerce .woocommerce-pagination .page-numbers:focus,
-            .woocommerce .woocommerce-pagination .page-numbers.current,
-            .pagination .page-numbers:hover,
-            .pagination .page-numbers:focus,
-            .pagination .page-numbers.current,
-            .post-single .tags-links a:hover,
-            .post-single .tags-links a:focus,
-
-            .widget_pages ul li a:hover,
-            .widget_pages ul li a:focus,
-            .widget_nav_menu ul li a:hover,
-            .widget_nav_menu ul li a:focus,
-            .widget_meta ul li a:hover,
-            .widget_meta ul li a:focus,
-            .widget_archive ul li a:hover,
-            .widget_archive ul li a:focus,
-            .widget_product_categories ul li a:hover,
-            .widget_product_categories ul li a:focus,
-            .widget_categories ul li a:hover,
-            .widget_categories ul li a:focus,
-            .yith-woocompare-widget ul li a:hover,
-            .yith-woocompare-widget ul li a:focus,
-            .woocommerce ul.product_list_widget li a:hover,
-            .widget_recent_comments ul li:hover a,
-            .widget_recent_entries ul li:hover a,
-
-            .uranus.tparrows:hover::before,
-            .uranus.tparrows:hover::after,
-            .team .team-attr .agency,
-            .wrapper-comingsoon.style2 .coming-soon .wrap .value-time,
-            .wrapper-comingsoon.style3 .coming-soon .wrap .value-time,
-            .widget_kt_twitter ul li .kt-twitter-tool,
-
-            .owl-carousel-kt.carousel-dark .owl-buttons > div:hover,
-            .owl-carousel-kt.carousel-light .owl-buttons > div:hover,
-            .woocommerce p.stars a:hover,
-            .comment-actions a:hover,
-            .comment-actions a:focus,
-            .kt-aboutwidget-title,
-            .kt-aboutwidget-socials a:hover,
-            .menu-bars-outer .menu-bars-items ul li a:hover,
-            .bag-products .bag-product .bag-product-title a:hover,
-            .woocommerce .widget_price_filter .price_slider_amount .price_label span,
-            .page-header .breadcrumbs a:hover,
-            .woocommerce table.cart tbody td.product-name a:hover,
-            .woocommerce table.cart tbody td.product-name a:focus,
-            .widget_layered_nav ul li a:hover,
-            #main-nav-tool li > a:hover,
-            .woocommerce ul.shop-products h3 a:hover,
-            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover,
-            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus,
-            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover::before,
-            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus::before,
-            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover::before,
-            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus::before,
-            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover,
-            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus,
-            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover::before,
-            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus::before,
-            .single-product-quickview .single-product-quickview-images .slick-arrow:hover::before,
-            .single-product-quickview .single-product-quickview-images .slick-arrow:focus::before,
-
-            .woocommerce .woocommerce-per-page::after,
-            .woocommerce .woocommerce-ordering::after,
-            .woocommerce .woocommerce-message .button.wc-forward:hover,
-            .woocommerce-page .woocommerce-message .button.wc-forward:hover,
-            .menu-bars-outer > a:hover,
-            .woocommerce .widget_price_filter .price_slider_amount .button:hover,
-            .woocommerce .widget_price_filter .price_slider_amount .button:focus,
-            .entry-share-box a:hover,
-            .woocommerce-page div.product .product_meta > span a:hover,
-            .woocommerce div.product .product_meta > span a:hover,
-            .woocommerce .star-rating span:before
-
-            {
-                color: <?php echo $accent; ?>;
-            }
-
-            .social-background-empty.social-style-accent a,
-            .social-background-outline.social-style-accent a{
-                color: <?php echo $accent; ?>!important;
-            }
-
-
-            .woocommerce.compare-button a:hover,
-            .woocommerce.compare-button a.add_to_wishlist:hover,
-            .woocommerce .yith-wcwl-add-button a:hover,
-            .woocommerce .yith-wcwl-add-button a.add_to_wishlist:hover,
-            .woocommerce .yith-wcwl-wishlistaddedbrowse a:hover,
-            .woocommerce .yith-wcwl-wishlistaddedbrowse a.add_to_wishlist:hover,
-            .woocommerce .yith-wcwl-wishlistexistsbrowse a:hover,
-            .woocommerce .yith-wcwl-wishlistexistsbrowse a.add_to_wishlist:hover,
-            .woocommerce .yith-wcwl-add-to-wishlist .ajax-loading,
-            .woocommerce.compare-button:hover,
-            .woocommerce .yith-wcwl-add-button:hover,
-            .woocommerce .yith-wcwl-wishlistaddedbrowse:hover,
-            .woocommerce .yith-wcwl-wishlistexistsbrowse:hover,
-            .woocommerce ul.shop-products .added_to_cart:hover,
-            .woocommerce ul.shop-products .button:hover,
-            .woocommerce ul.shop-products .product-quick-view:hover,
-            .woocommerce mark, .woocommerce .mark,
-            .btn-accent,
-            .woocommerce #respond input#submit:hover,
-            .woocommerce a.button:hover,
-            .woocommerce button.button:hover,
-            .woocommerce input.button:hover,
-            .woocommerce #respond input#submit.alt:hover,
-            .woocommerce a.button.alt:hover,
-            .woocommerce button.button.alt:hover,
-            .woocommerce input.button.alt:hover,
-            .woocommerce .woocommerce-pagination .page-numbers.current::before,
-            .woocommerce .woocommerce-pagination .page-numbers.current::after,
-            .pagination .page-numbers.current::before,
-            .pagination .page-numbers.current::after,
-            .woocommerce .widget_price_filter .ui-slider .ui-slider-range,
-            .woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
-            .woocommerce .gridlist-toggle li a:hover,
-            .woocommerce .gridlist-toggle li a.active,
-            .woocommerce span.onsale,
-            .btn-default:hover, .btn-default:focus, .btn-default:active,
-            .widget_rss ul li:hover::after,
-            .widget_recent_comments ul li:hover::after,
-            .widget_recent_entries ul li:hover::after,
-
-            .kt_flickr a::after,
-            .owl-carousel-kt .owl-pagination .owl-page.active,
-            .owl-carousel-kt .owl-pagination .owl-page:hover,
-            #header-content-mobile .header-mobile-tools a.mobile-cart span,
-            #cancel-comment-reply-link:hover,
-            body .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
-            body .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
-            body .mCSB_scrollTools .mCSB_dragger:focus .mCSB_dragger_bar,
-            body .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
-            .woocommerce-category-products-tab ul.block-heading-tabs li a::before,
-            .woocommerce-category-products-tab ul.block-heading-tabs li a::after,
-            .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a span::after,
-            #back-to-top,
-            .woocommerce-page div.product .cart .single_add_to_cart_button:hover,
-            .woocommerce div.product .cart .single_add_to_cart_button:hover,
-            .woocommerce-page div.product .cart .single_add_to_cart_button:focus,
-            .woocommerce div.product .cart .single_add_to_cart_button:focus,
-
-            #calendar_wrap table tbody td#today,
-            #calendar_wrap table thead td#today,
-            .widget_nav_menu ul li a:hover::after,
-            .widget_pages ul li a:hover::after,
-            .widget_product_categories ul li a:hover::after,
-            .widget_categories ul li a:hover::after,
-            .widget_archive ul li a:hover::after,
-            .widget_meta ul li a:hover::after,
-            .yith-woocompare-widget ul li a:hover::after,
-            .kt-skill-wrapper .kt-skill-item-wrapper .kt-skill-bg-accent .kt-skill-bar,
-            #main-nav-tool li.mini-cart > a span,
-            #footer-area h3.widget-title:after,
-            #search-fullwidth .searchform .postform,
-            #footer-area h3.widget-title:before,
-            .readmore-link:before,
-            .readmore-link:after
-            {
-                background-color: <?php echo $accent; ?>;
-            }
-
-            .social-background-fill.social-style-accent a{
-                background-color: <?php echo $accent; ?>!important;
-            }
-
-            .woocommerce #respond input#submit:hover,
-            .woocommerce a.button:hover,
-            .woocommerce button.button:hover,
-            .woocommerce input.button:hover,
-            .woocommerce #respond input#submit.alt:hover,
-            .woocommerce a.button.alt:hover,
-            .woocommerce button.button.alt:hover,
-            .woocommerce input.button.alt:hover,
-
-            .woocommerce-page div.product .cart .single_add_to_cart_button:hover,
-            .woocommerce div.product .cart .single_add_to_cart_button:hover,
-            .woocommerce-page div.product .cart .single_add_to_cart_button:focus,
-            .woocommerce div.product .cart .single_add_to_cart_button:focus,
-
-            blockquote.blockquote-reverse, .blockquote.blockquote-reverse,
-            .social-background-empty.social-style-accent a,
-            .social-background-outline.social-style-accent a,
-            .owl-carousel-kt.carousel-dark .owl-buttons > div:hover,
-            .owl-carousel-kt.carousel-light .owl-buttons > div:hover,
-            div.swatch-wrapper.selected, div.swatch-wrapper:hover,
-            .btn-accent,
-            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-slide.slick-current,
-            .woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-slide.slick-current,
-            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover,
-            .woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus,
-            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover,
-            .woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus,
-            .single-product-quickview .single-product-quickview-images .slick-arrow:hover,
-            .single-product-quickview .single-product-quickview-images .slick-arrow:focus,
-            .post-single .tags-links a:hover,
-            .post-single .tags-links a:focus,
-            blockquote, .blockquote,
-            .comment-actions a:hover,
-            .comment-actions a:focus,
-            .woocommerce .gridlist-toggle li a:hover,
-            .woocommerce .gridlist-toggle li a.active,
-            .btn-default:hover, .btn-default:focus, .btn-default:active,
-            .menu-bars-outer .menu-bars-items,
-            .mini-cart .shopping-bag-wrapper{
-                border-color: <?php echo $accent; ?>;
-            }
-
-            .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li.active span,
-            .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:hover span,
-            .menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:focus span{
-                box-shadow: 0 0 0 1px <?php echo $accent; ?> inset;
-                -webkit-box-shadow: 0 0 0 1px <?php echo $accent; ?> inset;
-                -moz-box-shadow: 0 0 0 1px <?php echo $accent; ?> inset;
-                -ms-box-shadow: 0 0 0 1px <?php echo $accent; ?> inset;
-            }
-
-        <?php } ?>
-        <?php
-            $color_first_loader = kt_option('color_first_loader', $accent);
-            echo '.kt_page_loader.style-1 .page_loader_inner{border-color: '.$color_first_loader.';}';
-            echo '.kt_page_loader.style-1 .kt_spinner{background-color: '.$color_first_loader.';}';
-
-
-
-
-            $is_shop = false;
-            if(is_archive()){
-                if(kt_is_wc()){
-                    if(is_shop()){
-                        $is_shop = true;
-                    }
-                }
-            }
-
-            if(is_page() || is_singular() || $is_shop){
-
-                global $post;
-                $post_id = $post->ID;
-                if($is_shop){
-                    $post_id = get_option( 'woocommerce_shop_page_id' );
-                }
-
-                $pageh_spacing = rwmb_meta('_kt_page_top_spacing', array(), $post_id);
-                if($pageh_spacing != ''){
-                    echo '#content{padding-top: '.$pageh_spacing.';}';
-                }
-                $pageh_spacing = rwmb_meta('_kt_page_bottom_spacing', array(), $post_id);
-                if($pageh_spacing != ''){
-                    echo '#content{padding-bottom:'.$pageh_spacing.';}';
-                }
-
-                $pageh_top = rwmb_meta('_kt_page_header_top', array(), $post_id);
-                if($pageh_top != ''){
-                    echo 'div.page-header{padding-top: '.$pageh_top.';}';
-                }
-
-                $pageh_bottom = rwmb_meta('_kt_page_header_bottom', array(), $post_id);
-                if($pageh_bottom != ''){
-                    echo 'div.page-header{padding-bottom: '.$pageh_bottom.';}';
-                }
-
-                $pageh_title_color = rwmb_meta('_kt_page_header_title_color', array(), $post_id);
-                if($pageh_title_color != ''){
-                    echo 'div.page-header h1.page-header-title{color:'.$pageh_title_color.';}';
-                    echo '.page-header h1.page-header-title::before, .page-header h1.page-header-title::after{background:'.$pageh_title_color.';}';
-                }
-
-                $pageh_subtitle_color = rwmb_meta('_kt_page_header_subtitle_color', array(), $post_id);
-                if($pageh_subtitle_color != ''){
-                    echo 'div.page-header .page-header-subtitle{color:'.$pageh_subtitle_color.';}';
-                }
-
-                $pageh_breadcrumbs_color = rwmb_meta('_kt_page_header_breadcrumbs_color', array(), $post_id);
-                if($pageh_breadcrumbs_color != ''){
-                    echo 'div.page-header .breadcrumbs,div.page-header .breadcrumbs a{color:'.$pageh_breadcrumbs_color.';}';
-                }
-            }
-
-            if($navigation_space = kt_option('navigation_space', 30)){
-                echo '#main-navigation > li{margin-left: '.$navigation_space.'px;}#main-navigation > li:first-child {margin-left: 0;}#main-navigation > li:last-child {margin-right: 0;}';
-            }
-            if($navigation_color_hover = kt_option('navigation_color_hover')){
-                echo '#main-navigation > li > a:before, #main-navigation > li > a:after{background: '.$navigation_color_hover.';}';
-            }
-            if($mega_title_color = kt_option('mega_title_color')){
-                echo '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a:before, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a:after, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span:before, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span:after, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > .widget-title:before, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > .widget-title:after{background-color: '.$mega_title_color.';}';
-            }
-            if($mega_title_color_hover = kt_option('mega_title_color_hover')){
-                echo '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a:hover:before, #main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a:hover:after{background-color: '.$mega_title_color_hover.';}';
-            }
-
-            $navigation_height = kt_option('navigation_height');
-            if(!$navigation_height['height'] || $navigation_height['height'] == 'px'){
-                $navigation_height['height'] = 60;
-            }
-            echo '#main-navigation > li{line-height: '.intval($navigation_height['height']).'px;}';
-            echo '.header-container.is-sticky.sticky-header-down .nav-container .nav-container-inner,.header-container.header-layout2.is-sticky.sticky-header-down #header-content{top: -'.intval($navigation_height['height']).'px;}';
-
-            $header_sticky_opacity = kt_option('header_sticky_opacity', 0.8);
-            echo '.header-sticky-background{opacity:'.$header_sticky_opacity.';}';
-
-
-            $navigation_height_fixed = kt_option('navigation_height_fixed');
-
-
-            if(!$navigation_height_fixed['height'] || $navigation_height_fixed['height'] == 'px'){
-                $navigation_height_fixed['height'] = 60;
-            }
-            echo '.header-container.is-sticky #main-navigation > li{line-height: '.intval($navigation_height_fixed['height']).'px;}';
-
-
-
-        ?>
-    </style>
-    <?php
-    //wp_add_inline_style( 'kt-style', $css );
-
-}
-add_action('wp_head', 'kt_setting_script');

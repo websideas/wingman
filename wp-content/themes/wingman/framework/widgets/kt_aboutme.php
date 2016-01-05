@@ -114,7 +114,7 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
 
         ?>
         <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'wingman' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
         <div class="wrapper_kt_image_upload">
             <p style="text-align: center;">
                 <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr_e('Select your image', 'wingman') ?>" />
@@ -142,7 +142,7 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
                         $option_text[] = __('Crop', 'wingman');
                     }
                     ?>
-                    <option value="<?php echo $key; ?>"<?php selected( $instance['size'], $key ); ?>>
+                    <option value="<?php echo esc_attr($key); ?>"<?php selected( $instance['size'], $key ); ?>>
                         <?php echo implode(' - ', $option_text) ?>
                     </option>
                 <?php } ?>
@@ -150,11 +150,11 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
         </p>
 
         <p><label for="<?php echo $this->get_field_id( 'name' ); ?>"><?php _e( 'Name:', 'wingman' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'name' ); ?>" name="<?php echo $this->get_field_name( 'name' ); ?>" type="text" value="<?php echo $name; ?>" /></p>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'name' ); ?>" name="<?php echo $this->get_field_name( 'name' ); ?>" type="text" value="<?php echo esc_attr($name); ?>" /></p>
 
         <p>
             <label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php _e( 'Description:', 'wingman' ); ?></label>
-            <textarea class="widefat" rows="5" cols="20" id="<?php echo $this->get_field_id('description'); ?>" name="<?php echo $this->get_field_name('description'); ?>"><?php echo $instance['description'] ?></textarea></p>
+            <textarea class="widefat" rows="5" cols="20" id="<?php echo $this->get_field_id('description'); ?>" name="<?php echo $this->get_field_name('description'); ?>"><?php echo esc_textarea($instance['description']); ?></textarea></p>
 
         <?php
             $socials = array(
@@ -178,14 +178,14 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
             <ul class="kt-socials-lists clearfix">
                 <?php foreach($socials as $key => $social){ ?>
                     <?php $class = (in_array($key, $arr_val)) ? 'selected' : ''; ?>
-                    <li data-type="<?php echo $key; ?>" class="<?php echo $class; ?>"><i class="<?php echo $social; ?>"></i><span></span></li>
+                    <li data-type="<?php echo esc_attr($key); ?>" class="<?php echo esc_attr($class); ?>"><i class="<?php echo esc_attr($social); ?>"></i><span></span></li>
                 <?php } ?>
             </ul><!-- .kt-socials-lists -->
             <ul class="kt-socials-profiles clearfix">
             <?php
                 if(count($arr_val)){
                     foreach($arr_val as $item){ ?>
-                        <li data-type="<?php echo $item; ?>"><i class="<?php echo $socials[$item]; ?>"></i><span></span></li>
+                        <li data-type="<?php echo esc_attr($item); ?>"><i class="<?php echo esc_attr($socials[$item]); ?>"></i><span></span></li>
                     <?php }
                 }
             ?>

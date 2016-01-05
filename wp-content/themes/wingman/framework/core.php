@@ -55,13 +55,6 @@ require KT_FW_DIR . 'functions.php';
 require KT_FW_DIR . 'helpers.php';
 
 /**
- * Breadcrumbs
- *
- */
-require KT_FW_DIR . 'breadcrumbs.php';
-
-
-/**
  * get custom walker for wp_nav_menu
  *
  */

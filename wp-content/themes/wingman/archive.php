@@ -63,7 +63,8 @@ get_header(); ?>
                         }else{
                             $path = 'templates/blog/layout/content';
                         }
-                        
+
+                        $page_animation = kt_option( 'page_animation' );
                         $class_animation = ( $page_animation == 1 && ( $settings['blog_type'] == 'grid' || $settings['blog_type'] == 'zigzag' ) ) ? 'animation-effect' : '';
                         $data_animation = ( $page_animation == 1 && ( $settings['blog_type'] == 'grid' || $settings['blog_type'] == 'zigzag' ) ) ? 'data-animation="fadeInUp"' : '';
                         

@@ -30,15 +30,23 @@ class WP_Widget_KT_Image extends WP_Widget {
                 echo $args['before_title'] . $title . $args['after_title'];
             }
 
-            echo "<div class='kt-image-content text-".$instance['align'].">";
+
+            $image =  "<img src='".$attachment['url']."' alt='".esc_attr($attachment['alt'])."' title='".esc_attr($attachment['title'])."'/>";
             if($instance['link']){
-                echo "<a href='".esc_attr($instance['link'])."' target='".esc_attr($instance['target'])."'>";
+                $image = sprintf(
+                    '<a href="%s" target="%s">%s</a>',
+                    esc_attr($instance['link']),
+                    esc_attr($instance['target']),
+                    $image
+                );
             }
-            echo "<img src='".$attachment['url']."' alt='".esc_attr($attachment['alt'])."' title='".esc_attr($attachment['title'])."'/>";
-            if($instance['link']){
-                echo "</a>";
-            }
-            echo "</div>";
+
+            printf(
+                '<div class="kt-image-content text-%s">%s</div>',
+                $instance['align'],
+                $image
+            );
+
     		echo $args['after_widget'];
 		}
 	}
@@ -73,7 +81,7 @@ class WP_Widget_KT_Image extends WP_Widget {
 		
 	?>
         <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'wingman' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
         <div class="wrapper_kt_image_upload">
             <p style="text-align: center;">
                 <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr_e('Select your image', 'wingman') ?>" />

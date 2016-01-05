@@ -32,51 +32,51 @@ class WPBakeryShortCode_Contact_Info extends WPBakeryShortCode {
 }
 
 vc_map( array(
-    "name" => __( "Contact info", 'wingman'),
+    "name" => esc_html__( "Contact info", 'wingman'),
     "base" => "contact_info",
-    "category" => __('by Theme', 'wingman' ),
-    "description" => __( "Contact info", 'wingman'),
+    "category" => esc_html__('by Theme', 'wingman' ),
+    "description" => esc_html__( "Contact info", 'wingman'),
     "params" => array(
         array(
             "type" => "textfield",
-            "heading" => __( "Title", 'wingman' ),
+            "heading" => esc_html__( "Title", 'wingman' ),
             "param_name" => "title",
             "description" => '',
             "admin_label" => true,
         ),
         array(
             "type" => "textfield",
-            "heading" => __( "Address", 'wingman' ),
+            "heading" => esc_html__( "Address", 'wingman' ),
             "param_name" => "address",
             "description" => "",
             "admin_label" => true,
         ),
         array(
             "type" => "textfield",
-            "heading" => __( "Phone", 'wingman' ),
+            "heading" => esc_html__( "Phone", 'wingman' ),
             "param_name" => "phone",
             "description" => "",
             "admin_label" => true,
         ),
         array(
             "type" => "textfield",
-            "heading" => __( "Email", 'wingman' ),
+            "heading" => esc_html__( "Email", 'wingman' ),
             "param_name" => "email",
             "description" => "",
             "admin_label" => true,
         ),
         array(
             "type" => "textfield",
-            "heading" => __( "Extra class name", "js_composer"),
+            "heading" => esc_html__( "Extra class name", "js_composer"),
             "param_name" => "el_class",
-            "description" => __( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
+            "description" => esc_html__( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
         ),
         array(
 			'type' => 'css_editor',
-			'heading' => __( 'Css', 'js_composer' ),
+			'heading' => esc_html__( 'Css', 'js_composer' ),
 			'param_name' => 'css',
-			// 'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
-			'group' => __( 'Design options', 'js_composer' )
+			// 'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
+			'group' => esc_html__( 'Design options', 'js_composer' )
 		),
     ),
 ));

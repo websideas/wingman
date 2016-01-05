@@ -33,7 +33,7 @@
         </div>
         <?php if( $wishlist_meta['is_default'] != 1 && $is_user_owner ): ?>
             <div class="hidden-title-form">
-                <input type="text" value="<?php echo $page_title ?>" name="wishlist_name"/>
+                <input type="text" value="<?php echo esc_attr($page_title) ?>" name="wishlist_name"/>
                 <button>
                     <?php echo apply_filters( 'yith_wcwl_save_wishlist_title_icon', '<i class="fa fa-check"></i>' )?>
                     <?php _e( 'Save', 'yit' )?>
@@ -141,7 +141,7 @@
     	                $availability = $product->get_availability();
     	                $stock_status = $availability['class'];
     	                ?>
-                        <tr id="yith-wcwl-row-<?php echo $item['prod_id'] ?>" data-row-id="<?php echo $item['prod_id'] ?>">
+                        <tr id="yith-wcwl-row-<?php echo esc_attr($item['prod_id']) ?>" data-row-id="<?php echo esc_attr($item['prod_id']) ?>">
     	                    <?php if( $show_cb ) : ?>
     		                    <td class="product-checkbox">
     			                    <input type="checkbox" value="<?php echo esc_attr( $item['prod_id'] ) ?>" name="add_to_cart[]" <?php echo ( $product->product_type != 'simple' ) ? 'disabled="disabled"' : '' ?>/>

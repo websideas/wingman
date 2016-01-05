@@ -12,14 +12,9 @@
 
 <div class="col-md-8 <?php echo $class_offset; ?>">
     <article <?php post_class($classes); ?>>
+        <?php if($blog_atts['thumbnail_type'] == 'image'){ ?>
         <div class="col-md-6 col-sm-6">
-            <?php
-                if($blog_atts['thumbnail_type'] == 'image'){
-                    kt_post_thumbnail_image('kt_gird', 'img-responsive');
-                }else{
-                    kt_post_thumbnail('kt_gird', 'img-responsive');
-                }
-            ?>
+            <?php kt_post_thumbnail_image('kt_gird', 'img-responsive'); ?>
         </div>
         <div class="col-md-6 col-sm-6">
             <div class="entry-main-content">
@@ -70,5 +65,8 @@
                 </div><!-- .post-info -->
             </div><!-- .entry-main-content -->
         </div>
+        <?php }else{ ?>
+            <div class="col-md-12 col-sm-12"><?php kt_post_thumbnail('kt_gird', 'img-responsive'); ?></div>
+        <?php } ?>
     </article>
 </div>

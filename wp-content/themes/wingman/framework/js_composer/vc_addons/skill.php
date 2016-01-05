@@ -58,7 +58,7 @@ class WPBakeryShortCode_Skill extends WPBakeryShortCodesContainer {
 class WPBakeryShortCode_Skill_Item extends WPBakeryShortCode_VC_Custom_heading {
     protected function content($atts, $content = null) {
         $atts = shortcode_atts( array(
-            'title' => __( 'Title', 'js_composer' ),
+            'title' => esc_html__( 'Title', 'js_composer' ),
             'percent' => 88,
 
             'use_theme_fonts' => '',
@@ -210,9 +210,9 @@ class WPBakeryShortCode_Skill_Item extends WPBakeryShortCode_VC_Custom_heading {
 
 
 vc_map( array(
-    "name" => __("Skill", 'wingman'),
+    "name" => esc_html__("Skill", 'wingman'),
     "base" => "skill",
-    "category" => __('by Theme', 'wingman' ),
+    "category" => esc_html__('by Theme', 'wingman' ),
     "as_parent" => array('only' => 'skill_item'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
     "content_element" => true,
     "show_settings_on_create" => false,
@@ -220,43 +220,43 @@ vc_map( array(
 
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Style', 'js_composer' ),
+            'heading' => esc_html__( 'Style', 'js_composer' ),
             'param_name' => 'style',
             'value' => array(
-                __( 'Title before skill', 'js_composer' ) => 'before',
-                __( 'Title after skill', 'js_composer' ) => 'after',
+                esc_html__( 'Title before skill', 'js_composer' ) => 'before',
+                esc_html__( 'Title after skill', 'js_composer' ) => 'after',
             ),
-            'description' => __( 'Select skill background color.', 'js_composer' ),
+            'description' => esc_html__( 'Select skill background color.', 'js_composer' ),
             'admin_label' => true,
         ),
 
 
         array(
             'type' => 'checkbox',
-            'heading' => __( 'Options', 'js_composer' ),
+            'heading' => esc_html__( 'Options', 'js_composer' ),
             'param_name' => 'options',
             'value' => array(
-                __( 'Add Stripes?', 'js_composer' ) => 'striped',
-                __( 'Add animation? Will be visible with striped bars.', 'js_composer' ) => 'animated'
+                esc_html__( 'Add Stripes?', 'js_composer' ) => 'striped',
+                esc_html__( 'Add animation? Will be visible with striped bars.', 'js_composer' ) => 'animated'
             ),
         ),
 
         array(
             "type" => "kt_heading",
-            "heading" => __("Box style", "js_composer"),
+            "heading" => esc_html__("Box style", "js_composer"),
             "param_name" => "box_style",
         ),
         array(
             'type' => 'colorpicker',
-            'heading' => __( 'Background color', 'js_composer' ),
+            'heading' => esc_html__( 'Background color', 'js_composer' ),
             'param_name' => 'boxbgcolor',
-            'description' => __( 'Select background color for box.', 'js_composer' ),
+            'description' => esc_html__( 'Select background color for box.', 'js_composer' ),
             "value" => '#e3e3e3',
         ),
         array(
             "type" => "dropdown",
             "class" => "",
-            "heading" => __("Border Style", 'js_composer'),
+            "heading" => esc_html__("Border Style", 'js_composer'),
             "param_name" => "border_style",
             "value" => array(
                 "None"=> "",
@@ -272,7 +272,7 @@ vc_map( array(
         array(
             "type" => "colorpicker",
             "class" => "",
-            "heading" => __("Border Color", 'js_composer'),
+            "heading" => esc_html__("Border Color", 'js_composer'),
             "param_name" => "border_color",
             "value" => "",
             "description" => "",
@@ -282,7 +282,7 @@ vc_map( array(
         array(
             "type" => "kt_number",
             "class" => "",
-            "heading" => __("Border Width", 'js_composer'),
+            "heading" => esc_html__("Border Width", 'js_composer'),
             "param_name" => "border_size",
             "value" => 1,
             "min" => 1,
@@ -294,7 +294,7 @@ vc_map( array(
         array(
             "type" => "kt_number",
             "class" => "",
-            "heading" => __("Border Radius",'js_composer'),
+            "heading" => esc_html__("Border Radius",'js_composer'),
             "param_name" => "border_radius",
             "value" => 3,
             "min" => 0,
@@ -306,7 +306,7 @@ vc_map( array(
         array(
             "type" => "kt_number",
             "class" => "",
-            "heading" => __("Padding", 'js_composer'),
+            "heading" => esc_html__("Padding", 'js_composer'),
             "param_name" => "padding_box",
             "value" => 2,
             "min" => 0,
@@ -318,20 +318,20 @@ vc_map( array(
 
         array(
             "type" => "kt_heading",
-            "heading" => __("Skill style", "js_composer"),
+            "heading" => esc_html__("Skill style", "js_composer"),
             "param_name" => "skill_style",
         ),
         array(
             "type" => "kt_number",
             "class" => "",
-            "heading" => __("Bar Height", 'js_composer'),
+            "heading" => esc_html__("Bar Height", 'js_composer'),
             "param_name" => "height",
             "value" => 3,
             "suffix" => "px",
         ),
         array(
             "type" => "kt_number",
-            "heading" => __("Padding left",'js_composer'),
+            "heading" => esc_html__("Padding left",'js_composer'),
             "param_name" => "padding_left",
             "suffix" => "px",
             'value' => 0,
@@ -342,7 +342,7 @@ vc_map( array(
 
         array(
             "type" => "kt_number",
-            "heading" => __("Padding right",'js_composer'),
+            "heading" => esc_html__("Padding right",'js_composer'),
             "param_name" => "padding_right",
             "suffix" => "px",
             'value' => 0,
@@ -352,49 +352,49 @@ vc_map( array(
         ),
         array(
             "type" => "kt_heading",
-            "heading" => __("Other", 'wingman'),
+            "heading" => esc_html__("Other", 'wingman'),
             "param_name" => "other_",
         ),
         array(
             "type" => "textfield",
-            "heading" => __("Extra class name", "js_composer"),
+            "heading" => esc_html__("Extra class name", "js_composer"),
             "param_name" => "el_class",
-            "description" => __("If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer")
+            "description" => esc_html__("If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer")
         ),
 
 
         array(
             'type' => 'css_editor',
-            'heading' => __( 'Css', 'js_composer' ),
+            'heading' => esc_html__( 'Css', 'js_composer' ),
             'param_name' => 'css',
-            // 'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
-            'group' => __( 'Design options', 'js_composer' )
+            // 'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
+            'group' => esc_html__( 'Design options', 'js_composer' )
         ),
     ),
     "js_view" => 'VcColumnView'
 ) );
 // Add your Visual Composer logic here
 vc_map( array(
-    "name" => __( "Skill Item", 'wingman'),
+    "name" => esc_html__( "Skill Item", 'wingman'),
     "base" => "skill_item",
     "as_child" => array('only' => 'skill'),
     "content_element" => true,
     "params" => array(
         array(
             "type" => "textfield",
-            'heading' => __( 'Title', 'js_composer' ),
+            'heading' => esc_html__( 'Title', 'js_composer' ),
             'param_name' => 'title',
-            'value' => __( 'Title', 'js_composer' ),
+            'value' => esc_html__( 'Title', 'js_composer' ),
             "admin_label" => true,
         ),
         array(
             'type' => 'hidden',
-            'heading' => __( 'URL (Link)', 'js_composer' ),
+            'heading' => esc_html__( 'URL (Link)', 'js_composer' ),
             'param_name' => 'link',
         ),
         array(
             "type" => "kt_number",
-            "heading" => __("Percent", "js_composer"),
+            "heading" => esc_html__("Percent", "js_composer"),
             "param_name" => "percent",
             "admin_label" => true,
             "value" => 88,
@@ -409,39 +409,39 @@ vc_map( array(
 
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Background', 'js_composer' ),
+            'heading' => esc_html__( 'Background', 'js_composer' ),
             'param_name' => 'bgcolor',
             'value' => array(
-                __( 'Accent', 'js_composer' ) => 'accent',
-                __( 'Custom Color', 'js_composer' ) => 'custom',
-                __( 'Custom Gradient', 'js_composer' ) => 'gradient',
+                esc_html__( 'Accent', 'js_composer' ) => 'accent',
+                esc_html__( 'Custom Color', 'js_composer' ) => 'custom',
+                esc_html__( 'Custom Gradient', 'js_composer' ) => 'gradient',
             ),
-            'description' => __( 'Select skill background color.', 'js_composer' ),
+            'description' => esc_html__( 'Select skill background color.', 'js_composer' ),
             'admin_label' => true,
         ),
         array(
             'type' => 'colorpicker',
-            'heading' => __( 'Custom background color', 'js_composer' ),
+            'heading' => esc_html__( 'Custom background color', 'js_composer' ),
             'param_name' => 'custombgcolor',
-            'description' => __( 'Select custom background color for skill.', 'js_composer' ),
+            'description' => esc_html__( 'Select custom background color for skill.', 'js_composer' ),
             'dependency' => array( 'element' => 'bgcolor', 'value' => array( 'custom' ) ),
         ),
         array(
             'type' => 'colorpicker',
-            'heading' => __( 'Background color start', 'js_composer' ),
+            'heading' => esc_html__( 'Background color start', 'js_composer' ),
             'param_name' => 'gradient_start',
             'class' => 'gradient_start',
-            'description' => __( 'Select custom background color for skill.', 'js_composer' ),
+            'description' => esc_html__( 'Select custom background color for skill.', 'js_composer' ),
             'dependency' => array( 'element' => 'bgcolor', 'value' => array( 'gradient' ) ),
             'edit_field_class' => 'vc_col-sm-6 vc_column',
         ),
         array(
             'type' => 'colorpicker',
-            'heading' => __( 'Background color end', 'js_composer' ),
+            'heading' => esc_html__( 'Background color end', 'js_composer' ),
             'param_name' => 'gradient_end',
             'class' => 'gradient_end',
             'dependency' => array( 'element' => 'bgcolor', 'value' => array( 'gradient' ) ),
-            'description' => __( 'Select custom background color for skill.', 'js_composer' ),
+            'description' => esc_html__( 'Select custom background color for skill.', 'js_composer' ),
             'edit_field_class' => 'vc_col-sm-6 vc_column',
         ),
 
@@ -454,20 +454,20 @@ vc_map( array(
                     'font_size',
                     'color',
 
-                    'tag_description' => __( 'Select element tag.', 'js_composer' ),
-                    'text_align_description' => __( 'Select text alignment.', 'js_composer' ),
-                    'font_size_description' => __( 'Enter font size.', 'js_composer' ),
-                    'line_height_description' => __( 'Enter line height.', 'js_composer' ),
-                    'color_description' => __( 'Select heading color.', 'js_composer' ),
+                    'tag_description' => esc_html__( 'Select element tag.', 'js_composer' ),
+                    'text_align_description' => esc_html__( 'Select text alignment.', 'js_composer' ),
+                    'font_size_description' => esc_html__( 'Enter font size.', 'js_composer' ),
+                    'line_height_description' => esc_html__( 'Enter line height.', 'js_composer' ),
+                    'color_description' => esc_html__( 'Select heading color.', 'js_composer' ),
                 ),
             ),
         ),
         array(
             'type' => 'checkbox',
-            'heading' => __( 'Use theme default font family?', 'js_composer' ),
+            'heading' => esc_html__( 'Use theme default font family?', 'js_composer' ),
             'param_name' => 'use_theme_fonts',
-            'value' => array( __( 'Yes', 'js_composer' ) => 'yes' ),
-            'description' => __( 'Use font family from the theme.', 'js_composer' ),
+            'value' => array( esc_html__( 'Yes', 'js_composer' ) => 'yes' ),
+            'description' => esc_html__( 'Use font family from the theme.', 'js_composer' ),
             'std' => 'yes'
         ),
         array(
@@ -476,8 +476,8 @@ vc_map( array(
             'value' => 'font_family:Montserrat|font_style:400%20regular%3A400%3Anormal',
             'settings' => array(
                 'fields' => array(
-                    'font_family_description' => __( 'Select font family.', 'js_composer' ),
-                    'font_style_description' => __( 'Select font styling.', 'js_composer' )
+                    'font_family_description' => esc_html__( 'Select font family.', 'js_composer' ),
+                    'font_style_description' => esc_html__( 'Select font styling.', 'js_composer' )
                 )
             ),
             'dependency' => array(
@@ -488,18 +488,18 @@ vc_map( array(
 
         array(
             "type" => "textfield",
-            "heading" => __( "Extra class name", "js_composer" ),
+            "heading" => esc_html__( "Extra class name", "js_composer" ),
             "param_name" => "el_class",
-            "description" => __( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
+            "description" => esc_html__( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
         ),
 
 
         array(
             'type' => 'css_editor',
-            'heading' => __( 'Css', 'js_composer' ),
+            'heading' => esc_html__( 'Css', 'js_composer' ),
             'param_name' => 'css',
-            // 'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
-            'group' => __( 'Design options', 'js_composer' )
+            // 'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
+            'group' => esc_html__( 'Design options', 'js_composer' )
         ),
 
 

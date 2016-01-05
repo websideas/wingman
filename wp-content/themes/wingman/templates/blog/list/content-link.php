@@ -13,9 +13,9 @@
         <?php } ?>
         <?php
             if($blog_atts['thumbnail_type'] == 'image'){
-                kt_post_thumbnail_image('kt_list', 'img-responsive');
+                kt_post_thumbnail_image('kt_gird', 'img-responsive');
             }else{
-                kt_post_thumbnail('kt_list', 'img-responsive');
+                kt_post_thumbnail('kt_gird', 'img-responsive');
             }
         ?>
     </div>

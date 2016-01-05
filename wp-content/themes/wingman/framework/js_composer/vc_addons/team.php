@@ -77,74 +77,74 @@ class WPBakeryShortCode_Team extends WPBakeryShortCode {
 
 // Add your Visual Composer logic here
 vc_map( array(
-    "name" => __( "Team", 'wingman'),
+    "name" => esc_html__( "Team", 'wingman'),
     "base" => "team",
-    "category" => __('by Theme', 'wingman' ),
-    "description" => __( "", 'wingman'),
+    "category" => esc_html__('by Theme', 'wingman' ),
+    "description" => esc_html__( "", 'wingman'),
     "wrapper_class" => "clearfix",
     "params" => array(
         array(
             "type" => "textfield",
-            'heading' => __( 'Name', 'js_composer' ),
+            'heading' => esc_html__( 'Name', 'js_composer' ),
             'param_name' => 'name',
             "admin_label" => true,
         ),
 
         array(
             'type' => 'attach_image',
-            'heading' => __( 'Image', 'wingman' ),
+            'heading' => esc_html__( 'Image', 'wingman' ),
             'param_name' => 'image',
-            'description' => __( 'Select image from media library.', 'js_composer' ),
+            'description' => esc_html__( 'Select image from media library.', 'js_composer' ),
         ),
 
         array(
             "type" => "kt_image_sizes",
-            "heading" => __( "Select image sizes", 'wingman' ),
+            "heading" => esc_html__( "Select image sizes", 'wingman' ),
             "param_name" => "image_size",
             "std" => "full"
         ),
 
         array(
             "type" => "textfield",
-            'heading' => __( 'Agency', 'js_composer' ),
+            'heading' => esc_html__( 'Agency', 'js_composer' ),
             'param_name' => 'agency',
             "admin_label" => true,
         ),
 
         array(
             "type" => "textfield",
-            'heading' => __( 'Facebook link', 'js_composer' ),
+            'heading' => esc_html__( 'Facebook link', 'js_composer' ),
             'param_name' => 'facebook_link',
         ),
         array(
             "type" => "textfield",
-            'heading' => __( 'Twitter link', 'js_composer' ),
+            'heading' => esc_html__( 'Twitter link', 'js_composer' ),
             'param_name' => 'twitter_link',
         ),
         array(
             "type" => "textfield",
-            'heading' => __( 'Dribbble link', 'js_composer' ),
+            'heading' => esc_html__( 'Dribbble link', 'js_composer' ),
             'param_name' => 'dribbble_link',
         ),
         array(
             "type" => "textfield",
-            'heading' => __( 'LinkedIn link', 'js_composer' ),
+            'heading' => esc_html__( 'LinkedIn link', 'js_composer' ),
             'param_name' => 'linkedin_link',
         ),
 
         array(
             "type" => "textfield",
-            "heading" => __( "Extra class name", "js_composer" ),
+            "heading" => esc_html__( "Extra class name", "js_composer" ),
             "param_name" => "el_class",
-            "description" => __( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
+            "description" => esc_html__( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
         ),
 
         array(
             'type' => 'css_editor',
-            'heading' => __( 'CSS box', 'js_composer' ),
+            'heading' => esc_html__( 'CSS box', 'js_composer' ),
             'param_name' => 'css',
-            // 'description' => __( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'js_composer' ),
-            'group' => __( 'Design Options', 'js_composer' )
+            // 'description' => esc_html__( 'Style particular content element differently - add a class name and refer to it in custom CSS.', 'js_composer' ),
+            'group' => esc_html__( 'Design Options', 'js_composer' )
         )
     ),
 ));

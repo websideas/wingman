@@ -24,17 +24,17 @@ class WPBakeryShortCode_Socials extends WPBakeryShortCode {
         $output = $social_icons = '';
 
         $socials_arr = array(
-            'facebook' => array('title' => __('Facebook', 'wingman'), 'icon' => 'fa fa-facebook', 'link' => '%s'),
-            'twitter' => array('title' => __('Twitter', 'wingman'), 'icon' => 'fa fa-twitter', 'link' => 'http://www.twitter.com/%s'),
-            'dribbble' => array('title' => __('Dribbble', 'wingman'), 'icon' => 'fa fa-dribbble', 'link' => 'http://www.dribbble.com/%s'),
-            'vimeo' => array('title' => __('Vimeo', 'wingman'), 'icon' => 'fa fa-vimeo-square', 'link' => 'http://www.vimeo.com/%s'),
-            'tumblr' => array('title' => __('Tumblr', 'wingman'), 'icon' => 'fa fa-tumblr', 'link' => 'http://%s.tumblr.com/'),
-            'skype' => array('title' => __('Skype', 'wingman'), 'icon' => 'fa fa-skype', 'link' => 'skype:%s'),
-            'linkedin' => array('title' => __('LinkedIn', 'wingman'), 'icon' => 'fa fa-linkedin', 'link' => '%s'),
-            'googleplus' => array('title' => __('Google Plus', 'wingman'), 'icon' => 'fa fa-google-plus', 'link' => '%s'),
-            'youtube' => array('title' => __('Youtube', 'wingman'), 'icon' => 'fa fa-youtube', 'link' => 'http://www.youtube.com/user/%s'),
-            'pinterest' => array('title' => __('Pinterest', 'wingman'), 'icon' => 'fa fa-pinterest', 'link' => 'http://www.pinterest.com/%s'),
-            'instagram' => array('title' => __('Instagram', 'wingman'), 'icon' => 'fa fa-instagram', 'link' => 'http://instagram.com/%s'),
+            'facebook' => array('title' => esc_html__('Facebook', 'wingman'), 'icon' => 'fa fa-facebook', 'link' => '%s'),
+            'twitter' => array('title' => esc_html__('Twitter', 'wingman'), 'icon' => 'fa fa-twitter', 'link' => 'http://www.twitter.com/%s'),
+            'dribbble' => array('title' => esc_html__('Dribbble', 'wingman'), 'icon' => 'fa fa-dribbble', 'link' => 'http://www.dribbble.com/%s'),
+            'vimeo' => array('title' => esc_html__('Vimeo', 'wingman'), 'icon' => 'fa fa-vimeo-square', 'link' => 'http://www.vimeo.com/%s'),
+            'tumblr' => array('title' => esc_html__('Tumblr', 'wingman'), 'icon' => 'fa fa-tumblr', 'link' => 'http://%s.tumblr.com/'),
+            'skype' => array('title' => esc_html__('Skype', 'wingman'), 'icon' => 'fa fa-skype', 'link' => 'skype:%s'),
+            'linkedin' => array('title' => esc_html__('LinkedIn', 'wingman'), 'icon' => 'fa fa-linkedin', 'link' => '%s'),
+            'googleplus' => array('title' => esc_html__('Google Plus', 'wingman'), 'icon' => 'fa fa-google-plus', 'link' => '%s'),
+            'youtube' => array('title' => esc_html__('Youtube', 'wingman'), 'icon' => 'fa fa-youtube', 'link' => 'http://www.youtube.com/user/%s'),
+            'pinterest' => array('title' => esc_html__('Pinterest', 'wingman'), 'icon' => 'fa fa-pinterest', 'link' => 'http://www.pinterest.com/%s'),
+            'instagram' => array('title' => esc_html__('Instagram', 'wingman'), 'icon' => 'fa fa-instagram', 'link' => 'http://instagram.com/%s'),
         );
 
         foreach($socials_arr as $k => &$v){
@@ -121,41 +121,41 @@ class WPBakeryShortCode_Socials extends WPBakeryShortCode {
 
 // Add your Visual Composer logic here
 vc_map( array(
-    "name" => __( "Social", 'wingman'),
+    "name" => esc_html__( "Social", 'wingman'),
     "base" => "socials",
-    "category" => __('by Theme', 'wingman' ),
-    "description" => __( "Social", 'wingman'),
+    "category" => esc_html__('by Theme', 'wingman' ),
+    "description" => esc_html__( "Social", 'wingman'),
     "wrapper_class" => "clearfix",
     "params" => array(
         array(
             "type" => "kt_socials",
             "class" => "",
-            "heading" => __("Choose social", 'wingman'),
+            "heading" => esc_html__("Choose social", 'wingman'),
             "param_name" => "social",
             "value" => '',
-            "description" => __("Empty for select all, Drop and sortable social", 'wingman'),
+            "description" => esc_html__("Empty for select all, Drop and sortable social", 'wingman'),
             "admin_label" => true,
         ),
         array(
 			"type" => "dropdown",
 			"class" => "",
-			"heading" => __("Style",'wingman'),
+			"heading" => esc_html__("Style",'wingman'),
 			"param_name" => "style",
 			"value" => array(
-                __('Accent', 'wingman') => 'accent',
-                __('Dark', 'wingman') => 'dark',
-                __('Light', 'wingman') => 'light',
-                __('Color', 'wingman') => 'color',
-                __('Custom Color', 'wingman') => 'custom',
+                esc_html__('Accent', 'wingman') => 'accent',
+                esc_html__('Dark', 'wingman') => 'dark',
+                esc_html__('Light', 'wingman') => 'light',
+                esc_html__('Color', 'wingman') => 'color',
+                esc_html__('Custom Color', 'wingman') => 'custom',
 			),
-			"description" => __("",'wingman'),
+			"description" => esc_html__("",'wingman'),
             "admin_label" => true,
 		),
         array(
             'type' => 'colorpicker',
-            'heading' => __( 'Custom Color', 'js_composer' ),
+            'heading' => esc_html__( 'Custom Color', 'js_composer' ),
             'param_name' => 'custom_color',
-            'description' => __( 'Select color socials.', 'js_composer' ),
+            'description' => esc_html__( 'Select color socials.', 'js_composer' ),
             'dependency' => array(
                 'element' => 'style',
                 'value' => 'custom',
@@ -163,69 +163,69 @@ vc_map( array(
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Background shape', 'js_composer' ),
+            'heading' => esc_html__( 'Background shape', 'js_composer' ),
             'param_name' => 'background_style',
             'value' => array(
-                __( 'None', 'js_composer' ) => '',
-                __( 'Circle', 'js_composer' ) => 'rounded',
-                __( 'Square', 'js_composer' ) => 'boxed',
-                __( 'Rounded', 'js_composer' ) => 'rounded-less',
-                __( 'Diamond Square', 'js_composer' ) => 'diamond-square',
-                __( 'Outline Circle', 'js_composer' ) => 'rounded-outline',
-                __( 'Outline Square', 'js_composer' ) => 'boxed-outline',
-                __( 'Outline Rounded', 'js_composer' ) => 'rounded-less-outline',
-                __( 'Outline Diamond Square', 'js_composer' ) => 'diamond-square-outline',
+                esc_html__( 'None', 'js_composer' ) => '',
+                esc_html__( 'Circle', 'js_composer' ) => 'rounded',
+                esc_html__( 'Square', 'js_composer' ) => 'boxed',
+                esc_html__( 'Rounded', 'js_composer' ) => 'rounded-less',
+                esc_html__( 'Diamond Square', 'js_composer' ) => 'diamond-square',
+                esc_html__( 'Outline Circle', 'js_composer' ) => 'rounded-outline',
+                esc_html__( 'Outline Square', 'js_composer' ) => 'boxed-outline',
+                esc_html__( 'Outline Rounded', 'js_composer' ) => 'rounded-less-outline',
+                esc_html__( 'Outline Diamond Square', 'js_composer' ) => 'diamond-square-outline',
             ),
-            'description' => __( 'Select background shape and style for social.', 'wingman' ),
+            'description' => esc_html__( 'Select background shape and style for social.', 'wingman' ),
             "admin_label" => true,
         ),
 
         array(
 			"type" => "dropdown",
 			"class" => "",
-			"heading" => __("Size",'wingman'),
+			"heading" => esc_html__("Size",'wingman'),
 			"param_name" => "size",
 			"value" => array(
-                __('Standard', 'wingman') => 'standard',
-                __('Small', 'wingman') => 'small',
+                esc_html__('Standard', 'wingman') => 'standard',
+                esc_html__('Small', 'wingman') => 'small',
 			),
-			"description" => __("",'wingman'),
+			"description" => esc_html__("",'wingman'),
             "admin_label" => true,
 		),
         array(
             "type" => "dropdown",
             "class" => "",
-            "heading" => __("Tooltip",'wingman'),
+            "heading" => esc_html__("Tooltip",'wingman'),
             "param_name" => "tooltip",
             "value" => array(
-                __('None', 'wingman') => '',
-                __('Top', 'wingman') => 'top',
-                __('Right', 'wingman') => 'right',
-                __('Bottom', 'wingman') => 'bottom',
-                __('Left', 'wingman') => 'left',
+                esc_html__('None', 'wingman') => '',
+                esc_html__('Top', 'wingman') => 'top',
+                esc_html__('Right', 'wingman') => 'right',
+                esc_html__('Bottom', 'wingman') => 'bottom',
+                esc_html__('Left', 'wingman') => 'left',
             ),
             'std' => 'top',
-            "description" => __("Select the tooltip position",'wingman'),
+            "description" => esc_html__("Select the tooltip position",'wingman'),
             "admin_label" => true,
         ),
 
         array(
             "type" => "dropdown",
             "class" => "",
-            "heading" => __("Align",'wingman'),
+            "heading" => esc_html__("Align",'wingman'),
             "param_name" => "align",
             "value" => array(
-                __('None', 'wingman') => '',
-                __('Center', 'wingman') => 'center',
-                __('Left', 'wingman') => 'left',
-                __('Right', 'wingman') => 'right'
+                esc_html__('None', 'wingman') => '',
+                esc_html__('Center', 'wingman') => 'center',
+                esc_html__('Left', 'wingman') => 'left',
+                esc_html__('Right', 'wingman') => 'right'
             ),
-            "description" => __("",'wingman')
+            "description" => esc_html__("",'wingman')
         ),
         
         array(
             "type" => "kt_number",
-            "heading" => __("Space Between item", 'wingman'),
+            "heading" => esc_html__("Space Between item", 'wingman'),
             "param_name" => "space_between_item",
             "value" => 3,
             "min" => 0,
@@ -236,16 +236,16 @@ vc_map( array(
         
         array(
             "type" => "textfield",
-            "heading" => __( "Extra class name", "js_composer" ),
+            "heading" => esc_html__( "Extra class name", "js_composer" ),
             "param_name" => "el_class",
-            "description" => __( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
+            "description" => esc_html__( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
         ),
         array(
             'type' => 'css_editor',
-            'heading' => __( 'Css', 'js_composer' ),
+            'heading' => esc_html__( 'Css', 'js_composer' ),
             'param_name' => 'css',
-            // 'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
-            'group' => __( 'Design options', 'js_composer' )
+            // 'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
+            'group' => esc_html__( 'Design options', 'js_composer' )
         ),
     ),
 ));

@@ -19,68 +19,6 @@ function kt_rwmb_image_advanced_select_string($string, $field){
 }
 
 
-add_filter('rwmb_select_html', 'kt_rwmb_select_html', 10, 3);
-add_filter('rwmb_revSlider_html', 'kt_rwmb_select_html', 10, 3);
-add_filter('rwmb_sidebars_html', 'kt_rwmb_select_html', 10, 3);
-add_filter('rwmb_layerslider_html', 'kt_rwmb_select_html', 10, 3);
-
-function kt_rwmb_select_html($input_html, $field, $sub_meta){
-
-	if(isset($field['compare'])){
-		$input_html = str_replace('<select', '<select data-id="'.$field['compare'][0].'" data-compare="'.$field['compare'][1].'" data-value="'.$field['compare'][2].'"', $input_html);
-	}
-	return $input_html;
-}
-
-add_filter('rwmb_text_html', 'kt_rwmb_input_html', 10, 3);
-function kt_rwmb_input_html($input_html, $field, $sub_meta){
-	if(isset($field['compare'])){
-		$input_html = str_replace('<input', '<input data-id="'.$field['compare'][0].'" data-compare="'.$field['compare'][1].'" data-value="'.$field['compare'][2].'"', $input_html);
-	}
-	return $input_html;
-}
-
-add_filter('rwmb_color_html', 'kt_rwmb_color_html', 10, 3);
-function kt_rwmb_color_html($input_html, $field, $sub_meta){
-	if(isset($field['compare'])){
-		$input_html = str_replace('<input', '<input data-id="'.$field['compare'][0].'" data-compare="'.$field['compare'][1].'" data-value="'.$field['compare'][2].'"', $input_html);
-	}
-	return $input_html;
-}
-
-add_filter('rwmb_background_html', 'kt_rwmb_background_html', 10, 3);
-function kt_rwmb_background_html($input_html, $field, $sub_meta){
-	if(isset($field['compare'])){
-		$input_html = str_replace('<div class="wrapper wrapper_kt_image_upload"', '<div class="wrapper wrapper_kt_image_upload" data-id="'.$field['compare'][0].'" data-compare="'.$field['compare'][1].'" data-value="'.$field['compare'][2].'"', $input_html);
-	}
-	return $input_html;
-}
-
-add_filter('rwmb_textarea_html', 'kt_rwmb_textarea_html', 10, 3);
-function kt_rwmb_textarea_html($input_html, $field, $sub_meta){
-	if(isset($field['compare'])){
-		$input_html = str_replace('<textarea', '<textarea data-id="'.$field['compare'][0].'" data-compare="'.$field['compare'][1].'" data-value="'.$field['compare'][2].'"', $input_html);
-	}
-	return $input_html;
-}
-
-add_filter('rwmb_file_advanced_html', 'kt_rwmb_file_advanced_html', 10, 3);
-function kt_rwmb_file_advanced_html($input_html, $field, $sub_meta){
-	if(isset($field['compare'])){
-		$input_html = str_replace('<ul', '<ul data-id="'.$field['compare'][0].'" data-compare="'.$field['compare'][1].'" data-value="'.$field['compare'][2].'"', $input_html);
-	}
-	return $input_html;
-}
-
-add_filter('rwmb_image_advanced_html', 'kt_rwmb_image_advanced_html', 10, 3);
-function kt_rwmb_image_advanced_html($input_html, $field, $sub_meta){
-	if(isset($field['compare'])){
-		$input_html = str_replace('<ul', '<ul data-id="'.$field['compare'][0].'" data-compare="'.$field['compare'][1].'" data-value="'.$field['compare'][2].'"', $input_html);
-	}
-	return $input_html;
-}
-
-
 if ( ! class_exists( 'RWMB_Sidebars_Field' )){
 	class RWMB_Sidebars_Field extends RWMB_Select_Field{
 
@@ -126,7 +64,7 @@ if ( ! class_exists( 'RWMB_Sidebars_Field' )){
 		{
 			$options = array();
             if($field['default']){
-                $options['default'] = __('Default area', 'wingman');  
+                $options['default'] = esc_html__('Default area', 'wingman');
             }
             
             foreach($GLOBALS['wp_registered_sidebars'] as $sidebar){
@@ -168,7 +106,7 @@ if ( ! class_exists( 'RWMB_RevSlider_Field' )){
 		static function get_options( $field )
 		{
 			$options = array();
-            $options[''] = __('Select Option', 'wingman');
+            $options[''] = esc_html__('Select Option', 'wingman');
             
             if ( class_exists( 'RevSlider' ) ) {
                 $revSlider = new RevSlider();
@@ -216,7 +154,7 @@ if ( ! class_exists( 'RWMB_Layerslider_Field' )){
 		static function get_options( $field )
 		{
 			$options = array();
-            $options[''] = __('Select Option', 'wingman');
+            $options[''] = esc_html__('Select Option', 'wingman');
             
             if ( is_plugin_active( 'LayerSlider/layerslider.php' ) ) {
             global $wpdb;
@@ -284,7 +222,7 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 					'repeat-y'  => 'Repeat Vertically',
 					'inherit'   => 'Inherit',
 				),
-				'placeholder' => __('Background Repeat', 'wingman')
+				'placeholder' => esc_html__('Background Repeat', 'wingman')
 			);
 
 			$ouput .= self::select_html($meta['repeat'], $bg_repeat);
@@ -298,7 +236,7 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 					'cover'   => 'Cover',
 					'contain' => 'Contain',
 				),
-				'placeholder' => __('Background Size', 'wingman')
+				'placeholder' => esc_html__('Background Size', 'wingman')
 			);
 
 			$ouput .= self::select_html($meta['size'], $bg_size);
@@ -312,7 +250,7 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 					'scroll'  => 'Scroll',
 					'inherit' => 'Inherit',
 				),
-				'placeholder' => __('Background Attachment', 'wingman')
+				'placeholder' => esc_html__('Background Attachment', 'wingman')
 			);
 
 			$ouput .= self::select_html($meta['attachment'], $bg_attachment);
@@ -333,7 +271,7 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 					'right center'  => 'Right center',
 					'right bottom'  => 'Right Bottom',
 				),
-				'placeholder' => __('Background Position', 'wingman')
+				'placeholder' => esc_html__('Background Position', 'wingman')
 			);
 
 			$ouput .= self::select_html($meta['position'], $bg_position);
@@ -344,16 +282,16 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 				'<div class="rwmb-field"><input type="text" readonly="" class="kt_image_url" name="%s" value="%s" placeholder="%s"/></div>',
 				$field['field_name'].'[url]',
 				$meta['url'],
-				__( 'No media selected', 'wingman' )
+				esc_html__( 'No media selected', 'wingman' )
 			);
 
 			$remove_style = ($meta['media'] != '') ? 'inline-block' : 'none';
 
 			$ouput .= sprintf(
 				'<div class="upload_button_div"><span class="button kt_image_upload">%s</span> <span class="button kt_image_remove" style="display : %s">%s</span></div>',
-				__('Upload', 'wingman'),
+				esc_html__('Upload', 'wingman'),
 				$remove_style,
-				__('Remove', 'wingman')
+				esc_html__('Remove', 'wingman')
 			);
 
 
@@ -443,7 +381,7 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 
 			wp_enqueue_script( 'kt_image', KT_FW_JS . 'kt_image.js', array( 'jquery', 'underscore' ), RWMB_VER, true );
 			wp_localize_script( 'rwmb-file-background', 'kt_image_lange', array(
-				'frameTitle' => __( 'Select Image', 'wingman' ),
+				'frameTitle' => esc_html__( 'Select Image', 'wingman' ),
 			) );
 		}
 

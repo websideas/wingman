@@ -41,7 +41,6 @@ function kt_register_plugins() {
             'external_url'      => '', // If set, overrides default API URL and points to an external URL
         ),
 
-
         array(
             'name'          => 'KT Importer', // The plugin name
             'slug'          => 'kt_importer', // The plugin slug (typically the folder name)
@@ -70,6 +69,7 @@ function kt_register_plugins() {
             'force_deactivation'    => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
             'external_url'      => '', // If set, overrides default API URL and points to an external URL
         ),
+
         array(
             'name' => 'Redux - Options framework',
             'slug' => 'redux-framework',
@@ -78,6 +78,11 @@ function kt_register_plugins() {
         array(
             'name' => 'WooCommerce - excelling eCommerce',
             'slug' => 'woocommerce',
+            'required' => true,
+        ),
+        array(
+            'name' => 'Breadcrumb NavXT',
+            'slug' => 'breadcrumb-navxt',
             'required' => true,
         ),
         array(

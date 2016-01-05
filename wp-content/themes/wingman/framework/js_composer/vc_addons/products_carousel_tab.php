@@ -67,11 +67,11 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
                 $output .= "<li><a href='#tab-".$tab.'-'.$uniqeID."'>".$term->name."</a></li>";
             }else{
                 if($tab == 'featured'){
-                    $text = __('Hot Products', 'wingman');
+                    $text = esc_html__('Hot Products', 'wingman');
                 }elseif($tab == 'new'){
-                    $text = __('New Arrivals', 'wingman');
+                    $text = esc_html__('New Arrivals', 'wingman');
                 }elseif($tab == 'bestselling'){
-                    $text = __('Best Sellers', 'wingman');
+                    $text = esc_html__('Best Sellers', 'wingman');
                 }
                 $output .= "<li><a href='#tab-".$tab.'-'.$uniqeID."'>".$text."</a></li>";
             }
@@ -159,28 +159,28 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
 
 
 vc_map( array(
-    "name" => __( "Products Carousel Tab", 'wingman'),
+    "name" => esc_html__( "Products Carousel Tab", 'wingman'),
     "base" => "products_carousel_tab",
-    "category" => __('by Theme', 'wingman' ),
+    "category" => esc_html__('by Theme', 'wingman' ),
     "params" => array(
 
         array(
             "type" => "dropdown",
-            "heading" => __("Data source", 'wingman'),
+            "heading" => esc_html__("Data source", 'wingman'),
             "param_name" => "source",
             "value" => array(
-                __('Widgets', 'wingman') => 'widgets',
-                __('Specific Categories', 'wingman') => 'categories',
+                esc_html__('Widgets', 'wingman') => 'widgets',
+                esc_html__('Specific Categories', 'wingman') => 'categories',
             ),
             'std' => 'widgets',
             "admin_label" => true,
-            "description" => __("Select content type for your posts.", 'wingman'),
+            "description" => esc_html__("Select content type for your posts.", 'wingman'),
         ),
 
         array(
             "type" => "kt_taxonomy",
             'taxonomy' => 'product_cat',
-            'heading' => __( 'Categories', 'js_composer' ),
+            'heading' => esc_html__( 'Categories', 'js_composer' ),
             'param_name' => 'categories',
             'multiple' => true,
             "admin_label" => true,
@@ -188,90 +188,90 @@ vc_map( array(
         ),
         array(
             'type' => 'textfield',
-            'heading' => __( 'Per page', 'js_composer' ),
+            'heading' => esc_html__( 'Per page', 'js_composer' ),
             'value' => 8,
             'param_name' => 'per_page',
-            'description' => __( 'The "per_page" shortcode determines how many products to show on the page', 'js_composer' ),
+            'description' => esc_html__( 'The "per_page" shortcode determines how many products to show on the page', 'js_composer' ),
         ),
 
 
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Order by', 'js_composer' ),
+            'heading' => esc_html__( 'Order by', 'js_composer' ),
             'param_name' => 'orderby',
             'value' => array(
                 '',
-                __( 'Date', 'js_composer' ) => 'date',
-                __( 'ID', 'js_composer' ) => 'ID',
-                __( 'Author', 'js_composer' ) => 'author',
-                __( 'Title', 'js_composer' ) => 'title',
-                __( 'Modified', 'js_composer' ) => 'modified',
-                __( 'Random', 'js_composer' ) => 'rand',
-                __( 'Comment count', 'js_composer' ) => 'comment_count',
-                __( 'Menu order', 'js_composer' ) => 'menu_order',
+                esc_html__( 'Date', 'js_composer' ) => 'date',
+                esc_html__( 'ID', 'js_composer' ) => 'ID',
+                esc_html__( 'Author', 'js_composer' ) => 'author',
+                esc_html__( 'Title', 'js_composer' ) => 'title',
+                esc_html__( 'Modified', 'js_composer' ) => 'modified',
+                esc_html__( 'Random', 'js_composer' ) => 'rand',
+                esc_html__( 'Comment count', 'js_composer' ) => 'comment_count',
+                esc_html__( 'Menu order', 'js_composer' ) => 'menu_order',
             ),
             'save_always' => true,
             "dependency" => array( "element" => "source","value" => 'categories' ),
-            'description' => sprintf( __( 'Select how to sort retrieved products. More at %s.', 'js_composer' ), '<a href="http://codex.wordpress.org/Class_Reference/WP_Query#Order_.26_Orderby_Parameters" target="_blank">WordPress codex page</a>' ),
+            'description' => sprintf( esc_html__( 'Select how to sort retrieved products. More at %s.', 'js_composer' ), '<a href="http://codex.wordpress.org/Class_Reference/WP_Query#Order_.26_Orderby_Parameters" target="_blank">WordPress codex page</a>' ),
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Sort order', 'js_composer' ),
+            'heading' => esc_html__( 'Sort order', 'js_composer' ),
             'param_name' => 'order',
             'value' => array(
                 '',
-                __( 'Descending', 'js_composer' ) => 'DESC',
-                __( 'Ascending', 'js_composer' ) => 'ASC',
+                esc_html__( 'Descending', 'js_composer' ) => 'DESC',
+                esc_html__( 'Ascending', 'js_composer' ) => 'ASC',
             ),
             'save_always' => true,
             "dependency" => array( "element" => "source","value" => 'categories' ),
-            'description' => sprintf( __( 'Designates the ascending or descending order. More at %s.', 'js_composer' ), '<a href="http://codex.wordpress.org/Class_Reference/WP_Query#Order_.26_Orderby_Parameters" target="_blank">WordPress codex page</a>' ),
+            'description' => sprintf( esc_html__( 'Designates the ascending or descending order. More at %s.', 'js_composer' ), '<a href="http://codex.wordpress.org/Class_Reference/WP_Query#Order_.26_Orderby_Parameters" target="_blank">WordPress codex page</a>' ),
         ),
 
         array(
             "type" => "kt_heading",
-            "heading" => __("Columns to Show?", 'wingman'),
+            "heading" => esc_html__("Columns to Show?", 'wingman'),
             "edit_field_class" => "kt_sub_heading vc_column",
             "param_name" => "items_show",
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'on Desktop', 'wingman' ),
+            'heading' => esc_html__( 'on Desktop', 'wingman' ),
             'param_name' => 'product_columns',
             'value' => array(
-                __( '1 column', 'js_composer' ) => '1',
-                __( '2 columns', 'js_composer' ) => '2',
-                __( '3 columns', 'js_composer' ) => '3',
-                __( '4 columns', 'js_composer' ) => '4',
-                __( '6 columns', 'js_composer' ) => '6',
+                esc_html__( '1 column', 'js_composer' ) => '1',
+                esc_html__( '2 columns', 'js_composer' ) => '2',
+                esc_html__( '3 columns', 'js_composer' ) => '3',
+                esc_html__( '4 columns', 'js_composer' ) => '4',
+                esc_html__( '6 columns', 'js_composer' ) => '6',
             ),
             'std' => '4',
             "edit_field_class" => "vc_col-sm-4 vc_column",
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'on Tablets Landscape', 'wingman' ),
+            'heading' => esc_html__( 'on Tablets Landscape', 'wingman' ),
             'param_name' => 'product_columns_desktop',
             'value' => array(
-                __( '1 column', 'js_composer' ) => '1',
-                __( '2 columns', 'js_composer' ) => '2',
-                __( '3 columns', 'js_composer' ) => '3',
-                __( '4 columns', 'js_composer' ) => '4',
-                __( '6 columns', 'js_composer' ) => '6',
+                esc_html__( '1 column', 'js_composer' ) => '1',
+                esc_html__( '2 columns', 'js_composer' ) => '2',
+                esc_html__( '3 columns', 'js_composer' ) => '3',
+                esc_html__( '4 columns', 'js_composer' ) => '4',
+                esc_html__( '6 columns', 'js_composer' ) => '6',
             ),
             'std' => '3',
             "edit_field_class" => "vc_col-sm-4 vc_column",
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'on Tablet', 'wingman' ),
+            'heading' => esc_html__( 'on Tablet', 'wingman' ),
             'param_name' => 'product_columns_tablet',
             'value' => array(
-                __( '1 column', 'js_composer' ) => '1',
-                __( '2 columns', 'js_composer' ) => '2',
-                __( '3 columns', 'js_composer' ) => '3',
-                __( '4 columns', 'js_composer' ) => '4',
-                __( '6 columns', 'js_composer' ) => '6',
+                esc_html__( '1 column', 'js_composer' ) => '1',
+                esc_html__( '2 columns', 'js_composer' ) => '2',
+                esc_html__( '3 columns', 'js_composer' ) => '3',
+                esc_html__( '4 columns', 'js_composer' ) => '4',
+                esc_html__( '6 columns', 'js_composer' ) => '6',
             ),
             'std' => '2',
             "edit_field_class" => "vc_col-sm-4 vc_column",
@@ -279,43 +279,43 @@ vc_map( array(
 
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Skin', 'wingman' ),
+            'heading' => esc_html__( 'Skin', 'wingman' ),
             'param_name' => 'skin',
             'value' => array(
-                __( 'Default', 'js_composer' ) => 'dark',
-                __( 'Light', 'js_composer' ) => 'light',
+                esc_html__( 'Default', 'js_composer' ) => 'dark',
+                esc_html__( 'Light', 'js_composer' ) => 'light',
             ),
             'std' => 'dark',
-            'description' => __( 'Select your skin.', 'wingman' )
+            'description' => esc_html__( 'Select your skin.', 'wingman' )
         ),
 
         array(
             'type' => 'dropdown',
-            'heading' => __( 'CSS Animation', 'js_composer' ),
+            'heading' => esc_html__( 'CSS Animation', 'js_composer' ),
             'param_name' => 'css_animation',
             'admin_label' => true,
             'value' => array(
-                __( 'No', 'js_composer' ) => '',
-                __( 'Top to bottom', 'js_composer' ) => 'top-to-bottom',
-                __( 'Bottom to top', 'js_composer' ) => 'bottom-to-top',
-                __( 'Left to right', 'js_composer' ) => 'left-to-right',
-                __( 'Right to left', 'js_composer' ) => 'right-to-left',
-                __( 'Appear from center', 'js_composer' ) => "appear"
+                esc_html__( 'No', 'js_composer' ) => '',
+                esc_html__( 'Top to bottom', 'js_composer' ) => 'top-to-bottom',
+                esc_html__( 'Bottom to top', 'js_composer' ) => 'bottom-to-top',
+                esc_html__( 'Left to right', 'js_composer' ) => 'left-to-right',
+                esc_html__( 'Right to left', 'js_composer' ) => 'right-to-left',
+                esc_html__( 'Appear from center', 'js_composer' ) => "appear"
             ),
-            'description' => __( 'Select type of animation if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.', 'js_composer' )
+            'description' => esc_html__( 'Select type of animation if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.', 'js_composer' )
         ),
         array(
             "type" => "textfield",
-            "heading" => __( "Extra class name", "js_composer" ),
+            "heading" => esc_html__( "Extra class name", "js_composer" ),
             "param_name" => "el_class",
-            "description" => __( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
+            "description" => esc_html__( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
         ),
         array(
             'type' => 'css_editor',
-            'heading' => __( 'Css', 'js_composer' ),
+            'heading' => esc_html__( 'Css', 'js_composer' ),
             'param_name' => 'css',
-            // 'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
-            'group' => __( 'Design options', 'js_composer' )
+            // 'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
+            'group' => esc_html__( 'Design options', 'js_composer' )
         ),
     ),
 ));
