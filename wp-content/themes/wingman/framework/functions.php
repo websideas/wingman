@@ -83,7 +83,6 @@ if ( ! function_exists( 'kt_track_post_views' ) ){
             $count_key = 'kt_post_views_count';
             $count = get_post_meta($post_id, $count_key, true);
             if($count==''){
-                $count = 0;
                 delete_post_meta($post_id, $count_key);
                 add_post_meta($post_id, $count_key, '0');
             }else{
@@ -94,6 +93,29 @@ if ( ! function_exists( 'kt_track_post_views' ) ){
     }
 }
 add_action( 'wp_head', 'kt_track_post_views');
+
+
+
+function kt_navigation_markup_template($template, $class){
+    $disable_next = $disable_prev = '';
+    if ( !get_previous_posts_link() ) {
+        $disable_prev = '<span class="page-numbers prev disable"><span class="screen-reader-text">'._x( 'Previous', 'Previous post', 'wingman' ).'</span><i class="fa fa-long-arrow-left"></i></span>';
+    }
+    if ( !get_next_posts_link() ) {
+        $disable_next = '<span class="page-numbers next disable"><span class="screen-reader-text">'._x( 'Next', 'Next post', 'wingman' ).'</span><i class="fa fa-long-arrow-right"></i></span>';
+    }
+
+    $template = '
+	<nav class="navigation %1$s" role="navigation">
+		<h2 class="screen-reader-text">%2$s</h2>
+		<div class="nav-links">'.$disable_prev.'%3$s'.$disable_next.'</div>
+	</nav>';
+    return $template;
+}
+add_filter('navigation_markup_template', 'kt_navigation_markup_template', 10, 2);
+
+
+
 
 /**
  * Add page header
@@ -829,7 +851,7 @@ function kt_after_footer_add_popup(){
     $time_show = kt_option( 'time_show', 0 );
     $title_popup = kt_option( 'title_popup' );
     $image_popup = kt_option( 'popup_image' );
-    
+
     if( $enable_popup == 1 && !isset($_COOKIE['kt_popup']) ){
         ?>
             <div id="popup-wrap" class="mfp-hide" data-mobile="<?php echo esc_attr( $disable_popup_mobile ); ?>" data-timeshow="<?php echo esc_attr($time_show); ?>">     
@@ -839,12 +861,12 @@ function kt_after_footer_add_popup(){
                         <img src="<?php echo esc_attr($image_popup['url']); ?>" alt="" class="img-responsive">
                     <?php } ?>
                     <div class="content-popup">
-                        <?php echo do_shortcode($content_popup); ?>
+                        <?php echo apply_filters('the_content', $content_popup); ?>
                     </div>
                 </div>
                 <form class="dont-show" name="dont-show">
                     <input id="dont-showagain" type="checkbox" value="" />
-                    <label for="dont-showagain"><?php esc_html__( "Don't Show Again.", 'wingman' ); ?></label>
+                    <label for="dont-showagain"><?php esc_html_e( "Don't Show Again.", 'wingman' ); ?></label>
                 </form>
             </div>
         <?php

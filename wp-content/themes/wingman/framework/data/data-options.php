@@ -3759,7 +3759,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Content Popup', 'wingman' ),
                         'subtitle' => esc_html__( '', 'wingman' ),
                         'required' => array('enable_popup','equals', 1),
-                        'default'  => esc_html__('<h4 class="newletter-title">Sign up for out newsletter<br /> to receive special offers.</h4>[kt_mailchimp list="9306fec7e3" disable_names="yes"]', 'wingman'),
+                        'default'  => '<h4 class="newletter-title">Sign up for out newsletter<br /> to receive special offers.</h4>[kt_mailchimp list="9306fec7e3" disable_names="yes"]',
                     ),
                 )
             );
@@ -3773,7 +3773,6 @@ if ( ! class_exists( 'KT_config' ) ) {
 				'desc'			=> '',
                 'icon'	=> 'icon-Settings-Window',
             );
-
 
             /**
              *	Advanced Social Share

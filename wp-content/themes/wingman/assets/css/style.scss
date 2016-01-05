@@ -5087,11 +5087,13 @@ form.wpcf7-form{
     margin: 0 5px;
     color: $title-text;
     position: relative;
-    &:hover,
-    &:focus,
-    &.current{
-      color: $primary-color;
-      background: none;
+    a{
+      &:hover,
+      &:focus,
+      &.current{
+        color: $primary-color;
+        background: none;
+      }
     }
 
     &.current{
@@ -5121,9 +5123,14 @@ form.wpcf7-form{
       margin-right: 45px;
       margin-left: 0;
     }
+    &.disable{
+      @include opacity(.4);
+      cursor: no-drop;
+    }
 
   }
 }
+
 /* ==============================
    19. Back to top
    ============================== */
