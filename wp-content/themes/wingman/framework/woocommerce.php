@@ -33,6 +33,156 @@ function kt_wp_enqueue_scripts(){
 }
 add_action( 'wp_enqueue_scripts', 'kt_wp_enqueue_scripts' );
 
+
+
+/**
+ * Theme Custom CSS
+ *
+ * @since       1.0
+ * @return      void
+ * @access      public
+ */
+function kt_setting_script_woocommerce() {
+    $css = '';
+    $accent = kt_option('styling_accent', '#82c14f');
+
+    $selections_color = array(
+        '.woocommerce p.stars a:hover',
+        '.bag-products .bag-product .bag-product-title a:hover',
+        '.woocommerce .widget_price_filter .price_slider_amount .price_label span',
+        '.woocommerce table.cart tbody td.product-name a:hover',
+        '.woocommerce table.cart tbody td.product-name a:focus',
+        '.widget_layered_nav ul li a:hover',
+
+        '.woocommerce .woocommerce-pagination .page-numbers:hover',
+        '.woocommerce .woocommerce-pagination .page-numbers:focus',
+        '.woocommerce .woocommerce-pagination .page-numbers.current',
+        '.yith-woocompare-widget ul li a:hover',
+        '.yith-woocompare-widget ul li a:focus',
+        '.woocommerce ul.product_list_widget li a:hover',
+        '.woocommerce ul.shop-products h3 a:hover',
+        '.woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover',
+        '.woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus',
+        '.woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover:before',
+        '.woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus:before',
+        '.woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover:before',
+        '.woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus:before',
+        '.woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover',
+        '.woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus',
+        '.woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover:before',
+        '.woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus:before',
+        '.single-product-quickview .single-product-quickview-images .slick-arrow:hover:before',
+        '.single-product-quickview .single-product-quickview-images .slick-arrow:focus:before',
+        '.woocommerce .woocommerce-per-page:after',
+        '.woocommerce .woocommerce-ordering:after',
+        '.woocommerce .woocommerce-message .button.wc-forward:hover',
+        '.woocommerce-page .woocommerce-message .button.wc-forward:hover',
+        '.woocommerce-page div.product .product_meta > span a:hover',
+        '.woocommerce div.product .product_meta > span a:hover',
+        '.woocommerce .star-rating span:before',
+        '.woocommerce .widget_price_filter .price_slider_amount .button:hover',
+        '.woocommerce .widget_price_filter .price_slider_amount .button:focus',
+    );
+    $css .= implode($selections_color, ',').'{color: '.$accent.';}';
+    $selections_bg = array(
+        '.woocommerce.compare-button a:hover',
+        '.woocommerce.compare-button a.add_to_wishlist:hover',
+        '.woocommerce .yith-wcwl-add-button a:hover',
+        '.woocommerce .yith-wcwl-add-button a.add_to_wishlist:hover',
+        '.woocommerce .yith-wcwl-wishlistaddedbrowse a:hover',
+        '.woocommerce .yith-wcwl-wishlistaddedbrowse a.add_to_wishlist:hover',
+        '.woocommerce .yith-wcwl-wishlistexistsbrowse a:hover',
+        '.woocommerce .yith-wcwl-wishlistexistsbrowse a.add_to_wishlist:hover',
+        '.woocommerce .yith-wcwl-add-to-wishlist .ajax-loading',
+        '.woocommerce.compare-button:hover',
+        '.woocommerce .yith-wcwl-add-button:hover',
+        '.woocommerce .yith-wcwl-wishlistaddedbrowse:hover',
+        '.woocommerce .yith-wcwl-wishlistexistsbrowse:hover',
+        '.woocommerce ul.shop-products .added_to_cart:hover',
+        '.woocommerce ul.shop-products .button:hover',
+        '.woocommerce ul.shop-products .product-quick-view:hover',
+        '.woocommerce mark, .woocommerce .mark',
+        '.woocommerce #respond input#submit:hover',
+        '.woocommerce a.button:hover',
+        '.woocommerce button.button:hover',
+        '.woocommerce input.button:hover',
+        '.woocommerce #respond input#submit.alt:hover',
+        '.woocommerce a.button.alt:hover',
+        '.woocommerce button.button.alt:hover',
+        '.woocommerce input.button.alt:hover',
+        '.woocommerce .woocommerce-pagination .page-numbers.current:before',
+        '.woocommerce .woocommerce-pagination .page-numbers.current:after',
+        '.woocommerce .widget_price_filter .ui-slider .ui-slider-range',
+        '.woocommerce .widget_price_filter .ui-slider .ui-slider-handle',
+        '.woocommerce .gridlist-toggle li a:hover',
+        '.woocommerce .gridlist-toggle li a.active',
+        '.woocommerce span.onsale',
+        '.woocommerce-page div.product .cart .single_add_to_cart_button:hover',
+        '.woocommerce div.product .cart .single_add_to_cart_button:hover',
+        '.woocommerce-page div.product .cart .single_add_to_cart_button:focus',
+        '.woocommerce div.product .cart .single_add_to_cart_button:focus',
+        'body .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar',
+        'body .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar',
+        'body .mCSB_scrollTools .mCSB_dragger:focus .mCSB_dragger_bar',
+        'body .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar',
+        '.woocommerce-category-products-tab ul.block-heading-tabs li a:before',
+        '.woocommerce-category-products-tab ul.block-heading-tabs li a:after',
+        '#header-content-mobile .header-mobile-tools a.mobile-cart span',
+        '.menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a span:after',
+        '.yith-woocompare-widget ul li a:hover:after',
+    );
+    $css .= implode($selections_bg, ',').'{background: '.$accent.';}';
+
+
+    $selections_border = array(
+        '.woocommerce #respond input#submit:hover',
+        '.woocommerce a.button:hover',
+        '.woocommerce button.button:hover',
+        '.woocommerce input.button:hover',
+        '.woocommerce #respond input#submit.alt:hover',
+        '.woocommerce a.button.alt:hover',
+        '.woocommerce button.button.alt:hover',
+        '.woocommerce input.button.alt:hover',
+
+        '.woocommerce-page div.product .cart .single_add_to_cart_button:hover',
+        '.woocommerce div.product .cart .single_add_to_cart_button:hover',
+        '.woocommerce-page div.product .cart .single_add_to_cart_button:focus',
+        '.woocommerce div.product .cart .single_add_to_cart_button:focus',
+        'div.swatch-wrapper.selected',
+        'div.swatch-wrapper:hover',
+        '.woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-slide.slick-current',
+        '.woocommerce .product-detail-thumbarea.slick-carousel .single-product-main-thumbnails .slick-slide.slick-current',
+        '.woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:hover',
+        '.woocommerce .product-detail-thumbarea .single-product-main-images .slick-arrow:focus',
+        '.woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:hover',
+        '.woocommerce .product-detail-thumbarea .single-product-main-thumbnails .slick-arrow:focus',
+        '.single-product-quickview .single-product-quickview-images .slick-arrow:hover',
+        '.single-product-quickview .single-product-quickview-images .slick-arrow:focus',
+        '.woocommerce .gridlist-toggle li a:hover',
+        '.woocommerce .gridlist-toggle li a.active',
+        '.mini-cart .shopping-bag-wrapper'
+    );
+    $css .= implode($selections_border, ',').'{border-color: '.$accent.';}';
+
+
+
+    $selections_shadow = array(
+        '.menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li.active span',
+        '.menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:hover span',
+        '.menu-bars-outer .menu-bars-items .menu-bars-item.menu-bars-currency li a:focus span'
+    );
+    $css .= sprintf(
+        '%1$s{box-shadow: 0 0 0 1px %2$s inset;-webkit-box-shadow: 0 0 0 1px %2$s inset;-moz-box-shadow: 0 0 0 1px %2$s inset; }',
+        implode($selections_shadow, ','),
+        $accent
+    );
+
+
+    wp_add_inline_style( 'kt-woocommerce', $css );
+}
+add_action('wp_enqueue_scripts', 'kt_setting_script_woocommerce');
+
+
 /**
  * Define image sizes
  *
