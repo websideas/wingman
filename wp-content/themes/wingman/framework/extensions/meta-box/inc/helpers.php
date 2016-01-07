@@ -240,32 +240,3 @@ if ( ! function_exists( 'rwmb_the_field' ) )
 		return $output;
 	}
 }
-
-if ( ! function_exists( 'rwmb_meta_shortcode' ) )
-{
-	/**
-	 * Shortcode to display meta value
-	 *
-	 * @param $atts Array of shortcode attributes, same as meta() function, but has more "meta_key" parameter
-	 *
-	 * @see meta() function below
-	 *
-	 * @return string
-	 */
-	function rwmb_meta_shortcode( $atts )
-	{
-		$atts = wp_parse_args( $atts, array(
-			'post_id' => get_the_ID(),
-		) );
-		if ( empty( $atts['meta_key'] ) )
-			return '';
-
-		$field_id = $atts['meta_key'];
-		$post_id  = $atts['post_id'];
-		unset( $atts['meta_key'], $atts['post_id'] );
-
-		return rwmb_the_field( $field_id, $atts, $post_id, false );
-	}
-
-	add_shortcode( 'rwmb_meta', 'rwmb_meta_shortcode' );
-}

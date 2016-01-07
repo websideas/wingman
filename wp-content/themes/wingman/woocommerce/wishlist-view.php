@@ -27,7 +27,7 @@
             <?php if( $wishlist_meta['is_default'] != 1 && $is_user_owner ): ?>
                 <a class="btn button show-title-form">
                     <?php echo apply_filters( 'yith_wcwl_edit_title_icon', '<i class="fa fa-pencil"></i>' )?>
-                    <?php _e( 'Edit title', 'yit' ) ?>
+                    <?php _e( 'Edit title', 'wingman' ) ?>
                 </a>
             <?php endif; ?>
         </div>
@@ -36,11 +36,11 @@
                 <input type="text" value="<?php echo esc_attr($page_title) ?>" name="wishlist_name"/>
                 <button>
                     <?php echo apply_filters( 'yith_wcwl_save_wishlist_title_icon', '<i class="fa fa-check"></i>' )?>
-                    <?php _e( 'Save', 'yit' )?>
+                    <?php _e( 'Save', 'wingman' )?>
                 </button>
                 <a class="hide-title-form btn button">
                     <?php echo apply_filters( 'yith_wcwl_cancel_wishlist_title_icon', '<i class="fa fa-remove"></i>' )?>
-                    <?php _e( 'Cancel', 'yit' )?>
+                    <?php _e( 'Cancel', 'wingman' )?>
                 </a>
             </div>
         <?php endif; ?>
@@ -78,14 +78,14 @@
                 <th class="product-thumbnail">Image</th>
 
                 <th class="product-name">
-                    <span class="nobr"><?php echo apply_filters( 'yith_wcwl_wishlist_view_name_heading', __( 'Product Name', 'yit' ) ) ?></span>
+                    <span class="nobr"><?php echo apply_filters( 'yith_wcwl_wishlist_view_name_heading', __( 'Product Name', 'wingman' ) ) ?></span>
                 </th>
 
                 <?php if( $show_price ) : ?>
 
                     <th class="product-price">
                         <span class="nobr">
-                            <?php echo apply_filters( 'yith_wcwl_wishlist_view_price_heading', __( 'Price', 'yit' ) ) ?>
+                            <?php echo apply_filters( 'yith_wcwl_wishlist_view_price_heading', __( 'Price', 'wingman' ) ) ?>
                         </span>
                     </th>
 
@@ -98,7 +98,7 @@
 
                     <th class="product-stock-stauts">
                         <span class="nobr">
-                            <?php echo apply_filters( 'yith_wcwl_wishlist_view_stock_heading', __( 'Stock Status', 'yit' ) ) ?>
+                            <?php echo apply_filters( 'yith_wcwl_wishlist_view_stock_heading', __( 'Stock Status', 'wingman' ) ) ?>
                         </span>
                     </th>
 
@@ -173,7 +173,7 @@
     	                                echo $product->get_price_html();
                                     }
                                     else {
-                                        echo apply_filters( 'yith_free_text', __( 'Free!', 'yit' ) );
+                                        echo apply_filters( 'yith_free_text', __( 'Free!', 'wingman' ) );
                                     }
                                     ?>
                                 </td>
@@ -184,10 +184,10 @@
                                     <?php
                                     if( $stock_status == 'out-of-stock' ) {
                                         $stock_status = "Out";
-                                        echo '<span class="wishlist-out-of-stock">' . __( 'Out of Stock', 'yit' ) . '</span>';
+                                        echo '<span class="wishlist-out-of-stock">' . __( 'Out of Stock', 'wingman' ) . '</span>';
                                     } else {
                                         $stock_status = "In";
-                                        echo '<span class="wishlist-in-stock">' . __( 'In Stock', 'yit' ) . '</span>';
+                                        echo '<span class="wishlist-in-stock">' . __( 'In Stock', 'wingman' ) . '</span>';
                                     }
                                     ?>
                                 </td>
@@ -198,7 +198,7 @@
     	                        <!-- Date added -->
     	                        <?php
     	                        if( $show_dateadded && isset( $item['dateadded'] ) ):
-    								echo '<span class="dateadded">' . sprintf( __( 'Added on : %s', 'yit' ), date_i18n( get_option( 'date_format' ), strtotime( $item['dateadded'] ) ) ) . '</span>';
+    								echo '<span class="dateadded">' . sprintf( __( 'Added on : %s', 'wingman' ), date_i18n( get_option( 'date_format' ), strtotime( $item['dateadded'] ) ) ) . '</span>';
     	                        endif;
     	                        ?>
 
@@ -217,7 +217,7 @@
     	                        <!-- Change wishlist -->
     							<?php if( $available_multi_wishlist && is_user_logged_in() && count( $users_wishlists ) > 1 && $move_to_another_wishlist ): ?>
     	                        <select class="change-wishlist selectBox">
-    		                        <option value=""><?php _e( 'Move', 'yit' ) ?></option>
+    		                        <option value=""><?php _e( 'Move', 'wingman' ) ?></option>
     		                        <?php
     		                        foreach( $users_wishlists as $wl ):
     			                        if( $wl['wishlist_token'] == $wishlist_meta['wishlist_token'] ){
@@ -229,13 +229,13 @@
     				                        <?php
     				                        $wl_title = ! empty( $wl['wishlist_name'] ) ? esc_html( $wl['wishlist_name'] ) : esc_html( $default_wishlsit_title );
     				                        if( $wl['wishlist_privacy'] == 1 ){
-    					                        $wl_privacy = __( 'Shared', 'yit' );
+    					                        $wl_privacy = __( 'Shared', 'wingman' );
     				                        }
     				                        elseif( $wl['wishlist_privacy'] == 2 ){
-    					                        $wl_privacy = __( 'Private', 'yit' );
+    					                        $wl_privacy = __( 'Private', 'wingman' );
     				                        }
     				                        else{
-    					                        $wl_privacy = __( 'Public', 'yit' );
+    					                        $wl_privacy = __( 'Public', 'wingman' );
     				                        }
 
     				                        echo sprintf( '%s - %s', $wl_title, $wl_privacy );
@@ -249,14 +249,14 @@
 
     	                        <!-- Remove from wishlist -->
     	                        <?php if( $is_user_owner && $repeat_remove_button ): ?>
-                                    <a href="<?php echo esc_url( add_query_arg( 'remove_from_wishlist', $item['prod_id'] ) ) ?>" class="remove_from_wishlist button" title="<?php _e( 'Remove this product', 'yit' ) ?>"><?php _e( 'Remove', 'yit' ) ?></a>
+                                    <a href="<?php echo esc_url( add_query_arg( 'remove_from_wishlist', $item['prod_id'] ) ) ?>" class="remove_from_wishlist button" title="<?php _e( 'Remove this product', 'wingman' ) ?>"><?php _e( 'Remove', 'wingman' ) ?></a>
                                 <?php endif; ?>
                             </td>
     	                   <?php endif; ?>
                             <?php if( $is_user_owner ): ?>
                                 <td class="product-remove">
                                     <div>
-                                        <a href="<?php echo esc_url( add_query_arg( 'remove_from_wishlist', $item['prod_id'] ) ) ?>" class="remove remove_from_wishlist" title="<?php _e( 'Remove this product', 'yit' ) ?>"></a>
+                                        <a href="<?php echo esc_url( add_query_arg( 'remove_from_wishlist', $item['prod_id'] ) ) ?>" class="remove remove_from_wishlist" title="<?php _e( 'Remove this product', 'wingman' ) ?>"></a>
                                     </div>
                                 </td>
                             <?php endif; ?>
@@ -266,7 +266,7 @@
                 endforeach;
             else: ?>
                 <tr>
-                    <td colspan="<?php echo esc_attr( $column_count ) ?>" class="wishlist-empty"><?php _e( 'No products were added to the wishlist', 'yit' ) ?></td>
+                    <td colspan="<?php echo esc_attr( $column_count ) ?>" class="wishlist-empty"><?php _e( 'No products were added to the wishlist', 'wingman' ) ?></td>
                 </tr>
             <?php
             endif;
@@ -283,7 +283,7 @@
     	        <td colspan="<?php echo esc_attr( $column_count ) ?>">
     	            <?php if( $show_cb ) : ?>
     		            <div class="custom-add-to-cart-button-cotaniner">
-    		                <a href="<?php echo esc_url( add_query_arg( array( 'wishlist_products_to_add_to_cart' => '', 'wishlist_token' => $wishlist_meta['wishlist_token'] ) ) ) ?>" class="button alt" id="custom_add_to_cart"><?php _e( 'Add the selected products to the cart', 'yit' ) ?></a>
+    		                <a href="<?php echo esc_url( add_query_arg( array( 'wishlist_products_to_add_to_cart' => '', 'wishlist_token' => $wishlist_meta['wishlist_token'] ) ) ) ?>" class="button alt" id="custom_add_to_cart"><?php _e( 'Add the selected products to the cart', 'wingman' ) ?></a>
     		            </div>
     	            <?php endif; ?>
 
@@ -291,7 +291,7 @@
     		            <div class="ask-an-estimate-button-container">
     	                    <a href="<?php echo ( $additional_info ) ? '#ask_an_estimate_popup' : $ask_estimate_url ?>" class="btn button ask-an-estimate-button" <?php echo ( $additional_info ) ? 'data-rel="prettyPhoto[ask_an_estimate]"' : '' ?> >
     	                    <?php echo apply_filters( 'yith_wcwl_ask_an_estimate_icon', '<i class="fa fa-shopping-cart"></i>' )?>
-    	                    <?php _e( 'Ask for an estimate', 'yit' ) ?>
+    	                    <?php _e( 'Ask for an estimate', 'wingman' ) ?>
     	                </a>
     		            </div>
     	            <?php endif; ?>
@@ -334,7 +334,7 @@
 
 			<button class="btn button ask-an-estimate-button ask-an-estimate-button-popup" >
 				<?php echo apply_filters( 'yith_wcwl_ask_an_estimate_icon', '<i class="fa fa-shopping-cart"></i>' )?>
-				<?php _e( 'Ask for an estimate', 'yit' ) ?>
+				<?php _e( 'Ask for an estimate', 'wingman' ) ?>
 			</button>
 		</form>
 	</div>

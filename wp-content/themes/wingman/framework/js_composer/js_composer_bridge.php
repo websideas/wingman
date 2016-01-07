@@ -122,5 +122,5 @@ if(kt_is_wc()){
 }
 
 foreach ( $composer_addons as $addon ) {
-	require KT_FW_DIR . 'js_composer/vc_addons/' . $addon;
+	require KT_FW_DIR . '/js_composer/vc_addons/' . $addon;
 }

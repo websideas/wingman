@@ -147,7 +147,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'visible' => array($prefix . 'gallery_type','=', 'layer' ),
             ),
             array(
-                'name' => esc_html__( 'Gallery images', 'your-prefix' ),
+                'name' => esc_html__( 'Gallery images', 'wingman' ),
                 'id'  => "{$prefix}gallery_images",
                 'type' => 'image_advanced',
                 'desc' => esc_html__( "You can drag and drop for change order image", 'wingman' ),

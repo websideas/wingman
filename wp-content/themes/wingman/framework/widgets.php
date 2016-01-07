@@ -165,7 +165,7 @@ $kt_widgets = array(
 );
 
 foreach ( $kt_widgets as $widget ) {
-	require KT_FW_WIDGETS . $widget;
+	require KT_FW_WIDGETS.'/'. $widget;
 }
 
 

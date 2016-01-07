@@ -132,7 +132,7 @@ class WP_Widget_KT_Socials extends WP_Widget {
             <input id="<?php echo $this->get_field_id( 'value' ); ?>" type="hidden" class="wpb_vc_param_value kt-socials-value" name="<?php echo $this->get_field_name( 'value' ); ?>" value="<?php echo esc_attr($value); ?>" />
         </div><!-- .kt-socials-options -->
         <small><?php _e( 'Empty for select all, Drop and sortable social','wingman' ); ?></small>
-        <?php wp_enqueue_script( 'cosials_js', KT_FW_JS.'kt_socials.js', array('jquery'), FW_VER, true); ?>
+        <?php wp_enqueue_script( 'cosials_js', KT_FW_JS.'kt_socials.js', array('jquery'), KT_FW_VER, true); ?>
         
         <p><label for="<?php echo $this->get_field_id('style'); ?>"><?php _e('Style:', 'wingman'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('style'); ?>" name="<?php echo $this->get_field_name('style'); ?>">

@@ -15,7 +15,7 @@ function ktheading_settings_field( $settings, $value ) {
     
     return '<input type="hidden" class="wpb_vc_param_value ' . $settings['param_name'] . ' ' . $type . ' ' . $class . '" name="' . $param_name . '" value="'.esc_attr($value).'" '.$dependency.'/>';
 }
-vc_add_shortcode_param( 'kt_heading', 'ktheading_settings_field' );
+WpbakeryShortcodeParams::addField('kt_heading', 'ktheading_settings_field' );
 
 
 /**
@@ -37,7 +37,7 @@ function vc_ktnumber_settings_field($settings, $value){
 	$output = '<input type="number" min="'.esc_attr($min).'" max="'.esc_attr($max).'" class="wpb_vc_param_value ' . $param_name . ' ' . $type . ' ' . $class . '" name="' . $param_name . '" value="'.esc_attr($value).'" '.$dependency.' '.$style.' />'.$suffix;
 	return $output;
 }
-vc_add_shortcode_param('kt_number' , 'vc_ktnumber_settings_field');
+WpbakeryShortcodeParams::addField('kt_number' , 'vc_ktnumber_settings_field');
 
 
 /**
@@ -64,7 +64,7 @@ function vc_kt_radio_settings_field($settings, $value) {
     
     return $output."<div class='".$class_input."'>".implode(' ', $radios)."</div>";
 }
-vc_add_shortcode_param('kt_radio', 'vc_kt_radio_settings_field', KT_FW_JS.'kt_radio.js');
+WpbakeryShortcodeParams::addField('kt_radio', 'vc_kt_radio_settings_field', KT_FW_JS.'/kt_radio.js');
 
 
 /**
@@ -89,7 +89,7 @@ function kt_switch_settings_field($settings, $value) {
     
     return $output;
 }
-vc_add_shortcode_param('kt_switch', 'kt_switch_settings_field', KT_FW_JS.'kt_switch.js');
+WpbakeryShortcodeParams::addField('kt_switch', 'kt_switch_settings_field', KT_FW_JS.'/kt_switch.js');
 
 
 
@@ -137,7 +137,7 @@ function vc_kt_taxonomy_settings_field( $settings, $value ) {
     return $output;
 }
 
-vc_add_shortcode_param('kt_taxonomy', 'vc_kt_taxonomy_settings_field', KT_FW_JS.'kt_select.js');
+WpbakeryShortcodeParams::addField('kt_taxonomy', 'vc_kt_taxonomy_settings_field', KT_FW_JS.'/kt_select.js');
 
 /**
  * Posts field.
@@ -176,7 +176,7 @@ function vc_kt_posts_settings_field($settings, $value) {
     return $output;
 
 }
-vc_add_shortcode_param('kt_posts', 'vc_kt_posts_settings_field', KT_FW_JS.'kt_select.js');
+WpbakeryShortcodeParams::addField('kt_posts', 'vc_kt_posts_settings_field', KT_FW_JS.'/kt_select.js');
 
 
 
@@ -216,7 +216,7 @@ function vc_kt_authors_settings_field($settings, $value) {
     return $output;
 
 }
-vc_add_shortcode_param('kt_authors', 'vc_kt_authors_settings_field', KT_FW_JS.'kt_select.js');
+WpbakeryShortcodeParams::addField('kt_authors', 'vc_kt_authors_settings_field', KT_FW_JS.'/kt_select.js');
 
 
 /**
@@ -267,7 +267,7 @@ function vc_kt_socials_settings_field($settings, $value) {
     return $output;
 
 }
-vc_add_shortcode_param('kt_socials', 'vc_kt_socials_settings_field', KT_FW_JS.'kt_socials.js');
+WpbakeryShortcodeParams::addField('kt_socials', 'vc_kt_socials_settings_field', KT_FW_JS.'/kt_socials.js');
 
 
 
@@ -294,7 +294,7 @@ function vc_kt_image_sizes_settings_field($settings, $value){
         .'</select>';
     return $output;
 }
-vc_add_shortcode_param('kt_image_sizes', 'vc_kt_image_sizes_settings_field');
+WpbakeryShortcodeParams::addField('kt_image_sizes', 'vc_kt_image_sizes_settings_field');
 
 
 function vc_kt_icons_settings($settings, $value){
@@ -340,4 +340,4 @@ function vc_kt_icons_settings($settings, $value){
 
     return $output;
 }
-vc_add_shortcode_param('kt_icons', 'vc_kt_icons_settings',  KT_FW_JS.'kt_icons.js');
+WpbakeryShortcodeParams::addField('kt_icons', 'vc_kt_icons_settings',  KT_FW_JS.'/kt_icons.js');

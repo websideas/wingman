@@ -28,8 +28,8 @@ add_filter('woocommerce_enable_setup_wizard', 'kt_disable_woocommerce_enable_set
  *
  */
 function kt_wp_enqueue_scripts(){
-    wp_enqueue_style( 'kt-woocommerce', KT_THEME_CSS . 'woocommerce.css' );
-    wp_enqueue_script( 'kt-woocommerce', KT_THEME_JS . 'woocommerce.js', array( 'jquery', 'jquery-ui-accordion', 'jquery-ui-tabs' ), null, true );
+    wp_enqueue_style( 'kt-woocommerce', KT_THEME_CSS . '/woocommerce.css' );
+    wp_enqueue_script( 'kt-woocommerce', KT_THEME_JS . '/woocommerce.js', array( 'jquery', 'jquery-ui-accordion', 'jquery-ui-tabs' ), null, true );
 }
 add_action( 'wp_enqueue_scripts', 'kt_wp_enqueue_scripts' );
 
