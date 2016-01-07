@@ -379,7 +379,7 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 			// Make sure scripts for new media uploader in WordPress 3.5 is enqueued
 			wp_enqueue_media();
 
-			wp_enqueue_script( 'kt_image', KT_FW_JS . 'kt_image.js', array( 'jquery', 'underscore' ), RWMB_VER, true );
+			wp_enqueue_script( 'kt_image', KT_FW_JS . '/kt_image.js', array( 'jquery', 'underscore' ), RWMB_VER, true );
 			wp_localize_script( 'rwmb-file-background', 'kt_image_lange', array(
 				'frameTitle' => esc_html__( 'Select Image', 'wingman' ),
 			) );

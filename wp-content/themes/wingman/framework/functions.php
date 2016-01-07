@@ -752,10 +752,10 @@ if(!function_exists('kt_placeholder_callback')) {
         if(is_array($placeholder) && $placeholder['id'] != '' ){
             $obj = get_thumbnail_attachment($placeholder['id'], $size);
             $imgage = $obj['url'];
-        }elseif($size == 'blog_post' || $size == 'blog_post_sidebar'){
-            $imgage = KT_THEME_IMG . 'placeholder-blogpost.png';
+        }elseif($size == 'kt_list'){
+            $imgage = KT_THEME_IMG . '/placeholder-blogpost.jpg';
         }else{
-            $imgage = KT_THEME_IMG . 'placeholder-post.png';
+            $imgage = KT_THEME_IMG . '/placeholder-post.jpg';
         }
 
         return $imgage;

@@ -192,7 +192,7 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
             </ul><!-- .kt-socials-profiles -->
             <input id="<?php echo $this->get_field_id( 'value' ); ?>" type="hidden" class="wpb_vc_param_value kt-socials-value" name="<?php echo $this->get_field_name( 'value' ); ?>" value="<?php echo esc_attr($value); ?>" />
         </div><!-- .kt-socials-options -->
-        <?php wp_enqueue_script( 'sosials_js', KT_FW_JS.'kt_socials.js', array('jquery'), KT_FW_VER, true); ?>
+        <?php wp_enqueue_script( 'sosials_js', KT_FW_JS.'/kt_socials.js', array('jquery'), KT_FW_VER, true); ?>
         
         <script type="text/javascript">
             (function($){

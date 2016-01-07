@@ -408,7 +408,7 @@ function kt_woocommerce_product_loop_start_callback($classes){
 add_filter('woocommerce_placeholder_img_src', 'kt_woocommerce_placeholder_img_src');
 
 function kt_woocommerce_placeholder_img_src( $src ) {
-    return KT_THEME_IMG . 'placeholder.png';
+    return KT_THEME_IMG . '/placeholder.png';
 }
 
 

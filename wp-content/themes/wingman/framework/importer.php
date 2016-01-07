@@ -65,7 +65,7 @@ if ( !function_exists( 'kt_extended_imported' ) ) {
             if ( isset( $wbc_sliders_array[$demoid]  ) ) {
                 $wbc_slider_import = $wbc_sliders_array[$demoid];
 
-                $slider_import = KT_THEME_DIR.'dummy-data/revslider/'.$wbc_slider_import;
+                $slider_import = KT_THEME_DIR.'/dummy-data/revslider/'.$wbc_slider_import;
 
                 if ( file_exists( $slider_import ) ) {
                     $slider = new RevSlider();
@@ -131,13 +131,13 @@ if ( !function_exists( 'kt_extended_imported' ) ) {
 
 
 function kt_importer_dir_wingman( ) {
-    return KT_THEME_DATA_DIR;
+    return KT_THEME_DATA_DIR.'/';
 }
 add_filter('kt_importer_dir', 'kt_importer_dir_wingman' );
 
 function kt_importer_url_wingman( ) {
 
-    return KT_THEME_DATA;
+    return KT_THEME_DATA.'/';
 }
 add_filter('kt_importer_url', 'kt_importer_url_wingman' );
 

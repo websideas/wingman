@@ -346,16 +346,6 @@ function kt_setting_script() {
 add_action('wp_enqueue_scripts', 'kt_setting_script');
 
 
-/**
- * Add scroll to top
- *
- */
-add_action( 'theme_before_footer_top', 'theme_after_footer_top_addscroll' );
-function theme_after_footer_top_addscroll(){
-    echo "<a href='#top' id='backtotop'></a>";
-}
-
-
 
 function kt_excerpt_length( ) {
     return kt_option('archive_excerpt_length', 30);

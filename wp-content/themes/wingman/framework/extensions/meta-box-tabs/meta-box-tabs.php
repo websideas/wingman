@@ -63,8 +63,8 @@ if ( ! class_exists( 'RWMB_Tabs' ) )
 			if ( 'post' != $screen->base )
 				return;
 
-			wp_enqueue_style( 'rwmb-tabs', KT_FW_EXT_URL.'meta-box-tabs/tabs.css');
-			wp_enqueue_script( 'rwmb-tabs', KT_FW_EXT_URL.'meta-box-tabs/tabs.js', array( 'jquery' ), '0.1', true );
+			wp_enqueue_style( 'rwmb-tabs', KT_FW_EXT_URL.'/meta-box-tabs/tabs.css');
+			wp_enqueue_script( 'rwmb-tabs', KT_FW_EXT_URL.'/meta-box-tabs/tabs.js', array( 'jquery' ), '0.1', true );
 		}
 
 		/**

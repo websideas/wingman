@@ -300,11 +300,11 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'options'  => array(
                             'layout1' => array(
                                 'alt' => esc_html__( 'Layout 1', 'wingman' ),
-                                'img' => KT_FW_IMG . 'header/header-v1.jpg',
+                                'img' => KT_FW_IMG . '/header/header-v1.jpg',
                             ),
                             'layout2' => array(
                                 'alt' => esc_html__( 'Layout 2', 'wingman' ),
-                                'img' => KT_FW_IMG . 'header/header-v2.jpg',
+                                'img' => KT_FW_IMG . '/header/header-v2.jpg',
                             ),
                         ),
                         'default'  => 'layout1'
@@ -397,15 +397,15 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Footer widgets layout', 'wingman' ),
                         'subtitle' => esc_html__( 'Select your footer widgets layout', 'wingman' ),
                         'options'  => array(
-                            '3-3-3-3' => array( 'alt' => esc_html__( 'Layout 1', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-1.png' ),
-                            '6-3-3' => array( 'alt' => esc_html__( 'Layout 2', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-2.png' ),
-                            '3-3-6' => array( 'alt' => esc_html__( 'Layout 3', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-3.png' ),
-                            '6-6' => array( 'alt' => esc_html__( 'Layout 4', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-4.png' ),
-                            '4-4-4' => array( 'alt' => esc_html__( 'Layout 5', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-5.png' ),
-                            '8-4' => array( 'alt' => esc_html__( 'Layout 6', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-6.png' ),
-                            '4-8' => array( 'alt' => esc_html__( 'Layout 7', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-7.png' ),
-                            '3-6-3' => array( 'alt' => esc_html__( 'Layout 8', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-8.png' ),
-                            '12' => array( 'alt' => esc_html__( 'Layout 9', 'wingman' ), 'img' => KT_FW_IMG . 'footer/footer-9.png' ),
+                            '3-3-3-3' => array( 'alt' => esc_html__( 'Layout 1', 'wingman' ), 'img' => KT_FW_IMG . '/footer/footer-1.png' ),
+                            '6-3-3' => array( 'alt' => esc_html__( 'Layout 2', 'wingman' ), 'img' => KT_FW_IMG . '/footer/footer-2.png' ),
+                            '3-3-6' => array( 'alt' => esc_html__( 'Layout 3', 'wingman' ), 'img' => KT_FW_IMG . '/footer/footer-3.png' ),
+                            '6-6' => array( 'alt' => esc_html__( 'Layout 4', 'wingman' ), 'img' => KT_FW_IMG . '/footer/footer-4.png' ),
+                            '4-4-4' => array( 'alt' => esc_html__( 'Layout 5', 'wingman' ), 'img' => KT_FW_IMG . '/footer/footer-5.png' ),
+                            '8-4' => array( 'alt' => esc_html__( 'Layout 6', 'wingman' ), 'img' => KT_FW_IMG . '/footer/footer-6.png' ),
+                            '4-8' => array( 'alt' => esc_html__( 'Layout 7', 'wingman' ), 'img' => KT_FW_IMG . '/footer/footer-7.png' ),
+                            '3-6-3' => array( 'alt' => esc_html__( 'Layout 8', 'wingman' ), 'img' => KT_FW_IMG . '/footer/footer-8.png' ),
+                            '12' => array( 'alt' => esc_html__( 'Layout 9', 'wingman' ), 'img' => KT_FW_IMG . '/footer/footer-9.png' ),
                         ),
                         'default'  => '3-3-3-3'
                     ),
@@ -485,7 +485,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'footer_copyright_text',
                         'type'     => 'editor',
                         'title'    => esc_html__( 'Footer Copyright Text', 'wingman' ),
-                        'default'  => '<p style="margin-bottom: 38px;"><a href="'.esc_url( home_url( '/' )).'"><img src="'.KT_THEME_IMG.'logo-light.png" alt="Wingman" /></a></p><p style="margin-bottom: 24px;"><img src="'.KT_THEME_IMG.'payment.png" alt="payment" /></p><p style="margin:0;">Copyright &copy; 2015 - <a href="'.esc_url( home_url( '/' )).'">Wing Man</a> - All rights reserved. </p><p style="margin:0;">Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a></p>'
+                        'default'  => '<p style="margin-bottom: 38px;"><a href="'.esc_url( home_url( '/' )).'"><img src="'.KT_THEME_IMG.'/logo-light.png" alt="Wingman" /></a></p><p style="margin-bottom: 24px;"><img src="'.KT_THEME_IMG.'/payment.png" alt="payment" /></p><p style="margin:0;">Copyright &copy; 2015 - <a href="'.esc_url( home_url( '/' )).'">Wing Man</a> - All rights reserved. </p><p style="margin:0;">Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a></p>'
                     ),
                 )
             );
@@ -515,9 +515,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Loader layout', 'wingman' ),
                         'subtitle' => esc_html__( 'Please choose loader layout', 'wingman' ),
                         'options'  => array(
-                            'style-1' => array( 'alt' => esc_html__( 'Style 1', 'wingman' ), 'img' => KT_FW_IMG . 'loader/loader_v1.jpg' ),
-                            'style-2' => array( 'alt' => esc_html__( 'Style 2', 'wingman' ), 'img' => KT_FW_IMG . 'loader/loader_v2.jpg' ),
-                            'style-3' => array( 'alt' => esc_html__( 'Style 2', 'wingman' ), 'img' => KT_FW_IMG . 'loader/loader_v3.jpg' ),
+                            'style-1' => array( 'alt' => esc_html__( 'Style 1', 'wingman' ), 'img' => KT_FW_IMG . '/loader/loader_v1.jpg' ),
+                            'style-2' => array( 'alt' => esc_html__( 'Style 2', 'wingman' ), 'img' => KT_FW_IMG . '/loader/loader_v2.jpg' ),
+                            'style-3' => array( 'alt' => esc_html__( 'Style 2', 'wingman' ), 'img' => KT_FW_IMG . '/loader/loader_v3.jpg' ),
                         ),
                         'default'  => 'style-1',
                     ),
@@ -572,7 +572,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'options'  => array(
                             'color_default'      => array(
                                 'alt'   => 'Default', 
-                                'img'   => KT_FW_IMG.'preset/default.jpg',
+                                'img'   => KT_FW_IMG.'/preset/default.jpg',
                                 'presets'   => array(
                                     'color_first_loader' => '#82c14f',
                                     'styling_accent' => '#82c14f',
@@ -592,7 +592,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             ),
                             'color_pale_red'      => array(
                                 'alt'   => 'Pale Red', 
-                                'img'   => KT_FW_IMG.'preset/pale-red.jpg',
+                                'img'   => KT_FW_IMG.'/preset/pale-red.jpg',
                                 'presets'   => array(
                                     'color_first_loader' => '#ed727c',
                                     'styling_accent' => '#ed727c',
@@ -612,7 +612,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             ),
                             'color_purple'      => array(
                                 'alt'   => 'purple', 
-                                'img'   => KT_FW_IMG.'preset/purple.jpg', 
+                                'img'   => KT_FW_IMG.'/preset/purple.jpg',
                                 'presets'   => array(
                                     'color_first_loader' => '#ec6aec',
                                     'styling_accent' => '#ec6aec',
@@ -642,7 +642,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Header Preset', 'wingman' ),
                         'options'  => array(
                             'layout1' => array(
-                                'img' => KT_FW_IMG . 'header/header-v1.jpg',
+                                'img' => KT_FW_IMG . '/header/header-v1.jpg',
                                 'presets'   => array(
                                     'logo_margin_spacing' => array( 'margin-top' => '40px','margin-bottom' => '40px' ),
                                     'navigation_height' => array( 'height' => '60', 'units'  => 'px' ),
@@ -652,7 +652,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                                 )
                             ),
                             'layout2' => array(
-                                'img' => KT_FW_IMG . 'header/header-v2.jpg',
+                                'img' => KT_FW_IMG . '/header/header-v2.jpg',
                                 'presets'   => array(
                                     'logo_margin_spacing' => array( 'margin-top' => '0px','margin-bottom' => '0px' ),
                                     'navigation_height' => array( 'height' => '120', 'units'  => 'px' ),
@@ -3753,7 +3753,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'compiler' => true,
                         'title'    => esc_html__( 'Popup Image', 'wingman' ),
                         'default'  => array(
-                            'url' => KT_THEME_IMG.'popup_image.png'
+                            'url' => KT_THEME_IMG.'/popup_image.png'
                         )
                     ),
                     

@@ -304,8 +304,8 @@ if (!function_exists('kt_get_logo')){
         }
 
         if(!$logo['default']){
-            $logo['default'] = KT_THEME_IMG.'logo.png';
-            $logo['retina'] = KT_THEME_IMG.'logo-2x.png';
+            $logo['default'] = KT_THEME_IMG.'/logo.png';
+            $logo['retina'] = KT_THEME_IMG.'/logo-2x.png';
         }
 
         return $logo;
@@ -883,7 +883,7 @@ if(!function_exists('kt_color2hecxa')){
             case 'orange': $color = '#f7be68'; break;
             case 'sky': $color = '#5aa1e3'; break;
             case 'green': $color = '#6dab3c'; break;
-            case 'accent': $color = kt_option('styling_accent', '#d0a852'); break;
+            case 'accent': $color = kt_option('styling_accent', '#82c14f'); break;
 
         }
         return $color;
