@@ -283,47 +283,31 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 *	Header
 			 **/
 			$this->sections[] = array(
-				'id'			=> 'Header',
+				'id'			=> 'header_heading',
 				'title'			=> esc_html__( 'Header', 'wingman' ),
 				'desc'			=> '',
 				'subsection' => true,
 				'fields'		=> array(
-
-                    array(
-                        'id'       => 'header',
-                        'type'     => 'image_select',
-                        'compiler' => true,
-                        'presets'  => true,
-                        'title'    => esc_html__( 'Header layout', 'wingman' ),
-                        'subtitle' => esc_html__( 'Please choose header layout', 'wingman' ),
-                        'options'  => array(
-                            'layout1' => array( 
-                                'alt' => esc_html__( 'Layout 1', 'wingman' ), 
-                                'img' => KT_FW_IMG . 'header/header-v1.png',
-                                'presets'   => array(
-                                    'logo_margin_spacing' => array( 'margin-top' => '40px','margin-bottom' => '40px' ),
-                                    'navigation_height' => array( 'height' => '60', 'units'  => 'px' ),
-                                    'navigation_color' => '#ffffff',
-                                    'header_sticky_background' => array( 'background-color' => '#252525' )
-                                )
-                            ),
-                            'layout2' => array( 
-                                'alt' => esc_html__( 'Layout 2', 'wingman' ), 
-                                'img' => KT_FW_IMG . 'header/header-v2.png',
-                                'presets'   => array(
-                                    'logo_margin_spacing' => array( 'margin-top' => '0px','margin-bottom' => '0px' ),
-                                    'navigation_height' => array( 'height' => '120', 'units'  => 'px' ),
-                                    'navigation_color' => '#252525',
-                                    'header_sticky_background' => array( 'background-color' => '#ffffff' )
-                                )
-                            ),
-                        ),
-                        'default'  => 'layout1'
-                    ),
-
                     array(
                         'id'   => 'divide_id',
                         'type' => 'divide'
+                    ),
+                    array(
+                        'id'       => 'header',
+                        'type'     => 'image_select',
+                        'title'    => esc_html__( 'Header layout', 'wingman' ),
+                        'subtitle' => esc_html__( 'Please choose header layout', 'wingman' ),
+                        'options'  => array(
+                            'layout1' => array(
+                                'alt' => esc_html__( 'Layout 1', 'wingman' ),
+                                'img' => KT_FW_IMG . 'header/header-v1.jpg',
+                            ),
+                            'layout2' => array(
+                                'alt' => esc_html__( 'Layout 2', 'wingman' ),
+                                'img' => KT_FW_IMG . 'header/header-v2.jpg',
+                            ),
+                        ),
+                        'default'  => 'layout1'
                     ),
                     array(
                         'id' => 'header_search',
@@ -333,7 +317,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         "default" => 1,
                         'on'		=> esc_html__( 'Enabled', 'wingman' ),
                         'off'		=> esc_html__( 'Disabled', 'wingman' ),
-                    ),
+                    )
 
                 )
             );
@@ -531,9 +515,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Loader layout', 'wingman' ),
                         'subtitle' => esc_html__( 'Please choose loader layout', 'wingman' ),
                         'options'  => array(
-                            'style-1' => array( 'alt' => esc_html__( 'Style 1', 'wingman' ), 'img' => KT_FW_IMG . 'loader/loader_v1.png' ),
-                            'style-2' => array( 'alt' => esc_html__( 'Style 2', 'wingman' ), 'img' => KT_FW_IMG . 'loader/loader_v2.png' ),
-                            'style-3' => array( 'alt' => esc_html__( 'Style 2', 'wingman' ), 'img' => KT_FW_IMG . 'loader/loader_v3.png' ),
+                            'style-1' => array( 'alt' => esc_html__( 'Style 1', 'wingman' ), 'img' => KT_FW_IMG . 'loader/loader_v1.jpg' ),
+                            'style-2' => array( 'alt' => esc_html__( 'Style 2', 'wingman' ), 'img' => KT_FW_IMG . 'loader/loader_v2.jpg' ),
+                            'style-3' => array( 'alt' => esc_html__( 'Style 2', 'wingman' ), 'img' => KT_FW_IMG . 'loader/loader_v3.jpg' ),
                         ),
                         'default'  => 'style-1',
                     ),
@@ -576,7 +560,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 
             $this->sections[] = array(
                 'icon'      => 'el-icon-cog',
-                'title'     => esc_html__('Color Preset', 'wingman'),
+                'title'     => esc_html__('Preset', 'wingman'),
                 'fields'    => array(
                     array(
                         'id'       => 'kt-presets',
@@ -588,7 +572,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'options'  => array(
                             'color_default'      => array(
                                 'alt'   => 'Default', 
-                                'img'   => KT_FW_IMG.'preset/default.jpg', 
+                                'img'   => KT_FW_IMG.'preset/default.jpg',
                                 'presets'   => array(
                                     'color_first_loader' => '#82c14f',
                                     'styling_accent' => '#82c14f',
@@ -608,7 +592,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             ),
                             'color_pale_red'      => array(
                                 'alt'   => 'Pale Red', 
-                                'img'   => KT_FW_IMG.'preset/pale-red.jpg', 
+                                'img'   => KT_FW_IMG.'preset/pale-red.jpg',
                                 'presets'   => array(
                                     'color_first_loader' => '#ed727c',
                                     'styling_accent' => '#ed727c',
@@ -647,11 +631,41 @@ if ( ! class_exists( 'KT_config' ) ) {
                                 )
                             ),
                         )
-                    )
+                    ),
+
+                    array(
+                        'id'       => 'header_preset',
+                        'type'     => 'image_select',
+                        'subtitle' => esc_html__( 'If you choose header preset, All layout and style for header change', 'wingman' ),
+                        'compiler' => true,
+                        'presets'  => true,
+                        'title'    => esc_html__( 'Header Preset', 'wingman' ),
+                        'options'  => array(
+                            'layout1' => array(
+                                'img' => KT_FW_IMG . 'header/header-v1.jpg',
+                                'presets'   => array(
+                                    'logo_margin_spacing' => array( 'margin-top' => '40px','margin-bottom' => '40px' ),
+                                    'navigation_height' => array( 'height' => '60', 'units'  => 'px' ),
+                                    'navigation_color' => '#ffffff',
+                                    'header_sticky_background' => array( 'background-color' => '#252525' ),
+                                    'header' => 'layout1'
+                                )
+                            ),
+                            'layout2' => array(
+                                'img' => KT_FW_IMG . 'header/header-v2.jpg',
+                                'presets'   => array(
+                                    'logo_margin_spacing' => array( 'margin-top' => '0px','margin-bottom' => '0px' ),
+                                    'navigation_height' => array( 'height' => '120', 'units'  => 'px' ),
+                                    'navigation_color' => '#252525',
+                                    'header_sticky_background' => array( 'background-color' => '#ffffff' ),
+                                    'header' => 'layout2'
+                                )
+                            ),
+                        ),
+                        'default'  => 'layout1'
+                    ),
                 )
             );
-
-            
 
             /**
 			 *	Styling
@@ -765,49 +779,39 @@ if ( ! class_exists( 'KT_config' ) ) {
 
                 )
             );
-            
+
             /**
 			 *	Styling Header
 			 **/
+            /*
             $this->sections[] = array(
 				'id'			=> 'styling_header',
 				'title'			=> esc_html__( 'Header', 'wingman' ),
 				'subsection' => true,
                 'fields'		=> array(
-
-
-
-                    /*
-
-
-
-                        array(
-                            'id'   => 'divide_id',
-                            'type' => 'divide'
-                        ),
-
-                        array(
-                            'id'       => 'header_background',
-                            'type'     => 'background',
-                            'title'    => esc_html__( 'Header background', 'wingman' ),
-                            'subtitle' => esc_html__( 'Header with image, color, etc.', 'wingman' ),
-                            'default'   => '',
-                            'output'      => array( '.header-background' ),
-                        ),
-                        array(
-                            'id'            => 'header_opacity',
-                            'type'          => 'slider',
-                            'title'         => esc_html__( 'Background opacity', 'wingman' ),
-                            'default'       => 1,
-                            'min'           => 0,
-                            'step'          => .1,
-                            'max'           => 1,
-                            'resolution'    => 0.1,
-                            'display_value' => 'text'
-                        ),
-                    */
+                    array(
+                        'id'       => 'header_background',
+                        'type'     => 'background',
+                        'title'    => esc_html__( 'Header background', 'wingman' ),
+                        'subtitle' => esc_html__( 'Header with image, color, etc.', 'wingman' ),
+                        'default'   => '',
+                        'output'      => array( '.header-background' ),
+                    ),
+                    array(
+                        'id'            => 'header_opacity',
+                        'type'          => 'slider',
+                        'title'         => esc_html__( 'Background opacity', 'wingman' ),
+                        'default'       => 1,
+                        'min'           => 0,
+                        'step'          => .1,
+                        'max'           => 1,
+                        'resolution'    => 0.1,
+                        'display_value' => 'text'
+                    ),
                 )
             );
+
+            */
             /**
              *	Styling Footer
              **/
@@ -3462,7 +3466,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'left' => esc_html__('Left Sidebar', 'wingman'),
                             'right' => esc_html__('Right Layout', 'wingman')
                         ),
-                        'default'  => 'right',
+                        'default'  => 'left',
                         'clear' => false
                     ),
                     array(

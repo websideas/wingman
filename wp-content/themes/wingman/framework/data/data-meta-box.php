@@ -52,7 +52,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type'             => 'file_advanced',
                 'max_file_uploads' => 1,
                 'mime_type'        => 'audio', // Leave blank for all file types
-                'compare' => array($prefix . 'audio_type','=', 'upload' ),
+                'visible' => array($prefix . 'audio_type','=', 'upload' ),
             ),
             array(
                 'name' => esc_html__( 'Soundcloud', 'wingman' ),
@@ -61,7 +61,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'textarea',
                 'cols' => 20,
                 'rows' => 3,
-                'compare' => array($prefix . 'audio_type','=', 'soundcloud' ),
+                'visible' => array($prefix . 'audio_type','=', 'soundcloud' ),
             ),
         ),
     );
@@ -96,14 +96,14 @@ function kt_register_meta_boxes( $meta_boxes )
                     'youtube' => esc_html__('Youtube', 'wingman'),
                     'vimeo' => esc_html__('Vimeo', 'wingman'),
                 ),
-                'compare' => array($prefix . 'video_type','=', 'external' ),
+                'visible' => array($prefix . 'video_type','=', 'external' ),
             ),
             array(
                 'name' => esc_html__( 'Video id', 'wingman' ),
                 'id' => $prefix . 'video_id',
                 'desc' => sprintf( esc_html__( 'Enter id of video .Example: <br />- Link video youtube: https://www.youtube.com/watch?v=nPOO1Coe2DI id of video: nPOO1Coe2DI <br /> -Link vimeo: https://vimeo.com/70296428 id video: 70296428.', 'wingman' ) ),
                 'type'  => 'text',
-                'compare' => array($prefix . 'video_type','=', 'external' ),
+                'visible' => array($prefix . 'video_type','=', 'external' ),
             ),
         ),
     );
@@ -137,21 +137,21 @@ function kt_register_meta_boxes( $meta_boxes )
                 'id' => $prefix . 'gallery_rev_slider',
                 'default' => true,
                 'type' => 'revSlider',
-                'compare' => array($prefix . 'gallery_type','=', 'rev' ),
+                'visible' => array($prefix . 'gallery_type','=', 'rev' ),
             ),
             array(
                 'name' => esc_html__('Select Layer Slider', 'wingman'),
                 'id' => $prefix . 'gallery_layerslider',
                 'default' => true,
                 'type' => 'layerslider',
-                'compare' => array($prefix . 'gallery_type','=', 'layer' ),
+                'visible' => array($prefix . 'gallery_type','=', 'layer' ),
             ),
             array(
                 'name' => esc_html__( 'Gallery images', 'your-prefix' ),
                 'id'  => "{$prefix}gallery_images",
                 'type' => 'image_advanced',
                 'desc' => esc_html__( "You can drag and drop for change order image", 'wingman' ),
-                'compare' => array($prefix . 'gallery_type','=', '' ),
+                'visible' => array($prefix . 'gallery_type','=', '' ),
             ),
         ),
     );
@@ -473,7 +473,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'revSlider',
                 'tab'  => 'header',
                 'desc' => esc_html__('Select the Revolution Slider.', 'wingman'),
-                'compare' => array($prefix . 'slideshow_source','=', 'revslider' ),
+                'visible' => array($prefix . 'slideshow_source','=', 'revslider' ),
             ),
             array(
                 'name' => esc_html__('Select Layer Slider', 'wingman'),
@@ -482,7 +482,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'layerslider',
                 'tab'  => 'header',
                 'desc' => esc_html__('Select the Layer Slider.', 'wingman'),
-                'compare' => array($prefix . 'slideshow_source','=', 'layerslider' ),
+                'visible' => array($prefix . 'slideshow_source','=', 'layerslider' ),
             ),
 
             /*
@@ -517,7 +517,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'desc' => esc_html__( "Enter cstom Text for page header.", 'wingman' ),
                 'type'  => 'text',
                 'tab'  => 'page_header',
-                'compare' => array($prefix . 'page_header','!=', '0' ),
+                'visible' => array($prefix . 'page_header','!=', '0' ),
             ),
 
             array(
@@ -526,7 +526,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'desc' => esc_html__( "Enter subtitle for page.", 'wingman' ),
                 'type'  => 'text',
                 'tab'  => 'page_header',
-                'compare' => array($prefix . 'page_header','!=', '0' ),
+                'visible' => array($prefix . 'page_header','!=', '0' ),
             ),
 
             array(
@@ -542,7 +542,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 ),
                 'std'  => '',
                 'tab'  => 'page_header',
-                'compare' => array($prefix . 'page_header','!=', '0' ),
+                'visible' => array($prefix . 'page_header','!=', '0' ),
             ),
 
             array(
@@ -557,7 +557,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'std'  => -1,
                 'desc' => esc_html__( "Show page breadcrumb.", 'wingman' ),
                 'tab'  => 'page_header',
-                'compare' => array($prefix . 'page_header','!=', '0' ),
+                'visible' => array($prefix . 'page_header','!=', '0' ),
             ),
 
             array(
@@ -566,7 +566,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'desc' => esc_html__("(Example: 60px). Emtpy for use default", 'wingman' ),
                 'type'  => 'text',
                 'tab'  => 'page_header',
-                'compare' => array($prefix . 'page_header','!=', '0' ),
+                'visible' => array($prefix . 'page_header','!=', '0' ),
             ),
             array(
                 'name' => esc_html__('Page header bottom spacing', 'wingman'),
@@ -574,7 +574,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'desc' => esc_html__("(Example: 60px). Emtpy for use default", 'wingman' ),
                 'type'  => 'text',
                 'tab'  => 'page_header',
-                'compare' => array($prefix . 'page_header','!=', '0' ),
+                'visible' => array($prefix . 'page_header','!=', '0' ),
             ),
             array(
                 'name' => esc_html__( 'Typography title custom color', 'wingman' ),
@@ -582,7 +582,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'color',
                 'tab'  => 'page_header',
                 'desc' => esc_html__( "Choose custom color for title.", 'wingman' ),
-                'compare' => array($prefix . 'page_header','!=', '0' ),
+                'visible' => array($prefix . 'page_header','!=', '0' ),
             ),
             array(
                 'name' => esc_html__( 'Typography sub title custom color', 'wingman' ),
@@ -590,7 +590,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'color',
                 'tab'  => 'page_header',
                 'desc' => esc_html__( "Choose custom color for sub title.", 'wingman' ),
-                'compare' => array($prefix . 'page_header','!=', '0' ),
+                'visible' => array($prefix . 'page_header','!=', '0' ),
             ),
             array(
                 'name' => esc_html__( 'Typography breadcrumbs custom color', 'wingman' ),
@@ -598,7 +598,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'color',
                 'tab'  => 'page_header',
                 'desc' => esc_html__( "Choose custom color for breadcrumbs.", 'wingman' ),
-                'compare' => array($prefix . 'page_header','!=', '0' ),
+                'visible' => array($prefix . 'page_header','!=', '0' ),
             ),
 
 
@@ -624,7 +624,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'sidebars',
                 'tab'  => 'page_layout',
                 'desc' => esc_html__("Select your sidebar.", 'wingman'),
-                'compare' => array($prefix . 'sidebar','=', 'left' ),
+                'visible' => array($prefix . 'sidebar','=', 'left' ),
             ),
             array(
                 'name' => esc_html__('Right sidebar', 'wingman'),
@@ -633,7 +633,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'sidebars',
                 'tab'  => 'page_layout',
                 'desc' => esc_html__("Select your sidebar.", 'wingman'),
-                'compare' => array($prefix . 'sidebar','=', 'right' ),
+                'visible' => array($prefix . 'sidebar','=', 'right' ),
             ),
             array(
                 'name' => esc_html__('Page top spacing', 'wingman'),

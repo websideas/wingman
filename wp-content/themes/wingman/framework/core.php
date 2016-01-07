@@ -81,8 +81,9 @@ if ( class_exists( 'RW_Meta_Box' ) ) {
     // Add plugin meta-box-tabs
     require KT_FW_EXT_DIR . 'meta-box-tabs/meta-box-tabs.php';
 
-	// Add plugin meta-box-group
-	require KT_FW_EXT_DIR . 'meta-box-group/meta-box-group.php';
+	// Add plugin meta-box-conditional-logic
+    define( 'MBC_URL', trailingslashit( KT_FW_EXT_URL . 'meta-box-conditional-logic' ) );
+	require KT_FW_EXT_DIR . 'meta-box-conditional-logic/meta-box-conditional-logic.php';
 
     if (is_admin() ) {
         // Make sure there's no errors when the plugin is deactivated or during upgrade
@@ -90,7 +91,6 @@ if ( class_exists( 'RW_Meta_Box' ) ) {
     }
     
 }
-
 
 /**
  * Include the redux-framework.

@@ -207,7 +207,8 @@ function kt_fronted_popup_callback() {
     $dont_show = $_POST['val_input'];
 
     if( $dont_show == true ){
-        setcookie('kt_popup', 1, time() + (60*60*24), '/');
+        //The cookie will expire after 2 days
+        setcookie('kt_popup', 1, time() + (86400*2), '/');
     }
 
     die();

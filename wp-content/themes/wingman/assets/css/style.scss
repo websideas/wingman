@@ -5097,6 +5097,7 @@ form.wpcf7-form{
     }
 
     &.current{
+      background: none;
       &:before,
       &:after{
         content:"";

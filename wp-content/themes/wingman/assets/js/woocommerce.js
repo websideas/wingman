@@ -45,6 +45,17 @@
             });
         });
 
+        var $pagination = $('.woocommerce-pagination ul.page-numbers');
+
+        if($pagination.length){
+            if(!$pagination.find('.prev').length){
+                $pagination.prepend('<li><span class="prev page-numbers disable"><i class="fa fa-long-arrow-left"></i></span></li>');
+            }
+            if(!$pagination.find('.next').length){
+                $pagination.append('<li><span class="next page-numbers disable"><i class="fa fa-long-arrow-right"></i></span></li>');
+            }
+        }
+
     });
 
 
@@ -261,10 +272,7 @@
                   }
                 }
             ];
-        }else{
-
         }
-
 
         $('.single-product-main-thumbnails').slick(options);
     }
@@ -303,9 +311,7 @@
                     e.preventDefault();
                     woocs_redirect($(this).data('currency'));
                 });
-
             }
-
         }
     }
 

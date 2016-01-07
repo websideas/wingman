@@ -56,7 +56,6 @@ if ( ! function_exists( 'kt_theme_setup' ) ):
             add_image_size( 'kt_masonry', 570 );
             add_image_size( 'kt_small', 170, 170, true );
             add_image_size( 'kt_list', 1140, 610, true );
-            add_image_size( 'kt_list_sidebar', 850, 455, true );
         }
 
         load_theme_textdomain( 'wingman', KT_THEME_DIR . '/languages' );

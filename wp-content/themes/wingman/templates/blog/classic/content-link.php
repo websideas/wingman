@@ -5,9 +5,9 @@ $classes = array('post-item post-layout-classic', $blog_atts['class']);
 <article <?php post_class($classes); ?>>
     <?php
     if($blog_atts['thumbnail_type'] == 'image'){
-        kt_post_thumbnail_image('blog_post', 'img-responsive');
+        kt_post_thumbnail_image('kt_list', 'img-responsive');
     }else{
-        kt_post_thumbnail('blog_post', 'img-responsive');
+        kt_post_thumbnail('kt_list', 'img-responsive');
     }
     ?>
     <?php if($blog_atts['thumbnail_type'] == 'image'){ ?>
