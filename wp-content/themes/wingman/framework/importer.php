@@ -90,19 +90,38 @@ if ( !function_exists( 'kt_extended_imported' ) ) {
          *************************************************************************/
 
         // array of demos/homepages to check/select from
-        $wbc_home_pages = array(
+        $kt_home_pages = array(
             'demo1' => 'Home',
             'demo2' => 'Home',
             'demo3' => 'Home',
         );
 
         if ( isset( $wbc_sliders_array[$demoid]  ) ) {
-            $page = get_page_by_title( $wbc_home_pages[$demoid] );
+            $page = get_page_by_title( $kt_home_pages[$demoid] );
             if ( isset( $page->ID ) ) {
                 update_option( 'page_on_front', $page->ID );
                 update_option( 'show_on_front', 'page' );
             }
         }
+
+        /************************************************************************
+         * Set Posts page
+         *************************************************************************/
+
+        // array of demos/Posts page to check/select from
+        $kt_posts_pages = array(
+            'demo1' => 'Blog',
+            'demo2' => 'Blog',
+            'demo3' => 'Blog',
+        );
+
+        if ( isset( $kt_posts_pages[$demoid]  ) ) {
+            $page = get_page_by_title( $kt_posts_pages[$demoid] );
+            if ( isset( $page->ID ) ) {
+                update_option( 'page_for_posts', $page->ID );
+            }
+        }
+
 
     }
     add_action( 'kt_importer_after_content_import', 'kt_extended_imported');
