@@ -177,6 +177,9 @@ if (!function_exists('kt_get_single_sidebar')) {
         );
         if($sidebar['sidebar'] == '' || $sidebar['sidebar'] == 'default' ){
             $sidebar['sidebar'] = kt_option('blog_sidebar', 'right');
+
+            print_r($sidebar['sidebar']);
+
             if($sidebar['sidebar'] == 'left' ){
                 $sidebar['sidebar_area'] = kt_option('blog_sidebar_left', 'primary-widget-area');
             }elseif($sidebar['sidebar'] == 'right'){

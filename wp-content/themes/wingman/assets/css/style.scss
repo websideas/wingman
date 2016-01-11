@@ -98,8 +98,8 @@ p {
   margin-bottom: 20px;
 }
 
-.appear-animate .wow {
-  visibility: hidden;
+dd{
+  margin-bottom: 20px;
 }
 
 .row.no-gutters {
@@ -109,6 +109,45 @@ p {
   & > [class*=" col-"] {
     padding-right: 0;
     padding-left: 0;
+  }
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 30px;
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: 8px;
+        vertical-align: top;
+        border-top: 1px solid $border-color;
+      }
+    }
+  }
+  // Bottom align for column headings
+  > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid $border-color;
+  }
+  // Remove top border from thead by default
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+  // Account for multiple tbody instances
+  > tbody + tbody {
+    border-top: 2px solid $border-color;
   }
 }
 
@@ -1626,6 +1665,7 @@ body.opened-nav-animate{
   .widget-container{
     margin-bottom: 25px;
   }
+  .widget_recent_entries,
   .widget_rss,
   .widget_pages,
   .widget_nav_menu,
@@ -1650,7 +1690,7 @@ body.opened-nav-animate{
       }
     }
   }
-  .widget_recent_entries,
+
   .widget_recent_comments{
     ul{
       padding-left: 20px;
@@ -1660,7 +1700,8 @@ body.opened-nav-animate{
         text-transform: none;
         border: none;
         line-height: 24px;
-        &:after,&:before{
+        &:after,
+        &:before{
           display: none;
         }
       }
@@ -2164,27 +2205,32 @@ body.opened-nav-animate{
 }
 
 .widget_rss,
-.widget_recent_comments,
-.widget_recent_entries{
+.widget_recent_comments{
   ul{
-    li:after{
-      width: 8px;
-      height: 8px;
-      content: "";
-      background: $icon-list;
-      position: absolute;
-      left: 0;
-      top: 18px;
-      border-radius:100%;
-      color: $icon-list;
-      @include transition("all .3s ease 0s");
-    }
-    li:hover:after{
-      background: $primary-color;
-      color: $primary-color;
+    li{
+      &:after{
+        width: 8px;
+        height: 8px;
+        content: "";
+        background: $icon-list;
+        position: absolute;
+        left: 0;
+        top: 18px;
+        border-radius:100%;
+        color: $icon-list;
+        @include transition("all .3s ease 0s");
+      }
+      a{
+        color: $icon-list;
+        &:hover{
+          color: $primary-color;
+        }
+      }
     }
   }
 }
+
+.widget_recent_entries,
 .widget_nav_menu,
 .widget_pages,
 .widget_product_categories,
@@ -2221,8 +2267,7 @@ body.opened-nav-animate{
 }
 
 .widget_rss,
-.widget_recent_comments,
-.widget_recent_entries{
+.widget_recent_comments{
   ul{
     li{
       display: block;
@@ -2231,6 +2276,7 @@ body.opened-nav-animate{
     }
   }
 }
+.widget_recent_entries,
 .widget_pages,
 .widget_nav_menu,
 .widget_meta,
@@ -2251,7 +2297,6 @@ body.opened-nav-animate{
     }
   }
 }
-
 
 /**
  * Tag Clound
@@ -2991,6 +3036,8 @@ article.post-item {
     font-size: 22px;
     line-height: 30px;
     margin: 0 0 25px;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
     a{
       color: $title-text;
       &:hover{
@@ -3151,7 +3198,6 @@ article.post-item.post-layout-classic {
       }
     }
   }
-
   .entry-share-box{
     line-height: 30px;
   }
@@ -3174,6 +3220,10 @@ article.post-item.post-layout-classic {
       }
     }
   }
+
+
+
+
 }
 
 /*
@@ -3285,7 +3335,8 @@ article.post-item.post-layout-classic {
 .comment-list{
   padding: 0;
   margin: 0;
-  li{
+  li.comment{
+
     list-style: none;
     ul.children{
       padding-left: 97px;
@@ -3347,7 +3398,7 @@ article.post-item.post-layout-classic {
     border: medium none;
     margin-bottom: 5px;
     padding: 0;
-    p{
+    p:last-child{
       margin: 0;
     }
 }
@@ -4993,6 +5044,15 @@ ul.kt-list-fancy {
 /* ==============================
    16. Page Content
    ============================== */
+
+.page-links {
+  margin-bottom: 1.4736em;
+  a,
+  > span {
+    margin: 0 0.25em 0.25em 0;
+  }
+}
+
 /**
  * 16.1. Page 404
  **/
@@ -5069,15 +5129,15 @@ form.wpcf7-form{
 /* ==============================
    18. Pagination
    ============================== */
-.woocommerce .woocommerce-pagination,
+nav.woocommerce-pagination,
 .pagination {
   display: block;
   margin: 20px 0 30px;
   position: relative;
   text-align: center;
   padding: 0;
-
-  .page-numbers{
+  a.page-numbers,
+  span.page-numbers{
     border: none;
     display: inline-block;
     line-height: 1;
@@ -5087,17 +5147,7 @@ form.wpcf7-form{
     margin: 0 5px;
     color: $title-text;
     position: relative;
-    a{
-      &:hover,
-      &:focus,
-      &.current{
-        color: $primary-color;
-        background: none;
-      }
-    }
-
     &.current{
-      background: none;
       &:before,
       &:after{
         content:"";
@@ -5115,7 +5165,6 @@ form.wpcf7-form{
         right:0;
       }
     }
-
     &.next{
       margin-left: 45px;
       margin-right: 0;
@@ -5128,7 +5177,14 @@ form.wpcf7-form{
       @include opacity(.4);
       cursor: no-drop;
     }
-
+  }
+  a.page-numbers{
+    &:hover,
+    &:focus,
+    &.current{
+      color: $primary-color;
+      background: none;
+    }
   }
 }
 

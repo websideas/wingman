@@ -17,11 +17,12 @@ if ( ! function_exists( 'kt_woocommerce_theme_setup' ) ):
     }
 endif;
 
+/*
 function kt_disable_woocommerce_enable_setup_wizard(){
     return false;
 }
 add_filter('woocommerce_enable_setup_wizard', 'kt_disable_woocommerce_enable_setup_wizard');
-
+*/
 
 /**
  * Add custom style to woocommerce
@@ -46,6 +47,7 @@ function kt_setting_script_woocommerce() {
     $css = '';
     $accent = kt_option('styling_accent', '#82c14f');
     if( $accent !='#82c14f' ){
+
         $selections_color = array(
             '.woocommerce p.stars a:hover',
             '.bag-products .bag-product .bag-product-title a:hover',
@@ -54,9 +56,9 @@ function kt_setting_script_woocommerce() {
             '.woocommerce table.cart tbody td.product-name a:focus',
             '.widget_layered_nav ul li a:hover',
 
-            '.woocommerce .woocommerce-pagination .page-numbers a:hover',
-            '.woocommerce .woocommerce-pagination .page-numbers a:focus ',
-            '.woocommerce .woocommerce-pagination .page-numbers.current a',
+            '.woocommerce nav.woocommerce-pagination ul.page-numbers li a:focus',
+            '.woocommerce nav.woocommerce-pagination ul.page-numbers li a:hover',
+            'nav.woocommerce-pagination a.page-numbers.current',
             '.yith-woocompare-widget ul li a:hover',
             '.yith-woocompare-widget ul li a:focus',
             '.woocommerce ul.product_list_widget li a:hover',
@@ -959,20 +961,20 @@ if (!function_exists('kt_get_woo_sidebar')) {
                     if(is_shop()) {
                         $sidebar['sidebar'] = kt_option('shop_sidebar', 'left');
                     }else{
-                        $sidebar['sidebar'] = kt_option('product_sidebar', 'right');
+                        $sidebar['sidebar'] = kt_option('product_sidebar', 'full');
                     }
                 }
                 if($sidebar['sidebar'] == 'left' ){
                     if(is_shop()){
-                        $sidebar['sidebar_area'] = kt_option('shop_sidebar_left', 'shop-widget-area');
+                        $sidebar['sidebar_area'] = kt_option('shop_sidebar_left', 'primary-widget-area');
                     }else{
-                        $sidebar['sidebar_area'] = kt_option('product_sidebar_left', 'shop-widget-area');
+                        $sidebar['sidebar_area'] = kt_option('product_sidebar_left', 'primary-widget-area');
                     }
                 }elseif($sidebar['sidebar'] == 'right'){
                     if(is_shop()){
-                        $sidebar['sidebar_area'] = kt_option('shop_sidebar_right', 'shop-widget-area');
+                        $sidebar['sidebar_area'] = kt_option('shop_sidebar_right', 'primary-widget-area');
                     }else{
-                        $sidebar['sidebar_area'] = kt_option('product_sidebar_right', 'shop-widget-area');
+                        $sidebar['sidebar_area'] = kt_option('product_sidebar_right', 'primary-widget-area');
                     }
                 }
             }elseif($sidebar['sidebar'] == 'left'){
@@ -989,9 +991,9 @@ if (!function_exists('kt_get_woo_sidebar')) {
             }
 
             if($sidebar['sidebar'] == 'left' ){
-                $sidebar['sidebar_area'] = kt_option('shop_sidebar_left', 'shop-widget-area');
+                $sidebar['sidebar_area'] = kt_option('shop_sidebar_left', 'primary-widget-area');
             }elseif($sidebar['sidebar'] == 'right'){
-                $sidebar['sidebar_area'] = kt_option('shop_sidebar_right', 'shop-widget-area');
+                $sidebar['sidebar_area'] = kt_option('shop_sidebar_right', 'primary-widget-area');
             }
         }elseif(is_cart()){
             $sidebar['sidebar'] = 'full';
@@ -1008,9 +1010,9 @@ if (!function_exists('kt_get_woo_sidebar')) {
                     $sidebar['sidebar'] = kt_option('sidebar', 'full');
                 }
                 if($sidebar['sidebar'] == 'left' ){
-                    $sidebar['sidebar_area'] = kt_option('shop_sidebar_left', 'shop-widget-area');
+                    $sidebar['sidebar_area'] = kt_option('shop_sidebar_left', 'primary-widget-area');
                 }elseif($sidebar['sidebar'] == 'right'){
-                    $sidebar['sidebar_area'] = kt_option('shop_sidebar_right', 'shop-widget-area');
+                    $sidebar['sidebar_area'] = kt_option('shop_sidebar_right', 'primary-widget-area');
                 }
             }elseif($sidebar['sidebar'] == 'left'){
                 $sidebar['sidebar_area'] = rwmb_meta('_kt_left_sidebar', array(), $post_id);

@@ -10,7 +10,7 @@ if ( !defined('ABSPATH')) exit;
  * @see kt_content_width() for template-specific adjustments.
  */
 if ( ! isset( $content_width ) )
-	$content_width = 1170;
+	$content_width = 847;
 
 add_action( 'after_setup_theme', 'kt_theme_setup' );
 if ( ! function_exists( 'kt_theme_setup' ) ):
@@ -50,6 +50,8 @@ if ( ! function_exists( 'kt_theme_setup' ) ):
          */
         add_theme_support( 'post-thumbnails' );
 
+
+        add_editor_style( array( 'assets/css/editor-style.css', KT_THEME_FONTS . '/font-awesome/css/font-awesome.min.css') );
 
         if (function_exists( 'add_image_size' ) ) {
             add_image_size( 'kt_gird', 570, 410, true);
@@ -145,15 +147,17 @@ function kt_setting_script() {
     if( $accent !='#82c14f' ){
         $css .= '::-moz-selection{color:#fff;background:'.$accent.'}';
         $css .= '::selection{color:#fff;background:'.$accent.'}';
+
+
         $selections_color = array(
             '.readmore-link',
             '.readmore-link:hover',
             '.testimonial-rate span:after',
-            '.testimonial-carousel-skin-light .testimonial-item .testimonial-rate span::after',
+            '.testimonial-carousel-skin-light .testimonial-item .testimonial-rate span:after',
             '.blog-posts .entry-title a:hover',
-            '.pagination .page-numbers:hover',
-            '.pagination .page-numbers:focus',
-            '.pagination .page-numbers.current',
+            '.pagination a.page-numbers:hover',
+            '.pagination a.page-numbers:focus',
+            '.pagination a.page-numbers.current',
             '.post-single .tags-links a:hover',
             '.post-single .tags-links a:focus',
             '.widget_pages ul li a:hover',
@@ -166,10 +170,10 @@ function kt_setting_script() {
             '.widget_archive ul li a:focus',
             '.widget_product_categories ul li a:hover',
             '.widget_product_categories ul li a:focus',
+            '.widget_recent_entries ul li a:hover',
+            '.widget_recent_entries ul li a:focus',
             '.widget_categories ul li a:hover',
             '.widget_categories ul li a:focus',
-            '.widget_recent_comments ul li:hover a',
-            '.widget_recent_entries ul li:hover a',
             '.uranus.tparrows:hover:before',
             '.uranus.tparrows:hover:after',
             '.team .team-attr .agency',
@@ -187,6 +191,9 @@ function kt_setting_script() {
             '#main-nav-tool li > a:hover',
             '.menu-bars-outer > a:hover',
             '.entry-share-box a:hover',
+            '.widget_rss ul li a:hover',
+            '.widget_recent_comments ul li a:hover',
+
         );
         $css .= implode($selections_color, ',').'{color: '.$accent.';}';
 
@@ -194,16 +201,16 @@ function kt_setting_script() {
         $selections_colors_important = array('.social-background-empty.social-style-accent a', '.social-background-outline.social-style-accent a');
         $css .= implode($selections_colors_important, ',').'{color: '.$accent.'!important;}';
 
+
+
         $selections_bg = array(
             '.btn-accent',
-            '.pagination .page-numbers.current:before',
-            '.pagination .page-numbers.current:after',
+            '.pagination span.page-numbers.current:before',
+            '.pagination span.page-numbers.current:after',
             '.btn-default:hover',
             '.btn-default:focus',
             '.btn-default:active',
-            '.widget_rss ul li:hover:after',
-            '.widget_recent_comments ul li:hover:after',
-            '.widget_recent_entries ul li:hover:after',
+            '.widget_recent_entries ul li a:hover:after',
             '.kt_flickr a:after',
             '.owl-carousel-kt .owl-pagination .owl-page.active',
             '.owl-carousel-kt .owl-pagination .owl-page:hover',
@@ -310,8 +317,8 @@ function kt_setting_script() {
     }
 
 
-    if($navigation_space = kt_option('navigation_space', 30)){
-        $css .= '#main-navigation > li{margin-left: '.$navigation_space.'px;}#main-navigation > li:first-child {margin-left: 0;}#main-navigation > li:last-child {margin-right: 0;}';
+    if($navigation_space = kt_option('navigation_space', 10)){
+        $css .= '#main-navigation > li{margin-left: '.$navigation_space.'px;margin-right: '.$navigation_space.'px;}#main-navigation > li:first-child {margin-left: 0;}#main-navigation > li:last-child {margin-right: 0;}';
     }
     if($navigation_color_hover = kt_option('navigation_color_hover')){
         $css .= '#main-navigation > li > a:before, #main-navigation > li > a:after{background: '.$navigation_color_hover.';}';
@@ -618,38 +625,71 @@ endif;
  * @param $depth
  */
 function kt_comments($comment, $args, $depth) {
-?>
 
-<li <?php comment_class('comment'); ?> id="li-comment-<?php comment_ID() ?>">
-    <div  id="comment-<?php comment_ID(); ?>" class="comment-item clearfix">
+    $GLOBALS['comment'] = $comment;
 
-        <div class="comment-avatar">
-            <?php echo get_avatar($comment->comment_author_email, $size='100',$default='' ); ?>
+	if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
+
+	<li <?php comment_class('comment'); ?> id="li-comment-<?php comment_ID() ?>">
+
+		<div  id="comment-<?php comment_ID(); ?>" class="comment-item clearfix">
+            <div class="comment-avatar">
+                <?php echo get_avatar($comment->comment_author_email, $size='100',$default='' ); ?>
+            </div>
+            <div class="comment-content">
+                <div class="comment-meta">
+                    <span class="comment-date"><?php printf( '%1$s' , get_comment_date( 'M d, Y ')); ?></span>
+                    <h5 class="author_name">
+                        <?php comment_author_link(); ?>
+                    </h5>
+                </div>
+                <div class="comment-entry entry-content">
+                    <?php esc_html_e( 'Pingback:', 'wingman' ); ?> <?php comment_author_link(); ?>
+                </div>
+                <div class="comment-actions clear">
+                    <?php edit_comment_link( '<span class="icon-pencil"></span> '.esc_html__('Edit', 'wingman'),'  ',' ') ?>
+                    <?php comment_reply_link( array_merge( $args,
+                        array('depth' => $depth,
+                            'max_depth' => $args['max_depth'],
+                            'reply_text' =>'<span class="icon-action-undo"></span> '.esc_html__('Reply', 'wingman')
+                        ))) ?>
+                </div>
+            </div>
         </div>
-        <div class="comment-content">
-            <div class="comment-meta">
-                <span class="comment-date"><?php printf( '%1$s' , get_comment_date( 'M d, Y ')); ?></span>
-                <h5 class="author_name">
-                    <?php comment_author_link(); ?>
-                </h5>
+
+    <?php else : ?>
+
+    <li <?php comment_class('comment'); ?> id="li-comment-<?php comment_ID() ?>">
+        <div  id="comment-<?php comment_ID(); ?>" class="comment-item clearfix">
+
+            <div class="comment-avatar">
+                <?php echo get_avatar($comment->comment_author_email, $size='100',$default='' ); ?>
             </div>
-            <div class="comment-entry entry-content">
-                <?php comment_text() ?>
-                <?php if ($comment->comment_approved == '0') : ?>
-                    <em><?php esc_html_e('Your comment is awaiting moderation.', 'wingman') ?></em>
-                <?php endif; ?>
-            </div>
-            <div class="comment-actions clear">
-                <?php edit_comment_link( '<span class="icon-pencil"></span> '.esc_html__('Edit', 'wingman'),'  ',' ') ?>
-                <?php comment_reply_link( array_merge( $args,
-                    array('depth' => $depth,
-                        'max_depth' => $args['max_depth'],
-                        'reply_text' =>'<span class="icon-action-undo"></span> '.esc_html__('Reply', 'wingman')
-                    ))) ?>
+            <div class="comment-content">
+                <div class="comment-meta">
+                    <span class="comment-date"><?php printf( '%1$s' , get_comment_date( 'M d, Y ')); ?></span>
+                    <h5 class="author_name">
+                        <?php comment_author_link(); ?>
+                    </h5>
+                </div>
+                <div class="comment-entry entry-content">
+                    <?php comment_text() ?>
+                    <?php if ($comment->comment_approved == '0') : ?>
+                        <em><?php esc_html_e('Your comment is awaiting moderation.', 'wingman') ?></em>
+                    <?php endif; ?>
+                </div>
+                <div class="comment-actions clear">
+                    <?php edit_comment_link( '<span class="icon-pencil"></span> '.esc_html__('Edit', 'wingman'),'  ',' ') ?>
+                    <?php comment_reply_link( array_merge( $args,
+                        array('depth' => $depth,
+                            'max_depth' => $args['max_depth'],
+                            'reply_text' =>'<span class="icon-action-undo"></span> '.esc_html__('Reply', 'wingman')
+                        ))) ?>
+                </div>
             </div>
         </div>
-    </div>
-<?php
+    <?php
+    endif;
 }
 
 

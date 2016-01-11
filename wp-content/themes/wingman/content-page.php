@@ -6,7 +6,7 @@
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-content">
+	<div class="entry-content clearfix">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
@@ -20,7 +20,7 @@
 		?>
 	</div><!-- .entry-content -->
     <?php
-    if( kt_option( 'show_page_comment', 0 ) ){
+    if( kt_option( 'show_page_comment', 1 ) ){
         if ( comments_open() || get_comments_number() ) :
             comments_template();
         endif;

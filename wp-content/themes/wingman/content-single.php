@@ -3,7 +3,7 @@
 <div id="post-<?php the_ID(); ?>" <?php post_class('post-single post-layout-'.$post_layout ); ?>>
     <?php
         $show_post_format = kt_post_option(null, '_kt_post_format', 'blog_post_format', 1);
-        $imagesize = kt_post_option(null, '_kt_blog_image_size', 'blog_image_size', 'blog_post');
+        $imagesize = kt_post_option(null, '_kt_blog_image_size', 'blog_image_size', 'kt_list');
         $title_meta_center = kt_post_option(null,'_kt_title_and_meta_center','title_meta_center',1);
     ?>
     <?php
@@ -37,7 +37,6 @@
                     ?>
                 </div>
             <?php } ?>
-            <h2 class="entry-title"><?php the_title(); ?></h2>
         </header><!-- .entry-header -->
         <div class="entry-content-outer">
             <?php

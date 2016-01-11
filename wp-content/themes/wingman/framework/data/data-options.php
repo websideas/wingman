@@ -1232,7 +1232,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'left'     => false,
                         'right'    => false,
                         'default'  => array(
-                            'border-color' => '#82c14f'
+                            'border-top' => '2px',
+                            'border-style' => 'solid',
+                            'border-color' => '#82c14f',
                         )
                     ),
 
@@ -1260,7 +1262,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'            => 'navigation_space',
                         'type'          => 'slider',
                         'title'         => esc_html__( 'Top Level space', 'wingman' ),
-                        'default'       => 30,
+                        'default'       => 10,
                         'min'           => 0,
                         'step'          => 1,
                         'max'           => 50,
@@ -1309,7 +1311,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'          => esc_html__( 'Dropdown width', 'wingman' ),
                         'subtitle'          => esc_html__( 'Change width of Dropdown', 'wingman' ),
                         'height'         => false,
-                        'default'        => array( 'width'  => 300, 'height' => 100 ),
+                        'default'        => array( 'width'  => 300, 'units'  => 'px' ),
                         'output'   => array( '#main-navigation > li ul.sub-menu-dropdown'),
                     ),
                     array(
@@ -2654,7 +2656,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Sidebar left area', 'wingman' ),
                         'subtitle'     => esc_html__( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
-                        'default'  => 'blog-widget-area',
+                        'default'  => 'primary-widget-area',
                         'required' => array('author_sidebar','equals','left'),
                         'clear' => false
                     ),
@@ -2664,7 +2666,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Sidebar right area', 'wingman' ),
                         'subtitle'     => esc_html__( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
-                        'default'  => 'blog-widget-area',
+                        'default'  => 'primary-widget-area',
                         'required' => array('author_sidebar','equals','right'),
                         'clear' => false
                     ),
@@ -2959,7 +2961,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'options' => $image_sizes,
                         'title'    => esc_html__( 'Image size', 'wingman' ),
                         'desc' => esc_html__("Select image size.", 'wingman'),
-                        'default' => 'blog_post'
+                        'default' => 'kt_list'
                     ),
                     array(
                         'type' => 'divide',
@@ -3475,7 +3477,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Shop: Sidebar left area', 'wingman' ),
                         'subtitle'     => esc_html__( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
-                        'default'  => 'shop-widget-area',
+                        'default'  => 'primary-widget-area',
                         'required' => array('shop_sidebar','equals','left'),
                         'clear' => false
                     ),
@@ -3485,7 +3487,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Shop: Sidebar right area', 'wingman' ),
                         'subtitle'     => esc_html__( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
-                        'default'  => 'shop-widget-area',
+                        'default'  => 'primary-widget-area',
                         'required' => array('shop_sidebar','equals','right'),
                         'clear' => false
                     ),
@@ -3558,7 +3560,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'left' => esc_html__('Left Sidebar', 'wingman'),
                             'right' => esc_html__('Right Layout', 'wingman')
                         ),
-                        'default'  => 'right',
+                        'default'  => 'full',
                         'clear' => false
                     ),
                     array(
@@ -3567,7 +3569,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Product: Sidebar left area', 'wingman' ),
                         'subtitle'     => esc_html__( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
-                        'default'  => 'shop-widget-area',
+                        'default'  => 'primary-widget-area',
                         'required' => array('product_sidebar','equals','left'),
                         'clear' => false
                     ),
@@ -3577,7 +3579,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Product: Sidebar right area', 'wingman' ),
                         'subtitle'     => esc_html__( "Please choose left sidebar ", 'wingman' ),
                         'data'     => 'sidebars',
-                        'default'  => 'shop-widget-area',
+                        'default'  => 'primary-widget-area',
                         'required' => array('product_sidebar','equals','right'),
                         'clear' => false
                     ),

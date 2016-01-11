@@ -18,7 +18,7 @@ get_header();
             $post_layout = kt_post_option(null, '_kt_blog_post_layout', 'blog_layout', 1);
         ?>
         <?php if( ! post_password_required( ) && $show_post_format && $post_layout == 2 ){ ?>
-            <?php $imagesize = kt_post_option(null, '_kt_blog_image_size', 'blog_image_size', 'blog_post'); ?>
+            <?php $imagesize = kt_post_option(null, '_kt_blog_image_size', 'blog_image_size', 'kt_list'); ?>
             <div class="entry-thumb-fullwidth"><?php kt_post_thumbnail($imagesize, 'img-responsive', false, false); ?></div>
         <?php } ?>
 

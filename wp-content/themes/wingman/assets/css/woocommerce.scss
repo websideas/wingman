@@ -24,7 +24,6 @@
 @import 'mixin';
 @import 'variables';
 
-
 /* ==============================
    1. Woocommerce Common
    ============================== */
@@ -366,6 +365,34 @@
       li{
         border: medium none;
         float: none;
+        a.page-numbers,
+        span.page-numbers{
+          padding: 0 10px;
+          margin: 0 5px;
+          color: $title-text;
+
+          &.next{
+            margin-left: 45px;
+            margin-right: 0;
+          }
+          &.prev{
+            margin-right: 45px;
+            margin-left: 0;
+          }
+
+        }
+        a:focus,
+        a:hover,
+        span.current{
+          background: none;
+        }
+        a:focus,
+        a:hover{
+          color: $primary-color;
+        }
+
+
+
       }
     }
   }
@@ -2007,6 +2034,7 @@ div.swatch-wrapper{
     h3.accordions-title{
       margin: 4px 0 0;
       font-size:14px;
+      outline: none;
       text-transform: uppercase;
       letter-spacing: 0.2em;
       line-height: 20px;
@@ -2032,7 +2060,6 @@ div.swatch-wrapper{
       }
       th,td{
         border: none;
-        padding: 0 8px;
       }
     }
   }

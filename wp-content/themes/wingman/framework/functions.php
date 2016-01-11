@@ -48,7 +48,22 @@ function kt_sanitize_boolean( $input = '' ) {
 add_filter( 'sanitize_boolean', 'kt_sanitize_boolean', 15 );
 
 
-
+/**
+ * Custom password form
+ *
+ * @return string
+ */
+function kt_password_form() {
+    global $post;
+    $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
+    $o = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
+    <p>' . __( "To view this protected post, enter the password below:", 'wingman' ) . '</p>
+    <div class="input-group"><input name="post_password" type="password" size="20" maxlength="20" /><span class="input-group-btn"><input type="submit" class="btn btn-default" name="Submit" value="' . esc_attr__( "Submit", 'wingman' ) . '" /></span></div>
+    </form>
+    ';
+    return $o;
+}
+add_filter( 'the_password_form', 'kt_password_form' );
 
 /**
  * Add class to next button
@@ -309,6 +324,7 @@ function kt_get_page_title( $title = '' ){
         $page_for_posts = get_option('page_for_posts', true);
         if($page_for_posts){
             $title = get_the_title($page_for_posts) ;
+            $title = apply_filters( 'the_title', $title, $page_for_posts );
         }
     } elseif( is_404() ) {
         $title = esc_html__( 'Page not found', 'wingman' );
@@ -323,10 +339,12 @@ function kt_get_page_title( $title = '' ){
     } elseif ( is_front_page() && is_singular('page') ){
         $page_on_front = get_option('page_on_front', true);
         $title = get_the_title($page_on_front) ;
+        $title = apply_filters( 'the_title', $title, $page_on_front );
     } elseif( is_page() || is_singular() ){
         $post_id = $post->ID;
         $custom_text = rwmb_meta('_kt_page_header_custom', array(), $post_id);
         $title = ($custom_text != '') ? $custom_text : get_the_title($post_id);
+        $title = apply_filters( 'the_title', $title, $post_id );
     }
 
     return apply_filters( 'kt_title', $title );

@@ -9,6 +9,7 @@
  */
 
 $sidebar = kt_get_woo_sidebar();
+
 get_header(); ?>
     <?php
 		do_action( 'woocommerce_before_main_content' );

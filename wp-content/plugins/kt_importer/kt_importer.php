@@ -472,11 +472,11 @@ class KT_IMPORTER_DEMOS
                                     </a>
                                 </div>
                             <?php } ?>
-                            <div class="theme-status">
-                                <?php echo $demo['status']; ?>
-                            </div>
-
-
+                            <?php
+                            if(isset($demo['status'])){
+                                printf('<div class="theme-status">%s</div>', $demo['status']);
+                            }
+                            ?>
                             <div class="demo-import-loader">
                                 <div class="demo-import-process"><span></span></div>
                             </div>

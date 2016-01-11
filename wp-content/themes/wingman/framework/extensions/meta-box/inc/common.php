@@ -45,8 +45,8 @@ if ( ! class_exists( 'RWMB_Common' ) )
 		 */
 		public static function plugin_links( $links )
 		{
-			$links[] = '<a href="http://metabox.io/docs/">' . __( 'Documentation', 'meta-box' ) . '</a>';
-			$links[] = '<a href="http://metabox.io/plugins/">' . __( 'Extensions', 'meta-box' ) . '</a>';
+			$links[] = sprintf('<a href="%s">%s</a>',  'http://metabox.io/docs/', __( 'Documentation', 'meta-box' ));
+			$links[] = sprintf('<a href="%s">%s</a>',  'http://metabox.io/plugins/', __( 'Extensions', 'meta-box' ));
 			return $links;
 		}
 	}

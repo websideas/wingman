@@ -443,6 +443,9 @@
 
         }
 
+
+        $(".entry-content").fitVids();
+
         //init_VCPieChart();
         init_VCComingSoon();
         init_VCGoogleMap();
