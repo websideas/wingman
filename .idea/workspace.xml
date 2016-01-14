@@ -2,149 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c7cfb02-0be5-4605-a0ec-58a67682dd43" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/img/woof_banner.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/img/woof_banner_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/activation.css.map" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/recommend-plugins/js_composer.zip" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/recommend-plugins/js_composer.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/revslider/slider1.zip" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/revslider/slider1.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/revslider/slider2.zip" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/revslider/slider2.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/revslider/slider3.zip" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/revslider/slider3.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/languages/yith-plugin-fw-it_IT.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/languages/yith-plugin-fw-it_IT.mo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/README.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/README.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/_mixins.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/_mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/about.php" afterPath="$PROJECT_DIR$/wp-admin/about.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/licence/templates/panel/activation/activation-panel.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/licence/templates/panel/activation/activation-panel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/activation.css" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/activation.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/admin.css.map" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/admin.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/admin.css" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/admin.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/admin.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/autosave.js" afterPath="$PROJECT_DIR$/wp-includes/js/autosave.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/autosave.min.js" afterPath="$PROJECT_DIR$/wp-includes/js/autosave.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/certificates/ca-bundle.crt" afterPath="$PROJECT_DIR$/wp-includes/certificates/ca-bundle.crt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/category-template.php" afterPath="$PROJECT_DIR$/wp-includes/category-template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/class-IXR.php" afterPath="$PROJECT_DIR$/wp-includes/class-IXR.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/class-oembed.php" afterPath="$PROJECT_DIR$/wp-includes/class-oembed.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/class-phpmailer.php" afterPath="$PROJECT_DIR$/wp-includes/class-phpmailer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/class-smtp.php" afterPath="$PROJECT_DIR$/wp-includes/class-smtp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/api/class-wc-api-server.php" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/api/class-wc-api-server.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/class-wc-https.php" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/class-wc-https.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/class-wc-session-handler.php" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/class-wc-session-handler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/admin/settings/class-wc-settings-checkout.php" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/admin/settings/class-wc-settings-checkout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/customize/class-wp-customize-themes-section.php" afterPath="$PROJECT_DIR$/wp-includes/customize/class-wp-customize-themes-section.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/includes/class-wp-filesystem-ftpext.php" afterPath="$PROJECT_DIR$/wp-admin/includes/class-wp-filesystem-ftpext.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/includes/class-wp-filesystem-ftpsockets.php" afterPath="$PROJECT_DIR$/wp-admin/includes/class-wp-filesystem-ftpsockets.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/includes/class-wp-screen.php" afterPath="$PROJECT_DIR$/wp-admin/includes/class-wp-screen.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/class-wp-theme.php" afterPath="$PROJECT_DIR$/wp-includes/class-wp-theme.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/class-wp-walker.php" afterPath="$PROJECT_DIR$/wp-includes/class-wp-walker.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/widgets/class-wp-widget-rss.php" afterPath="$PROJECT_DIR$/wp-includes/widgets/class-wp-widget-rss.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/class-wp-xmlrpc-server.php" afterPath="$PROJECT_DIR$/wp-includes/class-wp-xmlrpc-server.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/class-wp.php" afterPath="$PROJECT_DIR$/wp-includes/class-wp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/includes/class.yith-woocompare-frontend.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/includes/class.yith-woocompare-frontend.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/widgets/class.yith-woocompare-widget.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/widgets/class.yith-woocompare-widget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/comment-template.php" afterPath="$PROJECT_DIR$/wp-includes/comment-template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/comment.php" afterPath="$PROJECT_DIR$/wp-includes/comment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/js/common.js" afterPath="$PROJECT_DIR$/wp-admin/js/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/js/common.min.js" afterPath="$PROJECT_DIR$/wp-admin/js/common.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/templates/compare.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/templates/compare.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/content-404.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/content-404.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_1.xml" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo2/content_1.xml" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo2/content_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo3/content_1.xml" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo3/content_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo3/content_2.xml" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo3/content_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/dashboard.css.map" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/dashboard.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/dashboard.css" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/dashboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/dashboard.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/dashboard.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/framework/data/data-options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/embed-template.php" afterPath="$PROJECT_DIR$/wp-includes/embed-template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/embed.php" afterPath="$PROJECT_DIR$/wp-includes/embed.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/formatting.php" afterPath="$PROJECT_DIR$/wp-includes/formatting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/css/front.css" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/css/front.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/js/front.js" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/js/front.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/functions.php" afterPath="$PROJECT_DIR$/wp-includes/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/general-template.php" afterPath="$PROJECT_DIR$/wp-includes/general-template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/index.php" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/init.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/init.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/assets/css/overcast/jquery-ui-1.8.9.custom.css" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/assets/css/overcast/jquery-ui-1.8.9.custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/license.txt" afterPath="$PROJECT_DIR$/license.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/link-template.php" afterPath="$PROJECT_DIR$/wp-includes/link-template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/media-views.js" afterPath="$PROJECT_DIR$/wp-includes/js/media-views.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/media-views.min.js" afterPath="$PROJECT_DIR$/wp-includes/js/media-views.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/media.php" afterPath="$PROJECT_DIR$/wp-includes/media.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/menu.css.map" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/menu.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/menu.css" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/menu.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/menu.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/menu.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/assets/css/metaboxes.css" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/assets/css/metaboxes.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/nav-menu-template.php" afterPath="$PROJECT_DIR$/wp-includes/nav-menu-template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/templates/metaboxes/types/number.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/templates/metaboxes/types/number.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/css/options.css" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/css/options.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/views/plugin_options.php" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/views/plugin_options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/post.php" afterPath="$PROJECT_DIR$/wp-includes/post.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/js/postbox.js" afterPath="$PROJECT_DIR$/wp-admin/js/postbox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/js/postbox.min.js" afterPath="$PROJECT_DIR$/wp-admin/js/postbox.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/prettyPhoto.css.map" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/prettyPhoto.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/prettyPhoto.css" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/prettyPhoto.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/prettyPhoto.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/prettyPhoto.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/query.php" afterPath="$PROJECT_DIR$/wp-includes/query.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/random_compat/random.php" afterPath="$PROJECT_DIR$/wp-includes/random_compat/random.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/random_compat/random_bytes_dev_urandom.php" afterPath="$PROJECT_DIR$/wp-includes/random_compat/random_bytes_dev_urandom.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.html" afterPath="$PROJECT_DIR$/readme.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/includes/screen.php" afterPath="$PROJECT_DIR$/wp-admin/includes/screen.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/templates/cart/shipping-calculator.php" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/templates/cart/shipping-calculator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/shortcodes.php" afterPath="$PROJECT_DIR$/wp-includes/shortcodes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/taxonomy.php" afterPath="$PROJECT_DIR$/wp-includes/taxonomy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/theme-options.json" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/theme-options.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo2/theme-options.json" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo2/theme-options.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo3/theme-options.json" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo3/theme-options.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/twemoji.js" afterPath="$PROJECT_DIR$/wp-includes/js/twemoji.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/twemoji.min.js" afterPath="$PROJECT_DIR$/wp-includes/js/twemoji.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/update.php" afterPath="$PROJECT_DIR$/wp-includes/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/templates/panel/types/upload.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/templates/panel/types/upload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/users.php" afterPath="$PROJECT_DIR$/wp-admin/users.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/version.php" afterPath="$PROJECT_DIR$/wp-includes/version.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/wc-conditional-functions.php" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/wc-conditional-functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/wc-template-functions.php" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/wc-template-functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/widgets.php" afterPath="$PROJECT_DIR$/wp-includes/widgets.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/i18n/languages/woocommerce-admin.pot" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/i18n/languages/woocommerce-admin.pot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css.map" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css.map" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce.css.map" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce.css" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/woocommerce.php" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/woocommerce.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/i18n/languages/woocommerce.pot" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/i18n/languages/woocommerce.pot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce.scss" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/css/woocommerce.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/assets/js/woocompare.js" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/assets/js/woocompare.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/views/shortcodes/woocs.php" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/views/shortcodes/woocs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/views/woocs_order_metabox.php" afterPath="$PROJECT_DIR$/wp-content/plugins/woocommerce-currency-switcher/views/woocs_order_metabox.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-config-sample.php" afterPath="$PROJECT_DIR$/wp-config-sample.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/wp-emoji-loader.js" afterPath="$PROJECT_DIR$/wp-includes/js/wp-emoji-loader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/wp-emoji-loader.min.js" afterPath="$PROJECT_DIR$/wp-includes/js/wp-emoji-loader.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/wp-emoji-release.min.js" afterPath="$PROJECT_DIR$/wp-includes/js/wp-emoji-release.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/wp-emoji.js" afterPath="$PROJECT_DIR$/wp-includes/js/wp-emoji.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/wp-emoji.min.js" afterPath="$PROJECT_DIR$/wp-includes/js/wp-emoji.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-login.php" afterPath="$PROJECT_DIR$/wp-login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/yit-functions.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/yit-functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/licence/assets/css/yit-licence.css" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/licence/assets/css/yit-licence.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/licence/assets/js/yit-licence.js" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/licence/assets/js/yit-licence.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/licence/lib/yit-licence.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/licence/lib/yit-licence.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/licence/lib/yit-plugin-licence.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/licence/lib/yit-plugin-licence.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/lib/yit-plugin-panel-wc.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/lib/yit-plugin-panel-wc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/assets/css/yit-plugin-panel.css" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/assets/css/yit-plugin-panel.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/assets/js/yit-plugin-panel.js" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/assets/js/yit-plugin-panel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/assets/js/yit-plugin-panel.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/assets/js/yit-plugin-panel.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/lib/yit-plugin-panel.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/lib/yit-plugin-panel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/lib/yit-plugin-subpanel.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/lib/yit-plugin-subpanel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/licence/lib/yit-theme-licence.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/licence/lib/yit-theme-licence.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/lib/yit-upgrade.php" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/lib/yit-upgrade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/languages/yith-plugin-fw-it_IT.po" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/languages/yith-plugin-fw-it_IT.po" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/languages/yith-plugin-fw.pot" afterPath="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/plugin-fw/languages/yith-plugin-fw.pot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desc/document.json" afterPath="$PROJECT_DIR$/desc/document.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/Wingman/documentation.html" afterPath="$PROJECT_DIR$/documentation/Wingman/documentation.html" />
     </list>
     <ignored path="wingman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -173,8 +32,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/css/style.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/ajax.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/assets/js/framework-core.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/js/woocommerce.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/header.php" />
@@ -224,6 +81,8 @@
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo3/content_2.xml" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo3/content_1.xml" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo2/content_1.xml" />
+        <option value="$PROJECT_DIR$/desc/document.json" />
+        <option value="$PROJECT_DIR$/documentation/Wingman/documentation.html" />
       </list>
     </option>
   </component>
@@ -281,56 +140,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -455,20 +264,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/footers/footer-navigation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/footers/footer-sides.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/footers/footer-socials.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -813,6 +608,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4095563">
           <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documentation/Wingman/documentation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="58" selection-start-line="0" selection-start-column="58" selection-end-line="0" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/desc/document.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.94736844">
+          <caret line="0" column="8933" selection-start-line="0" selection-start-column="8933" selection-end-line="0" selection-end-column="8933" />
           <folding />
         </state>
       </provider>
