@@ -18,11 +18,9 @@ wp_enqueue_script( 'jquery-fixedcolumns', YITH_WOOCOMPARE_ASSETS_URL . '/js/Fixe
 $widths = array();
 foreach( $products as $product ) $widths[] = '{ "sWidth": "205px", resizeable:true }';
 
-/** FIX WOO 2.1 */
-$wc_get_template = function_exists('wc_get_template') ? 'wc_get_template' : 'woocommerce_get_template';
-
 $table_text = get_option( 'yith_woocompare_table_text' );
-$localized_table_text = function_exists( 'icl_translate' ) ? icl_translate( 'Plugins', 'plugin_yit_compare_table_text', $table_text ) : $table_text;
+yit_wpml_register_string( 'Plugins', 'plugin_yit_compare_table_text', $table_text );
+$localized_table_text = yit_wpml_string_translate( 'Plugins', 'plugin_yit_compare_table_text', $table_text );
 
 ?><!DOCTYPE html>
 <!--[if IE 6]>
@@ -131,7 +129,7 @@ $localized_table_text = function_exists( 'icl_translate' ) ? icl_translate( 'Plu
                                 break;
 
                             case 'add-to-cart':
-                                $wc_get_template( 'loop/add-to-cart.php' );
+                                woocommerce_template_loop_add_to_cart();
                                 break;
 
                             default:
@@ -162,7 +160,7 @@ $localized_table_text = function_exists( 'icl_translate' ) ? icl_translate( 'Plu
                 <th><?php echo $fields['add-to-cart'] ?></th>
 
                 <?php foreach( $products as $i => $product ) : $product_class = ( $i % 2 == 0 ? 'odd' : 'even' ) . ' product_' . $product->id ?>
-                    <td class="<?php echo $product_class ?>"><?php $wc_get_template( 'loop/add-to-cart.php' ); ?></td>
+                    <td class="<?php echo $product_class ?>"><?php woocommerce_template_loop_add_to_cart(); ?></td>
                 <?php endforeach; ?>
 
             </tr>

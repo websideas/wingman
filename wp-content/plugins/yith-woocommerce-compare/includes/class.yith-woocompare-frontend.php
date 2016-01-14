@@ -112,14 +112,9 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
             add_shortcode( 'yith_compare_button', array( $this, 'compare_button_sc' ) );
 
             // AJAX
-            add_action( 'wp_ajax_' . $this->action_add, array( $this, 'add_product_to_compare_ajax' ) );
-            add_action( 'wp_ajax_nopriv_' . $this->action_add, array( $this, 'add_product_to_compare_ajax' ) );
-
-            add_action( 'wp_ajax_' . $this->action_remove, array( $this, 'remove_product_from_compare_ajax' ) );
-            add_action( 'wp_ajax_nopriv_' . $this->action_remove, array( $this, 'remove_product_from_compare_ajax' ) );
-
-            add_action( 'wp_ajax_' . $this->action_view, array( $this, 'refresh_widget_list_ajax' ) );
-            add_action( 'wp_ajax_nopriv_' . $this->action_view, array( $this, 'refresh_widget_list_ajax' ) );
+            add_action( 'wc_ajax_' . $this->action_add, array( $this, 'add_product_to_compare_ajax' ) );
+            add_action( 'wc_ajax_' . $this->action_remove, array( $this, 'remove_product_from_compare_ajax' ) );
+            add_action( 'wc_ajax_' . $this->action_view, array( $this, 'refresh_widget_list_ajax' ) );
 
             return $this;
         }
@@ -132,10 +127,7 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
             // scripts
             wp_enqueue_script( 'yith-woocompare-main', YITH_WOOCOMPARE_ASSETS_URL . '/js/woocompare.js', array('jquery'), $this->version, true );
             wp_localize_script( 'yith-woocompare-main', 'yith_woocompare', array(
-                'nonceadd' => wp_create_nonce( $this->action_add ),
-                'nonceremove' => wp_create_nonce( $this->action_remove ),
-                'nonceview' => wp_create_nonce( $this->action_view ),
-                'ajaxurl' => admin_url( 'admin-ajax.php' ),
+                'ajaxurl'   => WC_AJAX::get_endpoint( "%%endpoint%%" ),
                 'actionadd' => $this->action_add,
                 'actionremove' => $this->action_remove,
                 'actionview' => $this->action_view,
@@ -317,7 +309,7 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
                 'action' => $this->action_add,
                 'id' => $product_id
             );
-            return apply_filters( 'yith_woocompare_add_product_url', wp_nonce_url( esc_url_raw( add_query_arg( $url_args ) ), $this->action_add ) );
+            return apply_filters( 'yith_woocompare_add_product_url', esc_url_raw( add_query_arg( $url_args ) ), $this->action_add );
         }
 
         /**
@@ -331,7 +323,7 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
                 'action' => $this->action_remove,
                 'id' => $product_id
             );
-            return apply_filters( 'yith_woocompare_remove_product_url', wp_nonce_url( esc_url_raw( add_query_arg( $url_args ) ), $this->action_remove ) );
+            return apply_filters( 'yith_woocompare_remove_product_url', esc_url_raw( add_query_arg( $url_args ) ), $this->action_remove );
         }
 
         /**
@@ -353,7 +345,8 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
 
             if ( ! isset( $button_text ) || $button_text == 'default' ) {
                 $button_text = get_option( 'yith_woocompare_button_text', __( 'Compare', 'yith-woocommerce-compare' ) );
-                $button_text = function_exists( 'icl_translate' ) ? icl_translate( 'Plugins', 'plugin_yit_compare_button_text', $button_text ) : $button_text;
+                yit_wpml_register_string( 'Plugins', 'plugin_yit_compare_button_text', $button_text );
+                $button_text = yit_wpml_string_translate( 'Plugins', 'plugin_yit_compare_button_text', $button_text );
             }
 
             printf( '<a href="%s" class="%s" data-product_id="%d" rel="nofollow">%s</a>', $this->add_product_url( $product_id ), 'compare' . ( $is_button == 'button' ? ' button' : '' ), $product_id, $button_text );
@@ -408,10 +401,9 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
          * The action called by the query string
          */
         public function add_product_to_compare_action() {
-            if ( defined( 'DOING_AJAX' ) && DOING_AJAX ||
-                ( !isset( $_REQUEST['_wpnonce'] ) || !wp_verify_nonce( $_REQUEST['_wpnonce'], $this->action_add ) ) &&
-                ( ! isset( $_REQUEST['action'] ) || $_REQUEST['action'] != $this->action_add ) )
+            if ( defined( 'DOING_AJAX' ) && DOING_AJAX || ! isset( $_REQUEST['action'] ) || $_REQUEST['action'] != $this->action_add ) {
                 return;
+            }
 
 	        $product_id = intval( $_REQUEST['id'] );
 	        $product = $this->wc_get_product( $product_id );
@@ -421,7 +413,7 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
 		        $this->add_product_to_compare( $product_id );
 	        }
 
-            wp_redirect( esc_url( remove_query_arg( array( 'id', 'action', '_wpnonce' ) ) ) );
+            wp_redirect( esc_url( remove_query_arg( array( 'id', 'action' ) ) ) );
             exit();
         }
 
@@ -429,7 +421,10 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
          * The action called by AJAX
          */
         public function add_product_to_compare_ajax() {
-            check_ajax_referer( $this->action_add, '_yitnonce_ajax' );
+
+            if( ! isset( $_REQUEST['id'] ) || ! isset( $_REQUEST['action'] ) || $_REQUEST['action'] != $this->action_add ){
+                die();
+            }
 
 		    $product_id = intval( $_REQUEST['id'] );
 		    $product = $this->wc_get_product( $product_id );
@@ -467,10 +462,9 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
          * The action called by the query string
          */
         public function remove_product_from_compare_action() {
-            if ( defined( 'DOING_AJAX' ) && DOING_AJAX ||
-                ( !isset( $_REQUEST['_wpnonce'] ) || !wp_verify_nonce( $_REQUEST['_wpnonce'], $this->action_remove ) ) &&
-                ( ! isset( $_REQUEST['action'] ) || $_REQUEST['action'] != $this->action_remove ) )
+            if ( defined( 'DOING_AJAX' ) && DOING_AJAX || ! isset( $_REQUEST['action'] ) || $_REQUEST['action'] != $this->action_remove ) {
                 return;
+            }
 
 	        if ( $_REQUEST['id'] == 'all' ) {
 		        $products = $this->products_list;
@@ -482,7 +476,7 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
 	        }
 
             // redirect
-            $redirect = esc_url( remove_query_arg( array( 'id', 'action', '_wpnonce' ) ) );
+            $redirect = esc_url( remove_query_arg( array( 'id', 'action' ) ) );
 
 	        if ( isset( $_REQUEST['redirect'] ) && $_REQUEST['redirect'] == 'view' )
 	            $redirect = esc_url( remove_query_arg( 'redirect', add_query_arg( 'action', $this->action_view, $redirect ) ) );
@@ -495,11 +489,12 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
          * The action called by AJAX
          */
         public function remove_product_from_compare_ajax() {
-            check_ajax_referer( $this->action_remove, '_yitnonce_ajax' );
+
+            if ( ! isset( $_REQUEST['id'] ) || ! isset( $_REQUEST['action'] ) || $_REQUEST['action'] != $this->action_remove ){
+                die();
+            }
 
             $lang = isset( $_REQUEST['lang'] ) ? $_REQUEST['lang'] : false;
-
-            if ( ! isset( $_REQUEST['id'] ) ) die();
 
             if ( $_REQUEST['id'] == 'all' ) {
                 $products = $this->products_list;
@@ -527,6 +522,11 @@ if( !class_exists( 'YITH_Woocompare_Frontend' ) ) {
          * Return the list of widget table, used in AJAX
          */
         public function refresh_widget_list_ajax() {
+
+            if ( ! isset( $_REQUEST['action'] ) || $_REQUEST['action'] != $this->action_view ){
+                die();
+            }
+
             echo $this->list_products_html();
             die();
         }

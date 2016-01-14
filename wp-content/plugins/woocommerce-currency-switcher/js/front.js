@@ -85,7 +85,9 @@ jQuery(function () {
     if (woocs_drop_down_view == 'wselect') {
         try {
             //https://github.com/websanova/wSelect#wselectjs
-            jQuery('select.woocommerce-currency-switcher').wSelect();
+            jQuery('select.woocommerce-currency-switcher').wSelect({
+                size:7
+            });
         } catch (e) {
             console.log(e);
         }
@@ -155,6 +157,36 @@ jQuery(function () {
         });
     }
 
+    //if we using js price update while the site is cached
+    if (typeof woocs_shop_is_cached !== 'undefined') {
+        if (woocs_shop_is_cached) {
+            if (typeof woocs_array_of_get.currency === 'undefined') {
+
+                if (jQuery('body').hasClass('single')) {
+                    jQuery('.woocs_price_info').remove();
+                }
+
+                //***
+                var products_ids = [];
+                jQuery.each(jQuery('.woocs_price_code'), function (index, item) {
+                    products_ids.push(jQuery(item).data('product-id'));
+                });
+
+                var data = {
+                    action: "woocs_get_products_price_html",
+                    products_ids: products_ids
+                };
+                jQuery.post(woocs_ajaxurl, data, function (data) {
+                    data = jQuery.parseJSON(data);
+                    jQuery.each(jQuery('.woocs_price_code'), function (index, item) {
+                        jQuery(item).parent().html(data[jQuery(item).data('product-id')]);
+                    });
+                });
+
+            }
+        }
+    }
+
     wocs_loading_first_time = false;
 });
 
@@ -185,7 +217,7 @@ function woocs_redirect(currency) {
  } else {
  woocs_redirect(jQuery(_this).val());
  }
-
+ 
  return true;
  }
  */

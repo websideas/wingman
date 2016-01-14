@@ -38,7 +38,8 @@ if( !class_exists( 'YITH_WOOCOMPARE' ) ) {
 
             extract( $args );
 
-            $localized_widget_title = function_exists( 'icl_translate' ) ? icl_translate( 'Widget', 'widget_yit_compare_title_text', $instance['title'] ) : $instance['title'];
+            yit_wpml_register_string( 'Widget', 'widget_yit_compare_title_text', $instance['title'] );
+            $localized_widget_title = yit_wpml_string_translate( 'Widget', 'widget_yit_compare_title_text', $instance['title'] );
 
             echo $before_widget . $before_title . $localized_widget_title . $after_title; ?>
 

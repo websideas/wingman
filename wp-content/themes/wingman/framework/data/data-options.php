@@ -3395,9 +3395,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'url'      => true,
                         'compiler' => true,
                         'title'    => esc_html__( '404 Image', 'wingman' ),
-                        'default'  => array(
-                            'url' => KT_THEME_IMG.'404.png'
-                        )
+                        'default'  => array( )
                     ),
 
                     array(
@@ -3718,7 +3716,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 						'type'		=> 'switch',
 						'title'		=> esc_html__( 'Enable Popup', 'wingman' ),
 						'subtitle'	=> esc_html__( '', 'wingman'),
-						"default"	=> true,
+						"default"	=> false,
 						'on'		=> esc_html__( 'On', 'wingman' ),
 						'off'		=> esc_html__( 'Off', 'wingman' ),
 					),

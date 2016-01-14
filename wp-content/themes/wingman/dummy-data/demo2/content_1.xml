@@ -82,7 +82,7 @@
 		<link>http://wingman.kitethemes.com/demo2/image-banner/</link>
 		<pubDate>Tue, 24 Nov 2015 13:33:12 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/image-banner.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/image-banner.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -98,7 +98,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/image-banner.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/image-banner.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/image-banner.png]]></wp:meta_value>
@@ -113,7 +113,7 @@
 		<link>http://wingman.kitethemes.com/demo2/banner-01/</link>
 		<pubDate>Wed, 25 Nov 2015 06:41:15 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/banner-01.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/banner-01.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -129,7 +129,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/banner-01.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/banner-01.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/banner-01.png]]></wp:meta_value>
@@ -144,7 +144,7 @@
 		<link>http://wingman.kitethemes.com/demo2/banner-02/</link>
 		<pubDate>Wed, 25 Nov 2015 06:41:18 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/banner-02.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/banner-02.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -160,7 +160,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/banner-02.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/banner-02.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/banner-02.png]]></wp:meta_value>
@@ -175,7 +175,7 @@
 		<link>http://wingman.kitethemes.com/demo2/banner-03/</link>
 		<pubDate>Wed, 25 Nov 2015 06:41:19 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/banner-03.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/banner-03.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -191,7 +191,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/banner-03.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/banner-03.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/banner-03.png]]></wp:meta_value>
@@ -206,7 +206,7 @@
 		<link>http://wingman.kitethemes.com/demo2/banner-04/</link>
 		<pubDate>Wed, 25 Nov 2015 06:41:21 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/banner-04.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/banner-04.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -222,7 +222,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/banner-04.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/banner-04.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/banner-04.png]]></wp:meta_value>
@@ -237,7 +237,7 @@
 		<link>http://wingman.kitethemes.com/demo2/banner-05/</link>
 		<pubDate>Wed, 25 Nov 2015 06:41:23 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/banner-05.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/banner-05.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -253,7 +253,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/banner-05.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/banner-05.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/banner-05.png]]></wp:meta_value>
@@ -268,7 +268,7 @@
 		<link>http://wingman.kitethemes.com/demo2/banner-06/</link>
 		<pubDate>Wed, 25 Nov 2015 06:41:25 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/banner-06.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/banner-06.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -284,7 +284,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/banner-06.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/banner-06.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/banner-06.png]]></wp:meta_value>
@@ -299,7 +299,7 @@
 		<link>http://wingman.kitethemes.com/demo2/kt_client/client1/client-01/</link>
 		<pubDate>Wed, 25 Nov 2015 07:13:12 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/client-01.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/client-01.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -315,7 +315,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/client-01.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/client-01.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/client-01.png]]></wp:meta_value>
@@ -330,7 +330,7 @@
 		<link>http://wingman.kitethemes.com/demo2/kt_client/client1/client-02/</link>
 		<pubDate>Wed, 25 Nov 2015 07:13:14 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/client-02.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/client-02.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -346,7 +346,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/client-02.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/client-02.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/client-02.png]]></wp:meta_value>
@@ -361,7 +361,7 @@
 		<link>http://wingman.kitethemes.com/demo2/kt_client/client1/client-03/</link>
 		<pubDate>Wed, 25 Nov 2015 07:13:15 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/client-03.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/client-03.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -377,7 +377,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/client-03.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/client-03.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/client-03.png]]></wp:meta_value>
@@ -392,7 +392,7 @@
 		<link>http://wingman.kitethemes.com/demo2/kt_client/client1/client-04/</link>
 		<pubDate>Wed, 25 Nov 2015 07:13:16 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/client-04.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/client-04.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -408,7 +408,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/client-04.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/client-04.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/client-04.png]]></wp:meta_value>
@@ -423,7 +423,7 @@
 		<link>http://wingman.kitethemes.com/demo2/kt_client/client1/client-05/</link>
 		<pubDate>Wed, 25 Nov 2015 07:13:17 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/client-05.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/client-05.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -439,7 +439,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/client-05.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/client-05.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/client-05.png]]></wp:meta_value>
@@ -454,7 +454,7 @@
 		<link>http://wingman.kitethemes.com/demo2/kt_client/client1/client-06/</link>
 		<pubDate>Wed, 25 Nov 2015 07:13:18 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/client-06.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/client-06.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -470,7 +470,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/client-06.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/client-06.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/client-06.png]]></wp:meta_value>
@@ -485,7 +485,7 @@
 		<link>http://wingman.kitethemes.com/demo2/icon-clock/</link>
 		<pubDate>Wed, 25 Nov 2015 07:19:56 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/icon-clock.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/icon-clock.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -501,7 +501,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/icon-clock.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/icon-clock.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/icon-clock.png]]></wp:meta_value>
@@ -516,7 +516,7 @@
 		<link>http://wingman.kitethemes.com/demo2/icon-earth/</link>
 		<pubDate>Wed, 25 Nov 2015 07:19:57 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/icon-earth.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/icon-earth.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -532,7 +532,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/icon-earth.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/icon-earth.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/icon-earth.png]]></wp:meta_value>
@@ -547,7 +547,7 @@
 		<link>http://wingman.kitethemes.com/demo2/icon-medal/</link>
 		<pubDate>Wed, 25 Nov 2015 07:19:58 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/icon-medal.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/icon-medal.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -563,7 +563,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/icon-medal.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/icon-medal.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/icon-medal.png]]></wp:meta_value>
@@ -578,7 +578,7 @@
 		<link>http://wingman.kitethemes.com/demo2/slider1/</link>
 		<pubDate>Thu, 26 Nov 2015 08:11:46 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/slider1.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/slider1.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -594,7 +594,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/slider1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/slider1.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/slider1.jpg]]></wp:meta_value>
@@ -609,7 +609,7 @@
 		<link>http://wingman.kitethemes.com/demo2/slider2/</link>
 		<pubDate>Thu, 26 Nov 2015 08:45:55 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/slider2.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/slider2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -625,7 +625,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/slider2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/slider2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/slider2.jpg]]></wp:meta_value>
@@ -640,7 +640,7 @@
 		<link>http://wingman.kitethemes.com/demo2/slider3/</link>
 		<pubDate>Thu, 26 Nov 2015 08:50:51 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/slider3.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/slider3.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -656,7 +656,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/slider3.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/slider3.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/slider3.jpg]]></wp:meta_value>
@@ -671,7 +671,7 @@
 		<link>http://wingman.kitethemes.com/demo2/payment/</link>
 		<pubDate>Sat, 28 Nov 2015 03:59:54 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/payment.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/payment.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -687,7 +687,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/payment.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/payment.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/payment.png]]></wp:meta_value>
@@ -702,7 +702,7 @@
 		<link>http://wingman.kitethemes.com/demo2/banner-sidebar/</link>
 		<pubDate>Tue, 01 Dec 2015 07:30:10 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/banner-sidebar.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/banner-sidebar.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -718,7 +718,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/banner-sidebar.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/banner-sidebar.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/banner-sidebar.png]]></wp:meta_value>
@@ -733,7 +733,7 @@
 		<link>http://wingman.kitethemes.com/demo2/delphinus-creative-multi-purpose-ecommerce/blog-02/</link>
 		<pubDate>Wed, 02 Dec 2015 04:03:25 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog-02.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog-02.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -749,7 +749,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog-02.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog-02.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog-02.png]]></wp:meta_value>
@@ -764,7 +764,7 @@
 		<link>http://wingman.kitethemes.com/demo2/about-us/about/</link>
 		<pubDate>Thu, 03 Dec 2015 08:43:29 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/about.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/about.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -780,7 +780,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/about.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/about.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/about.jpg]]></wp:meta_value>
@@ -795,7 +795,7 @@
 		<link>http://wingman.kitethemes.com/demo2/about-us/team1/</link>
 		<pubDate>Thu, 03 Dec 2015 08:43:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/team1.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/team1.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -811,7 +811,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/team1.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/team1.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/team1.png]]></wp:meta_value>
@@ -826,7 +826,7 @@
 		<link>http://wingman.kitethemes.com/demo2/about-us/team2/</link>
 		<pubDate>Thu, 03 Dec 2015 08:43:32 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/team2.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/team2.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -842,7 +842,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/team2.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/team2.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/team2.png]]></wp:meta_value>
@@ -857,7 +857,7 @@
 		<link>http://wingman.kitethemes.com/demo2/about-us/team3/</link>
 		<pubDate>Thu, 03 Dec 2015 08:43:34 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/team3.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/team3.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -873,7 +873,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/team3.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/team3.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/team3.png]]></wp:meta_value>
@@ -888,7 +888,7 @@
 		<link>http://wingman.kitethemes.com/demo2/shop-banner/</link>
 		<pubDate>Fri, 04 Dec 2015 01:38:08 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/shop-banner.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/shop-banner.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -904,7 +904,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/shop-banner.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/shop-banner.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/shop-banner.png]]></wp:meta_value>
@@ -919,7 +919,7 @@
 		<link>http://wingman.kitethemes.com/demo2/product/asics-gel-lyte-v-lc/product1/</link>
 		<pubDate>Fri, 04 Dec 2015 01:41:48 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product1.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product1.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -935,7 +935,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product1.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2013/06/product1.jpg]]></wp:meta_value>
@@ -950,7 +950,7 @@
 		<link>http://wingman.kitethemes.com/demo2/product/asics-gel-lyte-v-lc/product2/</link>
 		<pubDate>Fri, 04 Dec 2015 01:41:51 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product2.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -966,7 +966,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2013/06/product2.jpg]]></wp:meta_value>
@@ -981,7 +981,7 @@
 		<link>http://wingman.kitethemes.com/demo2/product/asics-gel-lyte-v-lc/product3/</link>
 		<pubDate>Fri, 04 Dec 2015 01:41:55 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product3.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product3.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -997,7 +997,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product3.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product3.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2013/06/product3.jpg]]></wp:meta_value>
@@ -1012,7 +1012,7 @@
 		<link>http://wingman.kitethemes.com/demo2/product/asics-gel-lyte-v-lc/product4/</link>
 		<pubDate>Fri, 04 Dec 2015 01:41:56 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product4.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product4.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1028,7 +1028,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product4.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product4.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2013/06/product4.jpg]]></wp:meta_value>
@@ -1043,7 +1043,7 @@
 		<link>http://wingman.kitethemes.com/demo2/product/asics-gel-lyte-v-lc/product5/</link>
 		<pubDate>Fri, 04 Dec 2015 01:41:58 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product5.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product5.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1059,7 +1059,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product5.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product5.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2013/06/product5.jpg]]></wp:meta_value>
@@ -1074,7 +1074,7 @@
 		<link>http://wingman.kitethemes.com/demo2/product/asics-gel-lyte-v-lc/product6/</link>
 		<pubDate>Fri, 04 Dec 2015 01:41:59 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product6.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product6.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1090,7 +1090,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product6.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product6.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2013/06/product6.jpg]]></wp:meta_value>
@@ -1105,7 +1105,7 @@
 		<link>http://wingman.kitethemes.com/demo2/product/asics-gel-lyte-v-lc/product8/</link>
 		<pubDate>Fri, 04 Dec 2015 01:42:02 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product8.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product8.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1121,7 +1121,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product8.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product8.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2013/06/product8.jpg]]></wp:meta_value>
@@ -1136,7 +1136,7 @@
 		<link>http://wingman.kitethemes.com/demo2/product/asics-gel-lyte-v-lc/product9/</link>
 		<pubDate>Fri, 04 Dec 2015 01:42:04 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product9.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product9.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1152,7 +1152,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product9.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product9.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2013/06/product9.jpg]]></wp:meta_value>
@@ -1167,7 +1167,7 @@
 		<link>http://wingman.kitethemes.com/demo2/product/asics-gel-lyte-v-lc/product10/</link>
 		<pubDate>Fri, 04 Dec 2015 01:42:08 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product10.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product10.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1183,7 +1183,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product10.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product10.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2013/06/product10.jpg]]></wp:meta_value>
@@ -1198,7 +1198,7 @@
 		<link>http://wingman.kitethemes.com/demo2/product/asics-gel-lyte-v-lc/product11/</link>
 		<pubDate>Fri, 04 Dec 2015 01:42:10 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product11.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product11.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1214,7 +1214,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product11.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product11.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2013/06/product11.jpg]]></wp:meta_value>
@@ -1229,7 +1229,7 @@
 		<link>http://wingman.kitethemes.com/demo2/product/asics-gel-lyte-v-lc/product12/</link>
 		<pubDate>Fri, 04 Dec 2015 01:42:12 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product12.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product12.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1245,7 +1245,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product12.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product12.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2013/06/product12.jpg]]></wp:meta_value>
@@ -1260,7 +1260,7 @@
 		<link>http://wingman.kitethemes.com/demo2/product/oversized-watch-in-black/product7/</link>
 		<pubDate>Fri, 04 Dec 2015 02:07:40 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product7.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product7.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1276,7 +1276,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2013/06/product7.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2013/06/product7.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2013/06/product7.jpg]]></wp:meta_value>
@@ -1291,7 +1291,7 @@
 		<link>http://wingman.kitethemes.com/demo2/the-best-of-rag-bone-spring-2016-2/blog8/</link>
 		<pubDate>Fri, 04 Dec 2015 06:22:12 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog8.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog8.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1307,7 +1307,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog8.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog8.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog8.jpg]]></wp:meta_value>
@@ -1322,7 +1322,7 @@
 		<link>http://wingman.kitethemes.com/demo2/vanichi-fashion-lifestyle-magazine-4/blog3/</link>
 		<pubDate>Fri, 04 Dec 2015 06:44:59 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog3.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog3.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1338,7 +1338,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog3.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog3.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog3.jpg]]></wp:meta_value>
@@ -1353,7 +1353,7 @@
 		<link>http://wingman.kitethemes.com/demo2/kate-moss-is-now-a-fashion-editor/blog8-2/</link>
 		<pubDate>Fri, 04 Dec 2015 06:45:56 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/blog8.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/blog8.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1369,7 +1369,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/blog8.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/blog8.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/blog8.jpg]]></wp:meta_value>
@@ -1384,7 +1384,7 @@
 		<link>http://wingman.kitethemes.com/demo2/the-best-of-rag-bone-spring-2016-2/blog1/</link>
 		<pubDate>Fri, 04 Dec 2015 06:52:43 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog1.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog1.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1400,7 +1400,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog1.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog1.jpg]]></wp:meta_value>
@@ -1415,7 +1415,7 @@
 		<link>http://wingman.kitethemes.com/demo2/delphinus-creative-multi-purpose-ecommerce/blog2/</link>
 		<pubDate>Fri, 04 Dec 2015 06:53:24 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog2.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1431,7 +1431,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog2.jpg]]></wp:meta_value>
@@ -1446,7 +1446,7 @@
 		<link>http://wingman.kitethemes.com/demo2/kate-moss-is-now-a-fashion-editor-2/blog4/</link>
 		<pubDate>Fri, 04 Dec 2015 06:54:11 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog4.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog4.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1462,7 +1462,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog4.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog4.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog4.jpg]]></wp:meta_value>
@@ -1477,7 +1477,7 @@
 		<link>http://wingman.kitethemes.com/demo2/the-best-of-rag-bone-spring-2016-3/blog5/</link>
 		<pubDate>Fri, 04 Dec 2015 06:54:51 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog5.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog5.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1493,7 +1493,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog5.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog5.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog5.jpg]]></wp:meta_value>
@@ -1508,7 +1508,7 @@
 		<link>http://wingman.kitethemes.com/demo2/vanichi-fashion-lifestyle-magazine-3/blog6/</link>
 		<pubDate>Fri, 04 Dec 2015 06:55:28 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog6.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog6.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1524,7 +1524,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog6.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog6.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog6.jpg]]></wp:meta_value>
@@ -1539,7 +1539,7 @@
 		<link>http://wingman.kitethemes.com/demo2/kate-moss-is-now-a-fashion-editor-3/blog7/</link>
 		<pubDate>Fri, 04 Dec 2015 06:56:03 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog7.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog7.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1555,7 +1555,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog7.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog7.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog7.jpg]]></wp:meta_value>
@@ -1570,7 +1570,7 @@
 		<link>http://wingman.kitethemes.com/demo2/vanichi-fashion-lifestyle-magazine/blog9/</link>
 		<pubDate>Fri, 04 Dec 2015 06:56:36 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/blog9.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/blog9.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1586,7 +1586,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/blog9.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/blog9.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/blog9.jpg]]></wp:meta_value>
@@ -1601,7 +1601,7 @@
 		<link>http://wingman.kitethemes.com/demo2/men-menu2/</link>
 		<pubDate>Thu, 10 Dec 2015 03:39:23 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/men-menu2.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/men-menu2.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1617,7 +1617,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/men-menu2.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/men-menu2.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/men-menu2.png]]></wp:meta_value>
@@ -1632,7 +1632,7 @@
 		<link>http://wingman.kitethemes.com/demo2/menu-men/</link>
 		<pubDate>Thu, 10 Dec 2015 03:39:25 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/menu-men.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/menu-men.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1648,7 +1648,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/menu-men.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/menu-men.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/menu-men.png]]></wp:meta_value>
@@ -1663,7 +1663,7 @@
 		<link>http://wingman.kitethemes.com/demo2/size-l/</link>
 		<pubDate>Fri, 11 Dec 2015 03:18:10 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/size-l.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/size-l.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1679,7 +1679,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/size-l.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/size-l.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/size-l.png]]></wp:meta_value>
@@ -1694,7 +1694,7 @@
 		<link>http://wingman.kitethemes.com/demo2/size-m/</link>
 		<pubDate>Fri, 11 Dec 2015 03:18:13 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/size-m.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/size-m.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1710,7 +1710,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/size-m.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/size-m.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/size-m.png]]></wp:meta_value>
@@ -1725,7 +1725,7 @@
 		<link>http://wingman.kitethemes.com/demo2/size-s/</link>
 		<pubDate>Fri, 11 Dec 2015 03:18:14 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/size-s.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/size-s.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1741,7 +1741,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/size-s.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/size-s.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/size-s.png]]></wp:meta_value>
@@ -1756,7 +1756,7 @@
 		<link>http://wingman.kitethemes.com/demo2/size-xl/</link>
 		<pubDate>Fri, 11 Dec 2015 03:18:16 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/size-xl.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/size-xl.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1772,7 +1772,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/size-xl.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/size-xl.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/size-xl.png]]></wp:meta_value>
@@ -1787,7 +1787,7 @@
 		<link>http://wingman.kitethemes.com/demo2/size-xxl/</link>
 		<pubDate>Fri, 11 Dec 2015 03:18:17 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/size-xxl.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/size-xxl.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1803,7 +1803,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/size-xxl.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/size-xxl.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/size-xxl.png]]></wp:meta_value>
@@ -1818,7 +1818,7 @@
 		<link>http://wingman.kitethemes.com/demo2/women/</link>
 		<pubDate>Fri, 11 Dec 2015 08:49:50 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/women.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/women.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1834,7 +1834,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/women.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/women.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/women.jpg]]></wp:meta_value>
@@ -1849,7 +1849,7 @@
 		<link>http://wingman.kitethemes.com/demo2/bag/</link>
 		<pubDate>Fri, 11 Dec 2015 08:59:53 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/bag.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/bag.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1865,7 +1865,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/bag.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/bag.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/bag.jpg]]></wp:meta_value>
@@ -1880,7 +1880,7 @@
 		<link>http://wingman.kitethemes.com/demo2/watches/</link>
 		<pubDate>Fri, 11 Dec 2015 09:02:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/watches.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/watches.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1896,7 +1896,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/watches.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/watches.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/watches.jpg]]></wp:meta_value>
@@ -1911,7 +1911,7 @@
 		<link>http://wingman.kitethemes.com/demo2/kate-moss-is-now-a-fashion-editor/piano-march/</link>
 		<pubDate>Fri, 11 Dec 2015 09:03:52 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/Piano_March.mp3</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/Piano_March.mp3</guid>
 		<description></description>
 		<content:encoded><![CDATA["Piano March" from YouTube Audio Library by Audionautix. Genre: Pop.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1927,7 +1927,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/Piano_March.mp3]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/Piano_March.mp3]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/Piano_March.mp3]]></wp:meta_value>
@@ -2064,7 +2064,7 @@
 		<link>http://wingman.kitethemes.com/demo2/sunglasses/</link>
 		<pubDate>Fri, 11 Dec 2015 09:19:24 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/Sunglasses.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/Sunglasses.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2080,7 +2080,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/Sunglasses.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/Sunglasses.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/Sunglasses.jpg]]></wp:meta_value>
@@ -2095,7 +2095,7 @@
 		<link>http://wingman.kitethemes.com/demo2/jackets-coats/</link>
 		<pubDate>Fri, 11 Dec 2015 09:20:24 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/jackets-coats.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/jackets-coats.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2111,7 +2111,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/jackets-coats.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/jackets-coats.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/jackets-coats.jpg]]></wp:meta_value>
@@ -2126,7 +2126,7 @@
 		<link>http://wingman.kitethemes.com/demo2/homepage-2/banner-07/</link>
 		<pubDate>Sat, 12 Dec 2015 04:21:46 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/banner-07.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/banner-07.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2142,7 +2142,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/banner-07.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/banner-07.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/banner-07.png]]></wp:meta_value>
@@ -2157,7 +2157,7 @@
 		<link>http://wingman.kitethemes.com/demo2/homepage-2/banner-08/</link>
 		<pubDate>Sat, 12 Dec 2015 04:21:49 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/banner-08.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/banner-08.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2173,7 +2173,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/banner-08.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/banner-08.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/banner-08.png]]></wp:meta_value>
@@ -2188,7 +2188,7 @@
 		<link>http://wingman.kitethemes.com/demo2/homepage-2/sale1/</link>
 		<pubDate>Sat, 12 Dec 2015 04:23:25 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/sale1.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/sale1.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2204,7 +2204,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/sale1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/sale1.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/sale1.jpg]]></wp:meta_value>
@@ -2219,7 +2219,7 @@
 		<link>http://wingman.kitethemes.com/demo2/men1/</link>
 		<pubDate>Sat, 12 Dec 2015 04:28:46 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/men1.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/men1.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2235,7 +2235,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/men1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/men1.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/men1.jpg]]></wp:meta_value>
@@ -2250,7 +2250,7 @@
 		<link>http://wingman.kitethemes.com/demo2/men2/</link>
 		<pubDate>Sat, 12 Dec 2015 04:28:49 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/men2.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/men2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2266,7 +2266,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/men2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/men2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/men2.jpg]]></wp:meta_value>
@@ -2281,7 +2281,7 @@
 		<link>http://wingman.kitethemes.com/demo2/men3/</link>
 		<pubDate>Sat, 12 Dec 2015 04:28:52 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/men3.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/men3.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2297,7 +2297,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/men3.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/men3.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/men3.jpg]]></wp:meta_value>
@@ -2312,7 +2312,7 @@
 		<link>http://wingman.kitethemes.com/demo2/men4/</link>
 		<pubDate>Sat, 12 Dec 2015 04:28:54 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/men4.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/men4.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2328,7 +2328,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/men4.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/men4.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/men4.jpg]]></wp:meta_value>
@@ -2343,7 +2343,7 @@
 		<link>http://wingman.kitethemes.com/demo2/homepage-2/icn-medal-2/</link>
 		<pubDate>Mon, 14 Dec 2015 03:41:33 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/icn-medal-2.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/icn-medal-2.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2359,7 +2359,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/icn-medal-2.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/icn-medal-2.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/icn-medal-2.png]]></wp:meta_value>
@@ -2374,7 +2374,7 @@
 		<link>http://wingman.kitethemes.com/demo2/homepage-2/icon-clock-1/</link>
 		<pubDate>Mon, 14 Dec 2015 03:41:45 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/icon-clock-1.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/icon-clock-1.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2390,7 +2390,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/icon-clock-1.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/icon-clock-1.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/icon-clock-1.png]]></wp:meta_value>
@@ -2405,7 +2405,7 @@
 		<link>http://wingman.kitethemes.com/demo2/homepage-2/icon-earth-1/</link>
 		<pubDate>Mon, 14 Dec 2015 03:41:53 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/icon-earth-1.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/icon-earth-1.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2421,7 +2421,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/icon-earth-1.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/icon-earth-1.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/icon-earth-1.png]]></wp:meta_value>
@@ -2436,7 +2436,7 @@
 		<link>http://wingman.kitethemes.com/demo2/contact-us/logo-dark/</link>
 		<pubDate>Wed, 16 Dec 2015 06:30:42 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/logo-dark.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/logo-dark.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2452,7 +2452,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/logo-dark.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/logo-dark.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/logo-dark.png]]></wp:meta_value>
@@ -2467,7 +2467,7 @@
 		<link>http://wingman.kitethemes.com/demo2/logo-light-2/</link>
 		<pubDate>Fri, 25 Dec 2015 07:12:34 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/logo-light-1.png</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/logo-light-1.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2483,7 +2483,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/logo-light-1.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/logo-light-1.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/logo-light-1.png]]></wp:meta_value>
@@ -2498,7 +2498,7 @@
 		<link>http://wingman.kitethemes.com/demo2/the-best-of-rag-bone-spring-2016-2/blog-1/</link>
 		<pubDate>Thu, 07 Jan 2016 02:00:53 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog-1.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog-1.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2514,7 +2514,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog-1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog-1.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog-1.jpg]]></wp:meta_value>
@@ -2529,7 +2529,7 @@
 		<link>http://wingman.kitethemes.com/demo2/the-best-of-rag-bone-spring-2016-2/blog-2/</link>
 		<pubDate>Thu, 07 Jan 2016 02:01:00 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog-2.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2545,7 +2545,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog-2.jpg]]></wp:meta_value>
@@ -2560,7 +2560,7 @@
 		<link>http://wingman.kitethemes.com/demo2/the-best-of-rag-bone-spring-2016-2/blog-3/</link>
 		<pubDate>Thu, 07 Jan 2016 02:01:04 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog-3.jpg</guid>
+		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog-3.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2576,7 +2576,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/12/blog-3.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/12/blog-3.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog-3.jpg]]></wp:meta_value>
@@ -13554,7 +13554,7 @@ Pellentesque mauris lacus, vulputate vel arcu sed, rhoncus consectetur enim. Pel
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/?page_id=159</guid>
 		<description></description>
-		<content:encoded><![CDATA[[vc_row css=".vc_custom_1448847144191{margin-bottom: 70px !important;}"][vc_column][googlemap height="520" type="roadmap" stype="8" scrollwheel="1" location="81 Gordon Rd, Mandurah WA 6210"]<img class="aligncenter size-full wp-image-524" src="http://wingman.kitethemes.com/demo2/wp-content/uploads/2015/11/logo-dark.png" alt="logo-dark" width="215" height="35" />
+		<content:encoded><![CDATA[[vc_row css=".vc_custom_1448847144191{margin-bottom: 70px !important;}"][vc_column][googlemap height="520" type="roadmap" stype="8" scrollwheel="1" location="81 Gordon Rd, Mandurah WA 6210"]<img class="aligncenter size-full wp-image-524" src="http://wingman.kitethemes.com/demo2/wp-content/import-data-images/2015/11/logo-dark.png" alt="logo-dark" width="215" height="35" />
 [socials social="facebook,twitter,pinterest,dribbble" style="custom" tooltip="" align="center" space_between_item="10" custom_color="#b2b2b2"][contact_info address="81 Gordon Rd, Mandurah WA 6210" phone="(00) 123 456 789" email="demoemail@domain.com"][/googlemap][/vc_column][/vc_row][vc_row][vc_column][kt_heading text="We will love to hear from you" layout="2" letter_spacing="0" font_container="tag:h3|font_size:18px|color:%23252525"][/kt_heading][contact-form-7 id="528" title="We will love to hear from you"][/vc_column][/vc_row]]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>159</wp:post_id>
@@ -13817,7 +13817,7 @@ Pellentesque mauris lacus, vulputate vel arcu sed, rhoncus consectetur enim. Pel
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">http://wingman.kitethemes.com/demo2/?page_id=206</guid>
 		<description></description>
-		<content:encoded><![CDATA[[vc_row css=".vc_custom_1450064819297{margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column width="1/2"][vc_single_image image="509" img_size="full" alignment="center" style="creative-left" onclick="custom_link" link="#"][kt_heading text="woMen’s" layout="2" letter_spacing="0" font_container="tag:h2|font_size:48px" css=".vc_custom_1452054653369{margin-top: 7px !important;}"]<span style="font-weight: 300; letter-spacing: 0.2em;">SUMMER COLLECTION'S 2015</span>[/kt_heading][/vc_column][vc_column width="1/2"][kt_heading text="Men’S" layout="2" letter_spacing="0" font_container="tag:h2|font_size:48px" css=".vc_custom_1452054703096{margin-top: 145px !important;}"]<span style="font-weight: 300; letter-spacing: 0.2em;">CLOTHING COLLECTION’S</span>[/kt_heading][vc_single_image image="510" img_size="full" alignment="center" style="creative-right" onclick="custom_link" link="#" css=".vc_custom_1450065025795{margin-bottom: 0px !important;}"][/vc_column][/vc_row][vc_row full_width="stretch_row" css=".vc_custom_1448555469774{padding-top: 80px !important;padding-bottom: 80px !important;background-color: #f4f6f9 !important;}"][vc_column][products_carousel_tab per_page="6"][/vc_column][/vc_row][vc_row css=".vc_custom_1449116117149{margin-top: 100px !important;margin-bottom: 100px !important;}"][vc_column width="2/3"][vc_empty_space height="100px" visibility="hidden-sm"][kt_heading text="Long-sleeved T-shirt" align="left" layout="2" letter_spacing="5" font_container="tag:h2|font_size:36|line_height:50px" css=".vc_custom_1449116178096{margin-bottom: 40px !important;}"]Sale Minimum 50% Discount Or Up To 80% Off On A Big Range Of Clothing.[/kt_heading][comingsoon style_coming="style2" css=".vc_custom_1449116503525{margin-bottom: 50px !important;}"][vc_btn title="SHOP ALL" style="outline" shape="square" color="black" align="left" letter_spacing="0" i_type="typicons" i_icon_typicons="typcn typcn-anchor-outline" link="url:%23||" css=".vc_custom_1449116497599{margin-bottom: 50px !important;}"][/vc_column][vc_column width="1/3"][vc_single_image image="511" img_size="full" alignment="center" style="border-box" onclick="custom_link" link="#"][/vc_column][/vc_row][vc_row full_width="stretch_row" css=".vc_custom_1448856079621{margin-bottom: 0px !important;padding-top: 90px !important;padding-bottom: 70px !important;background-color: #f4f6f9 !important;}"][vc_column][kt_heading text="BEST SELLERS" letter_spacing="0" font_container="tag:h2|font_size:36" height="2"][/kt_heading][category_products_tab per_page="4" show="all" categories="53,16,20,18"][/vc_column][/vc_row][vc_row css=".vc_custom_1450064341233{margin-bottom: 0px !important;}"][vc_column width="1/3"][icon_box title="OPENING ALL WEEK " icon_box_layout="2" icon_type="image" letter_spacing="3" font_container="tag:h4|font_size:14px" css=".vc_custom_1450064550789{margin-bottom: 30px !important;}" iconbox_image="518"]8AM - 10PM[/icon_box][/vc_column][vc_column width="1/3" css=".vc_custom_1449547908907{border-right-width: 1px !important;border-left-width: 1px !important;border-left-color: #e7e7e7 !important;border-left-style: solid !important;border-right-color: #e7e7e7 !important;border-right-style: solid !important;}"][icon_box title="25% OFF WOMEN T-SHIRT" icon_box_layout="2" icon_type="image" letter_spacing="3" font_container="tag:h4|font_size:14px" css=".vc_custom_1450064615568{margin-bottom: 30px !important;}" iconbox_image="517"]On or der over 500 USD[/icon_box][/vc_column][vc_column width="1/3"][icon_box title="free ship all order" icon_box_layout="2" icon_type="image" letter_spacing="3" font_container="tag:h4|font_size:14px" css=".vc_custom_1450079552584{margin-bottom: 30px !important;}" iconbox_image="519"]Worldwide Shipping[/icon_box][/vc_column][/vc_row][vc_row css=".vc_custom_1448438223542{margin-bottom: 80px !important;}"][vc_column][vc_separator color="custom" accent_color="#e5e5e5"][/vc_column][/vc_row][vc_row][vc_column][kt_heading text="Lastest blogs" letter_spacing="0" font_container="tag:h2" height="2" css=".vc_custom_1448848980696{margin-bottom: 80px !important;}"][/kt_heading][list_blog_posts blog_type="zigzag" readmore="link" thumbnail_type="image" excerpt_length="20" blog_pagination="none" max_items="3" image_size="recent_posts_list"][/vc_column][/vc_row][vc_row css=".vc_custom_1448468664710{margin-bottom: 70px !important;}"][vc_column][vc_separator color="custom" accent_color="#e5e5e5"][/vc_column][/vc_row][vc_row css=".vc_custom_1448468578350{margin-bottom: 60px !important;}"][vc_column][clients_carousel source="" mousedrag="false" autoplay="true" tablet="4" navigation_style="square_border" border_radius="0" img_size="full" navigation_color="#d6d6d6"][/vc_column][/vc_row][vc_row css=".vc_custom_1448468558247{margin-bottom: 60px !important;}"][vc_column][vc_separator color="custom" accent_color="#e5e5e5"][/vc_column][/vc_row][vc_row css=".vc_custom_1448468611414{margin-bottom: 0px !important;}"][vc_column][testimonial_carousel source="" max_items="10" navigation_icon="fa fa-long-arrow-left|fa fa-long-arrow-right" pagination="false" letter_spacing="0" letter_spacing_company="0" navigation_always_on="true"][/vc_column][/vc_row]]]></content:encoded>
+		<content:encoded><![CDATA[[vc_row css=".vc_custom_1450064819297{margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}"][vc_column width="1/2"][vc_single_image image="509" img_size="full" alignment="center" style="creative-left" onclick="custom_link" link="#"][kt_heading text="woMen’s" layout="2" letter_spacing="0" font_container="tag:h2|font_size:48px" css=".vc_custom_1452054653369{margin-top: 7px !important;}"]<span style="font-weight: 300; letter-spacing: 0.2em;">SUMMER COLLECTION'S 2015</span>[/kt_heading][/vc_column][vc_column width="1/2"][kt_heading text="Men’S" layout="2" letter_spacing="0" font_container="tag:h2|font_size:48px" css=".vc_custom_1452054703096{margin-top: 145px !important;}"]<span style="font-weight: 300; letter-spacing: 0.2em;">CLOTHING COLLECTION’S</span>[/kt_heading][vc_single_image image="510" img_size="full" alignment="center" style="creative-right" onclick="custom_link" link="#" css=".vc_custom_1450065025795{margin-bottom: 0px !important;}"][/vc_column][/vc_row][vc_row full_width="stretch_row" css=".vc_custom_1448555469774{padding-top: 80px !important;padding-bottom: 80px !important;background-color: #f4f6f9 !important;}"][vc_column][products_carousel_tab per_page="6"][/vc_column][/vc_row][vc_row css=".vc_custom_1449116117149{margin-top: 100px !important;margin-bottom: 100px !important;}"][vc_column width="2/3"][vc_empty_space height="100px" visibility="hidden-sm"][kt_heading text="Long-sleeved T-shirt" align="left" layout="2" letter_spacing="5" font_container="tag:h2|font_size:36|line_height:50px" css=".vc_custom_1449116178096{margin-bottom: 40px !important;}"]Sale Minimum 50% Discount Or Up To 80% Off On A Big Range Of Clothing.[/kt_heading][comingsoon style_coming="style2" css=".vc_custom_1449116503525{margin-bottom: 50px !important;}"][vc_btn title="SHOP ALL" style="outline" shape="square" color="black" align="left" letter_spacing="0" i_type="typicons" i_icon_typicons="typcn typcn-anchor-outline" link="url:%23||" css=".vc_custom_1449116497599{margin-bottom: 50px !important;}"][/vc_column][vc_column width="1/3"][vc_single_image image="511" img_size="full" alignment="center" style="border-box" onclick="custom_link" link="#"][/vc_column][/vc_row][vc_row full_width="stretch_row" css=".vc_custom_1448856079621{margin-bottom: 0px !important;padding-top: 90px !important;padding-bottom: 70px !important;background-color: #f4f6f9 !important;}"][vc_column][kt_heading text="BEST SELLERS" letter_spacing="0" font_container="tag:h2|font_size:36" height="2"][/kt_heading][category_products_tab per_page="4" show="all" categories="23,26,27,28"][/vc_column][/vc_row][vc_row css=".vc_custom_1450064341233{margin-bottom: 0px !important;}"][vc_column width="1/3"][icon_box title="OPENING ALL WEEK " icon_box_layout="2" icon_type="image" letter_spacing="3" font_container="tag:h4|font_size:14px" css=".vc_custom_1450064550789{margin-bottom: 30px !important;}" iconbox_image="518"]8AM - 10PM[/icon_box][/vc_column][vc_column width="1/3" css=".vc_custom_1449547908907{border-right-width: 1px !important;border-left-width: 1px !important;border-left-color: #e7e7e7 !important;border-left-style: solid !important;border-right-color: #e7e7e7 !important;border-right-style: solid !important;}"][icon_box title="25% OFF WOMEN T-SHIRT" icon_box_layout="2" icon_type="image" letter_spacing="3" font_container="tag:h4|font_size:14px" css=".vc_custom_1450064615568{margin-bottom: 30px !important;}" iconbox_image="517"]On or der over 500 USD[/icon_box][/vc_column][vc_column width="1/3"][icon_box title="free ship all order" icon_box_layout="2" icon_type="image" letter_spacing="3" font_container="tag:h4|font_size:14px" css=".vc_custom_1450079552584{margin-bottom: 30px !important;}" iconbox_image="519"]Worldwide Shipping[/icon_box][/vc_column][/vc_row][vc_row css=".vc_custom_1448438223542{margin-bottom: 80px !important;}"][vc_column][vc_separator color="custom" accent_color="#e5e5e5"][/vc_column][/vc_row][vc_row][vc_column][kt_heading text="Lastest blogs" letter_spacing="0" font_container="tag:h2" height="2" css=".vc_custom_1448848980696{margin-bottom: 80px !important;}"][/kt_heading][list_blog_posts blog_type="zigzag" readmore="link" thumbnail_type="image" excerpt_length="20" blog_pagination="none" max_items="3" image_size="recent_posts_list"][/vc_column][/vc_row][vc_row css=".vc_custom_1448468664710{margin-bottom: 70px !important;}"][vc_column][vc_separator color="custom" accent_color="#e5e5e5"][/vc_column][/vc_row][vc_row css=".vc_custom_1448468578350{margin-bottom: 60px !important;}"][vc_column][clients_carousel source="" mousedrag="false" autoplay="true" tablet="4" navigation_style="square_border" border_radius="0" img_size="full" navigation_color="#d6d6d6"][/vc_column][/vc_row][vc_row css=".vc_custom_1448468558247{margin-bottom: 60px !important;}"][vc_column][vc_separator color="custom" accent_color="#e5e5e5"][/vc_column][/vc_row][vc_row css=".vc_custom_1448468611414{margin-bottom: 0px !important;}"][vc_column][testimonial_carousel source="" max_items="10" navigation_icon="fa fa-long-arrow-left|fa fa-long-arrow-right" pagination="false" letter_spacing="0" letter_spacing_company="0" navigation_always_on="true"][/vc_column][/vc_row]]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>206</wp:post_id>
 		<wp:post_date><![CDATA[2015-11-25 03:37:13]]></wp:post_date>

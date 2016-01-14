@@ -6,7 +6,6 @@ jQuery(document).ready(function($) {
 
         var button = $(this),
             data = {
-                _yitnonce_ajax: yith_woocompare.nonceadd,
                 action: yith_woocompare.actionadd,
                 id: button.data('product_id'),
                 context: 'frontend'
@@ -21,7 +20,7 @@ jQuery(document).ready(function($) {
 
         $.ajax({
             type: 'post',
-            url: yith_woocompare.ajaxurl,
+            url: yith_woocompare.ajaxurl.toString().replace( '%%endpoint%%', yith_woocompare.actionadd ),
             data: data,
             dataType: 'json',
             success: function(response){
@@ -81,7 +80,7 @@ jQuery(document).ready(function($) {
 
                     $.ajax({
                         type: 'post',
-                        url: yith_woocompare.ajaxurl,
+                        url: yith_woocompare.ajaxurl.toString().replace( '%%endpoint%%', yith_woocompare.actionview ),
                         data: data,
                         success: function(response){
                             // add the product in the widget
@@ -125,7 +124,6 @@ jQuery(document).ready(function($) {
 
         var button = $(this),
             data = {
-                _yitnonce_ajax: yith_woocompare.nonceremove,
                 action: yith_woocompare.actionremove,
                 id: button.data('product_id'),
                 context: 'frontend'
@@ -146,7 +144,7 @@ jQuery(document).ready(function($) {
 
         $.ajax({
             type: 'post',
-            url: yith_woocompare.ajaxurl,
+            url: yith_woocompare.ajaxurl.toString().replace( '%%endpoint%%', yith_woocompare.actionremove ),
             data: data,
             dataType:'html',
             success: function(response){
@@ -191,7 +189,6 @@ jQuery(document).ready(function($) {
 
             var button = $(this),
                 data = {
-                    _yitnonce_ajax: yith_woocompare.nonceremove,
                     action: yith_woocompare.actionremove,
                     id: button.data('product_id'),
                     context: 'frontend',
@@ -213,7 +210,7 @@ jQuery(document).ready(function($) {
 
             $.ajax({
                 type: 'post',
-                url: yith_woocompare.ajaxurl,
+                url: yith_woocompare.ajaxurl.toString().replace( '%%endpoint%%', yith_woocompare.actionremove ),
                 data: data,
                 dataType: 'html',
                 success: function (response) {

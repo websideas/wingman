@@ -2,13 +2,20 @@
 <?php
 //*** hide if there is checkout page
 global $post;
-if (is_object($post))
+
+if (get_option('woocs_restrike_on_checkout_page', 0))
 {
-    if ($this->get_checkout_page_id() == $post->ID)
+    if (is_object($post))
     {
-        //return "";
+        if ($this->get_checkout_page_id() == $post->ID)
+        {
+            return "";
+        }
     }
 }
+
+//***
+
 $drop_down_view = $this->get_drop_down_view();
 
 //***
@@ -26,11 +33,11 @@ if ($drop_down_view == 'flags')
 } else
 {
     $empty_flag = WOOCS_LINK . 'img/no_flag.png';
-    $show_money_signs = get_option('woocs_show_money_signs',1);
+    $show_money_signs = get_option('woocs_show_money_signs', 1);
 //***
     if (!isset($show_flags))
     {
-        $show_flags = get_option('woocs_show_flags',1);
+        $show_flags = get_option('woocs_show_flags', 1);
     }
 
 
@@ -82,7 +89,10 @@ if ($drop_down_view == 'flags')
                 {
                     if ($txt_type == 'desc')
                     {
-                        $option_txt = $currency['description'];
+                        if (!empty($currency['description']))
+                        {
+                            $option_txt = $currency['description'];
+                        }
                     }
                 }
                 ?>

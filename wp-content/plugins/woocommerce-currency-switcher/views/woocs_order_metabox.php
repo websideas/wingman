@@ -6,7 +6,8 @@ $rate = get_post_meta($post->ID, '_woocs_order_rate', TRUE);
 $currency = get_post_meta($post->ID, '_order_currency', TRUE);
 $base_currency = get_post_meta($post->ID, '_woocs_order_base_currency', TRUE);
 $changed_mannualy = get_post_meta($post->ID, '_woocs_order_currency_changed_mannualy', TRUE);
-if (empty($base_currency)) {
+if (empty($base_currency))
+{
     $base_currency = $this->default_currency;
 }
 ?>
@@ -29,9 +30,15 @@ if (empty($base_currency)) {
     echo trim(number_format($order->get_total(), 2) . ' ' . $currency);
     ?><br />
     <hr />
-    <strong><?php _e('For new manual order ONLY!!', 'woocommerce-currency-switcher') ?></strong>:<br />
-    <a href="javascript:woocs_change_order_data();void(0);" class="button woocs_change_order_curr_button"><?php _e('change order currency', 'woocommerce-currency-switcher') ?></a>
-    <a href="javascript:woocs_cancel_order_data();void(0);" style="display: none;" class="button woocs_cancel_order_curr_button"><?php _e('cancel', 'woocommerce-currency-switcher') ?></a>
+    <a href="javascript:woocs_change_order_data();void(0);" class="button woocs_change_order_curr_button"><?php _e('Change order currency', 'woocommerce-currency-switcher') ?>&nbsp;<img class="help_tip" data-tip="<?php _e('For new manual order ONLY!!', 'woocommerce-currency-switcher') ?>" src="<?php echo WP_PLUGIN_URL ?>/woocommerce/assets/images/help.png" height="16" width="16" /></a>
+    <a href="javascript:woocs_cancel_order_data();void(0);" style="display: none;" class="button woocs_cancel_order_curr_button"><?php _e('cancel', 'woocommerce-currency-switcher') ?></a><br />
+
+
+    <?php if ($currency !== $this->default_currency): ?>
+        <hr />
+        <a href="javascript:woocs_recalculate_order_data();void(0);" class="button woocs_recalculate_order_curr_button"><?php _e("Recalculate order", 'woocommerce-currency-switcher') ?>&nbsp;<img class="help_tip" data-tip="<?php _e('Recalculate current order with basic currency. Recommended test this option on the clone of your site! Read the documentation of the plugin about it!', 'woocommerce-currency-switcher') ?>" src="<?php echo WP_PLUGIN_URL ?>/woocommerce/assets/images/help.png" height="16" width="16" /></a><br />
+        <?php endif; ?>
+
 </div>
 
 <script type="text/javascript">
@@ -50,6 +57,19 @@ if (empty($base_currency)) {
         jQuery('#woocs_order_metabox .woocs_order_currency select').attr('name', 'woocs_order_currency2');
         jQuery('.woocs_change_order_curr_button').show();
         jQuery('.woocs_cancel_order_curr_button').hide();
+    }
+
+    function woocs_recalculate_order_data() {
+        if (confirm('Sure? This operation could not be rollback!!')) {
+            jQuery('.woocs_recalculate_order_curr_button').prop('href', 'javascript:void(0);');
+            var data = {
+                action: "woocs_recalculate_order_data",
+                order_id: <?php echo $post->ID ?>
+            };
+            jQuery.post(ajaxurl, data, function (data) {
+                window.location.reload();
+            });
+        }
     }
 </script>
 

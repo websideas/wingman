@@ -1,10 +1,14 @@
 
 <div class="content-404">
     <div class="page-not-found">
-        <?php $image_404 = kt_option( '404_image' ); ?>
-        <?php if( $image_404['url'] ){ ?>
-            <h1><img src="<?php echo esc_url($image_404['url']); ?>" alt="404" class="img-responsive" /></h1>
-        <?php } ?>
+        <?php
+            $image_404_url = KT_THEME_IMG.'/404.png';
+            $image_404 = kt_option( '404_image' );
+            if( $image_404['url'] ){
+                $image_404_url = $image_404['url'];
+            }
+        ?>
+        <h1><img src="<?php echo esc_url($image_404_url); ?>" alt="<?php esc_html_e('404', 'wingman'); ?>" class="img-responsive" /></h1>
 
         <h3><?php esc_html_e('Opps! This page could not be found!', 'wingman') ?></h3>
 

@@ -1,10 +1,10 @@
 ﻿=== WooCommerce Currency Switcher ===
 Contributors: RealMag777
 Donate link: http://codecanyon.net/item/woocommerce-currency-switcher/8085217?ref=realmag777
-Tags: woocommerce currency switcher, currencies, currencies switcher, currency switcher, currency converter, currency, shortcode, switcher, woocommerce
+Tags: woocommerce currency switcher, currencies, currencies switcher, currency switcher, woocommerce switcher, currency converter, currency, shortcode, switcher, woocommerce
 Requires at least: 3.8.0
-Tested up to: 4.4.0
-Stable tag: 1.1.4
+Tested up to: 4.4.1
+Stable tag: 1.1.5
 
 WooCommerce Currency Switcher – is the plugin that allows you to switch to different currencies and get their rates converted in the real time!
 
@@ -29,8 +29,9 @@ Read more here: http://currency-switcher.com/
 * The customer allowed to pay in the selected currency
 * WooCommerce native PayPal gate ready!
 * Ability to set new order currency which were created through admin panel by hands
+* Ability recount order from any currency to basic currency in multiple mode of the plugin
 * Easy to use for administrators and shop customers
-* Compatible with WooCommerce 2.1.x and higher
+* Compatible with WooCommerce 2.3.x and higher
 * Compatible with WooCommerce Extra Product Options => http://codecanyon.net/item/woocommerce-extra-product-options/7908619?ref=realmag777
 * Compatible with – WooCommerce Stripe Gateway by woothemes
 * Compatible with – PayPal for WooCommerce by angelleye
@@ -69,6 +70,18 @@ R: http://currency-switcher.com/category/faq/
 3. GeoLocation rules in the back panel
 
 == Changelog ==
+
+= 1.1.5 =
+* New option: I am using cache plugin for my site - alloes using the plugin with cached sites
+* New button in order to convert oder data to basic currency amounts
+* New shortcode: [woocs_show_current_currency text="" currency="" flag=1 code=1]
+* New shortcode: [woocs_show_custom_price value=20] -> price in selected currency for txt-adv-banners
+* New option: Prices without cents
+* New option: Hide switcher on checkout page
+* Hint: wp-admin/admin.php?page=wc-settings&tab=woocs&woocs_reset=1 - reset currency options - be care
+* Improved: cron periods added - weekly, monthly
+* New filter: add_filter('woocs_price_format', 'my_woocs_price_format', 999, 2); - Any manipulation with price format, look it in the docs http://currency-switcher.com/documentation/#!/section_8
+* previous v.1.1.4 is here: http://currency-switcher.com/wp-content/uploads/2016/01/woocommerce-currency-switcher-114.zip
 
 = 1.1.4 =
 * WordPress 4.3 small adaptation - using __construct in the widget, prev widget-API was deprecated
@@ -127,7 +140,7 @@ Plugin release. Operate all the basic functions.
 
 == License ==
 
-This plugin is copyright pluginus.net ɠ2014 with [GNU General Public License][] by realmag777.
+This plugin is copyright pluginus.net &copy; 2012-2015 with [GNU General Public License][] by realmag777.
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the [GNU General Public License][] as published by the Free

@@ -127,4 +127,7 @@ div.woocs_price_info ul li{
 
 /***************** price info styles end ****************************/
 
+.woocs_current_product_id{
+    display: none;
+}
 
