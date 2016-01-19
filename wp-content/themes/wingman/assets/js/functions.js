@@ -466,7 +466,8 @@
             hoverClass: 'hovered',
             popUpSelector: 'ul.sub-menu-dropdown,.kt-megamenu-wrapper',
             animation: {},
-    		animationOut: {}
+    		animationOut: {},
+            delay:100
         });
     }
 
