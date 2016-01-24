@@ -4,7 +4,7 @@
 if ( !defined('ABSPATH')) exit;
 
 // Script version, used to add version for scripts and styles
-define( 'KT_THEME_VER', '1.0' );
+define( 'KT_THEME_VER', '1.1' );
 
 define( 'KT_THEME_OPTIONS', 'wingman_option' );
 

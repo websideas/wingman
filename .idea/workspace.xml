@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c7cfb02-0be5-4605-a0ec-58a67682dd43" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desc/desc.html" afterPath="$PROJECT_DIR$/desc/desc.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/languages/wingman.pot" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.zip" afterPath="$PROJECT_DIR$/main.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/wingman.zip" afterPath="$PROJECT_DIR$/main/wingman.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman.zip" afterPath="$PROJECT_DIR$/wp-content/themes/wingman.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desc/document.json" afterPath="$PROJECT_DIR$/desc/document.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/assets/js/functions.js" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/assets/js/functions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/documentation/Wingman/documentation.html" afterPath="$PROJECT_DIR$/main/documentation/Wingman/documentation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/wingman/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/wingman/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wingman.iws" />
@@ -34,14 +39,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/woocommerce.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content-link.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/templates/blog/classic/content-quote.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_1.xml" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo1/content_2.xml" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo2/content_2.xml" />
-        <option value="$PROJECT_DIR$/wp-content/themes/wingman/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/widgets.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/extensions/nav/nav.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_bridge.php" />
@@ -82,9 +84,12 @@
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/dummy-data/demo2/content_1.xml" />
         <option value="$PROJECT_DIR$/documentation/Wingman/documentation.html" />
         <option value="$PROJECT_DIR$/desc/desc.html" />
-        <option value="$PROJECT_DIR$/desc/document.json" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/js/plugins.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/wingman/assets/js/functions.js" />
+        <option value="$PROJECT_DIR$/desc/document.json" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/languages/en_US.po" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/wingman/functions.php" />
       </list>
     </option>
   </component>
@@ -127,8 +132,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -223,37 +226,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wingman" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="languages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -291,6 +264,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -408,20 +383,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-contact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-layout1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/templates/headers/header-layout2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -474,13 +435,6 @@
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/assets/images/placeholder-blogpost.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/frontend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625">
-          <caret line="57" column="36" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="36" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/js_composer/js_composer_parrams.php">
@@ -571,13 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="37" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.125">
-          <caret line="21" column="39" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -739,15 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3859649">
           <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/desc/document.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="48.75">
-          <caret line="0" column="16627" selection-start-line="0" selection-start-column="16627" selection-end-line="0" selection-end-column="16627" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -755,9 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7599545">
           <caret line="143" column="4494" selection-start-line="143" selection-start-column="4494" selection-end-line="143" selection-end-column="4495" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -765,6 +700,45 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.75586855">
           <caret line="488" column="57" selection-start-line="488" selection-start-column="57" selection-end-line="488" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/desc/document.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9122807">
+          <caret line="0" column="21508" selection-start-line="0" selection-start-column="21508" selection-end-line="0" selection-end-column="21508" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/framework/frontend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.4117646">
+          <caret line="62" column="63" selection-start-line="62" selection-start-column="59" selection-end-line="62" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/languages/en_US.po">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39249146">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/wingman/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42105263">
+          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
           <folding />
         </state>
       </provider>
