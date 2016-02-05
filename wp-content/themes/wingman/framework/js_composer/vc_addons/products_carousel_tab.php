@@ -17,8 +17,10 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
             'product_columns_tablet' => 2,
             'orderby' => 'date',
             'order' => 'DESC',
+            'operator' => 'IN', // Possible values are 'IN', 'NOT IN', 'AND'.
             'show' => '',
             'skin' => 'dark',
+
 
             'css_animation' => '',
             'el_class' => '',
@@ -108,15 +110,26 @@ class WPBakeryShortCode_Products_Carousel_Tab extends WPBakeryShortCode {
         foreach($tabs as $tab){
             $new_args = $args;
 
-            if( $tab == 'bestselling' ){
-                $new_args['meta_key'] = 'total_sales';
-                $new_args['orderby'] = 'meta_value_num';
-
-            }elseif( $tab == 'featured' ){
-                $new_args['meta_query'][] = array(
-                    'key'   => '_featured',
-                    'value' => 'yes'
+            if($source == 'categories'){
+                $new_args['tax_query'] = array(
+                    array(
+                        'taxonomy' 		=> 'product_cat',
+                        'terms'         => $tab,
+                        'field'         => 'id',
+                        'operator' 		=> $atts['operator']
+                    )
                 );
+            }else{
+                if( $tab == 'bestselling' ){
+                    $new_args['meta_key'] = 'total_sales';
+                    $new_args['orderby'] = 'meta_value_num';
+
+                }elseif( $tab == 'featured' ){
+                    $new_args['meta_query'][] = array(
+                        'key'   => '_featured',
+                        'value' => 'yes'
+                    );
+                }
             }
 
 

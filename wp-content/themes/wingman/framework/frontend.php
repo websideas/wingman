@@ -90,6 +90,8 @@ function kt_add_scripts() {
     wp_enqueue_style( 'kt-font-poppins', KT_THEME_FONTS . '/Poppins/stylesheet.min.css', array());
     wp_enqueue_style( 'font-awesome', KT_THEME_FONTS . '/font-awesome/css/font-awesome.min.css', array());
     wp_enqueue_style( 'kt-font-icomoon', KT_THEME_FONTS . '/Lineicons/style.min.css', array());
+    wp_enqueue_style( 'kt-font-pe-icon-7', KT_THEME_FONTS . '/pe-icon-7-stroke/css/pe-icon-7-stroke.css', array());
+
     wp_enqueue_style( 'kt-plugins', KT_THEME_CSS . '/plugins.css', array());
 
 	// Load our main stylesheet.

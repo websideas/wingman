@@ -1,5 +1,59 @@
 # Redux Framework Changelog
 
+## 3.5.9
+* Notice:   New wp.org release
+
+## 3.5.8.15
+* Fixed:    Wordpress 4.4.1 related issues.
+
+## 3.5.8.14
+* Fixed:    #2794 - User contributed code from #2716 did not contain isset and caused an index error.
+
+## 3.5.8.13
+* Modified:  Added tons of wp_remote_get handlings to stop bringing down site if Redux is down.
+* Modified:  When some items appear or not. Making devs lives easier.  ;)
+
+## 3.5.8.12
+* Updated:  parsedown.php vendor code, to deal. with PHP 7.0 errors.
+
+## 3.5.8.11
+* Fixed:    #2774 - border fields set to 0 would disappear after saving.
+* Modified: Post/page settings on the media gallery window hidden for gallery field, since they are not applicable to Redux.
+* Added:    #2728 - Filter for hints HTML.  'redux/hints/html'.  Thanks, @nyordanov.
+* Fixed:    #2716 - Enqueue jquery sortable when select field is set to sortable.  Thanks, @josh-rathke.
+
+## 3.5.8.10
+* Fixed:    #2726 - Redux fixes for WordPress 4.4.
+* Fixed:    #2713 - Alerts wouldn't disappear.
+
+## 3.5.8.9
+* Fixed:    #2726 - WP 4.4 breaking template.php include, because the core WP guys thought it would be hilarious to break everyone else's stuff.
+
+## 3.5.8.8
+* Fixed:    Specifying 'user' in a field's data argument would produce WordPress depreciation errors.
+
+## 3.5.8.7
+* Fixed:    Reflective XSS security fix.  Thanks to Kacper Szurek for the information.
+
+## 3.5.8.6
+* Modified: #2685 - Rejoined http strings to prevent errors in theme check.  Trade off, INFO notices will appear.  @Otto says this is ok.
+
+## 3.5.8.5
+* Fixed:    #2684 - Sorter not displaying (or saving) WordPress data when using the data argument.
+
+## 3.5.8.4
+* Added:    #2673 - WP_CLI check before welcome page redirect.
+* Fixed:    #2677 - tinymce javascript errors when wp editor is disabled.
+
+## 3.5.8.3
+* Modified: While in dev_mode, noticies will appear if Redux sample data in share_icons and admin_bar_links arguments is not changed.
+            This became necessary because devs are not changing this data and theme ends users are coming to us for theme support.
+* Modified: Redux links to be // instead of http:// or https:// to ensure portability for secure sites.
+
+## 3.5.8.2  
+* Fixed:    #2665 - For those who must have empty dirs in the extensions dir.  No more errors.
+* Added:    #2660 - Added 'user'/'users' data type to wordpress data arg.  Thanks @golchha21.
+
 ## 3.5.8.1
 * Fixed:    #2652 - load_plugin_textdomain using depreciated argument.
 

@@ -74,12 +74,13 @@
   mark,
   .mark{
     background: $primary-color;
-    color: $title-text;
+    color: $white;
   }
   .shop-thumb{
     margin-bottom: 30px;
   }
 
+  span.kt-out-of-stock,
   span.kt_new,
   span.onsale{
     background: $title-text;
@@ -98,12 +99,12 @@
     top: 19px;
     z-index: 1;
     letter-spacing: 0.2em;
-    left: 19px;
-  }
-  span.onsale{
-    background: $primary-color;
     right: 19px;
     left: auto;
+  }
+
+  span.onsale{
+    background: $primary-color;
   }
 
   #respond input#submit,
@@ -164,6 +165,7 @@
   input.button.alt[disabled]:disabled,
   input.button.alt[disabled]:disabled:hover {
     background: $primary-color;
+    border-color: $primary-color;
   }
 
   div.product{
@@ -1190,7 +1192,7 @@ body{
 			    height:13px;
 			    margin-left: 0;
 			    border-radius:100%;
-    			margin-top: -2px;
+    			margin-top: -1px;
 			    &:last-child{
 			    	margin-left: -7px;
 			    }
@@ -1349,6 +1351,7 @@ body{
           mark{
             background: none;
             padding: 0;
+            color: $title-text;
           }
           a{
             color: $title-text;
@@ -1596,8 +1599,14 @@ body{
           font-size: 18px;
           margin-bottom: 15px;
           margin-right: 10px;
+          ins{
+            float: left;
+            margin-right: 15px;
+          }
         }
       }
+
+
 
       &.outofstock{
         .functional-buttons-product{
@@ -1811,6 +1820,9 @@ body{
       }
     }
   }
+
+
+
 }
 
 #content{
@@ -1896,6 +1908,15 @@ body{
                   vertical-align: top;
               }
           }
+
+          .variations-table{
+            margin-bottom: 0;
+          }
+
+          .woocommerce-variation-availability{
+            margin-bottom: 20px;
+          }
+
           .group_table{
             td{
               padding-bottom: 20px;
@@ -2072,15 +2093,24 @@ div.swatch-wrapper{
     #reviews{
       #reply-title,
       h3.comments-title{
-          margin-bottom: 30px;
-          font-size: 18px;
+        margin-bottom: 30px;
+        font-size: 18px;
+        margin-top: 20px;
       }
       p{
         margin-bottom: 15px;
       }
     }
-    .comment-list > li > .comment-item{
+    .comment-list{
+      margin-bottom: 20px;
+      > li > .comment-item{
         margin-bottom: 20px;
+      }
+    }
+    p.stars{
+      a{
+        margin-right: 5px;
+      }
     }
   }
 }

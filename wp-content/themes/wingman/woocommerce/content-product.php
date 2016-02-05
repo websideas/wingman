@@ -1,12 +1,18 @@
 <?php
 /**
- * The template for displaying product content within loops.
+ * The template for displaying product content within loops
  *
- * Override this template by copying it to yourtheme/woocommerce/content-product.php
+ * This template can be overridden by copying it to yourtheme/woocommerce/content-product.php.
  *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you (the theme developer).
+ * will need to copy the new files to your theme to maintain compatibility. We try to do this.
+ * as little as possible, but it does happen. When this occurs the version of the template file will.
+ * be bumped and the readme will list any important changes.
+ *
+ * @see     http://docs.woothemes.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 2.4.0
+ * @version 2.5.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -29,6 +35,7 @@ if ( empty( $woocommerce_loop['columns'] ) ) {
 if ( empty( $woocommerce_loop['columns_tablet'] ) )
     $woocommerce_loop['columns_tablet'] = apply_filters( 'loop_shop_columns_tablet', 2 );
 
+
 // Ensure visibility
 if ( ! $product || ! $product->is_visible() ) {
     return;
@@ -39,6 +46,12 @@ $woocommerce_loop['loop']++;
 
 // Extra post classes
 $classes = array( 'product wow fadeInUp' );
+if ( 0 === ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 === $woocommerce_loop['columns'] ) {
+    $classes[] = 'first';
+}
+if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
+    $classes[] = 'last';
+}
 
 // Bootstrap Column
 $bootstrapColumn = round( 12 / $woocommerce_loop['columns'] );
@@ -48,107 +61,51 @@ $classes[] = 'col-xs-'. $bootstrapTabletColumn .' col-sm-'. $bootstrapTabletColu
 
 ?>
 <li <?php post_class( $classes ); ?>>
-    <div class="product-item-container clearfix">
-
-        <?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
-
+    <div class="product-item-container">
         <div class="product-image-container">
             <div class="product-image-content">
-
                 <?php
                 /**
-                 * woocommerce_shop_loop_item_before_image hook
+                 * woocommerce_before_shop_loop_item hook.
                  *
-                 * @hooked woocommerce_show_product_loop_new_flash - 5
-                 * @hooked woocommerce_show_product_loop_sale_flash - 10
+                 * @hooked woocommerce_template_loop_product_link_open - 10
                  */
-                do_action( 'woocommerce_shop_loop_item_before_image' );
-                ?>
+                do_action( 'woocommerce_before_shop_loop_item' );
 
-                <?php
-                $attachment_ids = $product->get_gallery_attachment_ids();
-                $attachment = '';
-                if($attachment_ids){
-                    foreach ( $attachment_ids as $attachment_id ) {
-                        $image_link = wp_get_attachment_url( $attachment_id );
-                        if ( $image_link ){
-                            $attachment = wp_get_attachment_image( $attachment_id, 'shop_catalog', false, array('class'=>"second-img product-img"));
-                            break;
-                        }
-                    }
-                }
-                if ( has_post_thumbnail() ) {
-                    $image_thumb =  get_the_post_thumbnail( $post->ID, 'shop_catalog', array('class'=>"first-img product-img"));
-                } elseif ( wc_placeholder_img_src() ) {
-                    $image_thumb = wc_placeholder_img( 'shop_catalog' );
-                }
-                ?>
-                <a href="<?php the_permalink(); ?>" class="product-thumbnail <?php if($attachment) echo "product-thumbnail-effect"; ?>">
-                    <?php echo $image_thumb; ?>
-                    <?php echo $attachment; ?>
-                </a>
-                <?php
                 /**
-                 * woocommerce_shop_loop_item_after_image hook
+                 * woocommerce_before_shop_loop_item_title hook.
                  *
-                 * @hooked woocommerce_template_loop_add_to_cart - 5
-                 * @hooked woocommerce_show_product_loop_sale_flash - 10
-                 * @hooked woocommerce_shop_loop_item_action_action_add - 15
+                 * @hooked kt_template_loop_product_thumbnail - 10
                  */
-                do_action( 'woocommerce_shop_loop_item_after_image' );
+                do_action( 'woocommerce_before_shop_loop_item_title' );
+
+                /**
+                 * woocommerce_after_shop_loop_item hook.
+                 *
+                 * @hooked woocommerce_template_loop_product_link_close - 5
+                 * @hooked woocommerce_template_loop_add_to_cart - 10
+                 */
+                do_action( 'woocommerce_after_shop_loop_item' );
                 ?>
-
-
             </div>
         </div>
         <div class="product-attr-container">
             <?php
             /**
-             * woocommerce_before_shop_loop_item_title hook
+             * woocommerce_shop_loop_item_title hook.
              *
-             * @hooked woocommerce_show_product_loop_sale_flash - 10
-             * @hooked woocommerce_template_loop_product_thumbnail - 10
+             * @hooked woocommerce_template_loop_product_title - 10
              */
-            do_action( 'woocommerce_before_shop_loop_item_title' );
-            ?>
-    
-            <h3>
-                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </h3>
-    
-            <?php
+            do_action( 'woocommerce_shop_loop_item_title' );
+
             /**
-             * woocommerce_after_shop_loop_item_title hook
+             * woocommerce_after_shop_loop_item_title hook.
              *
              * @hooked woocommerce_template_loop_rating - 5
              * @hooked woocommerce_template_loop_price - 10
              */
             do_action( 'woocommerce_after_shop_loop_item_title' );
-            ?>
-            
-            <div class="kt-woocommerce-tool-list">
-                <?php do_action( 'woocommerce_shop_tool_list_before' ); ?>
-                <?php
-                    /**
-                     * woocommerce_shop_loop_item_after_image hook
-                     *
-                     * @hooked woocommerce_template_loop_add_to_cart - 5
-                     * @hooked woocommerce_show_product_loop_sale_flash - 10
-                     * @hooked woocommerce_shop_loop_item_action_action_add - 15
-                     */
-                    do_action( 'woocommerce_shop_tool_list' );
-                ?>
-            </div>
-            
-            <?php
-    
-            /**
-             * woocommerce_after_shop_loop_item hook
-             *
-             * @hooked woocommerce_template_loop_add_to_cart - 10
-             */
-            do_action( 'woocommerce_after_shop_loop_item' );
-    
+
             ?>
         </div>
     </div>

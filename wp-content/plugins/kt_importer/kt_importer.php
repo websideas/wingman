@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: KiteThemes Import Demo Content
-Description: Replicate any of the Atelier example sites in just a few clicks!
+Description: Description: Import example sites in just a few clicks!
 Author: KiteThemes
 Author URI: http://kitethemes.com
 Version: 1.0

@@ -542,6 +542,44 @@ function kt_icons_source_register( $icons )
         array( "fa fa-wheelchair" => esc_html__( "Wheelchair", "js_composer" ) ),
     );
 
+    $icons['pe-icon-7-stroke'] = array(
+        array( "pe-7s-album" => esc_html__( "Album", 'wingman' ) ),
+        array( "pe-7s-arc" => esc_html__( "Arc", 'wingman' ) ),
+        array( "pe-7s-back-2" => esc_html__( "Back-2", 'wingman' ) ),
+        array( "pe-7s-bandaid" => esc_html__( "Bandaid", 'wingman' ) ),
+        array( "pe-7s-car" => esc_html__( "Car", 'wingman' ) ),
+
+
+        array( "pe-7s-diamond" => esc_html__( "Diamond", 'wingman' ) ),
+        array( "pe-7s-door-lock" => esc_html__( "Door lock", 'wingman' ) ),
+        array( "pe-7s-eyedropper" => esc_html__( "Eyedropper", 'wingman' ) ),
+        array( "pe-7s-female" => esc_html__( "Car", 'wingman' ) ),
+        array( "pe-7s-gym" => esc_html__( "gym", 'wingman' ) ),
+        array( "pe-7s-hammer" => esc_html__( "hammer", 'wingman' ) ),
+        array( "pe-7s-headphones" => esc_html__( "headphones", 'wingman' ) ),
+        array( "pe-7s-helm" => esc_html__( "Helm", 'wingman' ) ),
+        array( "pe-7s-hourglass" => esc_html__( "hourglass", 'wingman' ) ),
+        array( "pe-7s-leaf" => esc_html__( "leaf", 'wingman' ) ),
+        array( "pe-7s-magic-wand" => esc_html__( "magic-wand", 'wingman' ) ),
+        array( "pe-7s-male" => esc_html__( "male", 'wingman' ) ),
+
+        array( "pe-7s-map-2" => esc_html__( "map-2", 'wingman' ) ),
+        array( "pe-7s-next-2" => esc_html__( "next-2", 'wingman' ) ),
+        array( "pe-7s-paint-bucket" => esc_html__( "Paint-bucket", 'wingman' ) ),
+        array( "pe-7s-pendrive" => esc_html__( "pe-7s-pendrive", 'wingman' ) ),
+        array( "pe-7s-photo" => esc_html__( "Photo", 'wingman' ) ),
+        array( "pe-7s-piggy" => esc_html__( "piggy", 'wingman' ) ),
+        array( "pe-7s-plugin" => esc_html__( "plugin", 'wingman' ) ),
+        array( "pe-7s-refresh-2" => esc_html__( "Refresh-2", 'wingman' ) ),
+        array( "pe-7s-rocket" => esc_html__( "Rocket", 'wingman' ) ),
+
+        array( "pe-7s-medal" => esc_html__( "Medal", 'wingman' ) ),
+        array( "pe-7s-alarm" => esc_html__( "Alarm", 'wingman' ) ),
+        array( "pe-7s-world" => esc_html__( "world", 'wingman' ) ),
+
+    );
+
+
     $icons['icomoon_theme'] = array(
         array( "icon-A-Z" => esc_html__( "A Z", 'wingman' ) ),
         array( "icon-Aa" => esc_html__( "Aa", 'wingman' ) ),

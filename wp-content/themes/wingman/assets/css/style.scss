@@ -3918,7 +3918,19 @@ article.post-item.post-layout-classic {
     .vc_icon_element-image{
       @include translate();
     }
+
+    .vc_icon_element-inner{
+      &.vc_icon_element-size-lg{
+        span.vc_icon_element-icon{
+          font-size: 3.3em !important;
+        }
+      }
+    }
+
   }
+
+
+
 }
 
 /*

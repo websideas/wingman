@@ -3,8 +3,8 @@ Contributors: RealMag777
 Donate link: http://codecanyon.net/item/woocommerce-currency-switcher/8085217?ref=realmag777
 Tags: woocommerce currency switcher, currencies, currencies switcher, currency switcher, woocommerce switcher, currency converter, currency, shortcode, switcher, woocommerce
 Requires at least: 3.8.0
-Tested up to: 4.4.1
-Stable tag: 1.1.5
+Tested up to: 4.4.2
+Stable tag: 1.1.5.1
 
 WooCommerce Currency Switcher – is the plugin that allows you to switch to different currencies and get their rates converted in the real time!
 
@@ -70,6 +70,9 @@ R: http://currency-switcher.com/category/faq/
 3. GeoLocation rules in the back panel
 
 == Changelog ==
+
+= 1.1.5.1 =
+* 1 fix for woocommerce 2.5.1 variable products price
 
 = 1.1.5 =
 * New option: I am using cache plugin for my site - alloes using the plugin with cached sites

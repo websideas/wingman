@@ -4,7 +4,7 @@
   Plugin URI: http://currency-switcher.com/
   Description: Currency Switcher for WooCommerce
   Author: realmag777
-  Version: 1.1.5
+  Version: 1.1.5.1
   Requires at least: WP 4.1.0
   Tested up to: WP 4.4.1
   Text Domain: woocommerce-currency-switcher
@@ -51,13 +51,13 @@ define('WOOCS_PLUGIN_NAME', plugin_basename(__FILE__));
 include_once WOOCS_PATH . 'classes/storage.php';
 
 //From version 2.0.9 the plugin was remade - filters moved to WOOCS php class constructor
-//12-01-2015
+//27-01-2015
 //delete_option('woocs');
 final class WOOCS
 {
 
     //http://docs.woothemes.com/wc-apidocs/class-WC_Order.html
-    public $the_plugin_version = '1.1.5';
+    public $the_plugin_version = '1.1.5.1';
     public $storage = null;
     public $settings = array();
     public $default_currency = 'USD'; //EUR -> set any existed currency here if USD is not exists in your currencies list
@@ -270,6 +270,12 @@ final class WOOCS
             add_filter('woocommerce_get_variation_regular_price', array($this, 'raw_woocommerce_price'), 9999);
             add_filter('woocommerce_get_variation_sale_price', array($this, 'raw_woocommerce_price'), 9999);
             add_filter('woocommerce_variation_prices', array($this, 'woocommerce_variation_prices'), 9999, 1);
+            //***
+            //add_filter('woocommerce_get_variation_price', array($this, 'raw_woocommerce_price'), 9999, 1);
+            add_filter('woocommerce_variation_prices_price', array($this, 'woocommerce_variation_prices'), 9999, 1);
+            add_filter('woocommerce_variation_prices_regular_price', array($this, 'woocommerce_variation_prices'), 9999, 1);
+            add_filter('woocommerce_variation_prices_sale_price', array($this, 'woocommerce_variation_prices'), 9999, 1);
+            add_filter('woocommerce_get_variation_prices_hash', array($this, 'woocommerce_get_variation_prices_hash'), 9999, 3);
         }
         //***
 
@@ -1734,6 +1740,10 @@ final class WOOCS
         }
 
         return $prices_array;
+    }
+    
+    public function woocommerce_get_variation_prices_hash($price_hash, $product, $display){
+        //***
     }
 
     public function woocommerce_coupon_get_discount_amount($discount, $discounting_amount, $cart_item, $single, $coupon)

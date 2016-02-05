@@ -551,3 +551,7 @@ div#post-body .rwmb-text{
 .redux-messageredux-notice{
     display: none;
 }
+
+#swatches.woocommerce_options_panel{
+    width: 80%!important;
+}
